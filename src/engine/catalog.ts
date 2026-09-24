@@ -6,6 +6,7 @@ import malaga from "@content/malaga/misterio-manquita.pack.json";
 import cordoba from "@content/cordoba/cordoba.pack.json";
 import huelva from "@content/huelva/huelva.pack.json";
 import jaen from "@content/jaen/jaen.pack.json";
+import almeria from "@content/almeria/almeria.pack.json";
 import { loadPack } from "./loadPack";
 import { missingTranslations } from "./translations";
 
@@ -13,7 +14,7 @@ import { missingTranslations } from "./translations";
  * Packs incluidos en la app. Añadir una ciudad = añadir su JSON aquí;
  * el contenido nunca se escribe en el código.
  */
-export const BUNDLED_PACKS: Record<string, unknown> = { malaga, cadiz, sevilla, granada, cordoba, huelva, jaen };
+export const BUNDLED_PACKS: Record<string, unknown> = { malaga, cadiz, sevilla, granada, cordoba, huelva, jaen, almeria };
 
 export type PackError = { source: string; errors: string[] };
 type Catalog = { packs: CityPack[]; errors: PackError[] };

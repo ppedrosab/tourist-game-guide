@@ -1,0 +1,2376 @@
+{
+  "id": "almeria",
+  "version": 1,
+  "name": {
+    "es": "Almería",
+    "en": "Almería"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 36.84,
+    "lng": -2.466
+  },
+  "bounds": [
+    {
+      "lat": 36.828,
+      "lng": -2.479
+    },
+    {
+      "lat": 36.847,
+      "lng": -2.458
+    }
+  ],
+  "coverImage": "img/cover_almeria.jpg",
+  "characters": [
+    {
+      "id": "vigia",
+      "name": {
+        "es": "El Vigía",
+        "en": "The Lookout"
+      },
+      "description": {
+        "es": "Vigía andalusí de la torre del cerro. Tiene la vista de un halcón y la paciencia de una piedra.",
+        "en": "An Andalusi lookout from the hilltop tower. He has a hawk's eyes and the patience of a stone."
+      },
+      "avatar": "sprites/vigia/vigia_neutral.svg"
+    },
+    {
+      "id": "jayran",
+      "name": {
+        "es": "Jayrán",
+        "en": "Jayrán"
+      },
+      "description": {
+        "es": "Primer rey de la taifa de Almería, en el siglo XI. Constructor de murallas y aljibes. Serio y práctico.",
+        "en": "First king of the taifa of Almería, in the 11th century. Builder of walls and cisterns. Serious and practical."
+      },
+      "avatar": "sprites/jayran/jayran_neutral.svg",
+      "era": "siglo XI"
+    },
+    {
+      "id": "sedera",
+      "name": {
+        "es": "La Sedera",
+        "en": "The Silk Weaver"
+      },
+      "description": {
+        "es": "Tejedora de seda de la Almería andalusí. Romántica y habladora.",
+        "en": "A silk weaver of Andalusi Almería. Romantic and talkative."
+      },
+      "avatar": "sprites/sedera/sedera_neutral.svg"
+    },
+    {
+      "id": "hortelana",
+      "name": {
+        "es": "La Hortelana",
+        "en": "The Market Gardener"
+      },
+      "description": {
+        "es": "Cultiva tomates y pimientos en un invernadero del Poniente. Trabajadora y muy orgullosa de su tierra.",
+        "en": "She grows tomatoes and peppers in a greenhouse in the Poniente. Hard-working and very proud of her land."
+      },
+      "avatar": "sprites/hortelana/hortelana_neutral.svg"
+    },
+    {
+      "id": "barrilero",
+      "name": {
+        "es": "El Barrilero",
+        "en": "The Barrel Maker"
+      },
+      "description": {
+        "es": "Hacía barriles para la uva de barco. Nostálgico y buen conversador.",
+        "en": "He made barrels for the ship grapes. Nostalgic and a good talker."
+      },
+      "avatar": "sprites/barrilero/barrilero_neutral.svg"
+    },
+    {
+      "id": "pescador",
+      "name": {
+        "es": "El Pescador",
+        "en": "The Fisherman"
+      },
+      "description": {
+        "es": "Pescador del barrio de la Chanca. Madrugador, bromista y experto en gamba roja.",
+        "en": "A fisherman from the La Chanca quarter. An early riser, a joker and an expert on red prawns."
+      },
+      "avatar": "sprites/pescador/pescador_neutral.svg"
+    }
+  ],
+  "routes": [
+    {
+      "id": "atalaya",
+      "title": {
+        "es": "¿Qué significa Almería?",
+        "en": "What Does Almería Mean?"
+      },
+      "summary": {
+        "es": "¿Almería es la «atalaya», el «espejo del mar» o la torre de Pechina? Con un vigía, el rey Jayrán y una tejedora de seda, sube a la Alcazaba y baja a la medina para descifrar el nombre de la ciudad.",
+        "en": "Is Almería the “watchtower”, the “mirror of the sea” or Pechina's tower? With a lookout, King Jayrán and a silk weaver, climb to the Alcazaba and walk down into the medina to decipher the city's name."
+      },
+      "era": "955 - 1938",
+      "guideCharacterId": "vigia",
+      "durationMin": 110,
+      "distanceKm": 2.9,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La Alcazaba",
+            "en": "The Alcazaba"
+          },
+          "trail": {
+            "es": "camino de la Alcazaba",
+            "en": "Alcazaba trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La medina",
+            "en": "The medina"
+          },
+          "trail": {
+            "es": "camino de la medina",
+            "en": "medina trail"
+          }
+        }
+      },
+      "startNodeId": "n1_puerto",
+      "nodes": [
+        {
+          "id": "n1_puerto",
+          "title": {
+            "es": "Parque de Nicolás Salmerón",
+            "en": "Nicolás Salmerón Park"
+          },
+          "location": {
+            "lat": 36.8366,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_puerto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_puerto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vigia",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "happy",
+              "text": {
+                "es": "¡Eh, tú, el de abajo! Perdona, costumbre: me paso el día mirando al mar desde lo alto. Soy vigía. Mi trabajo es avisar si llegan barcos enemigos.",
+                "en": "Hey, you down there! Sorry, force of habit: I spend all day looking out to sea from up high. I'm a lookout. My job is to raise the alarm if enemy ships arrive."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo un caso de palabras, detective: ¿qué significa «Almería»? Aquí cada uno te dice una cosa distinta.",
+                "en": "I've got a case about words for you, detective: what does “Almería” mean? Here everyone tells you something different."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la atalaya, o sea, una torre de vigía como la mía; el espejo del mar, que dicen los poetas; y Pechina, la ciudad vecina. Tú apunta.",
+                "en": "Three suspects: the watchtower, a lookout tower like mine; the mirror of the sea, as the poets say; and Pechina, the neighbouring town. You take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El puerto de Almería fue en el siglo X el principal puerto del califato de Córdoba, con atarazanas donde se construían barcos.",
+                "en": "In the 10th century the port of Almería was the main port of the caliphate of Córdoba, with shipyards where vessels were built."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué califato fue Almería el gran puerto en el siglo X?",
+              "en": "Which caliphate's great port was Almería in the 10th century?"
+            },
+            "options": [
+              {
+                "es": "El de Granada",
+                "en": "Granada's"
+              },
+              {
+                "es": "El de Córdoba",
+                "en": "Córdoba's"
+              },
+              {
+                "es": "El de Bagdad",
+                "en": "Baghdad's"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El califato de Córdoba. Granada nunca fue califato: fue un reino, el nazarí.",
+              "en": "The caliphate of Córdoba. Granada was never a caliphate: it was a kingdom, the Nasrid one."
+            }
+          },
+          "clue": {
+            "id": "pista_vigia",
+            "text": {
+              "es": "La atalaya · Desde un cerro sobre la playa se vigilaba el mar para avisar de barcos enemigos.",
+              "en": "The watchtower · From a hill above the beach, people watched the sea to warn of enemy ships."
+            }
+          },
+          "nextNodeId": "n2_catedral",
+          "nextHint": {
+            "es": "Sube a la catedral. Unos 5 minutos.",
+            "en": "Walk up to the cathedral. About 5 minutes."
+          }
+        },
+        {
+          "id": "n2_catedral",
+          "title": {
+            "es": "Catedral de Almería",
+            "en": "Almería Cathedral"
+          },
+          "location": {
+            "lat": 36.8384,
+            "lng": -2.4666
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vigia",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "sedera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Soy sedera: tejo seda. En el siglo XII, los tejidos de seda de Almería se vendían por todo el Mediterráneo. Y yo te digo que Almería significa «espejo del mar».",
+                "en": "Hello! I'm a silk weaver. In the 12th century, Almería's silks were sold all over the Mediterranean. And I'm telling you Almería means “mirror of the sea”."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La catedral de Almería, de 1524, parece una fortaleza: tiene torres y almenas porque la costa sufría ataques de piratas.",
+                "en": "Almería Cathedral, from 1524, looks like a fortress: it has towers and battlements because the coast suffered pirate raids."
+              },
+              "year": 1524
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Espejo del mar? Qué bonito. Pero yo soy vigía, no poeta. Vamos a comprobarlo.",
+                "en": "Mirror of the sea? How pretty. But I'm a lookout, not a poet. Let's check it."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué la catedral de Almería parece una fortaleza?",
+              "en": "Why does Almería Cathedral look like a fortress?"
+            },
+            "options": [
+              {
+                "es": "Para defenderse de los piratas",
+                "en": "To defend against pirates"
+              },
+              {
+                "es": "Porque antes fue un castillo",
+                "en": "Because it used to be a castle"
+              },
+              {
+                "es": "Por moda",
+                "en": "Just for fashion"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Para defenderse de los ataques de piratas que llegaban por mar.",
+              "en": "To defend against pirate raids that came from the sea."
+            }
+          },
+          "clue": {
+            "id": "pista_poetas",
+            "text": {
+              "es": "El espejo · La sedera repite lo que dicen los poetas: Almería sería «espejo del mar».",
+              "en": "The mirror · The silk weaver repeats what the poets say: Almería would mean “mirror of the sea”."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "vigia",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Subimos a la Alcazaba, donde estaba la torre de vigía, o bajamos a la ciudad, donde vivían los tejedores?",
+              "en": "Shall we climb up to the Alcazaba, where the watchtower stood, or go down into the city, where the weavers lived?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Subir a la Alcazaba",
+                "en": "Climb to the Alcazaba"
+              },
+              "hint": {
+                "es": "Torres y murallas",
+                "en": "Towers and walls"
+              },
+              "targetNodeId": "a1_alcazaba",
+              "setFlags": [
+                "camino_alcazaba"
+              ],
+              "distanceM": 600,
+              "walkMin": 10
+            },
+            {
+              "label": {
+                "es": "Bajar a la ciudad",
+                "en": "Go down into the city"
+              },
+              "hint": {
+                "es": "Plazas y aljibes",
+                "en": "Squares and cisterns"
+              },
+              "targetNodeId": "b1_plazavieja",
+              "setFlags": [
+                "camino_medina"
+              ],
+              "distanceM": 400,
+              "walkMin": 6
+            }
+          ]
+        },
+        {
+          "id": "a1_alcazaba",
+          "title": {
+            "es": "Alcazaba",
+            "en": "Alcazaba"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.4705
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_alcazaba.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_alcazaba.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vigia",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "sedera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Alcazaba se empezó en el año 955, en tiempos del califa Abderramán III. Es una de las mayores fortalezas andalusíes de España.",
+                "en": "The Alcazaba was begun in the year 955, under Caliph Abd al-Rahman III. It is one of the largest Andalusi fortresses in Spain."
+              },
+              "year": 955
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "proud",
+              "text": {
+                "es": "Antes de la Alcazaba, en este cerro solo había una torre de vigía. Una atalaya. Desde aquí se veía todo el golfo.",
+                "en": "Before the Alcazaba, this hill held nothing but a lookout tower. A watchtower. From here you could see the whole gulf."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "thinking",
+              "text": {
+                "es": "Pues desde aquí el mar sí que parece un espejo… Pero vale, la torre estaba primero.",
+                "en": "Well, from up here the sea really does look like a mirror… But fine, the tower came first."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué califa empezó la Alcazaba en el año 955?",
+              "en": "Which caliph began the Alcazaba in 955?"
+            },
+            "options": [
+              {
+                "es": "Boabdil",
+                "en": "Boabdil"
+              },
+              {
+                "es": "Almanzor",
+                "en": "Almanzor"
+              },
+              {
+                "es": "Abderramán III",
+                "en": "Abd al-Rahman III"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Abderramán III, el primer califa de Córdoba.",
+              "en": "Abd al-Rahman III, the first caliph of Córdoba."
+            }
+          },
+          "clue": {
+            "id": "pista_torre",
+            "text": {
+              "es": "La atalaya · Antes de la Alcazaba, en el cerro solo había una torre de vigía.",
+              "en": "The watchtower · Before the Alcazaba, the hill held only a lookout tower."
+            }
+          },
+          "nextNodeId": "a2_muralla",
+          "nextHint": {
+            "es": "Sigue por la muralla hacia el cerro de San Cristóbal. Unos 5 minutos.",
+            "en": "Follow the wall towards San Cristóbal hill. About 5 minutes."
+          }
+        },
+        {
+          "id": "a2_muralla",
+          "title": {
+            "es": "Muralla de Jayrán",
+            "en": "Wall of Jayrán"
+          },
+          "location": {
+            "lat": 36.843,
+            "lng": -2.4692
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_muralla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_muralla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "jayran",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "vigia",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jayran",
+              "expression": "proud",
+              "text": {
+                "es": "Yo soy Jayrán, primer rey de la taifa de Almería. Cuando el califato se rompió, en el siglo XI, hice de Almería un reino y levanté esta muralla.",
+                "en": "I am Jayrán, first king of the taifa of Almería. When the caliphate broke apart in the 11th century, I made Almería a kingdom and raised this wall."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jayran",
+              "expression": "thinking",
+              "text": {
+                "es": "En mis documentos la ciudad se llamaba Mariyyat Bayyana: la atalaya de Pechina. Pechina era la ciudad; esto era su torre junto al mar.",
+                "en": "In my documents the city was called Mariyyat Bayyana: the watchtower of Pechina. Pechina was the city; this was its tower by the sea."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La muralla de Jayrán baja por el valle de la Hoya y sube hasta el cerro de San Cristóbal. Se construyó en el siglo XI.",
+                "en": "The Wall of Jayrán runs down the Hoya valley and up to San Cristóbal hill. It was built in the 11th century."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué quiere decir «Mariyyat Bayyana»?",
+              "en": "What does “Mariyyat Bayyana” mean?"
+            },
+            "options": [
+              {
+                "es": "La ciudad de la seda",
+                "en": "The city of silk"
+              },
+              {
+                "es": "La atalaya de Pechina",
+                "en": "The watchtower of Pechina"
+              },
+              {
+                "es": "El espejo del mar",
+                "en": "The mirror of the sea"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La atalaya, la torre vigía, de Pechina.",
+              "en": "The watchtower, the lookout tower, of Pechina."
+            }
+          },
+          "clue": {
+            "id": "pista_mariyya",
+            "text": {
+              "es": "Pechina · Almería se llamó al principio Mariyyat Bayyana: la atalaya de Pechina.",
+              "en": "Pechina · Almería was first called Mariyyat Bayyana: the watchtower of Pechina."
+            }
+          },
+          "nextNodeId": "n4_purchena",
+          "nextHint": {
+            "es": "Baja hasta la Puerta de Purchena. Unos 10 minutos.",
+            "en": "Walk down to the Puerta de Purchena. About 10 minutes."
+          }
+        },
+        {
+          "id": "b1_plazavieja",
+          "title": {
+            "es": "Plaza Vieja",
+            "en": "Plaza Vieja"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_plazavieja.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_plazavieja.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sedera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "vigia",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Plaza Vieja, o de la Constitución, es una plaza porticada. El ayuntamiento que la preside es de finales del siglo XIX.",
+                "en": "Plaza Vieja, also called Plaza de la Constitución, is an arcaded square. The town hall that presides over it dates from the late 19th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "happy",
+              "text": {
+                "es": "Un geógrafo árabe, al-Idrisi, escribió que en Almería había cientos de telares de seda. ¡Éramos famosos!",
+                "en": "An Arab geographer, al-Idrisi, wrote that Almería had hundreds of silk looms. We were famous!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "thinking",
+              "text": {
+                "es": "Lo del espejo del mar… me lo contó mi abuela. Y a ella un maestro, que lo leyó en un libro de hace un siglo o dos.",
+                "en": "The mirror of the sea thing… my grandmother told me. And a schoolteacher told her, who read it in a book from a century or two ago."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué tejido hizo famosa a la Almería andalusí?",
+              "en": "Which fabric made Andalusi Almería famous?"
+            },
+            "options": [
+              {
+                "es": "La seda",
+                "en": "Silk"
+              },
+              {
+                "es": "El algodón",
+                "en": "Cotton"
+              },
+              {
+                "es": "La lana",
+                "en": "Wool"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La seda, que se exportaba por todo el Mediterráneo.",
+              "en": "Silk, which was exported all over the Mediterranean."
+            }
+          },
+          "clue": {
+            "id": "pista_libro",
+            "text": {
+              "es": "El espejo · Lo del «espejo del mar» viene de libros de hace uno o dos siglos, no de los documentos árabes.",
+              "en": "The mirror · The “mirror of the sea” idea comes from books from one or two centuries ago, not from Arabic documents."
+            }
+          },
+          "nextNodeId": "b2_aljibes",
+          "nextHint": {
+            "es": "Sube hasta los aljibes de Jayrán. Unos 8 minutos.",
+            "en": "Walk up to the Jayrán cisterns. About 8 minutes."
+          }
+        },
+        {
+          "id": "b2_aljibes",
+          "title": {
+            "es": "Aljibes de Jayrán",
+            "en": "Jayrán cisterns"
+          },
+          "location": {
+            "lat": 36.8421,
+            "lng": -2.4636
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_aljibes.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_aljibes.svg"
+              ],
+              "characters": [
+                {
+                  "id": "jayran",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "sedera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los aljibes de Jayrán, del siglo XI, guardaban el agua de la ciudad. Son tres naves cubiertas con bóvedas de ladrillo.",
+                "en": "The Jayrán cisterns, from the 11th century, stored the city's water. They are three brick-vaulted halls."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jayran",
+              "expression": "happy",
+              "text": {
+                "es": "Una ciudad sin agua no aguanta un asedio. Por eso mandé hacer estos aljibes. Y por eso Almería creció y dejó de ser la torre de Pechina.",
+                "en": "A city without water can't survive a siege. That's why I had these cisterns built. And that's why Almería grew and stopped being Pechina's tower."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "surprised",
+              "text": {
+                "es": "¿La torre de Pechina? ¿Almería era una torre?",
+                "en": "Pechina's tower? Almería was a tower?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían los aljibes?",
+              "en": "What were the cisterns for?"
+            },
+            "options": [
+              {
+                "es": "Para guardar grano",
+                "en": "To store grain"
+              },
+              {
+                "es": "Para esconder barcos",
+                "en": "To hide boats"
+              },
+              {
+                "es": "Para guardar agua",
+                "en": "To store water"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Para guardar el agua de la ciudad, vital en caso de asedio.",
+              "en": "To store the city's water, vital in case of siege."
+            }
+          },
+          "clue": {
+            "id": "pista_crecer",
+            "text": {
+              "es": "Pechina · Almería nació como la torre de Pechina y creció hasta dejarla atrás.",
+              "en": "Pechina · Almería was born as Pechina's tower and grew until it left Pechina behind."
+            }
+          },
+          "nextNodeId": "n4_purchena",
+          "nextHint": {
+            "es": "Baja a la Puerta de Purchena. Dos minutos.",
+            "en": "Go down to the Puerta de Purchena. Two minutes."
+          }
+        },
+        {
+          "id": "n4_purchena",
+          "title": {
+            "es": "Puerta de Purchena",
+            "en": "Puerta de Purchena"
+          },
+          "location": {
+            "lat": 36.8425,
+            "lng": -2.463
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_purchena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_purchena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vigia",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "sedera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Puerta de Purchena era una de las puertas de la muralla. Hoy es el cruce más animado de la ciudad.",
+                "en": "The Puerta de Purchena was one of the gates in the city wall. Today it's the liveliest crossroads in town."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_alcazaba"
+                  ],
+                  "text": {
+                    "es": "Vienes de la Alcazaba: Jayrán te ha hablado de Mariyyat Bayyana. ¿Seguimos la pista de la torre o la del espejo?",
+                    "en": "You've come from the Alcazaba: Jayrán told you about Mariyyat Bayyana. Shall we follow the tower lead or the mirror lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_medina"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ciudad: la sedera ya duda del espejo. ¿Seguimos la pista de la torre o la del espejo?",
+                    "en": "You've come through the city: the silk weaver is already doubting the mirror. Shall we follow the tower lead or the mirror lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era la Puerta de Purchena?",
+              "en": "What was the Puerta de Purchena?"
+            },
+            "options": [
+              {
+                "es": "Una iglesia",
+                "en": "A church"
+              },
+              {
+                "es": "Una puerta de la muralla",
+                "en": "A gate in the city wall"
+              },
+              {
+                "es": "Un puerto de barcos",
+                "en": "A harbour"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una de las puertas de la muralla, que miraba hacia Purchena, en el interior de la provincia.",
+              "en": "One of the gates in the wall, facing towards Purchena, inland in the province."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "vigia",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La torre o el espejo, detective?",
+              "en": "The tower or the mirror, detective?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la torre",
+                "en": "The tower lead"
+              },
+              "hint": {
+                "es": "Con el vigía",
+                "en": "With the lookout"
+              },
+              "targetNodeId": "n4a_torre",
+              "setFlags": [
+                "version_torre"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del espejo",
+                "en": "The mirror lead"
+              },
+              "hint": {
+                "es": "Con la sedera",
+                "en": "With the silk weaver"
+              },
+              "targetNodeId": "n4b_espejo",
+              "setFlags": [
+                "version_espejo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_torre",
+          "title": {
+            "es": "La torre",
+            "en": "The tower"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "proud",
+              "text": {
+                "es": "En árabe, «mariyya» viene de mirar, de vigilar. Una mariyya es una torre para ver venir al enemigo. Eso es lo que yo hago.",
+                "en": "In Arabic, “mariyya” comes from looking, from keeping watch. A mariyya is a tower for seeing the enemy coming. That's what I do."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "happy",
+              "text": {
+                "es": "En las monedas que se acuñaron aquí pone «al-Mariyya»: la atalaya. Ni espejo ni nada.",
+                "en": "The coins minted here say “al-Mariyya”: the watchtower. No mirror at all."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_monedas",
+            "text": {
+              "es": "La atalaya · En las monedas acuñadas en la ciudad pone al-Mariyya: la atalaya.",
+              "en": "The watchtower · The coins minted in the city read al-Mariyya: the watchtower."
+            }
+          },
+          "nextNodeId": "n5_refugios",
+          "nextHint": {
+            "es": "Baja por el Paseo de Almería hasta la entrada de los refugios. Unos 5 minutos.",
+            "en": "Walk down Paseo de Almería to the shelters' entrance. About 5 minutes."
+          }
+        },
+        {
+          "id": "n4b_espejo",
+          "title": {
+            "es": "El espejo",
+            "en": "The mirror"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "thinking",
+              "text": {
+                "es": "He preguntado a un profesor. Dice que lo del «espejo del mar» se empezó a decir en el siglo XIX, porque en árabe «espejo» suena parecido.",
+                "en": "I asked a teacher. He says the “mirror of the sea” idea started in the 19th century, because in Arabic “mirror” sounds similar."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sedera",
+              "expression": "happy",
+              "text": {
+                "es": "Es bonito, pero no es verdad. Aunque… reconoce que el mar de Almería brilla como un espejo, ¿eh?",
+                "en": "It's lovely, but it isn't true. Although… you'll admit that Almería's sea shines like a mirror, won't you?"
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_xix",
+            "text": {
+              "es": "El espejo · Lo del «espejo del mar» se empezó a decir en el siglo XIX por un parecido de palabras.",
+              "en": "The mirror · The “mirror of the sea” idea began in the 19th century because two words sound alike."
+            }
+          },
+          "nextNodeId": "n5_refugios",
+          "nextHint": {
+            "es": "Baja por el Paseo de Almería hasta la entrada de los refugios. Unos 5 minutos.",
+            "en": "Walk down Paseo de Almería to the shelters' entrance. About 5 minutes."
+          }
+        },
+        {
+          "id": "n5_refugios",
+          "title": {
+            "es": "Refugios de la Guerra Civil",
+            "en": "Civil War shelters"
+          },
+          "location": {
+            "lat": 36.8398,
+            "lng": -2.4631
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_refugios.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_refugios.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vigia",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "jayran",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bajo este paseo hay más de 4 kilómetros de refugios construidos en 1937 y 1938, durante la Guerra Civil. Podían proteger a unas 40.000 personas de los bombardeos.",
+                "en": "Beneath this avenue lie more than 4 kilometres of shelters built in 1937 and 1938, during the Civil War. They could protect some 40,000 people from the bombing."
+              },
+              "year": 1937
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "thinking",
+              "text": {
+                "es": "Mil años después, Almería seguía vigilando el cielo y el mar. Hora del veredicto: atalaya, espejo o Pechina. ¿Qué significa Almería?",
+                "en": "A thousand years later, Almería was still watching the sky and the sea. Verdict time: watchtower, mirror or Pechina. What does Almería mean?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué significa «Almería»?",
+              "en": "What does “Almería” mean?"
+            },
+            "options": [
+              {
+                "es": "La atalaya, la torre de vigía",
+                "en": "The watchtower, the lookout tower"
+              },
+              {
+                "es": "El espejo del mar",
+                "en": "The mirror of the sea"
+              },
+              {
+                "es": "La ciudad de Pechina",
+                "en": "The city of Pechina"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La atalaya. Al-Mariyya era la torre de vigía de Pechina, que con el tiempo creció hasta ser la ciudad. Lo del «espejo del mar» es una explicación bonita del siglo XIX, pero no es cierta.",
+              "en": "The watchtower. Al-Mariyya was Pechina's lookout tower, which over time grew into the city. The “mirror of the sea” is a pretty 19th-century explanation, but it isn't true."
+            }
+          },
+          "nextNodeId": "n6_final"
+        },
+        {
+          "id": "n6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_alcazaba",
+                    "version_torre"
+                  ],
+                  "text": {
+                    "es": "La Alcazaba y la torre: tienes ojos de vigía. Eres guardián de la atalaya.",
+                    "en": "The Alcazaba and the tower: you have a lookout's eyes. You're a guardian of the watchtower."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alcazaba",
+                    "version_espejo"
+                  ],
+                  "text": {
+                    "es": "La Alcazaba y el espejo: has visto el mar desde arriba y has desmontado a los poetas. Eres cronista de Jayrán.",
+                    "en": "The Alcazaba and the mirror: you've seen the sea from above and debunked the poets. You're Jayrán's chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_medina",
+                    "version_torre"
+                  ],
+                  "text": {
+                    "es": "La ciudad y la torre: de los aljibes a las monedas. Eres descifrador de nombres.",
+                    "en": "The city and the tower: from the cisterns to the coins. You're a decipherer of names."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_medina",
+                    "version_espejo"
+                  ],
+                  "text": {
+                    "es": "La ciudad y el espejo: entre sedas y palabras. Eres tejedor de palabras.",
+                    "en": "The city and the mirror: among silks and words. You're a weaver of words."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "happy",
+              "text": {
+                "es": "Y ya sabes: si alguien te dice «espejo del mar», sonríe y dile que es precioso… pero que Almería es una torre que no deja de mirar.",
+                "en": "And now you know: if anyone says “mirror of the sea”, smile and tell them it's lovely… but Almería is a tower that never stops watching."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "guardian_atalaya",
+          "requires": [
+            "camino_alcazaba",
+            "version_torre"
+          ],
+          "title": {
+            "es": "Guardián de la atalaya",
+            "en": "Guardian of the watchtower"
+          }
+        },
+        {
+          "id": "cronista_jayran",
+          "requires": [
+            "camino_alcazaba",
+            "version_espejo"
+          ],
+          "title": {
+            "es": "Cronista de Jayrán",
+            "en": "Jayrán's chronicler"
+          }
+        },
+        {
+          "id": "descifrador_nombres",
+          "requires": [
+            "camino_medina",
+            "version_torre"
+          ],
+          "title": {
+            "es": "Descifrador de nombres",
+            "en": "Decipherer of names"
+          }
+        },
+        {
+          "id": "tejedor_palabras",
+          "requires": [
+            "camino_medina",
+            "version_espejo"
+          ],
+          "title": {
+            "es": "Tejedor de palabras",
+            "en": "Weaver of words"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "cuerno",
+          "name": {
+            "es": "El cuerno del vigía",
+            "en": "The lookout's horn"
+          },
+          "icon": "collectibles/almeria_cuerno.svg",
+          "awardedAtNodeId": "n1_puerto"
+        },
+        {
+          "id": "seda",
+          "name": {
+            "es": "La seda de Almería",
+            "en": "Almería silk"
+          },
+          "icon": "collectibles/almeria_seda.svg",
+          "awardedAtNodeId": "n2_catedral"
+        },
+        {
+          "id": "alcazaba",
+          "name": {
+            "es": "La Alcazaba",
+            "en": "The Alcazaba"
+          },
+          "icon": "collectibles/almeria_alcazaba.svg",
+          "awardedAtNodeId": "a1_alcazaba"
+        },
+        {
+          "id": "muralla",
+          "name": {
+            "es": "La muralla de Jayrán",
+            "en": "The Wall of Jayrán"
+          },
+          "icon": "collectibles/almeria_muralla.svg",
+          "awardedAtNodeId": "a2_muralla"
+        },
+        {
+          "id": "telar",
+          "name": {
+            "es": "El telar",
+            "en": "The loom"
+          },
+          "icon": "collectibles/almeria_telar.svg",
+          "awardedAtNodeId": "b1_plazavieja"
+        },
+        {
+          "id": "aljibe",
+          "name": {
+            "es": "El aljibe",
+            "en": "The cistern"
+          },
+          "icon": "collectibles/almeria_aljibe.svg",
+          "awardedAtNodeId": "b2_aljibes"
+        },
+        {
+          "id": "moneda",
+          "name": {
+            "es": "La moneda de al-Mariyya",
+            "en": "The al-Mariyya coin"
+          },
+          "icon": "collectibles/almeria_moneda.svg",
+          "awardedAtNodeId": "n5_refugios"
+        },
+        {
+          "id": "insignia_atalaya",
+          "name": {
+            "es": "¿Qué significa Almería?",
+            "en": "What Does Almería Mean?"
+          },
+          "icon": "collectibles/almeria_atalaya.svg",
+          "awardedAtNodeId": "n6_final"
+        }
+      ]
+    },
+    {
+      "id": "desierto-huerta",
+      "title": {
+        "es": "¿Quién convirtió el desierto en huerta?",
+        "en": "Who Turned the Desert into a Garden?"
+      },
+      "summary": {
+        "es": "Almería es una de las tierras más secas de Europa y hoy es una de sus grandes huertas. ¿Fue la uva de barco, la arena o el plástico? Con una hortelana, un barrilero y un pescador de la Chanca.",
+        "en": "Almería is one of the driest places in Europe, yet today it's one of its great market gardens. Was it the ship grapes, the sand or the plastic? With a market gardener, a barrel maker and a fisherman from La Chanca."
+      },
+      "era": "Del siglo XIX a hoy",
+      "guideCharacterId": "hortelana",
+      "durationMin": 110,
+      "distanceKm": 3.4,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El puerto",
+            "en": "The port"
+          },
+          "trail": {
+            "es": "camino del puerto",
+            "en": "port trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Chanca",
+            "en": "La Chanca"
+          },
+          "trail": {
+            "es": "camino de la Chanca",
+            "en": "La Chanca trail"
+          }
+        }
+      },
+      "startNodeId": "g1_mercado",
+      "nodes": [
+        {
+          "id": "g1_mercado",
+          "title": {
+            "es": "Mercado Central",
+            "en": "Central Market"
+          },
+          "location": {
+            "lat": 36.844,
+            "lng": -2.4611
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_mercado.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_mercado.svg"
+              ],
+              "characters": [
+                {
+                  "id": "hortelana",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Soy hortelana: cultivo tomates, pimientos y pepinos en un invernadero del Poniente. Lo que ves en este mercado sale de allí.",
+                "en": "Hello! I'm a market gardener: I grow tomatoes, peppers and cucumbers in a greenhouse in the Poniente. What you see in this market comes from there."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo un misterio: Almería es una de las tierras más secas de Europa… y hoy es una de sus grandes huertas. ¿Quién convirtió el desierto en huerta?",
+                "en": "I've got a mystery for you: Almería is one of the driest places in Europe… and today it's one of its great market gardens. Who turned the desert into a garden?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la uva de barco, que ya se vendía por medio mundo; la arena del enarenado; y el plástico de los invernaderos. Apunta.",
+                "en": "Three suspects: the ship grapes, already sold across half the world; the sand of the enarenado; and the plastic of the greenhouses. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 2019 Almería fue Capital Española de la Gastronomía, por su huerta, su pescado y sus tapas.",
+                "en": "In 2019 Almería was Spain's Capital of Gastronomy, thanks to its vegetables, its fish and its tapas."
+              },
+              "year": 2019
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año fue Almería Capital Española de la Gastronomía?",
+              "en": "In what year was Almería Spain's Capital of Gastronomy?"
+            },
+            "options": [
+              {
+                "es": "En 1963",
+                "en": "In 1963"
+              },
+              {
+                "es": "En 2019",
+                "en": "In 2019"
+              },
+              {
+                "es": "En 1992",
+                "en": "In 1992"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En 2019, la primera capital gastronómica a orillas del Mediterráneo.",
+              "en": "In 2019, the first capital of gastronomy on the Mediterranean coast."
+            }
+          },
+          "clue": {
+            "id": "pista_seca",
+            "text": {
+              "es": "El plástico · Almería es una de las tierras más secas de Europa, pero hoy es una gran huerta.",
+              "en": "The plastic · Almería is one of the driest places in Europe, yet today it's a great market garden."
+            }
+          },
+          "nextNodeId": "g2_purchena",
+          "nextHint": {
+            "es": "A la Puerta de Purchena. Unos 3 minutos.",
+            "en": "To the Puerta de Purchena. About 3 minutes."
+          }
+        },
+        {
+          "id": "g2_purchena",
+          "title": {
+            "es": "Puerta de Purchena",
+            "en": "Puerta de Purchena"
+          },
+          "location": {
+            "lat": 36.8425,
+            "lng": -2.463
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_purchena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_purchena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "hortelana",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "barrilero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "barrilero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Barrilero, a su servicio. Hago barriles para la uva de barco. En el siglo XIX, Almería mandaba uva a Inglaterra y a América.",
+                "en": "Hello! Barrel maker, at your service. I make barrels for the ship grapes. In the 19th century Almería shipped grapes to England and the Americas."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La uva de Ohanes, o uva de barco, fue la gran exportación de Almería desde el siglo XIX hasta los años sesenta del siglo XX.",
+                "en": "Ohanes grapes, or ship grapes, were Almería's great export from the 19th century until the 1960s."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "La uva hizo rica a la provincia… pero se cultivaba en las sierras y en los parrales, no en el desierto de la costa.",
+                "en": "The grapes made the province rich… but they were grown in the hills and on vine trellises, not in the coastal desert."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llamaba la uva que Almería exportaba en barco?",
+              "en": "What were the grapes Almería shipped abroad called?"
+            },
+            "options": [
+              {
+                "es": "Uva de Ohanes",
+                "en": "Ohanes grapes"
+              },
+              {
+                "es": "Uva pasa",
+                "en": "Raisins"
+              },
+              {
+                "es": "Uva de Jerez",
+                "en": "Jerez grapes"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Uva de Ohanes, por el pueblo de la sierra donde empezó el cultivo.",
+              "en": "Ohanes grapes, named after the hill village where cultivation began."
+            }
+          },
+          "clue": {
+            "id": "pista_sierras",
+            "text": {
+              "es": "La uva · La uva de barco se cultivaba en las sierras y los parrales, no en el desierto de la costa.",
+              "en": "The grapes · The ship grapes were grown in the hills and on trellises, not in the coastal desert."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "hortelana",
+            "expression": "happy",
+            "text": {
+              "es": "¿Bajamos al puerto, por donde salía la uva, o a la Chanca, el barrio de los pescadores?",
+              "en": "Shall we go down to the port, where the grapes set sail, or to La Chanca, the fishermen's quarter?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al puerto",
+                "en": "To the port"
+              },
+              "hint": {
+                "es": "La uva y el cable",
+                "en": "Grapes and the loading pier"
+              },
+              "targetNodeId": "ga1_puerto",
+              "setFlags": [
+                "camino_puerto"
+              ],
+              "distanceM": 700,
+              "walkMin": 9
+            },
+            {
+              "label": {
+                "es": "A la Chanca",
+                "en": "To La Chanca"
+              },
+              "hint": {
+                "es": "Plaza Vieja y pescadores",
+                "en": "Plaza Vieja and fishermen"
+              },
+              "targetNodeId": "gb1_plazavieja",
+              "setFlags": [
+                "camino_chanca"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "ga1_puerto",
+          "title": {
+            "es": "Parque de Nicolás Salmerón",
+            "en": "Nicolás Salmerón Park"
+          },
+          "location": {
+            "lat": 36.8366,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_puerto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_puerto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "barrilero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "hortelana",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "barrilero",
+              "expression": "proud",
+              "text": {
+                "es": "La uva viajaba en barriles, protegida con serrín de corcho para que aguantara semanas de barco. Llegaba a Londres como recién cogida.",
+                "en": "The grapes travelled in barrels, packed in cork dust so they'd survive weeks at sea. They reached London as if freshly picked."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El paseo y el parque junto al puerto se abrieron hacia el mar a finales del siglo XIX, cuando el puerto crecía con la uva y el mineral.",
+                "en": "The promenade and park by the port opened up towards the sea at the end of the 19th century, when the port was growing with grapes and ore."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "Cuando la uva entró en crisis, en los años sesenta, mucha gente se quedó sin trabajo. Algo tenía que cambiar.",
+                "en": "When the grape trade went into crisis in the 1960s, many people were left without work. Something had to change."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué se protegía la uva dentro de los barriles?",
+              "en": "What protected the grapes inside the barrels?"
+            },
+            "options": [
+              {
+                "es": "Con hielo",
+                "en": "Ice"
+              },
+              {
+                "es": "Con sal",
+                "en": "Salt"
+              },
+              {
+                "es": "Con serrín de corcho",
+                "en": "Cork dust"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Con serrín de corcho, que la aislaba y la mantenía fresca.",
+              "en": "Cork dust, which insulated them and kept them fresh."
+            }
+          },
+          "clue": {
+            "id": "pista_crisis",
+            "text": {
+              "es": "La uva · La uva de barco entró en crisis en los años sesenta y hizo falta otro cultivo.",
+              "en": "The grapes · The ship grape trade went into crisis in the 1960s and another crop was needed."
+            }
+          },
+          "nextNodeId": "ga2_cable",
+          "nextHint": {
+            "es": "Sigue la costa hasta el Cable Inglés. Unos 8 minutos.",
+            "en": "Follow the coast to the Cable Inglés. About 8 minutes."
+          }
+        },
+        {
+          "id": "ga2_cable",
+          "title": {
+            "es": "Cable Inglés",
+            "en": "Cable Inglés"
+          },
+          "location": {
+            "lat": 36.8305,
+            "lng": -2.4655
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_cable.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_cable.svg"
+              ],
+              "characters": [
+                {
+                  "id": "barrilero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "hortelana",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Cable Inglés es un cargadero de mineral de hierro de 1904, construido por una compañía británica. Por él bajaba el mineral de las minas hasta los barcos.",
+                "en": "The Cable Inglés is an iron-ore loading pier from 1904, built by a British company. Ore came down it from the mines straight onto the ships."
+              },
+              "year": 1904
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "happy",
+              "text": {
+                "es": "Mineral, uva… Almería siempre ha vivido de mandar cosas por mar. Hoy mandamos tomates y pimientos en camión, a toda Europa.",
+                "en": "Ore, grapes… Almería has always lived by sending things by sea. Today we send tomatoes and peppers by lorry, all over Europe."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "barrilero",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero ni el mineral ni la uva regaban el desierto, ¿eh? Para eso hace falta otra cosa.",
+                "en": "But neither ore nor grapes watered the desert, eh? That needs something else."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se cargaba en el Cable Inglés?",
+              "en": "What was loaded at the Cable Inglés?"
+            },
+            "options": [
+              {
+                "es": "Pasajeros",
+                "en": "Passengers"
+              },
+              {
+                "es": "Mineral de hierro",
+                "en": "Iron ore"
+              },
+              {
+                "es": "Uva",
+                "en": "Grapes"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Mineral de hierro de las minas de la provincia.",
+              "en": "Iron ore from the province's mines."
+            }
+          },
+          "clue": {
+            "id": "pista_mar",
+            "text": {
+              "es": "La uva · Almería ha vivido de exportar por mar: mineral, uva… pero eso no regaba el desierto.",
+              "en": "The grapes · Almería has lived by exporting by sea: ore, grapes… but that didn't water the desert."
+            }
+          },
+          "nextNodeId": "g4_catedral",
+          "nextHint": {
+            "es": "Sube hasta la catedral. Unos 12 minutos.",
+            "en": "Walk up to the cathedral. About 12 minutes."
+          }
+        },
+        {
+          "id": "gb1_plazavieja",
+          "title": {
+            "es": "Plaza Vieja",
+            "en": "Plaza Vieja"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_plazavieja.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_plazavieja.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pescador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "hortelana",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Pescador de la Chanca. Lo mío es la gamba roja y el pulpo seco, que se cuelga al sol como la ropa.",
+                "en": "Hello! Fisherman from La Chanca. My thing is red prawns and dried octopus, hung out in the sun like washing."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los gurullos son una pasta almeriense de harina con forma de granito de arroz, que se guisa con conejo o con pulpo.",
+                "en": "Gurullos are an Almería pasta made of flour and shaped like grains of rice, stewed with rabbit or octopus."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescador",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi padre dejó la barca en los sesenta y se fue al Poniente. Allí unos vecinos echaban arena de la playa sobre la tierra… y los tomates salían antes que en ningún sitio.",
+                "en": "My father left his boat in the sixties and went to the Poniente. There some neighbours were spreading beach sand over the soil… and their tomatoes came up earlier than anywhere else."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué forma tienen los gurullos?",
+              "en": "What shape are gurullos?"
+            },
+            "options": [
+              {
+                "es": "De granito de arroz",
+                "en": "Like grains of rice"
+              },
+              {
+                "es": "De espiral",
+                "en": "Spirals"
+              },
+              {
+                "es": "De cinta larga",
+                "en": "Long ribbons"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Pequeñitos, como granos de arroz, hechos a mano.",
+              "en": "Tiny, like grains of rice, made by hand."
+            }
+          },
+          "clue": {
+            "id": "pista_playa",
+            "text": {
+              "es": "La arena · En los años sesenta, en el Poniente, se echaba arena de playa sobre la tierra y los tomates salían antes.",
+              "en": "The sand · In the 1960s, in the Poniente, people spread beach sand over the soil and tomatoes came up earlier."
+            }
+          },
+          "nextNodeId": "gb2_chanca",
+          "nextHint": {
+            "es": "Baja al barrio de la Chanca. Unos 8 minutos.",
+            "en": "Walk down to the La Chanca quarter. About 8 minutes."
+          }
+        },
+        {
+          "id": "gb2_chanca",
+          "title": {
+            "es": "Barrio de la Chanca",
+            "en": "La Chanca quarter"
+          },
+          "location": {
+            "lat": 36.8388,
+            "lng": -2.4748
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_chanca.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_chanca.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pescador",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "hortelana",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Chanca es el barrio de pescadores a los pies de la Alcazaba, con casas cúbicas pintadas de colores y cuevas excavadas en el cerro.",
+                "en": "La Chanca is the fishermen's quarter below the Alcazaba, with cube-shaped houses painted in bright colours and caves dug into the hill."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "El enarenado lo inventó un agricultor de la costa de Granada, hacia 1880: estiércol, y encima una capa de arena. La arena guarda la humedad y el calor.",
+                "en": "The enarenado was invented by a farmer on the Granada coast around 1880: manure, and on top a layer of sand. The sand keeps in moisture and warmth."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescador",
+              "expression": "proud",
+              "text": {
+                "es": "Y del mar vino la arena. ¡Ya ves, el mar también ayudó a la huerta!",
+                "en": "And the sand came from the sea. See, the sea helped the market gardens too!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el enarenado?",
+              "en": "What is enarenado?"
+            },
+            "options": [
+              {
+                "es": "Un tipo de barca",
+                "en": "A kind of boat"
+              },
+              {
+                "es": "Un plato de arroz",
+                "en": "A rice dish"
+              },
+              {
+                "es": "Una capa de arena sobre tierra abonada",
+                "en": "A layer of sand over fertilised soil"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Una capa de arena sobre tierra abonada, que guarda humedad y calor.",
+              "en": "A layer of sand over fertilised soil, which keeps in moisture and warmth."
+            }
+          },
+          "clue": {
+            "id": "pista_1880",
+            "text": {
+              "es": "La arena · El enarenado se inventó hacia 1880 en la costa de Granada: arena sobre estiércol.",
+              "en": "The sand · Enarenado was invented around 1880 on the Granada coast: sand over manure."
+            }
+          },
+          "nextNodeId": "g4_catedral",
+          "nextHint": {
+            "es": "Sube hasta la catedral. Unos 8 minutos.",
+            "en": "Walk up to the cathedral. About 8 minutes."
+          }
+        },
+        {
+          "id": "g4_catedral",
+          "title": {
+            "es": "Catedral de Almería",
+            "en": "Almería Cathedral"
+          },
+          "location": {
+            "lat": 36.8384,
+            "lng": -2.4666
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "hortelana",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "pescador",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El tomate de Almería se cultiva todo el año gracias al sol: la provincia tiene más de 3.000 horas de sol al año.",
+                "en": "Almería tomatoes are grown all year round thanks to the sun: the province gets more than 3,000 hours of sunshine a year."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto"
+                  ],
+                  "text": {
+                    "es": "Vienes del puerto: la uva se hundió en los sesenta y hacía falta algo nuevo. ¿La pista de la arena o la del plástico?",
+                    "en": "You've come from the port: the grape trade sank in the sixties and something new was needed. The sand lead or the plastic lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca"
+                  ],
+                  "text": {
+                    "es": "Vienes de la Chanca: ya sabes lo del enarenado. ¿La pista de la arena o la del plástico?",
+                    "en": "You've come from La Chanca: you know about the enarenado. The sand lead or the plastic lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántas horas de sol al año tiene Almería, más o menos?",
+              "en": "Roughly how many hours of sunshine does Almería get a year?"
+            },
+            "options": [
+              {
+                "es": "Unas 100",
+                "en": "About 100"
+              },
+              {
+                "es": "Más de 3.000",
+                "en": "More than 3,000"
+              },
+              {
+                "es": "Unas 500",
+                "en": "About 500"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Más de 3.000 horas: de las más soleadas de Europa.",
+              "en": "More than 3,000 hours: among the sunniest in Europe."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "hortelana",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Qué pista seguimos, detective?",
+              "en": "Which lead shall we follow, detective?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la arena",
+                "en": "The sand lead"
+              },
+              "hint": {
+                "es": "Con el pescador",
+                "en": "With the fisherman"
+              },
+              "targetNodeId": "g4a_arena",
+              "setFlags": [
+                "version_arena"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del plástico",
+                "en": "The plastic lead"
+              },
+              "hint": {
+                "es": "Con la hortelana",
+                "en": "With the market gardener"
+              },
+              "targetNodeId": "g4b_plastico",
+              "setFlags": [
+                "version_plastico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_arena",
+          "title": {
+            "es": "La arena",
+            "en": "The sand"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pescador",
+              "expression": "thinking",
+              "text": {
+                "es": "Con arena solo, al aire libre, los tomates salían antes, sí. Pero el viento y el frío de la noche se los llevaban.",
+                "en": "With sand alone, out in the open, tomatoes came up earlier, yes. But the wind and the night cold still got them."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescador",
+              "expression": "happy",
+              "text": {
+                "es": "Hasta que alguien le puso un techo de plástico a la arena. Y ahí cambió todo.",
+                "en": "Until someone put a plastic roof over the sand. And that changed everything."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_techo",
+            "text": {
+              "es": "El plástico · La arena sola no bastaba: el cambio llegó cuando se le puso un techo de plástico.",
+              "en": "The plastic · Sand alone wasn't enough: the change came when a plastic roof was put over it."
+            }
+          },
+          "nextNodeId": "g5_alcazaba",
+          "nextHint": {
+            "es": "Sube hacia la Alcazaba. Unos 8 minutos.",
+            "en": "Walk up towards the Alcazaba. About 8 minutes."
+          }
+        },
+        {
+          "id": "g4b_plastico",
+          "title": {
+            "es": "El plástico",
+            "en": "The plastic"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "proud",
+              "text": {
+                "es": "En 1963, en el Campo de Dalías, se levantó el primer invernadero de Almería: palos, alambre y plástico sobre un enarenado.",
+                "en": "In 1963, in the Campo de Dalías, Almería's first greenhouse went up: posts, wire and plastic over an enarenado."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "happy",
+              "text": {
+                "es": "El plástico guardaba el calor y protegía del viento. En pocos años, miles de familias hicieron lo mismo. Así nació el mar de plástico.",
+                "en": "The plastic kept the heat in and kept out the wind. Within a few years, thousands of families did the same. That's how the sea of plastic was born."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_1963",
+            "text": {
+              "es": "El plástico · En 1963 se levantó en el Campo de Dalías el primer invernadero: plástico sobre enarenado.",
+              "en": "The plastic · In 1963 the first greenhouse went up in the Campo de Dalías: plastic over enarenado."
+            }
+          },
+          "nextNodeId": "g5_alcazaba",
+          "nextHint": {
+            "es": "Sube hacia la Alcazaba. Unos 8 minutos.",
+            "en": "Walk up towards the Alcazaba. About 8 minutes."
+          }
+        },
+        {
+          "id": "g5_alcazaba",
+          "title": {
+            "es": "Alcazaba",
+            "en": "Alcazaba"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.4705
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_alcazaba.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_alcazaba.svg"
+              ],
+              "characters": [
+                {
+                  "id": "hortelana",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "barrilero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Desde lo alto de la Alcazaba se ve el Poniente almeriense, donde los invernaderos se ven blancos hasta el horizonte.",
+                "en": "From the top of the Alcazaba you can see the Poniente, where the greenhouses stretch white to the horizon."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto: la uva, la arena o el plástico. ¿Quién convirtió el desierto en huerta?",
+                "en": "Verdict time: the grapes, the sand or the plastic. Who turned the desert into a market garden?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién convirtió el desierto de Almería en huerta?",
+              "en": "Who turned Almería's desert into a market garden?"
+            },
+            "options": [
+              {
+                "es": "El invernadero de 1963: plástico sobre arena",
+                "en": "The 1963 greenhouse: plastic over sand"
+              },
+              {
+                "es": "La uva de barco",
+                "en": "The ship grapes"
+              },
+              {
+                "es": "La arena sola",
+                "en": "The sand alone"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El plástico, puesto sobre el enarenado. La uva enriqueció la provincia y la arena ayudaba, pero fue el invernadero de 1963, copiado por miles de familias, el que cambió el paisaje.",
+              "en": "The plastic, laid over the enarenado. The grapes made the province rich and the sand helped, but it was the 1963 greenhouse, copied by thousands of families, that changed the landscape."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_arena"
+                  ],
+                  "text": {
+                    "es": "El puerto y la arena: del barril al enarenado. Eres barrilero de honor.",
+                    "en": "The port and the sand: from the barrel to the enarenado. You're an honorary barrel maker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_plastico"
+                  ],
+                  "text": {
+                    "es": "El puerto y el plástico: de la uva al invernadero. Eres exportador de huerta.",
+                    "en": "The port and the plastic: from grapes to greenhouses. You're a market-garden exporter."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca",
+                    "version_arena"
+                  ],
+                  "text": {
+                    "es": "La Chanca y la arena: del mar a la tierra. Eres pescador de tomates.",
+                    "en": "La Chanca and the sand: from the sea to the soil. You're a tomato fisher."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca",
+                    "version_plastico"
+                  ],
+                  "text": {
+                    "es": "La Chanca y el plástico: sabes cómo nació el mar de plástico. Eres hortelano del desierto.",
+                    "en": "La Chanca and the plastic: you know how the sea of plastic was born. You're a desert gardener."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "happy",
+              "text": {
+                "es": "Y cuando comas un tomate en invierno, en cualquier sitio de Europa, acuérdate de Almería. ¡Hasta la próxima!",
+                "en": "And when you eat a tomato in winter, anywhere in Europe, remember Almería. See you next time!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "barrilero_honor",
+          "requires": [
+            "camino_puerto",
+            "version_arena"
+          ],
+          "title": {
+            "es": "Barrilero de honor",
+            "en": "Honorary barrel maker"
+          }
+        },
+        {
+          "id": "exportador_huerta",
+          "requires": [
+            "camino_puerto",
+            "version_plastico"
+          ],
+          "title": {
+            "es": "Exportador de huerta",
+            "en": "Market-garden exporter"
+          }
+        },
+        {
+          "id": "pescador_tomates",
+          "requires": [
+            "camino_chanca",
+            "version_arena"
+          ],
+          "title": {
+            "es": "Pescador de tomates",
+            "en": "Tomato fisher"
+          }
+        },
+        {
+          "id": "hortelano_desierto",
+          "requires": [
+            "camino_chanca",
+            "version_plastico"
+          ],
+          "title": {
+            "es": "Hortelano del desierto",
+            "en": "Desert gardener"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "tomate",
+          "name": {
+            "es": "El tomate",
+            "en": "The tomato"
+          },
+          "icon": "collectibles/almeria_tomate.svg",
+          "awardedAtNodeId": "g1_mercado"
+        },
+        {
+          "id": "uva_barco",
+          "name": {
+            "es": "La uva de barco",
+            "en": "The ship grapes"
+          },
+          "icon": "collectibles/almeria_uva.svg",
+          "awardedAtNodeId": "g2_purchena"
+        },
+        {
+          "id": "barril",
+          "name": {
+            "es": "El barril de uva",
+            "en": "The grape barrel"
+          },
+          "icon": "collectibles/almeria_barril.svg",
+          "awardedAtNodeId": "ga1_puerto"
+        },
+        {
+          "id": "cable_ingles",
+          "name": {
+            "es": "El Cable Inglés",
+            "en": "The Cable Inglés"
+          },
+          "icon": "collectibles/almeria_cable.svg",
+          "awardedAtNodeId": "ga2_cable"
+        },
+        {
+          "id": "gurullos",
+          "name": {
+            "es": "Los gurullos",
+            "en": "Gurullos"
+          },
+          "icon": "collectibles/almeria_gurullos.svg",
+          "awardedAtNodeId": "gb1_plazavieja"
+        },
+        {
+          "id": "gamba_roja",
+          "name": {
+            "es": "La gamba roja",
+            "en": "The red prawn"
+          },
+          "icon": "collectibles/almeria_gamba.svg",
+          "awardedAtNodeId": "gb2_chanca"
+        },
+        {
+          "id": "invernadero",
+          "name": {
+            "es": "El invernadero",
+            "en": "The greenhouse"
+          },
+          "icon": "collectibles/almeria_invernadero.svg",
+          "awardedAtNodeId": "g5_alcazaba"
+        },
+        {
+          "id": "insignia_huerta",
+          "name": {
+            "es": "¿Quién convirtió el desierto en huerta?",
+            "en": "Who Turned the Desert into a Garden?"
+          },
+          "icon": "collectibles/almeria_huerta.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    }
+  ]
+}
