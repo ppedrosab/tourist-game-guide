@@ -454,7 +454,8 @@ def espana():
            f'<path d="M204 40L216 22" stroke="#4E6B5E" stroke-width="3.4"/><path d="M216 22L218 12" stroke="{INK}" stroke-width="1.6"/>'
            # relieves y grupos escultóricos laterales en bronce
            f'<path d="M176 180L214 180L214 230L176 230Z" fill="#E9DCC0" stroke="{INK}" stroke-width="1.3"/>'
-           f'<path d="M182 222Q190 196 195 214Q200 196 208 222" fill="none" stroke="#8A7A5A" stroke-width="1.6"/>'
+           + "".join(f'<ellipse cx="{f(195 + math.cos(math.radians(a)) * 13)}" cy="{f(205 + math.sin(math.radians(a)) * 13)}" rx="4" ry="2" transform="rotate({a + 90} {f(195 + math.cos(math.radians(a)) * 13)} {f(205 + math.sin(math.radians(a)) * 13)})" fill="#9A8A66"/>' for a in range(-240, 61, 30))
+           + f'<path d="M188 222L202 222" stroke="#9A8A66" stroke-width="1.6"/>'
            + "".join(f'<path d="M{x - 14} 380L{x - 14} 340L{x + 14} 340L{x + 14} 380Z" fill="{STONE[0]}" stroke="{INK}" stroke-width="1.4"/>'
                      f'<path d="M{x - 10} 340L{x - 8} 316Q{x} 300 {x + 8} 316L{x + 10} 340Z" fill="#4E6B5E" stroke="{INK}" stroke-width="1.4"/>'
                      f'<circle cx="{x}" cy="306" r="5" fill="#4E6B5E" stroke="{INK}" stroke-width="1.2"/>' for x in (130, 260))
