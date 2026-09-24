@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import type { Challenge } from "@/content/types";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { checkObserveAnswer } from "@/engine/scene";
 import { border, colors, fonts, radius, type } from "@/theme";
 import { Button3D } from "../ui/Button3D";
@@ -12,6 +12,7 @@ type Props = { challenge: Challenge; onDone: () => void };
 
 /** Reto de una parada: quiz, observación o foto. Fallar no bloquea la historia. */
 export function ChallengePanel({ challenge, onDone }: Props) {
+  const { t, L } = useI18n();
   switch (challenge.type) {
     case "quiz":
       return <Quiz challenge={challenge} onDone={onDone} />;
@@ -19,23 +20,24 @@ export function ChallengePanel({ challenge, onDone }: Props) {
       return <Observe challenge={challenge} onDone={onDone} />;
     case "photo":
       return (
-        <Panel nameplate="Reto de foto" nameplateColor={colors.sea}>
-          <Text style={type.dialogue}>{localize(challenge.prompt)}</Text>
+        <Panel nameplate={t("reto.foto")} nameplateColor={colors.sea}>
+          <Text style={type.dialogue}>{L(challenge.prompt)}</Text>
           {/* Fase 3: cámara real. De momento el jugador confirma que la ha hecho. */}
-          <Button3D label="¡Hecha!" icon="camera" variant="sea" onPress={onDone} />
-          <Button3D label="Saltar" variant="ghost" onPress={onDone} />
+          <Button3D label={t("reto.hecha")} icon="camera" variant="sea" onPress={onDone} />
+          <Button3D label={t("reto.saltar")} variant="ghost" onPress={onDone} />
         </Panel>
       );
   }
 }
 
 function Quiz({ challenge, onDone }: { challenge: Extract<Challenge, { type: "quiz" }>; onDone: () => void }) {
+  const { t, L } = useI18n();
   const [picked, setPicked] = useState<number | null>(null);
   const answered = picked !== null;
   const right = picked === challenge.correctIndex;
   return (
-    <Panel nameplate="Reto" nameplateColor={colors.sea}>
-      <Text style={type.dialogue}>{localize(challenge.question)}</Text>
+    <Panel nameplate={t("reto.reto")} nameplateColor={colors.sea}>
+      <Text style={type.dialogue}>{L(challenge.question)}</Text>
       <View style={{ gap: 8 }}>
         {challenge.options.map((option, i) => {
           const isCorrect = i === challenge.correctIndex;
@@ -49,7 +51,7 @@ function Quiz({ challenge, onDone }: { challenge: Extract<Challenge, { type: "qu
               accessibilityState={{ disabled: answered, selected: i === picked }}
               style={[styles.option, { backgroundColor: bg }]}
             >
-              <Text style={[type.label, { flex: 1 }]}>{localize(option)}</Text>
+              <Text style={[type.label, { flex: 1 }]}>{L(option)}</Text>
               {answered && isCorrect ? <Icon name="check" size={18} color={colors.sea} /> : null}
               {answered && i === picked && !isCorrect ? <Icon name="close" size={18} color={colors.clay} /> : null}
             </Pressable>
@@ -59,10 +61,10 @@ function Quiz({ challenge, onDone }: { challenge: Extract<Challenge, { type: "qu
       {answered ? (
         <>
           <Text style={[styles.verdict, { color: right ? colors.sea : colors.clay }]}>
-            {right ? "¡Correcto!" : "¡Casi!"}
+            {right ? t("reto.correcto") : t("reto.casi")}
           </Text>
-          {challenge.explanation ? <Text style={type.body}>{localize(challenge.explanation)}</Text> : null}
-          <Button3D label="Siguiente" icon="next" small onPress={onDone} />
+          {challenge.explanation ? <Text style={type.body}>{L(challenge.explanation)}</Text> : null}
+          <Button3D label={t("comun.siguiente")} icon="next" small onPress={onDone} />
         </>
       ) : null}
     </Panel>
@@ -70,18 +72,19 @@ function Quiz({ challenge, onDone }: { challenge: Extract<Challenge, { type: "qu
 }
 
 function Observe({ challenge, onDone }: { challenge: Extract<Challenge, { type: "observe" }>; onDone: () => void }) {
+  const { t, L } = useI18n();
   const [input, setInput] = useState("");
   const [result, setResult] = useState<"ok" | "ko" | "revealed" | null>(null);
   const check = () => setResult(checkObserveAnswer(challenge.answer, input) ? "ok" : "ko");
   return (
-    <Panel nameplate="Observa" nameplateColor={colors.sea}>
-      <Text style={type.dialogue}>{localize(challenge.prompt)}</Text>
+    <Panel nameplate={t("reto.observa")} nameplateColor={colors.sea}>
+      <Text style={type.dialogue}>{L(challenge.prompt)}</Text>
       {result === "ok" || result === "revealed" ? (
         <>
           <Text style={[styles.verdict, { color: result === "ok" ? colors.sea : colors.clay }]}>
-            {result === "ok" ? "¡Bien visto!" : `La respuesta era: ${challenge.answer[0]}`}
+            {result === "ok" ? t("reto.bienVisto") : t("reto.respuestaEra", { answer: challenge.answer[0] })}
           </Text>
-          <Button3D label="Siguiente" icon="next" small onPress={onDone} />
+          <Button3D label={t("comun.siguiente")} icon="next" small onPress={onDone} />
         </>
       ) : (
         <>
@@ -92,19 +95,19 @@ function Observe({ challenge, onDone }: { challenge: Extract<Challenge, { type: 
               setResult(null);
             }}
             onSubmitEditing={check}
-            placeholder="Tu respuesta"
+            placeholder={t("reto.tuRespuesta")}
             placeholderTextColor={colors.muted}
             autoCapitalize="none"
             returnKeyType="done"
-            accessibilityLabel="Tu respuesta"
+            accessibilityLabel={t("reto.tuRespuesta")}
             style={styles.input}
           />
-          {result === "ko" ? <Text style={[styles.verdict, { color: colors.clay }]}>Mmm… mira otra vez.</Text> : null}
+          {result === "ko" ? <Text style={[styles.verdict, { color: colors.clay }]}>{t("reto.otraVez")}</Text> : null}
           <View style={styles.row}>
             <View style={{ flex: 1 }}>
-              <Button3D label="Comprobar" small disabled={!input.trim()} onPress={check} />
+              <Button3D label={t("reto.comprobar")} small disabled={!input.trim()} onPress={check} />
             </View>
-            <Button3D label="Ver respuesta" variant="ghost" onPress={() => setResult("revealed")} />
+            <Button3D label={t("reto.verRespuesta")} variant="ghost" onPress={() => setResult("revealed")} />
           </View>
         </>
       )}

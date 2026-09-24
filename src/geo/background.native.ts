@@ -6,6 +6,7 @@ import type { PlayerProgress, Route } from "@/content/types";
 import { findRoute } from "@/engine/catalog";
 import { geofenceRegions, parseRegionId, PendingArrival } from "@/engine/geo";
 import { localize } from "@/engine/runner";
+import { currentLang, translate } from "@/i18n";
 
 /**
  * Geofences en segundo plano: el sistema despierta la app al entrar en una
@@ -38,8 +39,13 @@ async function notifyArrival(routeId: string, nodeId: string) {
     const { granted } = await Notifications.getPermissionsAsync();
     const node = findRoute(routeId)?.route.nodes.find((n) => n.id === nodeId);
     if (!granted || !node) return;
+    // El store puede no estar hidratado en segundo plano: entonces se usa el idioma del móvil.
+    const lang = currentLang();
     await Notifications.scheduleNotificationAsync({
-      content: { title: "¡Has llegado!", body: `${localize(node.title)}: abre la app, que empieza la escena.` },
+      content: {
+        title: translate(lang, "avisos.llegada"),
+        body: translate(lang, "avisos.llegadaTexto", { title: localize(node.title, lang) }),
+      },
       trigger: null,
     });
   } catch {

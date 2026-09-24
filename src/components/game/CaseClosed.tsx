@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import type { PlayerProgress, Route } from "@/content/types";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { useProgress } from "@/store/progress";
 import { border, colors, radius, type } from "@/theme";
 import { Screen } from "../layout/Screen";
@@ -13,6 +13,7 @@ type Props = { route: Route; run: PlayerProgress; onReplay: () => void; onExit: 
 
 /** Pantalla "Caso cerrado": final conseguido, coleccionables y otro camino. */
 export function CaseClosed({ route, run, onReplay, onExit }: Props) {
+  const { t, L } = useI18n();
   const endingIds = useProgress((s) => s.collection.endingIds);
   const ending = route.endings?.find((e) => e.id === run.endingId);
   const total = route.endings?.length ?? 0;
@@ -25,27 +26,25 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
         <View style={styles.badge}>
           <Icon name="star" size={34} color={colors.ink} />
         </View>
-        <Text style={type.display}>¡Caso cerrado!</Text>
-        <Text style={type.secondary}>{localize(route.title)}</Text>
+        <Text style={type.display}>{t("final.casoCerrado")}</Text>
+        <Text style={type.secondary}>{L(route.title)}</Text>
       </View>
-      <Panel nameplate="Tu final" nameplateColor={colors.ink}>
-        <Text style={type.title}>{ending ? localize(ending.title) : "Final misterioso"}</Text>
-        <Text style={type.caption}>
-          {found} de {total} finales descubiertos
-        </Text>
+      <Panel nameplate={t("final.tuFinal")} nameplateColor={colors.ink}>
+        <Text style={type.title}>{ending ? L(ending.title) : t("final.misterioso")}</Text>
+        <Text style={type.caption}>{t("final.descubiertos", { n: found, total })}</Text>
       </Panel>
       {rewards.length > 0 ? (
-        <Panel nameplate="Coleccionables">
+        <Panel nameplate={t("final.coleccionables")}>
           <View style={styles.chips}>
             {rewards.map((r) => (
-              <Chip key={r.id} label={localize(r.name)} icon="trophy" variant="sand" />
+              <Chip key={r.id} label={L(r.name)} icon="trophy" variant="sand" />
             ))}
           </View>
         </Panel>
       ) : null}
-      {found < total ? <Text style={type.body}>Hay calles que hoy no has pisado. ¿Pruebas el otro camino?</Text> : null}
-      <Button3D label="Probar otro camino" icon="split" onPress={onReplay} />
-      <Button3D label="Volver a Explorar" variant="secondary" icon="compass" onPress={onExit} />
+      {found < total ? <Text style={type.body}>{t("final.otrasCalles")}</Text> : null}
+      <Button3D label={t("final.otroCamino")} icon="split" onPress={onReplay} />
+      <Button3D label={t("final.volverExplorar")} variant="secondary" icon="compass" onPress={onExit} />
     </Screen>
   );
 }

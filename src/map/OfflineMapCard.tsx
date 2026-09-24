@@ -1,48 +1,49 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Icon } from "@/components/ui";
 import type { CityPack } from "@/content/types";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { border, colors, fonts, radius, type } from "@/theme";
 import { formatBytes, offlinePlan } from "./offlinePlan";
 import { useCityOffline } from "./useCityOffline";
 
 /** Tarjeta "Mapa sin conexión" de una ciudad: descargar, progreso, borrar. */
 export function OfflineMapCard({ pack }: { pack: CityPack }) {
+  const { t, L, lang } = useI18n();
   const { state, download, remove } = useCityOffline(pack);
-  const city = localize(pack.name);
+  const city = L(pack.name);
   const plan = offlinePlan(pack);
 
-  let title = `Descargar el mapa de ${city}`;
-  let sub = `Para jugar sin datos · ≈ ${formatBytes(plan.approxBytes)}`;
+  let title = t("mapa.offlineDescargar", { city });
+  let sub = t("mapa.offlineDescargarTexto", { size: formatBytes(plan.approxBytes, lang) });
   let action: (() => void) | undefined = download;
-  let actionLabel = "Descargar";
+  let actionLabel = t("mapa.descargar");
   let progress: number | undefined;
   switch (state.kind) {
     case "unsupported":
-      title = "Mapa sin conexión";
-      sub = "En esta versión el mapa es un esquema que ya funciona sin datos. El callejero descargable llega con la app instalada.";
+      title = t("mapa.offlineTitulo");
+      sub = t("mapa.offlineNoDisponible");
       action = undefined;
       break;
     case "checking":
-      sub = "Comprobando…";
+      sub = t("mapa.offlineComprobando");
       action = undefined;
       break;
     case "downloading":
-      title = `Descargando el mapa de ${city}`;
-      sub = `${Math.round(state.percentage)} % · ${formatBytes(state.bytes)}`;
+      title = t("mapa.offlineDescargando", { city });
+      sub = `${Math.round(state.percentage)} % · ${formatBytes(state.bytes, lang)}`;
       progress = state.percentage / 100;
       action = undefined;
       break;
     case "complete":
-      title = `Mapa de ${city} sin conexión`;
-      sub = `Descargado · ${formatBytes(state.bytes)}`;
+      title = t("mapa.offlineListo", { city });
+      sub = t("mapa.offlineDescargado", { size: formatBytes(state.bytes, lang) });
       action = remove;
-      actionLabel = "Borrar";
+      actionLabel = t("mapa.borrar");
       break;
     case "error":
-      title = "No se pudo descargar el mapa";
-      sub = "Revisa la conexión e inténtalo de nuevo.";
-      actionLabel = "Reintentar";
+      title = t("mapa.offlineError");
+      sub = t("mapa.offlineErrorTexto");
+      actionLabel = t("mapa.reintentar");
       break;
   }
 
@@ -61,7 +62,7 @@ export function OfflineMapCard({ pack }: { pack: CityPack }) {
         ) : null}
       </View>
       {action ? (
-        <Pressable onPress={action} accessibilityRole="button" accessibilityLabel={`${actionLabel} mapa de ${city}`} hitSlop={8}>
+        <Pressable onPress={action} accessibilityRole="button" accessibilityLabel={`${actionLabel} · ${title}`} hitSlop={8}>
           <Text style={styles.action}>{actionLabel}</Text>
         </Pressable>
       ) : null}

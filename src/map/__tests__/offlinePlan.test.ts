@@ -46,4 +46,5 @@ it("formatea tamaños en español", () => {
   expect(formatBytes(500)).toBe("1 KB");
   expect(formatBytes(250_000)).toBe("250 KB");
   expect(formatBytes(12_345_678)).toBe("12,3 MB");
+  expect(formatBytes(12_345_678, "en")).toBe("12.3 MB");
 });

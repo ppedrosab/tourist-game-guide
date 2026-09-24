@@ -2,10 +2,12 @@ import { router } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AzulejoBackground, Button3D, Panel } from "@/components/ui";
+import { useI18n } from "@/i18n";
 import { colors, type } from "@/theme";
 
 export default function Bienvenida() {
   const insets = useSafeAreaInsets();
+  const { t } = useI18n();
   return (
     <View style={styles.root}>
       <AzulejoBackground />
@@ -13,12 +15,10 @@ export default function Bienvenida() {
       <View style={{ flex: 1 }} />
       <View style={{ padding: 12, paddingBottom: insets.bottom + 16 }}>
         <Panel>
-          <Text style={type.title}>Camina la historia. Decide el camino.</Text>
-          <Text style={type.secondary}>
-            Personajes de otra época te guían por la calle, te plantean retos y tú eliges por dónde seguir.
-          </Text>
-          <Button3D label="Empezar la aventura" icon="next" onPress={() => router.push("/permisos")} />
-          <Button3D label="Ya tengo cuenta" variant="ghost" onPress={() => router.replace("/")} />
+          <Text style={type.title}>{t("bienvenida.titulo")}</Text>
+          <Text style={type.secondary}>{t("bienvenida.texto")}</Text>
+          <Button3D label={t("bienvenida.empezar")} icon="next" onPress={() => router.push("/permisos")} />
+          <Button3D label={t("bienvenida.yaTengo")} variant="ghost" onPress={() => router.replace("/")} />
         </Panel>
       </View>
     </View>

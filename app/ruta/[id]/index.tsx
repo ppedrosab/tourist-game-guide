@@ -4,25 +4,24 @@ import { Screen, TopBar } from "@/components/layout/Screen";
 import { Button3D, Chip, Panel } from "@/components/ui";
 import { findRoute } from "@/engine/catalog";
 import { routeFacts, routeOutline } from "@/engine/outline";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { routeMapData } from "@/map/geometry";
 import { OfflineMapCard } from "@/map/OfflineMapCard";
 import { RouteMap } from "@/map/RouteMap";
 import { useActiveRun, useProgress } from "@/store/progress";
 import { border, branchColors, colors, fonts, type } from "@/theme";
 
-const km = (n: number) => `${n.toLocaleString("es-ES")} km`;
-
 export default function DetalleRuta() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const found = findRoute(id);
   const active = useActiveRun(id);
   const start = useProgress((s) => s.start);
+  const { t, L, number } = useI18n();
 
   if (!found) {
     return (
       <Screen>
-        <TopBar title="Ruta no encontrada" onBack={() => router.back()} />
+        <TopBar title={t("ruta.noEncontrada")} onBack={() => router.back()} />
       </Screen>
     );
   }
@@ -39,14 +38,14 @@ export default function DetalleRuta() {
 
   return (
     <Screen>
-      <TopBar title={localize(route.title)} onBack={() => router.back()} />
+      <TopBar title={L(route.title)} onBack={() => router.back()} />
       <View style={styles.chips}>
-        <Chip label={`${route.durationMin} min`} icon="clock" />
-        <Chip label={km(route.distanceKm)} icon="walk" />
-        {facts.branches > 0 ? <Chip label={`${facts.branches} caminos`} icon="split" /> : null}
-        {facts.endings > 0 ? <Chip label={`${facts.endings} finales`} icon="star" /> : null}
+        <Chip label={t("comun.minutos", { n: route.durationMin })} icon="clock" />
+        <Chip label={`${number(route.distanceKm, 1)} km`} icon="walk" />
+        {facts.branches > 0 ? <Chip label={t("comun.caminos", { n: facts.branches })} icon="split" /> : null}
+        {facts.endings > 0 ? <Chip label={t("comun.finales", { n: facts.endings })} icon="star" /> : null}
       </View>
-      <Text style={type.body}>{localize(route.summary)}</Text>
+      <Text style={type.body}>{L(route.summary)}</Text>
       <RouteMap route={route} run={active} height={230} />
       <OfflineMapCard pack={pack} />
       <Panel>
@@ -57,8 +56,8 @@ export default function DetalleRuta() {
                 <Text style={styles.numText}>{stopNumber.get(item.node.id)}</Text>
               </View>
               <View style={{ flex: 1 }}>
-                <Text style={type.label}>{localize(item.node.title)}</Text>
-                {item.decision ? <Text style={type.caption}>Decisión {item.decision}</Text> : null}
+                <Text style={type.label}>{L(item.node.title)}</Text>
+                {item.decision ? <Text style={type.caption}>{t("ruta.decision", { n: item.decision })}</Text> : null}
               </View>
             </View>
           ) : (
@@ -69,7 +68,7 @@ export default function DetalleRuta() {
                   <View key={b.nodes[0].id} style={styles.branch}>
                     <View style={[styles.dot, { backgroundColor: branchColors[b.branch ?? "comun"] }]} />
                     <Text style={[type.caption, { flex: 1, color: colors.ink }]}>
-                      {b.nodes.map((node) => `${stopNumber.get(node.id)} · ${localize(node.title)}`).join("  →  ")}
+                      {b.nodes.map((node) => `${stopNumber.get(node.id)} · ${L(node.title)}`).join("  →  ")}
                     </Text>
                   </View>
                 ))}
@@ -80,13 +79,13 @@ export default function DetalleRuta() {
       <View style={styles.actions}>
         <View style={{ flex: 1 }}>
           {active ? (
-            <Button3D label="Continuar" icon="play" onPress={play} />
+            <Button3D label={t("comun.continuar")} icon="play" onPress={play} />
           ) : (
-            <Button3D label="Comenzar ruta" icon="play" onPress={startFresh} />
+            <Button3D label={t("ruta.comenzar")} icon="play" onPress={startFresh} />
           )}
         </View>
       </View>
-      {active ? <Button3D label="Empezar de nuevo" variant="ghost" onPress={startFresh} /> : null}
+      {active ? <Button3D label={t("ruta.deNuevo")} variant="ghost" onPress={startFresh} /> : null}
     </Screen>
   );
 }

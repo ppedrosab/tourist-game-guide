@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { useI18n } from "@/i18n";
 import { border, colors, fonts, hardShadow, radius, type } from "@/theme";
 import { HardShadow } from "./HardShadow";
 import { Icon } from "./Icon";
@@ -29,11 +30,12 @@ export function DialogBox({
   portrait,
   choices,
   extra,
-  nextLabel = "Siguiente",
+  nextLabel,
   onNext,
   onReplay,
   audioProgress = 0,
 }: Props) {
+  const { t } = useI18n();
   return (
     <Panel nameplate={speaker} nameplateColor={speakerColor}>
       {portrait ? <View style={styles.portrait}>{portrait}</View> : null}
@@ -45,7 +47,7 @@ export function DialogBox({
         <View style={{ gap: 10 }}>{choices}</View>
       ) : (
         <View style={styles.footer}>
-          <Pressable style={styles.audio} onPress={onReplay} accessibilityRole="button" accessibilityLabel="Repetir audio">
+          <Pressable style={styles.audio} onPress={onReplay} accessibilityRole="button" accessibilityLabel={t("jugar.repetirAudio")}>
             <Icon name="volume" size={18} />
             <View style={styles.track}>
               <View style={[styles.fill, { width: `${Math.round(audioProgress * 100)}%` }]} />
@@ -56,7 +58,7 @@ export function DialogBox({
             {({ pressed }) => (
               <HardShadow radius={radius.md} offset={hardShadow.sm} pressed={pressed}>
                 <View style={styles.next}>
-                  <Text style={styles.nextText}>{nextLabel}</Text>
+                  <Text style={styles.nextText}>{nextLabel ?? t("comun.siguiente")}</Text>
                   <Icon name="next" size={16} color={colors.white} strokeWidth={2.6} />
                 </View>
               </HardShadow>

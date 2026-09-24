@@ -2,20 +2,21 @@ import { router } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { Button3D, Chip, Icon } from "@/components/ui";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
 import { branchColors, border, colors, fonts, radius, type } from "@/theme";
 
 /** Cuaderno del detective (modal): pistas y objetos de la partida en curso. */
 export default function Cuaderno() {
+  const { t, L } = useI18n();
   const current = useCurrentRun();
   const close = () => router.back();
 
   if (!current) {
     return (
       <Screen>
-        <TopBar title="Cuaderno del detective" onBack={close} closeIcon />
-        <Text style={type.secondary}>Empieza una ruta para ir llenando el cuaderno.</Text>
+        <TopBar title={t("jugar.cuaderno")} onBack={close} closeIcon />
+        <Text style={type.secondary}>{t("cuaderno.vacio")}</Text>
       </Screen>
     );
   }
@@ -27,8 +28,8 @@ export default function Cuaderno() {
 
   return (
     <Screen>
-      <TopBar title="Cuaderno del detective" onBack={close} closeIcon />
-      <Text style={type.overline}>Pistas</Text>
+      <TopBar title={t("jugar.cuaderno")} onBack={close} closeIcon />
+      <Text style={type.overline}>{t("cuaderno.pistas")}</Text>
       {clueNodes.map((node) => {
         const clue = node.clue!;
         const color = branchColors[node.branch ?? "comun"];
@@ -39,8 +40,8 @@ export default function Cuaderno() {
                 <Icon name="search" size={16} color={colors.white} />
               </View>
               <View style={{ flex: 1 }}>
-                <Text style={[styles.where, { color }]}>{localize(node.title)}</Text>
-                <Text style={type.body}>{localize(clue.text)}</Text>
+                <Text style={[styles.where, { color }]}>{L(node.title)}</Text>
+                <Text style={type.body}>{L(clue.text)}</Text>
               </View>
             </View>
           );
@@ -51,23 +52,23 @@ export default function Cuaderno() {
           <View key={clue.id} style={[styles.clue, styles.locked]}>
             <Icon name="lock" size={16} color={colors.muted} />
             <Text style={type.secondary}>
-              {otherBranch ? `${localize(node.title)} · otro camino` : "Pista por descubrir"}
+              {otherBranch ? t("cuaderno.otroCamino", { title: L(node.title) }) : t("cuaderno.porDescubrir")}
             </Text>
           </View>
         );
       })}
       {objects.length > 0 ? (
         <>
-          <Text style={type.overline}>Objetos</Text>
+          <Text style={type.overline}>{t("cuaderno.objetos")}</Text>
           <View style={styles.chips}>
             {objects.map((r) => (
-              <Chip key={r.id} label={localize(r.name)} icon="trophy" variant="sand" />
+              <Chip key={r.id} label={L(r.name)} icon="trophy" variant="sand" />
             ))}
           </View>
         </>
       ) : null}
-      <Button3D label="Ver mapa" icon="map" variant="secondary" onPress={() => router.replace("/mapa")} />
-      <Button3D label="Volver" onPress={close} />
+      <Button3D label={t("pausa.verMapa")} icon="map" variant="secondary" onPress={() => router.replace("/mapa")} />
+      <Button3D label={t("comun.volver")} onPress={close} />
     </Screen>
   );
 }

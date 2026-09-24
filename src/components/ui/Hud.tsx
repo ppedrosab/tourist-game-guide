@@ -1,4 +1,5 @@
 import { StyleSheet, View } from "react-native";
+import { useI18n } from "@/i18n";
 import { border, Branch, branchColors, colors, hardShadow, radius, size } from "@/theme";
 import { HardShadow } from "./HardShadow";
 import { IconButton } from "./IconButton";
@@ -14,15 +15,16 @@ type Props = {
 
 /** HUD de la ruta: pausa · progreso por paradas · cuaderno con contador de pistas. */
 export function Hud({ stops, current, clues, onPause, onNotebook }: Props) {
+  const { t } = useI18n();
   return (
     <View style={styles.row}>
-      <IconButton icon="pause" label="Pausa" onPress={onPause} />
+      <IconButton icon="pause" label={t("jugar.pausa")} onPress={onPause} />
       <View style={{ flex: 1 }}>
         <HardShadow radius={radius.md} offset={hardShadow.sm}>
           <View
             style={styles.track}
             accessible
-            accessibilityLabel={`Parada ${current + 1} de ${stops.length}`}
+            accessibilityLabel={t("comun.paradaDe", { n: current + 1, total: stops.length })}
           >
             {stops.map((stop, i) => {
               const color = stop.branch ? branchColors[stop.branch] : colors.ink;
@@ -46,7 +48,7 @@ export function Hud({ stops, current, clues, onPause, onNotebook }: Props) {
           </View>
         </HardShadow>
       </View>
-      <IconButton icon="book" label="Cuaderno del detective" badge={clues} onPress={onNotebook} />
+      <IconButton icon="book" label={t("jugar.cuaderno")} badge={clues} onPress={onNotebook} />
     </View>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { LayoutChangeEvent, StyleSheet, View } from "react-native";
 import Svg, { Circle, G, Line, Rect, Text as SvgText } from "react-native-svg";
 import type { LatLng } from "@/content/types";
+import { useI18n } from "@/i18n";
 import { branchColors, colors, fonts } from "@/theme";
 import { MapStop, projector, RouteMapData, SegmentStatus, StopStatus } from "./geometry";
 
@@ -15,6 +16,7 @@ const PADDING = 30;
  * color, sin callejero.
  */
 export function SchematicMap({ data, user }: Props) {
+  const { t } = useI18n();
   const [size, setSize] = useState({ width: 0, height: 0 });
   const onLayout = (e: LayoutChangeEvent) => setSize(e.nativeEvent.layout);
   const { width, height } = size;
@@ -24,7 +26,7 @@ export function SchematicMap({ data, user }: Props) {
   const meInside = me && me.x >= 0 && me.x <= width && me.y >= 0 && me.y <= height;
 
   return (
-    <View style={styles.root} onLayout={onLayout} accessibilityLabel="Mapa esquemático de la ruta">
+    <View style={styles.root} onLayout={onLayout} accessibilityLabel={t("mapa.esquema")}>
       {width > 0 ? (
         <Svg width={width} height={height}>
           <Rect width={width} height={height} fill={colors.paper} />

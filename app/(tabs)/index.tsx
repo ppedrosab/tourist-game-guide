@@ -4,16 +4,20 @@ import { Screen } from "@/components/layout/Screen";
 import { Button3D, Chip, HardShadow, Icon } from "@/components/ui";
 import { findRoute, getCatalog } from "@/engine/catalog";
 import { runProgress } from "@/engine/outline";
-import { localize } from "@/engine/runner";
+import { useI18n } from "@/i18n";
 import { useActiveRun, useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
-function cityStatus(freeRoutes: number, routes: number) {
-  if (freeRoutes > 0) return freeRoutes === 1 ? "1 ruta gratis" : `${freeRoutes} rutas gratis`;
-  return routes === 1 ? "1 ruta" : `${routes} rutas`;
-}
-
 export default function Explorar() {
+  const { t, L } = useI18n();
+  const cityStatus = (free: number, routes: number) =>
+    free > 0
+      ? free === 1
+        ? t("explorar.rutaGratis")
+        : t("explorar.rutasGratis", { n: free })
+      : routes === 1
+        ? t("explorar.ruta")
+        : t("explorar.rutas", { n: routes });
   const { packs } = getCatalog();
   const clues = useProgress((s) => s.collection.clueIds.length);
   const lastRouteId = useProgress((s) => s.lastRouteId);
@@ -25,29 +29,27 @@ export default function Explorar() {
     <Screen withTabBar>
       <View style={styles.header}>
         <View style={{ flex: 1 }}>
-          <Text style={type.secondary}>Hola,</Text>
-          <Text style={type.title}>detective</Text>
+          <Text style={type.secondary}>{t("explorar.hola")}</Text>
+          <Text style={type.title}>{t("explorar.detective")}</Text>
         </View>
-        <Chip label={clues === 1 ? "1 pista" : `${clues} pistas`} icon="book" />
+        <Chip label={clues === 1 ? t("explorar.pista") : t("explorar.pistas", { n: clues })} icon="book" />
       </View>
 
       {/* Continuar: lleva a la parada exacta donde se quedó el jugador. */}
       {found && progress ? (
         <HardShadow radius={radius.xl}>
           <View style={styles.continueCard}>
-            <Chip label="En curso" variant="clay" />
-            <Text style={[type.subtitle, { color: colors.white }]}>{localize(found.route.title)}</Text>
+            <Chip label={t("explorar.enCurso")} variant="clay" />
+            <Text style={[type.subtitle, { color: colors.white }]}>{L(found.route.title)}</Text>
             <View style={styles.progressRow}>
               <View style={styles.progressTrack}>
                 <View style={[styles.progressFill, { width: `${Math.round((progress.stop / progress.total) * 100)}%` }]} />
               </View>
-              <Text style={styles.progressText}>
-                Parada {progress.stop} de {progress.total}
-              </Text>
+              <Text style={styles.progressText}>{t("comun.paradaDe", { n: progress.stop, total: progress.total })}</Text>
             </View>
-            <Text style={styles.progressText}>{localize(progress.node.title)}</Text>
+            <Text style={styles.progressText}>{L(progress.node.title)}</Text>
             <Button3D
-              label="Continuar"
+              label={t("comun.continuar")}
               icon="play"
               onPress={() => router.push(`/ruta/${found.route.id}/jugar`)}
             />
@@ -56,8 +58,8 @@ export default function Explorar() {
       ) : null}
 
       <View style={styles.sectionHeader}>
-        <Text style={type.subtitle}>Ciudades</Text>
-        <Text style={type.caption}>Más ciudades, pronto</Text>
+        <Text style={type.subtitle}>{t("explorar.ciudades")}</Text>
+        <Text style={type.caption}>{t("explorar.masPronto")}</Text>
       </View>
       <View style={{ gap: 12 }}>
         {packs.map((pack) => (
@@ -65,10 +67,10 @@ export default function Explorar() {
             key={pack.id}
             onPress={() => router.push(`/ciudad/${pack.id}`)}
             accessibilityRole="button"
-            accessibilityLabel={localize(pack.name)}
+            accessibilityLabel={L(pack.name)}
           >
             <View style={styles.cityRow}>
-              <Text style={[type.label, { flex: 1, fontSize: 17 }]}>{localize(pack.name)}</Text>
+              <Text style={[type.label, { flex: 1, fontSize: 17 }]}>{L(pack.name)}</Text>
               <Text style={[type.caption, { color: colors.clay, fontFamily: fonts.bold }]}>
                 {cityStatus(pack.routes.filter((r) => r.isFree).length, pack.routes.length)}
               </Text>
@@ -77,7 +79,7 @@ export default function Explorar() {
           </Pressable>
         ))}
       </View>
-      <Button3D label="Ver bienvenida (demo)" variant="ghost" onPress={() => router.push("/bienvenida")} />
+      <Button3D label={t("explorar.verBienvenida")} variant="ghost" onPress={() => router.push("/bienvenida")} />
     </Screen>
   );
 }

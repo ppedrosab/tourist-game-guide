@@ -7,17 +7,18 @@ import { CaseClosed } from "@/components/game/CaseClosed";
 import { ChallengePanel } from "@/components/game/ChallengePanel";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
-import type { CityPack, PlayerProgress, Route } from "@/content/types";
+import type { CityPack, I18nText, PlayerProgress, Route } from "@/content/types";
 import { findRoute } from "@/engine/catalog";
 import { useArrivalWatcher } from "@/hooks/useArrivalWatcher";
 import { useVoice, Voice } from "@/hooks/useVoice";
 import { useIsFocused } from "@react-navigation/native";
-import { getNode, hasArrived, localize, routeStops } from "@/engine/runner";
+import { getNode, hasArrived, routeStops } from "@/engine/runner";
 import { buildSteps, SceneStep } from "@/engine/scene";
 import { SCENE_ASPECT, SceneStage } from "@/scene/SceneStage";
 import { stageCast } from "@/scene/cast";
 import { sceneKeyFor } from "@/scene/sceneFor";
 import { castShadow, sunPosition } from "@/scene/sun";
+import { StringKey, useI18n } from "@/i18n";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
@@ -28,6 +29,7 @@ export default function Jugar() {
   const hydrated = useProgress((s) => s.hydrated);
   const run = useProgress((s) => s.runs[id]);
   const start = useProgress((s) => s.start);
+  const { t } = useI18n();
 
   // Sin partida guardada: se empieza desde el nodo inicial.
   useEffect(() => {
@@ -37,8 +39,8 @@ export default function Jugar() {
   if (!found) {
     return (
       <Screen>
-        <TopBar title="Ruta no encontrada" onBack={() => router.back()} />
-        <Text style={type.body}>Esta ruta no existe o su contenido no es válido.</Text>
+        <TopBar title={t("ruta.noEncontrada")} onBack={() => router.back()} />
+        <Text style={type.body}>{t("ruta.noValida")}</Text>
       </Screen>
     );
   }
@@ -60,6 +62,7 @@ export default function Jugar() {
 function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: PlayerProgress }) {
   const insets = useSafeAreaInsets();
   const window = useWindowDimensions();
+  const { L, lang } = useI18n();
   // Escenario con la proporción de las ilustraciones; en pantallas bajas se recorta ("cover").
   const stageHeight = Math.min(window.width / SCENE_ASPECT, window.height * 0.8);
   const advance = useProgress((s) => s.advance);
@@ -85,8 +88,8 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const focused = useIsFocused();
   const voicesOn = useProgress((s) => s.voices);
   const subtitles = useProgress((s) => s.subtitles);
-  const line = arrived ? spokenLine(step, `${node.id}:${index}`) : undefined;
-  const voice = useVoice(line, { enabled: voicesOn, active: focused });
+  const line = arrived ? spokenLine(step, `${node.id}:${index}`, L) : undefined;
+  const voice = useVoice(line, { enabled: voicesOn, active: focused, lang });
   // Mientras se espera la llegada, en escena solo está el guía.
   const cast = useMemo(
     () => stageCast(pack, route, node, arrived ? step : undefined),
@@ -94,7 +97,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   );
 
   const characterName = (characterId?: string) =>
-    localize(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
+    L(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
 
   return (
     <View style={styles.root}>
@@ -107,7 +110,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
           talking={voice.speaking}
           shadow={shadow}
           testID="escenario"
-          fallback={<Text style={styles.stageText}>{localize(node.title)}</Text>}
+          fallback={<Text style={styles.stageText}>{L(node.title)}</Text>}
         />
       </View>
 
@@ -142,16 +145,16 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 }
 
 /** Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. */
-function spokenLine(step: SceneStep, key: string) {
+function spokenLine(step: SceneStep, key: string, L: (text: I18nText) => string) {
   switch (step.kind) {
     case "text":
       return step.source === "dialogue" || step.source === "narration"
-        ? { key, text: localize(step.text), audio: step.audio }
+        ? { key, text: L(step.text), audio: step.audio }
         : undefined;
     case "decision":
-      return step.intro ? { key, text: localize(step.intro.text) } : undefined;
+      return step.intro ? { key, text: L(step.intro.text) } : undefined;
     case "continue":
-      return step.hint ? { key, text: localize(step.hint) } : undefined;
+      return step.hint ? { key, text: L(step.hint) } : undefined;
     default:
       return undefined;
   }
@@ -170,30 +173,23 @@ type StepViewProps = {
 };
 
 function StepView({ step, voice, showText, route, characterName, onNext, onChoose, onContinue }: StepViewProps) {
+  const { t, L } = useI18n();
   const audio = { audioProgress: voice.progress, onReplay: voice.replay };
   const shown = (text: string) => (showText ? text : "…");
   switch (step.kind) {
     case "text": {
-      const { speaker, color } = textSpeaker(step, characterName);
-      return (
-        <DialogBox
-          speaker={speaker}
-          speakerColor={color}
-          text={shown(localize(step.text))}
-          onNext={onNext}
-          {...audio}
-        />
-      );
+      const { speaker, color } = textSpeaker(step, characterName, t);
+      return <DialogBox speaker={speaker} speakerColor={color} text={shown(L(step.text))} onNext={onNext} {...audio} />;
     }
     case "challenge":
       return <ChallengePanel challenge={step.challenge} onDone={onNext} />;
     case "clue":
       return (
         <DialogBox
-          speaker="¡Pista nueva!"
+          speaker={t("jugar.pistaNueva")}
           speakerColor={colors.ink}
-          text={localize(step.text)}
-          nextLabel="Apuntada"
+          text={L(step.text)}
+          nextLabel={t("jugar.apuntada")}
           onNext={onNext}
         />
       );
@@ -201,17 +197,20 @@ function StepView({ step, voice, showText, route, characterName, onNext, onChoos
       return (
         <DialogBox
           speaker={characterName(step.intro?.characterId)}
-          text={step.intro ? shown(localize(step.intro.text)) : "¿Qué camino seguimos?"}
+          text={step.intro ? shown(L(step.intro.text)) : t("jugar.queCamino")}
           choices={step.choices.map((choice) => {
             const target = getNode(route, choice.targetNodeId);
-            const meta = [choice.distanceM && `${choice.distanceM} m`, choice.walkMin && `${choice.walkMin} min`]
+            const meta = [
+              choice.distanceM && `${choice.distanceM} m`,
+              choice.walkMin && t("comun.minutos", { n: choice.walkMin }),
+            ]
               .filter(Boolean)
               .join(" · ");
             return (
               <ChoiceCard
                 key={choice.targetNodeId}
-                title={localize(choice.label)}
-                hint={choice.hint && localize(choice.hint)}
+                title={L(choice.label)}
+                hint={choice.hint && L(choice.hint)}
                 meta={meta || undefined}
                 branch={target.branch ?? "comun"}
                 icon={target.location ? "walk" : "book"}
@@ -225,8 +224,8 @@ function StepView({ step, voice, showText, route, characterName, onNext, onChoos
       return (
         <DialogBox
           speaker={characterName()}
-          text={step.hint ? shown(localize(step.hint)) : `Siguiente parada: ${localize(step.nextTitle)}.`}
-          nextLabel="Seguir"
+          text={step.hint ? shown(L(step.hint)) : t("jugar.siguienteParada", { title: L(step.nextTitle) })}
+          nextLabel={t("jugar.seguir")}
           onNext={onContinue}
           {...audio}
         />
@@ -235,27 +234,31 @@ function StepView({ step, voice, showText, route, characterName, onNext, onChoos
       return (
         <DialogBox
           speaker={characterName()}
-          text="Caso resuelto, detective. ¿Lo cerramos?"
-          nextLabel="Cerrar el caso"
+          text={t("jugar.casoResuelto")}
+          nextLabel={t("jugar.cerrarCaso")}
           onNext={onContinue}
         />
       );
   }
 }
 
-function textSpeaker(step: Extract<SceneStep, { kind: "text" }>, characterName: (id?: string) => string) {
+function textSpeaker(
+  step: Extract<SceneStep, { kind: "text" }>,
+  characterName: (id?: string) => string,
+  t: (key: StringKey, params?: Record<string, string | number>) => string,
+) {
   switch (step.source) {
     case "dialogue":
       return { speaker: characterName(step.characterId), color: colors.clay };
     case "historical_fact":
-      return { speaker: step.year ? `Dato histórico · ${step.year}` : "Dato histórico", color: colors.sea };
+      return { speaker: step.year ? t("jugar.datoAnio", { year: step.year }) : t("jugar.dato"), color: colors.sea };
     case "anecdote":
-      return { speaker: step.legend ? "Se cuenta…" : "Anécdota", color: colors.ink };
+      return { speaker: step.legend ? t("jugar.seCuenta") : t("jugar.anecdota"), color: colors.ink };
     case "then_now":
-      return { speaker: "Antes y ahora", color: colors.sea };
+      return { speaker: t("jugar.antesAhora"), color: colors.sea };
     case "image":
     case "narration":
-      return { speaker: "Narrador", color: colors.ink };
+      return { speaker: t("jugar.narrador"), color: colors.ink };
   }
 }
 

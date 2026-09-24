@@ -51,7 +51,12 @@ export function useI18n() {
     (n: number, digits = 0) => n.toLocaleString(lang === "es" ? "es-ES" : "en-GB", { maximumFractionDigits: digits }),
     [lang],
   );
-  return useMemo(() => ({ lang, t, L, number }), [lang, t, L, number]);
+  /** "560 m" / "1,2 km" (a pie no tiene sentido más precisión). */
+  const distance = useCallback(
+    (m: number) => (m < 1000 ? `${Math.max(10, Math.round(m / 10) * 10)} m` : `${number(m / 1000, 1)} km`),
+    [number],
+  );
+  return useMemo(() => ({ lang, t, L, number, distance }), [lang, t, L, number, distance]);
 }
 
 // Todas las claves válidas ("a.b.c") a partir del diccionario español.

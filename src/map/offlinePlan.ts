@@ -67,7 +67,8 @@ export function offlinePlan(pack: CityPack): OfflinePlan {
   };
 }
 
-export function formatBytes(bytes: number): string {
+export function formatBytes(bytes: number, lang: "es" | "en" = "es"): string {
   if (bytes < 1_000_000) return `${Math.max(1, Math.round(bytes / 1000))} KB`;
-  return `${(bytes / 1_000_000).toLocaleString("es-ES", { maximumFractionDigits: 1 })} MB`;
+  const locale = lang === "es" ? "es-ES" : "en-GB";
+  return `${(bytes / 1_000_000).toLocaleString(locale, { maximumFractionDigits: 1 })} MB`;
 }
