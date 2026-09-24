@@ -77,18 +77,25 @@ export function isFinished(state: PlayerProgress): boolean {
   return state.completedAt !== undefined;
 }
 
-/** Aplica los efectos de entrar en un nodo: visita, pista, coleccionables y final. */
+/** Entrar en un nodo: pasa a ser el actual, queda visitado y, si es el último, fija el final. */
 function enterNode(route: Route, state: PlayerProgress, nodeId: string): PlayerProgress {
   const node = getNode(route, nodeId);
-  const rewards = (route.rewards ?? []).filter((r) => r.awardedAtNodeId === node.id).map((r) => r.id);
-  if (node.reward) rewards.push(node.reward);
   return {
     ...state,
     currentNodeId: node.id,
     visitedNodeIds: addUnique(state.visitedNodeIds, [node.id]),
+    endingId: node.isEnding ? resolveEnding(route, state.flags)?.id : state.endingId,
+  };
+}
+
+/** Completar un nodo (salir de él): se gana su pista y sus coleccionables. */
+function completeNode(route: Route, state: PlayerProgress, node: StoryNode): PlayerProgress {
+  const rewards = (route.rewards ?? []).filter((r) => r.awardedAtNodeId === node.id).map((r) => r.id);
+  if (node.reward) rewards.push(node.reward);
+  return {
+    ...state,
     clueIds: node.clue ? addUnique(state.clueIds, [node.clue.id]) : state.clueIds,
     collectibleIds: addUnique(state.collectibleIds, rewards),
-    endingId: node.isEnding ? resolveEnding(route, state.flags)?.id : state.endingId,
   };
 }
 
@@ -109,23 +116,25 @@ export function startRoute(cityId: string, route: Route, startedAt: string = now
 
 /**
  * Avanza desde el nodo actual. En un nodo de decisión hay que pasar la
- * elección (una de `availableChoices`); en el resto, no. Avanzar desde el
- * nodo final cierra la partida (`completedAt`).
+ * elección (una de `availableChoices`); en el resto, no. Al salir de un nodo
+ * se ganan su pista y sus coleccionables. Avanzar desde el nodo final cierra
+ * la partida (`completedAt`).
  */
 export function advance(route: Route, state: PlayerProgress, choice?: Choice, at: string = now()): PlayerProgress {
   if (isFinished(state)) throw new RunnerError("La partida ya ha terminado");
   const node = getNode(route, state.currentNodeId);
+  const done = completeNode(route, state, node);
 
   if (node.choices) {
     if (!choice) throw new RunnerError(`El nodo "${node.id}" necesita una decisión`);
-    const picked = availableChoices(node, state.flags).find((c) => c.targetNodeId === choice.targetNodeId);
+    const picked = availableChoices(node, done.flags).find((c) => c.targetNodeId === choice.targetNodeId);
     if (!picked) throw new RunnerError(`La decisión hacia "${choice.targetNodeId}" no está disponible en "${node.id}"`);
-    return enterNode(route, { ...state, flags: addUnique(state.flags, picked.setFlags ?? []) }, picked.targetNodeId);
+    return enterNode(route, { ...done, flags: addUnique(done.flags, picked.setFlags ?? []) }, picked.targetNodeId);
   }
   if (choice) throw new RunnerError(`El nodo "${node.id}" no tiene decisiones`);
-  if (node.isEnding) return { ...state, completedAt: at };
+  if (node.isEnding) return { ...done, completedAt: at };
   if (!node.nextNodeId) throw new RunnerError(`El nodo "${node.id}" no tiene salida`);
-  return enterNode(route, state, node.nextNodeId);
+  return enterNode(route, done, node.nextNodeId);
 }
 
 // ---------------------------------------------------------------------------

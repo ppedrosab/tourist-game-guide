@@ -2,6 +2,8 @@ import { router } from "expo-router";
 import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
 import { ReactNode, useState } from "react";
 import { Button3D, Icon, IconName, Panel } from "@/components/ui";
+import { localize, routeStops } from "@/engine/runner";
+import { useCurrentRun } from "@/hooks/useCurrentRun";
 import { border, colors, radius, type } from "@/theme";
 
 function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: string; sub: string; onPress?: () => void; right?: ReactNode }) {
@@ -23,11 +25,19 @@ function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: stri
 export default function Pausa() {
   const [voces, setVoces] = useState(true);
   const [subtitulos, setSubtitulos] = useState(true);
+  const current = useCurrentRun();
+  const where = (() => {
+    if (!current) return "";
+    const { route, run } = current;
+    const { stops, current: index } = routeStops(route, run);
+    const node = route.nodes.find((n) => n.id === run.currentNodeId);
+    return `Parada ${index + 1} de ${stops.length}${node ? ` · ${localize(node.title)}` : ""}`;
+  })();
   return (
     <View style={styles.overlay}>
       <Panel nameplate="Pausa" nameplateColor={colors.ink} style={{ gap: 10 }}>
-        <Text style={type.subtitle}>El misterio de la Manquita</Text>
-        <Text style={type.caption}>Parada 2 de 8 · Calle Larios</Text>
+        <Text style={type.subtitle}>{current ? localize(current.route.title) : ""}</Text>
+        <Text style={type.caption}>{where}</Text>
         <Button3D label="Continuar escena" icon="play" onPress={() => router.back()} />
         <Row icon="map" title="Ver mapa" sub="Siguiente parada y caminos" onPress={() => router.back()} />
         <Row icon="book" title="Cuaderno del detective" sub="Pistas y objetos" onPress={() => router.replace("/cuaderno")} />

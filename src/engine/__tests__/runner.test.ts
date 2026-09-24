@@ -140,6 +140,18 @@ describe("availableChoices", () => {
 });
 
 describe("advance", () => {
+  it("la pista y los coleccionables se ganan al completar el nodo, no al entrar", () => {
+    let state = startRoute("malaga", route);
+    expect(state.collectibleIds).toEqual([]);
+    state = advance(route, state); // sale de n1: cenacho dorado
+    expect(state.collectibleIds).toEqual(["cenacho_dorado"]);
+    state = advance(route, state, getNode(route, "n2_larios").choices![0]); // entra en Atarazanas
+    expect(state.clueIds).toEqual([]);
+    state = advance(route, state); // sale de Atarazanas
+    expect(state.clueIds).toEqual(["pista_puerto"]);
+    expect(state.collectibleIds).toContain("arco_nazari");
+  });
+
   const atLarios = () => advance(route, startRoute("malaga", route));
 
   it("exige decisión en los nodos con choices", () => {
