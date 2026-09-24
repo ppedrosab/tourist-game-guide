@@ -2,10 +2,22 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import type { Choice, PlayerProgress, Route } from "@/content/types";
-import { advance as advanceRun, markArrived as markArrivedRun, startRoute } from "@/engine/runner";
+import {
+  advance as advanceRun,
+  markArrived as markArrivedRun,
+  recordChallenge as recordChallengeRun,
+  starsFor,
+  startRoute,
+} from "@/engine/runner";
 
 /** Lo conseguido en cualquier partida: sobrevive a "Probar otro camino". */
-export type Collection = { collectibleIds: string[]; endingIds: string[]; clueIds: string[] };
+export type Collection = {
+  collectibleIds: string[];
+  endingIds: string[];
+  clueIds: string[];
+  /** Mejor puntuación (1–3 estrellas) de cada ruta terminada. */
+  bestStars?: Record<string, number>;
+};
 
 type ProgressStore = {
   /** Partida por ruta (en curso o la última terminada). */
@@ -37,17 +49,25 @@ type ProgressStore = {
   advance: (route: Route, choice?: Choice) => PlayerProgress;
   /** Registra la llegada al nodo actual (GPS, geofence, "Ya estoy aquí" o modo demo). */
   markArrived: (route: Route) => void;
+  /** Apunta si se acertó el reto del nodo actual (solo cuenta el primer intento). */
+  recordChallenge: (route: Route, correct: boolean) => void;
   /** Borra la partida de una ruta sin tocar la colección. */
   discard: (routeId: string) => void;
 };
 
 const merge = (a: string[], b: readonly string[]) => [...a, ...b.filter((x) => !a.includes(x))];
 
-function collect(collection: Collection, run: PlayerProgress): Collection {
+function collect(collection: Collection, run: PlayerProgress, route?: Route): Collection {
+  let bestStars = collection.bestStars;
+  if (route && run.completedAt) {
+    const { stars } = starsFor(route, run);
+    if (stars > (bestStars?.[run.routeId] ?? 0)) bestStars = { ...bestStars, [run.routeId]: stars };
+  }
   return {
     collectibleIds: merge(collection.collectibleIds, run.collectibleIds),
     endingIds: run.endingId ? merge(collection.endingIds, [run.endingId]) : collection.endingIds,
     clueIds: merge(collection.clueIds, run.clueIds),
+    bestStars,
   };
 }
 
@@ -56,10 +76,10 @@ const EMPTY: Collection = { collectibleIds: [], endingIds: [], clueIds: [] };
 export const useProgress = create<ProgressStore>()(
   persist(
     (set, get) => {
-      const save = (run: PlayerProgress) => {
+      const save = (run: PlayerProgress, route?: Route) => {
         set((s) => ({
           runs: { ...s.runs, [run.routeId]: run },
-          collection: collect(s.collection, run),
+          collection: collect(s.collection, run, route),
           lastRouteId: run.routeId,
         }));
         return run;
@@ -80,7 +100,13 @@ export const useProgress = create<ProgressStore>()(
         advance: (route, choice) => {
           const run = get().runs[route.id];
           if (!run) throw new Error(`No hay partida empezada en "${route.id}"`);
-          return save(advanceRun(route, run, choice));
+          return save(advanceRun(route, run, choice), route);
+        },
+        recordChallenge: (route, correct) => {
+          const run = get().runs[route.id];
+          if (!run) return;
+          const next = recordChallengeRun(route, run, correct);
+          if (next !== run) save(next);
         },
         markArrived: (route) => {
           const run = get().runs[route.id];

@@ -68,6 +68,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const advance = useProgress((s) => s.advance);
   const demoMode = useProgress((s) => s.demoMode);
   const markArrived = useProgress((s) => s.markArrived);
+  const recordChallenge = useProgress((s) => s.recordChallenge);
   const node = getNode(route, run.currentNodeId);
   // Nodo con ubicación: la escena espera a la llegada (guardada en el progreso). Los narrativos empiezan ya.
   const arrived = hasArrived(route, run);
@@ -137,6 +138,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
             onNext={next}
             onChoose={(choice) => advance(route, choice)}
             onContinue={() => advance(route)}
+            onChallenge={(correct) => recordChallenge(route, correct)}
           />
         )}
       </View>
@@ -170,9 +172,20 @@ type StepViewProps = {
   onNext: () => void;
   onChoose: (choice: Extract<SceneStep, { kind: "decision" }>["choices"][number]) => void;
   onContinue: () => void;
+  onChallenge: (correct: boolean) => void;
 };
 
-function StepView({ step, voice, showText, route, characterName, onNext, onChoose, onContinue }: StepViewProps) {
+function StepView({
+  step,
+  voice,
+  showText,
+  route,
+  characterName,
+  onNext,
+  onChoose,
+  onContinue,
+  onChallenge,
+}: StepViewProps) {
   const { t, L } = useI18n();
   const audio = { audioProgress: voice.progress, onReplay: voice.replay };
   const shown = (text: string) => (showText ? text : "…");
@@ -182,7 +195,15 @@ function StepView({ step, voice, showText, route, characterName, onNext, onChoos
       return <DialogBox speaker={speaker} speakerColor={color} text={shown(L(step.text))} onNext={onNext} {...audio} />;
     }
     case "challenge":
-      return <ChallengePanel challenge={step.challenge} onDone={onNext} />;
+      return (
+        <ChallengePanel
+          challenge={step.challenge}
+          onDone={(correct) => {
+            if (correct !== undefined) onChallenge(correct);
+            onNext();
+          }}
+        />
+      );
     case "clue":
       return (
         <DialogBox

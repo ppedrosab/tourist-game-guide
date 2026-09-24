@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import type { PlayerProgress, Route } from "@/content/types";
+import { starsFor } from "@/engine/runner";
 import { useI18n } from "@/i18n";
 import { useProgress } from "@/store/progress";
 import { border, colors, radius, type } from "@/theme";
@@ -8,6 +9,7 @@ import { Button3D } from "../ui/Button3D";
 import { Chip } from "../ui/Chip";
 import { Icon } from "../ui/Icon";
 import { Panel } from "../ui/Panel";
+import { Stars } from "./Stars";
 
 type Props = { route: Route; run: PlayerProgress; onReplay: () => void; onExit: () => void };
 
@@ -19,6 +21,7 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
   const total = route.endings?.length ?? 0;
   const found = route.endings?.filter((e) => endingIds.includes(e.id)).length ?? 0;
   const rewards = (route.rewards ?? []).filter((r) => run.collectibleIds.includes(r.id));
+  const score = starsFor(route, run);
 
   return (
     <Screen>
@@ -31,6 +34,10 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
       </View>
       <Panel nameplate={t("final.tuFinal")} nameplateColor={colors.ink}>
         <Text style={type.title}>{ending ? L(ending.title) : t("final.misterioso")}</Text>
+        <Stars value={score.stars} label={t("final.estrellas", { n: score.stars })} />
+        {score.total > 0 ? (
+          <Text style={type.secondary}>{t("final.retos", { ok: score.correct, total: score.total })}</Text>
+        ) : null}
         <Text style={type.caption}>{t("final.descubiertos", { n: found, total })}</Text>
       </Panel>
       {rewards.length > 0 ? (

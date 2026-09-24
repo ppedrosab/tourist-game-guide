@@ -121,6 +121,8 @@ export interface PlayerProgress {
   startedAt: string;
   /** Momento en que el jugador llegó al nodo actual (solo nodos con `location`). */
   arrivedAt?: string;
+  /** Resultado de cada reto puntuable (quiz, observación): acertado a la primera o no. */
+  challengeResults?: Record<string, boolean>;
   completedAt?: string;
   endingId?: string;
 }

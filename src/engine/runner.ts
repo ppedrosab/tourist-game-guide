@@ -82,6 +82,31 @@ export function hasArrived(route: Route, state: PlayerProgress): boolean {
   return !needsArrival(getNode(route, state.currentNodeId)) || state.arrivedAt !== undefined;
 }
 
+/** Retos que puntúan: los de foto no tienen respuesta correcta. */
+export function isGraded(node: StoryNode): boolean {
+  return node.challenge !== undefined && node.challenge.type !== "photo";
+}
+
+/** Apunta el resultado del reto del nodo actual. Cuenta el primer intento: repetir no mejora la nota. */
+export function recordChallenge(route: Route, state: PlayerProgress, correct: boolean): PlayerProgress {
+  const node = getNode(route, state.currentNodeId);
+  if (!isGraded(node) || state.challengeResults?.[node.id] !== undefined) return state;
+  return { ...state, challengeResults: { ...state.challengeResults, [node.id]: correct } };
+}
+
+/**
+ * Estrellas de una partida (1–3) según los retos puntuables de las paradas
+ * que ha recorrido el jugador: todo acertado = 3, al menos el 60 % = 2, el
+ * resto = 1 (terminar el caso ya vale una). Sin retos, 3.
+ */
+export function starsFor(route: Route, state: PlayerProgress): { stars: number; correct: number; total: number } {
+  const graded = state.visitedNodeIds.map((id) => getNode(route, id)).filter(isGraded);
+  const correct = graded.filter((n) => state.challengeResults?.[n.id] === true).length;
+  const total = graded.length;
+  const ratio = total === 0 ? 1 : correct / total;
+  return { stars: ratio === 1 ? 3 : ratio >= 0.6 ? 2 : 1, correct, total };
+}
+
 /** Marca la llegada al nodo actual (geofence, GPS, "Ya estoy aquí" o modo demo). Idempotente. */
 export function markArrived(route: Route, state: PlayerProgress, at: string = now()): PlayerProgress {
   if (isFinished(state) || hasArrived(route, state)) return state;

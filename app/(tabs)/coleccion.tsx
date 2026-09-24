@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
 import { Icon } from "@/components/ui";
 import type { LangCode, Route } from "@/content/types";
+import { Stars } from "@/components/game/Stars";
 import { getCatalog } from "@/engine/catalog";
 import { localize } from "@/engine/runner";
 import { useI18n } from "@/i18n";
@@ -29,6 +30,13 @@ export default function Coleccion() {
       {routes.map((route) => (
         <View key={route.id} style={{ gap: 12 }}>
           <Text style={type.subtitle}>{L(route.title)}</Text>
+          {collection.bestStars?.[route.id] ? (
+            <Stars
+              value={collection.bestStars[route.id]}
+              size={22}
+              label={t("coleccion.estrellas", { n: collection.bestStars[route.id] })}
+            />
+          ) : null}
           {route.endings?.length ? (
             <>
               <Text style={type.overline}>{t("coleccion.finales")}</Text>

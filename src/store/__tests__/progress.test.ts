@@ -47,6 +47,25 @@ it("la colección acumula finales entre partidas", () => {
   expect(collection.collectibleIds).toEqual(expect.arrayContaining(["arco_nazari", "sello_real"]));
 });
 
+it("guarda la mejor puntuación de cada ruta", () => {
+  const store = useProgress.getState();
+  // Primera partida: falla el primer reto (Larios).
+  store.start("malaga", route);
+  store.advance(route);
+  store.recordChallenge(route, false);
+  let run = useProgress.getState().runs[route.id];
+  while (!run.completedAt) {
+    const node = getNode(route, run.currentNodeId);
+    useProgress.getState().recordChallenge(route, true);
+    useProgress.getState().advance(route, node.choices?.[0]);
+    run = useProgress.getState().runs[route.id];
+  }
+  expect(useProgress.getState().collection.bestStars).toEqual({ [route.id]: 2 });
+  // Una partida peor no baja la mejor puntuación.
+  playToEnd(0);
+  expect(useProgress.getState().collection.bestStars).toEqual({ [route.id]: 2 });
+});
+
 it("discard borra la partida pero no la colección", () => {
   playToEnd(0);
   useProgress.getState().discard(route.id);

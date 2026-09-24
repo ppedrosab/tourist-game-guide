@@ -37,9 +37,16 @@ const PATHS = {
 const FILLED = new Set<IconName>(["play"]);
 export type IconName = keyof typeof PATHS;
 
-type Props = { name: IconName; size?: number; color?: string; strokeWidth?: number };
+type Props = {
+  name: IconName;
+  size?: number;
+  color?: string;
+  strokeWidth?: number;
+  /** Relleno del color en vez de trazo (p. ej. estrella conseguida). */
+  fill?: string;
+};
 
-export function Icon({ name, size = 20, color = colors.ink, strokeWidth = 2.2 }: Props) {
+export function Icon({ name, size = 20, color = colors.ink, strokeWidth = 2.2, fill }: Props) {
   const filled = FILLED.has(name);
   return (
     // Las props de accesibilidad van en un View: Svg no las admite en web.
@@ -47,7 +54,7 @@ export function Icon({ name, size = 20, color = colors.ink, strokeWidth = 2.2 }:
       <Svg width={size} height={size} viewBox="0 0 24 24">
         <Path
           d={PATHS[name]}
-          fill={filled ? color : "none"}
+          fill={fill ?? (filled ? color : "none")}
           stroke={filled ? "none" : color}
           strokeWidth={strokeWidth}
           strokeLinecap="round"
