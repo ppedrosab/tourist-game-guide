@@ -26,6 +26,10 @@
       "difficulty": "easy",
       "isFree": true,
       "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": { "name": { "es": "Dinero", "en": "Money" }, "trail": { "es": "camino del dinero", "en": "money trail" } },
+        "poder": { "name": { "es": "Poder", "en": "Power" }, "trail": { "es": "camino del poder", "en": "power trail" } }
+      },
       "startNodeId": "n1_cenachero",
       "nodes": [
         {

@@ -99,6 +99,7 @@ const route = z.object({
   difficulty: z.enum(["easy", "medium", "hard"]),
   isFree: z.boolean(),
   structure: z.enum(["linear", "branch-and-bottleneck"]).optional(),
+  branches: z.partialRecord(branchId, z.object({ name: i18nText, trail: i18nText })).optional(),
   startNodeId: z.string(),
   nodes: z.array(storyNode).min(1),
   endings: z.array(z.object({ id: z.string().min(1), requires: flags, title: i18nText })).optional(),

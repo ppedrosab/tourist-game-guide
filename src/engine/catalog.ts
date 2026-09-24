@@ -7,7 +7,7 @@ import { missingTranslations } from "./translations";
  * Packs incluidos en la app. Añadir una ciudad = añadir su JSON aquí;
  * el contenido nunca se escribe en el código.
  */
-const BUNDLED_PACKS: Record<string, unknown> = { malaga };
+export const BUNDLED_PACKS: Record<string, unknown> = { malaga };
 
 export type PackError = { source: string; errors: string[] };
 type Catalog = { packs: CityPack[]; errors: PackError[] };

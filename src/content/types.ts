@@ -9,7 +9,18 @@ export type AssetRef = string;
 export type LatLng = { lat: number; lng: number };
 
 export type Expression = "neutral" | "talking" | "happy" | "thinking" | "surprised" | "nervous" | "proud" | "dramatic";
+/**
+ * Huecos de camino: cada ruta ramificada tiene dos. Los nombres internos vienen de Málaga, pero
+ * cada ruta puede llamarlos como quiera con `Route.branches` (en Cádiz: mar y ciudad).
+ * El color va con el hueco: "dinero" = mar (sea), "poder" = arcilla (clay).
+ */
 export type BranchId = "dinero" | "poder";
+
+/** Cómo se llama un camino en una ruta: `name` para leyendas ("Mar"), `trail` en frases ("camino del mar"). */
+export interface BranchLabel {
+  name: I18nText;
+  trail: I18nText;
+}
 
 export interface CityPack {
   id: string;
@@ -42,6 +53,8 @@ export interface Route {
   difficulty: "easy" | "medium" | "hard";
   isFree: boolean;
   structure?: "linear" | "branch-and-bottleneck";
+  /** Nombres de los caminos en esta ruta; si faltan, se usan "dinero" y "poder" de la interfaz. */
+  branches?: Partial<Record<BranchId, BranchLabel>>;
   startNodeId: string;
   nodes: StoryNode[];
   endings?: Ending[];

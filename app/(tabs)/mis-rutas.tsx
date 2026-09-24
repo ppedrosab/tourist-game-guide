@@ -9,7 +9,7 @@ import { useProgress } from "@/store/progress";
 import { type } from "@/theme";
 
 export default function MisRutas() {
-  const { t, L } = useI18n();
+  const { t, L, branch } = useI18n();
   const runs = useProgress((s) => s.runs);
   const items = Object.values(runs)
     .map((run) => ({ run, found: findRoute(run.routeId) }))
@@ -24,7 +24,7 @@ export default function MisRutas() {
       {items.map(({ run, found }) => {
         const { pack, route } = found!;
         const p = runProgress(route, run);
-        const camino = p.branch ? ` · ${t("comun.caminoDe", { branch: t(`comun.${p.branch}`) })}` : "";
+        const camino = p.branch ? ` · ${branch(route, p.branch, "trail")}` : "";
         const ending = route.endings?.find((e) => e.id === run.endingId);
         return (
           <ChoiceCard

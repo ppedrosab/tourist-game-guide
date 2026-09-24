@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from "react";
-import type { I18nText } from "@/content/types";
+import type { BranchId, I18nText, Route } from "@/content/types";
 import { localize } from "@/engine/runner";
 import { useProgress } from "@/store/progress";
 import { en } from "./en";
@@ -56,7 +56,16 @@ export function useI18n() {
     (m: number) => (m < 1000 ? `${Math.max(10, Math.round(m / 10) * 10)} m` : `${number(m / 1000, 1)} km`),
     [number],
   );
-  return useMemo(() => ({ lang, t, L, number, distance }), [lang, t, L, number, distance]);
+  /** Nombre de un camino en la ruta: `name` ("Mar") o `trail` ("camino del mar"). */
+  const branch = useCallback(
+    (route: Route, id: BranchId, kind: "name" | "trail" = "name") => {
+      const own = route.branches?.[id]?.[kind];
+      if (own) return L(own);
+      return kind === "name" ? t(`mapa.${id}`) : t("comun.caminoDe", { branch: t(`comun.${id}`) });
+    },
+    [t, L],
+  );
+  return useMemo(() => ({ lang, t, L, number, distance, branch }), [lang, t, L, number, distance, branch]);
 }
 
 // Todas las claves válidas ("a.b.c") a partir del diccionario español.

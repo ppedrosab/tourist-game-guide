@@ -14,7 +14,7 @@ import { branchColors, colors, type } from "@/theme";
 
 /** Mapa de la ruta en curso (modal): los dos caminos, tu posición y la siguiente parada. */
 export default function Mapa() {
-  const { t, L, distance } = useI18n();
+  const { t, L, distance, branch } = useI18n();
   const current = useCurrentRun();
   const focused = useIsFocused();
   const user = useUserPosition(focused);
@@ -40,8 +40,8 @@ export default function Mapa() {
     <Screen scroll={false}>
       <TopBar title={t("mapa.tituloRuta")} onBack={close} closeIcon />
       <View style={styles.legend}>
-        <Chip label={t("mapa.dinero")} dot={branchColors.dinero} />
-        <Chip label={t("mapa.poder")} dot={branchColors.poder} />
+        <Chip label={branch(route, "dinero")} dot={branchColors.dinero} />
+        <Chip label={branch(route, "poder")} dot={branchColors.poder} />
         <Chip label={t("mapa.siguiente")} dot={colors.gold} />
       </View>
       <RouteMap route={route} run={run} user={user} />
