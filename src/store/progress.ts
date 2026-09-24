@@ -26,6 +26,9 @@ type ProgressStore = {
   /** Mostrar el texto de los diálogos (siempre visible si no hay voz que escuchar). */
   subtitles: boolean;
   setVoices: (on: boolean) => void;
+  /** Idioma de la interfaz y del contenido ("auto" = el del móvil). */
+  language: "auto" | "es" | "en";
+  setLanguage: (language: "auto" | "es" | "en") => void;
   setSubtitles: (on: boolean) => void;
 
   /** Empieza (o reinicia) la ruta desde el nodo inicial. */
@@ -70,6 +73,8 @@ export const useProgress = create<ProgressStore>()(
         voices: true,
         subtitles: true,
         setVoices: (voices) => set({ voices }),
+        language: "auto",
+        setLanguage: (language) => set({ language }),
         setSubtitles: (subtitles) => set({ subtitles }),
         start: (cityId, route) => save(startRoute(cityId, route)),
         advance: (route, choice) => {
@@ -94,7 +99,8 @@ export const useProgress = create<ProgressStore>()(
       name: "progreso",
       version: 1,
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles }) => ({
+      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles, language }) => ({
+        language,
         runs,
         collection,
         lastRouteId,

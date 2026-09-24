@@ -60,6 +60,9 @@
       "^@/(.*)$": "<rootDir>/src/$1",
       "^@content/(.*)$": "<rootDir>/content/$1",
       "\\.(webp|png|jpe?g)$": "<rootDir>/test/assetStub.js"
-    }
+    },
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ]
   }
 }
