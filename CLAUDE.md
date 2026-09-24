@@ -105,6 +105,17 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 - Prueba de campo: `src/field` (registro y análisis por parada: coordenada y radio sugeridos),
   pantalla `/campo` y guía `docs/PRUEBAS_CALLE.md`.
 
+**Segunda ciudad: Cádiz** («La ciudad que no cayó», diseño y datos a verificar en `docs/GDD_CADIZ.md`):
+- Pack `content/cadiz/la-ciudad-que-no-cayo.pack.json` (es/en), guía la Tía Norica, con la Pepa y
+  Magón. Asedio francés de 1810-1812; caminos Mar y Ciudad, 4 finales, 6 coleccionables.
+- Los huecos de camino siguen siendo `dinero` (color mar) y `poder` (arcilla), pero cada ruta los
+  nombra con `route.branches` (`name` para leyendas, `trail` en frases); `useI18n().branch()`.
+- `src/engine/__tests__/allPacks.test.ts` se aplica a todo pack de `BUNDLED_PACKS`: idiomas,
+  sprites con 8 expresiones, capas por escena, arte de coleccionables y todos los finales alcanzables.
+- Arte generado por código en `scripts/art/` (sprites, medallones y fondos SVG por capas);
+  `render_layers.py` pasa cada grupo del SVG a WebP @2x/@3x (Chromium + Pillow). Tras cambiarlo:
+  `python3 scripts/art/cadiz_scenes.py && python3 scripts/art/render_layers.py cadiz_ && npm run gen:assets`.
+
 ## Arquitectura
 
 ```
@@ -136,7 +147,9 @@ src/analytics/            eventos y sink enchufable
 src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
-assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
+content/cadiz/            la-ciudad-que-no-cayo.pack.json
+scripts/art/              generadores del arte de Cádiz y render de capas
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
@@ -213,6 +226,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Revisión de la traducción inglesa por un nativo.
 - Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
 - Revisar con un historiador la ilustración de calle Larios en 1891 (`assets/then_now`).
+- Cádiz: coordenadas y radios en la calle, revisión histórica de los datos de `docs/GDD_CADIZ.md`,
+  decidir si la ruta es gratuita (`isFree: true` provisional) y un posible "antes y ahora".
 
 ## Qué NO hacer
 
