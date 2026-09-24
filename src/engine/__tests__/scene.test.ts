@@ -7,7 +7,7 @@ import { buildSteps, checkObserveAnswer, normalizeAnswer } from "../scene";
 const result = loadPack(raw);
 if (!result.ok) throw new Error(result.errors.join("\n"));
 const route: Route = result.pack.routes[0];
-const kinds = (nodeId: string, flags: string[] = []) => buildSteps(getNode(route, nodeId), flags).map((s) => s.kind);
+const kinds = (nodeId: string, flags: string[] = []) => buildSteps(route, getNode(route, nodeId), flags).map((s) => s.kind);
 
 describe("buildSteps", () => {
   it("omite los bloques scene y termina en seguir", () => {
@@ -23,9 +23,21 @@ describe("buildSteps", () => {
   });
 
   it("resuelve variantes con los flags y salta las que no encajan", () => {
-    const withFlag = buildSteps(getNode(route, "n4_manquita"), ["camino_poder"]);
+    const withFlag = buildSteps(route, getNode(route, "n4_manquita"), ["camino_poder"]);
     expect(withFlag.filter((s) => s.kind === "text")).toHaveLength(3);
     expect(kinds("n4_manquita")).toEqual(["text", "text", "challenge", "decision"]);
+  });
+
+  it("sin decisionIntro, la decisión la plantea el último diálogo", () => {
+    const steps = buildSteps(route, getNode(route, "n4_manquita"), []);
+    const decision = steps[steps.length - 1];
+    expect(decision.kind === "decision" && decision.intro?.characterId).toBe("la_manquita");
+    expect(decision.kind === "decision" && decision.intro?.text.es).toMatch(/Cuál quieres escuchar/);
+  });
+
+  it("encadena los nodos narrativos sin paso de seguir", () => {
+    expect(kinds("n6_merced")).toEqual(["text", "text", "text", "challenge"]);
+    expect(kinds("n6b_resolver")).toEqual(["text", "challenge"]);
   });
 
   it("el nodo final acaba en ending", () => {
@@ -33,7 +45,7 @@ describe("buildSteps", () => {
   });
 
   it("copia la pista de siguiente parada", () => {
-    const steps = buildSteps(getNode(route, "a2_casa_guardia"), []);
+    const steps = buildSteps(route, getNode(route, "a2_casa_guardia"), []);
     const last = steps[steps.length - 1];
     expect(last.kind === "continue" && last.hint?.es).toMatch(/Manquita/);
   });

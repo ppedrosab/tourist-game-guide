@@ -1,5 +1,5 @@
-import type { Challenge, Choice, ContentBlock, Expression, I18nText, StoryNode } from "@/content/types";
-import { availableChoices, resolveText } from "./runner";
+import type { Challenge, Choice, ContentBlock, Expression, I18nText, Route, StoryNode } from "@/content/types";
+import { availableChoices, getNode, resolveText } from "./runner";
 
 /**
  * Secuencia de pasos que la pantalla de juego muestra dentro de un nodo:
@@ -19,10 +19,11 @@ export type SceneStep =
   | { kind: "challenge"; challenge: Challenge }
   | { kind: "clue"; text: I18nText }
   | { kind: "decision"; intro?: { characterId: string; expression?: Expression; text: I18nText }; choices: Choice[] }
-  | { kind: "continue"; hint?: I18nText }
+  /** Ir a la siguiente parada física (los nodos narrativos se encadenan sin este paso). */
+  | { kind: "continue"; hint?: I18nText; nextTitle: I18nText }
   | { kind: "ending" };
 
-export function buildSteps(node: StoryNode, flags: readonly string[]): SceneStep[] {
+export function buildSteps(route: Route, node: StoryNode, flags: readonly string[]): SceneStep[] {
   const steps: SceneStep[] = [];
   for (const block of node.content) {
     if (block.type === "scene") continue;
@@ -41,9 +42,21 @@ export function buildSteps(node: StoryNode, flags: readonly string[]): SceneStep
   if (node.challenge) steps.push({ kind: "challenge", challenge: node.challenge });
   if (node.clue) steps.push({ kind: "clue", text: node.clue.text });
 
-  if (node.choices) steps.push({ kind: "decision", intro: node.decisionIntro, choices: availableChoices(node, flags) });
-  else if (node.isEnding) steps.push({ kind: "ending" });
-  else steps.push({ kind: "continue", hint: node.nextHint });
+  if (node.choices) {
+    // Sin decisionIntro, la pregunta la plantea el último diálogo del nodo.
+    const lastDialogue = [...steps].reverse().find((s) => s.kind === "text" && s.source === "dialogue");
+    const intro =
+      node.decisionIntro ??
+      (lastDialogue?.kind === "text" && lastDialogue.characterId
+        ? { characterId: lastDialogue.characterId, expression: lastDialogue.expression, text: lastDialogue.text }
+        : undefined);
+    steps.push({ kind: "decision", intro, choices: availableChoices(node, flags) });
+  } else if (node.isEnding) {
+    steps.push({ kind: "ending" });
+  } else if (node.nextNodeId) {
+    const next = getNode(route, node.nextNodeId);
+    if (node.nextHint || next.location) steps.push({ kind: "continue", hint: node.nextHint, nextTitle: next.title });
+  }
   return steps;
 }
 
@@ -51,7 +64,7 @@ export function buildSteps(node: StoryNode, flags: readonly string[]): SceneStep
 export function normalizeAnswer(input: string): string {
   return input
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9ñ ]/g, " ")
     .replace(/\s+/g, " ")

@@ -1,80 +1,186 @@
-import { router } from "expo-router";
-import { useState } from "react";
+import { router, useLocalSearchParams } from "expo-router";
+import { useEffect, useMemo, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { AzulejoBackground, ChoiceCard, DialogBox, Hud, HudStop } from "@/components/ui";
-import { border, colors, fonts, radius } from "@/theme";
+import { CaseClosed } from "@/components/game/CaseClosed";
+import { ChallengePanel } from "@/components/game/ChallengePanel";
+import { Screen, TopBar } from "@/components/layout/Screen";
+import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
+import type { CityPack, PlayerProgress, Route } from "@/content/types";
+import { findRoute } from "@/engine/catalog";
+import { getNode, localize, routeStops } from "@/engine/runner";
+import { buildSteps, SceneStep } from "@/engine/scene";
+import { useProgress } from "@/store/progress";
+import { border, colors, fonts, radius, type } from "@/theme";
 
-/**
- * Pantalla de juego (modo ruta). En la fase 1 es una maqueta con datos fijos;
- * en la fase 2 la alimenta el motor narrativo con el pack JSON.
- */
-const STOPS: HudStop[] = [
-  { id: "n1" },
-  { id: "n2" },
-  { id: "rama", branch: "dinero" },
-  { id: "n4" },
-  { id: "n5" },
-  { id: "n6" },
-];
-
+/** Pantalla de juego (modo ruta): escena + HUD + diálogo, alimentada por el motor. */
 export default function Jugar() {
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const found = useMemo(() => findRoute(id), [id]);
+  const hydrated = useProgress((s) => s.hydrated);
+  const run = useProgress((s) => s.runs[id]);
+  const start = useProgress((s) => s.start);
+
+  // Sin partida guardada: se empieza desde el nodo inicial.
+  useEffect(() => {
+    if (hydrated && found && !run) start(found.pack.id, found.route);
+  }, [hydrated, found, run, start]);
+
+  if (!found) {
+    return (
+      <Screen>
+        <TopBar title="Ruta no encontrada" onBack={() => router.back()} />
+        <Text style={type.body}>Esta ruta no existe o su contenido no es válido.</Text>
+      </Screen>
+    );
+  }
+  if (!hydrated || !run) return <AzulejoBackground />;
+  if (run.completedAt) {
+    return (
+      <CaseClosed
+        route={found.route}
+        run={run}
+        onReplay={() => start(found.pack.id, found.route)}
+        onExit={() => router.dismissTo("/")}
+      />
+    );
+  }
+  // `key`: al cambiar de nodo la escena empieza desde su primer paso.
+  return <NodePlayer key={run.currentNodeId} pack={found.pack} route={found.route} run={run} />;
+}
+
+function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: PlayerProgress }) {
   const insets = useSafeAreaInsets();
-  const [showChoices, setShowChoices] = useState(false);
+  const advance = useProgress((s) => s.advance);
+  const node = getNode(route, run.currentNodeId);
+  const steps = useMemo(() => buildSteps(route, node, run.flags), [route, node, run.flags]);
+  const [index, setIndex] = useState(0);
+  const step = steps[Math.min(index, steps.length - 1)];
+  // Al acabar los pasos de un nodo sin salida explícita, el siguiente nodo narrativo se lanza solo.
+  const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
+  const { stops, current } = routeStops(route, run);
+
+  const characterName = (characterId?: string) =>
+    localize(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
 
   return (
     <View style={styles.root}>
       <AzulejoBackground />
       {/* Fase 3: <SceneStage> con fondo por capas, parallax y sprites. */}
       <View style={styles.stage}>
-        <Text style={styles.stageText}>Escena · Calle Larios, 1891</Text>
+        <Text style={styles.stageText}>{localize(node.title)}</Text>
       </View>
 
       <View style={[styles.hud, { top: insets.top + 8 }]}>
         <Hud
-          stops={STOPS}
-          current={1}
-          clues={1}
+          stops={stops}
+          current={current}
+          clues={run.clueIds.length}
           onPause={() => router.push("/pausa")}
           onNotebook={() => router.push("/cuaderno")}
         />
       </View>
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
-        {showChoices ? (
-          <DialogBox
-            speaker="Er Cenachero"
-            text="Aquí se nos parte el camino, detective. ¿Qué rastro seguimos?"
-            choices={
-              <>
-                <ChoiceCard
-                  title="El rastro del dinero"
-                  hint="Hacia el antiguo puerto y las tabernas"
-                  meta="350 m · 5 min · 2 paradas"
-                  branch="dinero"
-                  onPress={() => setShowChoices(false)}
-                />
-                <ChoiceCard
-                  title="El rastro del poder"
-                  hint="Hacia la antigua Plaza Mayor"
-                  meta="120 m · 2 min · 1 parada"
-                  branch="poder"
-                  onPress={() => setShowChoices(false)}
-                />
-              </>
-            }
-          />
-        ) : (
-          <DialogBox
-            speaker="Er Cenachero"
-            text="Esta calle la pagó la Casa Larios pa' unir el centro con el puerto. En Málaga todo gira alrededor del comercio."
-            audioProgress={0.45}
-            onNext={() => setShowChoices(true)}
-          />
-        )}
+        <StepView
+          step={step}
+          route={route}
+          characterName={characterName}
+          onNext={next}
+          onChoose={(choice) => advance(route, choice)}
+          onContinue={() => advance(route)}
+        />
       </View>
     </View>
   );
+}
+
+type StepViewProps = {
+  step: SceneStep;
+  route: Route;
+  characterName: (id?: string) => string;
+  onNext: () => void;
+  onChoose: (choice: Extract<SceneStep, { kind: "decision" }>["choices"][number]) => void;
+  onContinue: () => void;
+};
+
+function StepView({ step, route, characterName, onNext, onChoose, onContinue }: StepViewProps) {
+  switch (step.kind) {
+    case "text": {
+      const { speaker, color } = textSpeaker(step, characterName);
+      return <DialogBox speaker={speaker} speakerColor={color} text={localize(step.text)} onNext={onNext} />;
+    }
+    case "challenge":
+      return <ChallengePanel challenge={step.challenge} onDone={onNext} />;
+    case "clue":
+      return (
+        <DialogBox
+          speaker="¡Pista nueva!"
+          speakerColor={colors.ink}
+          text={localize(step.text)}
+          nextLabel="Apuntada"
+          onNext={onNext}
+        />
+      );
+    case "decision":
+      return (
+        <DialogBox
+          speaker={characterName(step.intro?.characterId)}
+          text={step.intro ? localize(step.intro.text) : "¿Qué camino seguimos?"}
+          choices={step.choices.map((choice) => {
+            const target = getNode(route, choice.targetNodeId);
+            const meta = [choice.distanceM && `${choice.distanceM} m`, choice.walkMin && `${choice.walkMin} min`]
+              .filter(Boolean)
+              .join(" · ");
+            return (
+              <ChoiceCard
+                key={choice.targetNodeId}
+                title={localize(choice.label)}
+                hint={choice.hint && localize(choice.hint)}
+                meta={meta || undefined}
+                branch={target.branch ?? "comun"}
+                icon={target.location ? "walk" : "book"}
+                onPress={() => onChoose(choice)}
+              />
+            );
+          })}
+        />
+      );
+    case "continue":
+      return (
+        <DialogBox
+          speaker={characterName()}
+          text={step.hint ? localize(step.hint) : `Siguiente parada: ${localize(step.nextTitle)}.`}
+          nextLabel="Seguir"
+          onNext={onContinue}
+        />
+      );
+    case "ending":
+      return (
+        <DialogBox
+          speaker={characterName()}
+          text="Caso resuelto, detective. ¿Lo cerramos?"
+          nextLabel="Cerrar el caso"
+          onNext={onContinue}
+        />
+      );
+  }
+}
+
+function textSpeaker(step: Extract<SceneStep, { kind: "text" }>, characterName: (id?: string) => string) {
+  switch (step.source) {
+    case "dialogue":
+      return { speaker: characterName(step.characterId), color: colors.clay };
+    case "historical_fact":
+      return { speaker: step.year ? `Dato histórico · ${step.year}` : "Dato histórico", color: colors.sea };
+    case "anecdote":
+      return { speaker: step.legend ? "Se cuenta…" : "Anécdota", color: colors.ink };
+    case "then_now":
+      return { speaker: "Antes y ahora", color: colors.sea };
+    case "image":
+    case "narration":
+      return { speaker: "Narrador", color: colors.ink };
+  }
 }
 
 const styles = StyleSheet.create({
