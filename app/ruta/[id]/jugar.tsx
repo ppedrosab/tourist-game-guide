@@ -228,7 +228,7 @@ function StepView({
   const shown = (text: string) => (showText ? text : "…");
   switch (step.kind) {
     case "text": {
-      const { speaker, color } = textSpeaker(step, characterName, t, route.theme === "gastronomia");
+      const { speaker, color } = textSpeaker(step, characterName, t, route.theme);
       return <DialogBox speaker={speaker} speakerColor={color} text={shown(L(step.text))} onNext={onNext} {...audio} />;
     }
     case "then_now":
@@ -308,14 +308,15 @@ function textSpeaker(
   step: Extract<SceneStep, { kind: "text" }>,
   characterName: (id?: string) => string,
   t: (key: StringKey, params?: Record<string, string | number>) => string,
-  food = false,
+  theme?: Route["theme"],
 ) {
   switch (step.source) {
     case "dialogue":
       return { speaker: characterName(step.characterId), color: colors.clay };
     case "historical_fact":
-      // En las rutas gastronómicas los datos son de cocina, no de historia.
-      if (food) return { speaker: t("jugar.datoGastronomico"), color: colors.sea };
+      // En las rutas gastronómicas y de fiestas los datos no son de historia.
+      if (theme === "gastronomia") return { speaker: t("jugar.datoGastronomico"), color: colors.sea };
+      if (theme === "fiestas") return { speaker: t("jugar.tradicion"), color: colors.sea };
       return { speaker: step.year ? t("jugar.datoAnio", { year: step.year }) : t("jugar.dato"), color: colors.sea };
     case "anecdote":
       return { speaker: step.legend ? t("jugar.seCuenta") : t("jugar.anecdota"), color: colors.ink };

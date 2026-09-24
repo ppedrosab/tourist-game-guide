@@ -31,6 +31,8 @@ const PATHS = {
   download: "M12 4v11M7 10l5 5 5-5M5 20h14",
   /** Tenedor y cuchillo: rutas gastronómicas. */
   food: "M6 3v7a2 2 0 0 0 4 0V3M8 10v11M17 21V3c-2.5 1.5-3.5 4.5-3.5 8.5H17",
+  /** Antifaz de Carnaval: rutas de fiestas. */
+  mask: "M3 8c3-1.5 6-1.5 9 0c3-1.5 6-1.5 9 0c0 5-3 8-6 8c-1.5 0-2.5-1-3-2c-.5 1-1.5 2-3 2c-3 0-6-3-6-8zM7 10.5h2.5M14.5 10.5H17",
   exit: "M14 4h5v16h-5M10 16l-4-4 4-4M6 12h10",
   subtitles:
     "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10 10a2 2 0 1 0 0 4M16 10a2 2 0 1 0 0 4",

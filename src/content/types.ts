@@ -16,8 +16,8 @@ export type Expression = "neutral" | "talking" | "happy" | "thinking" | "surpris
  */
 export type BranchId = "dinero" | "poder";
 
-/** Tipo de ruta: de historia (por defecto) o gastronómica. Se muestra como una seña en la interfaz. */
-export type RouteTheme = "historia" | "gastronomia";
+/** Tipo de ruta: de historia (por defecto), gastronómica o de fiestas. Se muestra como una seña en la interfaz. */
+export type RouteTheme = "historia" | "gastronomia" | "fiestas";
 
 /** Cómo se llama un camino en una ruta: `name` para leyendas ("Mar"), `trail` en frases ("camino del mar"). */
 export interface BranchLabel {

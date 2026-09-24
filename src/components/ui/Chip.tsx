@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { border, colors, fonts, radius, size } from "@/theme";
 import { Icon, IconName } from "./Icon";
 
-type Variant = "paper" | "clay" | "sea" | "ink" | "sand" | "gold";
+type Variant = "paper" | "clay" | "sea" | "ink" | "sand" | "gold" | "violet";
 const VARIANTS: Record<Variant, { bg: string; fg: string }> = {
   paper: { bg: colors.paper, fg: colors.ink },
   clay: { bg: colors.clay, fg: colors.white },
@@ -10,6 +10,7 @@ const VARIANTS: Record<Variant, { bg: string; fg: string }> = {
   ink: { bg: colors.ink, fg: colors.white },
   sand: { bg: colors.sand, fg: colors.ink },
   gold: { bg: colors.gold, fg: colors.ink },
+  violet: { bg: colors.violet, fg: colors.white },
 };
 
 type Props = { label: string; variant?: Variant; icon?: IconName; dot?: string };

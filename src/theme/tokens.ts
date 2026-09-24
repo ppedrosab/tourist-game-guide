@@ -17,6 +17,8 @@ export const colors = {
   white: "#FFFFFF",
   seaTint: "#DCEBE6",
   clayTint: "#F6E3D6",
+  /** Morado del Carnaval de Cádiz: seña de las rutas de fiestas. */
+  violet: "#6E2C5E",
 } as const;
 
 /** Color de cada camino de la historia: se repite en mapa, decisiones, pistas y HUD. */
