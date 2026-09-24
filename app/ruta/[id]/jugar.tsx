@@ -13,6 +13,7 @@ import { useArrivalWatcher } from "@/hooks/useArrivalWatcher";
 import { getNode, hasArrived, localize, routeStops } from "@/engine/runner";
 import { buildSteps, SceneStep } from "@/engine/scene";
 import { SCENE_ASPECT, SceneStage } from "@/scene/SceneStage";
+import { stageCast } from "@/scene/cast";
 import { sceneKeyFor } from "@/scene/sceneFor";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
@@ -72,6 +73,8 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
   const { stops, current } = routeStops(route, run);
   const sceneKey = sceneKeyFor(route, run);
+  // Mientras se espera la llegada, en escena solo está el guía.
+  const cast = useMemo(() => stageCast(pack, route, node, arrived ? step : undefined), [pack, route, node, arrived, step]);
 
   const characterName = (characterId?: string) =>
     localize(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
@@ -83,6 +86,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
         <SceneStage
           key={sceneKey}
           sceneKey={sceneKey}
+          cast={cast}
           testID="escenario"
           fallback={<Text style={styles.stageText}>{localize(node.title)}</Text>}
         />

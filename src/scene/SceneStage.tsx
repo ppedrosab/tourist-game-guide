@@ -13,6 +13,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { colors } from "@/theme";
 import { SCENE_LAYERS } from "./assets.generated";
+import type { CastMember } from "./cast";
+import { CastLayer } from "./CastLayer";
 import {
   CHARACTER_DEPTH,
   depthOf,
@@ -31,8 +33,8 @@ export const SCENE_ASPECT = 390 / 560;
 type Props = {
   /** Clave de escena (p. ej. "marina"); ver sceneKeyFor. */
   sceneKey: string | undefined;
-  /** Contenido del plano de los personajes (se mueve con el primer plano). */
-  children?: ReactNode;
+  /** Personajes en escena (plano del primer plano). */
+  cast?: CastMember[];
   /** Fondo si la escena no tiene capas. */
   fallback?: ReactNode;
   testID?: string;
@@ -49,7 +51,7 @@ type Props = {
  * En web no hay giroscopio: el puntero sobre el escenario hace de inclinación.
  * Con "Reducir movimiento" activado la escena queda quieta.
  */
-export function SceneStage({ sceneKey, children, fallback, testID }: Props) {
+export function SceneStage({ sceneKey, cast, fallback, testID }: Props) {
   const layers = sceneKey ? SCENE_LAYERS[sceneKey] : undefined;
   const [size, setSize] = useState({ width: 0, height: 0 });
   const onLayout = useCallback((e: LayoutChangeEvent) => {
@@ -172,9 +174,9 @@ export function SceneStage({ sceneKey, children, fallback, testID }: Props) {
             </ParallaxLayer>
           ))}
           {/* Personajes: pisan el primer plano y se mueven con él. */}
-          {children ? (
+          {cast && cast.length > 0 ? (
             <ParallaxLayer depth={CHARACTER_DEPTH} tilt={tilt} scale={scale} ax={ax} ay={ay} box={box}>
-              {children}
+              <CastLayer cast={cast} width={box.width} height={box.height} />
             </ParallaxLayer>
           ) : null}
           {/* Efectos (rayos, brillos): fijos, con la misma escala, por encima de todo. */}
