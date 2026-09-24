@@ -194,7 +194,89 @@ def cuartetero():
     return lambda e: svg(e, [SHADOW, legs, jacket, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
 
 
+# ---------------------------------------------------------------------------
+# Semana Santa: el Cargador, el Maniguetero y la Saetera (tono sobrio)
+# ---------------------------------------------------------------------------
+AS = "#D9A27A"; ASD = "#B98260"; PURPLE = "#4A2A5A"; PURPLED = "#361E44"
+
+
+def cargador():
+    legs = g("legs",
+             f'<path d="M82 200L118 200L117 238L104 238L100 218L96 238L83 238Z" fill="#2B2A33" stroke="{INK}" stroke-width="2.6"/>', *shoes())
+    body = g("body",
+             f'<path d="M72 118Q100 106 128 118L132 204L68 204Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.8"/>',
+             f'<path d="M104 112Q120 112 128 118L132 204L112 204Z" fill="#E6DCC6"/>',
+             f'<path d="M92 112L100 128L108 112" fill="{AS}" stroke="{INK}" stroke-width="1.8"/>',
+             # faja negra
+             f'<path d="M68 170L132 170L133 188L67 188Z" fill="#2B2A33" stroke="{INK}" stroke-width="2"/>',
+             f'<path d="M126 176L138 204L128 202Z" fill="#2B2A33" stroke="{INK}" stroke-width="1.6"/>',
+             # almohadilla sobre el hombro
+             f'<path d="M110 110Q128 104 140 116L136 126Q124 116 112 120Z" fill="#8A6A4A" stroke="{INK}" stroke-width="1.8"/>')
+    arms = g("arms",
+             limb("M76 124Q60 136 58 154", PAPER, 12),
+             limb("M124 124Q142 132 146 150", PAPER, 12),
+             f'<circle cx="58" cy="156" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<circle cx="146" cy="152" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>')
+    head = g("head", *head_base(AS, ASD, [
+        f'<path d="M60 72Q56 38 100 34Q144 38 140 72Q132 50 112 48Q100 54 86 50Q68 54 60 72Z" fill="#2A1E1A" stroke="{INK}" stroke-width="2.4"/>',
+        f'<path d="M62 72L64 88M138 72L136 88" stroke="#2A1E1A" stroke-width="5"/>',
+        f'<path d="M70 94Q76 106 100 108Q124 106 130 94Q126 104 100 104Q74 104 70 94Z" fill="#6B5343" opacity=".4"/>']))
+    rim = g("rim", f'<path d="M70 126L68 200" fill="none" stroke="#FFF" stroke-width="2" opacity=".5"/>')
+    return lambda e: svg(e, [SHADOW, legs, body, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
+
+
+def maniguetero():
+    staff = g("staff",
+              f'<path d="M156 40L156 246" stroke="{INK}" stroke-width="7"/><path d="M156 40L156 246" stroke="#8A6243" stroke-width="4"/>',
+              f'<path d="M146 30Q146 44 156 44Q166 44 166 30" fill="none" stroke="{INK}" stroke-width="6"/><path d="M146 30Q146 44 156 44Q166 44 166 30" fill="none" stroke="#C9A77E" stroke-width="3"/>',
+              f'<path d="M150 244H162" stroke="{INK}" stroke-width="3"/>')
+    robe = g("robe",
+             f'<path d="M72 116Q100 104 128 116L138 244L62 244Z" fill="{PURPLE}" stroke="{INK}" stroke-width="2.8"/>',
+             f'<path d="M104 110Q120 110 128 116L138 244L112 244Z" fill="{PURPLED}"/>',
+             f'<path d="M84 120Q82 180 76 240M116 120Q118 180 124 240" fill="none" stroke="{PURPLED}" stroke-width="1.8"/>',
+             # cíngulo blanco
+             f'<path d="M70 168Q100 176 130 168" fill="none" stroke="{PAPER}" stroke-width="4"/>',
+             f'<path d="M92 172L88 214M96 172L94 206" stroke="{PAPER}" stroke-width="3"/>',
+             f'<circle cx="88" cy="216" r="3" fill="{PAPER}" stroke="{INK}" stroke-width="1"/>')
+    arms = g("arms",
+             limb("M76 124Q62 140 70 160", PURPLE, 12),
+             limb("M124 124Q142 118 152 104", PURPLE, 12),
+             f'<circle cx="70" cy="162" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<circle cx="154" cy="102" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>')
+    head = g("head", *head_base("#E3AE88", "#C58E68", [
+        f'<path d="M60 70Q58 40 100 36Q142 40 140 70Q128 52 100 50Q72 52 60 70Z" fill="#8A8480" stroke="{INK}" stroke-width="2.2"/>',
+        f'<path d="M62 70L64 86M138 70L136 86" stroke="#8A8480" stroke-width="5"/>']))
+    rim = g("rim", f'<path d="M68 126L64 236" fill="none" stroke="#FFF" stroke-width="2" opacity=".3"/>')
+    return lambda e: svg(e, [SHADOW, staff, robe, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
+
+
+def saetera():
+    dress = g("dress",
+              f'<path d="M74 118Q100 106 126 118L140 244L60 244Z" fill="#2B2A33" stroke="{INK}" stroke-width="2.8"/>',
+              f'<path d="M104 112Q120 112 126 118L140 244L114 244Z" fill="#1E1D25"/>',
+              f'<path d="M60 244Q100 234 140 244" fill="none" stroke="#4A4A55" stroke-width="2"/>',
+              f'<circle cx="100" cy="124" r="4" fill="{GOLD}" stroke="{INK}" stroke-width="1.2"/>')
+    arms = g("arms",
+             limb("M76 124Q64 136 84 146", "#2B2A33", 11),
+             limb("M124 124Q142 116 150 96", "#2B2A33", 11),
+             f'<circle cx="88" cy="146" r="6" fill="{KS}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<circle cx="150" cy="94" r="6" fill="{KS}" stroke="{INK}" stroke-width="2.4"/>')
+    head = g("head", *head_base("#E8B58E", "#CB9670", [
+        f'<path d="M60 76Q54 36 100 32Q146 36 140 76Q132 52 100 50Q68 52 60 76Z" fill="#2A1E1A" stroke="{INK}" stroke-width="2.4"/>',
+        # peineta y mantilla negra de encaje
+        f'<path d="M66 40Q100 -4 134 40Q124 30 100 28Q76 30 66 40Z" fill="#6B4A2A" stroke="{INK}" stroke-width="2"/>',
+        f'<ellipse cx="78" cy="92" rx="6" ry="3.4" fill="#E88A78" opacity=".45"/><ellipse cx="122" cy="92" rx="6" ry="3.4" fill="#E88A78" opacity=".45"/>',
+        f'<circle cx="61" cy="92" r="3" fill="{GOLD}" stroke="{INK}" stroke-width="1"/><circle cx="139" cy="92" r="3" fill="{GOLD}" stroke="{INK}" stroke-width="1"/>']))
+    rim = g("rim", f'<path d="M70 126L64 238" fill="none" stroke="#FFF" stroke-width="2" opacity=".3"/>')
+    # la mantilla cae desde la peineta por detrás de la cabeza, hasta los hombros
+    mantilla = g("mantilla",
+                 f'<path d="M66 40Q100 6 134 40L150 128Q128 118 100 118Q72 118 50 128Z" fill="#1E1D25" stroke="{INK}" stroke-width="1.8"/>',
+                 *[f'<circle cx="{x}" cy="{y}" r="2.2" fill="none" stroke="#6B6B78" stroke-width=".9"/>' for x, y in [(56, 100), (60, 116), (144, 100), (140, 116), (62, 76), (138, 76), (52, 124), (148, 124)]])
+    return lambda e: svg(e, [SHADOW, mantilla, dress, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
+
+
 if __name__ == "__main__":
-    for key, build in [("romancero", romancero()), ("comparsista", comparsista()), ("corista", corista()), ("cuartetero", cuartetero())]:
+    for key, build in [("romancero", romancero()), ("comparsista", comparsista()), ("corista", corista()), ("cuartetero", cuartetero()),
+                       ("cargador", cargador()), ("maniguetero", maniguetero()), ("saetera", saetera())]:
         write(key, build)
     print("personajes del Carnaval generados")
