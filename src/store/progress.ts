@@ -21,6 +21,12 @@ type ProgressStore = {
    */
   demoMode: boolean;
   setDemoMode: (on: boolean) => void;
+  /** Reproducir las voces grabadas. */
+  voices: boolean;
+  /** Mostrar el texto de los diálogos (siempre visible si no hay voz que escuchar). */
+  subtitles: boolean;
+  setVoices: (on: boolean) => void;
+  setSubtitles: (on: boolean) => void;
 
   /** Empieza (o reinicia) la ruta desde el nodo inicial. */
   start: (cityId: string, route: Route) => PlayerProgress;
@@ -61,6 +67,10 @@ export const useProgress = create<ProgressStore>()(
         hydrated: false,
         demoMode: __DEV__,
         setDemoMode: (demoMode) => set({ demoMode }),
+        voices: true,
+        subtitles: true,
+        setVoices: (voices) => set({ voices }),
+        setSubtitles: (subtitles) => set({ subtitles }),
         start: (cityId, route) => save(startRoute(cityId, route)),
         advance: (route, choice) => {
           const run = get().runs[route.id];
@@ -84,7 +94,14 @@ export const useProgress = create<ProgressStore>()(
       name: "progreso",
       version: 1,
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ runs, collection, lastRouteId, demoMode }) => ({ runs, collection, lastRouteId, demoMode }),
+      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles }) => ({
+        runs,
+        collection,
+        lastRouteId,
+        demoMode,
+        voices,
+        subtitles,
+      }),
       onRehydrateStorage: () => () => useProgress.setState({ hydrated: true }),
     },
   ),

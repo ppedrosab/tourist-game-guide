@@ -66,6 +66,10 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
   ],
 };
 
+/** Audios disponibles, por la ruta que usa el pack. Vacío hasta que se graben las voces. */
+export const AUDIO: Record<string, number> = {
+};
+
 export const SPRITES: Record<string, SpriteParts> = {
   "cenachero": {
     "viewBox": "0 0 200 260",

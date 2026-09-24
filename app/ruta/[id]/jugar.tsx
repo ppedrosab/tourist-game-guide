@@ -10,6 +10,8 @@ import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
 import type { CityPack, PlayerProgress, Route } from "@/content/types";
 import { findRoute } from "@/engine/catalog";
 import { useArrivalWatcher } from "@/hooks/useArrivalWatcher";
+import { useVoice, Voice } from "@/hooks/useVoice";
+import { useIsFocused } from "@react-navigation/native";
 import { getNode, hasArrived, localize, routeStops } from "@/engine/runner";
 import { buildSteps, SceneStep } from "@/engine/scene";
 import { SCENE_ASPECT, SceneStage } from "@/scene/SceneStage";
@@ -73,8 +75,17 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
   const { stops, current } = routeStops(route, run);
   const sceneKey = sceneKeyFor(route, run);
+  // Voz de la línea actual (real o simulada): lip-sync y barra de audio.
+  const focused = useIsFocused();
+  const voicesOn = useProgress((s) => s.voices);
+  const subtitles = useProgress((s) => s.subtitles);
+  const line = arrived ? spokenLine(step, `${node.id}:${index}`) : undefined;
+  const voice = useVoice(line, { enabled: voicesOn, active: focused });
   // Mientras se espera la llegada, en escena solo está el guía.
-  const cast = useMemo(() => stageCast(pack, route, node, arrived ? step : undefined), [pack, route, node, arrived, step]);
+  const cast = useMemo(
+    () => stageCast(pack, route, node, arrived ? step : undefined),
+    [pack, route, node, arrived, step],
+  );
 
   const characterName = (characterId?: string) =>
     localize(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
@@ -87,6 +98,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
           key={sceneKey}
           sceneKey={sceneKey}
           cast={cast}
+          talking={voice.speaking}
           testID="escenario"
           fallback={<Text style={styles.stageText}>{localize(node.title)}</Text>}
         />
@@ -108,6 +120,8 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
         ) : (
           <StepView
             step={step}
+            voice={voice}
+            showText={subtitles || !voice.hasAudio}
             route={route}
             characterName={characterName}
             onNext={next}
@@ -120,8 +134,27 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   );
 }
 
+/** Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. */
+function spokenLine(step: SceneStep, key: string) {
+  switch (step.kind) {
+    case "text":
+      return step.source === "dialogue" || step.source === "narration"
+        ? { key, text: localize(step.text), audio: step.audio }
+        : undefined;
+    case "decision":
+      return step.intro ? { key, text: localize(step.intro.text) } : undefined;
+    case "continue":
+      return step.hint ? { key, text: localize(step.hint) } : undefined;
+    default:
+      return undefined;
+  }
+}
+
 type StepViewProps = {
   step: SceneStep;
+  voice: Voice;
+  /** Subtítulos desactivados y con voz grabada: se oculta el texto. */
+  showText: boolean;
   route: Route;
   characterName: (id?: string) => string;
   onNext: () => void;
@@ -129,11 +162,21 @@ type StepViewProps = {
   onContinue: () => void;
 };
 
-function StepView({ step, route, characterName, onNext, onChoose, onContinue }: StepViewProps) {
+function StepView({ step, voice, showText, route, characterName, onNext, onChoose, onContinue }: StepViewProps) {
+  const audio = { audioProgress: voice.progress, onReplay: voice.replay };
+  const shown = (text: string) => (showText ? text : "…");
   switch (step.kind) {
     case "text": {
       const { speaker, color } = textSpeaker(step, characterName);
-      return <DialogBox speaker={speaker} speakerColor={color} text={localize(step.text)} onNext={onNext} />;
+      return (
+        <DialogBox
+          speaker={speaker}
+          speakerColor={color}
+          text={shown(localize(step.text))}
+          onNext={onNext}
+          {...audio}
+        />
+      );
     }
     case "challenge":
       return <ChallengePanel challenge={step.challenge} onDone={onNext} />;
@@ -151,7 +194,7 @@ function StepView({ step, route, characterName, onNext, onChoose, onContinue }: 
       return (
         <DialogBox
           speaker={characterName(step.intro?.characterId)}
-          text={step.intro ? localize(step.intro.text) : "¿Qué camino seguimos?"}
+          text={step.intro ? shown(localize(step.intro.text)) : "¿Qué camino seguimos?"}
           choices={step.choices.map((choice) => {
             const target = getNode(route, choice.targetNodeId);
             const meta = [choice.distanceM && `${choice.distanceM} m`, choice.walkMin && `${choice.walkMin} min`]
@@ -175,9 +218,10 @@ function StepView({ step, route, characterName, onNext, onChoose, onContinue }: 
       return (
         <DialogBox
           speaker={characterName()}
-          text={step.hint ? localize(step.hint) : `Siguiente parada: ${localize(step.nextTitle)}.`}
+          text={step.hint ? shown(localize(step.hint)) : `Siguiente parada: ${localize(step.nextTitle)}.`}
           nextLabel="Seguir"
           onNext={onContinue}
+          {...audio}
         />
       );
     case "ending":

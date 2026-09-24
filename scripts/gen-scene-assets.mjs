@@ -3,6 +3,8 @@
  * Genera src/scene/assets.generated.ts a partir de assets/:
  *  - Capas de fondo: assets/backgrounds/layers/bg_{escena}_{n}_{capa}@2x|@3x.webp
  *    (Metro elige @2x/@3x solo; `require` apunta al nombre sin escala).
+ *  - Audios: assets/audio/**.mp3|m4a|aac|wav, con la ruta relativa a assets/ como
+ *    clave (la misma que usa el pack: "audio/es/n1_a.mp3").
  *  - Sprites: assets/sprites/{personaje}/{personaje}_{expresion}.svg, partidos en
  *    sombra · cuerpo · cara · luz de borde. Entre expresiones solo cambia `face`,
  *    así que la cara se guarda aparte y el resto una sola vez.
@@ -10,7 +12,7 @@
  * Uso: npm run gen:assets (y commitear el resultado). Metro necesita `require`
  * estáticos, por eso el manifiesto se genera en vez de construirse en ejecución.
  */
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -94,6 +96,21 @@ for (const character of readdirSync(spritesDir).sort()) {
 }
 
 // ---------------------------------------------------------------------------
+// Audios
+// ---------------------------------------------------------------------------
+const audioDir = join(root, "assets/audio");
+const audios = [];
+function walk(dir, rel) {
+  for (const name of readdirSync(dir).sort()) {
+    const full = join(dir, name);
+    const r = `${rel}/${name}`;
+    if (statSync(full).isDirectory()) walk(full, r);
+    else if (/\.(mp3|m4a|aac|wav)$/i.test(name)) audios.push(r);
+  }
+}
+if (existsSync(audioDir)) walk(audioDir, "audio");
+
+// ---------------------------------------------------------------------------
 // Salida
 // ---------------------------------------------------------------------------
 const lines = [
@@ -110,6 +127,11 @@ for (const [scene, layers] of scenes) {
   }
   lines.push("  ],");
 }
-lines.push("};", "", `export const SPRITES: Record<string, SpriteParts> = ${JSON.stringify(sprites, null, 2)};`, "");
+lines.push("};", "");
+lines.push("/** Audios disponibles, por la ruta que usa el pack. Vacío hasta que se graben las voces. */");
+lines.push("export const AUDIO: Record<string, number> = {");
+for (const a of audios) lines.push(`  ${JSON.stringify(a)}: require(${JSON.stringify(`../../assets/${a}`)}),`);
+lines.push("};");
+lines.push("", `export const SPRITES: Record<string, SpriteParts> = ${JSON.stringify(sprites, null, 2)};`, "");
 writeFileSync(out, lines.join("\n"));
-console.log(`OK: ${scenes.size} escenas, ${Object.keys(sprites).length} personajes → ${out}`);
+console.log(`OK: ${scenes.size} escenas, ${audios.length} audios, ${Object.keys(sprites).length} personajes → ${out}`);

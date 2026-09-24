@@ -35,6 +35,8 @@ type Props = {
   sceneKey: string | undefined;
   /** Personajes en escena (plano del primer plano). */
   cast?: CastMember[];
+  /** Hay locución sonando (lip-sync de quien habla). */
+  talking?: boolean;
   /** Fondo si la escena no tiene capas. */
   fallback?: ReactNode;
   testID?: string;
@@ -51,7 +53,7 @@ type Props = {
  * En web no hay giroscopio: el puntero sobre el escenario hace de inclinación.
  * Con "Reducir movimiento" activado la escena queda quieta.
  */
-export function SceneStage({ sceneKey, cast, fallback, testID }: Props) {
+export function SceneStage({ sceneKey, cast, talking, fallback, testID }: Props) {
   const layers = sceneKey ? SCENE_LAYERS[sceneKey] : undefined;
   const [size, setSize] = useState({ width: 0, height: 0 });
   const onLayout = useCallback((e: LayoutChangeEvent) => {
@@ -176,7 +178,7 @@ export function SceneStage({ sceneKey, cast, fallback, testID }: Props) {
           {/* Personajes: pisan el primer plano y se mueven con él. */}
           {cast && cast.length > 0 ? (
             <ParallaxLayer depth={CHARACTER_DEPTH} tilt={tilt} scale={scale} ax={ax} ay={ay} box={box}>
-              <CastLayer cast={cast} width={box.width} height={box.height} />
+              <CastLayer cast={cast} width={box.width} height={box.height} talking={talking} />
             </ParallaxLayer>
           ) : null}
           {/* Efectos (rayos, brillos): fijos, con la misma escala, por encima de todo. */}

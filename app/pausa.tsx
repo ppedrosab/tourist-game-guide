@@ -1,14 +1,32 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { Button3D, Icon, IconName, Panel } from "@/components/ui";
 import { localize, routeStops } from "@/engine/runner";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
+import { useProgress } from "@/store/progress";
 import { border, colors, radius, type } from "@/theme";
 
-function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: string; sub: string; onPress?: () => void; right?: ReactNode }) {
+function Row({
+  icon,
+  title,
+  sub,
+  onPress,
+  right,
+}: {
+  icon: IconName;
+  title: string;
+  sub: string;
+  onPress?: () => void;
+  right?: ReactNode;
+}) {
   return (
-    <Pressable onPress={onPress} disabled={!onPress} accessibilityRole={onPress ? "button" : undefined} style={styles.row}>
+    <Pressable
+      onPress={onPress}
+      disabled={!onPress}
+      accessibilityRole={onPress ? "button" : undefined}
+      style={styles.row}
+    >
       <View style={styles.rowIcon}>
         <Icon name={icon} size={18} />
       </View>
@@ -23,8 +41,10 @@ function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: stri
 
 /** Modal de pausa: se abre desde el HUD y vuelve exactamente al mismo punto. */
 export default function Pausa() {
-  const [voces, setVoces] = useState(true);
-  const [subtitulos, setSubtitulos] = useState(true);
+  const voces = useProgress((s) => s.voices);
+  const setVoces = useProgress((s) => s.setVoices);
+  const subtitulos = useProgress((s) => s.subtitles);
+  const setSubtitulos = useProgress((s) => s.setSubtitles);
   const current = useCurrentRun();
   const where = (() => {
     if (!current) return "";
@@ -40,9 +60,24 @@ export default function Pausa() {
         <Text style={type.caption}>{where}</Text>
         <Button3D label="Continuar escena" icon="play" onPress={() => router.back()} />
         <Row icon="map" title="Ver mapa" sub="Siguiente parada y caminos" onPress={() => router.back()} />
-        <Row icon="book" title="Cuaderno del detective" sub="Pistas y objetos" onPress={() => router.replace("/cuaderno")} />
-        <Row icon="volume" title="Voces" sub="Volumen y velocidad" right={<Switch value={voces} onValueChange={setVoces} trackColor={{ true: colors.sea }} />} />
-        <Row icon="subtitles" title="Subtítulos" sub="Siempre visibles" right={<Switch value={subtitulos} onValueChange={setSubtitulos} trackColor={{ true: colors.sea }} />} />
+        <Row
+          icon="book"
+          title="Cuaderno del detective"
+          sub="Pistas y objetos"
+          onPress={() => router.replace("/cuaderno")}
+        />
+        <Row
+          icon="volume"
+          title="Voces"
+          sub="Locuciones grabadas"
+          right={<Switch value={voces} onValueChange={setVoces} trackColor={{ true: colors.sea }} />}
+        />
+        <Row
+          icon="subtitles"
+          title="Subtítulos"
+          sub="Texto de los diálogos"
+          right={<Switch value={subtitulos} onValueChange={setSubtitulos} trackColor={{ true: colors.sea }} />}
+        />
         <Row icon="exit" title="Salir y guardar" sub="Retoma donde lo dejaste" onPress={() => router.dismissTo("/")} />
       </Panel>
     </View>
@@ -61,5 +96,12 @@ const styles = StyleSheet.create({
     borderColor: colors.ink,
     backgroundColor: colors.white,
   },
-  rowIcon: { width: 38, height: 38, borderRadius: 11, backgroundColor: colors.sand, alignItems: "center", justifyContent: "center" },
+  rowIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 11,
+    backgroundColor: colors.sand,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });

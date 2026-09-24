@@ -1,4 +1,4 @@
-import type { Challenge, Choice, ContentBlock, Expression, I18nText, Route, StoryNode } from "@/content/types";
+import type { AssetRef, Challenge, Choice, ContentBlock, Expression, I18nText, LangCode, Route, StoryNode } from "@/content/types";
 import { availableChoices, getNode, resolveText } from "./runner";
 
 /**
@@ -15,6 +15,8 @@ export type SceneStep =
       expression?: Expression;
       legend?: boolean;
       year?: number;
+      /** Locución por idioma (ruta del pack), si la hay. */
+      audio?: Partial<Record<LangCode, AssetRef>>;
     }
   | { kind: "challenge"; challenge: Challenge }
   | { kind: "clue"; text: I18nText }
@@ -37,6 +39,7 @@ export function buildSteps(route: Route, node: StoryNode, flags: readonly string
       expression: block.type === "dialogue" ? block.expression : undefined,
       legend: block.type === "anecdote" ? block.legend : undefined,
       year: block.type === "historical_fact" ? block.year : undefined,
+      audio: block.type === "dialogue" || block.type === "narration" ? block.audio : undefined,
     });
   }
   if (node.challenge) steps.push({ kind: "challenge", challenge: node.challenge });
