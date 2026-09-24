@@ -111,6 +111,15 @@ export const en: Strings = {
     cuaderno: "Detective's notebook",
     repetirAudio: "Replay audio",
   },
+  antesAhora: {
+    antes: "Then",
+    ahora: "Now",
+    usarCamara: "Compare with the camera",
+    verIlustracion: "See today's street illustrated",
+    sinCamara: "No camera: comparing with today's street illustrated.",
+    deslizador: "Compare then and now",
+    arrastra: "Drag the bar to compare.",
+  },
   reto: {
     reto: "Challenge",
     observa: "Look closely",

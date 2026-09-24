@@ -49,7 +49,7 @@
           "triggerRadiusM": 50,
           "background": "fondos/fondo_larios.svg",
           "content": [
-            { "type": "then_now", "then": "img/thennow/larios_1891.jpg", "now": "img/thennow/larios_hoy.jpg", "caption": { "es": "Calle Larios, inaugurada el 27 de agosto de 1891, y hoy.", "en": "Calle Larios, opened on 27 August 1891, and today." } },
+            { "type": "then_now", "then": "then_now/larios_1891.svg", "now": "camera", "caption": { "es": "Calle Larios, inaugurada el 27 de agosto de 1891, y hoy.", "en": "Calle Larios, opened on 27 August 1891, and today." } },
             { "type": "dialogue", "characterId": "cenachero", "expression": "talking", "text": { "es": "Esta calle la pagó la Casa Larios pa' unir el centro con el puerto. En Málaga, detective, todo gira alrededor del comercio y los caminos.", "en": "The Larios family paid for this street to link the centre with the port. In Málaga, detective, everything revolves around trade and roads." }, "audio": { "es": "audio/es/n2_a.mp3" } },
             { "type": "anecdote", "text": { "es": "El primer suelo de la calle era de tacos de madera. Una riada del Guadalmedina en 1907 los levantó y dicen que flotaban calle abajo.", "en": "The street was first paved with wooden blocks. A flood of the Guadalmedina river in 1907 lifted them up, and they say they floated off down the street." }, "legend": true }
           ],

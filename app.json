@@ -35,7 +35,15 @@
         }
       ],
       "expo-asset",
-      "@maplibre/maplibre-react-native"
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Para comparar las calles de hoy con cómo eran hace más de un siglo. No se guarda ninguna foto.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

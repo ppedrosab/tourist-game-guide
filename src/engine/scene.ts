@@ -9,7 +9,7 @@ import { availableChoices, getNode, resolveText } from "./runner";
 export type SceneStep =
   | {
       kind: "text";
-      source: Exclude<ContentBlock["type"], "scene">;
+      source: Exclude<ContentBlock["type"], "scene" | "then_now">;
       text: I18nText;
       characterId?: string;
       expression?: Expression;
@@ -18,6 +18,8 @@ export type SceneStep =
       /** Locución por idioma (ruta del pack), si la hay. */
       audio?: Partial<Record<LangCode, AssetRef>>;
     }
+  /** Comparador "antes y ahora": ilustración de época frente a la cámara (o una imagen). */
+  | { kind: "then_now"; then: AssetRef; now: AssetRef; caption?: I18nText }
   | { kind: "challenge"; challenge: Challenge }
   | { kind: "clue"; text: I18nText }
   | { kind: "decision"; intro?: { characterId: string; expression?: Expression; text: I18nText }; choices: Choice[] }
@@ -29,6 +31,10 @@ export function buildSteps(route: Route, node: StoryNode, flags: readonly string
   const steps: SceneStep[] = [];
   for (const block of node.content) {
     if (block.type === "scene") continue;
+    if (block.type === "then_now") {
+      steps.push({ kind: "then_now", then: block.then, now: block.now, caption: block.caption });
+      continue;
+    }
     const text = resolveText(block, flags);
     if (!text) continue;
     steps.push({

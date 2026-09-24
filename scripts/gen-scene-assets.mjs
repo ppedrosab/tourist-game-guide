@@ -7,6 +7,7 @@
  *    clave (la misma que usa el pack: "audio/es/n1_a.mp3").
  *  - Coleccionables: assets/collectibles/*.svg, con la ruta que usa el pack como
  *    clave ("collectibles/cenacho.svg") y el SVG completo como texto.
+ *  - Antes y ahora: assets/then_now/*.svg ("then_now/larios_1891.svg").
  *  - Sprites: assets/sprites/{personaje}/{personaje}_{expresion}.svg, partidos en
  *    sombra · cuerpo · cara · luz de borde. Entre expresiones solo cambia `face`,
  *    así que la cara se guarda aparte y el resto una sola vez.
@@ -127,6 +128,19 @@ if (existsSync(collectiblesDir)) {
 }
 
 // ---------------------------------------------------------------------------
+// Antes y ahora
+// ---------------------------------------------------------------------------
+const thenNowDir = join(root, "assets/then_now");
+const thenNow = {};
+if (existsSync(thenNowDir)) {
+  for (const file of readdirSync(thenNowDir).filter((f) => f.endsWith(".svg")).sort()) {
+    thenNow[`then_now/${file}`] = readFileSync(join(thenNowDir, file), "utf8")
+      .replace(/\s(role|aria-label)="[^"]*"/g, "")
+      .trim();
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Salida
 // ---------------------------------------------------------------------------
 const lines = [
@@ -150,6 +164,8 @@ for (const a of audios) lines.push(`  ${JSON.stringify(a)}: require(${JSON.strin
 lines.push("};");
 lines.push("", "/** Arte de los coleccionables (SVG completo), por la ruta que usa el pack en `icon`. */");
 lines.push(`export const COLLECTIBLE_ART: Record<string, string> = ${JSON.stringify(collectibles, null, 2)};`);
+lines.push("", "/** Ilustraciones de época para \"antes y ahora\" (SVG completo), por la ruta del pack. */");
+lines.push(`export const THEN_NOW_ART: Record<string, string> = ${JSON.stringify(thenNow)};`);
 lines.push("", `export const SPRITES: Record<string, SpriteParts> = ${JSON.stringify(sprites, null, 2)};`, "");
 writeFileSync(out, lines.join("\n"));
 console.log(`OK: ${scenes.size} escenas, ${audios.length} audios, ${Object.keys(collectibles).length} coleccionables, ${Object.keys(sprites).length} personajes → ${out}`);

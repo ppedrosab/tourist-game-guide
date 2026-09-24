@@ -113,6 +113,15 @@ export const es = {
     cuaderno: "Cuaderno del detective",
     repetirAudio: "Repetir audio",
   },
+  antesAhora: {
+    antes: "Antes",
+    ahora: "Ahora",
+    usarCamara: "Comparar con la cámara",
+    verIlustracion: "Ver la calle de hoy ilustrada",
+    sinCamara: "Sin cámara: se compara con la calle de hoy ilustrada.",
+    deslizador: "Comparar antes y ahora",
+    arrastra: "Arrastra la barra para comparar.",
+  },
   reto: {
     reto: "Reto",
     observa: "Observa",

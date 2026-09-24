@@ -77,6 +77,7 @@ export type ContentBlock =
   | { type: "dialogue"; characterId: string; expression?: Expression; text?: I18nText; variants?: Variant[]; audio?: Partial<Record<LangCode, AssetRef>> }
   | { type: "narration"; text: I18nText; audio?: Partial<Record<LangCode, AssetRef>> }
   | { type: "scene"; layers: AssetRef[]; characters: { id: string; expression: Expression; position: "left" | "right" }[] }
+  /** `then`: ilustración de época. `now`: "camera" (cámara en directo) o una imagen. */
   | { type: "then_now"; then: AssetRef; now: AssetRef; caption?: I18nText }
   | { type: "historical_fact"; text: I18nText; year?: number }
   | { type: "anecdote"; text: I18nText; legend?: boolean; source?: string }

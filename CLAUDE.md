@@ -98,6 +98,10 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   estrellas y colección con la mejor puntuación por ruta.
 - Analítica: `src/analytics` (eventos tipados, sin datos personales ni coordenadas, solo con
   consentimiento; desactivada por defecto). El proveedor se conecta con `setAnalyticsSink`.
+- "Antes y ahora": paso `then_now` con `ThenNowPanel` (deslizador ilustración de época ↔ hoy). `now:
+  "camera"` = cámara en directo solo si el jugador la enciende (no se captura nada); sin cámara, la
+  ilustración actual de la escena. En web la cámara es `getUserMedia` propio (`LiveCamera.tsx`):
+  el módulo web de expo-camera descarga un lector QR de un CDN al importarse.
 - Prueba de campo: `src/field` (registro y análisis por parada: coordenada y radio sugeridos),
   pantalla `/campo` y guía `docs/PRUEBAS_CALLE.md`.
 
@@ -134,6 +138,8 @@ scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
+assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
+                          perspectiva que la escena de hoy para que el deslizador coincida)
 assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
 assets/backgrounds/layers bg_{parada}_{n}_{capa}@2x/@3x.webp  (capas para parallax)
 ```
@@ -206,7 +212,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Voces: decidir locutores reales o síntesis (y si también en inglés).
 - Revisión de la traducción inglesa por un nativo.
 - Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
-- Imágenes de "antes y ahora" de calle Larios (el pack las referencia, aún no existen).
+- Revisar con un historiador la ilustración de calle Larios en 1891 (`assets/then_now`).
 
 ## Qué NO hacer
 

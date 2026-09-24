@@ -15,7 +15,7 @@ describe("buildSteps", () => {
   });
 
   it("pone reto antes de la decisión", () => {
-    expect(kinds("n2_larios")).toEqual(["text", "text", "text", "challenge", "decision"]);
+    expect(kinds("n2_larios")).toEqual(["then_now", "text", "text", "challenge", "decision"]);
   });
 
   it("añade la pista tras el reto", () => {
@@ -42,6 +42,16 @@ describe("buildSteps", () => {
 
   it("el nodo final acaba en ending", () => {
     expect(kinds("n7_final", ["camino_dinero", "version_america"])).toEqual(["text", "text", "ending"]);
+  });
+
+  it("el bloque then_now es un paso propio con la cámara como 'ahora'", () => {
+    const [first] = buildSteps(route, getNode(route, "n2_larios"), []);
+    expect(first).toEqual({
+      kind: "then_now",
+      then: "then_now/larios_1891.svg",
+      now: "camera",
+      caption: expect.objectContaining({ es: expect.stringMatching(/1891/) }),
+    });
   });
 
   it("copia la pista de siguiente parada", () => {

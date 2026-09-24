@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArrivalPanel } from "@/components/game/ArrivalPanel";
 import { CaseClosed } from "@/components/game/CaseClosed";
 import { ChallengePanel } from "@/components/game/ChallengePanel";
+import { ThenNowPanel } from "@/components/game/ThenNowPanel";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
 import type { CityPack, I18nText, PlayerProgress, Route } from "@/content/types";
@@ -154,8 +155,13 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
         {!arrived ? (
-          <ArrivalPanel node={node} demoMode={demoMode} watch={watch} onArrive={(method) => arrive(method)}
-            fieldTest={field.enabled} />
+          <ArrivalPanel
+            node={node}
+            demoMode={demoMode}
+            watch={watch}
+            onArrive={(method) => arrive(method)}
+            fieldTest={field.enabled}
+          />
         ) : (
           <StepView
             step={step}
@@ -167,6 +173,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
             onChoose={(choice) => advance(route, choice)}
             onContinue={() => advance(route)}
             onChallenge={(correct) => recordChallenge(route, correct)}
+            sceneKey={sceneKey}
           />
         )}
       </View>
@@ -201,6 +208,7 @@ type StepViewProps = {
   onChoose: (choice: Extract<SceneStep, { kind: "decision" }>["choices"][number]) => void;
   onContinue: () => void;
   onChallenge: (correct: boolean) => void;
+  sceneKey?: string;
 };
 
 function StepView({
@@ -213,6 +221,7 @@ function StepView({
   onChoose,
   onContinue,
   onChallenge,
+  sceneKey,
 }: StepViewProps) {
   const { t, L } = useI18n();
   const audio = { audioProgress: voice.progress, onReplay: voice.replay };
@@ -222,6 +231,10 @@ function StepView({
       const { speaker, color } = textSpeaker(step, characterName, t);
       return <DialogBox speaker={speaker} speakerColor={color} text={shown(L(step.text))} onNext={onNext} {...audio} />;
     }
+    case "then_now":
+      return (
+        <ThenNowPanel then={step.then} now={step.now} caption={step.caption} sceneKey={sceneKey} onNext={onNext} />
+      );
     case "challenge":
       return (
         <ChallengePanel
@@ -303,8 +316,6 @@ function textSpeaker(
       return { speaker: step.year ? t("jugar.datoAnio", { year: step.year }) : t("jugar.dato"), color: colors.sea };
     case "anecdote":
       return { speaker: step.legend ? t("jugar.seCuenta") : t("jugar.anecdota"), color: colors.ink };
-    case "then_now":
-      return { speaker: t("jugar.antesAhora"), color: colors.sea };
     case "image":
     case "narration":
       return { speaker: t("jugar.narrador"), color: colors.ink };
