@@ -88,6 +88,17 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 - Antes de publicar: confirmar condiciones de OpenFreeMap para descargas offline o usar teselas
   propias (solo cambia `MAP_STYLE_URL`).
 
+**Fase 6 hecha** (pulido):
+- i18n: `src/i18n` (es/en tipados; `useI18n()` → `t` interfaz, `L` contenido del pack, formatos).
+  Idioma "auto" (el del móvil) o elegido en Perfil. **Ningún texto de interfaz fijo en el código.**
+  El pack de Málaga está en inglés; `missingTranslations` + test exigen packs completos.
+- Estrellas: `runner.recordChallenge/starsFor` (quiz y observación, primer intento); final con
+  estrellas y colección con la mejor puntuación por ruta.
+- Analítica: `src/analytics` (eventos tipados, sin datos personales ni coordenadas, solo con
+  consentimiento; desactivada por defecto). El proveedor se conecta con `setAnalyticsSink`.
+- Prueba de campo: `src/field` (registro y análisis por parada: coordenada y radio sugeridos),
+  pantalla `/campo` y guía `docs/PRUEBAS_CALLE.md`.
+
 ## Arquitectura
 
 ```
@@ -101,6 +112,7 @@ app/                      rutas (expo-router)
   pausa.tsx               modal transparente, vuelve al mismo punto
   cuaderno.tsx            modal: pistas, mapa, objetos
   mapa.tsx                modal: mapa de la ruta en curso
+  campo.tsx               informe de la prueba de campo (desde Perfil)
 src/theme/                tokens (colores, radios, sombras, tipografía)
 src/components/ui/        Button3D, IconButton, Chip, Panel(+Nameplate), DialogBox, ChoiceCard,
                           Hud, TabBar, HardShadow, AzulejoBackground, Icon
@@ -113,6 +125,9 @@ src/hooks/                useCurrentRun (modales), useArrivalWatcher (GPS en pri
 src/geo/                  geofences en segundo plano, permisos, GeofenceSync
 src/scene/                SceneStage, parallax, cast, Sprite, CastLayer, sun, voice, assets.generated
 src/map/                  geometry, RouteMap (MapLibre / SchematicMap), offline, OfflineMapCard
+src/i18n/                 es.ts, en.ts, useI18n
+src/analytics/            eventos y sink enchufable
+src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
@@ -171,7 +186,7 @@ Tareas de la fase 2:
 - **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
 - **5 · Mapa** (hecha, ver arriba). Mejora posible: trazado por calles (`path` opcional en el pack)
   en vez de líneas rectas entre paradas.
-- **6 · Pulido**: colección, finales, i18n (inglés), analítica, pruebas en la calle.
+- **6 · Pulido** (hecha, ver arriba). Siguiente: salir a la calle con `docs/PRUEBAS_CALLE.md`.
 
 ## Contenido e historia (resumen; completo en docs/GDD.md)
 
@@ -185,11 +200,15 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Verificar sobre el terreno coordenadas, radios y tiempos a pie (son estimaciones).
 - Pedir permiso a la Antigua Casa de Guardia (el reto implica entrar al local).
 - Revisión de un historiador local antes de grabar audios.
-- Voces: decidir locutores reales o síntesis.
+- Voces: decidir locutores reales o síntesis (y si también en inglés).
+- Revisión de la traducción inglesa por un nativo.
+- Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
+- Imágenes de coleccionables y de "antes y ahora" (el pack las referencia, aún no existen).
 
 ## Qué NO hacer
 
 - No meter contenido de ciudad en el código: todo sale del pack.
+- No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts` y `en.ts`.
 - No usar colores o tamaños sueltos: usar `src/theme`.
 - No usar `localStorage`/web-only APIs; es React Native.
 - No añadir dependencias pesadas sin justificarlo en el commit.
