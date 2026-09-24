@@ -742,7 +742,7 @@
                     "camino_rio"
                   ],
                   "text": {
-                    "es": "Vienes del río, así que ya sabes lo que viajaron esos huesos. Pero la pregunta es otra: ¿qué hay dentro de cada caja?",
+                    "es": "Viene usted del río, así que ya sabe lo que viajaron esos huesos. Pero la pregunta es otra: ¿qué hay dentro de cada caja?",
                     "en": "You've come from the river, so you know how far those bones travelled. But the real question is: what's inside each box?"
                   }
                 },
@@ -751,7 +751,7 @@
                     "camino_papeles"
                   ],
                   "text": {
-                    "es": "Vienes de los papeles, así que ya sabes lo de la caja sin nombre. Pero hay dos maneras de resolver eso.",
+                    "es": "Viene usted de los papeles, así que ya sabe lo de la caja sin nombre. Pero hay dos maneras de resolver eso.",
                     "en": "You've come from the papers, so you know about the box with no name. But there are two ways to settle it."
                   }
                 }
@@ -1123,7 +1123,7 @@
                     "version_adn"
                   ],
                   "text": {
-                    "es": "¡Almirante del río! Seguiste los barcos y le creíste a la ciencia. Colón estaría orgulloso.",
+                    "es": "¡Almirante del río! Siguió usted los barcos y le creyó a la ciencia. Colón estaría orgulloso.",
                     "en": "Admiral of the river! You followed the ships and trusted the science. Columbus would be proud."
                   }
                 },
@@ -1133,7 +1133,7 @@
                     "version_caja"
                   ],
                   "text": {
-                    "es": "Seguiste el río y te quedaste con la caja misteriosa. ¡Tú eres un cazador de leyendas!",
+                    "es": "Siguió el río y se quedó con la caja misteriosa. ¡Usted es un cazador de leyendas!",
                     "en": "You followed the river and went for the mysterious box. You're a legend hunter!"
                   }
                 },
@@ -1143,7 +1143,7 @@
                     "version_adn"
                   ],
                   "text": {
-                    "es": "Papeles y ADN: nada se te escapa. ¡Eres un sabueso del Archivo!",
+                    "es": "Papeles y ADN: no se le escapa nada. ¡Es usted un sabueso del Archivo!",
                     "en": "Papers and DNA: nothing gets past you. You're a bloodhound of the Archive!"
                   }
                 },
@@ -1153,7 +1153,7 @@
                     "version_caja"
                   ],
                   "text": {
-                    "es": "Papeles y cajas con nombre: tú lo apuntas todo, como un cronista de Indias.",
+                    "es": "Papeles y cajas con nombre: usted lo apunta todo, como un cronista de Indias.",
                     "en": "Papers and boxes with names: you write everything down, like a chronicler of the Indies."
                   }
                 }

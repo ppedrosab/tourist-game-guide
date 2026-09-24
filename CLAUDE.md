@@ -116,6 +116,11 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   `render_layers.py` pasa cada grupo del SVG a WebP @2x/@3x (Chromium + Pillow). Tras cambiarlo:
   `python3 scripts/art/cadiz_scenes.py && python3 scripts/art/render_layers.py cadiz_ && npm run gen:assets`.
 
+**Tercera ciudad: Sevilla** («¿Dónde está Colón?», diseño y datos a verificar en `docs/GDD_SEVILLA.md`):
+- Pack `content/sevilla/donde-esta-colon.pack.json` (es/en). Guía el Aguador de Velázquez (trata
+  de «usted» al jugador), con el Giraldillo y Hernando Colón. Dos tumbas (Sevilla y Santo Domingo) y
+  tres sospechosos; caminos Río y Papeles; pruebas de la caja de 1877 y del ADN de 2006.
+- Arte en `scripts/art/sevilla_*.py` (reutiliza las piezas de los generadores de Cádiz).
 ## Arquitectura
 
 ```
@@ -148,8 +153,9 @@ src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 content/cadiz/            la-ciudad-que-no-cayo.pack.json
+content/sevilla/          donde-esta-colon.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,aguador,giraldillo,hernando}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
@@ -228,6 +234,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Revisar con un historiador la ilustración de calle Larios en 1891 (`assets/then_now`).
 - Cádiz: coordenadas y radios en la calle, revisión histórica de los datos de `docs/GDD_CADIZ.md`,
   decidir si la ruta es gratuita (`isFree: true` provisional) y un posible "antes y ahora".
+- Sevilla: lo mismo con `docs/GDD_SEVILLA.md`; el camino del río es mucho más largo que el de los papeles.
 
 ## Qué NO hacer
 
