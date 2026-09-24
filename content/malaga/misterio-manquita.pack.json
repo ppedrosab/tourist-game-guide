@@ -1,0 +1,273 @@
+{
+  "id": "malaga",
+  "version": 4,
+  "name": { "es": "Málaga" },
+  "languages": ["es"],
+  "center": { "lat": 36.7205, "lng": -4.4205 },
+  "bounds": [
+    { "lat": 36.7160, "lng": -4.4260 },
+    { "lat": 36.7250, "lng": -4.4150 }
+  ],
+  "coverImage": "img/cover_manquita.jpg",
+  "characters": [
+    { "id": "cenachero", "name": { "es": "Er Cenachero" }, "description": { "es": "Vendedor ambulante de pescado con sus dos cenachos. Pícaro, charlatán y más listo de lo que parece." }, "avatar": "sprites/cenachero/cenachero_neutral.svg", "era": "s. XIX-XX" },
+    { "id": "la_manquita", "name": { "es": "La Manquita" }, "description": { "es": "La catedral de Málaga. Solemne, algo presumida y dolida por su torre perdida." }, "avatar": "sprites/manquita/manquita_neutral.svg", "era": "1528-hoy" },
+    { "id": "lucio", "name": { "es": "Lucio, actor romano" }, "description": { "es": "Actor del Teatro Romano de Malaca. Exagerado y teatral hasta para pedir la hora." }, "avatar": "sprites/lucio/lucio_neutral.svg", "era": "s. I" }
+  ],
+  "routes": [
+    {
+      "id": "misterio-manquita",
+      "title": { "es": "El misterio de la Manquita" },
+      "summary": { "es": "¿Por qué la catedral de Málaga tiene una sola torre? Sigue el rastro del dinero o el del poder: tus decisiones eligen las calles por las que caminas." },
+      "era": "s. I - s. XIX",
+      "guideCharacterId": "cenachero",
+      "durationMin": 90,
+      "distanceKm": 2.2,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "startNodeId": "n1_cenachero",
+      "nodes": [
+        {
+          "id": "n1_cenachero",
+          "title": { "es": "La estatua del Cenachero" },
+          "location": { "lat": 36.7188, "lng": -4.4196 },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_marina.svg",
+          "content": [
+            { "type": "scene", "layers": ["fondos/fondo_marina.svg"], "characters": [{ "id": "cenachero", "expression": "happy", "position": "left" }] },
+            { "type": "dialogue", "characterId": "cenachero", "text": { "es": "¡Quillo! ¡Boquerones fresquitos! ¿No compras? Pues si no vienes a por pescao, vendrás a por un misterio." }, "audio": { "es": "audio/es/n1_a.mp3" } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "thinking", "text": { "es": "Mira pa' allá arriba. Esa catedral tiene una torre entera… y la otra a medias. La llamamos la Manquita. Pararon las obras en 1782 porque se acabó el dinero. Pero ¿adónde fue ese dinero? Eso es lo que vamos a averiguar tú y yo." }, "audio": { "es": "audio/es/n1_b.mp3" } },
+            { "type": "anecdote", "text": { "es": "Esta estatua de bronce es de 1968. Los cenacheros recorrían los barrios con dos cestas, los cenachos, pregonando el pescado a voces." }, "source": "Ayuntamiento de Málaga" }
+          ],
+          "nextNodeId": "n2_larios"
+        },
+        {
+          "id": "n2_larios",
+          "title": { "es": "Calle Larios" },
+          "location": { "lat": 36.7197, "lng": -4.4215 },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_larios.svg",
+          "content": [
+            { "type": "then_now", "then": "img/thennow/larios_1891.jpg", "now": "img/thennow/larios_hoy.jpg", "caption": { "es": "Calle Larios, inaugurada el 27 de agosto de 1891, y hoy." } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "talking", "text": { "es": "Esta calle la pagó la Casa Larios pa' unir el centro con el puerto. En Málaga, detective, todo gira alrededor del comercio y los caminos." }, "audio": { "es": "audio/es/n2_a.mp3" } },
+            { "type": "anecdote", "text": { "es": "El primer suelo de la calle era de tacos de madera. Una riada del Guadalmedina en 1907 los levantó y dicen que flotaban calle abajo." }, "legend": true }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": { "es": "¿Cómo son las esquinas de los edificios de calle Larios?" },
+            "options": [{ "es": "Rectas, en ángulo de 90°" }, { "es": "Curvas" }, { "es": "Con una torre en cada esquina" }],
+            "correctIndex": 1,
+            "explanation": { "es": "El arquitecto Eduardo Strachan diseñó todas las manzanas con esquinas curvas, inspirándose en la Escuela de Chicago." }
+          },
+          "decisionIntro": { "characterId": "cenachero", "expression": "thinking", "text": { "es": "Aquí se nos parte el camino, detective. Pa' saber adónde fue el dinero de la torre podemos seguir su rastro hasta el puerto… o seguir a los que mandaban. ¿Tú qué dices?" } },
+          "choices": [
+            { "label": { "es": "Seguir el rastro del dinero" }, "hint": { "es": "Hacia el antiguo puerto y las tabernas" }, "distanceM": 350, "walkMin": 5, "targetNodeId": "a1_atarazanas", "setFlags": ["camino_dinero"] },
+            { "label": { "es": "Seguir el rastro del poder" }, "hint": { "es": "Hacia la antigua Plaza Mayor" }, "distanceM": 120, "walkMin": 2, "targetNodeId": "b1_constitucion", "setFlags": ["camino_poder"] }
+          ]
+        },
+
+        {
+          "id": "a1_atarazanas",
+          "title": { "es": "Mercado de Atarazanas" },
+          "location": { "lat": 36.7186, "lng": -4.4242 },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_atarazanas.svg",
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "surprised", "text": { "es": "¿Ves ese arco tan bonito? Pues aquí, hace siglos, rompían las olas. Esto era un astillero musulmán que daba a la playa. Aquí se hacían los barcos." }, "audio": { "es": "audio/es/a1_a.mp3" } },
+            { "type": "historical_fact", "text": { "es": "El astillero se derribó en 1880, pero antes desmontaron su puerta nazarí y la reutilizaron como entrada del nuevo mercado central." }, "year": 1880 },
+            { "type": "anecdote", "text": { "es": "El arco tiene dos escudos con inscripciones en árabe: «Sólo Dios es el rico» y «Sólo Dios es el valiente». Una curiosa bienvenida para un mercado donde se viene a gastar." } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "proud", "text": { "es": "Aquí vendía yo mis boquerones. Pista pa' tu cuaderno: el dinero de Málaga entraba por el mar y salía por los caminos." }, "audio": { "es": "audio/es/a1_b.mp3" } }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": { "es": "Mira la puerta del mercado. ¿Qué forma tiene el arco?" },
+            "options": [{ "es": "De medio punto, redondo" }, { "es": "De herradura" }, { "es": "Recto, con un dintel" }],
+            "correctIndex": 1,
+            "explanation": { "es": "Es un arco de herradura apuntado, típico del arte nazarí, hecho con sillares de mármol." }
+          },
+          "clue": { "id": "pista_puerto", "text": { "es": "El dinero de Málaga entraba por el mar y salía por los caminos." } },
+          "nextNodeId": "a2_casa_guardia"
+        },
+        {
+          "id": "a2_casa_guardia",
+          "title": { "es": "Antigua Casa de Guardia" },
+          "location": { "lat": 36.7179, "lng": -4.4226 },
+          "triggerRadiusM": 30,
+          "branch": "dinero",
+          "background": "fondos/fondo_casa_guardia.svg",
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "happy", "text": { "es": "La taberna más antigua de Málaga, abierta desde 1840. Aquí han brindado marineros, reyes y hasta el mismísimo Picasso. ¡Y el vino de Málaga viajaba a medio mundo!" }, "audio": { "es": "audio/es/a2_a.mp3" } },
+            { "type": "historical_fact", "text": { "es": "Su fundador, José de la Guardia, fue nombrado proveedor de la Casa Real de Isabel II, título que la taberna aún conserva." } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "thinking", "text": { "es": "El vino, las pasas, el aceite… todo bajaba del interior por caminos malísimos. Si los caminos se rompían, se rompía el negocio. Apunta eso, que es importante." }, "audio": { "es": "audio/es/a2_b.mp3" } }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": { "es": "Asómate a la barra (no hace falta pedir nada). ¿Con qué apuntan los camareros la cuenta?" },
+            "answer": ["tiza", "con tiza", "chalk"]
+          },
+          "clue": { "id": "pista_caminos", "text": { "es": "Sin caminos, el vino y las pasas no llegaban al puerto." } },
+          "nextNodeId": "n4_manquita",
+          "nextHint": { "es": "Ahora, a la Manquita. Unos 8 minutos andando." }
+        },
+
+        {
+          "id": "b1_constitucion",
+          "title": { "es": "Plaza de la Constitución" },
+          "location": { "lat": 36.7208, "lng": -4.4220 },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_constitucion.svg",
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "thinking", "text": { "es": "Esta era la Plaza Mayor. Aquí estaba el poder de la ciudad. Pero ojo, que las decisiones gordas no se tomaban aquí… se tomaban en Madrid." }, "audio": { "es": "audio/es/b1_a.mp3" } },
+            { "type": "historical_fact", "text": { "es": "Durante el reinado de Carlos III, con el conde de Floridablanca como secretario de Estado, la Corona dejó de aportar fondos a las obras de la catedral." } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "nervous", "text": { "es": "O sea, que el grifo lo cerraron desde arriba. Y cuando el rey dice que no hay dinero pa' tu torre… no hay dinero pa' tu torre." }, "audio": { "es": "audio/es/b1_b.mp3" } }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": { "es": "¿Desde dónde se decidió cortar el dinero de la catedral?" },
+            "options": [{ "es": "Desde el ayuntamiento de Málaga" }, { "es": "Desde la Corona, en Madrid" }, { "es": "Desde el Vaticano" }],
+            "correctIndex": 1,
+            "explanation": { "es": "Fue la Corona, en tiempos de Carlos III, la que dejó de financiar las obras." }
+          },
+          "clue": { "id": "pista_madrid", "text": { "es": "El grifo del dinero lo cerraron desde Madrid, en tiempos de Carlos III." } },
+          "nextNodeId": "n4_manquita",
+          "nextHint": { "es": "La Manquita está aquí al lado. Unos 3 minutos." }
+        },
+
+        {
+          "id": "n4_manquita",
+          "title": { "es": "La Manquita" },
+          "location": { "lat": 36.7201, "lng": -4.4192 },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_manquita.svg",
+          "content": [
+            { "type": "scene", "layers": ["fondos/fondo_manquita.svg"], "characters": [{ "id": "cenachero", "expression": "nervous", "position": "left" }] },
+            { "type": "dialogue", "characterId": "la_manquita", "expression": "proud", "text": { "es": "Así que tú eres el detective. Empezaron a construirme en 1528 y en 1782 pararon las obras. Mi torre norte llegó a lo más alto. La sur… se quedó a medias." }, "audio": { "es": "audio/es/n4_a.mp3" } },
+            { "type": "dialogue", "characterId": "la_manquita", "expression": "talking", "variants": [
+              { "requires": ["camino_dinero"], "text": { "es": "Vienes del puerto, ya sabes que Málaga vivía del comercio. Eso te ayudará con lo que voy a contarte." } },
+              { "requires": ["camino_poder"], "text": { "es": "Vienes de la Plaza Mayor, ya sabes que la orden vino de Madrid. Pero ¿para qué querían ese dinero?" } }
+            ] },
+            { "type": "dialogue", "characterId": "la_manquita", "expression": "thinking", "text": { "es": "Por la ciudad corren dos historias sobre mi torre. Una es más bonita y la otra, más probable. ¿Cuál quieres escuchar?" }, "audio": { "es": "audio/es/n4_b.mp3" } }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": { "es": "Mírala de frente desde la Plaza del Obispo. ¿Qué torre está sin terminar, la de la izquierda o la de la derecha?" },
+            "answer": ["derecha", "la derecha", "la de la derecha", "right"]
+          },
+          "choices": [
+            { "label": { "es": "El dinero que cruzó el océano" }, "hint": { "es": "La leyenda más famosa" }, "targetNodeId": "n4a_america", "setFlags": ["version_america"] },
+            { "label": { "es": "El camino de Antequera" }, "hint": { "es": "Lo que dicen los documentos" }, "targetNodeId": "n4b_antequera", "setFlags": ["version_caminos"] }
+          ]
+        },
+        {
+          "id": "n4a_america",
+          "title": { "es": "El dinero que cruzó el océano" },
+          "content": [
+            { "type": "dialogue", "characterId": "la_manquita", "expression": "happy", "text": { "es": "La leyenda dice que el dinero de mi torre ayudó a las trece colonias americanas en su guerra contra los ingleses. Hasta tengo una placa que lo cuenta." }, "audio": { "es": "audio/es/n4a_a.mp3" } },
+            { "type": "historical_fact", "text": { "es": "España sí apoyó la independencia de Estados Unidos. Bernardo de Gálvez, nacido en 1746 en Macharaviaya (Málaga), tomó Pensacola a los británicos. La ciudad de Galveston, en Texas, lleva su nombre." }, "year": 1781 },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "surprised", "text": { "es": "¿Un malagueño echando a los ingleses de Florida? ¡Eso me lo creo! Pero que mis cuartos acabaran en América… que me manden una postal." }, "audio": { "es": "audio/es/n4a_b.mp3" } }
+          ],
+          "nextNodeId": "n5_teatro",
+          "nextHint": { "es": "Rumbo al Teatro Romano, al pie de la Alcazaba. Unos 5 minutos." }
+        },
+        {
+          "id": "n4b_antequera",
+          "title": { "es": "El camino de Antequera" },
+          "content": [
+            { "type": "dialogue", "characterId": "la_manquita", "expression": "neutral", "text": { "es": "La otra versión es menos romántica. Quienes han revisado los documentos de la época creen que el dinero se usó para arreglar el camino que unía Málaga con Antequera y Vélez." }, "audio": { "es": "audio/es/n4b_a.mp3" } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "happy", "variants": [
+              { "requires": ["camino_dinero"], "text": { "es": "¡Lo que te dije en la taberna! Sin camino no llega el vino. ¡Qué poco glamur, Manquita, pero qué sentido tiene!" } },
+              { "requires": ["camino_poder"], "text": { "es": "Así que Madrid cerró el grifo… pa' abrir otro en el camino. ¡Qué poco glamur, Manquita!" } }
+            ] }
+          ],
+          "nextNodeId": "n5_teatro",
+          "nextHint": { "es": "Rumbo al Teatro Romano, al pie de la Alcazaba. Unos 5 minutos." }
+        },
+
+        {
+          "id": "n5_teatro",
+          "title": { "es": "Teatro Romano" },
+          "location": { "lat": 36.7212, "lng": -4.4167 },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_teatro.svg",
+          "content": [
+            { "type": "scene", "layers": ["fondos/fondo_teatro.svg"], "characters": [{ "id": "cenachero", "expression": "surprised", "position": "left" }, { "id": "lucio", "expression": "dramatic", "position": "right" }] },
+            { "type": "dialogue", "characterId": "lucio", "expression": "dramatic", "text": { "es": "¡Oh, mortales del futuro! ¿Buscáis una torre perdida? ¡Yo perdí un teatro entero! Estuve enterrado siglos, hasta que me encontraron en 1951, cuando construían la Casa de la Cultura encima de mí." }, "audio": { "es": "audio/es/n5_a.mp3" } },
+            { "type": "dialogue", "characterId": "lucio", "expression": "proud", "text": { "es": "Y mirad la Alcazaba. Los constructores musulmanes se llevaron capiteles y columnas de mi teatro para sujetar sus arcos. ¡En Málaga nada se tira, todo se reaprovecha!" }, "audio": { "es": "audio/es/n5_b.mp3" } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "happy", "text": { "es": "¡Última pista! Las piedras se reaprovechan… y el dinero también. Venga, a la Merced, que allí lo resolvemos." }, "audio": { "es": "audio/es/n5_c.mp3" } }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": { "es": "¿Para qué usaron los constructores de la Alcazaba las columnas del teatro?" },
+            "options": [{ "es": "Para decorar un jardín" }, { "es": "Para sujetar los arcos de sus puertas" }, { "es": "Para hacer cal" }],
+            "correctIndex": 1,
+            "explanation": { "es": "Capiteles y fustes romanos sostienen hoy arcos de herradura en las puertas de la Alcazaba. Si entras a visitarla, búscalos." }
+          },
+          "clue": { "id": "pista_reaprovechar", "text": { "es": "En Málaga nada se tira: las piedras se reaprovechan, y el dinero también." } },
+          "nextNodeId": "n6_merced",
+          "nextHint": { "es": "A la Plaza de la Merced. Unos 4 minutos." }
+        },
+        {
+          "id": "n6_merced",
+          "title": { "es": "Plaza de la Merced" },
+          "location": { "lat": 36.7235, "lng": -4.4175 },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "talking", "text": { "es": "Ese obelisco recuerda al general Torrijos y a sus compañeros, fusilados en la playa de San Andrés el 11 de diciembre de 1831 por defender ideas liberales. Sus restos descansan debajo. Entre los nombres hay hasta un inglés, Robert Boyd." }, "audio": { "es": "audio/es/n6_a.mp3" } },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "happy", "text": { "es": "Y en esa casa nació Picasso en 1881. Anda, siéntate con él en su banco y hazte una foto, que no muerde." }, "audio": { "es": "audio/es/n6_b.mp3" } },
+            { "type": "anecdote", "text": { "es": "Según contaba su madre, las primeras palabras de Picasso fueron «piz, piz», por «lápiz». Y al nacer lo dieron por muerto, hasta que su tío Salvador, que era médico, consiguió reanimarlo." }, "legend": true }
+          ],
+          "challenge": { "type": "photo", "prompt": { "es": "Hazte una foto sentado junto a Picasso en su banco." } },
+          "reward": "foto_con_picasso",
+          "nextNodeId": "n6b_resolver"
+        },
+        {
+          "id": "n6b_resolver",
+          "title": { "es": "Resolver el misterio" },
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "thinking", "text": { "es": "Bueno, detective, abre tu cuaderno y repasa las pistas. ¿Por qué la Manquita se quedó sin torre?" } }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": { "es": "¿Por qué la catedral se quedó sin su segunda torre?" },
+            "options": [{ "es": "Un terremoto la derribó" }, { "es": "Dejó de llegar dinero y los fondos se usaron para otras necesidades" }, { "es": "El arquitecto se negó a terminarla" }],
+            "correctIndex": 1,
+            "explanation": { "es": "En 1782 se pararon las obras por falta de fondos. La leyenda dice que el dinero ayudó a la independencia de Estados Unidos; los documentos apuntan al camino de Antequera. Lo seguro es que nunca volvió a la torre." }
+          },
+          "nextNodeId": "n7_final"
+        },
+        {
+          "id": "n7_final",
+          "title": { "es": "Caso cerrado" },
+          "content": [
+            { "type": "dialogue", "characterId": "cenachero", "expression": "proud", "variants": [
+              { "requires": ["camino_dinero", "version_caminos"], "text": { "es": "¡Detective de puerto! Seguiste el dinero hasta los caminos y diste con la versión de los documentos. Eso es olfato de cenachero." } },
+              { "requires": ["camino_dinero", "version_america"], "text": { "es": "Seguiste el dinero hasta el puerto… y te fuiste con él hasta América. ¡Tienes alma de marinero!" } },
+              { "requires": ["camino_poder", "version_caminos"], "text": { "es": "Seguiste al poder y descubriste que el rey prefirió un camino a una torre. ¡Detective de despacho, pero listo!" } },
+              { "requires": ["camino_poder", "version_america"], "text": { "es": "Seguiste al poder hasta la mismísima guerra de América. ¡Tú lo que quieres es una buena historia, y eso también vale!" } }
+            ] },
+            { "type": "dialogue", "characterId": "cenachero", "expression": "happy", "text": { "es": "Si le hubieran puesto la torre, sería una catedral más. Manquita es única, como Málaga. Y oye… hay calles que hoy no has pisado. ¿Volvemos otro día por el otro camino?" } }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        { "id": "detective_puerto", "requires": ["camino_dinero", "version_caminos"], "title": { "es": "Detective de puerto" } },
+        { "id": "alma_marinera", "requires": ["camino_dinero", "version_america"], "title": { "es": "Alma marinera" } },
+        { "id": "detective_despacho", "requires": ["camino_poder", "version_caminos"], "title": { "es": "Detective de despacho" } },
+        { "id": "cuentacuentos", "requires": ["camino_poder", "version_america"], "title": { "es": "Cuentacuentos" } }
+      ],
+      "rewards": [
+        { "id": "cenacho_dorado", "name": { "es": "Cenacho dorado" }, "icon": "img/collectibles/cenacho.png", "awardedAtNodeId": "n1_cenachero" },
+        { "id": "arco_nazari", "name": { "es": "Arco nazarí" }, "icon": "img/collectibles/arco.png", "awardedAtNodeId": "a1_atarazanas" },
+        { "id": "tiza_de_guardia", "name": { "es": "La tiza de Guardia" }, "icon": "img/collectibles/tiza.png", "awardedAtNodeId": "a2_casa_guardia" },
+        { "id": "sello_real", "name": { "es": "El sello del rey" }, "icon": "img/collectibles/sello.png", "awardedAtNodeId": "b1_constitucion" },
+        { "id": "foto_con_picasso", "name": { "es": "Foto con Picasso" }, "icon": "img/collectibles/picasso_banco.png", "awardedAtNodeId": "n6_merced" },
+        { "id": "insignia_detective_manquita", "name": { "es": "Detective de la Manquita" }, "icon": "img/collectibles/detective_manquita.png", "awardedAtNodeId": "n7_final" }
+      ]
+    }
+  ]
+}

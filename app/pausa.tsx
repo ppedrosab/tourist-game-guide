@@ -1,10 +1,10 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { Button3D, Icon, IconName, Panel } from "@/components/ui";
 import { border, colors, radius, type } from "@/theme";
 
-function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: string; sub: string; onPress?: () => void; right?: React.ReactNode }) {
+function Row({ icon, title, sub, onPress, right }: { icon: IconName; title: string; sub: string; onPress?: () => void; right?: ReactNode }) {
   return (
     <Pressable onPress={onPress} disabled={!onPress} accessibilityRole={onPress ? "button" : undefined} style={styles.row}>
       <View style={styles.rowIcon}>
