@@ -1,6 +1,6 @@
 {
   "id": "cadiz",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Cádiz",
     "en": "Cádiz"
@@ -115,6 +115,58 @@
       },
       "avatar": "sprites/garumero/garumero_neutral.svg",
       "era": "s. I"
+    },
+    {
+      "id": "romancero",
+      "name": {
+        "es": "El Romancero",
+        "en": "The Romancero"
+      },
+      "description": {
+        "es": "Recitador callejero del Carnaval: lo cuenta todo en romance, señalando las viñetas de su cartelón con un puntero.",
+        "en": "A Carnival street reciter: he tells everything in rhyming verse, pointing at the pictures on his board with a stick."
+      },
+      "avatar": "sprites/romancero/romancero_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "comparsista",
+      "name": {
+        "es": "El Comparsista",
+        "en": "The Comparsista"
+      },
+      "description": {
+        "es": "Componente de comparsa: poeta, serio y un poco dramático. Para él, el Carnaval es emoción.",
+        "en": "A comparsa member: a poet, serious and a little dramatic. For him, Carnival is all about feeling."
+      },
+      "avatar": "sprites/comparsista/comparsista_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "corista",
+      "name": {
+        "es": "El Corista",
+        "en": "The Corista"
+      },
+      "description": {
+        "es": "Canta en un coro con su bandurria, subido a la batea.",
+        "en": "He sings in a choir with his bandurria, aboard the float."
+      },
+      "avatar": "sprites/corista/corista_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "cuartetero",
+      "name": {
+        "es": "El Cuartetero",
+        "en": "The Cuartetero"
+      },
+      "description": {
+        "es": "Componente de cuarteto: con dos claves y una silla monta una parodia.",
+        "en": "A quartet member: with two sticks and a chair he can put on a parody."
+      },
+      "avatar": "sprites/cuartetero/cuartetero_neutral.svg",
+      "era": "hoy"
     }
   ],
   "routes": [
@@ -2575,6 +2627,1253 @@
           },
           "icon": "collectibles/cadiz_g_recetario.svg",
           "awardedAtNodeId": "g7_final"
+        }
+      ]
+    },
+    {
+      "id": "el-cartelon-y-el-levante",
+      "title": {
+        "es": "El cartelón que se llevó el levante",
+        "en": "The Picture Board the Wind Took"
+      },
+      "summary": {
+        "es": "El levante le ha volado las viñetas al Romancero justo en pleno Carnaval. Recórrelas con él, el Chirigotero y el Comparsista, entre coros, cuartetos y pregones, y descubre quién tuvo la culpa. Todo contado en romance.",
+        "en": "The levante wind has blown away the Romancero's pictures right in the middle of Carnival. Track them down with him, the Chirigotero and the Comparsista, among choirs, quartets and opening speeches, and find out who was to blame. All told in rhyme."
+      },
+      "era": "Carnaval de Cádiz",
+      "guideCharacterId": "romancero",
+      "durationMin": 110,
+      "distanceKm": 2.8,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La Viña",
+            "en": "La Viña"
+          },
+          "trail": {
+            "es": "camino de La Viña",
+            "en": "La Viña trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Las plazas",
+            "en": "The squares"
+          },
+          "trail": {
+            "es": "camino de las plazas",
+            "en": "squares trail"
+          }
+        }
+      },
+      "startNodeId": "c1_falla",
+      "nodes": [
+        {
+          "id": "c1_falla",
+          "title": {
+            "es": "Gran Teatro Falla",
+            "en": "Gran Teatro Falla"
+          },
+          "location": {
+            "lat": 36.5341,
+            "lng": -6.3037
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_falla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_falla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "romancero",
+                  "expression": "talking",
+                  "position": "left"
+                },
+                {
+                  "id": "chirigotero",
+                  "expression": "surprised",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Señoras y caballeros,\nescuchen con atención:\nsoy el Romancero, y traigo\nun caso de sensación.",
+                "en": "Ladies and gentlemen,\nlend me your ears tonight:\nI'm the Romancero, bringing\na case that's a sorry sight."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "nervous",
+              "text": {
+                "es": "Anoche, en Puertas de Tierra,\ncantaba mi cartelón;\nsopló el levante tan fuerte\nque me dejó sin montón.",
+                "en": "Last night at the Land Gate\nI sang my picture board through;\nthe levante blew so hard\nit left me nothing to show you."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Illo, sin viñetas! Un romancero sin cartelón es como un coro sin batea. Tranquilo, que entre todos las encontramos.",
+                "en": "Blimey, no pictures! A romancero without his board is like a choir without its float. Don't worry, we'll find them between us."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "thinking",
+              "text": {
+                "es": "Tres sospechosos señalo\ncon mi puntero de palo:\nChirigotero, Cuartetero\ny el levante, que es muy malo.",
+                "en": "I point out three suspects\nwith my trusty wooden cane:\nthe Chirigotero, the Cuartetero,\nand the levante, that wind's a pain."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el Gran Teatro Falla se celebra el Concurso Oficial de Agrupaciones del Carnaval. Compiten cuatro modalidades: comparsas, chirigotas, coros y cuartetos. Los romanceros tienen su propio concurso, en la calle.",
+                "en": "The Gran Teatro Falla hosts the Official Carnival Groups Contest. Four types of group compete: comparsas, chirigotas, choirs and quartets. Romanceros have their own contest, out in the street."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El teatro, de ladrillo rojo y estilo neomudéjar, se inauguró en 1905. Lleva el nombre del compositor gaditano Manuel de Falla.",
+                "en": "The theatre, in red brick and Neo-Mudéjar style, opened in 1905. It is named after the Cádiz-born composer Manuel de Falla."
+              },
+              "year": 1905
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántas modalidades compiten en el Concurso del Falla?",
+              "en": "How many types of group compete in the Falla contest?"
+            },
+            "options": [
+              {
+                "es": "Dos: chirigotas y comparsas",
+                "en": "Two: chirigotas and comparsas"
+              },
+              {
+                "es": "Cuatro: comparsas, chirigotas, coros y cuartetos",
+                "en": "Four: comparsas, chirigotas, choirs and quartets"
+              },
+              {
+                "es": "Seis, contando romanceros y charangas",
+                "en": "Six, counting romanceros and brass bands"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Cuatro modalidades. Los romanceros, que recitan con su cartelón, son del Carnaval de la calle.",
+              "en": "Four. Romanceros, who recite with their picture boards, belong to the street Carnival."
+            }
+          },
+          "clue": {
+            "id": "pista_oeste",
+            "text": {
+              "es": "El levante · Las viñetas volaron desde Puertas de Tierra hacia el oeste: el levante sopla del este.",
+              "en": "The levante wind · The pictures flew west from the Land Gate: the levante blows from the east."
+            }
+          },
+          "nextNodeId": "c2_hierbabuena",
+          "nextHint": {
+            "es": "Detrás del teatro, al ladito: la calle de María la Hierbabuena.",
+            "en": "Just behind the theatre: María la Hierbabuena's street."
+          }
+        },
+        {
+          "id": "c2_hierbabuena",
+          "title": {
+            "es": "Calle María la Hierbabuena",
+            "en": "María la Hierbabuena Street"
+          },
+          "location": {
+            "lat": 36.5335,
+            "lng": -6.3046
+          },
+          "triggerRadiusM": 35,
+          "background": "fondos/fondo_cadiz_sacramento.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sacramento.svg"
+              ],
+              "characters": [
+                {
+                  "id": "comparsista",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "romancero",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "comparsista",
+              "expression": "proud",
+              "text": {
+                "es": "Esta calle lleva el nombre de María la Hierbabuena. Nunca cantó en ninguna agrupación ni pisó el escenario, pero su grito desde el público se convirtió en parte del Concurso.",
+                "en": "This street bears the name of María la Hierbabuena. She never sang in a group or set foot on stage, but her cheer from the audience became part of the contest itself."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "María del Carmen Llovet, vecina de La Viña, animaba desde el patio de butacas del Falla desde mediados de los años ochenta. Murió en 2016, y en 2023 la ciudad le dedicó este tramo de la calle Sacramento, por donde entran las agrupaciones al teatro.",
+                "en": "María del Carmen Llovet, from the La Viña quarter, cheered from the stalls of the Falla from the mid-1980s. She died in 2016, and in 2023 the city named this stretch of Calle Sacramento after her: it's where the groups walk in to the theatre."
+              },
+              "year": 2023
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "proud",
+              "text": {
+                "es": "Por esta calle entraban\nlos grupos con el temblor,\ny el grito de la María\nles devolvía el valor.",
+                "en": "Down this street the groups came in\nwith their knees all set to shake,\nand María's mighty cheer\ngave them courage for their sake."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y hoy lo gritamos nosotros! A ver si te lo sabes…",
+                "en": "And today we shout it! Let's see if you know it…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Y eso que asoma, compadre,\ndel bolsillo del disfraz?\n¡Si es una viñeta mía!\n—Pa' inspirarme, ¡na' más!",
+                "en": "And what's that poking out, my friend,\nfrom the pocket of your costume?\nWhy, it's one of my own pictures!\n—Just for inspiration, I assume!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "Completa el grito de María la Hierbabuena: «¡Ole, ole mi Caí! Lo digo a boca llena. Y quien no diga ole…»",
+              "en": "Finish María la Hierbabuena's cheer: “Olé, olé my Cádiz! I say it loud and clear. And whoever won't say olé…”"
+            },
+            "options": [
+              {
+                "es": "…que se calle y que se vaya",
+                "en": "…can keep quiet and go away"
+              },
+              {
+                "es": "…que se le seque la hierbabuena",
+                "en": "…may their mint dry up"
+              },
+              {
+                "es": "…que no pise La Caleta",
+                "en": "…can't set foot on La Caleta"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "«…que se le seque la hierbabuena. ¡Ole, ole y ole!» Así la recuerda todo Cádiz.",
+              "en": "“…may their mint dry up. Olé, olé and olé!” That's how all of Cádiz remembers her."
+            }
+          },
+          "clue": {
+            "id": "pista_bolsillo",
+            "text": {
+              "es": "El Chirigotero · Llevaba una viñeta del cartelón en el bolsillo: dice que la cogió del suelo «pa' inspirarse».",
+              "en": "The Chirigotero · He had one of the pictures in his pocket: he says he picked it up off the ground “for inspiration”."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "romancero",
+            "expression": "thinking",
+            "text": {
+              "es": "Dos caminos tiene el Carnaval,\ny los dos llevan cantando:\nel de La Viña y sus calles,\no las plazas, pregonando.",
+              "en": "Carnival has two paths to take,\nand both of them go singing:\nLa Viña and its little streets,\nor the squares, with the town crier ringing."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por La Viña",
+                "en": "Through La Viña"
+              },
+              "hint": {
+                "es": "Con el Chirigotero: ilegales y coros en batea",
+                "en": "With the Chirigotero: street groups and choirs on floats"
+              },
+              "distanceM": 350,
+              "walkMin": 5,
+              "targetNodeId": "ca1_vina",
+              "setFlags": [
+                "camino_vina"
+              ]
+            },
+            {
+              "label": {
+                "es": "Por las plazas",
+                "en": "Through the squares"
+              },
+              "hint": {
+                "es": "Con el Comparsista: el pregón y el carrusel de coros",
+                "en": "With the Comparsista: the opening speech and the choir parade"
+              },
+              "distanceM": 750,
+              "walkMin": 10,
+              "targetNodeId": "cb1_sanantonio",
+              "setFlags": [
+                "camino_plazas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ca1_vina",
+          "title": {
+            "es": "Barrio de La Viña",
+            "en": "La Viña quarter"
+          },
+          "location": {
+            "lat": 36.5319,
+            "lng": -6.3032
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_vina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_vina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "chirigotero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "cuartetero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Mi barrio! En Carnaval aquí canta todo el mundo en la calle. Las ilegales, que son las agrupaciones que no van al Concurso, se ponen en cualquier esquina y a cantar.",
+                "en": "My neighbourhood! At Carnival everyone sings in the street here. The “ilegales”, groups that don't enter the contest, just set up on any corner and start singing."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cuartetero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hombre, un romancero sin cartelón! ¡Si esto es una parodia hecha! Ya tengo el número: «El romancero en blanco».",
+                "en": "Well, well, a romancero without his board! That's a parody ready-made! I've got the act already: “The Blank Romancero”."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los cuartetos son de tres a cinco componentes y se acompañan de claves, pitos y a veces una guitarra. Su plato fuerte es la parodia.",
+                "en": "Quartets have three to five members and accompany themselves with wooden sticks, kazoos and sometimes a guitar. Their speciality is the parody sketch."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Cuartetero, cuartetero,\ntú te ríes de mi mal:\n¿no tendrás tú mis viñetas\npa' tu parodia teatral?",
+                "en": "Cuartetero, Cuartetero,\nyou laugh at my distress:\nyou wouldn't have my pictures\nfor your comic show, I guess?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cuartetero",
+              "expression": "nervous",
+              "text": {
+                "es": "¿Yo? ¡Si a mí me basta con dos claves y una silla!",
+                "en": "Me? All I need is two sticks and a chair!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuál es el plato fuerte de un cuarteto?",
+              "en": "What is a quartet's speciality?"
+            },
+            "options": [
+              {
+                "es": "El pasodoble",
+                "en": "The pasodoble"
+              },
+              {
+                "es": "El tango",
+                "en": "The tango"
+              },
+              {
+                "es": "La parodia",
+                "en": "The parody sketch"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La parodia: una escena de humor en la que cada componente hace un personaje.",
+              "en": "The parody: a comic scene where each member plays a character."
+            }
+          },
+          "clue": {
+            "id": "pista_parodia",
+            "text": {
+              "es": "El Cuartetero · Prepara una parodia sobre «un romancero sin cartelón».",
+              "en": "The Cuartetero · He's working on a parody about “a romancero without his board”."
+            }
+          },
+          "nextNodeId": "ca2_mercado",
+          "nextHint": {
+            "es": "Al Mercado vamos ya, que allí suena un coro en su batea. Unos 5 minutos.",
+            "en": "Off to the Market, where a choir is singing on its float. About 5 minutes."
+          }
+        },
+        {
+          "id": "ca2_mercado",
+          "title": {
+            "es": "Plaza de Abastos",
+            "en": "Plaza de Abastos"
+          },
+          "location": {
+            "lat": 36.5338,
+            "lng": -6.3
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_coros.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_coros.svg"
+              ],
+              "characters": [
+                {
+                  "id": "romancero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "corista",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "corista",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Soy del coro. El domingo de Carnaval nos subimos a la batea y cantamos por las calles: es el carrusel de coros.",
+                "en": "Hello! I'm in the choir. On Carnival Sunday we climb onto our float and sing through the streets: it's the choir parade."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el carrusel de coros, los coros del Concurso y algunos callejeros cantan subidos en bateas, carrozas tiradas por un tractor. Uno de sus puntos de salida es la Plaza de Abastos, junto al Mercado Central.",
+                "en": "In the choir parade, the contest choirs and some street choirs sing aboard “bateas”, floats pulled by a tractor. One of the starting points is the Plaza de Abastos, next to the Central Market."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Allí, colgando del coro,\nen la batea enganchada,\nhay una viñeta mía\nque el viento dejó varada!",
+                "en": "Look there, hanging from the choir,\nsnagged upon their float,\nis one of my own pictures\nthat the wind left stranded, of note!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es una batea en el Carnaval de Cádiz?",
+              "en": "What is a “batea” at Cádiz Carnival?"
+            },
+            "options": [
+              {
+                "es": "Un disfraz de pescador",
+                "en": "A fisherman's costume"
+              },
+              {
+                "es": "La carroza donde canta el coro",
+                "en": "The float the choir sings on"
+              },
+              {
+                "es": "Un instrumento de cuerda",
+                "en": "A stringed instrument"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una carroza, tirada por un tractor, desde la que el coro canta por las calles.",
+              "en": "A float, pulled by a tractor, from which the choir sings through the streets."
+            }
+          },
+          "clue": {
+            "id": "pista_batea",
+            "text": {
+              "es": "El levante · Una viñeta apareció enganchada en la batea de un coro, arrastrada por el viento.",
+              "en": "The levante wind · A picture turned up snagged on a choir float, carried there by the wind."
+            }
+          },
+          "nextNodeId": "c4_catedral",
+          "nextHint": {
+            "es": "A la Plaza de la Catedral. Unos 8 minutos.",
+            "en": "To the Cathedral square. About 8 minutes."
+          }
+        },
+        {
+          "id": "cb1_sanantonio",
+          "title": {
+            "es": "Plaza de San Antonio",
+            "en": "Plaza de San Antonio"
+          },
+          "location": {
+            "lat": 36.5354,
+            "lng": -6.2966
+          },
+          "triggerRadiusM": 45,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_sanantonio.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanantonio.svg"
+              ],
+              "characters": [
+                {
+                  "id": "comparsista",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "cuartetero",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "comparsista",
+              "expression": "proud",
+              "text": {
+                "es": "En esta plaza se suele dar el pregón del Carnaval: alguien muy querido por la ciudad abre la fiesta con su discurso, entre coplas y guasa.",
+                "en": "The Carnival opening speech is usually given in this square: someone much loved by the city opens the festivities with a speech full of songs and wit."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cuartetero",
+              "expression": "nervous",
+              "text": {
+                "es": "Yo… solo pasaba por aquí ensayando. Una parodia de nada. Sobre un romancero. Sin cartelón.",
+                "en": "Me… I was just passing, rehearsing. A little parody. About a romancero. Without his board."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "thinking",
+              "text": {
+                "es": "Cuartetero, qué casualidad\nque ensayes justo esa escena:\nun romancero sin dibujos…\n¡esto me huele a patena!",
+                "en": "Cuartetero, what a coincidence\nthat you rehearse just that scene:\na romancero with no pictures…\nsomething here is not clean!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El repertorio de una agrupación tiene presentación, pasodobles, cuplés con su estribillo y un popurrí final.",
+                "en": "A group's repertoire has an opening number, pasodobles, cuplés with their chorus and a final medley, the popurrí."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el pregón del Carnaval?",
+              "en": "What is the Carnival “pregón”?"
+            },
+            "options": [
+              {
+                "es": "El discurso con el que se abre la fiesta",
+                "en": "The speech that opens the festivities"
+              },
+              {
+                "es": "El último cuplé del Concurso",
+                "en": "The last song of the contest"
+              },
+              {
+                "es": "Un premio para la mejor comparsa",
+                "en": "A prize for the best comparsa"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El pregón abre oficialmente el Carnaval en la calle.",
+              "en": "The pregón officially opens Carnival in the street."
+            }
+          },
+          "clue": {
+            "id": "pista_ensayo",
+            "text": {
+              "es": "El Cuartetero · Ensayaba en la plaza una parodia sobre un romancero sin cartelón.",
+              "en": "The Cuartetero · He was rehearsing a parody in the square about a romancero without his board."
+            }
+          },
+          "nextNodeId": "cb2_mina",
+          "nextHint": {
+            "es": "A la Plaza de Mina, que allí también sale el carrusel de coros. Unos 3 minutos.",
+            "en": "To Plaza de Mina, where the choir parade also sets off. About 3 minutes."
+          }
+        },
+        {
+          "id": "cb2_mina",
+          "title": {
+            "es": "Plaza de Mina",
+            "en": "Plaza de Mina"
+          },
+          "location": {
+            "lat": 36.5375,
+            "lng": -6.295
+          },
+          "triggerRadiusM": 45,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_mina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_mina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "comparsista",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "corista",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "corista",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Soy del coro. El domingo de Carnaval el carrusel de coros sale de dos sitios: la Plaza de Abastos y esta Plaza de Mina.",
+                "en": "Hello! I'm in the choir. On Carnival Sunday the choir parade sets off from two places: the Plaza de Abastos and this Plaza de Mina."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los coros son las agrupaciones más numerosas y se acompañan de guitarras, bandurrias y laúdes. Cantan subidos en bateas, carrozas tiradas por un tractor.",
+                "en": "Choirs are the largest groups and accompany themselves with guitars, bandurrias and lutes. They sing aboard “bateas”, floats pulled by a tractor."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Mire arriba, en esos ficus,\nentre las ramas colgada!\nUna viñeta del teatro\nque el viento dejó enredada.",
+                "en": "Look up there in the fig trees,\nhanging in the leaves up high!\nA picture of the theatre\nthe wind tangled in the sky."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué instrumentos se acompaña un coro?",
+              "en": "What instruments does a choir play?"
+            },
+            "options": [
+              {
+                "es": "Tambor y trompeta",
+                "en": "Drum and trumpet"
+              },
+              {
+                "es": "Guitarras, bandurrias y laúdes",
+                "en": "Guitars, bandurrias and lutes"
+              },
+              {
+                "es": "Solo con palmas",
+                "en": "Only hand-clapping"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Guitarras, bandurrias y laúdes: la orquesta de pulso y púa del coro.",
+              "en": "Guitars, bandurrias and lutes: the choir's plucked-string orchestra."
+            }
+          },
+          "clue": {
+            "id": "pista_ficus",
+            "text": {
+              "es": "El levante · Una viñeta apareció enredada en los ficus de la plaza, arrastrada por el viento.",
+              "en": "The levante wind · A picture turned up tangled in the square's fig trees, carried there by the wind."
+            }
+          },
+          "nextNodeId": "c4_catedral",
+          "nextHint": {
+            "es": "A la Plaza de la Catedral. Unos 12 minutos.",
+            "en": "To the Cathedral square. About 12 minutes."
+          }
+        },
+        {
+          "id": "c4_catedral",
+          "title": {
+            "es": "Plaza de la Catedral",
+            "en": "Cathedral square"
+          },
+          "location": {
+            "lat": 36.5293,
+            "lng": -6.2951
+          },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_cadiz_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "comparsista",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "chirigotero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_vina"
+                  ],
+                  "text": {
+                    "es": "De La Viña hasta la Catedral\nfui recogiendo mi arte:\nuna en la batea del coro,\ny otra en cualquier parte.",
+                    "en": "From La Viña to the Cathedral\nI gathered up my art:\none upon the choir's float,\nand another, for a start."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_plazas"
+                  ],
+                  "text": {
+                    "es": "De las plazas a la Catedral\nfui recogiendo mi arte:\nuna en los ficus de Mina,\ny otra en cualquier parte.",
+                    "en": "From the squares to the Cathedral\nI gathered up my art:\none in Mina's fig trees,\nand another, for a start."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Bruja Piti, el muñeco que se quema para despedir el Carnaval, ha ardido en sitios distintos según el año: en La Caleta, en esta Plaza de la Catedral y, en 2026, junto a las Puertas de Tierra.",
+                "en": "The Bruja Piti, the witch figure burned to say goodbye to Carnival, has gone up in flames in different places over the years: at La Caleta, in this Cathedral square and, in 2026, beside the Land Gate."
+              },
+              "year": 2026
+            },
+            {
+              "type": "dialogue",
+              "characterId": "comparsista",
+              "expression": "dramatic",
+              "text": {
+                "es": "Para que el viento nos devuelva la última viñeta hay que cantarle. Un pasodoble: lo más hondo del Carnaval.",
+                "en": "To make the wind give back the last picture, we have to sing to it. A pasodoble: the deepest thing in Carnival."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Un cuplé, hombre, que es lo que hace reír!",
+                "en": "A cuplé, man, that's what makes people laugh!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pieza suele ser la más seria y emotiva en una comparsa?",
+              "en": "Which piece is usually the most serious and moving in a comparsa?"
+            },
+            "options": [
+              {
+                "es": "El cuplé",
+                "en": "The cuplé"
+              },
+              {
+                "es": "El popurrí",
+                "en": "The popurrí"
+              },
+              {
+                "es": "El pasodoble",
+                "en": "The pasodoble"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El pasodoble: la comparsa le canta a Cádiz, a su gente y a lo que duele.",
+              "en": "The pasodoble: the comparsa sings to Cádiz, to its people and to what hurts."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "romancero",
+            "expression": "happy",
+            "text": {
+              "es": "Pasodoble o cuplé,\nuna copla hay que cantar:\nusté elige la que quiera,\n¡que el viento va a escuchar!",
+              "en": "Pasodoble or cuplé,\none song we have to sing:\nyou pick whichever you like,\nthe wind will hear the thing!"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Cantar un pasodoble",
+                "en": "Sing a pasodoble"
+              },
+              "hint": {
+                "es": "Con el Comparsista",
+                "en": "With the Comparsista"
+              },
+              "targetNodeId": "c4a_pasodoble",
+              "setFlags": [
+                "version_pasodoble"
+              ]
+            },
+            {
+              "label": {
+                "es": "Cantar un cuplé",
+                "en": "Sing a cuplé"
+              },
+              "hint": {
+                "es": "Con el Chirigotero",
+                "en": "With the Chirigotero"
+              },
+              "targetNodeId": "c4b_cuple",
+              "setFlags": [
+                "version_cuple"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c4a_pasodoble",
+          "title": {
+            "es": "El pasodoble",
+            "en": "The pasodoble"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "comparsista",
+              "expression": "proud",
+              "text": {
+                "es": "En el pasodoble la comparsa le canta a Cádiz, a su gente y a lo que duele. El teatro lo escucha en silencio y lo aplaude de pie.",
+                "en": "In the pasodoble the comparsa sings to Cádiz, to its people and to what hurts. The theatre listens in silence and applauds on its feet."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "surprised",
+              "text": {
+                "es": "Mientras sonaba la copla\nel viento cambió de mano:\n¡sopla otra vez de levante,\nde Puertas de Tierra, hermano!",
+                "en": "While the song was being sung\nthe wind turned round, you see:\nit's blowing from the east again,\nfrom the Land Gate, straight at me!"
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_pasodoble",
+            "text": {
+              "es": "El levante · Durante el pasodoble, el viento volvió a soplar desde Puertas de Tierra.",
+              "en": "The levante wind · During the pasodoble, the wind blew again from the Land Gate."
+            }
+          },
+          "nextNodeId": "c5_puertas",
+          "nextHint": {
+            "es": "A Puertas de Tierra, de donde viene el viento. Unos 10 minutos.",
+            "en": "To the Land Gate, where the wind is coming from. About 10 minutes."
+          }
+        },
+        {
+          "id": "c4b_cuple",
+          "title": {
+            "es": "El cuplé",
+            "en": "The cuplé"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "happy",
+              "text": {
+                "es": "El cuplé es cortito, con su chiste, y acaba con el estribillo que corea todo el teatro. Y tengo uno nuevo: va de un romancero que pierde su cartelón…",
+                "en": "The cuplé is short, with a joke, and ends with a chorus the whole theatre sings along to. And I've got a new one: it's about a romancero who loses his board…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "dramatic",
+              "text": {
+                "es": "¿Un cuplé de mi desgracia?\n¿Y cómo lo sabe usté?\nSi esto pasó anoche mismo…\n¡aquí hay gato encerrao, eh!",
+                "en": "A cuplé about my trouble?\nAnd how would you know, may I ask?\nIt only happened last night…\nsomebody's wearing a mask!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chirigotero",
+              "expression": "nervous",
+              "text": {
+                "es": "¡Que me lo contó el del quiosco, pisha! En Cádiz las noticias vuelan… como las viñetas.",
+                "en": "The kiosk man told me, pisha! In Cádiz news flies… like your pictures."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_cuple",
+            "text": {
+              "es": "El Chirigotero · Ya tenía un cuplé sobre el romancero que pierde su cartelón… ¿cómo lo sabía?",
+              "en": "The Chirigotero · He already had a cuplé about the romancero losing his board… how did he know?"
+            }
+          },
+          "nextNodeId": "c5_puertas",
+          "nextHint": {
+            "es": "A Puertas de Tierra, donde empezó todo. Unos 10 minutos.",
+            "en": "To the Land Gate, where it all began. About 10 minutes."
+          }
+        },
+        {
+          "id": "c5_puertas",
+          "title": {
+            "es": "Puertas de Tierra",
+            "en": "Land Gate"
+          },
+          "location": {
+            "lat": 36.5245,
+            "lng": -6.2895
+          },
+          "triggerRadiusM": 60,
+          "background": "fondos/fondo_cadiz_puertas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_puertas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "romancero",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "chirigotero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las Puertas de Tierra eran la entrada a Cádiz por tierra: la muralla cerraba el istmo que une la ciudad con la península.",
+                "en": "The Land Gate was the way into Cádiz by land: the wall closed off the isthmus joining the city to the mainland."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Allí arriba, en el torreón,\nla última se ha quedado!\nAquí empezó mi desgracia\ny aquí se ha terminado.",
+                "en": "Up there, on the great tower,\nthe last one's still in place!\nThis is where my trouble started,\nand here it ends its race."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "photo",
+            "prompt": {
+              "es": "Hazte una foto con el torreón, como si cantaras un cuplé.",
+              "en": "Take a photo with the tower, as if you were singing a cuplé."
+            }
+          },
+          "nextNodeId": "c6_veredicto"
+        },
+        {
+          "id": "c6_veredicto",
+          "title": {
+            "es": "El veredicto",
+            "en": "The verdict"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "thinking",
+              "text": {
+                "es": "Ya tengo mi cartelón,\n¿pero quién fue el culpable?\nRepase usté su cuaderno\ny dé un veredicto fiable.",
+                "en": "I've got my board back now,\nbut who's to blame, pray tell?\nLook back through your notebook\nand judge the case well."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién se llevó las viñetas del cartelón?",
+              "en": "Who took the pictures from the board?"
+            },
+            "options": [
+              {
+                "es": "El Chirigotero, para su cuplé",
+                "en": "The Chirigotero, for his cuplé"
+              },
+              {
+                "es": "El Cuartetero, para su parodia",
+                "en": "The Cuartetero, for his parody"
+              },
+              {
+                "es": "El levante, que las fue dejando por la ciudad",
+                "en": "The levante wind, which scattered them across the city"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El Chirigotero solo recogió una del suelo y el Cuartetero solo ensayaba su parodia. Fue el levante, que sopla del este y fue dejando las viñetas desde Puertas de Tierra hasta el Falla.",
+              "en": "The Chirigotero just picked one up off the ground and the Cuartetero was only rehearsing his parody. It was the levante: it blows from the east and dropped the pictures all the way from the Land Gate to the Falla."
+            }
+          },
+          "nextNodeId": "c7_final"
+        },
+        {
+          "id": "c7_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_vina",
+                    "version_pasodoble"
+                  ],
+                  "text": {
+                    "es": "Por La Viña y con pasodoble,\nusté tiene corazón:\nes un poeta del barrio,\n¡y se lo digo en canción!",
+                    "en": "Through La Viña, with a pasodoble,\nyou've got a heart that's true:\nyou're the poet of the barrio,\nand this song is just for you!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_vina",
+                    "version_cuple"
+                  ],
+                  "text": {
+                    "es": "Por La Viña y con cuplé,\nde esquina en esquina cantando:\nusté es ilegal de La Viña,\n¡y el barrio lo va aclamando!",
+                    "en": "Through La Viña, with a cuplé,\nsinging from corner to corner:\nyou're a street singer of La Viña,\nand the whole barrio adores you!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_plazas",
+                    "version_pasodoble"
+                  ],
+                  "text": {
+                    "es": "Por las plazas y el pasodoble,\ncon la voz de la emoción:\nusté es comparsista del Falla,\n¡de los que ponen el corazón!",
+                    "en": "Through the squares, with a pasodoble,\nwith a voice full of emotion:\nyou're a comparsista of the Falla,\nsinging with pure devotion!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_plazas",
+                    "version_cuple"
+                  ],
+                  "text": {
+                    "es": "Por las plazas y el cuplé,\nabriendo la fiesta así:\nusté es el pregonero,\n¡el mejor de todo Caí!",
+                    "en": "Through the squares, with a cuplé,\nopening the party wide:\nyou're the town crier of Carnival,\nthe best in all Cádiz, with pride!"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "happy",
+              "text": {
+                "es": "Y aquí se acaba el romance,\nseñores, con mucho arte:\nsi les ha gustado el cuento,\nla voluntad… ¡y a otra parte!",
+                "en": "And here my ballad ends,\ngood people, with some art:\nif you liked the tale I told,\na tip… and we'll depart!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "poeta_vina",
+          "requires": [
+            "camino_vina",
+            "version_pasodoble"
+          ],
+          "title": {
+            "es": "Poeta de La Viña",
+            "en": "Poet of La Viña"
+          }
+        },
+        {
+          "id": "ilegal_vina",
+          "requires": [
+            "camino_vina",
+            "version_cuple"
+          ],
+          "title": {
+            "es": "Ilegal de La Viña",
+            "en": "Street singer of La Viña"
+          }
+        },
+        {
+          "id": "comparsista_falla",
+          "requires": [
+            "camino_plazas",
+            "version_pasodoble"
+          ],
+          "title": {
+            "es": "Comparsista del Falla",
+            "en": "Comparsista of the Falla"
+          }
+        },
+        {
+          "id": "pregonero_carnaval",
+          "requires": [
+            "camino_plazas",
+            "version_cuple"
+          ],
+          "title": {
+            "es": "Pregonero del Carnaval",
+            "en": "Carnival town crier"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "antifaz",
+          "name": {
+            "es": "El antifaz",
+            "en": "The mask"
+          },
+          "icon": "collectibles/carnaval_antifaz.svg",
+          "awardedAtNodeId": "c1_falla"
+        },
+        {
+          "id": "hierbabuena",
+          "name": {
+            "es": "La hierbabuena de María",
+            "en": "María's mint"
+          },
+          "icon": "collectibles/carnaval_hierbabuena.svg",
+          "awardedAtNodeId": "c2_hierbabuena"
+        },
+        {
+          "id": "claves",
+          "name": {
+            "es": "Las claves del cuarteto",
+            "en": "The quartet's sticks"
+          },
+          "icon": "collectibles/carnaval_claves.svg",
+          "awardedAtNodeId": "ca1_vina"
+        },
+        {
+          "id": "batea",
+          "name": {
+            "es": "La batea del coro",
+            "en": "The choir float"
+          },
+          "icon": "collectibles/carnaval_batea.svg",
+          "awardedAtNodeId": "ca2_mercado"
+        },
+        {
+          "id": "pregon",
+          "name": {
+            "es": "El pregón",
+            "en": "The opening speech"
+          },
+          "icon": "collectibles/carnaval_pregon.svg",
+          "awardedAtNodeId": "cb1_sanantonio"
+        },
+        {
+          "id": "bandurria",
+          "name": {
+            "es": "La bandurria",
+            "en": "The bandurria"
+          },
+          "icon": "collectibles/carnaval_bandurria.svg",
+          "awardedAtNodeId": "cb2_mina"
+        },
+        {
+          "id": "cartelon",
+          "name": {
+            "es": "El cartelón completo",
+            "en": "The complete picture board"
+          },
+          "icon": "collectibles/carnaval_cartelon.svg",
+          "awardedAtNodeId": "c7_final"
         }
       ]
     }

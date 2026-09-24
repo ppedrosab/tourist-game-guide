@@ -129,6 +129,13 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   Mismo formato de caso (tres sospechosos, dos decisiones, cuatro finales). Personajes propios, sin
   repetir los de historia: guías `pescaera` (mar) y `chicharronero` (tierra), y `garumero` (romano del garum). Nunca exigir comer ni beber para resolver un reto; nada de nombres de bares.
 
+**Rutas de fiestas** (`route.theme: "fiestas"`: chip morado con antifaz «Fiestas»; los datos se rotulan «Tradición»):
+- Cádiz «El cartelón que se llevó el levante» (Carnaval; ver `docs/GDD_CADIZ_CARNAVAL.md`). Guía el
+  `romancero`, que **siempre habla en romance** (cuatro octosílabos, rima en los pares; el texto lleva
+  saltos de línea). Con `chirigotero`, `comparsista`, `corista` y `cuartetero`. María la Hierbabuena
+  es una persona real: solo homenaje en la parada de su calle, sin dibujarla ni ponerle diálogos.
+- Pendiente: ruta de Semana Santa de Cádiz, con personajes propios y tono respetuoso.
+
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
   León de la fuente y Boabdil. Tres sospechosos (el sultán, los Zegríes, nadie); caminos Albaicín y
@@ -165,11 +172,11 @@ src/analytics/            eventos y sink enchufable
 src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
-content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia + «El recetario perdido»)
+content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia + gastronomía + Carnaval)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
