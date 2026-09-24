@@ -2,15 +2,25 @@ import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
 import { Button3D, Chip, HardShadow, Icon } from "@/components/ui";
+import { findRoute, getCatalog } from "@/engine/catalog";
+import { runProgress } from "@/engine/outline";
+import { localize } from "@/engine/runner";
+import { useActiveRun, useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
-const CITIES = [
-  { id: "malaga", name: "Málaga", status: "1 ruta gratis", available: true },
-  { id: "sevilla", name: "Sevilla", status: "Pronto", available: false },
-  { id: "granada", name: "Granada", status: "Pronto", available: false },
-];
+function cityStatus(freeRoutes: number, routes: number) {
+  if (freeRoutes > 0) return freeRoutes === 1 ? "1 ruta gratis" : `${freeRoutes} rutas gratis`;
+  return routes === 1 ? "1 ruta" : `${routes} rutas`;
+}
 
 export default function Explorar() {
+  const { packs } = getCatalog();
+  const clues = useProgress((s) => s.collection.clueIds.length);
+  const lastRouteId = useProgress((s) => s.lastRouteId);
+  const active = useActiveRun(lastRouteId);
+  const found = active ? findRoute(active.routeId) : undefined;
+  const progress = found && active ? runProgress(found.route, active) : undefined;
+
   return (
     <Screen withTabBar>
       <View style={styles.header}>
@@ -18,43 +28,51 @@ export default function Explorar() {
           <Text style={type.secondary}>Hola,</Text>
           <Text style={type.title}>detective</Text>
         </View>
-        <Chip label="3 pistas" icon="book" />
+        <Chip label={clues === 1 ? "1 pista" : `${clues} pistas`} icon="book" />
       </View>
 
-      {/* Continuar: lleva a la parada exacta donde se quedó el jugador (fase 2: desde el progreso guardado). */}
-      <HardShadow radius={radius.xl}>
-        <View style={styles.continueCard}>
-          <Chip label="En curso" variant="clay" />
-          <Text style={[type.subtitle, { color: colors.white }]}>El misterio de la Manquita</Text>
-          <View style={styles.progressRow}>
-            <View style={styles.progressTrack}>
-              <View style={[styles.progressFill, { width: "25%" }]} />
+      {/* Continuar: lleva a la parada exacta donde se quedó el jugador. */}
+      {found && progress ? (
+        <HardShadow radius={radius.xl}>
+          <View style={styles.continueCard}>
+            <Chip label="En curso" variant="clay" />
+            <Text style={[type.subtitle, { color: colors.white }]}>{localize(found.route.title)}</Text>
+            <View style={styles.progressRow}>
+              <View style={styles.progressTrack}>
+                <View style={[styles.progressFill, { width: `${Math.round((progress.stop / progress.total) * 100)}%` }]} />
+              </View>
+              <Text style={styles.progressText}>
+                Parada {progress.stop} de {progress.total}
+              </Text>
             </View>
-            <Text style={styles.progressText}>Parada 2 de 8</Text>
+            <Text style={styles.progressText}>{localize(progress.node.title)}</Text>
+            <Button3D
+              label="Continuar"
+              icon="play"
+              onPress={() => router.push(`/ruta/${found.route.id}/jugar`)}
+            />
           </View>
-          <Button3D label="Continuar" icon="play" onPress={() => router.push("/ruta/misterio-manquita/jugar")} />
-        </View>
-      </HardShadow>
+        </HardShadow>
+      ) : null}
 
       <View style={styles.sectionHeader}>
         <Text style={type.subtitle}>Ciudades</Text>
-        <Text style={type.caption}>1 de 4 disponibles</Text>
+        <Text style={type.caption}>Más ciudades, pronto</Text>
       </View>
       <View style={{ gap: 12 }}>
-        {CITIES.map((city) => (
+        {packs.map((pack) => (
           <Pressable
-            key={city.id}
-            disabled={!city.available}
-            onPress={() => router.push(`/ciudad/${city.id}`)}
+            key={pack.id}
+            onPress={() => router.push(`/ciudad/${pack.id}`)}
             accessibilityRole="button"
-            accessibilityState={{ disabled: !city.available }}
+            accessibilityLabel={localize(pack.name)}
           >
-            <View style={[styles.cityRow, !city.available && { opacity: 0.6 }]}>
-              <Text style={[type.label, { flex: 1, fontSize: 17 }]}>{city.name}</Text>
-              <Text style={[type.caption, city.available && { color: colors.clay, fontFamily: fonts.bold }]}>
-                {city.status}
+            <View style={styles.cityRow}>
+              <Text style={[type.label, { flex: 1, fontSize: 17 }]}>{localize(pack.name)}</Text>
+              <Text style={[type.caption, { color: colors.clay, fontFamily: fonts.bold }]}>
+                {cityStatus(pack.routes.filter((r) => r.isFree).length, pack.routes.length)}
               </Text>
-              <Icon name={city.available ? "next" : "lock"} size={18} />
+              <Icon name="next" size={18} />
             </View>
           </Pressable>
         ))}
