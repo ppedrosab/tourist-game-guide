@@ -1,0 +1,1288 @@
+{
+  "id": "sevilla",
+  "version": 1,
+  "name": {
+    "es": "Sevilla",
+    "en": "Seville"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 37.3845,
+    "lng": -5.9935
+  },
+  "bounds": [
+    {
+      "lat": 37.38,
+      "lng": -6.006
+    },
+    {
+      "lat": 37.3885,
+      "lng": -5.985
+    }
+  ],
+  "coverImage": "img/cover_sevilla.jpg",
+  "characters": [
+    {
+      "id": "aguador",
+      "name": {
+        "es": "El Aguador",
+        "en": "The Water Seller"
+      },
+      "description": {
+        "es": "El aguador del cuadro de Velázquez. Vende agua fresca con su cántaro y se sabe todos los chismes de Sevilla.",
+        "en": "The water seller from Velázquez's painting. He sells fresh water from his jug and knows every piece of gossip in Seville."
+      },
+      "avatar": "sprites/aguador/aguador_neutral.svg",
+      "era": "s. XVII"
+    },
+    {
+      "id": "giraldillo",
+      "name": {
+        "es": "El Giraldillo",
+        "en": "The Giraldillo"
+      },
+      "description": {
+        "es": "La veleta de bronce de lo alto de la Giralda. Lleva siglos girando y lo ha visto todo desde arriba.",
+        "en": "The bronze weathervane on top of La Giralda. It has been spinning for centuries and has seen everything from above."
+      },
+      "avatar": "sprites/giraldillo/giraldillo_neutral.svg",
+      "era": "1568-hoy"
+    },
+    {
+      "id": "hernando",
+      "name": {
+        "es": "Hernando Colón",
+        "en": "Hernando Colón"
+      },
+      "description": {
+        "es": "Hijo de Cristóbal Colón. Bibliófilo obsesivo, reunió una de las mayores bibliotecas de su tiempo.",
+        "en": "Son of Christopher Columbus. An obsessive book collector, he gathered one of the largest libraries of his time."
+      },
+      "avatar": "sprites/hernando/hernando_neutral.svg",
+      "era": "1488-1539"
+    }
+  ],
+  "routes": [
+    {
+      "id": "donde-esta-colon",
+      "title": {
+        "es": "¿Dónde está Colón?",
+        "en": "Where Is Columbus?"
+      },
+      "summary": {
+        "es": "Un almirante y dos tumbas: una en Sevilla y otra en Santo Domingo. Resuelve el caso con el Aguador: sigue la pista del río o la de los papeles y da tu veredicto.",
+        "en": "One admiral, two tombs: one in Seville and one in Santo Domingo. Crack the case with the Water Seller: follow the river or the papers and give your verdict."
+      },
+      "era": "1492 - 2006",
+      "guideCharacterId": "aguador",
+      "durationMin": 100,
+      "distanceKm": 3.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Río",
+            "en": "River"
+          },
+          "trail": {
+            "es": "pista del río",
+            "en": "river trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Papeles",
+            "en": "Papers"
+          },
+          "trail": {
+            "es": "pista de los papeles",
+            "en": "paper trail"
+          }
+        }
+      },
+      "startNodeId": "n1_giralda",
+      "nodes": [
+        {
+          "id": "n1_giralda",
+          "title": {
+            "es": "La Giralda",
+            "en": "La Giralda"
+          },
+          "location": {
+            "lat": 37.3864,
+            "lng": -5.9922
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_sevilla_giralda.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_giralda.svg"
+              ],
+              "characters": [
+                {
+                  "id": "aguador",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Agua fresquita, agua de la fuente! ¿Tiene usted sed, forastero? Pues beba, que lo que le voy a contar da mucha sed. Me llaman el Aguador. Velázquez me pintó y mi retrato anda por Londres, pero yo sigo aquí, en Sevilla, que es donde se está bien.",
+                "en": "Fresh water, water from the fountain! Thirsty, stranger? Have a drink, what I'm about to tell you is thirsty work. They call me the Water Seller. Velázquez painted me and my portrait is off in London, but I'm still here in Seville, which is where anyone would rather be."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Tengo un caso para usted, detective. Ahí dentro, en la catedral, está la tumba de Cristóbal Colón. Pero al otro lado del océano, en Santo Domingo, hay otra tumba que dice tener los mismos huesos. Un almirante y dos tumbas. ¿Dónde está Colón de verdad?",
+                "en": "I've got a case for you, detective. In there, in the cathedral, is the tomb of Christopher Columbus. But across the ocean, in Santo Domingo, there's another tomb that claims to hold the very same bones. One admiral, two tombs. Where is Columbus really?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "talking",
+              "text": {
+                "es": "Tengo tres sospechosos: la tumba de Sevilla, la de Santo Domingo… y una tercera posibilidad que no le gusta a nadie: que esté repartido entre las dos. Apunte cada pista en su cuaderno, que al final le toca a usted dar el veredicto.",
+                "en": "I've got three suspects: the tomb in Seville, the one in Santo Domingo… and a third option nobody likes: that he's split between the two. Write down every clue in your notebook, because at the end it's up to you to give the verdict."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Giralda fue el alminar de la mezquita mayor almohade, construido a finales del siglo XII. En 1568 se le añadió el cuerpo de campanas renacentista que la remata.",
+                "en": "La Giralda was the minaret of the great Almohad mosque, built at the end of the 12th century. In 1568 the Renaissance belfry that crowns it was added."
+              },
+              "year": 1568
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Por dentro no tiene escaleras sino rampas, anchas y suaves. Se cuenta que el almuédano subía a caballo hasta arriba para llamar a la oración.",
+                "en": "Inside there are no stairs, just wide, gentle ramps. The story goes that the muezzin rode up to the top on horseback to call the faithful to prayer."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era la Giralda antes de ser el campanario de la catedral?",
+              "en": "What was La Giralda before it became the cathedral bell tower?"
+            },
+            "options": [
+              {
+                "es": "Un faro para los barcos del río",
+                "en": "A lighthouse for river ships"
+              },
+              {
+                "es": "El alminar de una mezquita",
+                "en": "The minaret of a mosque"
+              },
+              {
+                "es": "Una torre de la muralla romana",
+                "en": "A tower of the Roman wall"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Fue el alminar de la mezquita almohade. Cuando la mezquita se derribó para levantar la catedral, la torre se conservó y se convirtió en campanario.",
+              "en": "It was the minaret of the Almohad mosque. When the mosque was pulled down to build the cathedral, the tower was kept and turned into a bell tower."
+            }
+          },
+          "nextNodeId": "n2_catedral",
+          "nextHint": {
+            "es": "Rodee la catedral hasta la Puerta del Príncipe. Unos 3 minutos.",
+            "en": "Walk round the cathedral to the Puerta del Príncipe. About 3 minutes."
+          }
+        },
+        {
+          "id": "n2_catedral",
+          "title": {
+            "es": "La tumba de Colón",
+            "en": "Columbus's tomb"
+          },
+          "location": {
+            "lat": 37.3851,
+            "lng": -5.9934
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_sevilla_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "aguador",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "hernando",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hernando",
+              "expression": "proud",
+              "text": {
+                "es": "Buenos días. Hernando Colón, hijo del Almirante… y dueño de la mejor biblioteca de mi tiempo, que todavía se guarda en esta catedral. Si alguien sabe dónde está mi padre, soy yo. Bueno… eso creía.",
+                "en": "Good day. Hernando Colón, son of the Admiral… and owner of the finest library of my time, which is still kept in this cathedral. If anyone knows where my father is, it's me. Well… so I thought."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Colón murió en Valladolid en 1506. En 1509 sus restos se trajeron a la Cartuja de Sevilla, hacia 1544 se llevaron a la catedral de Santo Domingo, en 1795 a La Habana y, cuando España perdió Cuba en 1898, volvieron a Sevilla.",
+                "en": "Columbus died in Valladolid in 1506. In 1509 his remains were brought to the Cartuja monastery in Seville, around 1544 they were taken to Santo Domingo Cathedral, in 1795 to Havana and, when Spain lost Cuba in 1898, they came back to Seville."
+              },
+              "year": 1506
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Más viajes de muerto que de vivo! Y ahí dentro lo tiene: el ataúd lo llevan a hombros cuatro heraldos de bronce.",
+                "en": "He travelled more dead than alive! And there he is inside: the coffin is carried on the shoulders of four bronze heralds."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que tocar el pie de los heraldos de delante trae suerte y asegura que volverás a Sevilla. Por eso brillan tanto.",
+                "en": "They say touching the feet of the front heralds brings good luck and guarantees you'll come back to Seville. That's why they shine so much."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hernando",
+              "expression": "thinking",
+              "text": {
+                "es": "Y fíjese en un detalle: yo también estoy enterrado aquí, en esta catedral. Apúntelo, que mis huesos le van a hacer falta.",
+                "en": "And note one detail: I'm buried here too, in this very cathedral. Write it down, you're going to need my bones."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién lleva a hombros el ataúd de Colón en la catedral?",
+              "en": "Who carries Columbus's coffin on their shoulders in the cathedral?"
+            },
+            "options": [
+              {
+                "es": "Cuatro marineros de la Santa María",
+                "en": "Four sailors from the Santa María"
+              },
+              {
+                "es": "Cuatro heraldos de los reinos de España",
+                "en": "Four heralds of the kingdoms of Spain"
+              },
+              {
+                "es": "Los Reyes Católicos",
+                "en": "The Catholic Monarchs"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Son los heraldos de Castilla, León, Aragón y Navarra. El sepulcro, de Arturo Mélida, se hizo para La Habana y viajó a Sevilla con los restos.",
+              "en": "They are the heralds of Castile, León, Aragon and Navarre. The tomb, by Arturo Mélida, was made for Havana and travelled to Seville with the remains."
+            }
+          },
+          "clue": {
+            "id": "pista_hernando",
+            "text": {
+              "es": "Sevilla · Hernando, el hijo de Colón, está enterrado en esta catedral: sus huesos sirven para comparar.",
+              "en": "Seville · Hernando, Columbus's son, is buried in this cathedral: his bones can be used for comparison."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "aguador",
+            "expression": "thinking",
+            "text": {
+              "es": "Dos pistas que seguir, detective. ¿Bajamos al río, por donde iban y venían los barcos de Indias… o buscamos en los papeles, donde se apuntaba todo?",
+              "en": "Two leads to follow, detective. Shall we go down to the river, where the ships to and from the Indies came and went… or search the papers, where everything was written down?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Seguir la pista del río",
+                "en": "Follow the river"
+              },
+              "hint": {
+                "es": "Torre del Oro y Triana",
+                "en": "Torre del Oro and Triana"
+              },
+              "distanceM": 500,
+              "walkMin": 7,
+              "targetNodeId": "a1_torre_oro",
+              "setFlags": [
+                "camino_rio"
+              ]
+            },
+            {
+              "label": {
+                "es": "Seguir la pista de los papeles",
+                "en": "Follow the papers"
+              },
+              "hint": {
+                "es": "Archivo de Indias y Alcázar",
+                "en": "Archive of the Indies and Alcázar"
+              },
+              "distanceM": 100,
+              "walkMin": 2,
+              "targetNodeId": "b1_archivo",
+              "setFlags": [
+                "camino_papeles"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a1_torre_oro",
+          "title": {
+            "es": "Torre del Oro",
+            "en": "Torre del Oro"
+          },
+          "location": {
+            "lat": 37.3823,
+            "lng": -5.9964
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_torreoro.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "happy",
+              "text": {
+                "es": "¡El Guadalquivir! Por aquí salían los galeones a América y por aquí volvían cargados de plata. Sevilla era el puerto de Indias, detective: todo pasaba por este río.",
+                "en": "The Guadalquivir! This is where the galleons left for the Americas and came back loaded with silver. Seville was the port of the Indies, detective: everything went through this river."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Torre del Oro es una torre almohade de principios del siglo XIII. Vigilaba la entrada del puerto; hoy es un museo naval.",
+                "en": "The Torre del Oro is an Almohad tower from the early 13th century. It guarded the entrance to the port; today it is a naval museum."
+              },
+              "year": 1220
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Nadie se pone de acuerdo con el nombre: unos dicen que brillaba al sol por sus azulejos dorados y otros, que aquí se guardaba el oro de América.",
+                "en": "Nobody agrees about the name: some say it shone in the sun because of its golden tiles, others that the gold from the Americas was kept here."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Y oiga esto: cuando los restos de Colón volvieron de La Habana, llegaron a Sevilla remontando este mismo río. Como un galeón más.",
+                "en": "And listen to this: when Columbus's remains came back from Havana, they reached Seville by sailing up this very river. Just like another galleon."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servía la Torre del Oro?",
+              "en": "What was the Torre del Oro for?"
+            },
+            "options": [
+              {
+                "es": "Para vigilar y defender el puerto del río",
+                "en": "To guard and defend the river port"
+              },
+              {
+                "es": "Para guardar las campanas de la catedral",
+                "en": "To hold the cathedral bells"
+              },
+              {
+                "es": "Era un molino de agua",
+                "en": "It was a water mill"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Era una torre defensiva que controlaba el paso por el Guadalquivir, junto a la muralla de la ciudad.",
+              "en": "It was a defensive tower that controlled passage along the Guadalquivir, next to the city wall."
+            }
+          },
+          "clue": {
+            "id": "pista_rio",
+            "text": {
+              "es": "Sevilla · En 1898 los restos volvieron de La Habana y subieron por el Guadalquivir hasta Sevilla.",
+              "en": "Seville · After 1898 the remains came back from Havana and sailed up the Guadalquivir to Seville."
+            }
+          },
+          "nextNodeId": "a2_triana",
+          "nextHint": {
+            "es": "Siga el río hasta el puente de Triana. Unos 12 minutos.",
+            "en": "Follow the river to the Triana bridge. About 12 minutes."
+          }
+        },
+        {
+          "id": "a2_triana",
+          "title": {
+            "es": "Puente de Triana",
+            "en": "Triana Bridge"
+          },
+          "location": {
+            "lat": 37.3856,
+            "lng": -6.003
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_triana.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Triana, barrio de marineros, alfareros y cantaores! De aquí salieron muchos de los que embarcaban hacia las Indias.",
+                "en": "Triana, the neighbourhood of sailors, potters and flamenco singers! Many of the men who sailed to the Indies came from here."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que Rodrigo de Triana, el vigía de La Pinta que gritó «¡Tierra!» el 12 de octubre de 1492, era de este barrio. En Lepe dicen que era de allí.",
+                "en": "The story goes that Rodrigo de Triana, the lookout on La Pinta who shouted “Land!” on 12 October 1492, came from this neighbourhood. In Lepe they say he was one of theirs."
+              },
+              "legend": true
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "De Sevilla salió en 1519 la expedición de Magallanes y Elcano, y en 1522 volvió aquí la nao Victoria tras dar la primera vuelta al mundo.",
+                "en": "Magellan and Elcano's expedition set out from Seville in 1519, and in 1522 the ship Victoria returned here after the first voyage around the world."
+              },
+              "year": 1519
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Piénselo, detective: Valladolid, Sevilla, Santo Domingo, La Habana y otra vez Sevilla. Con tanta mudanza, ¿no se perdería algún hueso por el camino?",
+                "en": "Think about it, detective: Valladolid, Seville, Santo Domingo, Havana and Seville again. With so many moves, wouldn't a bone or two go missing along the way?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuál es el nombre oficial del puente de Triana?",
+              "en": "What is the official name of the Triana bridge?"
+            },
+            "options": [
+              {
+                "es": "Puente de Fernando III",
+                "en": "Fernando III Bridge"
+              },
+              {
+                "es": "Puente de Isabel II",
+                "en": "Isabel II Bridge"
+              },
+              {
+                "es": "Puente de Carlos III",
+                "en": "Carlos III Bridge"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Se inauguró en 1852 con el nombre de la reina Isabel II. Es el puente de hierro más antiguo que se conserva en España; antes, para cruzar había un puente de barcas.",
+              "en": "It opened in 1852 under the name of Queen Isabella II. It is the oldest surviving iron bridge in Spain; before it, people crossed on a bridge of boats."
+            }
+          },
+          "clue": {
+            "id": "pista_viajes",
+            "text": {
+              "es": "Las dos · Cinco viajes en cuatro siglos: es fácil que los huesos acabaran repartidos.",
+              "en": "Both · Five journeys in four centuries: the bones could easily have ended up split."
+            }
+          },
+          "nextNodeId": "n4_triunfo",
+          "nextHint": {
+            "es": "Vuelva a cruzar el río hasta la Plaza del Triunfo. Unos 15 minutos.",
+            "en": "Cross back over the river to Plaza del Triunfo. About 15 minutes."
+          }
+        },
+        {
+          "id": "b1_archivo",
+          "title": {
+            "es": "Archivo de Indias",
+            "en": "Archive of the Indies"
+          },
+          "location": {
+            "lat": 37.3845,
+            "lng": -5.9929
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_archivo.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "talking",
+              "text": {
+                "es": "Este edificio se hizo porque los mercaderes cerraban sus tratos en las gradas de la catedral, y al arzobispo no le hacía ni pizca de gracia. Les construyeron una lonja pa' que se fueran con la música a otra parte.",
+                "en": "This building went up because merchants did their deals on the cathedral steps, and the archbishop was not one bit amused. So they built them an exchange to take their business elsewhere."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa Lonja se levantó entre 1584 y 1598. En 1785 Carlos III la convirtió en el Archivo General de Indias, que reúne los documentos del gobierno de América y Filipinas.",
+                "en": "The merchants' exchange was built between 1584 and 1598. In 1785 Charles III turned it into the General Archive of the Indies, which holds the documents of the government of the Americas and the Philippines."
+              },
+              "year": 1785
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hernando",
+              "expression": "thinking",
+              "text": {
+                "es": "Papeles, detective, papeles: yo reuní miles de libros. Y los papeles cuentan una cosa rara: en 1795, cuando se llevaron a mi padre de Santo Domingo, sacaron una caja sin nombre.",
+                "en": "Papers, detective, papers: I collected thousands of books. And the papers tell a strange story: in 1795, when they took my father away from Santo Domingo, they removed a box with no name on it."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué se construyó este edificio?",
+              "en": "What was this building built for?"
+            },
+            "options": [
+              {
+                "es": "Como lonja para los mercaderes",
+                "en": "As an exchange for merchants"
+              },
+              {
+                "es": "Como palacio de los Reyes Católicos",
+                "en": "As a palace for the Catholic Monarchs"
+              },
+              {
+                "es": "Como biblioteca de Hernando Colón",
+                "en": "As Hernando Colón's library"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Fue la Casa Lonja de Mercaderes. El archivo llegó dos siglos después, en 1785.",
+              "en": "It was the Merchants' Exchange. The archive arrived two centuries later, in 1785."
+            }
+          },
+          "clue": {
+            "id": "pista_caja_sin_nombre",
+            "text": {
+              "es": "Santo Domingo · En 1795 los españoles se llevaron de Santo Domingo una caja sin nombre: ¿y si se equivocaron?",
+              "en": "Santo Domingo · In 1795 the Spanish took a box with no name from Santo Domingo: what if they got the wrong one?"
+            }
+          },
+          "nextNodeId": "b2_alcazar",
+          "nextHint": {
+            "es": "Al Alcázar, por la Puerta del León. Unos 3 minutos.",
+            "en": "To the Alcázar, by the Lion Gate. About 3 minutes."
+          }
+        },
+        {
+          "id": "b2_alcazar",
+          "title": {
+            "es": "Real Alcázar",
+            "en": "Royal Alcázar"
+          },
+          "location": {
+            "lat": 37.3836,
+            "lng": -5.9915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_alcazar.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "surprised",
+              "text": {
+                "es": "El Alcázar, detective: palacio de reyes desde hace más de mil años. Y aquí dentro estaba la oficina más importante del Imperio.",
+                "en": "The Alcázar, detective: a royal palace for over a thousand years. And inside was the most important office of the Empire."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1503 se fundó en el Alcázar la Casa de la Contratación, que controlaba todos los barcos, viajeros y mercancías que iban y venían de América.",
+                "en": "In 1503 the Casa de la Contratación was founded in the Alcázar. It controlled every ship, traveller and cargo going to and from the Americas."
+              },
+              "year": 1503
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "En su sala de audiencias hay un cuadro, la Virgen de los Mareantes, y se dice que uno de los hombres que se refugian bajo su manto es Colón.",
+                "en": "In its audience hall there is a painting, the Virgin of the Navigators, and it is said that one of the men sheltering under her cloak is Columbus."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hernando",
+              "expression": "nervous",
+              "text": {
+                "es": "Aquí se apuntaba cada barril que cruzaba el mar… y a mi padre lo cruzaron varias veces sin que nadie apuntara bien qué huesos iban dentro.",
+                "en": "Every barrel that crossed the sea was written down here… and yet my father crossed it several times without anyone recording properly which bones were inside."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Mira el panel de azulejos sobre la puerta de entrada. ¿Qué animal aparece?",
+              "en": "Look at the tile panel above the entrance gate. What animal does it show?"
+            },
+            "answer": [
+              "leon",
+              "un leon",
+              "el leon",
+              "lion",
+              "a lion"
+            ]
+          },
+          "clue": {
+            "id": "pista_papeles",
+            "text": {
+              "es": "Las dos · Se apuntaba cada barril que cruzaba el mar, pero nadie apuntó bien qué huesos viajaban.",
+              "en": "Both · Every barrel crossing the sea was recorded, but nobody properly recorded which bones travelled."
+            }
+          },
+          "nextNodeId": "n4_triunfo",
+          "nextHint": {
+            "es": "La Plaza del Triunfo está aquí al lado. Un minuto.",
+            "en": "Plaza del Triunfo is right next door. One minute."
+          }
+        },
+        {
+          "id": "n4_triunfo",
+          "title": {
+            "es": "Plaza del Triunfo",
+            "en": "Plaza del Triunfo"
+          },
+          "location": {
+            "lat": 37.385,
+            "lng": -5.9916
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_sevilla_triunfo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_triunfo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "aguador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "giraldillo",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "giraldillo",
+              "expression": "proud",
+              "text": {
+                "es": "¡Eh, los de abajo! Soy el Giraldillo, la veleta de la Giralda. Desde 1568 giro allá arriba y lo veo todo: los barcos, las procesiones… y a todos los que buscan a Colón.",
+                "en": "Hey, you down there! I'm the Giraldillo, the weathervane on top of La Giralda. I've been spinning up there since 1568 and I see everything: the ships, the processions… and everyone looking for Columbus."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "giraldillo",
+              "expression": "talking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Vienes del río, así que ya sabes lo que viajaron esos huesos. Pero la pregunta es otra: ¿qué hay dentro de cada caja?",
+                    "en": "You've come from the river, so you know how far those bones travelled. But the real question is: what's inside each box?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_papeles"
+                  ],
+                  "text": {
+                    "es": "Vienes de los papeles, así que ya sabes lo de la caja sin nombre. Pero hay dos maneras de resolver eso.",
+                    "en": "You've come from the papers, so you know about the box with no name. But there are two ways to settle it."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "giraldillo",
+              "expression": "thinking",
+              "text": {
+                "es": "Mire, detective: tiene dos pruebas. La caja de plomo que apareció en Santo Domingo en 1877… o el análisis de ADN que se hizo en Sevilla en 2006. ¿Cuál quiere examinar?",
+                "en": "Look, detective: you have two pieces of evidence. The lead box found in Santo Domingo in 1877… or the DNA analysis carried out in Seville in 2006. Which will you examine?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué representa la estatua del Giraldillo?",
+              "en": "What does the Giraldillo statue represent?"
+            },
+            "options": [
+              {
+                "es": "A una reina de Castilla",
+                "en": "A queen of Castile"
+              },
+              {
+                "es": "La Fe",
+                "en": "Faith"
+              },
+              {
+                "es": "A la diosa del viento",
+                "en": "The goddess of the wind"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Es la figura de la Fe triunfante, en bronce, obra de Bartolomé Morel. Aunque es enorme, gira con el viento.",
+              "en": "It is the figure of Triumphant Faith, in bronze, by Bartolomé Morel. Despite its huge size, it turns with the wind."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Examinar la caja de 1877",
+                "en": "Examine the 1877 box"
+              },
+              "hint": {
+                "es": "La prueba de Santo Domingo",
+                "en": "Santo Domingo's evidence"
+              },
+              "targetNodeId": "n4a_caja",
+              "setFlags": [
+                "version_caja"
+              ]
+            },
+            {
+              "label": {
+                "es": "Examinar el ADN de 2006",
+                "en": "Examine the 2006 DNA"
+              },
+              "hint": {
+                "es": "La prueba de Sevilla",
+                "en": "Seville's evidence"
+              },
+              "targetNodeId": "n4b_adn",
+              "setFlags": [
+                "version_adn"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_caja",
+          "title": {
+            "es": "La caja de plomo",
+            "en": "The lead box"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "giraldillo",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡1877! En la catedral de Santo Domingo, unos obreros encuentran una caja de plomo. Dentro, huesos. Y en la tapa, grabado: «Ilustre y esclarecido varón don Cristóbal Colón».",
+                "en": "1877! In Santo Domingo Cathedral, some workmen find a lead box. Inside, bones. And engraved on the lid: “Illustrious and distinguished man, Don Cristóbal Colón”."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Santo Domingo sostiene que en 1795 los españoles se llevaron por error los restos de otro Colón, probablemente Diego, el hijo del Almirante. Sus restos se guardan hoy en el Faro a Colón.",
+                "en": "Santo Domingo maintains that in 1795 the Spanish mistakenly took the remains of another Colón, probably Diego, the Admiral's son. Its remains are kept today in the Columbus Lighthouse."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Con tanta mudanza, que alguien cogiera la caja equivocada no me extrañaría nada.",
+                    "en": "With all that moving around, it wouldn't surprise me at all if someone grabbed the wrong box."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_papeles"
+                  ],
+                  "text": {
+                    "es": "¡La caja sin nombre del Archivo! A lo mejor por eso no tenía nombre…",
+                    "en": "The box with no name from the Archive! Maybe that's why it had no name…"
+                  }
+                }
+              ]
+            }
+          ],
+          "clue": {
+            "id": "pista_caja_1877",
+            "text": {
+              "es": "Santo Domingo · En 1877 apareció en Santo Domingo una caja de plomo con el nombre de Colón. Esos huesos nunca se han analizado.",
+              "en": "Santo Domingo · In 1877 a lead box with Columbus's name turned up in Santo Domingo. Those bones have never been tested."
+            }
+          },
+          "nextNodeId": "n5_agua",
+          "nextHint": {
+            "es": "Al barrio de Santa Cruz, por el Callejón del Agua. Unos 6 minutos.",
+            "en": "To the Santa Cruz quarter, along the Callejón del Agua. About 6 minutes."
+          }
+        },
+        {
+          "id": "n4b_adn",
+          "title": {
+            "es": "El ADN de 2006",
+            "en": "The 2006 DNA"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "hernando",
+              "expression": "proud",
+              "text": {
+                "es": "¡Por fin sirvo para algo más que para los libros! En 2006 unos científicos compararon el ADN de los huesos de mi padre con el de mi tío Diego y con el mío. Encajaban.",
+                "en": "At last I'm useful for more than books! In 2006 scientists compared the DNA from my father's bones with my uncle Diego's and with mine. They matched."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El estudio, de un equipo de la Universidad de Granada, concluyó que los restos de la catedral de Sevilla son de Colón. Pero allí solo hay una pequeña parte del esqueleto.",
+                "en": "The study, by a team from the University of Granada, concluded that the remains in Seville Cathedral are Columbus's. But only a small part of the skeleton is there."
+              },
+              "year": 2006
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "surprised",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "¿Solo una parte? ¡Lo que yo decía en Triana! Algo se quedó por el camino.",
+                    "en": "Only part? Just what I said in Triana! Something got left behind along the way."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_papeles"
+                  ],
+                  "text": {
+                    "es": "¿Solo una parte? Entonces el resto… ¿dónde está?",
+                    "en": "Only part? Then the rest of him… where is it?"
+                  }
+                }
+              ]
+            }
+          ],
+          "clue": {
+            "id": "pista_adn",
+            "text": {
+              "es": "Las dos · El ADN confirma que en Sevilla hay restos de Colón… pero solo una pequeña parte del esqueleto.",
+              "en": "Both · DNA confirms there are remains of Columbus in Seville… but only a small part of the skeleton."
+            }
+          },
+          "nextNodeId": "n5_agua",
+          "nextHint": {
+            "es": "Al barrio de Santa Cruz, por el Callejón del Agua. Unos 6 minutos.",
+            "en": "To the Santa Cruz quarter, along the Callejón del Agua. About 6 minutes."
+          }
+        },
+        {
+          "id": "n5_agua",
+          "title": {
+            "es": "Callejón del Agua",
+            "en": "Callejón del Agua"
+          },
+          "location": {
+            "lat": 37.384,
+            "lng": -5.9885
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_santacruz.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Mi calle! Por dentro de esta muralla corría el agua que llegaba al Alcázar. Y donde hay agua, hay aguador.",
+                "en": "My street! Inside this wall ran the water that fed the Alcázar. And where there's water, there's a water seller."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El barrio de Santa Cruz fue la antigua judería de Sevilla. Sus calles estrechas y torcidas dan sombra y guardan el fresco en verano.",
+                "en": "The Santa Cruz quarter was Seville's old Jewish quarter. Its narrow, winding streets give shade and keep things cool in summer."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Ya casi lo tenemos, detective. Vamos a ver al Almirante en persona, que tiene monumento aquí al lado.",
+                "en": "We've nearly cracked it, detective. Let's go and see the Admiral in person, he has a monument just round the corner."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué se llama Callejón del Agua?",
+              "en": "Why is it called the Callejón del Agua?"
+            },
+            "options": [
+              {
+                "es": "Porque se inundaba cuando llovía",
+                "en": "Because it flooded when it rained"
+              },
+              {
+                "es": "Por la conducción que llevaba el agua al Alcázar",
+                "en": "Because of the conduit that carried water to the Alcázar"
+              },
+              {
+                "es": "Porque aquí vendían agua los aguadores",
+                "en": "Because water sellers sold water here"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Junto a la muralla corrían las cañerías que llevaban el agua al Alcázar.",
+              "en": "The pipes that carried water to the Alcázar ran alongside the wall."
+            }
+          },
+          "nextNodeId": "n6_monumento",
+          "nextHint": {
+            "es": "A los Jardines de Murillo. Unos 4 minutos.",
+            "en": "To the Murillo Gardens. About 4 minutes."
+          }
+        },
+        {
+          "id": "n6_monumento",
+          "title": {
+            "es": "Monumento a Colón",
+            "en": "Columbus Monument"
+          },
+          "location": {
+            "lat": 37.3822,
+            "lng": -5.9873
+          },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_sevilla_colon.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "proud",
+              "text": {
+                "es": "Ahí lo tiene: dos columnas altísimas y, arriba del todo, la carabela Santa María. Con un león de bronce de guardia.",
+                "en": "There it is: two towering columns and, right at the top, the caravel Santa María. With a bronze lion on guard."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El monumento a Colón de los Jardines de Murillo se inauguró en 1921. Sus columnas llevan los nombres de Colón y de los Reyes Católicos.",
+                "en": "The Columbus monument in the Murillo Gardens was unveiled in 1921. Its columns bear the names of Columbus and the Catholic Monarchs."
+              },
+              "year": 1921
+            }
+          ],
+          "challenge": {
+            "type": "photo",
+            "prompt": {
+              "es": "Hazte una foto con la carabela del monumento en lo alto.",
+              "en": "Take a photo with the monument's caravel up above."
+            }
+          },
+          "nextNodeId": "n6b_veredicto"
+        },
+        {
+          "id": "n6b_veredicto",
+          "title": {
+            "es": "El veredicto",
+            "en": "The verdict"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, detective. Repase el cuaderno: Sevilla, Santo Domingo, las dos. ¿Dónde está Colón?",
+                "en": "Time for the verdict, detective. Go over your notebook: Seville, Santo Domingo, both. Where is Columbus?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde está Colón?",
+              "en": "Where is Columbus?"
+            },
+            "options": [
+              {
+                "es": "Solo en Santo Domingo: lo de Sevilla es un error",
+                "en": "Only in Santo Domingo: Seville got it wrong"
+              },
+              {
+                "es": "En Sevilla hay restos suyos, confirmados por ADN; si el resto está en Santo Domingo, nadie lo ha comprobado",
+                "en": "There are remains of his in Seville, confirmed by DNA; whether the rest is in Santo Domingo, nobody has checked"
+              },
+              {
+                "es": "En ninguna de las dos: se perdió en el mar",
+                "en": "In neither: he was lost at sea"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El ADN dice que en Sevilla hay restos de Colón, aunque pocos. Santo Domingo tiene su caja de 1877, pero sus huesos no se han analizado. Lo más probable es que esté repartido.",
+              "en": "DNA says there are remains of Columbus in Seville, though not many. Santo Domingo has its 1877 box, but its bones have not been tested. Most likely he is split between the two."
+            }
+          },
+          "nextNodeId": "n7_final"
+        },
+        {
+          "id": "n7_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_adn"
+                  ],
+                  "text": {
+                    "es": "¡Almirante del río! Seguiste los barcos y le creíste a la ciencia. Colón estaría orgulloso.",
+                    "en": "Admiral of the river! You followed the ships and trusted the science. Columbus would be proud."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_caja"
+                  ],
+                  "text": {
+                    "es": "Seguiste el río y te quedaste con la caja misteriosa. ¡Tú eres un cazador de leyendas!",
+                    "en": "You followed the river and went for the mysterious box. You're a legend hunter!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_papeles",
+                    "version_adn"
+                  ],
+                  "text": {
+                    "es": "Papeles y ADN: nada se te escapa. ¡Eres un sabueso del Archivo!",
+                    "en": "Papers and DNA: nothing gets past you. You're a bloodhound of the Archive!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_papeles",
+                    "version_caja"
+                  ],
+                  "text": {
+                    "es": "Papeles y cajas con nombre: tú lo apuntas todo, como un cronista de Indias.",
+                    "en": "Papers and boxes with names: you write everything down, like a chronicler of the Indies."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "happy",
+              "text": {
+                "es": "Caso cerrado: Colón está en Sevilla… al menos un poquito. Y el resto, quién sabe. Lo que es seguro es que usted vuelve: ¿tocó el pie de los heraldos? Pues hay calles que hoy no ha pisado.",
+                "en": "Case closed: Columbus is in Seville… a little bit of him, at least. As for the rest, who knows. What's certain is that you'll be back: did you touch the heralds' feet? Well, there are streets you haven't walked today."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "almirante_rio",
+          "requires": [
+            "camino_rio",
+            "version_adn"
+          ],
+          "title": {
+            "es": "Almirante del río",
+            "en": "Admiral of the river"
+          }
+        },
+        {
+          "id": "cazador_leyendas",
+          "requires": [
+            "camino_rio",
+            "version_caja"
+          ],
+          "title": {
+            "es": "Cazador de leyendas",
+            "en": "Legend hunter"
+          }
+        },
+        {
+          "id": "sabueso_archivo",
+          "requires": [
+            "camino_papeles",
+            "version_adn"
+          ],
+          "title": {
+            "es": "Sabueso del Archivo",
+            "en": "Bloodhound of the Archive"
+          }
+        },
+        {
+          "id": "cronista_indias",
+          "requires": [
+            "camino_papeles",
+            "version_caja"
+          ],
+          "title": {
+            "es": "Cronista de Indias",
+            "en": "Chronicler of the Indies"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "bucaro_aguador",
+          "name": {
+            "es": "El búcaro del Aguador",
+            "en": "The Water Seller's jug"
+          },
+          "icon": "collectibles/sevilla_bucaro.svg",
+          "awardedAtNodeId": "n1_giralda"
+        },
+        {
+          "id": "torre_oro",
+          "name": {
+            "es": "La Torre del Oro",
+            "en": "The Torre del Oro"
+          },
+          "icon": "collectibles/sevilla_torre_oro.svg",
+          "awardedAtNodeId": "a1_torre_oro"
+        },
+        {
+          "id": "grito_tierra",
+          "name": {
+            "es": "¡Tierra!",
+            "en": "Land ho!"
+          },
+          "icon": "collectibles/sevilla_tierra.svg",
+          "awardedAtNodeId": "a2_triana"
+        },
+        {
+          "id": "legajo_indias",
+          "name": {
+            "es": "Legajo de Indias",
+            "en": "Bundle of the Indies"
+          },
+          "icon": "collectibles/sevilla_legajo.svg",
+          "awardedAtNodeId": "b1_archivo"
+        },
+        {
+          "id": "leon_alcazar",
+          "name": {
+            "es": "El león del Alcázar",
+            "en": "The Alcázar lion"
+          },
+          "icon": "collectibles/sevilla_leon.svg",
+          "awardedAtNodeId": "b2_alcazar"
+        },
+        {
+          "id": "carabela",
+          "name": {
+            "es": "La carabela del monumento",
+            "en": "The monument's caravel"
+          },
+          "icon": "collectibles/sevilla_carabela.svg",
+          "awardedAtNodeId": "n6_monumento"
+        },
+        {
+          "id": "insignia_colon",
+          "name": {
+            "es": "¿Dónde está Colón?",
+            "en": "Where Is Columbus?"
+          },
+          "icon": "collectibles/sevilla_insignia.svg",
+          "awardedAtNodeId": "n7_final"
+        }
+      ]
+    }
+  ]
+}
