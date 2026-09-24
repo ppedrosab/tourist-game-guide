@@ -1,6 +1,15 @@
 import raw from "@content/malaga/misterio-manquita.pack.json";
 import type { Route } from "@/content/types";
-import { distanceM, geofenceTargets, isInside, offerManualArrival } from "../geo";
+import {
+  distanceM,
+  geofenceRegions,
+  geofenceTargets,
+  isInside,
+  offerManualArrival,
+  parseRegionId,
+  pendingArrivalFor,
+  regionId,
+} from "../geo";
 import { loadPack } from "../loadPack";
 import { advance, getNode, hasArrived, markArrived, startRoute } from "../runner";
 
@@ -90,5 +99,35 @@ describe("offerManualArrival", () => {
     expect(offerManualArrival({ ...gps, now: t0 + 60_000 })).toBe(true);
     expect(offerManualArrival({ ...gps, lastFixAt: t0 + 30_000, now: t0 + 60_000 })).toBe(false);
     expect(offerManualArrival({ ...gps, lastFixAt: t0 + 30_000, now: t0 + 90_000 })).toBe(true);
+  });
+});
+
+describe("geofences en segundo plano", () => {
+  it("codifica y decodifica el id de región", () => {
+    expect(parseRegionId(regionId("misterio-manquita", "n2_larios"))).toEqual({
+      routeId: "misterio-manquita",
+      nodeId: "n2_larios",
+    });
+    expect(parseRegionId("sin-separador")).toBeUndefined();
+    expect(parseRegionId("|n2")).toBeUndefined();
+  });
+
+  it("genera regiones con el radio de cada nodo", () => {
+    const run = markArrived(route, advance(route, markArrived(route, startRoute("malaga", route))));
+    expect(geofenceRegions(route, run)).toEqual([
+      expect.objectContaining({ identifier: "misterio-manquita|a1_atarazanas", radius: 40, notifyOnEnter: true }),
+      expect.objectContaining({ identifier: "misterio-manquita|b1_constitucion", radius: 40 }),
+    ]);
+  });
+
+  it("solo aplica la llegada pendiente del nodo actual", () => {
+    const run = startRoute("malaga", route);
+    const pending = [
+      { routeId: "misterio-manquita", nodeId: "n2_larios", at: "t0" },
+      { routeId: "otra", nodeId: "n1_cenachero", at: "t1" },
+      { routeId: "misterio-manquita", nodeId: "n1_cenachero", at: "t2" },
+    ];
+    expect(pendingArrivalFor(run, pending)?.at).toBe("t2");
+    expect(pendingArrivalFor(run, pending.slice(0, 2))).toBeUndefined();
   });
 });

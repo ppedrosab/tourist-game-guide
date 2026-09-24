@@ -20,7 +20,11 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Te guío por la ciudad: uso tu ubicación para empezar cada escena al llegar a la parada."
+          "locationAlwaysPermission": "Con la ubicación «siempre», cada escena empieza sola al llegar a la parada aunque lleves el móvil en el bolsillo.",
+          "locationAlwaysAndWhenInUsePermission": "Con la ubicación «siempre», cada escena empieza sola al llegar a la parada aunque lleves el móvil en el bolsillo.",
+          "locationWhenInUsePermission": "Te guío por la ciudad: uso tu ubicación para empezar cada escena al llegar a la parada.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
         }
       ]
     ],

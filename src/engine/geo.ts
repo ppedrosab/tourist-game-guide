@@ -81,3 +81,40 @@ export function offerManualArrival(gps: {
   const since = gps.lastFixAt ?? gps.watchStartedAt;
   return gps.now - since >= GPS_TIMEOUT_S * 1000;
 }
+
+// ---------------------------------------------------------------------------
+// Geofences en segundo plano
+// ---------------------------------------------------------------------------
+
+/** Llegada detectada por un geofence con la app en segundo plano. */
+export type PendingArrival = { routeId: string; nodeId: string; at: string };
+
+const SEP = "|";
+export const regionId = (routeId: string, nodeId: string) => `${routeId}${SEP}${nodeId}`;
+
+export function parseRegionId(id: string): { routeId: string; nodeId: string } | undefined {
+  const i = id.indexOf(SEP);
+  if (i <= 0 || i === id.length - 1) return undefined;
+  return { routeId: id.slice(0, i), nodeId: id.slice(i + 1) };
+}
+
+/** Regiones para expo-location a partir de las paradas a vigilar. */
+export function geofenceRegions(route: Route, run: PlayerProgress, max: number = MAX_GEOFENCES) {
+  return geofenceTargets(route, run, max).map((node) => ({
+    identifier: regionId(route.id, node.id),
+    latitude: node.location!.lat,
+    longitude: node.location!.lng,
+    radius: radiusOf(node),
+    notifyOnEnter: true,
+    notifyOnExit: false,
+  }));
+}
+
+/**
+ * Llegada pendiente que vale para la partida: la del nodo actual de esa ruta.
+ * Si el jugador llegó a una parada futura (p. ej. se adelantó por la calle),
+ * se ignora: la historia no se salta nodos.
+ */
+export function pendingArrivalFor(run: PlayerProgress, pending: readonly PendingArrival[]): PendingArrival | undefined {
+  return pending.find((p) => p.routeId === run.routeId && p.nodeId === run.currentNodeId);
+}

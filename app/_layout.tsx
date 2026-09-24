@@ -5,6 +5,8 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+// Define la tarea de geofences al arrancar (obligatorio para TaskManager).
+import { GeofenceSync } from "@/geo/GeofenceSync";
 import { colors } from "@/theme";
 
 SplashScreen.preventAutoHideAsync();
@@ -26,6 +28,7 @@ export default function RootLayout() {
   return (
     <>
       <StatusBar style="dark" />
+      <GeofenceSync />
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.cream } }}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="bienvenida" />
