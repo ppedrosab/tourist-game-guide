@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
-import { Icon } from "@/components/ui";
+import { Icon, ThemeBadge } from "@/components/ui";
 import type { LangCode, Route } from "@/content/types";
 import { CollectibleArt } from "@/components/game/CollectibleArt";
 import { Stars } from "@/components/game/Stars";
@@ -31,6 +31,7 @@ export default function Coleccion() {
       {routes.map((route) => (
         <View key={route.id} style={{ gap: 12 }}>
           <Text style={type.subtitle}>{L(route.title)}</Text>
+          <ThemeBadge route={route} />
           {collection.bestStars?.[route.id] ? (
             <Stars
               value={collection.bestStars[route.id]}

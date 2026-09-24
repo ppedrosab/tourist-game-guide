@@ -13,6 +13,7 @@ export const es = {
     caminos: "{n} caminos",
     finales: "{n} finales",
     gratis: "Gratis",
+    gastronomia: "Gastronomía",
     paradaDe: "Parada {n} de {total}",
     caminoDe: "camino del {branch}",
     dinero: "dinero",

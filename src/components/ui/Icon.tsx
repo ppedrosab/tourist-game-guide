@@ -29,6 +29,8 @@ const PATHS = {
   share:
     "M18 2a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM6 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM18 16a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4",
   download: "M12 4v11M7 10l5 5 5-5M5 20h14",
+  /** Tenedor y cuchillo: rutas gastronómicas. */
+  food: "M6 3v7a2 2 0 0 0 4 0V3M8 10v11M17 21V3c-2.5 1.5-3.5 4.5-3.5 8.5H17",
   exit: "M14 4h5v16h-5M10 16l-4-4 4-4M6 12h10",
   subtitles:
     "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10 10a2 2 0 1 0 0 4M16 10a2 2 0 1 0 0 4",

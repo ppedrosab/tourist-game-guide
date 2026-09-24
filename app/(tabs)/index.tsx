@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
-import { Button3D, Chip, HardShadow, Icon } from "@/components/ui";
+import { Button3D, Chip, HardShadow, Icon, ThemeBadge } from "@/components/ui";
 import { findRoute, getCatalog } from "@/engine/catalog";
 import { runProgress } from "@/engine/outline";
 import { useI18n } from "@/i18n";
@@ -39,7 +39,10 @@ export default function Explorar() {
       {found && progress ? (
         <HardShadow radius={radius.xl}>
           <View style={styles.continueCard}>
-            <Chip label={t("explorar.enCurso")} variant="clay" />
+            <View style={{ flexDirection: "row", gap: 6 }}>
+              <Chip label={t("explorar.enCurso")} variant="clay" />
+              <ThemeBadge route={found.route} />
+            </View>
             <Text style={[type.subtitle, { color: colors.white }]}>{L(found.route.title)}</Text>
             <View style={styles.progressRow}>
               <View style={styles.progressTrack}>

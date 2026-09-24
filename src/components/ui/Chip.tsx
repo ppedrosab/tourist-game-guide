@@ -2,13 +2,14 @@ import { StyleSheet, Text, View } from "react-native";
 import { border, colors, fonts, radius, size } from "@/theme";
 import { Icon, IconName } from "./Icon";
 
-type Variant = "paper" | "clay" | "sea" | "ink" | "sand";
+type Variant = "paper" | "clay" | "sea" | "ink" | "sand" | "gold";
 const VARIANTS: Record<Variant, { bg: string; fg: string }> = {
   paper: { bg: colors.paper, fg: colors.ink },
   clay: { bg: colors.clay, fg: colors.white },
   sea: { bg: colors.sea, fg: colors.white },
   ink: { bg: colors.ink, fg: colors.white },
   sand: { bg: colors.sand, fg: colors.ink },
+  gold: { bg: colors.gold, fg: colors.ink },
 };
 
 type Props = { label: string; variant?: Variant; icon?: IconName; dot?: string };

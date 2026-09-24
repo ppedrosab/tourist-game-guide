@@ -8,6 +8,7 @@ import { Screen } from "../layout/Screen";
 import { Button3D } from "../ui/Button3D";
 import { Icon } from "../ui/Icon";
 import { Panel } from "../ui/Panel";
+import { ThemeBadge } from "../ui/ThemeBadge";
 import { CollectibleArt } from "./CollectibleArt";
 import { Stars } from "./Stars";
 
@@ -31,6 +32,7 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
         </View>
         <Text style={type.display}>{t("final.casoCerrado")}</Text>
         <Text style={type.secondary}>{L(route.title)}</Text>
+        <ThemeBadge route={route} />
       </View>
       <Panel nameplate={t("final.tuFinal")} nameplateColor={colors.ink}>
         <Text style={type.title}>{ending ? L(ending.title) : t("final.misterioso")}</Text>

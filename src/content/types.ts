@@ -16,6 +16,9 @@ export type Expression = "neutral" | "talking" | "happy" | "thinking" | "surpris
  */
 export type BranchId = "dinero" | "poder";
 
+/** Tipo de ruta: de historia (por defecto) o gastronómica. Se muestra como una seña en la interfaz. */
+export type RouteTheme = "historia" | "gastronomia";
+
 /** Cómo se llama un camino en una ruta: `name` para leyendas ("Mar"), `trail` en frases ("camino del mar"). */
 export interface BranchLabel {
   name: I18nText;
@@ -53,6 +56,8 @@ export interface Route {
   difficulty: "easy" | "medium" | "hard";
   isFree: boolean;
   structure?: "linear" | "branch-and-bottleneck";
+  /** Sin `theme` es una ruta de historia. */
+  theme?: RouteTheme;
   /** Nombres de los caminos en esta ruta; si faltan, se usan "dinero" y "poder" de la interfaz. */
   branches?: Partial<Record<BranchId, BranchLabel>>;
   startNodeId: string;

@@ -11,6 +11,7 @@ export const en: Strings = {
     caminos: "{n} paths",
     finales: "{n} endings",
     gratis: "Free",
+    gastronomia: "Food & drink",
     paradaDe: "Stop {n} of {total}",
     caminoDe: "{branch} trail",
     dinero: "money",

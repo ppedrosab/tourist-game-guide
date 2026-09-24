@@ -1,7 +1,7 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
-import { Chip, ChoiceCard, Panel } from "@/components/ui";
+import { Chip, ChoiceCard, Panel, ThemeBadge } from "@/components/ui";
 import { getPack } from "@/engine/catalog";
 import { routeFacts } from "@/engine/outline";
 import { useI18n } from "@/i18n";
@@ -33,6 +33,7 @@ export default function Ciudad() {
               </Text>
               <Text style={type.subtitle}>{L(route.title)}</Text>
               <View style={{ flexDirection: "row", gap: 6, flexWrap: "wrap" }}>
+                <ThemeBadge route={route} />
                 {route.isFree ? <Chip label={t("comun.gratis")} variant="clay" /> : null}
                 {facts.branches > 0 ? <Chip label={t("comun.caminos", { n: facts.branches })} variant="sand" icon="split" /> : null}
                 {facts.endings > 0 ? <Chip label={t("comun.finales", { n: facts.endings })} variant="sand" icon="star" /> : null}

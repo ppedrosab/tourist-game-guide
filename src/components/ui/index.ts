@@ -9,3 +9,4 @@ export * from "./Icon";
 export * from "./IconButton";
 export * from "./Panel";
 export * from "./TabBar";
+export * from "./ThemeBadge";

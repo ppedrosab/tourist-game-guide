@@ -75,3 +75,14 @@ describe("loadPack", () => {
     expect(errors).toContain('la recompensa "no_existe" no existe');
   });
 });
+
+describe("tipo de ruta", () => {
+  it("acepta rutas gastronómicas y rechaza tipos desconocidos", () => {
+    const ok = clonePack();
+    ok.routes[0].theme = "gastronomia";
+    expect(loadPack(ok).ok).toBe(true);
+    const bad = clonePack();
+    bad.routes[0].theme = "deportes";
+    expect(errorsOf(bad).join("\n")).toContain("routes[0].theme");
+  });
+});

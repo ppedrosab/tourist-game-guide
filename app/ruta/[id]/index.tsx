@@ -1,7 +1,7 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
-import { Button3D, Chip, Panel } from "@/components/ui";
+import { Button3D, Chip, Panel, ThemeBadge } from "@/components/ui";
 import { findRoute } from "@/engine/catalog";
 import { routeFacts, routeOutline } from "@/engine/outline";
 import { useI18n } from "@/i18n";
@@ -40,6 +40,7 @@ export default function DetalleRuta() {
     <Screen>
       <TopBar title={L(route.title)} onBack={() => router.back()} />
       <View style={styles.chips}>
+        <ThemeBadge route={route} />
         <Chip label={t("comun.minutos", { n: route.durationMin })} icon="clock" />
         <Chip label={`${number(route.distanceKm, 1)} km`} icon="walk" />
         {facts.branches > 0 ? <Chip label={t("comun.caminos", { n: facts.branches })} icon="split" /> : null}

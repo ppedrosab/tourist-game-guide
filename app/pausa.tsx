@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
 import { ReactNode } from "react";
-import { Button3D, Icon, IconName, Panel } from "@/components/ui";
+import { Button3D, Icon, IconName, Panel, ThemeBadge } from "@/components/ui";
 import { routeStops } from "@/engine/runner";
 import { useI18n } from "@/i18n";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
@@ -59,6 +59,7 @@ export default function Pausa() {
     <View style={styles.overlay}>
       <Panel nameplate={t("pausa.titulo")} nameplateColor={colors.ink} style={{ gap: 10 }}>
         <Text style={type.subtitle}>{current ? L(current.route.title) : ""}</Text>
+        {current ? <ThemeBadge route={current.route} /> : null}
         <Text style={type.caption}>{where}</Text>
         <Button3D label={t("pausa.continuar")} icon="play" onPress={() => router.back()} />
         <Row icon="map" title={t("pausa.verMapa")} sub={t("pausa.verMapaTexto")} onPress={() => router.replace("/mapa")} />
