@@ -1,7 +1,9 @@
 import { router } from "expo-router";
+import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AzulejoBackground, Button3D, Icon, IconButton, IconName, Panel } from "@/components/ui";
+import { requestGamePermissions } from "@/geo/permissions";
 import { border, colors, type } from "@/theme";
 
 const ITEMS: { icon: IconName; title: string; text: string; color: string }[] = [
@@ -12,8 +14,13 @@ const ITEMS: { icon: IconName; title: string; text: string; color: string }[] = 
 
 export default function Permisos() {
   const insets = useSafeAreaInsets();
-  // Fase 4: pedir los permisos reales con expo-location y expo-notifications.
+  const [pidiendo, setPidiendo] = useState(false);
   const continuar = () => router.replace("/");
+  const permitir = async () => {
+    setPidiendo(true);
+    await requestGamePermissions();
+    continuar();
+  };
   return (
     <View style={styles.root}>
       <AzulejoBackground />
@@ -35,7 +42,7 @@ export default function Permisos() {
               </View>
             </View>
           ))}
-          <Button3D label="Permitir y continuar" onPress={continuar} />
+          <Button3D label={pidiendo ? "Un momento…" : "Permitir y continuar"} disabled={pidiendo} onPress={permitir} />
           <Button3D label="Ahora no" variant="ghost" onPress={continuar} />
         </Panel>
       </View>
