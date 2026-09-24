@@ -122,6 +122,13 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   tres sospechosos; caminos Río y Papeles; pruebas de la caja de 1877 y del ADN de 2006.
 - Arte en `scripts/art/sevilla_*.py` (reutiliza las piezas de los generadores de Cádiz).
 
+**Rutas gastronómicas** (`route.theme: "gastronomia"`; sin `theme` = historia):
+- Llevan la seña `ThemeBadge` (chip dorado con cubiertos, «Gastronomía» / «Food & drink») en la
+  ciudad, el detalle, Explorar, Pausa, Colección y el final; en Mis rutas va en el texto.
+- Primera: Cádiz «El recetario perdido» (segunda ruta del pack de Cádiz; ver `docs/GDD_CADIZ_GASTRO.md`).
+  Mismo formato de caso (tres sospechosos, dos decisiones, cuatro finales); nuevo personaje
+  `chirigotero`. Nunca exigir comer ni beber para resolver un reto; nada de nombres de bares.
+
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
   León de la fuente y Boabdil. Tres sospechosos (el sultán, los Zegríes, nadie); caminos Albaicín y
@@ -158,11 +165,11 @@ src/analytics/            eventos y sink enchufable
 src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
-content/cadiz/            la-ciudad-que-no-cayo.pack.json
+content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia + «El recetario perdido»)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
