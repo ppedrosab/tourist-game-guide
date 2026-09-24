@@ -7,7 +7,7 @@ desplazadas porque la cara está en la tapa del libro.
 
 Uso: python3 scripts/art/cadiz_sprites.py && npm run gen:assets
 """
-import os, re
+import math, os, re
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
 SPR = os.path.join(ROOT, "assets", "sprites")
@@ -243,6 +243,58 @@ def magon():
     return lambda e: svg(e, [SHADOW, legs, amphora, tunic, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
 
 
+# ---------------------------------------------------------------------------
+# El Chirigotero: disfraz de Carnaval (bombín, peluca, chaqueta de rayas) y pito de caña
+# ---------------------------------------------------------------------------
+CS = "#E8B58E"; CSD = "#C9906A"; WIG = "#E07A2E"; WIGD = "#B85E1C"
+
+
+def chirigotero():
+    legs = g("legs",
+             f'<path d="M82 200L118 200L117 238L104 238L100 216L96 238L83 238Z" fill="{SEA}" stroke="{INK}" stroke-width="2.6"/>',
+             f'<path d="M100 202L117 202L116 238L105 238Z" fill="{SEAD}"/>',
+             f'<path d="M74 248Q76 238 92 238Q99 240 98 248Z" fill="{CLAY}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<path d="M102 248Q101 240 108 238Q124 238 126 248Z" fill="{CLAYD}" stroke="{INK}" stroke-width="2.4"/>')
+    jacket = g("jacket",
+               f'<path d="M72 118Q100 106 128 118L132 204L68 204Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.8"/>',
+               *[f'<path d="M{70 + i * 8} {116 if i in (2, 3, 4, 5) else 120}L{68 + i * 8} 204" stroke="{CLAY}" stroke-width="4"/>' for i in range(1, 8)],
+               f'<path d="M72 118Q100 106 128 118L132 204L68 204Z" fill="none" stroke="{INK}" stroke-width="2.8"/>',
+               f'<path d="M104 112Q120 112 128 118L132 204L112 204Z" fill="{INK}" opacity=".12"/>',
+               # pajarita de lunares
+               f'<path d="M100 122L82 112L82 134Z" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>',
+               f'<path d="M100 122L118 112L118 134Z" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>',
+               f'<circle cx="100" cy="122" r="4.4" fill="{GOLDD}" stroke="{INK}" stroke-width="1.6"/>',
+               *[f'<circle cx="{x}" cy="{y}" r="1.6" fill="{CLAY}"/>' for x, y in [(88, 118), (90, 128), (112, 118), (110, 128)]],
+               *[f'<circle cx="100" cy="{y}" r="2.4" fill="{GOLD}" stroke="{INK}" stroke-width="1.2"/>' for y in (148, 168, 188)])
+    arms = g("arms",
+             limb("M76 126Q60 136 56 150", CLAY, 12),
+             limb("M124 126Q140 126 146 112", CLAY, 12),
+             f'<circle cx="56" cy="152" r="6" fill="{CS}" stroke="{INK}" stroke-width="2.4"/>',
+             # pito de caña (kazoo) en la mano derecha, junto a la boca
+             f'<circle cx="147" cy="108" r="6" fill="{CS}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<path d="M146 104L164 86" stroke="{INK}" stroke-width="7"/><path d="M146 104L164 86" stroke="#D9B26A" stroke-width="3.6"/>',
+             f'<path d="M155 92L159 96" stroke="{INK}" stroke-width="1.4"/>')
+    head = g("head",
+             f'<path d="M90 96L90 114L110 114L110 96Z" fill="{CS}"/>',
+             # peluca rizada naranja por detrás
+             *[f'<circle cx="{100 + math.cos(math.radians(a)) * 42:.1f}" cy="{74 + math.sin(math.radians(a)) * 36:.1f}" r="11" fill="{WIG}" stroke="{INK}" stroke-width="2"/>' for a in range(150, 391, 24)],
+             f'<ellipse cx="61" cy="80" rx="6" ry="8" fill="{CS}" stroke="{INK}" stroke-width="2.6"/>',
+             f'<ellipse cx="139" cy="80" rx="6" ry="8" fill="{CS}" stroke="{INK}" stroke-width="2.6"/>',
+             f'<path d="M62 74Q60 36 100 34Q140 36 138 74Q140 104 100 108Q60 104 62 74Z" fill="{CS}" stroke="{INK}" stroke-width="3"/>',
+             f'<path d="M118 40Q140 50 138 74Q138 100 110 107Q128 90 126 66Q124 48 118 40Z" fill="{CSD}" opacity=".5"/>',
+             # coloretes pintados de Carnaval
+             f'<circle cx="76" cy="92" r="7" fill="{CLAY}" opacity=".45"/><circle cx="124" cy="92" r="7" fill="{CLAY}" opacity=".45"/>',
+             # bombín
+             f'<path d="M58 46Q100 36 142 46Q140 52 100 48Q60 52 58 46Z" fill="#2B2A33" stroke="{INK}" stroke-width="2.4"/>',
+             f'<path d="M70 44Q70 10 100 8Q130 10 130 44Q100 38 70 44Z" fill="#2B2A33" stroke="{INK}" stroke-width="2.6"/>',
+             f'<path d="M100 8Q128 10 130 44Q118 40 110 40Q114 22 100 8Z" fill="#1E1D25"/>',
+             f'<path d="M71 36Q100 30 129 36L129 42Q100 36 71 42Z" fill="{GOLD}" stroke="{INK}" stroke-width="1.6"/>',
+             f'<path d="M122 36Q130 22 138 26Q134 32 128 38Z" fill="{CLAY}" stroke="{INK}" stroke-width="1.4"/>',
+             f'<path d="M80 20Q84 14 92 12" fill="none" stroke="#FFF" stroke-width="2" opacity=".35"/>')
+    rim = g("rim", f'<path d="M72 126L70 200" fill="none" stroke="#FFF" stroke-width="2" opacity=".4"/>')
+    return lambda e: svg(e, [SHADOW, legs, jacket, arms, head, face_of(e).replace("#5A3A22", "#4A3A2A"), rim])
+
+
 def write(key, build):
     os.makedirs(os.path.join(SPR, key), exist_ok=True)
     for e in EXPR:
@@ -251,6 +303,6 @@ def write(key, build):
 
 
 if __name__ == "__main__":
-    for key, build in [("norica", norica()), ("pepa", pepa()), ("magon", magon())]:
+    for key, build in [("norica", norica()), ("pepa", pepa()), ("magon", magon()), ("chirigotero", chirigotero())]:
         write(key, build)
     print("sprites de Cádiz generados")
