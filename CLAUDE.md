@@ -121,6 +121,12 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   de «usted» al jugador), con el Giraldillo y Hernando Colón. Dos tumbas (Sevilla y Santo Domingo) y
   tres sospechosos; caminos Río y Papeles; pruebas de la caja de 1877 y del ADN de 2006.
 - Arte en `scripts/art/sevilla_*.py` (reutiliza las piezas de los generadores de Cádiz).
+
+**Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
+- Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
+  León de la fuente y Boabdil. Tres sospechosos (el sultán, los Zegríes, nadie); caminos Albaicín y
+  Alhambra; pruebas de la novela de 1595 y de las manchas de la fuente. No entra en los Palacios
+  Nazaríes (entrada con hora). Arte en `scripts/art/granada_*.py`.
 ## Arquitectura
 
 ```
@@ -154,8 +160,9 @@ scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 content/cadiz/            la-ciudad-que-no-cayo.pack.json
 content/sevilla/          donde-esta-colon.pack.json
+content/granada/          abencerrajes.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,aguador,giraldillo,hernando}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
@@ -235,6 +242,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Cádiz: coordenadas y radios en la calle, revisión histórica de los datos de `docs/GDD_CADIZ.md`,
   decidir si la ruta es gratuita (`isFree: true` provisional) y un posible "antes y ahora".
 - Sevilla: lo mismo con `docs/GDD_SEVILLA.md`; el camino del río es mucho más largo que el de los papeles.
+- Granada: lo mismo con `docs/GDD_GRANADA.md`; cuestas fuertes y horarios del recinto de la Alhambra.
 
 ## Qué NO hacer
 

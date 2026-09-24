@@ -267,19 +267,19 @@
             },
             "options": [
               {
-                "es": "1492",
-                "en": "1492"
-              },
-              {
                 "es": "1236",
                 "en": "1236"
+              },
+              {
+                "es": "1492",
+                "en": "1492"
               },
               {
                 "es": "1609",
                 "en": "1609"
               }
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "explanation": {
               "es": "El 2 de enero de 1492. Ese mismo año Colón zarpó hacia América.",
               "en": "On 2 January 1492. That same year Columbus sailed for the Americas."
@@ -382,19 +382,19 @@
             },
             "options": [
               {
-                "es": "La roja",
-                "en": "The red one"
-              },
-              {
                 "es": "La alta",
                 "en": "The high one"
               },
               {
                 "es": "La del agua",
                 "en": "The one of water"
+              },
+              {
+                "es": "La roja",
+                "en": "The red one"
               }
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "explanation": {
               "es": "Viene del árabe al-hamra, «la roja», por el color de sus murallas.",
               "en": "It comes from the Arabic al-hamra, “the red one”, because of the colour of its walls."
@@ -409,7 +409,7 @@
           },
           "nextNodeId": "a2_pesas",
           "nextHint": {
-            "es": "Sube a la Plaza Larga, al Arco de las Pesas. Unos 5 minutos.",
+            "es": "Suba a la Plaza Larga, al Arco de las Pesas. Unos 5 minutos.",
             "en": "Head up to Plaza Larga, to the Arco de las Pesas. About 5 minutes."
           }
         },
@@ -469,7 +469,7 @@
           },
           "nextNodeId": "n4_tristes",
           "nextHint": {
-            "es": "Baja hasta el Paseo de los Tristes, junto al río Darro. Unos 10 minutos.",
+            "es": "Baje hasta el Paseo de los Tristes, junto al río Darro. Unos 10 minutos.",
             "en": "Head down to the Paseo de los Tristes, by the river Darro. About 10 minutes."
           }
         },
@@ -540,19 +540,19 @@
             },
             "options": [
               {
-                "es": "Una mano",
-                "en": "A hand"
-              },
-              {
                 "es": "Un león",
                 "en": "A lion"
+              },
+              {
+                "es": "Una mano",
+                "en": "A hand"
               },
               {
                 "es": "Una granada",
                 "en": "A pomegranate"
               }
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "explanation": {
               "es": "Una mano abierta. La llave está en el arco interior. Se interpretan como símbolos de la fe y de la protección.",
               "en": "An open hand. The key is on the inner arch. They are interpreted as symbols of faith and protection."
@@ -567,7 +567,7 @@
           },
           "nextNodeId": "b2_carlos",
           "nextHint": {
-            "es": "Sigue hasta el Palacio de Carlos V. Unos 3 minutos.",
+            "es": "Siga hasta el Palacio de Carlos V. Unos 3 minutos.",
             "en": "Carry on to the Palace of Charles V. About 3 minutes."
           }
         },
@@ -646,7 +646,7 @@
           },
           "nextNodeId": "n4_tristes",
           "nextHint": {
-            "es": "Baja por la Cuesta de los Chinos hasta el Paseo de los Tristes. Unos 15 minutos.",
+            "es": "Baje por la Cuesta de los Chinos hasta el Paseo de los Tristes. Unos 15 minutos.",
             "en": "Walk down the Cuesta de los Chinos to the Paseo de los Tristes. About 15 minutes."
           }
         },
@@ -829,7 +829,7 @@
           },
           "nextNodeId": "n5_banuelo",
           "nextHint": {
-            "es": "Baja por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
+            "es": "Baje por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
             "en": "Walk down the Carrera del Darro to the Bañuelo. About 4 minutes."
           }
         },
@@ -891,7 +891,7 @@
           },
           "nextNodeId": "n5_banuelo",
           "nextHint": {
-            "es": "Baja por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
+            "es": "Baje por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
             "en": "Walk down the Carrera del Darro to the Bañuelo. About 4 minutes."
           }
         },
@@ -995,19 +995,19 @@
             },
             "options": [
               {
-                "es": "Una posada y almacén para mercaderes",
-                "en": "An inn and warehouse for merchants"
-              },
-              {
                 "es": "Una mezquita pequeña",
                 "en": "A small mosque"
               },
               {
                 "es": "Un cuartel",
                 "en": "A barracks"
+              },
+              {
+                "es": "Una posada y almacén para mercaderes",
+                "en": "An inn and warehouse for merchants"
               }
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "explanation": {
               "es": "Los mercaderes dejaban aquí sus mercancías y sus animales, y dormían en las habitaciones de arriba.",
               "en": "Merchants left their goods and animals here and slept in the rooms upstairs."
