@@ -1,0 +1,136 @@
+# CLAUDE.md · Contexto del proyecto
+
+Lee este archivo entero antes de tocar código. El detalle del juego está en `docs/GDD.md`.
+
+## Qué es
+
+App móvil (iOS y Android) de **juego narrativo geolocalizado** para turistas: el jugador camina por
+la ciudad, un personaje histórico le guía con diálogos y audio, resuelve retos y **toma decisiones
+que le llevan por calles distintas** (narrativa ramificada tipo "elige tu propia aventura").
+Primera ciudad: **Málaga**. Primera ruta (gratis): **"El misterio de la Manquita"**, guiada por
+**Er Cenachero**. La app debe escalar a muchas ciudades: el código es un **motor genérico** y cada
+ciudad es solo **contenido** (un pack JSON + assets).
+
+- Nombre comercial de la app: pendiente → usar siempre `[Nombre de la app]`.
+- Idioma de la interfaz y del código de producto: **español**. Comentarios en español.
+- Plataforma: Expo + React Native + TypeScript estricto + expo-router.
+
+## Comandos
+
+```bash
+npm install && npx expo install --fix   # primera vez: alinea versiones con el SDK de Expo
+npx expo start                          # desarrollo
+npm run typecheck                       # tsc --noEmit (debe quedar en 0 errores)
+```
+
+Tras cada cambio relevante: `npm run typecheck` y probar en Expo Go o simulador.
+Commits pequeños por tarea, mensajes en español con prefijo convencional (`feat(motor): …`).
+
+## Estado actual
+
+**Fase 1 hecha** (nunca se ha ejecutado todavía: el código se escribió sin poder instalar
+dependencias; lo primero es arrancarlo y corregir lo que falle):
+- Tema en `src/theme` y componentes en `src/components/ui`.
+- Navegación en dos modos: pestañas fuera de la ruta, pantalla de juego con HUD dentro.
+- Pantallas con datos fijos (maqueta) que la fase 2 debe conectar al motor.
+
+## Arquitectura
+
+```
+app/                      rutas (expo-router)
+  _layout.tsx             carga fuentes, Stack raíz, modales
+  (tabs)/                 Explorar (index), Mis rutas, Colección, Perfil → TabBar propia
+  bienvenida.tsx, permisos.tsx
+  ciudad/[id].tsx
+  ruta/[id]/index.tsx     detalle de ruta
+  ruta/[id]/jugar.tsx     MODO RUTA: escena + HUD + caja de diálogo (sin pestañas)
+  pausa.tsx               modal transparente, vuelve al mismo punto
+  cuaderno.tsx            modal: pistas, mapa, objetos
+src/theme/                tokens (colores, radios, sombras, tipografía)
+src/components/ui/        Button3D, IconButton, Chip, Panel(+Nameplate), DialogBox, ChoiceCard,
+                          Hud, TabBar, HardShadow, AzulejoBackground, Icon
+src/components/layout/    Screen, TopBar
+src/content/types.ts      ESQUEMA de los packs (fuente de verdad del contenido)
+content/malaga/           misterio-manquita.pack.json
+assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
+assets/backgrounds/layers bg_{parada}_{n}_{capa}@2x/@3x.webp  (capas para parallax)
+```
+
+Reglas de navegación (no romperlas):
+1. **Fuera de la ruta** manda la barra de pestañas. **Dentro de la ruta** no hay pestañas: el HUD
+   (pausa · progreso por paradas · cuaderno con contador) ocupa su lugar.
+2. Pausa y Cuaderno son **modales** que siempre devuelven al punto exacto de la escena.
+3. El progreso se guarda en cada nodo. Explorar muestra "Continuar" con la parada exacta.
+
+## Sistema de diseño "Azulejo y sal" v2 (usar SIEMPRE los tokens de `src/theme`)
+
+- Colores: ink `#1B2A3A` (contornos y texto) · clay `#A8431F` (acción, camino del poder) ·
+  sea `#2F6F73` (secundario, camino del dinero) · peach `#F0A27F` (acento sobre oscuro) ·
+  gold `#F2C14E` (logros) · paper `#FFF8EC` (paneles de juego) · cream `#F6EFE3` (fondo) ·
+  sand `#EADFCB` (superficies suaves).
+- **Color por camino**: `branchColors.dinero` = sea, `branchColors.poder` = clay. Se repite en
+  mapa, decisiones, pistas, HUD y coleccionables. Nunca mezclarlos.
+- Estilo de juego: contorno de tinta 2–3 px, **sombra dura** desplazada 3–4 px sin desenfoque
+  (componente `HardShadow`; en Android `elevation` no sirve), radios 9/14/16/22, botones que
+  "bajan" al pulsar, motivo de azulejo malagueño en fondos y cabeceras.
+- Tipografía: Fraunces 700 (títulos) + DM Sans 400/500/700 (texto). Diálogos a 17 px.
+- Caja de diálogo estilo novela visual: placa con el nombre del personaje, retrato opcional,
+  texto, barra de audio con repetir y botón de avance. Los personajes quedan detrás de la caja.
+- Accesibilidad: objetivos táctiles ≥ 44 px, `accessibilityRole/Label` en todo lo pulsable,
+  subtítulos siempre disponibles.
+
+## Motor narrativo (fase 2, lo siguiente)
+
+El pack es un **grafo** de `StoryNode` (ver `src/content/types.ts`):
+- Nodo **con `location`** → espera al geofence (o al botón "Simular llegada" en modo demo).
+- Nodo **sin `location`** → nodo narrativo: se lanza al terminar el anterior.
+- `choices` con `setFlags` → decisiones; `variants` en diálogos → texto según flags
+  (se elige la primera variante cuyos `requires` estén todos en los flags del jugador).
+- `clue` añade una pista al cuaderno; `rewards` dan coleccionables; `endings` según flags.
+- Estructura "ramificar y reunir": las ramas se reúnen en nodos cuello de botella.
+
+Tareas de la fase 2:
+1. `src/engine/loadPack.ts`: cargar el JSON y validarlo con **zod** (esquema espejo de types.ts).
+   Validar además referencias: todo `nextNodeId`/`targetNodeId` existe, `startNodeId` existe,
+   cada `characterId` existe. Errores claros, nunca crashear la app por un pack mal formado.
+2. `src/engine/runner.ts`: funciones puras y testeables → `getNode`, `resolveText(block, flags)`,
+   `availableChoices(node, flags)`, `advance(state, choice?)`, `resolveEnding(route, flags)`.
+3. `src/store/progress.ts`: zustand + persistencia (MMKV o AsyncStorage) con `PlayerProgress`.
+4. Conectar `ruta/[id]/jugar.tsx`, HUD, cuaderno, colección y "Continuar" al motor.
+5. Modo demo: botón "Simular llegada" para jugar toda la ruta desde casa.
+6. Tests unitarios del runner (jest-expo): los 4 finales deben ser alcanzables.
+
+## Fases siguientes
+
+- **3 · Escenas**: `SceneStage` con capas WebP y parallax por giroscopio (expo-sensors;
+  factores sugeridos: cielo 0, fondo 0.1, medio 0.25, primer plano 0.6; capa fx fija), sprites
+  SVG con cambio del grupo `face` por expresión y lip-sync alternando `neutral`/`talking` mientras
+  suena el audio (expo-audio), sombra proyectada del personaje inclinada según el sol, subtítulos.
+- **4 · Geolocalización**: expo-location + expo-task-manager en segundo plano. **iOS solo permite
+  20 geofences**: registrar dinámicamente solo los siguientes nodos posibles del grafo. Radios de
+  30–60 m en el casco antiguo. Fallback manual "Ya estoy aquí" si el GPS falla 60 s.
+- **5 · Mapa**: MapLibre (@maplibre/maplibre-react-native), dos caminos en sus colores, descarga
+  offline por ciudad.
+- **6 · Pulido**: colección, finales, i18n (inglés), analítica, pruebas en la calle.
+
+## Contenido e historia (resumen; completo en docs/GDD.md)
+
+Misterio: ¿por qué la catedral de Málaga ("la Manquita") tiene una sola torre? Las obras se
+pararon en 1782 por falta de fondos. Leyenda: el dinero ayudó a la independencia de EE. UU.
+Documentos: se usó en el camino de Antequera. El juego presenta ambas; nunca afirma la leyenda
+como hecho. Las anécdotas "se cuenta" van con `legend: true`.
+
+## Pendientes fuera del código
+
+- Verificar sobre el terreno coordenadas, radios y tiempos a pie (son estimaciones).
+- Pedir permiso a la Antigua Casa de Guardia (el reto implica entrar al local).
+- Revisión de un historiador local antes de grabar audios.
+- Voces: decidir locutores reales o síntesis.
+
+## Qué NO hacer
+
+- No meter contenido de ciudad en el código: todo sale del pack.
+- No usar colores o tamaños sueltos: usar `src/theme`.
+- No usar `localStorage`/web-only APIs; es React Native.
+- No añadir dependencias pesadas sin justificarlo en el commit.
