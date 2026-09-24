@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
 import { Button3D, Panel } from "@/components/ui";
 import { LangSetting, useI18n } from "@/i18n";
+import { useFieldTest } from "@/field/store";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
@@ -19,6 +20,8 @@ export default function Perfil() {
   const analytics = useProgress((s) => s.analytics);
   const setAnalytics = useProgress((s) => s.setAnalytics);
   const language = useProgress((s) => s.language);
+  const fieldTest = useFieldTest((s) => s.enabled);
+  const setFieldTest = useFieldTest((s) => s.setEnabled);
   const setLanguage = useProgress((s) => s.setLanguage);
   const options: { value: LangSetting; label: string }[] = [{ value: "auto", label: t("perfil.idiomaAuto") }, ...LANGS];
 
@@ -67,6 +70,23 @@ export default function Perfil() {
             accessibilityLabel={t("perfil.estadisticas")}
           />
         </View>
+      </Panel>
+      <Panel nameplate={t("campo.titulo")} nameplateColor={colors.sea}>
+        <View style={styles.row}>
+          <View style={{ flex: 1 }}>
+            <Text style={type.label}>{t("campo.activar")}</Text>
+            <Text style={type.caption}>{t("campo.activarTexto")}</Text>
+          </View>
+          <Switch
+            value={fieldTest}
+            onValueChange={setFieldTest}
+            trackColor={{ true: colors.sea }}
+            accessibilityLabel={t("campo.activar")}
+          />
+        </View>
+        {fieldTest ? (
+          <Button3D label={t("campo.verInforme")} variant="secondary" small onPress={() => router.push("/campo")} />
+        ) : null}
       </Panel>
       <Button3D label={t("perfil.verBienvenida")} variant="secondary" onPress={() => router.push("/bienvenida")} />
     </Screen>

@@ -1,12 +1,20 @@
 import { Text } from "react-native";
 import type { StoryNode } from "@/content/types";
+import { radiusOf } from "@/engine/geo";
 import { useI18n } from "@/i18n";
 import type { ArrivalWatch } from "@/hooks/useArrivalWatcher";
 import { colors, type } from "@/theme";
 import { Button3D } from "../ui/Button3D";
 import { Panel } from "../ui/Panel";
 
-type Props = { node: StoryNode; demoMode: boolean; watch: ArrivalWatch; onArrive: (method: "manual" | "demo") => void };
+type Props = {
+  node: StoryNode;
+  demoMode: boolean;
+  watch: ArrivalWatch;
+  onArrive: (method: "manual" | "demo") => void;
+  /** Modo prueba de campo: muestra precisión, distancia y radio. */
+  fieldTest?: boolean;
+};
 
 function gpsText({ status, distance }: ArrivalWatch, { t, distance: fmt }: ReturnType<typeof useI18n>): string {
   switch (status) {
@@ -26,7 +34,7 @@ function gpsText({ status, distance }: ArrivalWatch, { t, distance: fmt }: Retur
  * geofences en segundo plano) marcan la llegada solos; "Ya estoy aquí"
  * aparece si el GPS falla 60 s, y "Simular llegada" en modo demo.
  */
-export function ArrivalPanel({ node, demoMode, watch, onArrive }: Props) {
+export function ArrivalPanel({ node, demoMode, watch, onArrive, fieldTest }: Props) {
   const i18n = useI18n();
   const { t, L } = i18n;
   return (
@@ -36,6 +44,17 @@ export function ArrivalPanel({ node, demoMode, watch, onArrive }: Props) {
       <Text style={type.secondary} accessibilityLiveRegion="polite">
         {gpsText(watch, i18n)}
       </Text>
+      {fieldTest ? (
+        <Text style={[type.caption, { color: colors.sea }]} testID="diagnostico-campo">
+          {watch.lastFix && watch.distance !== undefined
+            ? t("campo.diagnostico", {
+                accuracy: Math.round(watch.lastFix.accuracy ?? 0),
+                distance: i18n.distance(watch.distance),
+                radius: radiusOf(node),
+              })
+            : t("campo.sinSenal")}
+        </Text>
+      ) : null}
       {watch.manualFallback ? (
         <Button3D
           label={t("jugar.yaEstoy")}

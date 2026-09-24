@@ -2,7 +2,7 @@ import * as Location from "expo-location";
 import { useEffect, useState } from "react";
 import type { StoryNode } from "@/content/types";
 import { distanceM, GpsStatus, isInside, offerManualArrival } from "@/engine/geo";
-import { Watch, watchPosition } from "@/geo/watchPosition";
+import { Fix, Watch, watchPosition } from "@/geo/watchPosition";
 
 export type ArrivalWatch = {
   status: GpsStatus;
@@ -10,6 +10,8 @@ export type ArrivalWatch = {
   distance?: number;
   /** Mostrar "Ya estoy aquí": sin permiso, sin GPS o 60 s sin posición. */
   manualFallback: boolean;
+  /** Última posición recibida (para la prueba de campo). */
+  lastFix?: Fix;
 };
 
 /**
@@ -17,7 +19,14 @@ export type ArrivalWatch = {
  * `node`. Al entrar en su radio llama a `onArrive`. Los geofences en segundo
  * plano (src/geo/background.ts) cubren el caso de la app cerrada.
  */
-export function useArrivalWatcher(node: StoryNode, enabled: boolean, onArrive: () => void): ArrivalWatch {
+export function useArrivalWatcher(
+  node: StoryNode,
+  enabled: boolean,
+  /** Recibe la posición que ha provocado la llegada. */
+  onArrive: (fix: Fix) => void,
+  onFix?: (fix: Fix) => void,
+): ArrivalWatch {
+  const [lastFix, setLastFix] = useState<Fix>();
   const [status, setStatus] = useState<GpsStatus>("asking");
   const [distance, setDistance] = useState<number>();
   const [watchStartedAt, setWatchStartedAt] = useState<number>();
@@ -39,8 +48,10 @@ export function useArrivalWatcher(node: StoryNode, enabled: boolean, onArrive: (
         setWatchStartedAt(Date.now());
         sub = await watchPosition({ accuracy: "high", distanceInterval: 5 }, (fix) => {
           setLastFixAt(Date.now());
+          setLastFix(fix);
+          onFix?.(fix);
           setDistance(distanceM(fix, node.location!));
-          if (isInside(fix, node)) onArrive();
+          if (isInside(fix, node)) onArrive(fix);
         });
         if (cancelled) sub.remove();
       } catch {
@@ -61,5 +72,5 @@ export function useArrivalWatcher(node: StoryNode, enabled: boolean, onArrive: (
     return () => clearInterval(timer);
   }, [enabled]);
 
-  return { status, distance, manualFallback: offerManualArrival({ status, watchStartedAt, lastFixAt, now }) };
+  return { status, distance, lastFix, manualFallback: offerManualArrival({ status, watchStartedAt, lastFixAt, now }) };
 }

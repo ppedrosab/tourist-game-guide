@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { AppState } from "react-native";
 import { findRoute } from "@/engine/catalog";
 import { pendingArrivalFor } from "@/engine/geo";
+import { useFieldTest } from "@/field/store";
 import { useProgress } from "@/store/progress";
 import { syncGeofences, takePendingArrivals } from "./background";
 
@@ -29,7 +30,10 @@ export function GeofenceSync() {
       const { runs, markArrived } = useProgress.getState();
       for (const run of Object.values(runs)) {
         const route = findRoute(run.routeId)?.route;
-        if (route && !run.completedAt && pendingArrivalFor(run, pending)) markArrived(route, "geofence");
+        if (route && !run.completedAt && pendingArrivalFor(run, pending)) {
+          useFieldTest.getState().addArrival({ routeId: run.routeId, nodeId: run.currentNodeId, method: "geofence" });
+          markArrived(route, "geofence");
+        }
       }
     };
     apply();

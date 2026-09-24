@@ -1,5 +1,5 @@
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArrivalPanel } from "@/components/game/ArrivalPanel";
@@ -19,6 +19,9 @@ import { stageCast } from "@/scene/cast";
 import { sceneKeyFor } from "@/scene/sceneFor";
 import { castShadow, sunPosition } from "@/scene/sun";
 import { StringKey, useI18n } from "@/i18n";
+import type { ArrivalMethod } from "@/analytics";
+import { useFieldTest } from "@/field/store";
+import type { Fix } from "@/geo/watchPosition";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
@@ -72,7 +75,31 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const node = getNode(route, run.currentNodeId);
   // Nodo con ubicación: la escena espera a la llegada (guardada en el progreso). Los narrativos empiezan ya.
   const arrived = hasArrived(route, run);
-  const watch = useArrivalWatcher(node, !arrived, () => markArrived(route, "gps"));
+  // Prueba de campo: posiciones cerca de la parada y cómo se detectó cada llegada.
+  const field = useFieldTest();
+  const waitingSince = useRef(Date.now());
+  const arrive = (method: ArrivalMethod, at?: Fix) => {
+    // Con GPS, la posición que provocó la llegada; si no, la última conocida.
+    const fix = at ?? watchRef.current?.lastFix;
+    field.addArrival({
+      routeId: route.id,
+      nodeId: node.id,
+      method,
+      lat: fix?.lat,
+      lng: fix?.lng,
+      accuracy: fix?.accuracy,
+      waitedS: Math.round((Date.now() - waitingSince.current) / 1000),
+    });
+    markArrived(route, method);
+  };
+  const watch = useArrivalWatcher(
+    node,
+    !arrived,
+    (fix) => arrive("gps", fix),
+    (fix) => field.addFix({ routeId: route.id, nodeId: node.id, ...fix }),
+  );
+  const watchRef = useRef(watch);
+  watchRef.current = watch;
   const steps = useMemo(() => buildSteps(route, node, run.flags), [route, node, run.flags]);
   const [index, setIndex] = useState(0);
   const step = steps[Math.min(index, steps.length - 1)];
@@ -127,7 +154,8 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
         {!arrived ? (
-          <ArrivalPanel node={node} demoMode={demoMode} watch={watch} onArrive={(method) => markArrived(route, method)} />
+          <ArrivalPanel node={node} demoMode={demoMode} watch={watch} onArrive={(method) => arrive(method)}
+            fieldTest={field.enabled} />
         ) : (
           <StepView
             step={step}

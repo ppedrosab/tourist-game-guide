@@ -42,6 +42,7 @@ export default function RootLayout() {
         <Stack.Screen name="pausa" options={{ presentation: "transparentModal", animation: "fade" }} />
         <Stack.Screen name="cuaderno" options={{ presentation: "modal" }} />
         <Stack.Screen name="mapa" options={{ presentation: "modal" }} />
+        <Stack.Screen name="campo" />
       </Stack>
     </>
   );
