@@ -5,6 +5,8 @@ import { Button3D, Chip, IconButton, Panel } from "@/components/ui";
 import { findRoute } from "@/engine/catalog";
 import { routeFacts, routeOutline } from "@/engine/outline";
 import { localize } from "@/engine/runner";
+import { routeMapData } from "@/map/geometry";
+import { RouteMap } from "@/map/RouteMap";
 import { useActiveRun, useProgress } from "@/store/progress";
 import { border, branchColors, colors, fonts, type } from "@/theme";
 
@@ -26,6 +28,8 @@ export default function DetalleRuta() {
   const { pack, route } = found;
   const facts = routeFacts(route);
   const outline = routeOutline(route);
+  // Mismos números de parada que el mapa (las ramas paralelas comparten número).
+  const stopNumber = new Map(routeMapData(route).stops.map((s) => [s.id, s.order]));
   const play = () => router.push(`/ruta/${route.id}/jugar`);
   const startFresh = () => {
     start(pack.id, route);
@@ -42,12 +46,13 @@ export default function DetalleRuta() {
         {facts.endings > 0 ? <Chip label={`${facts.endings} finales`} icon="star" /> : null}
       </View>
       <Text style={type.body}>{localize(route.summary)}</Text>
+      <RouteMap route={route} run={active} height={230} />
       <Panel>
         {outline.map((item, i) =>
           item.kind === "stop" ? (
             <View key={item.node.id} style={styles.stop}>
               <View style={[styles.num, { backgroundColor: item.decision ? colors.clay : colors.ink }]}>
-                <Text style={styles.numText}>{i + 1 /* un bloque de ramas cuenta como una parada */}</Text>
+                <Text style={styles.numText}>{stopNumber.get(item.node.id)}</Text>
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={type.label}>{localize(item.node.title)}</Text>
@@ -62,7 +67,7 @@ export default function DetalleRuta() {
                   <View key={b.nodes[0].id} style={styles.branch}>
                     <View style={[styles.dot, { backgroundColor: branchColors[b.branch ?? "comun"] }]} />
                     <Text style={[type.caption, { flex: 1, color: colors.ink }]}>
-                      {b.nodes.map((node) => localize(node.title)).join(" · ")}
+                      {b.nodes.map((node) => `${stopNumber.get(node.id)} · ${localize(node.title)}`).join("  →  ")}
                     </Text>
                   </View>
                 ))}

@@ -59,7 +59,7 @@ export default function Pausa() {
         <Text style={type.subtitle}>{current ? localize(current.route.title) : ""}</Text>
         <Text style={type.caption}>{where}</Text>
         <Button3D label="Continuar escena" icon="play" onPress={() => router.back()} />
-        <Row icon="map" title="Ver mapa" sub="Siguiente parada y caminos" onPress={() => router.back()} />
+        <Row icon="map" title="Ver mapa" sub="Siguiente parada y caminos" onPress={() => router.replace("/mapa")} />
         <Row
           icon="book"
           title="Cuaderno del detective"

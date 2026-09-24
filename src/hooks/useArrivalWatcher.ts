@@ -2,19 +2,7 @@ import * as Location from "expo-location";
 import { useEffect, useState } from "react";
 import type { StoryNode } from "@/content/types";
 import { distanceM, GpsStatus, isInside, offerManualArrival } from "@/engine/geo";
-
-/**
- * expo-location 19 en web llama a `LocationEventEmitter.removeSubscription`,
- * que no existe en el EventEmitter web, y lanza al quitar la última
- * suscripción. En nativo no pasa; en web el watch ya se ha cancelado antes.
- */
-function stopWatch(sub: Location.LocationSubscription | undefined) {
-  try {
-    sub?.remove();
-  } catch {
-    // Solo web: ver comentario de arriba.
-  }
-}
+import { Watch, watchPosition } from "@/geo/watchPosition";
 
 export type ArrivalWatch = {
   status: GpsStatus;
@@ -39,7 +27,7 @@ export function useArrivalWatcher(node: StoryNode, enabled: boolean, onArrive: (
   useEffect(() => {
     if (!enabled || !node.location) return;
     let cancelled = false;
-    let sub: Location.LocationSubscription | undefined;
+    let sub: Watch | undefined;
     (async () => {
       try {
         const services = await Location.hasServicesEnabledAsync();
@@ -49,23 +37,19 @@ export function useArrivalWatcher(node: StoryNode, enabled: boolean, onArrive: (
         if (!services) return setStatus("unavailable");
         setStatus("watching");
         setWatchStartedAt(Date.now());
-        sub = await Location.watchPositionAsync(
-          { accuracy: Location.Accuracy.High, distanceInterval: 5, timeInterval: 3000 },
-          ({ coords }) => {
-            const fix = { lat: coords.latitude, lng: coords.longitude, accuracy: coords.accuracy };
-            setLastFixAt(Date.now());
-            setDistance(distanceM(fix, node.location!));
-            if (isInside(fix, node)) onArrive();
-          },
-        );
-        if (cancelled) stopWatch(sub);
+        sub = await watchPosition({ accuracy: "high", distanceInterval: 5 }, (fix) => {
+          setLastFixAt(Date.now());
+          setDistance(distanceM(fix, node.location!));
+          if (isInside(fix, node)) onArrive();
+        });
+        if (cancelled) sub.remove();
       } catch {
         if (!cancelled) setStatus("unavailable");
       }
     })();
     return () => {
       cancelled = true;
-      stopWatch(sub);
+      sub?.remove();
     };
     // onArrive cambia en cada render; el nodo y `enabled` son los que importan.
   }, [node, enabled]);

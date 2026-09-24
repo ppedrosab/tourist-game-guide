@@ -66,7 +66,8 @@ export default function Cuaderno() {
           </View>
         </>
       ) : null}
-      <Button3D label="Volver" icon="map" onPress={close} />
+      <Button3D label="Ver mapa" icon="map" variant="secondary" onPress={() => router.replace("/mapa")} />
+      <Button3D label="Volver" onPress={close} />
     </Screen>
   );
 }
