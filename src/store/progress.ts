@@ -15,6 +15,12 @@ type ProgressStore = {
   lastRouteId?: string;
   /** true cuando ya se ha leído lo guardado en disco. */
   hydrated: boolean;
+  /**
+   * Modo demo: botón "Simular llegada" para jugar la ruta desde casa.
+   * Activo por defecto hasta que exista la geolocalización (fase 4).
+   */
+  demoMode: boolean;
+  setDemoMode: (on: boolean) => void;
 
   /** Empieza (o reinicia) la ruta desde el nodo inicial. */
   start: (cityId: string, route: Route) => PlayerProgress;
@@ -51,6 +57,8 @@ export const useProgress = create<ProgressStore>()(
         runs: {},
         collection: EMPTY,
         hydrated: false,
+        demoMode: true,
+        setDemoMode: (demoMode) => set({ demoMode }),
         start: (cityId, route) => save(startRoute(cityId, route)),
         advance: (route, choice) => {
           const run = get().runs[route.id];
@@ -68,7 +76,7 @@ export const useProgress = create<ProgressStore>()(
       name: "progreso",
       version: 1,
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ runs, collection, lastRouteId }) => ({ runs, collection, lastRouteId }),
+      partialize: ({ runs, collection, lastRouteId, demoMode }) => ({ runs, collection, lastRouteId, demoMode }),
       onRehydrateStorage: () => () => useProgress.setState({ hydrated: true }),
     },
   ),
