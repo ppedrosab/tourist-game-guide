@@ -145,6 +145,28 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   León de la fuente y Boabdil. Tres sospechosos (el sultán, los Zegríes, nadie); caminos Albaicín y
   Alhambra; pruebas de la novela de 1595 y de las manchas de la fuente. No entra en los Palacios
   Nazaríes (entrada con hora). Arte en `scripts/art/granada_*.py`.
+**Quinta a octava ciudad: Córdoba, Huelva, Jaén y Almería** (una ruta de historia y una gastronómica
+cada una; diseño y datos a verificar en `docs/GDD_CORDOBA.md`, `GDD_HUELVA.md`, `GDD_JAEN.md`, `GDD_ALMERIA.md`):
+- Córdoba: «La biblioteca del califa» (Lubna, Almanzor, un librero) y «¿Quién le puso tomate al
+  salmorejo?» (patiera, Ziryab, jornalero).
+- Huelva: «¿Quién trajo el fútbol a España?» (el doctor Mackay, de «usted»; minero; marinero) y «¿Por
+  qué nos llaman choqueros?» (choquera, fresera, cortador).
+- Jaén: «¿Quién mató al lagarto de la Malena?» (sereno, preso, pastor; veredicto: nadie, la piel de un
+  caimán) y «¿Quién plantó el mar de olivos?» (catadora, vareador, molinero).
+- Almería: «¿Qué significa Almería?» (vigía, Jayrán, sedera) y «¿Quién convirtió el desierto en
+  huerta?» (hortelana, barrilero, pescador).
+- Personajes paramétricos: `scripts/art/figure.py` (misma cabeza y 8 caras; pelo, barba, tocado, ropa y
+  objetos en las manos) y el reparto en `scripts/art/andalucia_sprites.py`. Medallones y fondos por
+  ciudad en `scripts/art/{ciudad}_collectibles.py` y `{ciudad}_scenes.py`.
+- Las respuestas correctas de los quizzes se reparten entre las opciones (el generador rota las
+  opciones); no dejar la correcta siempre en la primera.
+
+**Rutas gastronómicas de Málaga, Sevilla y Granada** (ver `docs/GDD_GASTRO_ANDALUCIA.md`): «¿Quién
+inventó el espeto?» (espetero, jabegote, pasera), «¿Por qué Sevilla huele a azahar?» (naranjera,
+escocés, aceitunero) y «¿Quién inventó el pionono?» (especiera, Ceferino Isla, hermana tornera).
+Reutilizan los fondos de historia; los nuevos en `scripts/art/gastro_andalucia_scenes.py`. El pack de
+Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin reformatear el archivo.
+
 ## Arquitectura
 
 ```
@@ -179,8 +201,9 @@ content/malaga/           misterio-manquita.pack.json
 content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia, gastronomía, Carnaval y Semana Santa)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
+content/cordoba/, huelva/, jaen/, almeria/  {ciudad}.pack.json (historia y gastronomía)
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,cargador,maniguetero,saetera,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,cargador,maniguetero,saetera,aguador,giraldillo,hernando,irving,leon,boabdil,…}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)
@@ -261,6 +284,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
   decidir si la ruta es gratuita (`isFree: true` provisional) y un posible "antes y ahora".
 - Sevilla: lo mismo con `docs/GDD_SEVILLA.md`; el camino del río es mucho más largo que el de los papeles.
 - Granada: lo mismo con `docs/GDD_GRANADA.md`; cuestas fuertes y horarios del recinto de la Alhambra.
+- Córdoba, Huelva, Jaén y Almería, y las rutas gastronómicas de Málaga, Sevilla y Granada: coordenadas,
+  radios y la lista de «Datos a verificar» de cada GDD. Jaén y Almería tienen cuestas.
 
 ## Qué NO hacer
 
