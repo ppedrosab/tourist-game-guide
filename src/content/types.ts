@@ -119,6 +119,8 @@ export interface PlayerProgress {
   collectibleIds: string[];
   flags: string[];
   startedAt: string;
+  /** Momento en que el jugador llegó al nodo actual (solo nodos con `location`). */
+  arrivedAt?: string;
   completedAt?: string;
   endingId?: string;
 }

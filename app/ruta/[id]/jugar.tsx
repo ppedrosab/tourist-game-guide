@@ -9,7 +9,7 @@ import { Screen, TopBar } from "@/components/layout/Screen";
 import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
 import type { CityPack, PlayerProgress, Route } from "@/content/types";
 import { findRoute } from "@/engine/catalog";
-import { getNode, localize, needsArrival, routeStops } from "@/engine/runner";
+import { getNode, hasArrived, localize, routeStops } from "@/engine/runner";
 import { buildSteps, SceneStep } from "@/engine/scene";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
@@ -54,9 +54,10 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const insets = useSafeAreaInsets();
   const advance = useProgress((s) => s.advance);
   const demoMode = useProgress((s) => s.demoMode);
+  const markArrived = useProgress((s) => s.markArrived);
   const node = getNode(route, run.currentNodeId);
-  // Nodo con ubicación: la escena espera a la llegada. Los narrativos empiezan ya.
-  const [arrived, setArrived] = useState(!needsArrival(node));
+  // Nodo con ubicación: la escena espera a la llegada (guardada en el progreso). Los narrativos empiezan ya.
+  const arrived = hasArrived(route, run);
   const steps = useMemo(() => buildSteps(route, node, run.flags), [route, node, run.flags]);
   const [index, setIndex] = useState(0);
   const step = steps[Math.min(index, steps.length - 1)];
@@ -87,7 +88,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
         {!arrived ? (
-          <ArrivalPanel node={node} demoMode={demoMode} onArrive={() => setArrived(true)} />
+          <ArrivalPanel node={node} demoMode={demoMode} onArrive={() => markArrived(route)} />
         ) : (
           <StepView
             step={step}

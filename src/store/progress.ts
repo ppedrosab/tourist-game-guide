@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import type { Choice, PlayerProgress, Route } from "@/content/types";
-import { advance as advanceRun, startRoute } from "@/engine/runner";
+import { advance as advanceRun, markArrived as markArrivedRun, startRoute } from "@/engine/runner";
 
 /** Lo conseguido en cualquier partida: sobrevive a "Probar otro camino". */
 export type Collection = { collectibleIds: string[]; endingIds: string[]; clueIds: string[] };
@@ -26,6 +26,8 @@ type ProgressStore = {
   start: (cityId: string, route: Route) => PlayerProgress;
   /** Avanza la partida de la ruta; el progreso queda guardado en cada nodo. */
   advance: (route: Route, choice?: Choice) => PlayerProgress;
+  /** Registra la llegada al nodo actual (GPS, geofence, "Ya estoy aquí" o modo demo). */
+  markArrived: (route: Route) => void;
   /** Borra la partida de una ruta sin tocar la colección. */
   discard: (routeId: string) => void;
 };
@@ -64,6 +66,12 @@ export const useProgress = create<ProgressStore>()(
           const run = get().runs[route.id];
           if (!run) throw new Error(`No hay partida empezada en "${route.id}"`);
           return save(advanceRun(route, run, choice));
+        },
+        markArrived: (route) => {
+          const run = get().runs[route.id];
+          if (!run) return;
+          const next = markArrivedRun(route, run);
+          if (next !== run) save(next);
         },
         discard: (routeId) =>
           set((s) => {

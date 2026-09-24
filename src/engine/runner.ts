@@ -77,6 +77,17 @@ export function isFinished(state: PlayerProgress): boolean {
   return state.completedAt !== undefined;
 }
 
+/** La escena del nodo actual puede empezar: es narrativo o el jugador ya ha llegado. */
+export function hasArrived(route: Route, state: PlayerProgress): boolean {
+  return !needsArrival(getNode(route, state.currentNodeId)) || state.arrivedAt !== undefined;
+}
+
+/** Marca la llegada al nodo actual (geofence, GPS, "Ya estoy aquí" o modo demo). Idempotente. */
+export function markArrived(route: Route, state: PlayerProgress, at: string = now()): PlayerProgress {
+  if (isFinished(state) || hasArrived(route, state)) return state;
+  return { ...state, arrivedAt: at };
+}
+
 /** Entrar en un nodo: pasa a ser el actual, queda visitado y, si es el último, fija el final. */
 function enterNode(route: Route, state: PlayerProgress, nodeId: string): PlayerProgress {
   const node = getNode(route, nodeId);
@@ -84,6 +95,7 @@ function enterNode(route: Route, state: PlayerProgress, nodeId: string): PlayerP
     ...state,
     currentNodeId: node.id,
     visitedNodeIds: addUnique(state.visitedNodeIds, [node.id]),
+    arrivedAt: undefined,
     endingId: node.isEnding ? resolveEnding(route, state.flags)?.id : state.endingId,
   };
 }
