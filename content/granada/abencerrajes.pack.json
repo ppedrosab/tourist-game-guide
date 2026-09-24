@@ -1,0 +1,1243 @@
+{
+  "id": "granada",
+  "version": 1,
+  "name": {
+    "es": "Granada",
+    "en": "Granada"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 37.178,
+    "lng": -3.594
+  },
+  "bounds": [
+    {
+      "lat": 37.173,
+      "lng": -3.601
+    },
+    {
+      "lat": 37.184,
+      "lng": -3.587
+    }
+  ],
+  "coverImage": "img/cover_granada.jpg",
+  "characters": [
+    {
+      "id": "irving",
+      "name": {
+        "es": "Washington Irving",
+        "en": "Washington Irving"
+      },
+      "description": {
+        "es": "Escritor de Nueva York que vivió en la Alhambra en 1829 y recogió sus leyendas. Curioso, elegante y un poco novelero.",
+        "en": "A New York writer who lived in the Alhambra in 1829 and collected its legends. Curious, elegant and a little too fond of a good story."
+      },
+      "avatar": "sprites/irving/irving_neutral.svg",
+      "era": "1783-1859"
+    },
+    {
+      "id": "leon",
+      "name": {
+        "es": "El León",
+        "en": "The Lion"
+      },
+      "description": {
+        "es": "Uno de los doce leones de piedra de la fuente del Patio de los Leones. Lleva siglos echando agua y oyendo secretos.",
+        "en": "One of the twelve stone lions of the fountain in the Court of the Lions. It has spent centuries spouting water and overhearing secrets."
+      },
+      "avatar": "sprites/leon/leon_neutral.svg",
+      "era": "s. XIV-hoy"
+    },
+    {
+      "id": "boabdil",
+      "name": {
+        "es": "Boabdil",
+        "en": "Boabdil"
+      },
+      "description": {
+        "es": "Muhammad XII, el último sultán nazarí de Granada. Orgulloso y melancólico.",
+        "en": "Muhammad XII, the last Nasrid sultan of Granada. Proud and melancholy."
+      },
+      "avatar": "sprites/boabdil/boabdil_neutral.svg",
+      "era": "s. XV"
+    }
+  ],
+  "routes": [
+    {
+      "id": "abencerrajes",
+      "title": {
+        "es": "¿Quién mató a los Abencerrajes?",
+        "en": "Who Killed the Abencerrajes?"
+      },
+      "summary": {
+        "es": "En la Alhambra hay una fuente con manchas rojas y una leyenda de sangre. Resuelve el crimen con Washington Irving: sube a la Alhambra o al Albaicín y separa la historia de la leyenda.",
+        "en": "In the Alhambra there's a fountain with red stains and a legend of blood. Solve the crime with Washington Irving: climb to the Alhambra or the Albaicín and separate history from legend."
+      },
+      "era": "1348 - 1832",
+      "guideCharacterId": "irving",
+      "durationMin": 120,
+      "distanceKm": 3.5,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Albaicín",
+            "en": "Albaicín"
+          },
+          "trail": {
+            "es": "camino del Albaicín",
+            "en": "Albaicín trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Alhambra",
+            "en": "Alhambra"
+          },
+          "trail": {
+            "es": "camino de la Alhambra",
+            "en": "Alhambra trail"
+          }
+        }
+      },
+      "startNodeId": "n1_plaza",
+      "nodes": [
+        {
+          "id": "n1_plaza",
+          "title": {
+            "es": "Plaza Isabel la Católica",
+            "en": "Plaza Isabel la Católica"
+          },
+          "location": {
+            "lat": 37.176,
+            "lng": -3.5985
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_plaza.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plaza.svg"
+              ],
+              "characters": [
+                {
+                  "id": "irving",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ah, por fin un colega! Washington Irving, escritor, de Nueva York. En 1829 viví unos meses dentro de la Alhambra y allí recogí todas las leyendas que pude. Algunas eran verdad. Otras… bueno, para eso le necesito a usted.",
+                "en": "Ah, a colleague at last! Washington Irving, writer, of New York. In 1829 I lived for a few months inside the Alhambra and collected every legend I could find. Some were true. Others… well, that's what I need you for."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "dramatic",
+              "text": {
+                "es": "Le traigo un asesinato, detective. En la Alhambra hay una sala con una fuente de mármol manchada de rojo. Dicen que allí un sultán mandó degollar a los caballeros Abencerrajes, y que las manchas son su sangre. ¿Quién los mató?",
+                "en": "I bring you a murder, detective. In the Alhambra there is a hall with a marble fountain stained red. They say a sultan had the Abencerraje knights beheaded there, and that the stains are their blood. Who killed them?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "text": {
+                "es": "Tengo tres sospechosos: el sultán, celoso porque un Abencerraje amaba a la sultana; los Zegríes, la familia rival; y un tercero muy incómodo: nadie. Apunte cada pista, que el veredicto es suyo.",
+                "en": "I have three suspects: the sultan, jealous because an Abencerraje loved the sultana; the Zegríes, the rival family; and a very awkward third one: nobody. Note down every clue, the verdict is yours."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El monumento de la plaza, de Mariano Benlliure (1892), recuerda las Capitulaciones de Santa Fe de 1492: el acuerdo entre Isabel la Católica y Colón antes de su primer viaje.",
+                "en": "The monument in the square, by Mariano Benlliure (1892), commemorates the Capitulations of Santa Fe of 1492: the agreement between Isabella the Catholic and Columbus before his first voyage."
+              },
+              "year": 1892
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué libro de Irving hizo famosa la Alhambra en todo el mundo?",
+              "en": "Which of Irving's books made the Alhambra famous around the world?"
+            },
+            "options": [
+              {
+                "es": "Cuentos de la Alhambra",
+                "en": "Tales of the Alhambra"
+              },
+              {
+                "es": "La leyenda de Sleepy Hollow",
+                "en": "The Legend of Sleepy Hollow"
+              },
+              {
+                "es": "Viaje a Oriente",
+                "en": "Journey to the East"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Cuentos de la Alhambra se publicó en 1832. La leyenda de Sleepy Hollow también es de Irving, pero ocurre en Nueva York.",
+              "en": "Tales of the Alhambra was published in 1832. The Legend of Sleepy Hollow is also by Irving, but it's set in New York."
+            }
+          },
+          "nextNodeId": "n2_capilla",
+          "nextHint": {
+            "es": "A la Capilla Real, por la calle Oficios. Un par de minutos.",
+            "en": "To the Royal Chapel, along Calle Oficios. A couple of minutes."
+          }
+        },
+        {
+          "id": "n2_capilla",
+          "title": {
+            "es": "Capilla Real",
+            "en": "Royal Chapel"
+          },
+          "location": {
+            "lat": 37.1763,
+            "lng": -3.5996
+          },
+          "triggerRadiusM": 35,
+          "background": "fondos/fondo_granada_capilla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_capilla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "irving",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "boabdil",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "boabdil",
+              "expression": "nervous",
+              "text": {
+                "es": "No esperaba que me presentaran aquí, junto a quienes se quedaron mi reino. Soy Boabdil, el último sultán de Granada. El 2 de enero de 1492 entregué las llaves de la ciudad.",
+                "en": "I did not expect to be introduced here, beside those who took my kingdom. I am Boabdil, the last sultan of Granada. On 2 January 1492 I handed over the keys of the city."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la Capilla Real, construida entre 1505 y 1517, están enterrados los Reyes Católicos, junto a su hija Juana y Felipe el Hermoso.",
+                "en": "The Royal Chapel, built between 1505 and 1517, holds the tombs of the Catholic Monarchs, together with their daughter Joanna and Philip the Handsome."
+              },
+              "year": 1505
+            },
+            {
+              "type": "dialogue",
+              "characterId": "boabdil",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Los Abencerrajes? Una de las grandes familias de mi reino. En aquella Granada los linajes se disputaban el poder a muerte, y divididos… lo perdimos todo.",
+                "en": "The Abencerrajes? One of the great families of my kingdom. In that Granada the noble lineages fought to the death for power, and divided as we were… we lost everything."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año entregó Boabdil Granada a los Reyes Católicos?",
+              "en": "In what year did Boabdil hand Granada over to the Catholic Monarchs?"
+            },
+            "options": [
+              {
+                "es": "1492",
+                "en": "1492"
+              },
+              {
+                "es": "1236",
+                "en": "1236"
+              },
+              {
+                "es": "1609",
+                "en": "1609"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El 2 de enero de 1492. Ese mismo año Colón zarpó hacia América.",
+              "en": "On 2 January 1492. That same year Columbus sailed for the Americas."
+            }
+          },
+          "clue": {
+            "id": "pista_linajes",
+            "text": {
+              "es": "Los Zegríes · En la Granada nazarí los linajes se disputaban el poder a muerte.",
+              "en": "The Zegríes · In Nasrid Granada the noble lineages fought to the death for power."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "irving",
+            "expression": "thinking",
+            "text": {
+              "es": "Dos colinas, detective. ¿Subimos a la Alhambra, donde vivía el sultán… o al Albaicín, donde vivía la gente que contaba las historias?",
+              "en": "Two hills, detective. Shall we climb to the Alhambra, where the sultan lived… or to the Albaicín, where lived the people who told the stories?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Subir al Albaicín",
+                "en": "Climb to the Albaicín"
+              },
+              "hint": {
+                "es": "El barrio y sus miradores",
+                "en": "The old quarter and its viewpoints"
+              },
+              "distanceM": 1100,
+              "walkMin": 20,
+              "targetNodeId": "a1_san_nicolas",
+              "setFlags": [
+                "camino_albaicin"
+              ]
+            },
+            {
+              "label": {
+                "es": "Subir a la Alhambra",
+                "en": "Climb to the Alhambra"
+              },
+              "hint": {
+                "es": "Donde vivía el sultán",
+                "en": "Where the sultan lived"
+              },
+              "distanceM": 1200,
+              "walkMin": 20,
+              "targetNodeId": "b1_justicia",
+              "setFlags": [
+                "camino_alhambra"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a1_san_nicolas",
+          "title": {
+            "es": "Mirador de San Nicolás",
+            "en": "San Nicolás viewpoint"
+          },
+          "location": {
+            "lat": 37.1811,
+            "lng": -3.5926
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_sannicolas.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "surprised",
+              "text": {
+                "es": "Mire eso, detective. La Alhambra entera, roja sobre la colina, y detrás la nieve de Sierra Nevada. Por vistas así se queda uno a vivir en Granada.",
+                "en": "Look at that, detective. The whole Alhambra, red on its hill, and behind it the snow of the Sierra Nevada. Views like this are why people stay in Granada for good."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que Bill Clinton dijo que desde aquí se ve la puesta de sol más bonita del mundo.",
+                "en": "It's said that Bill Clinton called the sunset from here the most beautiful in the world."
+              },
+              "legend": true
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En las guerras civiles del final del reino, el Albaicín y la Alhambra llegaron a apoyar a sultanes distintos: la ciudad estaba partida en dos.",
+                "en": "In the civil wars at the end of the kingdom, the Albaicín and the Alhambra at times backed different sultans: the city was split in two."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué significa «Alhambra»?",
+              "en": "What does “Alhambra” mean?"
+            },
+            "options": [
+              {
+                "es": "La roja",
+                "en": "The red one"
+              },
+              {
+                "es": "La alta",
+                "en": "The high one"
+              },
+              {
+                "es": "La del agua",
+                "en": "The one of water"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Viene del árabe al-hamra, «la roja», por el color de sus murallas.",
+              "en": "It comes from the Arabic al-hamra, “the red one”, because of the colour of its walls."
+            }
+          },
+          "clue": {
+            "id": "pista_ciudad_partida",
+            "text": {
+              "es": "Los Zegríes · La ciudad estaba partida: Albaicín contra Alhambra, un bando contra otro.",
+              "en": "The Zegríes · The city was split: Albaicín against Alhambra, one faction against another."
+            }
+          },
+          "nextNodeId": "a2_pesas",
+          "nextHint": {
+            "es": "Sube a la Plaza Larga, al Arco de las Pesas. Unos 5 minutos.",
+            "en": "Head up to Plaza Larga, to the Arco de las Pesas. About 5 minutes."
+          }
+        },
+        {
+          "id": "a2_pesas",
+          "title": {
+            "es": "Arco de las Pesas",
+            "en": "Arco de las Pesas"
+          },
+          "location": {
+            "lat": 37.1826,
+            "lng": -3.592
+          },
+          "triggerRadiusM": 35,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_pesas.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "happy",
+              "text": {
+                "es": "Esta puerta es de la muralla del siglo XI. ¿Ve las pesas colgadas? Eran las de los tenderos tramposos: se las quitaban y las colgaban aquí, para vergüenza de todos.",
+                "en": "This gate belongs to the 11th-century wall. See the weights hanging up there? They belonged to cheating shopkeepers: they were confiscated and hung here for everyone to see."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "text": {
+                "es": "Le confieso una cosa, detective. Muchas de mis leyendas me las contaron vecinos de estas calles, con mucha gracia… y poca prueba.",
+                "en": "I'll confess something, detective. Many of my legends were told to me by people from these streets, with great charm… and little evidence."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Mira arriba, en el arco. ¿Qué objetos cuelgan de él?",
+              "en": "Look up at the arch. What objects hang from it?"
+            },
+            "answer": [
+              "pesas",
+              "unas pesas",
+              "las pesas",
+              "weights",
+              "pesos"
+            ]
+          },
+          "clue": {
+            "id": "pista_cuentos",
+            "text": {
+              "es": "Nadie · Irving recogió muchas leyendas de boca de los vecinos: mucha gracia y poca prueba.",
+              "en": "Nobody · Irving gathered many legends from local people: great charm, little evidence."
+            }
+          },
+          "nextNodeId": "n4_tristes",
+          "nextHint": {
+            "es": "Baja hasta el Paseo de los Tristes, junto al río Darro. Unos 10 minutos.",
+            "en": "Head down to the Paseo de los Tristes, by the river Darro. About 10 minutes."
+          }
+        },
+        {
+          "id": "b1_justicia",
+          "title": {
+            "es": "Puerta de la Justicia",
+            "en": "Gate of Justice"
+          },
+          "location": {
+            "lat": 37.1754,
+            "lng": -3.5909
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_justicia.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_justicia.svg"
+              ],
+              "characters": [
+                {
+                  "id": "irving",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "boabdil",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "boabdil",
+              "expression": "proud",
+              "text": {
+                "es": "La puerta más solemne de mi casa, de 1348. Mire la mano tallada en el arco de fuera, y la llave en el de dentro.",
+                "en": "The grandest gate of my home, from 1348. Look at the hand carved on the outer arch, and the key on the inner one."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que el día que la mano alcance la llave, la Alhambra se vendrá abajo. Irving recogió esta leyenda en sus Cuentos.",
+                "en": "Legend says that on the day the hand reaches the key, the Alhambra will collapse. Irving included this legend in his Tales."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "boabdil",
+              "expression": "nervous",
+              "text": {
+                "es": "Y ya que pregunta: algunas crónicas culpan a mi padre, Muley Hacén, de mandar matar a varios Abencerrajes. Tenía mano dura… más dura que esa del arco.",
+                "en": "And since you ask: some chronicles blame my father, Muley Hacén, for having several Abencerrajes killed. He had a heavy hand… heavier than the one on that arch."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hay tallado en el arco exterior de la puerta?",
+              "en": "What is carved on the outer arch of the gate?"
+            },
+            "options": [
+              {
+                "es": "Una mano",
+                "en": "A hand"
+              },
+              {
+                "es": "Un león",
+                "en": "A lion"
+              },
+              {
+                "es": "Una granada",
+                "en": "A pomegranate"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Una mano abierta. La llave está en el arco interior. Se interpretan como símbolos de la fe y de la protección.",
+              "en": "An open hand. The key is on the inner arch. They are interpreted as symbols of faith and protection."
+            }
+          },
+          "clue": {
+            "id": "pista_muley",
+            "text": {
+              "es": "El sultán · Algunas crónicas culpan a Muley Hacén, padre de Boabdil, de mandar matar a varios Abencerrajes.",
+              "en": "The sultan · Some chronicles blame Muley Hacén, Boabdil's father, for having several Abencerrajes killed."
+            }
+          },
+          "nextNodeId": "b2_carlos",
+          "nextHint": {
+            "es": "Sigue hasta el Palacio de Carlos V. Unos 3 minutos.",
+            "en": "Carry on to the Palace of Charles V. About 3 minutes."
+          }
+        },
+        {
+          "id": "b2_carlos",
+          "title": {
+            "es": "Palacio de Carlos V",
+            "en": "Palace of Charles V"
+          },
+          "location": {
+            "lat": 37.1765,
+            "lng": -3.5896
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_carlos.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Un palacio cuadrado con un patio redondo, en medio de la Alhambra! Carlos V lo mandó levantar en 1527. Los nuevos dueños querían dejar su marca.",
+                "en": "A square palace with a round courtyard, right in the middle of the Alhambra! Charles V had it built in 1527. The new owners wanted to leave their mark."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Tras la conquista, los cristianos llenaron libros y romances de historias de moros y caballeros. Se pusieron de moda en toda Europa.",
+                "en": "After the conquest, Christians filled books and ballads with tales of Moors and knights. They became fashionable all over Europe."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "text": {
+                "es": "Y cuanto más se contaban, más se adornaban. Yo mismo… bueno, puede que exagerara un poquito.",
+                "en": "And the more they were told, the more they were embellished. I myself… well, I may have exaggerated a little."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué forma tiene el patio del Palacio de Carlos V?",
+              "en": "What shape is the courtyard of the Palace of Charles V?"
+            },
+            "options": [
+              {
+                "es": "Cuadrada",
+                "en": "Square"
+              },
+              {
+                "es": "Redonda",
+                "en": "Round"
+              },
+              {
+                "es": "Octogonal",
+                "en": "Octagonal"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Un patio circular de dos pisos de columnas dentro de un edificio cuadrado, obra de Pedro Machuca.",
+              "en": "A two-storey circular colonnaded courtyard inside a square building, designed by Pedro Machuca."
+            }
+          },
+          "clue": {
+            "id": "pista_romances",
+            "text": {
+              "es": "Nadie · Tras la conquista se pusieron de moda las historias de moros y caballeros: cuanto más se contaban, más se adornaban.",
+              "en": "Nobody · After the conquest, tales of Moors and knights became fashionable: the more they were told, the more they were embellished."
+            }
+          },
+          "nextNodeId": "n4_tristes",
+          "nextHint": {
+            "es": "Baja por la Cuesta de los Chinos hasta el Paseo de los Tristes. Unos 15 minutos.",
+            "en": "Walk down the Cuesta de los Chinos to the Paseo de los Tristes. About 15 minutes."
+          }
+        },
+        {
+          "id": "n4_tristes",
+          "title": {
+            "es": "Paseo de los Tristes",
+            "en": "Paseo de los Tristes"
+          },
+          "location": {
+            "lat": 37.1792,
+            "lng": -3.5905
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_granada_tristes.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_tristes.svg"
+              ],
+              "characters": [
+                {
+                  "id": "irving",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "leon",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "leon",
+              "expression": "proud",
+              "text": {
+                "es": "¡Grrr… buenas tardes! Soy uno de los doce leones de la fuente del Patio de los Leones. Me he escapado un rato: llevo siglos echando agua por la boca y oyendo secretos.",
+                "en": "Grrr… good afternoon! I'm one of the twelve lions of the fountain in the Court of the Lions. I've slipped out for a while: I've spent centuries spouting water and overhearing secrets."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "leon",
+              "expression": "talking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_albaicin"
+                  ],
+                  "text": {
+                    "es": "Viene usted del Albaicín, donde se cuentan las historias. Pues yo estaba en el palacio. Y tengo dos pistas para usted.",
+                    "en": "You've come from the Albaicín, where the stories are told. Well, I was in the palace. And I have two clues for you."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alhambra"
+                  ],
+                  "text": {
+                    "es": "Viene usted de mi casa, la Alhambra. Ya sabe que los sultanes tenían mano dura. Pero tengo dos pistas más.",
+                    "en": "You've come from my home, the Alhambra. So you know the sultans had a heavy hand. But I have two more clues."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "leon",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Qué prefiere examinar, detective: el libro donde aparece por primera vez la matanza… o las manchas de la fuente?",
+                "en": "What would you rather examine, detective: the book where the massacre first appears… or the stains on the fountain?"
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se dice que el paseo se llama «de los Tristes» porque por aquí pasaban los entierros camino del cementerio.",
+                "en": "It's said the promenade is called “of the Sad Ones” because funeral processions passed this way to the cemetery."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "photo",
+            "prompt": {
+              "es": "Hazte una foto con la Alhambra en lo alto, detrás de ti.",
+              "en": "Take a photo with the Alhambra high up behind you."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Examinar la novela de 1595",
+                "en": "Examine the 1595 novel"
+              },
+              "hint": {
+                "es": "¿Quién contó la matanza?",
+                "en": "Who told of the massacre?"
+              },
+              "targetNodeId": "n4a_novela",
+              "setFlags": [
+                "version_novela"
+              ]
+            },
+            {
+              "label": {
+                "es": "Examinar las manchas de la fuente",
+                "en": "Examine the fountain stains"
+              },
+              "hint": {
+                "es": "¿Son de sangre?",
+                "en": "Are they blood?"
+              },
+              "targetNodeId": "n4b_manchas",
+              "setFlags": [
+                "version_manchas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_novela",
+          "title": {
+            "es": "La novela de 1595",
+            "en": "The 1595 novel"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "leon",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡1595! Más de un siglo después de la caída de Granada, Ginés Pérez de Hita publica una novela sobre los bandos de Zegríes y Abencerrajes. Ahí aparecen la sala, la traición y la matanza.",
+                "en": "1595! More than a century after the fall of Granada, Ginés Pérez de Hita publishes a novel about the feuding Zegríes and Abencerrajes. That's where the hall, the betrayal and the massacre appear."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La novela tuvo muchísimo éxito y se tradujo a varios idiomas. Siglos después, Irving y los viajeros románticos la hicieron famosa en toda Europa.",
+                "en": "The novel was a huge success and was translated into several languages. Centuries later, Irving and the Romantic travellers made the story famous all over Europe."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "nervous",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_albaicin"
+                  ],
+                  "text": {
+                    "es": "Así que mi leyenda favorita venía de una novela… Como los cuentos del Albaicín: mucha gracia, poca prueba.",
+                    "en": "So my favourite legend came from a novel… Like the tales of the Albaicín: great charm, little evidence."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alhambra"
+                  ],
+                  "text": {
+                    "es": "Así que los romances de caballeros ya lo adornaron todo. Y yo añadí mi parte, lo reconozco.",
+                    "en": "So the tales of knights had already embellished everything. And I added my share, I admit it."
+                  }
+                }
+              ]
+            }
+          ],
+          "clue": {
+            "id": "pista_novela",
+            "text": {
+              "es": "Nadie · La matanza en la sala aparece en una novela de 1595, más de un siglo después.",
+              "en": "Nobody · The massacre in the hall appears in a novel from 1595, more than a century later."
+            }
+          },
+          "nextNodeId": "n5_banuelo",
+          "nextHint": {
+            "es": "Baja por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
+            "en": "Walk down the Carrera del Darro to the Bañuelo. About 4 minutes."
+          }
+        },
+        {
+          "id": "n4b_manchas",
+          "title": {
+            "es": "Las manchas de la fuente",
+            "en": "The fountain stains"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "leon",
+              "expression": "surprised",
+              "text": {
+                "es": "La fuente de la Sala de los Abencerrajes tiene unas manchas rojizas. Durante siglos se dijo que eran la sangre de los caballeros.",
+                "en": "The fountain in the Hall of the Abencerrajes has some reddish stains. For centuries it was said they were the knights' blood."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las manchas se atribuyen al óxido de hierro que llevaba el agua. La sala es famosa también por su cúpula de mocárabes en forma de estrella.",
+                "en": "The stains are attributed to iron oxide carried by the water. The hall is also famous for its star-shaped muqarnas dome."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_albaicin"
+                  ],
+                  "text": {
+                    "es": "Óxido… Menos romántico que la sangre, pero mucho más probable.",
+                    "en": "Rust… Less romantic than blood, but much more likely."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alhambra"
+                  ],
+                  "text": {
+                    "es": "Óxido. Así que el sultán pudo tener mano dura, pero esas manchas no lo acusan.",
+                    "en": "Rust. So the sultan may have had a heavy hand, but those stains don't accuse him."
+                  }
+                }
+              ]
+            }
+          ],
+          "clue": {
+            "id": "pista_oxido",
+            "text": {
+              "es": "Nadie · Las manchas rojizas de la fuente se atribuyen al óxido de hierro del agua.",
+              "en": "Nobody · The reddish stains on the fountain are attributed to iron oxide in the water."
+            }
+          },
+          "nextNodeId": "n5_banuelo",
+          "nextHint": {
+            "es": "Baja por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
+            "en": "Walk down the Carrera del Darro to the Bañuelo. About 4 minutes."
+          }
+        },
+        {
+          "id": "n5_banuelo",
+          "title": {
+            "es": "El Bañuelo",
+            "en": "El Bañuelo"
+          },
+          "location": {
+            "lat": 37.1778,
+            "lng": -3.5922
+          },
+          "triggerRadiusM": 35,
+          "background": "fondos/fondo_granada_banuelo.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "happy",
+              "text": {
+                "es": "Unos baños árabes del siglo XI, de los más antiguos que se conservan en España. Aquí se venía a lavarse, a charlar… y a enterarse de todo.",
+                "en": "Arab baths from the 11th century, among the oldest surviving in Spain. People came here to wash, to chat… and to hear all the gossip."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las bóvedas tienen tragaluces en forma de estrella: dejaban pasar la luz y salir el vapor.",
+                "en": "The vaults have star-shaped skylights: they let the light in and the steam out."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían los agujeros en forma de estrella del techo?",
+              "en": "What were the star-shaped holes in the ceiling for?"
+            },
+            "options": [
+              {
+                "es": "Para ver las estrellas de noche",
+                "en": "To see the stars at night"
+              },
+              {
+                "es": "Para dejar pasar la luz y salir el vapor",
+                "en": "To let light in and steam out"
+              },
+              {
+                "es": "Para que entrara la lluvia",
+                "en": "To let the rain in"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Iluminaban las salas sin ventanas y dejaban escapar el vapor de las salas calientes.",
+              "en": "They lit the windowless rooms and let steam escape from the hot rooms."
+            }
+          },
+          "nextNodeId": "n6_corral",
+          "nextHint": {
+            "es": "Al Corral del Carbón, por Plaza Nueva. Unos 10 minutos.",
+            "en": "To the Corral del Carbón, via Plaza Nueva. About 10 minutes."
+          }
+        },
+        {
+          "id": "n6_corral",
+          "title": {
+            "es": "Corral del Carbón",
+            "en": "Corral del Carbón"
+          },
+          "location": {
+            "lat": 37.1747,
+            "lng": -3.598
+          },
+          "triggerRadiusM": 35,
+          "background": "fondos/fondo_granada_corral.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "surprised",
+              "text": {
+                "es": "Esta portada con mocárabes es la entrada de una alhóndiga nazarí del siglo XIV: una posada donde los mercaderes guardaban sus mercancías y dormían.",
+                "en": "This muqarnas doorway is the entrance to a 14th-century Nasrid alhóndiga: an inn where merchants stored their goods and slept."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Es la alhóndiga nazarí mejor conservada. Más tarde la usaron los carboneros, y de ahí su nombre.",
+                "en": "It is the best-preserved Nasrid alhóndiga. Later it was used by coal merchants, hence its name."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era una alhóndiga?",
+              "en": "What was an alhóndiga?"
+            },
+            "options": [
+              {
+                "es": "Una posada y almacén para mercaderes",
+                "en": "An inn and warehouse for merchants"
+              },
+              {
+                "es": "Una mezquita pequeña",
+                "en": "A small mosque"
+              },
+              {
+                "es": "Un cuartel",
+                "en": "A barracks"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los mercaderes dejaban aquí sus mercancías y sus animales, y dormían en las habitaciones de arriba.",
+              "en": "Merchants left their goods and animals here and slept in the rooms upstairs."
+            }
+          },
+          "nextNodeId": "n6b_veredicto"
+        },
+        {
+          "id": "n6b_veredicto",
+          "title": {
+            "es": "El veredicto",
+            "en": "The verdict"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, detective. Repase el cuaderno: el sultán, los Zegríes, nadie. ¿Quién mató a los Abencerrajes?",
+                "en": "Time for the verdict, detective. Go over your notebook: the sultan, the Zegríes, nobody. Who killed the Abencerrajes?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién mató a los Abencerrajes?",
+              "en": "Who killed the Abencerrajes?"
+            },
+            "options": [
+              {
+                "es": "Los Zegríes, en la sala, tal como cuenta la leyenda",
+                "en": "The Zegríes, in the hall, just as the legend says"
+              },
+              {
+                "es": "Hubo enemistades y muertes reales, pero la matanza de la sala es una leyenda de novela",
+                "en": "There were real feuds and deaths, but the massacre in the hall is a legend from a novel"
+              },
+              {
+                "es": "Los Reyes Católicos",
+                "en": "The Catholic Monarchs"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los Abencerrajes existieron, los linajes se enfrentaron y algunas crónicas culpan a Muley Hacén de varias muertes. Pero la matanza en esa sala viene de la novela de 1595, y las manchas se atribuyen al óxido.",
+              "en": "The Abencerrajes existed, the lineages fought each other and some chronicles blame Muley Hacén for several deaths. But the massacre in that hall comes from the 1595 novel, and the stains are attributed to rust."
+            }
+          },
+          "nextNodeId": "n7_final"
+        },
+        {
+          "id": "n7_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_alhambra",
+                    "version_manchas"
+                  ],
+                  "text": {
+                    "es": "¡Caballero Abencerraje! Subió al palacio y le quitó la sangre a la fuente. Valiente y con método.",
+                    "en": "Abencerraje knight! You climbed to the palace and washed the blood off the fountain. Brave and methodical."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alhambra",
+                    "version_novela"
+                  ],
+                  "text": {
+                    "es": "Palacio y biblioteca: usted es un cronista de la Alhambra, y de los buenos.",
+                    "en": "Palace and library: you are a chronicler of the Alhambra, and a fine one."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_manchas"
+                  ],
+                  "text": {
+                    "es": "Del Albaicín a la química: es usted un químico de leyendas. Ni una mancha le engaña.",
+                    "en": "From the Albaicín to chemistry: you are a legend chemist. Not a single stain fools you."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_novela"
+                  ],
+                  "text": {
+                    "es": "Cuentos de vecinos y novelas antiguas… ¡Usted sería un cuentista de los míos!",
+                    "en": "Neighbours' tales and old novels… You'd make a storyteller after my own heart!"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "happy",
+              "text": {
+                "es": "Caso cerrado: hubo odios y muertes de verdad, pero la sala ensangrentada es una leyenda. Una leyenda preciosa, eso sí; no pienso quitarla de mi libro. Y oiga… queda otra colina por subir.",
+                "en": "Case closed: there were real hatreds and real deaths, but the blood-soaked hall is a legend. A beautiful legend, mind you; I'm not taking it out of my book. And listen… there's still another hill to climb."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "caballero_abencerraje",
+          "requires": [
+            "camino_alhambra",
+            "version_manchas"
+          ],
+          "title": {
+            "es": "Caballero Abencerraje",
+            "en": "Abencerraje knight"
+          }
+        },
+        {
+          "id": "cronista_alhambra",
+          "requires": [
+            "camino_alhambra",
+            "version_novela"
+          ],
+          "title": {
+            "es": "Cronista de la Alhambra",
+            "en": "Chronicler of the Alhambra"
+          }
+        },
+        {
+          "id": "quimico_leyendas",
+          "requires": [
+            "camino_albaicin",
+            "version_manchas"
+          ],
+          "title": {
+            "es": "Químico de leyendas",
+            "en": "Legend chemist"
+          }
+        },
+        {
+          "id": "cuentista_irving",
+          "requires": [
+            "camino_albaicin",
+            "version_novela"
+          ],
+          "title": {
+            "es": "Cuentista de Irving",
+            "en": "Irving's storyteller"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "pluma_irving",
+          "name": {
+            "es": "La pluma de Irving",
+            "en": "Irving's pen"
+          },
+          "icon": "collectibles/granada_pluma.svg",
+          "awardedAtNodeId": "n1_plaza"
+        },
+        {
+          "id": "atardecer_san_nicolas",
+          "name": {
+            "es": "Atardecer en San Nicolás",
+            "en": "Sunset at San Nicolás"
+          },
+          "icon": "collectibles/granada_atardecer.svg",
+          "awardedAtNodeId": "a1_san_nicolas"
+        },
+        {
+          "id": "pesas_arco",
+          "name": {
+            "es": "Las pesas del arco",
+            "en": "The weights of the arch"
+          },
+          "icon": "collectibles/granada_pesas.svg",
+          "awardedAtNodeId": "a2_pesas"
+        },
+        {
+          "id": "mano_llave",
+          "name": {
+            "es": "La mano y la llave",
+            "en": "The hand and the key"
+          },
+          "icon": "collectibles/granada_llave.svg",
+          "awardedAtNodeId": "b1_justicia"
+        },
+        {
+          "id": "granada_fruta",
+          "name": {
+            "es": "La granada",
+            "en": "The pomegranate"
+          },
+          "icon": "collectibles/granada_granada.svg",
+          "awardedAtNodeId": "b2_carlos"
+        },
+        {
+          "id": "leon_fuente",
+          "name": {
+            "es": "El león de la fuente",
+            "en": "The fountain lion"
+          },
+          "icon": "collectibles/granada_leon.svg",
+          "awardedAtNodeId": "n4_tristes"
+        },
+        {
+          "id": "insignia_abencerrajes",
+          "name": {
+            "es": "¿Quién mató a los Abencerrajes?",
+            "en": "Who Killed the Abencerrajes?"
+          },
+          "icon": "collectibles/granada_insignia.svg",
+          "awardedAtNodeId": "n7_final"
+        }
+      ]
+    }
+  ]
+}
