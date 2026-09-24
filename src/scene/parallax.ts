@@ -39,7 +39,7 @@ export const PARALLAX: ParallaxConfig = {
 
 /**
  * Profundidad por papel de capa (factores del documento de diseño). `null` =
- * capa fija delante de todo (fx: rayos de luz, brillos).
+ * capa fija sobre el fondo y bajo los personajes (fx: rayos de luz, brillos).
  */
 const DEPTH_BY_ROLE: Record<string, number | null> = {
   sky: 0,

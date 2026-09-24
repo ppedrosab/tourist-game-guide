@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import Animated, { FadeIn, FadeOut, useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import type { CastMember } from "./cast";
 import { Sprite } from "./Sprite";
+import type { CastShadow } from "./sun";
 import { mouthPhaseMs } from "./voice";
 
 /**
@@ -20,10 +21,11 @@ type Props = {
   height: number;
   /** Hay locución sonando: mueve la boca de quien habla. */
   talking?: boolean;
+  shadow?: CastShadow;
 };
 
 /** Personajes en el plano del primer plano del escenario. */
-export function CastLayer({ cast, width, height, talking = false }: Props) {
+export function CastLayer({ cast, width, height, talking = false, shadow }: Props) {
   if (width === 0) return null;
   const h = height * HEIGHT;
   const w = h * SPRITE_ASPECT;
@@ -40,7 +42,7 @@ export function CastLayer({ cast, width, height, talking = false }: Props) {
           ]}
         >
           <Speaking speaking={member.speaking}>
-            <LipSync member={member} talking={talking && member.speaking} width={w} />
+            <LipSync member={member} talking={talking && member.speaking} width={w} shadow={shadow} />
           </Speaking>
         </Animated.View>
       ))}
@@ -53,7 +55,17 @@ export function CastLayer({ cast, width, height, talking = false }: Props) {
  * abierta ("talking") a un ritmo irregular, como sílabas. Al callar vuelve a
  * la expresión del diálogo.
  */
-function LipSync({ member, talking, width }: { member: CastMember; talking: boolean; width: number }) {
+function LipSync({
+  member,
+  talking,
+  width,
+  shadow,
+}: {
+  member: CastMember;
+  talking: boolean;
+  width: number;
+  shadow?: CastShadow;
+}) {
   const base = member.expression === "talking" ? "neutral" : member.expression;
   const [phase, setPhase] = useState(0);
   useEffect(() => {
@@ -78,7 +90,7 @@ function LipSync({ member, talking, width }: { member: CastMember; talking: bool
     return () => clearTimeout(timer);
   }, [talking, member.characterId, width]);
   const open = talking && phase % 2 === 0;
-  return <Sprite sprite={member.sprite} expression={open ? "talking" : base} width={width} />;
+  return <Sprite sprite={member.sprite} expression={open ? "talking" : base} width={width} cast={shadow} />;
 }
 
 /** Quien habla da un pequeño paso al frente; el resto se queda un poco atrás. */

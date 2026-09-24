@@ -17,6 +17,7 @@ import { buildSteps, SceneStep } from "@/engine/scene";
 import { SCENE_ASPECT, SceneStage } from "@/scene/SceneStage";
 import { stageCast } from "@/scene/cast";
 import { sceneKeyFor } from "@/scene/sceneFor";
+import { castShadow, sunPosition } from "@/scene/sun";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
@@ -75,6 +76,11 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
   const { stops, current } = routeStops(route, run);
   const sceneKey = sceneKeyFor(route, run);
+  // Sombra de los personajes con el sol real de esta parada, a esta hora.
+  const shadow = useMemo(() => {
+    const at = node.location ?? pack.center;
+    return castShadow(sunPosition(new Date(), at.lat, at.lng));
+  }, [node, pack.center]);
   // Voz de la línea actual (real o simulada): lip-sync y barra de audio.
   const focused = useIsFocused();
   const voicesOn = useProgress((s) => s.voices);
@@ -99,6 +105,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
           sceneKey={sceneKey}
           cast={cast}
           talking={voice.speaking}
+          shadow={shadow}
           testID="escenario"
           fallback={<Text style={styles.stageText}>{localize(node.title)}</Text>}
         />

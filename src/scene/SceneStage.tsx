@@ -15,6 +15,7 @@ import { colors } from "@/theme";
 import { SCENE_LAYERS } from "./assets.generated";
 import type { CastMember } from "./cast";
 import { CastLayer } from "./CastLayer";
+import type { CastShadow } from "./sun";
 import {
   CHARACTER_DEPTH,
   depthOf,
@@ -37,6 +38,8 @@ type Props = {
   cast?: CastMember[];
   /** Hay locución sonando (lip-sync de quien habla). */
   talking?: boolean;
+  /** Sombra proyectada de los personajes según el sol. */
+  shadow?: CastShadow;
   /** Fondo si la escena no tiene capas. */
   fallback?: ReactNode;
   testID?: string;
@@ -53,7 +56,7 @@ type Props = {
  * En web no hay giroscopio: el puntero sobre el escenario hace de inclinación.
  * Con "Reducir movimiento" activado la escena queda quieta.
  */
-export function SceneStage({ sceneKey, cast, talking, fallback, testID }: Props) {
+export function SceneStage({ sceneKey, cast, talking, shadow, fallback, testID }: Props) {
   const layers = sceneKey ? SCENE_LAYERS[sceneKey] : undefined;
   const [size, setSize] = useState({ width: 0, height: 0 });
   const onLayout = useCallback((e: LayoutChangeEvent) => {
@@ -175,13 +178,7 @@ export function SceneStage({ sceneKey, cast, talking, fallback, testID }: Props)
               <Image source={layer.source} style={styles.fill} resizeMode="stretch" onLoad={onLayerLoad} />
             </ParallaxLayer>
           ))}
-          {/* Personajes: pisan el primer plano y se mueven con él. */}
-          {cast && cast.length > 0 ? (
-            <ParallaxLayer depth={CHARACTER_DEPTH} tilt={tilt} scale={scale} ax={ax} ay={ay} box={box}>
-              <CastLayer cast={cast} width={box.width} height={box.height} talking={talking} />
-            </ParallaxLayer>
-          ) : null}
-          {/* Efectos (rayos, brillos): fijos, con la misma escala, por encima de todo. */}
+          {/* Efectos (rayos, brillos): fijos, con la misma escala, sobre el fondo. */}
           {fx.map((layer) => (
             <Animated.View
               key={`${sceneKey}-${layer.order}`}
@@ -190,6 +187,13 @@ export function SceneStage({ sceneKey, cast, talking, fallback, testID }: Props)
               <Image source={layer.source} style={styles.fill} resizeMode="stretch" onLoad={onLayerLoad} />
             </Animated.View>
           ))}
+          {/* Personajes: pisan el primer plano y se mueven con él; por encima de los efectos
+              para que la luz no los lave. */}
+          {cast && cast.length > 0 ? (
+            <ParallaxLayer depth={CHARACTER_DEPTH} tilt={tilt} scale={scale} ax={ax} ay={ay} box={box}>
+              <CastLayer cast={cast} width={box.width} height={box.height} talking={talking} shadow={shadow} />
+            </ParallaxLayer>
+          ) : null}
         </>
       ) : null}
     </View>
@@ -223,6 +227,11 @@ const styles = StyleSheet.create({
   abs: { position: "absolute" },
   // width/height explícitos: en web la Image aplica el tamaño intrínseco del asset por encima de absoluteFill.
   fill: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%" },
-  fallback: { ...StyleSheet.absoluteFillObject, alignItems: "center", justifyContent: "center", backgroundColor: colors.sand },
+  fallback: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.sand,
+  },
   noTouch: { pointerEvents: "none" },
 });
