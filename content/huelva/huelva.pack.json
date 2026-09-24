@@ -1,0 +1,2374 @@
+{
+  "id": "huelva",
+  "version": 1,
+  "name": {
+    "es": "Huelva",
+    "en": "Huelva"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 37.2585,
+    "lng": -6.948
+  },
+  "bounds": [
+    {
+      "lat": 37.25,
+      "lng": -6.96
+    },
+    {
+      "lat": 37.267,
+      "lng": -6.931
+    }
+  ],
+  "coverImage": "img/cover_huelva.jpg",
+  "characters": [
+    {
+      "id": "mackay",
+      "name": {
+        "es": "El doctor Mackay",
+        "en": "Doctor Mackay"
+      },
+      "description": {
+        "es": "William Alexander Mackay, médico escocés de la compañía Rio Tinto, que llegó a Huelva en 1883. Educado, entusiasta y muy británico.",
+        "en": "William Alexander Mackay, a Scottish doctor with the Rio Tinto Company, who arrived in Huelva in 1883. Polite, enthusiastic and very British."
+      },
+      "avatar": "sprites/mackay/mackay_neutral.svg"
+    },
+    {
+      "id": "minero",
+      "name": {
+        "es": "El Minero",
+        "en": "The Miner"
+      },
+      "description": {
+        "es": "Minero de Riotinto. Fuerte, bromista y futbolero desde que los ingleses le dejaron jugar.",
+        "en": "A miner from Riotinto. Strong, jokey and a football fan ever since the English let him play."
+      },
+      "avatar": "sprites/minero/minero_neutral.svg"
+    },
+    {
+      "id": "marinero",
+      "name": {
+        "es": "El Marinero",
+        "en": "The Sailor"
+      },
+      "description": {
+        "es": "Marinero de un vapor británico que atraca en Huelva. Viajero y charlatán.",
+        "en": "A sailor on a British steamer that docks in Huelva. Well-travelled and chatty."
+      },
+      "avatar": "sprites/marinero/marinero_neutral.svg"
+    },
+    {
+      "id": "choquera",
+      "name": {
+        "es": "La Choquera",
+        "en": "The Choquera"
+      },
+      "description": {
+        "es": "Pescadera del mercado del Carmen, onubense de pura cepa. Alegre y orgullosa de su tierra.",
+        "en": "A fishmonger at the Carmen market, Huelva born and bred. Cheerful and proud of her home."
+      },
+      "avatar": "sprites/choquera/choquera_neutral.svg"
+    },
+    {
+      "id": "fresera",
+      "name": {
+        "es": "La Fresera",
+        "en": "The Strawberry Grower"
+      },
+      "description": {
+        "es": "Cultiva fresas en Palos de la Frontera. Madrugadora y muy resuelta.",
+        "en": "She grows strawberries in Palos de la Frontera. An early riser and very resolute."
+      },
+      "avatar": "sprites/fresera/fresera_neutral.svg"
+    },
+    {
+      "id": "cortador",
+      "name": {
+        "es": "El Cortador",
+        "en": "The Ham Carver"
+      },
+      "description": {
+        "es": "Cortador de jamón de la sierra de Aracena. Serio con el cuchillo y cariñoso con la gente.",
+        "en": "A ham carver from the Aracena hills. Serious with the knife, warm with people."
+      },
+      "avatar": "sprites/cortador/cortador_neutral.svg"
+    }
+  ],
+  "routes": [
+    {
+      "id": "decano",
+      "title": {
+        "es": "¿Quién trajo el fútbol a España?",
+        "en": "Who Brought Football to Spain?"
+      },
+      "summary": {
+        "es": "Huelva presume del club de fútbol más antiguo de España, pero la pelota ya rodaba antes. Con el doctor Mackay, un minero y un marinero, recorre la Huelva británica del siglo XIX.",
+        "en": "Huelva boasts Spain's oldest football club, but the ball was already rolling before. With Doctor Mackay, a miner and a sailor, explore the British Huelva of the 19th century."
+      },
+      "era": "1873 - 1929",
+      "guideCharacterId": "mackay",
+      "durationMin": 110,
+      "distanceKm": 3.4,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El puerto",
+            "en": "The port"
+          },
+          "trail": {
+            "es": "camino del puerto",
+            "en": "port trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los barrios ingleses",
+            "en": "English quarters"
+          },
+          "trail": {
+            "es": "camino de los barrios ingleses",
+            "en": "English quarters trail"
+          }
+        }
+      },
+      "startNodeId": "n1_muelle",
+      "nodes": [
+        {
+          "id": "n1_muelle",
+          "title": {
+            "es": "Muelle del Tinto",
+            "en": "Rio Tinto Pier"
+          },
+          "location": {
+            "lat": 37.2523,
+            "lng": -6.9569
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mackay",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "happy",
+              "text": {
+                "es": "Good morning! Perdón: buenos días. Soy el doctor William Alexander Mackay, escocés. Llegué a Huelva en 1883 como médico de la compañía minera.",
+                "en": "Good morning! I'm Doctor William Alexander Mackay, a Scot. I came to Huelva in 1883 as a doctor for the mining company."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Le traigo un caso, detective: ¿quién trajo el fútbol a España? En Huelva presumimos del primer club del país, pero la pelota ya rodaba antes de fundarlo.",
+                "en": "I bring you a case, detective: who brought football to Spain? In Huelva we boast of the country's first club, but the ball was already rolling before we founded it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: los mineros de Riotinto, los marineros británicos del puerto y los estudiantes españoles que volvían de Inglaterra. Apúntelo todo.",
+                "en": "Three suspects: the Riotinto miners, the British sailors in the port and the Spanish students coming back from England. Write it all down."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este muelle de hierro lo construyó la compañía británica Rio Tinto entre 1874 y 1876 para cargar en los barcos el mineral que bajaba en tren desde las minas.",
+                "en": "This iron pier was built by the British Rio Tinto Company between 1874 and 1876 to load onto ships the ore that came down by train from the mines."
+              },
+              "year": 1874
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué se construyó el Muelle del Tinto?",
+              "en": "What was the Rio Tinto Pier built for?"
+            },
+            "options": [
+              {
+                "es": "Para los barcos de Colón",
+                "en": "For Columbus's ships"
+              },
+              {
+                "es": "Para cargar mineral en los barcos",
+                "en": "To load ore onto ships"
+              },
+              {
+                "es": "Para pescar chocos",
+                "en": "To fish for cuttlefish"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Para embarcar el mineral de las minas de Riotinto, que llegaba en tren.",
+              "en": "To ship out ore from the Riotinto mines, which arrived by train."
+            }
+          },
+          "clue": {
+            "id": "pista_compania",
+            "text": {
+              "es": "Los mineros · En 1873 una compañía británica compró las minas de Riotinto y trajo a cientos de ingleses y escoceses.",
+              "en": "The miners · In 1873 a British company bought the Riotinto mines and brought hundreds of English and Scottish workers."
+            }
+          },
+          "nextNodeId": "n2_estacion",
+          "nextHint": {
+            "es": "Sigue la avenida hasta la antigua Estación de Sevilla. Unos 8 minutos.",
+            "en": "Follow the avenue to the old Seville Station. About 8 minutes."
+          }
+        },
+        {
+          "id": "n2_estacion",
+          "title": {
+            "es": "Antigua Estación de Sevilla",
+            "en": "Old Seville Station"
+          },
+          "location": {
+            "lat": 37.2554,
+            "lng": -6.9491
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_estacion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_estacion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mackay",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "minero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "minero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Minero de Riotinto. Bajo a Huelva cuando puedo. Allí arriba, en las minas, los ingleses nos enseñaron un juego muy raro: darle patadas a una pelota.",
+                "en": "Hello! Miner from Riotinto. I come down to Huelva whenever I can. Up there in the mines, the English taught us a very odd game: kicking a ball about."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Esta estación, de estilo neomudéjar, se inauguró en 1880 y unía Huelva con Sevilla por tren.",
+                "en": "This neo-Mudéjar station opened in 1880 and linked Huelva with Seville by rail."
+              },
+              "year": 1880
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Es cierto. Muchos de mis pacientes eran mineros. Yo les recetaba aire libre y ejercicio… y un balón.",
+                "en": "It's true. Many of my patients were miners. I prescribed them fresh air and exercise… and a ball."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dos ciudades unía esta estación?",
+              "en": "Which two cities did this station link?"
+            },
+            "options": [
+              {
+                "es": "Huelva y Sevilla",
+                "en": "Huelva and Seville"
+              },
+              {
+                "es": "Huelva y Madrid",
+                "en": "Huelva and Madrid"
+              },
+              {
+                "es": "Huelva y Lisboa",
+                "en": "Huelva and Lisbon"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Huelva y Sevilla. Por eso se llama la Estación de Sevilla.",
+              "en": "Huelva and Seville. That's why it's called the Seville Station."
+            }
+          },
+          "clue": {
+            "id": "pista_riotinto",
+            "text": {
+              "es": "Los mineros · En las minas de Riotinto los británicos ya jugaban al fútbol en la década de 1870.",
+              "en": "The miners · In the Riotinto mines the British were already playing football in the 1870s."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "mackay",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Por dónde seguimos, detective? ¿Por el puerto, donde atracaban los barcos británicos, o por los barrios donde vivían los ingleses?",
+              "en": "Which way now, detective? Through the port, where the British ships docked, or through the quarters where the English lived?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por el puerto",
+                "en": "Through the port"
+              },
+              "hint": {
+                "es": "Barcos y marineros",
+                "en": "Ships and sailors"
+              },
+              "targetNodeId": "a1_carmen",
+              "setFlags": [
+                "camino_puerto"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "Por los barrios ingleses",
+                "en": "Through the English quarters"
+              },
+              "hint": {
+                "es": "Museo y Barrio Obrero",
+                "en": "Museum and Barrio Obrero"
+              },
+              "targetNodeId": "b1_museo",
+              "setFlags": [
+                "camino_barrio"
+              ],
+              "distanceM": 700,
+              "walkMin": 9
+            }
+          ]
+        },
+        {
+          "id": "a1_carmen",
+          "title": {
+            "es": "Mercado del Carmen",
+            "en": "Carmen Market"
+          },
+          "location": {
+            "lat": 37.2548,
+            "lng": -6.9535
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_carmen.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_carmen.svg"
+              ],
+              "characters": [
+                {
+                  "id": "marinero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "mackay",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "marinero",
+              "expression": "happy",
+              "text": {
+                "es": "Ahoy! Marinero de un vapor de Liverpool. Descargamos carbón y cargamos mineral. Y mientras esperamos la marea… football en el muelle.",
+                "en": "Ahoy! Sailor off a Liverpool steamer. We unload coal and load ore. And while we wait for the tide… football on the quay."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XIX el puerto de Huelva se llenó de barcos británicos que venían a por el cobre y el azufre de las minas.",
+                "en": "In the 19th century the port of Huelva filled with British ships coming for the copper and sulphur from the mines."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Los marineros jugaban en todos los puertos: aquí, en Bilbao, en Vigo… Pero jugaban entre ellos y se iban. No fundaban clubes.",
+                "en": "The sailors played in every port: here, in Bilbao, in Vigo… But they played among themselves and left. They didn't found clubs."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué venían a buscar los barcos británicos a Huelva?",
+              "en": "What did British ships come to Huelva for?"
+            },
+            "options": [
+              {
+                "es": "Naranjas",
+                "en": "Oranges"
+              },
+              {
+                "es": "Aceite de oliva",
+                "en": "Olive oil"
+              },
+              {
+                "es": "Mineral de las minas",
+                "en": "Ore from the mines"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Mineral: cobre y azufre de Riotinto y de Tharsis.",
+              "en": "Ore: copper and sulphur from Riotinto and Tharsis."
+            }
+          },
+          "clue": {
+            "id": "pista_puertos",
+            "text": {
+              "es": "Los marineros · Los marineros británicos jugaban en muchos puertos de España, pero jugaban entre ellos y se marchaban.",
+              "en": "The sailors · British sailors played in many Spanish ports, but they played among themselves and then sailed away."
+            }
+          },
+          "nextNodeId": "a2_monjas",
+          "nextHint": {
+            "es": "Sube hasta la Plaza de las Monjas. Unos 5 minutos.",
+            "en": "Walk up to Plaza de las Monjas. About 5 minutes."
+          }
+        },
+        {
+          "id": "a2_monjas",
+          "title": {
+            "es": "Plaza de las Monjas",
+            "en": "Plaza de las Monjas"
+          },
+          "location": {
+            "lat": 37.2583,
+            "lng": -6.9502
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_monjas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_monjas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "marinero",
+                  "expression": "nervous",
+                  "position": "left"
+                },
+                {
+                  "id": "mackay",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Plaza de las Monjas es el centro de Huelva. En ella hay un monumento a Colón: el primer viaje a América salió en 1492 de Palos, en esta misma ría.",
+                "en": "Plaza de las Monjas is the heart of Huelva. It holds a monument to Columbus: the first voyage to the Americas left in 1492 from Palos, on this same estuary."
+              },
+              "year": 1492
+            },
+            {
+              "type": "dialogue",
+              "characterId": "marinero",
+              "expression": "nervous",
+              "text": {
+                "es": "¿Estudiantes? En Bilbao dicen que el fútbol lo trajeron chicos que estudiaban en Inglaterra. Pero eso fue más tarde, al acabar el siglo.",
+                "en": "Students? In Bilbao they say football was brought by boys who'd studied in England. But that was later, at the end of the century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "proud",
+              "text": {
+                "es": "Exacto. Cuando ellos volvieron, en Huelva ya teníamos club, reglas… y un campo.",
+                "en": "Exactly. By the time they came back, in Huelva we already had a club, rules… and a pitch."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué puerto de esta ría salió Colón en 1492?",
+              "en": "From which port on this estuary did Columbus sail in 1492?"
+            },
+            "options": [
+              {
+                "es": "De Barcelona",
+                "en": "Barcelona"
+              },
+              {
+                "es": "De Palos",
+                "en": "Palos"
+              },
+              {
+                "es": "De Cádiz",
+                "en": "Cádiz"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "De Palos de la Frontera, el 3 de agosto de 1492.",
+              "en": "From Palos de la Frontera, on 3 August 1492."
+            }
+          },
+          "clue": {
+            "id": "pista_tarde",
+            "text": {
+              "es": "Los estudiantes · Los estudiantes que volvían de Inglaterra fundaron clubes, pero más tarde que en Huelva.",
+              "en": "The students · The students returning from England founded clubs, but later than Huelva did."
+            }
+          },
+          "nextNodeId": "n4_colon",
+          "nextHint": {
+            "es": "Sigue hasta la Casa Colón, en la Alameda Sundheim. Unos 8 minutos.",
+            "en": "Carry on to Casa Colón, on Alameda Sundheim. About 8 minutes."
+          }
+        },
+        {
+          "id": "b1_museo",
+          "title": {
+            "es": "Museo de Huelva",
+            "en": "Huelva Museum"
+          },
+          "location": {
+            "lat": 37.2616,
+            "lng": -6.9442
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_museo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_museo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "minero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "mackay",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el museo hay una gran rueda hidráulica romana de las minas de Riotinto: allí se saca metal desde hace casi 5.000 años, desde los tiempos de Tartessos.",
+                "en": "The museum holds a large Roman water wheel from the Riotinto mines: metal has been mined there for almost 5,000 years, since the days of Tartessos."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "minero",
+              "expression": "proud",
+              "text": {
+                "es": "Minas hubo siempre. Lo nuevo fueron los ingleses, con sus casas, sus costumbres… y sus domingos de pelota.",
+                "en": "There were always mines. What was new was the English, with their houses, their customs… and their Sunday ball games."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "happy",
+              "text": {
+                "es": "Los británicos vivían aparte, en sus barrios, con sus clubes de tenis, de golf… y de fútbol.",
+                "en": "The British lived apart, in their own quarters, with their tennis clubs, golf clubs… and football clubs."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Desde cuándo se sacan metales en Riotinto?",
+              "en": "How long has metal been mined at Riotinto?"
+            },
+            "options": [
+              {
+                "es": "Desde hace casi 5.000 años",
+                "en": "For almost 5,000 years"
+              },
+              {
+                "es": "Desde 1873",
+                "en": "Since 1873"
+              },
+              {
+                "es": "Desde 1992",
+                "en": "Since 1992"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Desde la Edad del Cobre, pasando por Tartessos y Roma.",
+              "en": "Since the Copper Age, through Tartessos and Rome."
+            }
+          },
+          "clue": {
+            "id": "pista_domingos",
+            "text": {
+              "es": "Los mineros · Los británicos de las minas jugaban al fútbol los domingos, con sus propias reglas y sus clubes.",
+              "en": "The miners · The British at the mines played football on Sundays, with their own rules and their own clubs."
+            }
+          },
+          "nextNodeId": "b2_obrero",
+          "nextHint": {
+            "es": "Sube al Barrio Obrero. Unos 10 minutos.",
+            "en": "Walk up to the Barrio Obrero. About 10 minutes."
+          }
+        },
+        {
+          "id": "b2_obrero",
+          "title": {
+            "es": "Barrio Obrero",
+            "en": "Barrio Obrero"
+          },
+          "location": {
+            "lat": 37.2645,
+            "lng": -6.9337
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_obrero.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_obrero.svg"
+              ],
+              "characters": [
+                {
+                  "id": "minero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "mackay",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La compañía Rio Tinto levantó este barrio de estilo inglés entre 1917 y 1929 para sus trabajadores. Hoy se llama barrio Reina Victoria.",
+                "en": "The Rio Tinto Company built this English-style district between 1917 and 1929 for its workers. Today it's called the Reina Victoria district."
+              },
+              "year": 1917
+            },
+            {
+              "type": "dialogue",
+              "characterId": "minero",
+              "expression": "happy",
+              "text": {
+                "es": "Casitas con jardín, tejados de colores… ¡Parece Inglaterra con sol! Aquí ya jugaban al fútbol los hijos de los obreros.",
+                "en": "Little houses with gardens, colourful roofs… It's like England with sunshine! Workers' children were already playing football here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Cuando se hizo este barrio, el fútbol ya era de todos. Pero empezó mucho antes, en las minas, con los ingleses de la compañía.",
+                "en": "By the time this district was built, football belonged to everyone. But it began long before, in the mines, with the company's English workers."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Mira las casas del barrio. ¿Qué tienen delante casi todas?",
+              "en": "Look at the houses in the district. What do almost all of them have in front?"
+            },
+            "answer": [
+              "jardin",
+              "jardín",
+              "un jardín",
+              "jardines",
+              "garden",
+              "gardens",
+              "a garden"
+            ]
+          },
+          "clue": {
+            "id": "pista_barrio",
+            "text": {
+              "es": "Los mineros · La compañía minera construyó barrios ingleses para sus trabajadores: el fútbol llegó con la compañía.",
+              "en": "The miners · The mining company built English quarters for its workers: football arrived with the company."
+            }
+          },
+          "nextNodeId": "n4_colon",
+          "nextHint": {
+            "es": "Baja hasta la Casa Colón. Unos 10 minutos.",
+            "en": "Walk down to Casa Colón. About 10 minutes."
+          }
+        },
+        {
+          "id": "n4_colon",
+          "title": {
+            "es": "Casa Colón",
+            "en": "Casa Colón"
+          },
+          "location": {
+            "lat": 37.2606,
+            "lng": -6.945
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_colon.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_colon.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mackay",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "minero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa Colón se inauguró en 1883 como Gran Hotel Colón, el más lujoso de España. El 23 de diciembre de 1889 se firmó aquí el acta del Huelva Recreation Club, hoy Recreativo de Huelva.",
+                "en": "Casa Colón opened in 1883 as the Gran Hotel Colón, the most luxurious in Spain. On 23 December 1889 the founding act of the Huelva Recreation Club, today Recreativo de Huelva, was signed here."
+              },
+              "year": 1889
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto"
+                  ],
+                  "text": {
+                    "es": "Viene del puerto: ya sabe que los marineros jugaban, pero no se quedaban. Aquí, en este hotel, fundamos el primer club de España.",
+                    "en": "You've come from the port: you know the sailors played but didn't stay. Here, in this hotel, we founded the first club in Spain."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_barrio"
+                  ],
+                  "text": {
+                    "es": "Viene de los barrios ingleses: ya sabe que la compañía trajo sus costumbres. Aquí, en este hotel, fundamos el primer club de España.",
+                    "en": "You've come from the English quarters: you know the company brought its customs. Here, in this hotel, we founded the first club in Spain."
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llama hoy el club que se fundó aquí en 1889?",
+              "en": "What is the club founded here in 1889 called today?"
+            },
+            "options": [
+              {
+                "es": "Real Betis",
+                "en": "Real Betis"
+              },
+              {
+                "es": "Athletic Club",
+                "en": "Athletic Club"
+              },
+              {
+                "es": "Recreativo de Huelva",
+                "en": "Recreativo de Huelva"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El Recreativo de Huelva, al que llaman «el Decano» por ser el club de fútbol más antiguo de España.",
+              "en": "Recreativo de Huelva, nicknamed “the Dean” for being Spain's oldest football club."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "mackay",
+            "expression": "thinking",
+            "text": {
+              "es": "Antes del veredicto, ¿qué quiere ver? ¿El primer partido entre clubes o las minas donde empezó todo?",
+              "en": "Before the verdict, what would you like to see? The first match between clubs, or the mines where it all began?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "El primer partido",
+                "en": "The first match"
+              },
+              "hint": {
+                "es": "Con el doctor Mackay",
+                "en": "With Doctor Mackay"
+              },
+              "targetNodeId": "n4a_partido",
+              "setFlags": [
+                "version_partido"
+              ]
+            },
+            {
+              "label": {
+                "es": "Las minas",
+                "en": "The mines"
+              },
+              "hint": {
+                "es": "Con el minero",
+                "en": "With the miner"
+              },
+              "targetNodeId": "n4b_minas",
+              "setFlags": [
+                "version_minas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_partido",
+          "title": {
+            "es": "El primer partido",
+            "en": "The first match"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "dramatic",
+              "text": {
+                "es": "Marzo de 1890. Un equipo de Huelva contra otro de británicos de Sevilla. Botas de cuero, pantalones largos y un balón que pesaba como una piedra mojada.",
+                "en": "March 1890. A Huelva team against one made up of Britons from Seville. Leather boots, long trousers and a ball as heavy as a wet stone."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "happy",
+              "text": {
+                "es": "Se considera uno de los primeros partidos entre clubes jugados en España. Pero nosotros solo pusimos nombre y reglas a algo que ya existía.",
+                "en": "It's considered one of the first matches between clubs played in Spain. But we only gave a name and rules to something that already existed."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_club",
+            "text": {
+              "es": "Los mineros · El club de Huelva lo fundaron británicos de la compañía minera, que ya jugaban en las minas.",
+              "en": "The miners · The Huelva club was founded by Britons from the mining company, who were already playing at the mines."
+            }
+          },
+          "nextNodeId": "n5_merced",
+          "nextHint": {
+            "es": "Sube hasta la Catedral de la Merced. Unos 6 minutos.",
+            "en": "Walk up to La Merced Cathedral. About 6 minutes."
+          }
+        },
+        {
+          "id": "n4b_minas",
+          "title": {
+            "es": "Las minas",
+            "en": "The mines"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "minero",
+              "expression": "dramatic",
+              "text": {
+                "es": "En Riotinto, hacia 1874, los ingleses de la compañía se ponían a correr detrás de una pelota. Los del pueblo mirábamos sin entender nada.",
+                "en": "At Riotinto, around 1874, the company Englishmen would go running after a ball. We villagers watched without understanding a thing."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "minero",
+              "expression": "happy",
+              "text": {
+                "es": "Luego nos dejaron jugar. Y ya no paramos. Del pueblo aquel no queda nada: la mina se lo tragó. Pero el fútbol sí quedó.",
+                "en": "Then they let us play. And we never stopped. Nothing's left of that village: the mine swallowed it up. But football stayed."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_1874",
+            "text": {
+              "es": "Los mineros · Hacia 1874 los británicos de la compañía ya jugaban al fútbol en Riotinto.",
+              "en": "The miners · Around 1874 the company's Britons were already playing football at Riotinto."
+            }
+          },
+          "nextNodeId": "n5_merced",
+          "nextHint": {
+            "es": "Sube hasta la Catedral de la Merced. Unos 6 minutos.",
+            "en": "Walk up to La Merced Cathedral. About 6 minutes."
+          }
+        },
+        {
+          "id": "n5_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 37.2638,
+            "lng": -6.9478
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mackay",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "marinero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia de la Merced, del siglo XVII, es la catedral de Huelva desde 1953. La reconstruyeron tras el terremoto de 1755.",
+                "en": "The 17th-century church of La Merced has been Huelva's cathedral since 1953. It was rebuilt after the 1755 earthquake."
+              },
+              "year": 1953
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, detective. Mineros, marineros, estudiantes. ¿Quién trajo el fútbol a España?",
+                "en": "Time for the verdict, detective. Miners, sailors, students. Who brought football to Spain?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién trajo el fútbol a España?",
+              "en": "Who brought football to Spain?"
+            },
+            "options": [
+              {
+                "es": "Los marineros, que jugaban en los muelles",
+                "en": "The sailors, who played on the docks"
+              },
+              {
+                "es": "Los británicos de las minas de Riotinto, que acabaron fundando el club de Huelva",
+                "en": "The Britons at the Riotinto mines, who went on to found the Huelva club"
+              },
+              {
+                "es": "Los estudiantes que volvían de Inglaterra",
+                "en": "The students coming back from England"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los mineros. Los británicos de la compañía Rio Tinto jugaban en las minas desde la década de 1870 y fundaron en Huelva, en 1889, el club más antiguo de España. Marineros y estudiantes ayudaron a extenderlo después.",
+              "en": "The miners. The Rio Tinto Company's Britons played at the mines from the 1870s and in 1889 founded in Huelva the oldest club in Spain. Sailors and students helped spread it later."
+            }
+          },
+          "nextNodeId": "n6_final"
+        },
+        {
+          "id": "n6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_partido"
+                  ],
+                  "text": {
+                    "es": "El puerto y el primer partido: usted habría jugado de extremo. Es el capitán del Decano.",
+                    "en": "The port and the first match: you'd have played on the wing. You're captain of the Dean."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_minas"
+                  ],
+                  "text": {
+                    "es": "El puerto y las minas: ha seguido el mineral y el balón. Es estibador del balón.",
+                    "en": "The port and the mines: you've followed the ore and the ball. You're the ball's stevedore."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_barrio",
+                    "version_partido"
+                  ],
+                  "text": {
+                    "es": "Los barrios y el primer partido: sabe de dónde salen las aficiones. Es socio fundador.",
+                    "en": "The quarters and the first match: you know where fans come from. You're a founding member."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_barrio",
+                    "version_minas"
+                  ],
+                  "text": {
+                    "es": "Los barrios y las minas: ha bajado hasta el origen. Es minero del balón.",
+                    "en": "The quarters and the mines: you've dug down to the origin. You're a football miner."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "happy",
+              "text": {
+                "es": "Thank you, detective. Y recuerde: aquí empezó todo. Aunque en Bilbao le dirán otra cosa.",
+                "en": "Thank you, detective. And remember: it all began here. Although in Bilbao they'll tell you otherwise."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "capitan_decano",
+          "requires": [
+            "camino_puerto",
+            "version_partido"
+          ],
+          "title": {
+            "es": "Capitán del Decano",
+            "en": "Captain of the Dean"
+          }
+        },
+        {
+          "id": "estibador_balon",
+          "requires": [
+            "camino_puerto",
+            "version_minas"
+          ],
+          "title": {
+            "es": "Estibador del balón",
+            "en": "The ball's stevedore"
+          }
+        },
+        {
+          "id": "socio_fundador",
+          "requires": [
+            "camino_barrio",
+            "version_partido"
+          ],
+          "title": {
+            "es": "Socio fundador",
+            "en": "Founding member"
+          }
+        },
+        {
+          "id": "minero_balon",
+          "requires": [
+            "camino_barrio",
+            "version_minas"
+          ],
+          "title": {
+            "es": "Minero del balón",
+            "en": "Football miner"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "muelle_tinto",
+          "name": {
+            "es": "El Muelle del Tinto",
+            "en": "The Rio Tinto Pier"
+          },
+          "icon": "collectibles/huelva_muelle.svg",
+          "awardedAtNodeId": "n1_muelle"
+        },
+        {
+          "id": "locomotora",
+          "name": {
+            "es": "La locomotora de la mina",
+            "en": "The mine locomotive"
+          },
+          "icon": "collectibles/huelva_locomotora.svg",
+          "awardedAtNodeId": "n2_estacion"
+        },
+        {
+          "id": "ancla",
+          "name": {
+            "es": "El ancla del vapor",
+            "en": "The steamer's anchor"
+          },
+          "icon": "collectibles/huelva_ancla.svg",
+          "awardedAtNodeId": "a1_carmen"
+        },
+        {
+          "id": "carabela",
+          "name": {
+            "es": "La carabela",
+            "en": "The caravel"
+          },
+          "icon": "collectibles/huelva_carabela.svg",
+          "awardedAtNodeId": "a2_monjas"
+        },
+        {
+          "id": "rueda_romana",
+          "name": {
+            "es": "La rueda romana",
+            "en": "The Roman wheel"
+          },
+          "icon": "collectibles/huelva_rueda.svg",
+          "awardedAtNodeId": "b1_museo"
+        },
+        {
+          "id": "casita_inglesa",
+          "name": {
+            "es": "La casita inglesa",
+            "en": "The English cottage"
+          },
+          "icon": "collectibles/huelva_casita.svg",
+          "awardedAtNodeId": "b2_obrero"
+        },
+        {
+          "id": "balon_1889",
+          "name": {
+            "es": "El balón de 1889",
+            "en": "The 1889 ball"
+          },
+          "icon": "collectibles/huelva_balon.svg",
+          "awardedAtNodeId": "n4_colon"
+        },
+        {
+          "id": "insignia_decano",
+          "name": {
+            "es": "¿Quién trajo el fútbol a España?",
+            "en": "Who Brought Football to Spain?"
+          },
+          "icon": "collectibles/huelva_insignia.svg",
+          "awardedAtNodeId": "n6_final"
+        }
+      ]
+    },
+    {
+      "id": "choqueros",
+      "title": {
+        "es": "¿Por qué nos llaman choqueros?",
+        "en": "Why Do They Call Us Choqueros?"
+      },
+      "summary": {
+        "es": "A los de Huelva les llaman choqueros. ¿Fue la ría, un mote de los vecinos o la fama de su cocina? Con una pescadera, una fresera y un cortador de jamón, recorre la Huelva del mar.",
+        "en": "People from Huelva are called choqueros. Was it the estuary, a neighbours' nickname or the fame of its cooking? With a fishmonger, a strawberry grower and a ham carver, explore Huelva's seafaring side."
+      },
+      "era": "De Onuba a hoy",
+      "guideCharacterId": "choquera",
+      "durationMin": 100,
+      "distanceKm": 3.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La ría",
+            "en": "The estuary"
+          },
+          "trail": {
+            "es": "camino de la ría",
+            "en": "estuary trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El centro",
+            "en": "The centre"
+          },
+          "trail": {
+            "es": "camino del centro",
+            "en": "centre trail"
+          }
+        }
+      },
+      "startNodeId": "g1_carmen",
+      "nodes": [
+        {
+          "id": "g1_carmen",
+          "title": {
+            "es": "Mercado del Carmen",
+            "en": "Carmen Market"
+          },
+          "location": {
+            "lat": 37.2548,
+            "lng": -6.9535
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_carmen.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_carmen.svg"
+              ],
+              "characters": [
+                {
+                  "id": "choquera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Miarma, bienvenido! Soy pescadera en el mercado, choquera de toda la vida. Aquí tienes gamba blanca, coquinas, chocos…",
+                "en": "Welcome, love! I'm a fishmonger at the market, a choquera through and through. Here you've got white prawns, wedge clams, cuttlefish…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "text": {
+                "es": "Y te traigo un misterio: a los de Huelva nos llaman «choqueros». Un periodista de fuera dice que empezó siendo un insulto. ¿Tú qué crees?",
+                "en": "And I've got a mystery for you: people from Huelva are called “choqueros”. An outside journalist says it started as an insult. What do you think?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la ría, que está llena de chocos; los vecinos de otros pueblos, que nos pusieron el mote; y la cocina, por lo bien que los freímos.",
+                "en": "Three suspects: the estuary, which is full of cuttlefish; the people from nearby towns, who gave us the nickname; and the kitchen, for how well we fry them."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El choco es la sepia. En Huelva se come frito, a la plancha o guisado con habas.",
+                "en": "The choco is the cuttlefish. In Huelva it's eaten fried, grilled or stewed with broad beans."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué animal es el «choco»?",
+              "en": "What animal is the “choco”?"
+            },
+            "options": [
+              {
+                "es": "La gamba",
+                "en": "The prawn"
+              },
+              {
+                "es": "La sepia",
+                "en": "The cuttlefish"
+              },
+              {
+                "es": "El pulpo",
+                "en": "The octopus"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La sepia, pariente del calamar y del pulpo. Suelta tinta para esconderse.",
+              "en": "The cuttlefish, a relative of the squid and the octopus. It squirts ink to hide."
+            }
+          },
+          "clue": {
+            "id": "pista_tinta",
+            "text": {
+              "es": "La ría · El choco vive en las aguas poco profundas de la ría y la costa de Huelva.",
+              "en": "The estuary · The cuttlefish lives in the shallow waters of the Huelva estuary and coast."
+            }
+          },
+          "nextNodeId": "g2_muelle",
+          "nextHint": {
+            "es": "Baja hasta la ría, al Muelle del Tinto. Unos 5 minutos.",
+            "en": "Walk down to the estuary, to the Rio Tinto Pier. About 5 minutes."
+          }
+        },
+        {
+          "id": "g2_muelle",
+          "title": {
+            "es": "Muelle del Tinto",
+            "en": "Rio Tinto Pier"
+          },
+          "location": {
+            "lat": 37.2523,
+            "lng": -6.9569
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "choquera",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "fresera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Yo soy fresera, de Palos. Vengo a Huelva a vender fresas. ¿Sabías que casi todas las fresas de España salen de esta provincia?",
+                "en": "Hello! I'm a strawberry grower from Palos. I come to Huelva to sell strawberries. Did you know almost all of Spain's strawberries come from this province?"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La ría de Huelva es la unión de dos ríos, el Tinto y el Odiel. Sus marismas son criadero de muchos peces y mariscos.",
+                "en": "The Huelva estuary is where two rivers meet, the Tinto and the Odiel. Its marshes are a nursery for many fish and shellfish."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "proud",
+              "text": {
+                "es": "Mis abuelos pescaban chocos aquí mismo, en la ría. Había tantos que eran la comida de los pobres.",
+                "en": "My grandparents fished for cuttlefish right here in the estuary. There were so many they were poor people's food."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dos ríos forman la ría de Huelva?",
+              "en": "Which two rivers form the Huelva estuary?"
+            },
+            "options": [
+              {
+                "es": "El Tinto y el Odiel",
+                "en": "The Tinto and the Odiel"
+              },
+              {
+                "es": "El Guadalquivir y el Genil",
+                "en": "The Guadalquivir and the Genil"
+              },
+              {
+                "es": "El Tajo y el Duero",
+                "en": "The Tagus and the Douro"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El Tinto, de aguas rojizas por los minerales, y el Odiel.",
+              "en": "The Tinto, with reddish water because of the minerals, and the Odiel."
+            }
+          },
+          "clue": {
+            "id": "pista_abundancia",
+            "text": {
+              "es": "La ría · En la ría había tantos chocos que eran la comida diaria de los pobres.",
+              "en": "The estuary · There were so many cuttlefish in the estuary that they were poor people's daily food."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "choquera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos por la orilla de la ría o subimos al centro, a buscar a los vecinos que nos pusieron el mote?",
+              "en": "Shall we carry on along the estuary, or head up into the centre to look for the neighbours who gave us the nickname?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por la ría",
+                "en": "Along the estuary"
+              },
+              "hint": {
+                "es": "Muelles y estación",
+                "en": "Quays and station"
+              },
+              "targetNodeId": "ga1_levante",
+              "setFlags": [
+                "camino_ria"
+              ],
+              "distanceM": 800,
+              "walkMin": 10
+            },
+            {
+              "label": {
+                "es": "Por el centro",
+                "en": "Through the centre"
+              },
+              "hint": {
+                "es": "Plazas y cabezos",
+                "en": "Squares and hills"
+              },
+              "targetNodeId": "gb1_monjas",
+              "setFlags": [
+                "camino_centro"
+              ],
+              "distanceM": 700,
+              "walkMin": 9
+            }
+          ]
+        },
+        {
+          "id": "ga1_levante",
+          "title": {
+            "es": "Muelle de Levante",
+            "en": "Levante Quay"
+          },
+          "location": {
+            "lat": 37.253,
+            "lng": -6.9442
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_levante.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_levante.svg"
+              ],
+              "characters": [
+                {
+                  "id": "choquera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "fresera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Huelva es famosa por su gamba blanca, que se pesca en el golfo de Cádiz y se come simplemente cocida.",
+                "en": "Huelva is famous for its white prawn, caught in the Gulf of Cádiz and eaten simply boiled."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "happy",
+              "text": {
+                "es": "Aquí llegaban las barcas. Los chocos se vendían baratos, a cubos. Y cuando algo es de todos los días, acaba siendo tu nombre.",
+                "en": "This is where the boats came in. Cuttlefish were sold cheap, by the bucketful. And when something is everyday food, it ends up being your name."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "thinking",
+              "text": {
+                "es": "En mi pueblo decimos «eres más de Huelva que un choco». Y no es para ofender, ¿eh?",
+                "en": "In my village we say “you're more Huelva than a choco”. And we don't mean it as an insult, mind."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se come tradicionalmente la gamba blanca de Huelva?",
+              "en": "How is Huelva white prawn traditionally eaten?"
+            },
+            "options": [
+              {
+                "es": "Con chocolate",
+                "en": "With chocolate"
+              },
+              {
+                "es": "En mermelada",
+                "en": "As jam"
+              },
+              {
+                "es": "Simplemente cocida",
+                "en": "Simply boiled"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Cocida, con agua y sal: el producto no necesita más.",
+              "en": "Boiled in salted water: the product needs nothing else."
+            }
+          },
+          "clue": {
+            "id": "pista_cubos",
+            "text": {
+              "es": "La ría · Los chocos se vendían baratos, a cubos, en los muelles de la ría.",
+              "en": "The estuary · Cuttlefish were sold cheap, by the bucketful, on the estuary quays."
+            }
+          },
+          "nextNodeId": "ga2_estacion",
+          "nextHint": {
+            "es": "Sigue hasta la antigua Estación de Sevilla. Unos 5 minutos.",
+            "en": "Carry on to the old Seville Station. About 5 minutes."
+          }
+        },
+        {
+          "id": "ga2_estacion",
+          "title": {
+            "es": "Antigua Estación de Sevilla",
+            "en": "Old Seville Station"
+          },
+          "location": {
+            "lat": 37.2554,
+            "lng": -6.9491
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_estacion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_estacion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "fresera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "cortador",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cortador",
+              "expression": "proud",
+              "text": {
+                "es": "Buenas. Cortador de jamón, de la sierra de Aracena. Allí arriba, en la dehesa, está Jabugo. Lo mío es el cerdo ibérico, no el choco.",
+                "en": "Hello. Ham carver, from the Aracena hills. Up there, in the dehesa, lies Jabugo. My thing is the Iberian pig, not the cuttlefish."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La denominación de origen Jabugo protege el jamón ibérico de la sierra de Huelva. Los cerdos de bellota se crían sueltos en la dehesa, entre encinas.",
+                "en": "The Jabugo designation of origin protects the Iberian ham from the Huelva hills. Acorn-fed pigs roam free in the dehesa, among holm oaks."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "thinking",
+              "text": {
+                "es": "Por este tren subían los chocos a Sevilla. Y los sevillanos, al ver tanto choco, empezaron a llamarnos choqueros…",
+                "en": "The cuttlefish went up to Seville on this train. And the Sevillians, seeing so many chocos, started calling us choqueros…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué se alimentan los cerdos ibéricos de bellota en la dehesa?",
+              "en": "What do acorn-fed Iberian pigs eat in the dehesa?"
+            },
+            "options": [
+              {
+                "es": "De fresas",
+                "en": "Strawberries"
+              },
+              {
+                "es": "De bellotas",
+                "en": "Acorns"
+              },
+              {
+                "es": "De chocos",
+                "en": "Cuttlefish"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "De bellotas de encina y alcornoque, en la montanera, de octubre a marzo.",
+              "en": "Acorns from holm and cork oaks, during the montanera, from October to March."
+            }
+          },
+          "clue": {
+            "id": "pista_tren",
+            "text": {
+              "es": "Los vecinos · Se cuenta que fueron los de fuera, al ver tanto choco, quienes empezaron a llamar choqueros a los de Huelva.",
+              "en": "The neighbours · It's said that outsiders, seeing so much cuttlefish, were the first to call Huelva people choqueros."
+            }
+          },
+          "nextNodeId": "g4_punto",
+          "nextHint": {
+            "es": "Sube hasta la Plaza del Punto. Unos 8 minutos.",
+            "en": "Walk up to Plaza del Punto. About 8 minutes."
+          }
+        },
+        {
+          "id": "gb1_monjas",
+          "title": {
+            "es": "Plaza de las Monjas",
+            "en": "Plaza de las Monjas"
+          },
+          "location": {
+            "lat": 37.2583,
+            "lng": -6.9502
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_monjas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_monjas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "fresera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "choquera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La provincia de Huelva produce la gran mayoría de las fresas de España, y buena parte se vende en el resto de Europa.",
+                "en": "The province of Huelva grows the vast majority of Spain's strawberries, and much of the crop is sold across Europe."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "happy",
+              "text": {
+                "es": "En los pueblos de alrededor nos ponemos motes unos a otros. A los de Huelva, «choqueros»; a los de Palos, a los de Moguer… cada uno tiene el suyo.",
+                "en": "In the towns around here we all give each other nicknames. Huelva people are “choqueros”; Palos, Moguer… everyone has their own."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea, que el mote nos lo pusieron de fuera… pero porque nos veían comer chocos. Hmm.",
+                "en": "So the nickname came from outside… but because they saw us eating cuttlefish. Hmm."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué fruta de Huelva se vende por toda Europa?",
+              "en": "Which Huelva fruit is sold all over Europe?"
+            },
+            "options": [
+              {
+                "es": "La fresa",
+                "en": "The strawberry"
+              },
+              {
+                "es": "El mango",
+                "en": "The mango"
+              },
+              {
+                "es": "La piña",
+                "en": "The pineapple"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La fresa, junto con las frambuesas y los arándanos, los «frutos rojos».",
+              "en": "The strawberry, together with raspberries and blueberries: the “red fruits”."
+            }
+          },
+          "clue": {
+            "id": "pista_motes",
+            "text": {
+              "es": "Los vecinos · En la comarca todos los pueblos tienen mote, y el de Huelva salió de lo que la gente veía comer.",
+              "en": "The neighbours · Every town in the area has a nickname, and Huelva's came from what people saw them eat."
+            }
+          },
+          "nextNodeId": "gb2_sanpedro",
+          "nextHint": {
+            "es": "Sube al cabezo de San Pedro. Unos 4 minutos.",
+            "en": "Walk up San Pedro hill. About 4 minutes."
+          }
+        },
+        {
+          "id": "gb2_sanpedro",
+          "title": {
+            "es": "Iglesia de San Pedro",
+            "en": "San Pedro Church"
+          },
+          "location": {
+            "lat": 37.2606,
+            "lng": -6.9514
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_sanpedro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_sanpedro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cortador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "choquera",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia de San Pedro está sobre uno de los cabezos de Huelva, las colinas donde se asentó la antigua Onuba, ciudad de tartesios y fenicios.",
+                "en": "San Pedro Church stands on one of Huelva's cabezos, the hills where ancient Onuba, a city of Tartessians and Phoenicians, was founded."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cortador",
+              "expression": "happy",
+              "text": {
+                "es": "Ya los fenicios pescaban y salaban en esta costa. Y hoy seguimos: mojama y atún de almadraba en Isla Cristina y Ayamonte.",
+                "en": "The Phoenicians were already fishing and salting on this coast. And we still are: mojama and almadraba tuna in Isla Cristina and Ayamonte."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "proud",
+              "text": {
+                "es": "¿Lo ves? Aquí se vive del mar desde hace tres mil años. ¡Cómo no nos vamos a llamar como un bicho del mar!",
+                "en": "See? People here have lived off the sea for three thousand years. Of course we're named after a sea creature!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llamaba la Huelva antigua?",
+              "en": "What was ancient Huelva called?"
+            },
+            "options": [
+              {
+                "es": "Gades",
+                "en": "Gades"
+              },
+              {
+                "es": "Hispalis",
+                "en": "Hispalis"
+              },
+              {
+                "es": "Onuba",
+                "en": "Onuba"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Onuba. Por eso a los de Huelva también se les llama onubenses.",
+              "en": "Onuba. That's why people from Huelva are also called onubenses."
+            }
+          },
+          "clue": {
+            "id": "pista_onuba",
+            "text": {
+              "es": "La ría · Desde los fenicios, Huelva ha vivido de la pesca de su ría y de su costa.",
+              "en": "The estuary · Since the Phoenicians, Huelva has lived off fishing in its estuary and along its coast."
+            }
+          },
+          "nextNodeId": "g4_punto",
+          "nextHint": {
+            "es": "Baja a la Plaza del Punto. Dos minutos.",
+            "en": "Walk down to Plaza del Punto. Two minutes."
+          }
+        },
+        {
+          "id": "g4_punto",
+          "title": {
+            "es": "Plaza del Punto",
+            "en": "Plaza del Punto"
+          },
+          "location": {
+            "lat": 37.2595,
+            "lng": -6.9519
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_punto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_punto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "choquera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "cortador",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la cocina de Huelva el choco está en todo: frito, a la plancha, con habas, en arroz y hasta sus huevas, que se comen cocidas.",
+                "en": "In Huelva cooking the cuttlefish is in everything: fried, grilled, with broad beans, in rice and even its roe, eaten boiled."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ría: has visto los muelles donde se vendían chocos a cubos. ¿Seguimos la pista de la sartén o la del mote?",
+                    "en": "You've come from the estuary: you've seen the quays where cuttlefish were sold by the bucket. Shall we follow the frying pan, or the nickname?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro"
+                  ],
+                  "text": {
+                    "es": "Vienes del centro: has oído lo de los motes de los pueblos. ¿Seguimos la pista de la sartén o la del mote?",
+                    "en": "You've come from the centre: you've heard about the towns' nicknames. Shall we follow the frying pan, or the nickname?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué legumbre se guisa el choco en Huelva?",
+              "en": "Which legume is cuttlefish stewed with in Huelva?"
+            },
+            "options": [
+              {
+                "es": "Con garbanzos",
+                "en": "Chickpeas"
+              },
+              {
+                "es": "Con habas",
+                "en": "Broad beans"
+              },
+              {
+                "es": "Con lentejas",
+                "en": "Lentils"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Con habas: los chocos con habas son un plato típico onubense.",
+              "en": "With broad beans: chocos con habas is a classic Huelva dish."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "choquera",
+            "expression": "thinking",
+            "text": {
+              "es": "Última pista antes del veredicto. ¿La sartén o el mote?",
+              "en": "One last lead before the verdict. The frying pan, or the nickname?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la sartén",
+                "en": "The frying pan lead"
+              },
+              "hint": {
+                "es": "Con la choquera",
+                "en": "With the choquera"
+              },
+              "targetNodeId": "g4a_sarten",
+              "setFlags": [
+                "version_sarten"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del mote",
+                "en": "The nickname lead"
+              },
+              "hint": {
+                "es": "Con la fresera",
+                "en": "With the strawberry grower"
+              },
+              "targetNodeId": "g4b_mote",
+              "setFlags": [
+                "version_mote"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_sarten",
+          "title": {
+            "es": "La sartén",
+            "en": "The frying pan"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "proud",
+              "text": {
+                "es": "El choco frito de Huelva: tiras de choco, harina y aceite bien caliente. Se fríe en cualquier casa, desde siempre.",
+                "en": "Huelva fried cuttlefish: strips of choco, flour and piping hot oil. It's been fried in every home, forever."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero antes de ser famoso, el choco era barato. Se comía porque la ría daba muchos. La fama vino después.",
+                "en": "But before it was famous, cuttlefish was cheap. People ate it because the estuary gave plenty. The fame came afterwards."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_fama",
+            "text": {
+              "es": "La cocina · La fama del choco frito vino después: primero fue comida barata porque la ría daba muchos.",
+              "en": "The kitchen · Fried cuttlefish only became famous later: first it was cheap food because the estuary gave plenty."
+            }
+          },
+          "nextNodeId": "g5_colon",
+          "nextHint": {
+            "es": "Sigue hasta los jardines de la Casa Colón. Unos 8 minutos.",
+            "en": "Carry on to the gardens of Casa Colón. About 8 minutes."
+          }
+        },
+        {
+          "id": "g4b_mote",
+          "title": {
+            "es": "El mote",
+            "en": "The nickname"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi abuela decía que «choquero» lo decían en Sevilla con retintín, como diciendo «esos que solo comen chocos».",
+                "en": "My grandmother said that in Seville they said “choquero” with a sneer, as if to say “those people who only eat cuttlefish”."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fresera",
+              "expression": "happy",
+              "text": {
+                "es": "Pero los de Huelva lo cogieron con orgullo. Hoy hay peñas, canciones y hasta un equipo que se hace llamar así.",
+                "en": "But Huelva people took it with pride. Today there are clubs, songs and even a team that call themselves that."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_orgullo",
+            "text": {
+              "es": "Los vecinos · El mote pudo empezar con retintín, pero nació de lo que la ría daba y Huelva lo hizo suyo.",
+              "en": "The neighbours · The nickname may have started as a sneer, but it came from what the estuary provided, and Huelva made it its own."
+            }
+          },
+          "nextNodeId": "g5_colon",
+          "nextHint": {
+            "es": "Sigue hasta los jardines de la Casa Colón. Unos 8 minutos.",
+            "en": "Carry on to the gardens of Casa Colón. About 8 minutes."
+          }
+        },
+        {
+          "id": "g5_colon",
+          "title": {
+            "es": "Casa Colón",
+            "en": "Casa Colón"
+          },
+          "location": {
+            "lat": 37.2606,
+            "lng": -6.945
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_colon.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_colon.svg"
+              ],
+              "characters": [
+                {
+                  "id": "choquera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "fresera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los vinos del Condado de Huelva tienen denominación de origen. La variedad de uva más típica es la zalema.",
+                "en": "The wines of the Condado de Huelva have their own designation of origin. The most typical grape variety is zalema."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en las carabelas de Colón iba vino del Condado de Huelva.",
+                "en": "It's said that Columbus's caravels carried wine from the Condado de Huelva."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "text": {
+                "es": "Repasa el cuaderno: la ría, los vecinos, la cocina. ¿Por qué nos llaman choqueros?",
+                "en": "Go over your notebook: the estuary, the neighbours, the kitchen. Why are we called choqueros?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué a los de Huelva les llaman choqueros?",
+              "en": "Why are Huelva people called choqueros?"
+            },
+            "options": [
+              {
+                "es": "Por la ría: había tantos chocos que eran la comida de cada día",
+                "en": "Because of the estuary: there were so many cuttlefish they were everyday food"
+              },
+              {
+                "es": "Solo por un insulto de los vecinos",
+                "en": "Only because of an insult from the neighbours"
+              },
+              {
+                "es": "Por un restaurante famoso",
+                "en": "Because of a famous restaurant"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por la ría. El choco abundaba y era la comida diaria de Huelva; los vecinos le pusieron el mote por eso y Huelva lo convirtió en orgullo.",
+              "en": "Because of the estuary. Cuttlefish were plentiful and Huelva's everyday food; the neighbours used it as a nickname, and Huelva turned it into a source of pride."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_sarten"
+                  ],
+                  "text": {
+                    "es": "La ría y la sartén: eres más de Huelva que un choco. ¡Choquero de honor!",
+                    "en": "The estuary and the frying pan: you're more Huelva than a choco. Honorary choquero!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_mote"
+                  ],
+                  "text": {
+                    "es": "La ría y el mote: sabes de dónde vienen los nombres. Eres pescador de la ría.",
+                    "en": "The estuary and the nickname: you know where names come from. You're an estuary fisher."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_sarten"
+                  ],
+                  "text": {
+                    "es": "El centro y la sartén: de la plaza a la cocina. Eres freidor de oro.",
+                    "en": "The centre and the frying pan: from the square to the kitchen. You're a golden fryer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_mote"
+                  ],
+                  "text": {
+                    "es": "El centro y el mote: ya nadie te engaña con un apodo. Eres cronista de motes.",
+                    "en": "The centre and the nickname: no nickname will fool you now. You're a nickname chronicler."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y ya sabes: si alguien te llama choquero, di «gracias»! Vuelve cuando quieras, que el mercado abre temprano.",
+                "en": "And now you know: if anyone calls you a choquero, say “thank you”! Come back whenever you like, the market opens early."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "choquero_honor",
+          "requires": [
+            "camino_ria",
+            "version_sarten"
+          ],
+          "title": {
+            "es": "Choquero de honor",
+            "en": "Honorary choquero"
+          }
+        },
+        {
+          "id": "pescador_ria",
+          "requires": [
+            "camino_ria",
+            "version_mote"
+          ],
+          "title": {
+            "es": "Pescador de la ría",
+            "en": "Estuary fisher"
+          }
+        },
+        {
+          "id": "freidor_oro",
+          "requires": [
+            "camino_centro",
+            "version_sarten"
+          ],
+          "title": {
+            "es": "Freidor de oro",
+            "en": "Golden fryer"
+          }
+        },
+        {
+          "id": "cronista_motes",
+          "requires": [
+            "camino_centro",
+            "version_mote"
+          ],
+          "title": {
+            "es": "Cronista de motes",
+            "en": "Nickname chronicler"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "choco",
+          "name": {
+            "es": "El choco",
+            "en": "The cuttlefish"
+          },
+          "icon": "collectibles/huelva_choco.svg",
+          "awardedAtNodeId": "g1_carmen"
+        },
+        {
+          "id": "fresa",
+          "name": {
+            "es": "La fresa",
+            "en": "The strawberry"
+          },
+          "icon": "collectibles/huelva_fresa.svg",
+          "awardedAtNodeId": "g2_muelle"
+        },
+        {
+          "id": "gamba_blanca",
+          "name": {
+            "es": "La gamba blanca",
+            "en": "The white prawn"
+          },
+          "icon": "collectibles/huelva_gamba.svg",
+          "awardedAtNodeId": "ga1_levante"
+        },
+        {
+          "id": "jamon_jabugo",
+          "name": {
+            "es": "El jamón de la sierra",
+            "en": "The mountain ham"
+          },
+          "icon": "collectibles/huelva_jamon.svg",
+          "awardedAtNodeId": "ga2_estacion"
+        },
+        {
+          "id": "mote",
+          "name": {
+            "es": "El mote",
+            "en": "The nickname"
+          },
+          "icon": "collectibles/huelva_mote.svg",
+          "awardedAtNodeId": "gb1_monjas"
+        },
+        {
+          "id": "mojama",
+          "name": {
+            "es": "La mojama",
+            "en": "The mojama"
+          },
+          "icon": "collectibles/huelva_mojama.svg",
+          "awardedAtNodeId": "gb2_sanpedro"
+        },
+        {
+          "id": "habas_chocos",
+          "name": {
+            "es": "Chocos con habas",
+            "en": "Cuttlefish with broad beans"
+          },
+          "icon": "collectibles/huelva_habas.svg",
+          "awardedAtNodeId": "g4_punto"
+        },
+        {
+          "id": "insignia_choqueros",
+          "name": {
+            "es": "¿Por qué nos llaman choqueros?",
+            "en": "Why Do They Call Us Choqueros?"
+          },
+          "icon": "collectibles/huelva_choqueros.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    }
+  ]
+}
