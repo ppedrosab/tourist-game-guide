@@ -1,0 +1,1169 @@
+{
+  "id": "cadiz",
+  "version": 1,
+  "name": {
+    "es": "Cádiz",
+    "en": "Cádiz"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 36.5335,
+    "lng": -6.2985
+  },
+  "bounds": [
+    {
+      "lat": 36.527,
+      "lng": -6.309
+    },
+    {
+      "lat": 36.54,
+      "lng": -6.289
+    }
+  ],
+  "coverImage": "img/cover_cadiz.jpg",
+  "characters": [
+    {
+      "id": "tia_norica",
+      "name": {
+        "es": "La Tía Norica",
+        "en": "Tía Norica"
+      },
+      "description": {
+        "es": "Marioneta gaditana del siglo XIX. Abuela cotilla, con más guasa que nadie y un «pisha» en cada frase.",
+        "en": "A 19th-century Cádiz puppet. A gossipy grandmother with more wit than anyone and a “pisha” in every sentence."
+      },
+      "avatar": "sprites/norica/norica_neutral.svg",
+      "era": "s. XIX-hoy"
+    },
+    {
+      "id": "la_pepa",
+      "name": {
+        "es": "La Pepa",
+        "en": "La Pepa"
+      },
+      "description": {
+        "es": "La Constitución de 1812 en persona. Idealista, solemne y muy orgullosa de haber nacido en Cádiz.",
+        "en": "The Constitution of 1812 in person. Idealistic, solemn and very proud to have been born in Cádiz."
+      },
+      "avatar": "sprites/pepa/pepa_neutral.svg",
+      "era": "1812"
+    },
+    {
+      "id": "magon",
+      "name": {
+        "es": "Magón, mercader fenicio",
+        "en": "Magón, Phoenician merchant"
+      },
+      "description": {
+        "es": "Comerciante de Gadir. Lo sabe todo de barcos, atunes y regateos, y presume de ser el gaditano más antiguo.",
+        "en": "A merchant from Gadir. He knows everything about ships, tuna and haggling, and boasts of being the oldest gaditano of all."
+      },
+      "avatar": "sprites/magon/magon_neutral.svg",
+      "era": "s. VIII a. C."
+    }
+  ],
+  "routes": [
+    {
+      "id": "la-ciudad-que-no-cayo",
+      "title": {
+        "es": "La ciudad que no cayó",
+        "en": "The City That Never Fell"
+      },
+      "summary": {
+        "es": "En 1810 Napoleón sitió Cádiz y la ciudad no se rindió. ¿Cómo lo consiguió? Sigue el camino del mar o el de la ciudad, con la Tía Norica de guía.",
+        "en": "In 1810 Napoleon besieged Cádiz and the city never surrendered. How did it do it? Follow the sea or the city, with Tía Norica as your guide."
+      },
+      "era": "1100 a. C. - 1812",
+      "guideCharacterId": "tia_norica",
+      "durationMin": 110,
+      "distanceKm": 3.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Mar",
+            "en": "Sea"
+          },
+          "trail": {
+            "es": "camino del mar",
+            "en": "sea trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Ciudad",
+            "en": "City"
+          },
+          "trail": {
+            "es": "camino de la ciudad",
+            "en": "city trail"
+          }
+        }
+      },
+      "startNodeId": "n1_san_juan_de_dios",
+      "nodes": [
+        {
+          "id": "n1_san_juan_de_dios",
+          "title": {
+            "es": "Plaza de San Juan de Dios",
+            "en": "Plaza de San Juan de Dios"
+          },
+          "location": {
+            "lat": 36.5296,
+            "lng": -6.2921
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tia_norica",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ay, pisha, por fin! Llevo más de doscientos años moviendo los brazos pa' que alguien me haga caso. Soy la Tía Norica, la marioneta más famosa de Cádiz.",
+                "en": "Oh, pisha, at last! I've been waving my arms for over two hundred years hoping someone would notice me. I'm Tía Norica, the most famous puppet in Cádiz."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "dramatic",
+              "text": {
+                "es": "Te traigo un misterio de los gordos. Durante dos años y medio, el ejército de Napoleón rodeó esta ciudad. Media España había caído… y Cádiz no. ¿Cómo aguantó una ciudad tan chiquitita? Eso vamos a averiguarlo tú y yo.",
+                "en": "I've got a big mystery for you. For two and a half years Napoleon's army besieged this city. Half of Spain had fallen… but not Cádiz. How did such a tiny city hold out? That's what you and I are going to find out."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las tropas francesas sitiaron Cádiz desde febrero de 1810 hasta agosto de 1812 y nunca llegaron a tomarla.",
+                "en": "French troops besieged Cádiz from February 1810 to August 1812 and never managed to take it."
+              },
+              "year": 1810
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Los títeres de la Tía Norica se representan en Cádiz desde el siglo XIX. La Tía es una abuela gaditana, cotilla y con mucha guasa, que siempre acaba liándola.",
+                "en": "The Tía Norica puppet shows have been performed in Cádiz since the 19th century. The Tía is a gossipy, wisecracking Cádiz grandmother who always ends up causing chaos."
+              }
+            }
+          ],
+          "nextNodeId": "n2_catedral",
+          "nextHint": {
+            "es": "A la catedral, por la calle Pelota. Unos 4 minutos.",
+            "en": "To the cathedral, along Calle Pelota. About 4 minutes."
+          }
+        },
+        {
+          "id": "n2_catedral",
+          "title": {
+            "es": "Catedral de Cádiz",
+            "en": "Cádiz Cathedral"
+          },
+          "location": {
+            "lat": 36.5293,
+            "lng": -6.2951
+          },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_cadiz_catedral.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "talking",
+              "text": {
+                "es": "Mira qué cúpula, amarilla como el oro. Desde el mar brilla que da gusto. Pero esta catedral no se pagó con oro de aquí, pisha: se pagó con el comercio de América.",
+                "en": "Look at that dome, yellow as gold. From the sea it shines like anything. But this cathedral wasn't paid for with gold from here, pisha: it was paid for by trade with the Americas."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1717 la Casa de Contratación, que controlaba el comercio con América, se trasladó de Sevilla a Cádiz. Cinco años después, en 1722, empezaron las obras de esta catedral nueva.",
+                "en": "In 1717 the Casa de Contratación, which controlled trade with the Americas, moved from Seville to Cádiz. Five years later, in 1722, work began on this new cathedral."
+              },
+              "year": 1717
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "En su cripta, que está por debajo del nivel del mar, descansa el compositor gaditano Manuel de Falla.",
+                "en": "Its crypt, which lies below sea level, is the resting place of the Cádiz-born composer Manuel de Falla."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "text": {
+                "es": "Apunta la primera pista: a Cádiz la riqueza le llegaba por mar. Y ahora te toca elegir, que en esta ciudad hay dos maneras de aguantar un asedio.",
+                "en": "Write down the first clue: Cádiz's wealth came in by sea. And now it's your turn to choose, because in this city there are two ways to survive a siege."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuánto tiempo tardaron en terminar la catedral nueva?",
+              "en": "How long did it take to finish the new cathedral?"
+            },
+            "options": [
+              {
+                "es": "Diez años",
+                "en": "Ten years"
+              },
+              {
+                "es": "Más de un siglo",
+                "en": "More than a century"
+              },
+              {
+                "es": "Nunca se terminó",
+                "en": "It was never finished"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Se empezó en 1722 y no se consagró hasta 1838: más de cien años de obras. Por eso mezcla el barroco del principio con el neoclásico del final.",
+              "en": "It was begun in 1722 and not consecrated until 1838: more than a hundred years of building. That's why it mixes the Baroque of the start with the Neoclassical of the end."
+            }
+          },
+          "clue": {
+            "id": "pista_america",
+            "text": {
+              "es": "A Cádiz la riqueza le llegaba por mar, con el comercio de América.",
+              "en": "Cádiz's wealth came in by sea, with the trade from the Americas."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "tia_norica",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Tú qué crees, pisha? ¿Cádiz aguantó gracias al mar que la rodeaba… o gracias a la gente que vivía dentro?",
+              "en": "What do you reckon, pisha? Did Cádiz hold out thanks to the sea around it… or thanks to the people who lived inside?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Seguir el camino del mar",
+                "en": "Follow the sea"
+              },
+              "hint": {
+                "es": "Al mercado y a las torres vigía",
+                "en": "To the market and the watchtowers"
+              },
+              "distanceM": 650,
+              "walkMin": 9,
+              "targetNodeId": "a1_mercado",
+              "setFlags": [
+                "camino_mar"
+              ]
+            },
+            {
+              "label": {
+                "es": "Seguir el camino de la ciudad",
+                "en": "Follow the city"
+              },
+              "hint": {
+                "es": "Adonde se reunieron las Cortes",
+                "en": "To where the Cortes met"
+              },
+              "distanceM": 750,
+              "walkMin": 10,
+              "targetNodeId": "b1_san_felipe",
+              "setFlags": [
+                "camino_ciudad"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a1_mercado",
+          "title": {
+            "es": "Mercado Central",
+            "en": "Central Market"
+          },
+          "location": {
+            "lat": 36.5338,
+            "lng": -6.3
+          },
+          "triggerRadiusM": 45,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_mercado.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "¡Huele a mar! Aquí vengo yo a por mis cositas. Pescao, marisco, y el atún… ¡ay, el atún!",
+                "en": "Smell that sea air! This is where I come for my bits and pieces. Fish, seafood, and tuna… oh, the tuna!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Mercado Central de Cádiz se construyó en 1838 y se considera el primer mercado cubierto de España.",
+                "en": "Cádiz Central Market was built in 1838 and is considered the first covered market in Spain."
+              },
+              "year": 1838
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "text": {
+                "es": "Durante el asedio, los franceses cerraron el camino por tierra. ¿Y sabes qué? Aquí nunca faltó de comer del todo. Lo traían los barcos. Mientras hubiera barcos, Cádiz tendría comida.",
+                "en": "During the siege the French cut the road by land. And you know what? Food never ran out completely here. The ships brought it. As long as there were ships, Cádiz would have food."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pez se pesca con la almadraba, el arte de pesca tradicional de la costa de Cádiz?",
+              "en": "Which fish is caught with the almadraba, the traditional fishing method of the Cádiz coast?"
+            },
+            "options": [
+              {
+                "es": "La sardina",
+                "en": "Sardine"
+              },
+              {
+                "es": "El atún rojo",
+                "en": "Bluefin tuna"
+              },
+              {
+                "es": "El boquerón",
+                "en": "Anchovy"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La almadraba es un laberinto de redes que se cala cerca de la costa para atrapar al atún rojo cuando pasa del Atlántico al Mediterráneo. Se usa desde tiempos de los fenicios.",
+              "en": "The almadraba is a maze of nets set near the coast to catch bluefin tuna as they pass from the Atlantic into the Mediterranean. It has been used since Phoenician times."
+            }
+          },
+          "clue": {
+            "id": "pista_barcos",
+            "text": {
+              "es": "Mientras hubiera barcos, Cádiz tendría comida.",
+              "en": "As long as there were ships, Cádiz would have food."
+            }
+          },
+          "nextNodeId": "a2_tavira",
+          "nextHint": {
+            "es": "Sube hacia la Torre Tavira. Unos 4 minutos.",
+            "en": "Head up to the Torre Tavira. About 4 minutes."
+          }
+        },
+        {
+          "id": "a2_tavira",
+          "title": {
+            "es": "Torre Tavira",
+            "en": "Torre Tavira"
+          },
+          "location": {
+            "lat": 36.5343,
+            "lng": -6.2968
+          },
+          "triggerRadiusM": 35,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_tavira.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "surprised",
+              "text": {
+                "es": "Mira pa' arriba, pisha. ¿Ves cuántas torrecitas hay en las azoteas? Los comerciantes las subían para ver llegar sus barcos antes que nadie.",
+                "en": "Look up, pisha. See all those little towers on the rooftops? Merchants built them to see their ships coming before anyone else."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Torre Tavira es el punto más alto del casco antiguo. En 1778 se convirtió en la torre vigía oficial del puerto: desde ella se avisaba de los barcos que entraban en la bahía.",
+                "en": "The Torre Tavira is the highest point in the old town. In 1778 it became the port's official watchtower: from here, lookouts announced every ship entering the bay."
+              },
+              "year": 1778
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Cádiz conserva más de un centenar de torres miradores. Hoy la Torre Tavira tiene una cámara oscura que proyecta la ciudad en directo con espejos y lentes.",
+                "en": "Cádiz still has over a hundred lookout towers. Today the Torre Tavira has a camera obscura that projects the city live using mirrors and lenses."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "proud",
+              "text": {
+                "es": "Con tanto vigía, a Cádiz nadie la pillaba por sorpresa. Los franceses cavaban trincheras y aquí lo veíamos todo desde la azotea.",
+                "en": "With so many lookouts, nobody could catch Cádiz by surprise. The French dug trenches and we saw everything from the rooftops."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Busca la placa con el nombre de la calle donde está la puerta de la torre. ¿Cómo se llama?",
+              "en": "Find the street sign where the tower's door is. What is the street called?"
+            },
+            "answer": [
+              "marques del real tesoro",
+              "real tesoro",
+              "marques real tesoro"
+            ]
+          },
+          "clue": {
+            "id": "pista_vigias",
+            "text": {
+              "es": "Desde las torres se veía venir a cualquiera: a Cádiz nadie la pillaba por sorpresa.",
+              "en": "From the towers you could see anyone coming: nobody caught Cádiz by surprise."
+            }
+          },
+          "nextNodeId": "n4_plaza_espana",
+          "nextHint": {
+            "es": "Ahora, a la Plaza de España. Unos 8 minutos.",
+            "en": "Now, on to Plaza de España. About 8 minutes."
+          }
+        },
+        {
+          "id": "b1_san_felipe",
+          "title": {
+            "es": "Oratorio de San Felipe Neri",
+            "en": "Oratory of San Felipe Neri"
+          },
+          "location": {
+            "lat": 36.5352,
+            "lng": -6.2977
+          },
+          "triggerRadiusM": 35,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_sanfelipe.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanfelipe.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tia_norica",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "la_pepa",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "surprised",
+              "text": {
+                "es": "Chsss, habla bajito, que aquí dentro pasó algo muy gordo. Con los franceses a las puertas, los diputados de toda España y de América se reunieron en esta iglesia… ¡a escribir las reglas de un país nuevo!",
+                "en": "Shh, keep your voice down, something huge happened in here. With the French at the gates, deputies from all over Spain and the Americas met in this church… to write the rules for a new country!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "proud",
+              "text": {
+                "es": "Y de ahí salí yo. Nací aquí el 19 de marzo de 1812. Decía que la soberanía reside en la nación y no en el rey. En plena guerra, ¡qué atrevimiento!",
+                "en": "And that's where I came from. I was born here on 19 March 1812. I said that sovereignty lies with the nation, not the king. In the middle of a war, how daring!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las Cortes se abrieron en septiembre de 1810 en la Isla de León (hoy San Fernando) y en febrero de 1811 se trasladaron a este oratorio, donde se aprobó la Constitución de 1812.",
+                "en": "The Cortes opened in September 1810 on the Isla de León (today San Fernando) and in February 1811 moved to this oratory, where the Constitution of 1812 was passed."
+              },
+              "year": 1811
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué a la Constitución de 1812 la llaman «la Pepa»?",
+              "en": "Why is the Constitution of 1812 nicknamed “la Pepa”?"
+            },
+            "options": [
+              {
+                "es": "Por la mujer de un diputado",
+                "en": "After a deputy's wife"
+              },
+              {
+                "es": "Porque se proclamó el día de San José",
+                "en": "Because it was proclaimed on Saint Joseph's day"
+              },
+              {
+                "es": "Por una canción de Carnaval",
+                "en": "After a Carnival song"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Se proclamó el 19 de marzo, día de San José. A los José se les llama Pepe, y a las Josefas, Pepa.",
+              "en": "It was proclaimed on 19 March, Saint Joseph's day. In Spain, José is nicknamed Pepe, and Josefa, Pepa."
+            }
+          },
+          "clue": {
+            "id": "pista_cortes",
+            "text": {
+              "es": "Con la ciudad sitiada, sus diputados escribieron la Constitución de 1812.",
+              "en": "With the city under siege, its deputies wrote the Constitution of 1812."
+            }
+          },
+          "nextNodeId": "n4_plaza_espana",
+          "nextHint": {
+            "es": "La Pepa te espera en la Plaza de España. Unos 6 minutos.",
+            "en": "La Pepa is waiting for you in Plaza de España. About 6 minutes."
+          }
+        },
+        {
+          "id": "n4_plaza_espana",
+          "title": {
+            "es": "Plaza de España",
+            "en": "Plaza de España"
+          },
+          "location": {
+            "lat": 36.5369,
+            "lng": -6.2922
+          },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_cadiz_espana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_espana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tia_norica",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "la_pepa",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "proud",
+              "text": {
+                "es": "Este monumento lo levantaron por mi centenario. Soy la Constitución de 1812, pero aquí todo el mundo me llama la Pepa.",
+                "en": "This monument was put up for my centenary. I'm the Constitution of 1812, but everyone here calls me la Pepa."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "talking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar"
+                  ],
+                  "text": {
+                    "es": "Vienes del mercado y de las torres, así que ya sabes que el mar alimentaba y vigilaba la ciudad. Pero para aguantar hacía falta algo más.",
+                    "en": "You've come from the market and the towers, so you know the sea fed and watched over the city. But holding out took something more."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad"
+                  ],
+                  "text": {
+                    "es": "Vienes de San Felipe, ya me conoces. Mientras aquí se discutían leyes, al otro lado de la bahía llovían bombas.",
+                    "en": "You've come from San Felipe, so we've met. While laws were being debated in here, bombs were raining down across the bay."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Cómo aguantó Cádiz dos años y medio? Hay dos maneras de contarlo: la de las coplas que cantaba la gente y la de los partes de guerra. ¿Cuál quieres oír?",
+                "en": "How did Cádiz hold out for two and a half years? There are two ways to tell it: through the songs people sang, or through the war reports. Which would you like to hear?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuánto duró el asedio francés a Cádiz?",
+              "en": "How long did the French siege of Cádiz last?"
+            },
+            "options": [
+              {
+                "es": "Unos dos meses",
+                "en": "About two months"
+              },
+              {
+                "es": "Unos dos años y medio",
+                "en": "About two and a half years"
+              },
+              {
+                "es": "Diez años",
+                "en": "Ten years"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Desde febrero de 1810 hasta agosto de 1812: unos dos años y medio.",
+              "en": "From February 1810 to August 1812: about two and a half years."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Lo que cantaban las coplas",
+                "en": "What the songs said"
+              },
+              "hint": {
+                "es": "La versión de la calle",
+                "en": "The street's version"
+              },
+              "targetNodeId": "n4a_coplas",
+              "setFlags": [
+                "version_coplas"
+              ]
+            },
+            {
+              "label": {
+                "es": "Lo que dicen los partes de guerra",
+                "en": "What the war reports say"
+              },
+              "hint": {
+                "es": "La versión de los mapas",
+                "en": "The maps' version"
+              },
+              "targetNodeId": "n4b_partes",
+              "setFlags": [
+                "version_documentos"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_coplas",
+          "title": {
+            "es": "Bombas y tirabuzones",
+            "en": "Bombs and ringlets"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "¡Esta es la mía! Los franceses disparaban bombas desde el Trocadero, al otro lado de la bahía. Pero muchas se quedaban cortas o no explotaban… y los gaditanos, en vez de asustarse, les sacaron coplas.",
+                "en": "This one's mine! The French fired bombs from the Trocadero, across the bay. But many fell short or didn't go off… and instead of getting scared, the people of Cádiz made up songs about them."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "dramatic",
+              "text": {
+                "es": "«Con las bombas que tiran los fanfarrones, se hacen las gaditanas tirabuzones.» ¡Eso cantábamos, pisha!",
+                "en": "“With the bombs those show-offs throw, the girls of Cádiz curl their hair.” That's what we sang, pisha!"
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que, para que llegaran más lejos, los franceses rellenaban de plomo algunas bombas, y que las gaditanas usaban ese plomo para rizarse el pelo en tirabuzones.",
+                "en": "The story goes that, to make them fly further, the French filled some bombs with lead, and that the women of Cádiz used that lead to curl their hair into ringlets."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "happy",
+              "text": {
+                "es": "Reírse del enemigo también es una forma de resistir. Esa guasa sigue viva en el Carnaval.",
+                "en": "Laughing at the enemy is a way of resisting too. That humour is still alive in the Carnival."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_coplas",
+            "text": {
+              "es": "Las bombas asustaban poco: la gente les sacaba coplas.",
+              "en": "The bombs didn't scare anyone much: people made up songs about them."
+            }
+          },
+          "nextNodeId": "n5_museo",
+          "nextHint": {
+            "es": "A la Plaza de Mina, al Museo de Cádiz. Unos 5 minutos.",
+            "en": "To Plaza de Mina, to the Museum of Cádiz. About 5 minutes."
+          }
+        },
+        {
+          "id": "n4b_partes",
+          "title": {
+            "es": "Una ciudad casi isla",
+            "en": "An almost-island city"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "la_pepa",
+              "expression": "neutral",
+              "text": {
+                "es": "Los partes de guerra son menos graciosos pero muy claros. Cádiz era casi una isla: solo se llegaba por un istmo estrecho hasta la Isla de León, y el caño de Sancti Petri la separaba del resto de la península.",
+                "en": "The war reports are less funny but very clear. Cádiz was almost an island: it could only be reached along a narrow isthmus to the Isla de León, and the Sancti Petri channel cut it off from the rest of the peninsula."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las flotas española y británica mantuvieron abierta la bahía durante todo el asedio, así que a la ciudad siguieron llegando soldados, víveres y noticias por mar.",
+                "en": "The Spanish and British fleets kept the bay open throughout the siege, so troops, supplies and news kept reaching the city by sea."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar"
+                  ],
+                  "text": {
+                    "es": "¡Lo que te dije en el mercado! Mientras hubiera barcos, había comida.",
+                    "en": "Just what I told you at the market! As long as there were ships, there was food."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad"
+                  ],
+                  "text": {
+                    "es": "O sea, que mientras los diputados escribían, el mar les guardaba la puerta.",
+                    "en": "So while the deputies were writing, the sea was guarding their door."
+                  }
+                }
+              ]
+            }
+          ],
+          "clue": {
+            "id": "pista_isla",
+            "text": {
+              "es": "Cádiz era casi una isla y las flotas mantenían abierta la bahía.",
+              "en": "Cádiz was almost an island and the fleets kept the bay open."
+            }
+          },
+          "nextNodeId": "n5_museo",
+          "nextHint": {
+            "es": "A la Plaza de Mina, al Museo de Cádiz. Unos 5 minutos.",
+            "en": "To Plaza de Mina, to the Museum of Cádiz. About 5 minutes."
+          }
+        },
+        {
+          "id": "n5_museo",
+          "title": {
+            "es": "Museo de Cádiz",
+            "en": "Museum of Cádiz"
+          },
+          "location": {
+            "lat": 36.5378,
+            "lng": -6.2958
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_mina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_mina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tia_norica",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "magon",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "magon",
+              "expression": "proud",
+              "text": {
+                "es": "¡Saludos, viajero! Soy Magón, mercader de Gadir. Mucho antes que los franceses, que los romanos y que nadie, llegamos nosotros, los fenicios, desde Tiro, al otro lado del mar.",
+                "en": "Greetings, traveller! I am Magón, a merchant of Gadir. Long before the French, before the Romans, before anyone, we came here, the Phoenicians, from Tyre, across the sea."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Según la tradición, los fenicios fundaron Gadir hace unos 3.000 años. Dentro de este museo están dos sarcófagos fenicios con forma humana: el de un hombre, hallado en 1887, y el de una mujer, hallado en 1980.",
+                "en": "According to tradition, the Phoenicians founded Gadir about 3,000 years ago. Inside this museum are two human-shaped Phoenician sarcophagi: a man's, found in 1887, and a woman's, found in 1980."
+              },
+              "year": 1887
+            },
+            {
+              "type": "dialogue",
+              "characterId": "magon",
+              "expression": "talking",
+              "text": {
+                "es": "Elegimos este sitio por lo mismo que salvó a la ciudad en 1812: una isla fácil de defender y un puerto abierto al mar. Nosotros también vivíamos del atún y del comercio.",
+                "en": "We chose this spot for the same reason that saved the city in 1812: an island easy to defend and a port open to the sea. We lived on tuna and trade too."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "¡Tres mil años y seguimos igual, pisha! Venga, que nos queda La Caleta.",
+                "en": "Three thousand years and we're still the same, pisha! Come on, La Caleta's still to come."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo llamaban los fenicios a Cádiz?",
+              "en": "What did the Phoenicians call Cádiz?"
+            },
+            "options": [
+              {
+                "es": "Gadir",
+                "en": "Gadir"
+              },
+              {
+                "es": "Malaka",
+                "en": "Malaka"
+              },
+              {
+                "es": "Híspalis",
+                "en": "Hispalis"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Gadir significa algo así como «recinto amurallado». Los romanos la llamaron Gades, y de ahí viene «gaditano».",
+              "en": "Gadir means something like “walled enclosure”. The Romans called it Gades, which is where “gaditano”, a person from Cádiz, comes from."
+            }
+          },
+          "clue": {
+            "id": "pista_gadir",
+            "text": {
+              "es": "Desde los fenicios, Cádiz vive de un puerto abierto al mar y fácil de defender.",
+              "en": "Ever since the Phoenicians, Cádiz has lived on a port open to the sea and easy to defend."
+            }
+          },
+          "nextNodeId": "n6_caleta",
+          "nextHint": {
+            "es": "Cruza el casco antiguo hasta La Caleta. Unos 12 minutos.",
+            "en": "Cross the old town to La Caleta. About 12 minutes."
+          }
+        },
+        {
+          "id": "n6_caleta",
+          "title": {
+            "es": "La Caleta",
+            "en": "La Caleta"
+          },
+          "location": {
+            "lat": 36.5327,
+            "lng": -6.306
+          },
+          "triggerRadiusM": 60,
+          "background": "fondos/fondo_cadiz_caleta.svg",
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "¡La Caleta! La playa más chiquitita y más bonita del mundo, y no lo digo yo, lo dicen las coplas. A un lado, el castillo de Santa Catalina. Al otro, el de San Sebastián.",
+                "en": "La Caleta! The smallest, prettiest beach in the world, and I'm not the one saying it, the songs are. On one side, Santa Catalina castle. On the other, San Sebastián."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El castillo de Santa Catalina se empezó en 1598, después de que una flota angloholandesa saqueara Cádiz en 1596. Desde entonces la ciudad no dejó de amurallarse.",
+                "en": "Santa Catalina castle was begun in 1598, after an Anglo-Dutch fleet sacked Cádiz in 1596. From then on the city never stopped building walls."
+              },
+              "year": 1598
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "En 2002 se rodó aquí «Muere otro día», de James Bond: La Caleta hizo de La Habana.",
+                "en": "In 2002 the James Bond film “Die Another Day” was shot here: La Caleta stood in for Havana."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "photo",
+            "prompt": {
+              "es": "Hazte una foto con el Balneario de la Palma detrás.",
+              "en": "Take a photo with the Balneario de la Palma behind you."
+            }
+          },
+          "nextNodeId": "n6b_resolver"
+        },
+        {
+          "id": "n6b_resolver",
+          "title": {
+            "es": "Resolver el misterio",
+            "en": "Solve the mystery"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "text": {
+                "es": "Bueno, pisha, abre tu cuaderno y repasa las pistas. ¿Por qué Cádiz no cayó?",
+                "en": "Right, pisha, open your notebook and go over the clues. Why didn't Cádiz fall?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué los franceses no pudieron tomar Cádiz?",
+              "en": "Why couldn't the French take Cádiz?"
+            },
+            "options": [
+              {
+                "es": "Porque firmaron la paz antes de atacar",
+                "en": "Because they made peace before attacking"
+              },
+              {
+                "es": "Era casi una isla, se abastecía por mar y su gente no quiso rendirse",
+                "en": "It was almost an island, it was supplied by sea and its people refused to give in"
+              },
+              {
+                "es": "Porque Napoleón nunca quiso tomarla",
+                "en": "Because Napoleon never wanted to take it"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La geografía (casi una isla), el mar abierto gracias a las flotas y una ciudad que no se rindió, ni en las Cortes ni en las coplas. En agosto de 1812 los franceses levantaron el asedio.",
+              "en": "Geography (almost an island), a sea kept open by the fleets, and a city that wouldn't give in, neither in the Cortes nor in its songs. In August 1812 the French lifted the siege."
+            }
+          },
+          "nextNodeId": "n7_final"
+        },
+        {
+          "id": "n7_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_documentos"
+                  ],
+                  "text": {
+                    "es": "¡Vigía del Atlántico! Seguiste los barcos y leíste los partes de guerra. Desde tu torre no se te escapa nada.",
+                    "en": "Atlantic lookout! You followed the ships and read the war reports. Nothing gets past you from your tower."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_coplas"
+                  ],
+                  "text": {
+                    "es": "Seguiste el mar… y volviste cantando. ¡Tú eres un corsario de coplas, pisha!",
+                    "en": "You followed the sea… and came back singing. You're a song-singing privateer, pisha!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad",
+                    "version_documentos"
+                  ],
+                  "text": {
+                    "es": "Seguiste a las Cortes y a los mapas. Serio, estudioso… ¡un diputado de 1812 hecho y derecho!",
+                    "en": "You followed the Cortes and the maps. Serious, studious… a proper deputy of 1812!"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad",
+                    "version_coplas"
+                  ],
+                  "text": {
+                    "es": "Seguiste a la ciudad y te quedaste con la guasa. ¡Tú lo que eres es un chirigotero de los buenos!",
+                    "en": "You followed the city and kept the humour. What you are is a proper Carnival singer!"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "happy",
+              "text": {
+                "es": "Cádiz no cayó porque es casi una isla, porque el mar nunca la dejó sola y porque aquí la gente, cuando tiene miedo, canta. Y oye… hay calles que hoy no has pisado. ¿Vuelves otro día por el otro camino?",
+                "en": "Cádiz didn't fall because it's almost an island, because the sea never left it alone, and because here, when people are scared, they sing. And listen… there are streets you haven't walked today. Will you come back another day for the other path?"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "vigia_atlantico",
+          "requires": [
+            "camino_mar",
+            "version_documentos"
+          ],
+          "title": {
+            "es": "Vigía del Atlántico",
+            "en": "Atlantic lookout"
+          }
+        },
+        {
+          "id": "corsario_coplas",
+          "requires": [
+            "camino_mar",
+            "version_coplas"
+          ],
+          "title": {
+            "es": "Corsario de coplas",
+            "en": "Song-singing privateer"
+          }
+        },
+        {
+          "id": "diputado_cortes",
+          "requires": [
+            "camino_ciudad",
+            "version_documentos"
+          ],
+          "title": {
+            "es": "Diputado de las Cortes",
+            "en": "Deputy of the Cortes"
+          }
+        },
+        {
+          "id": "chirigotero",
+          "requires": [
+            "camino_ciudad",
+            "version_coplas"
+          ],
+          "title": {
+            "es": "Chirigotero",
+            "en": "Carnival singer"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "titere_norica",
+          "name": {
+            "es": "El títere de la Tía Norica",
+            "en": "Tía Norica's puppet"
+          },
+          "icon": "collectibles/cadiz_titere.svg",
+          "awardedAtNodeId": "n1_san_juan_de_dios"
+        },
+        {
+          "id": "atun_almadraba",
+          "name": {
+            "es": "Atún de almadraba",
+            "en": "Almadraba tuna"
+          },
+          "icon": "collectibles/cadiz_atun.svg",
+          "awardedAtNodeId": "a1_mercado"
+        },
+        {
+          "id": "catalejo_vigia",
+          "name": {
+            "es": "El catalejo del vigía",
+            "en": "The lookout's spyglass"
+          },
+          "icon": "collectibles/cadiz_catalejo.svg",
+          "awardedAtNodeId": "a2_tavira"
+        },
+        {
+          "id": "pepa_bolsillo",
+          "name": {
+            "es": "La Pepa de bolsillo",
+            "en": "Pocket Pepa"
+          },
+          "icon": "collectibles/cadiz_pepa.svg",
+          "awardedAtNodeId": "b1_san_felipe"
+        },
+        {
+          "id": "postal_caleta",
+          "name": {
+            "es": "Postal de La Caleta",
+            "en": "La Caleta postcard"
+          },
+          "icon": "collectibles/cadiz_caleta.svg",
+          "awardedAtNodeId": "n6_caleta"
+        },
+        {
+          "id": "insignia_cadiz",
+          "name": {
+            "es": "La ciudad que no cayó",
+            "en": "The City That Never Fell"
+          },
+          "icon": "collectibles/cadiz_insignia.svg",
+          "awardedAtNodeId": "n7_final"
+        }
+      ]
+    }
+  ]
+}
