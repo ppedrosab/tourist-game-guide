@@ -123,6 +123,11 @@ def hat(kind, c, c2=GOLD):
         return (f'<path d="M60 54Q60 34 100 32Q140 34 140 54Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.4"/>'
                 f'<path d="M58 54H142V62H58Z" fill="{c}" stroke="{INK}" stroke-width="2"/>'
                 f'<path d="M58 60L48 74L56 76L64 62Z" fill="{c}" stroke="{INK}" stroke-width="1.4"/>')
+    if kind == "peaked":    # gorra de plato (sereno, guardia)
+        return (f'<path d="M58 50Q56 30 100 28Q144 30 142 50Z" fill="{c}" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M62 50H138V58H62Z" fill="{shade(c)}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M64 58Q100 70 136 58Q120 64 100 64Q80 64 64 58Z" fill="#1E1D25" stroke="{INK}" stroke-width="1.6"/>'
+                f'<circle cx="100" cy="42" r="5" fill="{c2}" stroke="{INK}" stroke-width="1.4"/>')
     if kind == "laurel":
         return "".join(f'<ellipse cx="{x}" cy="{y}" rx="7" ry="3.4" transform="rotate({r} {x} {y})" fill="#6E9A4E" stroke="{INK}" stroke-width="1.2"/>'
                        for x, y, r in [(66, 58, -60), (72, 46, -40), (82, 38, -20), (118, 38, 20), (128, 46, 40), (134, 58, 60)])
@@ -260,6 +265,21 @@ def prop(kind, x, y, side):
         return (f'<path d="M{x - 20} {y + 2}H{x + 20}L{x + 18} {y + 26}H{x - 18}Z" fill="#4A2E22" stroke="{INK}" stroke-width="2"/>'
                 f'<path d="M{x - 8} {y + 2}Q{x} {y - 8} {x + 8} {y + 2}" fill="none" stroke="{INK}" stroke-width="2.4"/>'
                 f'<path d="M{x - 20} {y + 10}H{x + 20}" stroke="{GOLD}" stroke-width="1.6"/>')
+    if kind == "blueglass":  # copa azul de cata de aceite
+        return (f'<path d="M{x - 9} {y - 26}Q{x - 10} {y - 8} {x} {y - 6}Q{x + 10} {y - 8} {x + 9} {y - 26}Z" fill="#2F5FA8" stroke="{INK}" stroke-width="1.8"/>'
+                f'<path d="M{x - 7} {y - 24}H{x + 7}" stroke="#9FC0EA" stroke-width="1.6"/>')
+    if kind == "horn":      # cuerno de aviso
+        return (f'<path d="M{x - 4} {y - 4}Q{x + s * 10} {y - 30} {x + s * 34} {y - 38}L{x + s * 38} {y - 24}Q{x + s * 16} {y - 20} {x + 6} {y + 4}Z" fill="#E9DCC0" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x + s * 12} {y - 20}l{s * 4} 8M{x + s * 22} {y - 28}l{s * 4} 9" stroke="#8A6243" stroke-width="2"/>')
+    if kind == "silk":      # pieza de seda enrollada
+        return (f'<path d="M{x - 22} {y - 12}H{x + 18}V{y + 10}H{x - 22}Z" fill="#C0476A" stroke="{INK}" stroke-width="2"/>'
+                f'<ellipse cx="{x + 18}" cy="{y - 1}" rx="5" ry="11" fill="#D96A8C" stroke="{INK}" stroke-width="1.8"/>'
+                f'<path d="M{x - 22} {y + 10}Q{x - 30} {y + 30} {x - 18} {y + 44}" fill="none" stroke="#C0476A" stroke-width="6"/>'
+                f'<path d="M{x - 16} {y - 4}H{x + 10}M{x - 16} {y + 3}H{x + 10}" stroke="{GOLD}" stroke-width="1.6"/>')
+    if kind == "barrel":
+        return (f'<path d="M{x - 18} {y - 20}Q{x - 24} {y + 2} {x - 18} {y + 24}H{x + 18}Q{x + 24} {y + 2} {x + 18} {y - 20}Z" fill="#B07A45" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 21} {y - 8}H{x + 21}M{x - 21} {y + 12}H{x + 21}" stroke="#4A4A55" stroke-width="3"/>'
+                f'<ellipse cx="{x}" cy="{y - 20}" rx="18" ry="4" fill="#C9935A" stroke="{INK}" stroke-width="1.6"/>')
     if kind == "lute":      # laúd
         return (f'<path d="M{x - 6} {y + 4}L{x + s * 30} {y - 40}" stroke="#6E4C33" stroke-width="5"/>'
                 f'<path d="M{x + s * 26} {y - 36}L{x + s * 36} {y - 50}" stroke="#6E4C33" stroke-width="6"/>'

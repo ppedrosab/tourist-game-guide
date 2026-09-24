@@ -39,6 +39,32 @@ CHARACTERS = {
                     second="#4F8B5A", left="strawberries"),
     "cortador": dict(skin="media", hair=("slick", "#2A1E1A"), beard_=("short", "#2A1E1A"), outfit="vest", main=PAPER, accent=BLACK,
                      second=BLACK, apron=PAPER, left="ham", right="knife"),
+    # --- Jaén ------------------------------------------------------------
+    "sereno": dict(skin="media", hair=("short", GREY), beard_=("moustache", GREY), hat_=("peaked", "#2F3E5C", GOLD), outfit="jacket",
+                   main="#2F3E5C", accent=GOLD, second="#2B2A33", left="lantern", right="staff"),
+    "preso": dict(skin="media", hair=("curly", "#3A2A1E"), beard_=("short", "#3A2A1E"), outfit="shirt", main="#D9CDB4", accent="#8A6243",
+                  second="#6E5A44", left="bread", right="bag"),
+    "pastor": dict(skin="morena", hair=("short", "#4A3222"), beard_=("short", "#4A3222"), hat_=("straw", "#8A6243"), outfit="vest",
+                   main=PAPER, accent="#C9A77E", second="#5A4A3A", right="staff"),
+    "catadora": dict(skin="clara", hair=("bun", "#6B4A2A"), outfit="jacket", main=OLIVE, accent=GOLD, second="#3A3A48",
+                     left="oil", right="blueglass", raise_right=True),
+    "vareador": dict(skin="morena", hair=("short", "#2A1E1A"), hat_=("cap", "#5A4A3A"), outfit="shirt", main="#C9A05E", accent="#4A3A2E",
+                     second="#3A3A48", right="staff", left="olive"),
+    "molinero": dict(skin="media", hair=("bald", GREY), beard_=("moustache", GREY), outfit="shirt", main="#E9DCC0", accent=CLAY,
+                     second="#5A4A3A", apron="#C9B48A", left="jug", right="oil"),
+    # --- Almería ---------------------------------------------------------
+    "vigia": dict(skin="morena", hair=("short", "#2A1E1A"), beard_=("short", "#2A1E1A"), hat_=("turban", SEA, GOLD), outfit="tunic",
+                  main="#C9A05E", accent=SEA, right="horn", raise_right=True, left="staff"),
+    "jayran": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#8A5A3A"), beard_=("full", "#8A5A3A"), hat_=("turban", PAPER, "#2F6F9E"),
+                   outfit="toga", main="#2F6F9E", accent=GOLD, second=PAPER, left="scroll"),
+    "sedera": dict(skin="media", hair=("long", "#2A1E1A"), hat_=("veil", "#E8C872"), outfit="dress", main="#6E2C5E", accent=GOLD,
+                   second="#C0476A", left="silk"),
+    "hortelana": dict(skin="morena", hair=("braid", "#2A1E1A"), hat_=("straw", "#4F8B5A"), outfit="shirt", main="#4F8B5A", accent="#3A5A7A",
+                      second="#3A5A7A", left="basket", right="tomato", raise_right=True),
+    "barrilero": dict(skin="media", hair=("short", GREY), beard_=("moustache", GREY), hat_=("cap", "#4A3A2E"), outfit="vest",
+                      main=PAPER, accent="#8A6243", second="#4A3A2E", apron="#8A6243", left="barrel", right="hammer"),
+    "pescador": dict(skin="morena", hair=("curly", "#2A1E1A"), beard_=("short", "#2A1E1A"), hat_=("cap", INDIGO), outfit="shirt",
+                     main="#E9DCC0", accent=INDIGO, second=INDIGO, left="net", right="shrimp", raise_right=True),
 }
 
 if __name__ == "__main__":

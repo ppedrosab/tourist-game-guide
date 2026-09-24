@@ -1,0 +1,2363 @@
+{
+  "id": "jaen",
+  "version": 1,
+  "name": {
+    "es": "Jaén",
+    "en": "Jaén"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 37.7685,
+    "lng": -3.79
+  },
+  "bounds": [
+    {
+      "lat": 37.762,
+      "lng": -3.798
+    },
+    {
+      "lat": 37.776,
+      "lng": -3.783
+    }
+  ],
+  "coverImage": "img/cover_jaen.jpg",
+  "characters": [
+    {
+      "id": "sereno",
+      "name": {
+        "es": "El Sereno",
+        "en": "The Night Watchman"
+      },
+      "description": {
+        "es": "Sereno del barrio: guarda las llaves de los portales y todas las leyendas de Jaén. Socarrón y noctámbulo.",
+        "en": "The neighbourhood night watchman: he keeps the keys to the doorways and all of Jaén's legends. Wry and a night owl."
+      },
+      "avatar": "sprites/sereno/sereno_neutral.svg"
+    },
+    {
+      "id": "preso",
+      "name": {
+        "es": "El Preso",
+        "en": "The Prisoner"
+      },
+      "description": {
+        "es": "Dice que mató al lagarto a cambio del indulto. Fanfarrón y simpático.",
+        "en": "He claims he killed the lizard in exchange for a pardon. A boastful charmer."
+      },
+      "avatar": "sprites/preso/preso_neutral.svg"
+    },
+    {
+      "id": "pastor",
+      "name": {
+        "es": "El Pastor",
+        "en": "The Shepherd"
+      },
+      "description": {
+        "es": "Pastor de la Malena que asegura que al lagarto lo mató él. Tranquilo y cabezota.",
+        "en": "A shepherd from La Malena who insists he killed the lizard. Calm and stubborn."
+      },
+      "avatar": "sprites/pastor/pastor_neutral.svg"
+    },
+    {
+      "id": "catadora",
+      "name": {
+        "es": "La Catadora",
+        "en": "The Oil Taster"
+      },
+      "description": {
+        "es": "Catadora de aceite de oliva. Nariz fina, paladar de oro y mucha curiosidad.",
+        "en": "An olive oil taster. A fine nose, a golden palate and plenty of curiosity."
+      },
+      "avatar": "sprites/catadora/catadora_neutral.svg"
+    },
+    {
+      "id": "vareador",
+      "name": {
+        "es": "El Vareador",
+        "en": "The Olive Beater"
+      },
+      "description": {
+        "es": "Vareador de aceituna, de familia olivarera. Fuerte, alegre y madrugador.",
+        "en": "An olive beater from a family of olive growers. Strong, cheerful and an early riser."
+      },
+      "avatar": "sprites/vareador/vareador_neutral.svg"
+    },
+    {
+      "id": "molinero",
+      "name": {
+        "es": "El Molinero",
+        "en": "The Mill Man"
+      },
+      "description": {
+        "es": "Molinero de almazara. Sabe convertir la aceituna en oro líquido.",
+        "en": "An oil-mill man. He knows how to turn olives into liquid gold."
+      },
+      "avatar": "sprites/molinero/molinero_neutral.svg"
+    }
+  ],
+  "routes": [
+    {
+      "id": "lagarto-malena",
+      "title": {
+        "es": "¿Quién mató al lagarto de la Malena?",
+        "en": "Who Killed the Lizard of La Malena?"
+      },
+      "summary": {
+        "es": "Cuentan que un lagarto gigante aterrorizaba Jaén desde la fuente de la Magdalena. ¿Lo mató un preso, un pastor… o nunca existió? Con el sereno, recorre el Jaén de las leyendas.",
+        "en": "They say a giant lizard terrorised Jaén from the Magdalena fountain. Did a prisoner kill it, a shepherd… or did it never exist? With the night watchman, explore the Jaén of legends."
+      },
+      "era": "1246 - 1628",
+      "guideCharacterId": "sereno",
+      "durationMin": 100,
+      "distanceKm": 2.6,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El preso",
+            "en": "The prisoner"
+          },
+          "trail": {
+            "es": "camino del preso",
+            "en": "prisoner's trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El pastor",
+            "en": "The shepherd"
+          },
+          "trail": {
+            "es": "camino del pastor",
+            "en": "shepherd's trail"
+          }
+        }
+      },
+      "startNodeId": "n1_catedral",
+      "nodes": [
+        {
+          "id": "n1_catedral",
+          "title": {
+            "es": "Catedral de Jaén",
+            "en": "Jaén Cathedral"
+          },
+          "location": {
+            "lat": 37.7654,
+            "lng": -3.7897
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sereno",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "happy",
+              "text": {
+                "es": "¡Las diez y sereno! Buenas noches… o buenos días, que con este farol ya no sé. Soy el sereno del barrio: guardo las llaves de los portales y todas las historias de Jaén.",
+                "en": "Ten o'clock and all's well! Good evening… or good morning, with this lantern I lose track. I'm the neighbourhood night watchman: I keep the keys to the doorways and all of Jaén's stories."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "dramatic",
+              "text": {
+                "es": "Y la más famosa es la del lagarto de la Malena: un bicho enorme que vivía junto a la fuente de la Magdalena y se comía a vecinos y ovejas. Alguien lo mató. ¿Quién?",
+                "en": "And the most famous is the lizard of La Malena: an enormous beast that lived by the Magdalena fountain and ate neighbours and sheep. Somebody killed it. Who?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "text": {
+                "es": "Cada abuela lo cuenta a su manera. Unos dicen que fue un preso; otros, un pastor. Y hay quien dice que todo salió de una piel. Apúntalo todo, detective.",
+                "en": "Every grandmother tells it her own way. Some say it was a prisoner; others, a shepherd. And some say it all came from a skin. Write everything down, detective."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Catedral de Jaén la trazó Andrés de Vandelvira en el siglo XVI. Es una de las grandes catedrales del Renacimiento en España.",
+                "en": "Jaén Cathedral was designed by Andrés de Vandelvira in the 16th century. It is one of the great Renaissance cathedrals in Spain."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué arquitecto trazó la Catedral de Jaén?",
+              "en": "Which architect designed Jaén Cathedral?"
+            },
+            "options": [
+              {
+                "es": "Juan de Herrera",
+                "en": "Juan de Herrera"
+              },
+              {
+                "es": "Andrés de Vandelvira",
+                "en": "Andrés de Vandelvira"
+              },
+              {
+                "es": "Antoni Gaudí",
+                "en": "Antoni Gaudí"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Andrés de Vandelvira, que también dejó obras en Úbeda y Baeza.",
+              "en": "Andrés de Vandelvira, who also left buildings in Úbeda and Baeza."
+            }
+          },
+          "clue": {
+            "id": "pista_1628",
+            "text": {
+              "es": "La piel · La primera noticia escrita del lagarto es de 1628. Antes, nadie lo había apuntado.",
+              "en": "The skin · The first written mention of the lizard dates from 1628. Before that, nobody had written it down."
+            }
+          },
+          "nextNodeId": "n2_sanlorenzo",
+          "nextHint": {
+            "es": "Sube por la calle Maestra hasta el Arco de San Lorenzo. Unos 5 minutos.",
+            "en": "Walk up Calle Maestra to the Arch of San Lorenzo. About 5 minutes."
+          }
+        },
+        {
+          "id": "n2_sanlorenzo",
+          "title": {
+            "es": "Arco de San Lorenzo",
+            "en": "Arch of San Lorenzo"
+          },
+          "location": {
+            "lat": 37.768,
+            "lng": -3.7908
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanlorenzo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sereno",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "preso",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "preso",
+              "expression": "proud",
+              "text": {
+                "es": "¿Buscan al que mató al lagarto? Aquí lo tienen. Yo estaba condenado a muerte y pedí el perdón a cambio de acabar con el bicho. Y lo acabé.",
+                "en": "Looking for the man who killed the lizard? Here he is. I'd been sentenced to death and asked for a pardon in exchange for finishing off the beast. And I did."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este arco es lo que queda de la antigua iglesia de San Lorenzo. Por esta calle, la calle Maestra, se subía desde la catedral hacia los barrios altos de la ciudad.",
+                "en": "This arch is all that remains of the old church of San Lorenzo. Along this street, Calle Maestra, people climbed from the cathedral to the upper districts of the city."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "text": {
+                "es": "Él dice que fue él. Pero en la Malena hay un pastor que dice lo mismo. ¿A quién seguimos?",
+                "en": "He says it was him. But over in La Malena there's a shepherd who says the same thing. Whom shall we follow?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué queda hoy de la iglesia de San Lorenzo?",
+              "en": "What remains today of the church of San Lorenzo?"
+            },
+            "options": [
+              {
+                "es": "Un arco",
+                "en": "An arch"
+              },
+              {
+                "es": "Una torre",
+                "en": "A tower"
+              },
+              {
+                "es": "Nada",
+                "en": "Nothing"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El arco, que se conserva como monumento.",
+              "en": "The arch, which is preserved as a monument."
+            }
+          },
+          "clue": {
+            "id": "pista_indulto",
+            "text": {
+              "es": "El preso · El preso dice que mató al lagarto a cambio del indulto.",
+              "en": "The prisoner · The prisoner says he killed the lizard in exchange for a pardon."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "sereno",
+            "expression": "thinking",
+            "text": {
+              "es": "Dos versiones, dos caminos. ¿Seguimos al preso hacia San Ildefonso, o al pastor por los baños árabes y San Juan?",
+              "en": "Two versions, two paths. Shall we follow the prisoner towards San Ildefonso, or the shepherd by the Arab baths and San Juan?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Seguir al preso",
+                "en": "Follow the prisoner"
+              },
+              "hint": {
+                "es": "San Ildefonso y la plaza",
+                "en": "San Ildefonso and the square"
+              },
+              "targetNodeId": "a1_sanildefonso",
+              "setFlags": [
+                "camino_preso"
+              ],
+              "distanceM": 650,
+              "walkMin": 9
+            },
+            {
+              "label": {
+                "es": "Seguir al pastor",
+                "en": "Follow the shepherd"
+              },
+              "hint": {
+                "es": "Baños árabes y San Juan",
+                "en": "Arab baths and San Juan"
+              },
+              "targetNodeId": "b1_banos",
+              "setFlags": [
+                "camino_pastor"
+              ],
+              "distanceM": 250,
+              "walkMin": 4
+            }
+          ]
+        },
+        {
+          "id": "a1_sanildefonso",
+          "title": {
+            "es": "Basílica de San Ildefonso",
+            "en": "Basilica of San Ildefonso"
+          },
+          "location": {
+            "lat": 37.7644,
+            "lng": -3.7862
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanildefonso.svg"
+              ],
+              "characters": [
+                {
+                  "id": "preso",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "sereno",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "preso",
+              "expression": "happy",
+              "text": {
+                "es": "Preparé un zurrón de pólvora y lo tapé con panes recién hechos. El lagarto olió el pan, se lo tragó todo y… ¡pum! Reventó aquí mismo, en la plaza de San Ildefonso.",
+                "en": "I packed a leather bag with gunpowder and covered it with freshly baked bread. The lizard smelt the bread, swallowed the lot and… boom! It burst right here, in the square of San Ildefonso."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Durante siglos colgó dentro de esta iglesia la piel de un gran reptil. Más tarde la cubrieron con una pintura de San Cristóbal.",
+                "en": "For centuries the skin of a large reptile hung inside this church. It was later covered over with a painting of Saint Christopher."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Una piel de verdad? Entonces algo hubo… Pero, ¿era de un lagarto de Jaén?",
+                "en": "A real skin? Then there was something… But was it from a Jaén lizard?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "Según el preso, ¿con qué engañó al lagarto?",
+              "en": "According to the prisoner, what did he trick the lizard with?"
+            },
+            "options": [
+              {
+                "es": "Con un espejo",
+                "en": "With a mirror"
+              },
+              {
+                "es": "Con una canción",
+                "en": "With a song"
+              },
+              {
+                "es": "Con panes y pólvora",
+                "en": "With bread and gunpowder"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Con panes recién hechos que tapaban un zurrón de pólvora.",
+              "en": "With freshly baked bread hiding a bag of gunpowder."
+            }
+          },
+          "clue": {
+            "id": "pista_colgada",
+            "text": {
+              "es": "La piel · En San Ildefonso colgó durante siglos la piel de un gran reptil.",
+              "en": "The skin · The skin of a large reptile hung in San Ildefonso for centuries."
+            }
+          },
+          "nextNodeId": "a2_constitucion",
+          "nextHint": {
+            "es": "A la Plaza de la Constitución. Unos 4 minutos.",
+            "en": "To Plaza de la Constitución. About 4 minutes."
+          }
+        },
+        {
+          "id": "a2_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 37.7665,
+            "lng": -3.7867
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "preso",
+                  "expression": "nervous",
+                  "position": "left"
+                },
+                {
+                  "id": "sereno",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Plaza de la Constitución es el centro de la ciudad moderna. Jaén fue capital del llamado Santo Reino tras su conquista por Fernando III en 1246.",
+                "en": "Plaza de la Constitución is the heart of the modern city. Jaén became capital of the so-called Holy Kingdom after its conquest by Ferdinand III in 1246."
+              },
+              "year": 1246
+            },
+            {
+              "type": "dialogue",
+              "characterId": "preso",
+              "expression": "nervous",
+              "text": {
+                "es": "Bueno… a lo mejor no fui yo exactamente. Me lo contó mi abuelo, que se lo contó el suyo. Pero queda muy bien contarlo en primera persona, ¿no?",
+                "en": "Well… maybe it wasn't me exactly. My grandfather told me, and his grandfather told him. But it sounds much better in the first person, doesn't it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "text": {
+                "es": "Ahá. Un preso que no estuvo allí. Apuntado.",
+                "en": "Aha. A prisoner who wasn't there. Noted."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué rey conquistó Jaén en 1246?",
+              "en": "Which king conquered Jaén in 1246?"
+            },
+            "options": [
+              {
+                "es": "Alfonso X",
+                "en": "Alfonso X"
+              },
+              {
+                "es": "Fernando III",
+                "en": "Ferdinand III"
+              },
+              {
+                "es": "Carlos V",
+                "en": "Charles V"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Fernando III el Santo. Por eso Jaén se llamó el Santo Reino.",
+              "en": "Ferdinand III the Saint. That's why Jaén was called the Holy Kingdom."
+            }
+          },
+          "clue": {
+            "id": "pista_abuelo",
+            "text": {
+              "es": "El preso · El preso no estuvo allí: la historia le llegó de su abuelo.",
+              "en": "The prisoner · The prisoner wasn't there: the story reached him from his grandfather."
+            }
+          },
+          "nextNodeId": "n4_magdalena",
+          "nextHint": {
+            "es": "Sube hasta la iglesia de la Magdalena. Unos 12 minutos.",
+            "en": "Walk up to the church of La Magdalena. About 12 minutes."
+          }
+        },
+        {
+          "id": "b1_banos",
+          "title": {
+            "es": "Baños árabes",
+            "en": "Arab baths"
+          },
+          "location": {
+            "lat": 37.7702,
+            "lng": -3.7915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_banos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_banos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pastor",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "sereno",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pastor",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Pastor, de toda la vida. Al lagarto lo maté yo: rellené una piel de cordero con yesca encendida. El bicho se la tragó y se abrasó por dentro.",
+                "en": "Hello! Shepherd, born and bred. I killed the lizard: I stuffed a lambskin with burning tinder. The beast swallowed it and burned up inside."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bajo el Palacio de Villardompardo están unos de los baños árabes más grandes que se conservan en España, del siglo XI.",
+                "en": "Beneath the Villardompardo Palace lie some of the largest Arab baths preserved in Spain, from the 11th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "text": {
+                "es": "El preso dice pólvora y pan; el pastor, yesca y cordero. Los dos lo mataron… de maneras distintas.",
+                "en": "The prisoner says gunpowder and bread; the shepherd, tinder and lamb. They both killed it… in different ways."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué siglo son los baños árabes de Jaén?",
+              "en": "Which century are Jaén's Arab baths from?"
+            },
+            "options": [
+              {
+                "es": "Del siglo XI",
+                "en": "The 11th century"
+              },
+              {
+                "es": "Del siglo XIX",
+                "en": "The 19th century"
+              },
+              {
+                "es": "Del siglo I",
+                "en": "The 1st century"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Del siglo XI, de época andalusí. Se redescubrieron en el siglo XX bajo el palacio.",
+              "en": "The 11th century, from the Andalusi period. They were rediscovered in the 20th century beneath the palace."
+            }
+          },
+          "clue": {
+            "id": "pista_cordero",
+            "text": {
+              "es": "El pastor · El pastor dice que lo mató con una piel de cordero llena de yesca encendida.",
+              "en": "The shepherd · The shepherd says he killed it with a lambskin full of burning tinder."
+            }
+          },
+          "nextNodeId": "b2_sanjuan",
+          "nextHint": {
+            "es": "A la plaza de San Juan, aquí al lado. Dos minutos.",
+            "en": "To the San Juan square, right next door. Two minutes."
+          }
+        },
+        {
+          "id": "b2_sanjuan",
+          "title": {
+            "es": "Plaza de San Juan",
+            "en": "San Juan square"
+          },
+          "location": {
+            "lat": 37.7697,
+            "lng": -3.792
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pastor",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "sereno",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta una tercera versión: un caballero se puso una armadura cubierta de espejos, deslumbró al lagarto con el sol y lo atravesó con la espada.",
+                "en": "A third version is told: a knight put on armour covered in mirrors, dazzled the lizard with the sun and ran it through with his sword."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pastor",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Un caballero con espejos? Eso es de novela. Lo mío es de pastor: con lo que tenía a mano.",
+                "en": "A knight with mirrors? That's straight out of a novel. Mine's a shepherd's story: made with what I had to hand."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "happy",
+              "text": {
+                "es": "Historias de dragones y lagartos hay en muchas ciudades de Europa. Y en muchas iglesias colgaba la piel de algún bicho raro traído de lejos.",
+                "en": "There are dragon and lizard stories in many European cities. And in many churches hung the skin of some strange beast brought from far away."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "En la plaza de San Juan hay una torre con reloj. ¿Cuántas esferas de reloj ves desde aquí?",
+              "en": "In the San Juan square there is a clock tower. How many clock faces can you see from here?"
+            },
+            "answer": [
+              "1",
+              "una",
+              "uno",
+              "one",
+              "2",
+              "dos",
+              "two"
+            ]
+          },
+          "clue": {
+            "id": "pista_dragones",
+            "text": {
+              "es": "La piel · Hay leyendas de dragones en muchas ciudades, y muchas iglesias exhibían pieles de animales traídos de lejos.",
+              "en": "The skin · There are dragon legends in many cities, and many churches displayed skins of animals brought from afar."
+            }
+          },
+          "nextNodeId": "n4_magdalena",
+          "nextHint": {
+            "es": "Baja hasta la iglesia de la Magdalena. Unos 5 minutos.",
+            "en": "Walk down to the church of La Magdalena. About 5 minutes."
+          }
+        },
+        {
+          "id": "n4_magdalena",
+          "title": {
+            "es": "Iglesia de la Magdalena",
+            "en": "Church of La Magdalena"
+          },
+          "location": {
+            "lat": 37.7729,
+            "lng": -3.7932
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_magdalena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_magdalena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sereno",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "pastor",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia de la Magdalena fue antes mezquita. Su patio conserva la alberca de las abluciones, rodeada de naranjos.",
+                "en": "The church of La Magdalena was once a mosque. Its courtyard keeps the ablution pool, surrounded by orange trees."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_preso"
+                  ],
+                  "text": {
+                    "es": "Vienes con el preso, que resulta que no estuvo allí… y has oído lo de la piel de San Ildefonso. ¿Qué hacemos ahora?",
+                    "en": "You've come with the prisoner, who it turns out wasn't there… and you've heard about the skin in San Ildefonso. What now?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_pastor"
+                  ],
+                  "text": {
+                    "es": "Vienes con el pastor y ya van tres versiones: pólvora, cordero y espejos. ¿Qué hacemos ahora?",
+                    "en": "You've come with the shepherd and that's three versions now: gunpowder, lamb and mirrors. What now?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué fue la iglesia de la Magdalena antes de ser iglesia?",
+              "en": "What was the church of La Magdalena before it was a church?"
+            },
+            "options": [
+              {
+                "es": "Un castillo",
+                "en": "A castle"
+              },
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "Una mezquita",
+                "en": "A mosque"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Una mezquita. En su patio sigue la alberca de las abluciones.",
+              "en": "A mosque. Its courtyard still holds the ablution pool."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "sereno",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Bajamos a buscar la cueva del lagarto con el pastor, o seguimos la pista de la piel con el preso?",
+              "en": "Shall we go down to find the lizard's cave with the shepherd, or follow the skin's trail with the prisoner?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Buscar la cueva",
+                "en": "Find the cave"
+              },
+              "hint": {
+                "es": "Con el pastor",
+                "en": "With the shepherd"
+              },
+              "targetNodeId": "n4a_cueva",
+              "setFlags": [
+                "version_cueva"
+              ]
+            },
+            {
+              "label": {
+                "es": "Seguir la piel",
+                "en": "Follow the skin"
+              },
+              "hint": {
+                "es": "Con el preso",
+                "en": "With the prisoner"
+              },
+              "targetNodeId": "n4b_piel",
+              "setFlags": [
+                "version_piel"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_cueva",
+          "title": {
+            "es": "La cueva",
+            "en": "The cave"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pastor",
+              "expression": "dramatic",
+              "text": {
+                "es": "Ahí abajo, junto al manantial, estaba la cueva. Agua fresca todo el año: el sitio perfecto para un bicho de sangre fría… o para una buena historia.",
+                "en": "Down there, by the spring, was the cave. Fresh water all year round: the perfect place for a cold-blooded beast… or for a good story."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pastor",
+              "expression": "thinking",
+              "text": {
+                "es": "Yo nunca vi el lagarto, la verdad. Mi padre tampoco. Pero todos sabíamos dónde vivía. Qué cosas.",
+                "en": "I never saw the lizard, to be honest. Neither did my father. But we all knew where it lived. Funny, that."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_cueva",
+            "text": {
+              "es": "El pastor · Nadie de la Malena vio nunca al lagarto, aunque todos sabían dónde estaba su cueva.",
+              "en": "The shepherd · Nobody in La Malena ever saw the lizard, even though everyone knew where its cave was."
+            }
+          },
+          "nextNodeId": "n5_raudal",
+          "nextHint": {
+            "es": "Baja al raudal de la Magdalena, junto a la fuente. Un minuto.",
+            "en": "Go down to the Magdalena spring, by the fountain. One minute."
+          }
+        },
+        {
+          "id": "n4b_piel",
+          "title": {
+            "es": "La piel",
+            "en": "The skin"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "preso",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi abuelo decía que la piel de San Ildefonso era del lagarto. Pero un fraile que sabía de bichos dijo que era de un caimán, de esos que traían de América.",
+                "en": "My grandfather said the skin in San Ildefonso belonged to the lizard. But a friar who knew about animals said it was a caiman's, the kind they brought back from the Americas."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "preso",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Un caimán? ¿Entonces el lagarto de Jaén… venía de América? Pues vaya indulto el mío.",
+                "en": "A caiman? So the Jaén lizard… came from the Americas? Well, so much for my pardon."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_caiman",
+            "text": {
+              "es": "La piel · La piel de San Ildefonso era probablemente de un caimán traído de lejos.",
+              "en": "The skin · The skin in San Ildefonso probably came from a caiman brought from far away."
+            }
+          },
+          "nextNodeId": "n5_raudal",
+          "nextHint": {
+            "es": "Baja al raudal de la Magdalena, junto a la fuente. Un minuto.",
+            "en": "Go down to the Magdalena spring, by the fountain. One minute."
+          }
+        },
+        {
+          "id": "n5_raudal",
+          "title": {
+            "es": "Fuente del Lagarto",
+            "en": "Lizard Fountain"
+          },
+          "location": {
+            "lat": 37.7724,
+            "lng": -3.7938
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_raudal.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_raudal.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sereno",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "pastor",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Junto al raudal de la Magdalena, donde dicen que vivía, hay una estatua del lagarto. La leyenda fue declarada en 2009 Tesoro del Patrimonio Cultural Inmaterial de España.",
+                "en": "Beside the Magdalena spring, where it's said to have lived, stands a statue of the lizard. In 2009 the legend was declared a Treasure of Spain's Intangible Cultural Heritage."
+              },
+              "year": 2009
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "thinking",
+              "text": {
+                "es": "Aquí lo tienes, de piedra. Repasa el cuaderno: el preso, el pastor, la piel. ¿Quién mató al lagarto de la Malena?",
+                "en": "Here it is, in stone. Go over your notebook: the prisoner, the shepherd, the skin. Who killed the lizard of La Malena?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién mató al lagarto de la Malena?",
+              "en": "Who killed the lizard of La Malena?"
+            },
+            "options": [
+              {
+                "es": "El pastor, con yesca y cordero",
+                "en": "The shepherd, with tinder and lamb"
+              },
+              {
+                "es": "Nadie: la leyenda creció alrededor de una piel de caimán",
+                "en": "Nobody: the legend grew around a caiman skin"
+              },
+              {
+                "es": "El preso, con pan y pólvora",
+                "en": "The prisoner, with bread and gunpowder"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Nadie. No hay prueba de ningún lagarto gigante: las versiones cambian, nadie lo vio y la piel que colgaba en San Ildefonso era probablemente de un caimán. Lo que sí es real es la leyenda, que Jaén quiere mucho.",
+              "en": "Nobody. There is no evidence of any giant lizard: the versions change, nobody saw it and the skin in San Ildefonso was probably a caiman's. What is real is the legend, which Jaén holds dear."
+            }
+          },
+          "nextNodeId": "n6_final"
+        },
+        {
+          "id": "n6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_preso",
+                    "version_cueva"
+                  ],
+                  "text": {
+                    "es": "El preso y la cueva: has desmontado dos versiones de golpe. Mereces el indulto: eres indultado de honor.",
+                    "en": "The prisoner and the cave: you've taken apart two versions in one go. You deserve a pardon: you're an honorary pardonee."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_preso",
+                    "version_piel"
+                  ],
+                  "text": {
+                    "es": "El preso y la piel: has llegado de Jaén a América. Eres cazador de caimanes.",
+                    "en": "The prisoner and the skin: you've travelled from Jaén to the Americas. You're a caiman hunter."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_pastor",
+                    "version_cueva"
+                  ],
+                  "text": {
+                    "es": "El pastor y la cueva: has bajado hasta el manantial. Eres guardián de la Malena.",
+                    "en": "The shepherd and the cave: you've gone down to the spring. You're a guardian of La Malena."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_pastor",
+                    "version_piel"
+                  ],
+                  "text": {
+                    "es": "El pastor y la piel: tres versiones y una verdad. Eres cazador de leyendas.",
+                    "en": "The shepherd and the skin: three versions and one truth. You're a legend hunter."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sereno",
+              "expression": "happy",
+              "text": {
+                "es": "Y si una noche oyes algo moverse junto a la fuente… es el sereno. Soy yo. ¡Las once y sereno!",
+                "en": "And if one night you hear something moving by the fountain… it's the night watchman. It's me. Eleven o'clock and all's well!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "indultado_honor",
+          "requires": [
+            "camino_preso",
+            "version_cueva"
+          ],
+          "title": {
+            "es": "Indultado de honor",
+            "en": "Honorary pardonee"
+          }
+        },
+        {
+          "id": "cazador_caimanes",
+          "requires": [
+            "camino_preso",
+            "version_piel"
+          ],
+          "title": {
+            "es": "Cazador de caimanes",
+            "en": "Caiman hunter"
+          }
+        },
+        {
+          "id": "guardian_malena",
+          "requires": [
+            "camino_pastor",
+            "version_cueva"
+          ],
+          "title": {
+            "es": "Guardián de la Malena",
+            "en": "Guardian of La Malena"
+          }
+        },
+        {
+          "id": "cazador_leyendas",
+          "requires": [
+            "camino_pastor",
+            "version_piel"
+          ],
+          "title": {
+            "es": "Cazador de leyendas",
+            "en": "Legend hunter"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "farol_sereno",
+          "name": {
+            "es": "El farol del sereno",
+            "en": "The watchman's lantern"
+          },
+          "icon": "collectibles/jaen_farol.svg",
+          "awardedAtNodeId": "n1_catedral"
+        },
+        {
+          "id": "arco_sanlorenzo",
+          "name": {
+            "es": "El arco de San Lorenzo",
+            "en": "The Arch of San Lorenzo"
+          },
+          "icon": "collectibles/jaen_arco.svg",
+          "awardedAtNodeId": "n2_sanlorenzo"
+        },
+        {
+          "id": "panes",
+          "name": {
+            "es": "Los panes del preso",
+            "en": "The prisoner's bread"
+          },
+          "icon": "collectibles/jaen_panes.svg",
+          "awardedAtNodeId": "a1_sanildefonso"
+        },
+        {
+          "id": "llaves_reino",
+          "name": {
+            "es": "Las llaves del Santo Reino",
+            "en": "The keys of the Holy Kingdom"
+          },
+          "icon": "collectibles/jaen_llaves.svg",
+          "awardedAtNodeId": "a2_constitucion"
+        },
+        {
+          "id": "zurron",
+          "name": {
+            "es": "El zurrón del pastor",
+            "en": "The shepherd's bag"
+          },
+          "icon": "collectibles/jaen_zurron.svg",
+          "awardedAtNodeId": "b1_banos"
+        },
+        {
+          "id": "espejo",
+          "name": {
+            "es": "La armadura de espejos",
+            "en": "The mirror armour"
+          },
+          "icon": "collectibles/jaen_espejo.svg",
+          "awardedAtNodeId": "b2_sanjuan"
+        },
+        {
+          "id": "piel_caiman",
+          "name": {
+            "es": "La piel del caimán",
+            "en": "The caiman skin"
+          },
+          "icon": "collectibles/jaen_piel.svg",
+          "awardedAtNodeId": "n5_raudal"
+        },
+        {
+          "id": "insignia_lagarto",
+          "name": {
+            "es": "¿Quién mató al lagarto de la Malena?",
+            "en": "Who Killed the Lizard of La Malena?"
+          },
+          "icon": "collectibles/jaen_lagarto.svg",
+          "awardedAtNodeId": "n6_final"
+        }
+      ]
+    },
+    {
+      "id": "mar-de-olivos",
+      "title": {
+        "es": "¿Quién plantó el mar de olivos?",
+        "en": "Who Planted the Sea of Olives?"
+      },
+      "summary": {
+        "es": "Jaén es la mayor productora de aceite del mundo: olivos hasta el horizonte. ¿Los plantaron los romanos, los andalusíes o alguien más reciente? Con una catadora, un vareador y un molinero.",
+        "en": "Jaén is the world's largest olive oil producer: olive trees to the horizon. Did the Romans plant them, the Andalusis or someone more recent? With an oil taster, an olive beater and a mill man."
+      },
+      "era": "De la Bética al siglo XX",
+      "guideCharacterId": "catadora",
+      "durationMin": 100,
+      "distanceKm": 2.8,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La plaza",
+            "en": "The square"
+          },
+          "trail": {
+            "es": "camino de la plaza",
+            "en": "square trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los baños",
+            "en": "The baths"
+          },
+          "trail": {
+            "es": "camino de los baños",
+            "en": "baths trail"
+          }
+        }
+      },
+      "startNodeId": "g1_mercado",
+      "nodes": [
+        {
+          "id": "g1_mercado",
+          "title": {
+            "es": "Mercado de San Francisco",
+            "en": "San Francisco Market"
+          },
+          "location": {
+            "lat": 37.7671,
+            "lng": -3.788
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_mercado.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_mercado.svg"
+              ],
+              "characters": [
+                {
+                  "id": "catadora",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Soy catadora de aceite. Huelo, pruebo y digo si un aceite es virgen extra o no. En Jaén, esto es como ser sumiller.",
+                "en": "Hello! I'm an olive oil taster. I smell, taste and decide whether an oil is extra virgin or not. In Jaén, that's like being a sommelier."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo un misterio: si subes a cualquier cerro de Jaén, verás olivos hasta el horizonte. Un mar de olivos. ¿Quién lo plantó?",
+                "en": "I've got a mystery for you: climb any hill in Jaén and you'll see olive trees to the horizon. A sea of olives. Who planted it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: los romanos, que ya exportaban aceite; los andalusíes, que nos dejaron las palabras «aceite» y «aceituna»; y los hombres del siglo XIX. Apunta.",
+                "en": "Three suspects: the Romans, who were already exporting oil; the Andalusis, who gave us the words “aceite” and “aceituna”; and the men of the 19th century. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La provincia de Jaén es la mayor productora de aceite de oliva del mundo.",
+                "en": "The province of Jaén is the largest olive oil producer in the world."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el aceite de oliva virgen extra?",
+              "en": "What is extra virgin olive oil?"
+            },
+            "options": [
+              {
+                "es": "Aceite de semillas",
+                "en": "Seed oil"
+              },
+              {
+                "es": "Zumo de aceituna sin defectos, sacado solo por medios mecánicos",
+                "en": "Flawless olive juice, extracted by mechanical means only"
+              },
+              {
+                "es": "Aceite con agua",
+                "en": "Oil mixed with water"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Es zumo de aceituna, extraído en frío y sin química, y que en la cata no tiene ningún defecto.",
+              "en": "It's olive juice, cold-extracted without chemicals, with no defects when tasted."
+            }
+          },
+          "clue": {
+            "id": "pista_mar",
+            "text": {
+              "es": "El siglo XIX · Jaén es la mayor productora de aceite del mundo: el olivar lo cubre casi todo.",
+              "en": "The 19th century · Jaén is the world's largest oil producer: olive groves cover almost everything."
+            }
+          },
+          "nextNodeId": "g2_catedral",
+          "nextHint": {
+            "es": "A la Plaza de Santa María, frente a la catedral. Unos 3 minutos.",
+            "en": "To Plaza de Santa María, opposite the cathedral. About 3 minutes."
+          }
+        },
+        {
+          "id": "g2_catedral",
+          "title": {
+            "es": "Plaza de Santa María",
+            "en": "Plaza de Santa María"
+          },
+          "location": {
+            "lat": 37.7654,
+            "lng": -3.7897
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "catadora",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "vareador",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vareador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Vareador. En invierno, con la vara, sacudo las ramas y las aceitunas caen sobre los mantos. Mi familia lleva así generaciones.",
+                "en": "Hello! Olive beater. In winter I shake the branches with my pole and the olives fall onto the nets. My family has done this for generations."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la Bética romana ya se cultivaba el olivo, y su aceite viajaba a Roma en ánforas.",
+                "en": "Olives were already grown in Roman Baetica, and their oil travelled to Rome in amphorae."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Los romanos plantaron olivos, sí. Pero entre olivo y olivo había trigo, viñas, huertas… No era un mar.",
+                "en": "The Romans planted olive trees, yes. But between them were wheat, vines, vegetable plots… It wasn't a sea."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuándo se recoge la aceituna para el aceite?",
+              "en": "When are olives harvested for oil?"
+            },
+            "options": [
+              {
+                "es": "En otoño e invierno",
+                "en": "In autumn and winter"
+              },
+              {
+                "es": "En primavera",
+                "en": "In spring"
+              },
+              {
+                "es": "En pleno verano",
+                "en": "In the height of summer"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Entre octubre y febrero, más o menos. La campaña de la aceituna marca el invierno de Jaén.",
+              "en": "Roughly between October and February. The olive harvest marks Jaén's winter."
+            }
+          },
+          "clue": {
+            "id": "pista_mezcla",
+            "text": {
+              "es": "Los romanos · En tiempos de Roma había olivos, pero mezclados con trigo, viñas y huertas.",
+              "en": "The Romans · In Roman times there were olive trees, but mixed with wheat, vines and gardens."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "catadora",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por San Ildefonso y la plaza, o por los baños árabes y San Juan?",
+              "en": "Shall we go by way of San Ildefonso and the square, or by the Arab baths and San Juan?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por San Ildefonso",
+                "en": "Via San Ildefonso"
+              },
+              "hint": {
+                "es": "Pipirrana y andrajos",
+                "en": "Pipirrana and andrajos"
+              },
+              "targetNodeId": "ga1_constitucion",
+              "setFlags": [
+                "camino_plaza"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "Por los baños",
+                "en": "Via the baths"
+              },
+              "hint": {
+                "es": "Almazaras y ochíos",
+                "en": "Oil mills and ochíos"
+              },
+              "targetNodeId": "gb1_banos",
+              "setFlags": [
+                "camino_banos"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "ga1_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 37.7665,
+            "lng": -3.7867
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "catadora",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "vareador",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La pipirrana es la ensalada de Jaén: tomate, pimiento, huevo cocido y mucho aceite de oliva, todo picadito.",
+                "en": "Pipirrana is Jaén's salad: tomato, pepper, hard-boiled egg and plenty of olive oil, all finely chopped."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vareador",
+              "expression": "neutral",
+              "text": {
+                "es": "En el tajo, a mediodía, un pan con aceite y una pipirrana. Eso es lo que nos da fuerza para la vara.",
+                "en": "Out in the grove at midday, bread with oil and a pipirrana. That's what gives us the strength for the pole."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Todo lleva aceite. Pero hace doscientos años no había tanto olivar como hoy. Algo cambió.",
+                "en": "Everything has oil in it. But two hundred years ago there weren't nearly as many olive groves as today. Something changed."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué lleva la pipirrana?",
+              "en": "What goes into pipirrana?"
+            },
+            "options": [
+              {
+                "es": "Arroz y marisco",
+                "en": "Rice and seafood"
+              },
+              {
+                "es": "Chocolate y nata",
+                "en": "Chocolate and cream"
+              },
+              {
+                "es": "Tomate, pimiento, huevo cocido y aceite",
+                "en": "Tomato, pepper, hard-boiled egg and oil"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Tomate, pimiento, huevo cocido y aceite de oliva. Hay quien le pone atún o ajo.",
+              "en": "Tomato, pepper, hard-boiled egg and olive oil. Some add tuna or garlic."
+            }
+          },
+          "clue": {
+            "id": "pista_cambio",
+            "text": {
+              "es": "El siglo XIX · Hace doscientos años había mucho menos olivar que hoy.",
+              "en": "The 19th century · Two hundred years ago there were far fewer olive groves than today."
+            }
+          },
+          "nextNodeId": "ga2_sanildefonso",
+          "nextHint": {
+            "es": "A la Basílica de San Ildefonso. Unos 4 minutos.",
+            "en": "To the Basilica of San Ildefonso. About 4 minutes."
+          }
+        },
+        {
+          "id": "ga2_sanildefonso",
+          "title": {
+            "es": "Basílica de San Ildefonso",
+            "en": "Basilica of San Ildefonso"
+          },
+          "location": {
+            "lat": 37.7644,
+            "lng": -3.7862
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanildefonso.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vareador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "catadora",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los andrajos son un guiso de Jaén con tortas de harina cortadas en trozos, que parecen «andrajos», trapos rotos.",
+                "en": "Andrajos are a Jaén stew with pieces of flatbread that look like “andrajos”, torn rags."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vareador",
+              "expression": "happy",
+              "text": {
+                "es": "Mi abuelo contaba que su abuelo vio arrancar trigales para plantar olivos. «Olivos, olivos y más olivos», decía.",
+                "en": "My grandfather used to say his grandfather saw wheat fields torn up to plant olive trees. “Olives, olives and more olives”, he'd say."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "proud",
+              "text": {
+                "es": "¡Eso es una pista gorda! ¿Cuándo sería eso?",
+                "en": "That's a big clue! When would that have been?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué se llaman así los andrajos?",
+              "en": "Why are andrajos called that?"
+            },
+            "options": [
+              {
+                "es": "Porque se comen con las manos",
+                "en": "Because they're eaten with your hands"
+              },
+              {
+                "es": "Porque las tortas rotas parecen trapos",
+                "en": "Because the broken flatbreads look like rags"
+              },
+              {
+                "es": "Por un cocinero llamado Andrajo",
+                "en": "After a cook called Andrajo"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Porque los trozos de torta parecen andrajos, trapos rotos.",
+              "en": "Because the pieces of flatbread look like andrajos, torn rags."
+            }
+          },
+          "clue": {
+            "id": "pista_trigales",
+            "text": {
+              "es": "El siglo XIX · El bisabuelo del vareador vio arrancar trigales para plantar olivos.",
+              "en": "The 19th century · The olive beater's great-grandfather saw wheat fields torn up to plant olives."
+            }
+          },
+          "nextNodeId": "g4_magdalena",
+          "nextHint": {
+            "es": "Sube hasta la iglesia de la Magdalena. Unos 15 minutos.",
+            "en": "Walk up to the church of La Magdalena. About 15 minutes."
+          }
+        },
+        {
+          "id": "gb1_banos",
+          "title": {
+            "es": "Baños árabes",
+            "en": "Arab baths"
+          },
+          "location": {
+            "lat": 37.7702,
+            "lng": -3.7915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_banos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_banos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "molinero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "catadora",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "molinero",
+              "expression": "happy",
+              "text": {
+                "es": "Molinero de almazara, para servirle. Yo convierto la aceituna en aceite: molienda, batido y a separar.",
+                "en": "Oil-mill man, at your service. I turn olives into oil: crushing, mixing and separating."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las palabras «aceite» y «aceituna» vienen del árabe: az-zayt y az-zaytuna. Las almazaras también tienen nombre árabe.",
+                "en": "The Spanish words “aceite” (oil) and “aceituna” (olive) come from Arabic: az-zayt and az-zaytuna. The almazaras, the oil mills, also have an Arabic name."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Los andalusíes nos dejaron las palabras y la técnica del molino. Pero, ¿el mar de olivos?",
+                "en": "The Andalusis left us the words and the milling technique. But the sea of olives?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué lengua viene la palabra «aceite»?",
+              "en": "Which language does the Spanish word “aceite” come from?"
+            },
+            "options": [
+              {
+                "es": "Del árabe",
+                "en": "Arabic"
+              },
+              {
+                "es": "Del latín",
+                "en": "Latin"
+              },
+              {
+                "es": "Del inglés",
+                "en": "English"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Del árabe az-zayt. En cambio, «olivo» viene del latín.",
+              "en": "From Arabic az-zayt. “Olivo” (olive tree), however, comes from Latin."
+            }
+          },
+          "clue": {
+            "id": "pista_almazara",
+            "text": {
+              "es": "Los andalusíes · Los andalusíes dejaron las palabras aceite, aceituna y almazara… y la técnica del molino.",
+              "en": "The Andalusis · The Andalusis left the words for oil, olive and oil mill… and the milling technique."
+            }
+          },
+          "nextNodeId": "gb2_sanjuan",
+          "nextHint": {
+            "es": "A la plaza de San Juan. Dos minutos.",
+            "en": "To the San Juan square. Two minutes."
+          }
+        },
+        {
+          "id": "gb2_sanjuan",
+          "title": {
+            "es": "Plaza de San Juan",
+            "en": "San Juan square"
+          },
+          "location": {
+            "lat": 37.7697,
+            "lng": -3.792
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "molinero",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "catadora",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los ochíos son panecillos de aceite con pimentón por encima, típicos de Úbeda y Baeza.",
+                "en": "Ochíos are little bread rolls made with oil and topped with paprika, typical of Úbeda and Baeza."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "molinero",
+              "expression": "thinking",
+              "text": {
+                "es": "Cuando yo era mozo, en el pueblo había un molino pequeño. Luego llegaron las grandes almazaras, porque el aceite se vendía por medio mundo.",
+                "en": "When I was a lad, the village had one small mill. Then came the big oil mills, because the oil was being sold across half the world."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "happy",
+              "text": {
+                "es": "El aceite se vendía fuera… y por eso se plantaba más. Eso huele a negocio, detective.",
+                "en": "The oil was sold abroad… and so more was planted. That smells like business, detective."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué llevan por encima los ochíos?",
+              "en": "What's on top of ochíos?"
+            },
+            "options": [
+              {
+                "es": "Azúcar glas",
+                "en": "Icing sugar"
+              },
+              {
+                "es": "Queso",
+                "en": "Cheese"
+              },
+              {
+                "es": "Pimentón",
+                "en": "Paprika"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Pimentón. Por dentro, aceite de oliva y un poco de anís en algunas recetas.",
+              "en": "Paprika. Inside, olive oil and a touch of aniseed in some recipes."
+            }
+          },
+          "clue": {
+            "id": "pista_negocio",
+            "text": {
+              "es": "El siglo XIX · Cuando el aceite empezó a venderse por medio mundo, llegaron las grandes almazaras.",
+              "en": "The 19th century · When oil started selling across half the world, the big oil mills arrived."
+            }
+          },
+          "nextNodeId": "g4_magdalena",
+          "nextHint": {
+            "es": "Baja hasta la iglesia de la Magdalena. Unos 5 minutos.",
+            "en": "Walk down to the church of La Magdalena. About 5 minutes."
+          }
+        },
+        {
+          "id": "g4_magdalena",
+          "title": {
+            "es": "Iglesia de la Magdalena",
+            "en": "Church of La Magdalena"
+          },
+          "location": {
+            "lat": 37.7729,
+            "lng": -3.7932
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_magdalena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_magdalena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "catadora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "vareador",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Muchos olivos de Jaén tienen varios pies o troncos. Algunos olivos de la provincia tienen cientos de años.",
+                "en": "Many of Jaén's olive trees have several trunks. Some olive trees in the province are hundreds of years old."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_plaza"
+                  ],
+                  "text": {
+                    "es": "Vienes de la plaza: el vareador te ha hablado de trigales arrancados para plantar olivos. ¿Qué pista seguimos?",
+                    "en": "You've come from the square: the olive beater told you about wheat fields torn up for olive trees. Which lead shall we follow?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_banos"
+                  ],
+                  "text": {
+                    "es": "Vienes de los baños: el molinero te ha hablado de aceite vendido por medio mundo. ¿Qué pista seguimos?",
+                    "en": "You've come from the baths: the mill man told you about oil sold across half the world. Which lead shall we follow?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántos años puede vivir un olivo?",
+              "en": "How long can an olive tree live?"
+            },
+            "options": [
+              {
+                "es": "Un solo verano",
+                "en": "A single summer"
+              },
+              {
+                "es": "Cientos de años, incluso más de mil",
+                "en": "Hundreds of years, even over a thousand"
+              },
+              {
+                "es": "Unos diez años",
+                "en": "About ten years"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Cientos de años: en España hay olivos que superan los mil.",
+              "en": "Hundreds of years: in Spain there are olive trees over a thousand years old."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "catadora",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Vamos al molino con el molinero, o al olivar con el vareador?",
+              "en": "Shall we go to the mill with the mill man, or to the grove with the olive beater?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al molino",
+                "en": "To the mill"
+              },
+              "hint": {
+                "es": "Con el molinero",
+                "en": "With the mill man"
+              },
+              "targetNodeId": "g4a_molino",
+              "setFlags": [
+                "version_molino"
+              ]
+            },
+            {
+              "label": {
+                "es": "Al olivar",
+                "en": "To the grove"
+              },
+              "hint": {
+                "es": "Con el vareador",
+                "en": "With the olive beater"
+              },
+              "targetNodeId": "g4b_olivar",
+              "setFlags": [
+                "version_olivar"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_molino",
+          "title": {
+            "es": "El molino",
+            "en": "The mill"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "molinero",
+              "expression": "proud",
+              "text": {
+                "es": "En el siglo XIX el aceite se vendía a Inglaterra, a Francia, a América: para comer, para las lámparas, para las máquinas de las fábricas.",
+                "en": "In the 19th century oil was sold to England, France, the Americas: for eating, for lamps, for factory machinery."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "molinero",
+              "expression": "thinking",
+              "text": {
+                "es": "Y cuando el Estado vendió las tierras de la Iglesia y de los pueblos, los nuevos dueños plantaron lo que más dinero daba: olivos.",
+                "en": "And when the State sold off the lands of the Church and the towns, the new owners planted what paid best: olive trees."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_desamortizacion",
+            "text": {
+              "es": "El siglo XIX · En el siglo XIX se vendieron las tierras de la Iglesia y los nuevos dueños plantaron olivos.",
+              "en": "The 19th century · In the 19th century Church lands were sold off and the new owners planted olive trees."
+            }
+          },
+          "nextNodeId": "g5_raudal",
+          "nextHint": {
+            "es": "Baja al raudal de la Magdalena. Un minuto.",
+            "en": "Go down to the Magdalena spring. One minute."
+          }
+        },
+        {
+          "id": "g4b_olivar",
+          "title": {
+            "es": "El olivar",
+            "en": "The grove"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "vareador",
+              "expression": "dramatic",
+              "text": {
+                "es": "Entre 1830 y 1880 el olivar creció y creció. Donde había trigo, olivo. Donde había monte, olivo.",
+                "en": "Between 1830 and 1880 the olive groves grew and grew. Where there was wheat, olives. Where there was scrubland, olives."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vareador",
+              "expression": "thinking",
+              "text": {
+                "es": "Y en el siglo XX siguió. Así nació el mar. No lo plantó un rey ni un califa: lo plantaron miles de familias, olivo a olivo.",
+                "en": "And in the 20th century it carried on. That's how the sea was born. No king or caliph planted it: thousands of families did, tree by tree."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_1830",
+            "text": {
+              "es": "El siglo XIX · Entre 1830 y 1880 el olivar de Jaén se extendió como nunca, y siguió creciendo en el siglo XX.",
+              "en": "The 19th century · Between 1830 and 1880 Jaén's olive groves spread as never before, and kept growing in the 20th century."
+            }
+          },
+          "nextNodeId": "g5_raudal",
+          "nextHint": {
+            "es": "Baja al raudal de la Magdalena. Un minuto.",
+            "en": "Go down to the Magdalena spring. One minute."
+          }
+        },
+        {
+          "id": "g5_raudal",
+          "title": {
+            "es": "Raudal de la Magdalena",
+            "en": "Magdalena spring"
+          },
+          "location": {
+            "lat": 37.7724,
+            "lng": -3.7938
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_raudal.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_raudal.svg"
+              ],
+              "characters": [
+                {
+                  "id": "catadora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "molinero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Jaén, las tapas suelen acompañar a la bebida sin pagarlas aparte, una costumbre muy querida en la ciudad.",
+                "en": "In Jaén, tapas usually come with your drink at no extra cost, a custom the city holds dear."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Aquí, junto al agua, el veredicto. Romanos, andalusíes, siglo XIX. ¿Quién plantó el mar de olivos?",
+                "en": "Here, by the water, the verdict. Romans, Andalusis, the 19th century. Who planted the sea of olives?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién plantó el mar de olivos de Jaén?",
+              "en": "Who planted Jaén's sea of olives?"
+            },
+            "options": [
+              {
+                "es": "Los agricultores de los siglos XIX y XX",
+                "en": "The farmers of the 19th and 20th centuries"
+              },
+              {
+                "es": "Los romanos",
+                "en": "The Romans"
+              },
+              {
+                "es": "Los andalusíes",
+                "en": "The Andalusis"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los del siglo XIX y XX. Romanos y andalusíes cultivaron olivos, pero el monocultivo nació cuando el aceite se vendía por el mundo y las tierras vendidas por el Estado se llenaron de olivos.",
+              "en": "The 19th and 20th centuries. Romans and Andalusis grew olives, but the monoculture was born when oil sold worldwide and the lands sold off by the State filled up with olive trees."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_plaza",
+                    "version_molino"
+                  ],
+                  "text": {
+                    "es": "La plaza y el molino: del plato a la almazara. Eres maestro almazarero.",
+                    "en": "The square and the mill: from the plate to the oil mill. You're a master of the oil mill."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_plaza",
+                    "version_olivar"
+                  ],
+                  "text": {
+                    "es": "La plaza y el olivar: de la pipirrana al tajo. Eres vareador de honor.",
+                    "en": "The square and the grove: from pipirrana to the fields. You're an honorary olive beater."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_banos",
+                    "version_molino"
+                  ],
+                  "text": {
+                    "es": "Los baños y el molino: de az-zayt al aceite de hoy. Eres catador de palabras.",
+                    "en": "The baths and the mill: from az-zayt to today's oil. You're a taster of words."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_banos",
+                    "version_olivar"
+                  ],
+                  "text": {
+                    "es": "Los baños y el olivar: siglos de olivo en un paseo. Eres guardián del mar de olivos.",
+                    "en": "The baths and the grove: centuries of olives in one walk. You're a guardian of the sea of olives."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "happy",
+              "text": {
+                "es": "Y un consejo de catadora: el buen aceite pica un poco en la garganta. ¡Eso es que está vivo!",
+                "en": "And a tip from a taster: good oil tickles your throat a little. That means it's alive!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "maestro_almazarero",
+          "requires": [
+            "camino_plaza",
+            "version_molino"
+          ],
+          "title": {
+            "es": "Maestro almazarero",
+            "en": "Master of the oil mill"
+          }
+        },
+        {
+          "id": "vareador_honor",
+          "requires": [
+            "camino_plaza",
+            "version_olivar"
+          ],
+          "title": {
+            "es": "Vareador de honor",
+            "en": "Honorary olive beater"
+          }
+        },
+        {
+          "id": "catador_palabras",
+          "requires": [
+            "camino_banos",
+            "version_molino"
+          ],
+          "title": {
+            "es": "Catador de palabras",
+            "en": "Taster of words"
+          }
+        },
+        {
+          "id": "guardian_olivos",
+          "requires": [
+            "camino_banos",
+            "version_olivar"
+          ],
+          "title": {
+            "es": "Guardián del mar de olivos",
+            "en": "Guardian of the sea of olives"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "aceituna",
+          "name": {
+            "es": "La aceituna",
+            "en": "The olive"
+          },
+          "icon": "collectibles/jaen_aceituna.svg",
+          "awardedAtNodeId": "g1_mercado"
+        },
+        {
+          "id": "vara",
+          "name": {
+            "es": "La vara del vareador",
+            "en": "The olive beater's pole"
+          },
+          "icon": "collectibles/jaen_vara.svg",
+          "awardedAtNodeId": "g2_catedral"
+        },
+        {
+          "id": "pipirrana",
+          "name": {
+            "es": "La pipirrana",
+            "en": "Pipirrana"
+          },
+          "icon": "collectibles/jaen_pipirrana.svg",
+          "awardedAtNodeId": "ga1_constitucion"
+        },
+        {
+          "id": "andrajos",
+          "name": {
+            "es": "Los andrajos",
+            "en": "Andrajos"
+          },
+          "icon": "collectibles/jaen_andrajos.svg",
+          "awardedAtNodeId": "ga2_sanildefonso"
+        },
+        {
+          "id": "almazara",
+          "name": {
+            "es": "La almazara",
+            "en": "The oil mill"
+          },
+          "icon": "collectibles/jaen_almazara.svg",
+          "awardedAtNodeId": "gb1_banos"
+        },
+        {
+          "id": "ochio",
+          "name": {
+            "es": "El ochío",
+            "en": "The ochío"
+          },
+          "icon": "collectibles/jaen_ochio.svg",
+          "awardedAtNodeId": "gb2_sanjuan"
+        },
+        {
+          "id": "alcuza",
+          "name": {
+            "es": "La alcuza",
+            "en": "The oil jug"
+          },
+          "icon": "collectibles/jaen_alcuza.svg",
+          "awardedAtNodeId": "g5_raudal"
+        },
+        {
+          "id": "insignia_olivos",
+          "name": {
+            "es": "¿Quién plantó el mar de olivos?",
+            "en": "Who Planted the Sea of Olives?"
+          },
+          "icon": "collectibles/jaen_olivos.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    }
+  ]
+}
