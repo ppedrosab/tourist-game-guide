@@ -19,8 +19,8 @@ export function HardShadow({ children, radius, offset = hardShadow.md, pressed =
   return (
     <View style={[{ paddingBottom: offset }, style]}>
       <View
-        pointerEvents="none"
         style={{
+          pointerEvents: "none",
           position: "absolute",
           left: 0,
           right: 0,

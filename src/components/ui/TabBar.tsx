@@ -16,7 +16,7 @@ const ICONS: Record<string, IconName> = {
 export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
   return (
-    <View style={[styles.wrap, { bottom: Math.max(insets.bottom, 12) + 8 }]} pointerEvents="box-none">
+    <View style={[styles.wrap, { bottom: Math.max(insets.bottom, 12) + 8, pointerEvents: "box-none" }]}>
       <HardShadow radius={20} offset={hardShadow.md}>
         <View style={styles.bar}>
           {state.routes.map((route, index) => {

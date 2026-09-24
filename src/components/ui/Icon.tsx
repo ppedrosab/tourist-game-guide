@@ -1,3 +1,4 @@
+import { View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import { colors } from "@/theme";
 
@@ -25,10 +26,12 @@ const PATHS = {
   lock: "M7 11h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM8 11V7a4 4 0 0 1 8 0v4",
   camera: "M4 8h3l2-3h6l2 3h3v11H4zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z",
   search: "M11 5a6 6 0 1 0 0 12a6 6 0 1 0 0-12zM20 20l-4.5-4.5",
-  share: "M18 2a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM6 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM18 16a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4",
+  share:
+    "M18 2a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM6 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM18 16a3 3 0 1 0 0 6a3 3 0 1 0 0-6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4",
   download: "M12 4v11M7 10l5 5 5-5M5 20h14",
   exit: "M14 4h5v16h-5M10 16l-4-4 4-4M6 12h10",
-  subtitles: "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10 10a2 2 0 1 0 0 4M16 10a2 2 0 1 0 0 4",
+  subtitles:
+    "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10 10a2 2 0 1 0 0 4M16 10a2 2 0 1 0 0 4",
 } as const;
 
 const FILLED = new Set<IconName>(["play"]);
@@ -39,15 +42,18 @@ type Props = { name: IconName; size?: number; color?: string; strokeWidth?: numb
 export function Icon({ name, size = 20, color = colors.ink, strokeWidth = 2.2 }: Props) {
   const filled = FILLED.has(name);
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden importantForAccessibility="no">
-      <Path
-        d={PATHS[name]}
-        fill={filled ? color : "none"}
-        stroke={filled ? "none" : color}
-        strokeWidth={strokeWidth}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </Svg>
+    // Las props de accesibilidad van en un View: Svg no las admite en web.
+    <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+      <Svg width={size} height={size} viewBox="0 0 24 24">
+        <Path
+          d={PATHS[name]}
+          fill={filled ? color : "none"}
+          stroke={filled ? "none" : color}
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </Svg>
+    </View>
   );
 }
