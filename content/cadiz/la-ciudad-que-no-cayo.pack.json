@@ -73,8 +73,8 @@
         "en": "The City That Never Fell"
       },
       "summary": {
-        "es": "En 1810 Napoleón sitió Cádiz y la ciudad no se rindió. ¿Cómo lo consiguió? Sigue el camino del mar o el de la ciudad, con la Tía Norica de guía.",
-        "en": "In 1810 Napoleon besieged Cádiz and the city never surrendered. How did it do it? Follow the sea or the city, with Tía Norica as your guide."
+        "es": "Napoleón conquistó media Europa, pero con Cádiz no pudo. ¿Por qué? Resuelve el caso con la Tía Norica: sigue la pista del mar o la de la ciudad y descubre quién le ganó la partida.",
+        "en": "Napoleon conquered half of Europe, but he couldn't take Cádiz. Why not? Crack the case with Tía Norica: follow the sea or the city and find out who beat him."
       },
       "era": "1100 a. C. - 1812",
       "guideCharacterId": "tia_norica",
@@ -147,8 +147,17 @@
               "characterId": "tia_norica",
               "expression": "dramatic",
               "text": {
-                "es": "Te traigo un misterio de los gordos. Durante dos años y medio, el ejército de Napoleón rodeó esta ciudad. Media España había caído… y Cádiz no. ¿Cómo aguantó una ciudad tan chiquitita? Eso vamos a averiguarlo tú y yo.",
-                "en": "I've got a big mystery for you. For two and a half years Napoleon's army besieged this city. Half of Spain had fallen… but not Cádiz. How did such a tiny city hold out? That's what you and I are going to find out."
+                "es": "Te traigo un caso de los gordos, detective. Napoleón tenía el ejército más temido de Europa: tomó Madrid, tomó Sevilla… y aquí se quedó atascado dos años y medio, frente a una ciudad que se cruza andando en veinte minutos. ¿Cómo es posible?",
+                "en": "I've got a big case for you, detective. Napoleon had the most feared army in Europe: he took Madrid, he took Seville… and here he got stuck for two and a half years, in front of a city you can walk across in twenty minutes. How is that possible?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "text": {
+                "es": "Tengo tres sospechosos: el mar, la propia isla y los gaditanos. Uno de ellos le ganó la partida a Napoleón… o a lo mejor fueron los tres. Tú apunta todas las pistas en el cuaderno, que al final te toca dar el veredicto.",
+                "en": "I've got three suspects: the sea, the island itself and the people of Cádiz. One of them beat Napoleon… or maybe all three did. Write every clue in your notebook, because at the end you'll have to give the verdict."
               }
             },
             {
@@ -215,8 +224,8 @@
               "characterId": "tia_norica",
               "expression": "thinking",
               "text": {
-                "es": "Apunta la primera pista: a Cádiz la riqueza le llegaba por mar. Y ahora te toca elegir, que en esta ciudad hay dos maneras de aguantar un asedio.",
-                "en": "Write down the first clue: Cádiz's wealth came in by sea. And now it's your turn to choose, because in this city there are two ways to survive a siege."
+                "es": "Primera pista pa' tu cuaderno: a Cádiz la riqueza, y casi todo lo demás, le llegaba por mar. Apunta al primer sospechoso.",
+                "en": "First clue for your notebook: Cádiz's wealth, and almost everything else, came in by sea. That points to our first suspect."
               }
             }
           ],
@@ -257,15 +266,15 @@
             "characterId": "tia_norica",
             "expression": "thinking",
             "text": {
-              "es": "¿Tú qué crees, pisha? ¿Cádiz aguantó gracias al mar que la rodeaba… o gracias a la gente que vivía dentro?",
-              "en": "What do you reckon, pisha? Did Cádiz hold out thanks to the sea around it… or thanks to the people who lived inside?"
+              "es": "Tenemos dos pistas que seguir, detective. ¿Investigamos el mar que rodea la ciudad… o a la gente que vivía dentro?",
+              "en": "We've got two leads to follow, detective. Do we investigate the sea around the city… or the people who lived inside it?"
             }
           },
           "choices": [
             {
               "label": {
-                "es": "Seguir el camino del mar",
-                "en": "Follow the sea"
+                "es": "Investigar el mar",
+                "en": "Investigate the sea"
               },
               "hint": {
                 "es": "Al mercado y a las torres vigía",
@@ -280,8 +289,8 @@
             },
             {
               "label": {
-                "es": "Seguir el camino de la ciudad",
-                "en": "Follow the city"
+                "es": "Investigar la ciudad",
+                "en": "Investigate the city"
               },
               "hint": {
                 "es": "Adonde se reunieron las Cortes",
@@ -617,8 +626,8 @@
               "characterId": "la_pepa",
               "expression": "thinking",
               "text": {
-                "es": "¿Cómo aguantó Cádiz dos años y medio? Hay dos maneras de contarlo: la de las coplas que cantaba la gente y la de los partes de guerra. ¿Cuál quieres oír?",
-                "en": "How did Cádiz hold out for two and a half years? There are two ways to tell it: through the songs people sang, or through the war reports. Which would you like to hear?"
+                "es": "Pero a tu caso le falta un testigo, detective: ¿cómo vivió la ciudad el asedio por dentro? Hay dos declaraciones: la de las coplas que cantaba la gente y la de los partes de guerra. ¿Cuál tomas?",
+                "en": "But your case is missing a witness, detective: what was the siege like from inside the city? There are two statements: the songs people sang and the war reports. Which will you take?"
               }
             }
           ],
@@ -651,12 +660,12 @@
           "choices": [
             {
               "label": {
-                "es": "Lo que cantaban las coplas",
-                "en": "What the songs said"
+                "es": "Escuchar las coplas",
+                "en": "Listen to the songs"
               },
               "hint": {
-                "es": "La versión de la calle",
-                "en": "The street's version"
+                "es": "El testimonio de la calle",
+                "en": "The street's testimony"
               },
               "targetNodeId": "n4a_coplas",
               "setFlags": [
@@ -665,12 +674,12 @@
             },
             {
               "label": {
-                "es": "Lo que dicen los partes de guerra",
-                "en": "What the war reports say"
+                "es": "Leer los partes de guerra",
+                "en": "Read the war reports"
               },
               "hint": {
-                "es": "La versión de los mapas",
-                "en": "The maps' version"
+                "es": "El informe militar",
+                "en": "The military report"
               },
               "targetNodeId": "n4b_partes",
               "setFlags": [
@@ -952,8 +961,8 @@
         {
           "id": "n6b_resolver",
           "title": {
-            "es": "Resolver el misterio",
-            "en": "Solve the mystery"
+            "es": "El veredicto",
+            "en": "The verdict"
           },
           "content": [
             {
@@ -961,35 +970,35 @@
               "characterId": "tia_norica",
               "expression": "thinking",
               "text": {
-                "es": "Bueno, pisha, abre tu cuaderno y repasa las pistas. ¿Por qué Cádiz no cayó?",
-                "en": "Right, pisha, open your notebook and go over the clues. Why didn't Cádiz fall?"
+                "es": "Hora del veredicto, detective. Abre el cuaderno y repasa las pistas: el mar, la isla y los gaditanos. ¿Quién le ganó la partida a Napoleón?",
+                "en": "Time for the verdict, detective. Open your notebook and go over the clues: the sea, the island and the people of Cádiz. Who beat Napoleon?"
               }
             }
           ],
           "challenge": {
             "type": "quiz",
             "question": {
-              "es": "¿Por qué los franceses no pudieron tomar Cádiz?",
-              "en": "Why couldn't the French take Cádiz?"
+              "es": "¿Quién impidió que Napoleón tomara Cádiz?",
+              "en": "Who stopped Napoleon from taking Cádiz?"
             },
             "options": [
               {
-                "es": "Porque firmaron la paz antes de atacar",
-                "en": "Because they made peace before attacking"
+                "es": "Un traidor francés que avisó a la ciudad",
+                "en": "A French traitor who warned the city"
               },
               {
-                "es": "Era casi una isla, se abastecía por mar y su gente no quiso rendirse",
-                "en": "It was almost an island, it was supplied by sea and its people refused to give in"
+                "es": "Los tres a la vez: la isla, el mar y los gaditanos",
+                "en": "All three together: the island, the sea and the people of Cádiz"
               },
               {
-                "es": "Porque Napoleón nunca quiso tomarla",
-                "en": "Because Napoleon never wanted to take it"
+                "es": "Solo las murallas",
+                "en": "Only the city walls"
               }
             ],
             "correctIndex": 1,
             "explanation": {
-              "es": "La geografía (casi una isla), el mar abierto gracias a las flotas y una ciudad que no se rindió, ni en las Cortes ni en las coplas. En agosto de 1812 los franceses levantaron el asedio.",
-              "en": "Geography (almost an island), a sea kept open by the fleets, and a city that wouldn't give in, neither in the Cortes nor in its songs. In August 1812 the French lifted the siege."
+              "es": "No hubo un solo culpable. La isla solo se podía atacar por un istmo estrecho, las flotas mantuvieron abierto el mar para traer comida y soldados, y los gaditanos no se rindieron, ni en las Cortes ni en las coplas. En agosto de 1812 los franceses levantaron el asedio.",
+              "en": "There was no single culprit. The island could only be attacked along a narrow isthmus, the fleets kept the sea open to bring in food and troops, and the people of Cádiz never gave in, neither in the Cortes nor in their songs. In August 1812 the French lifted the siege."
             }
           },
           "nextNodeId": "n7_final"
@@ -1053,8 +1062,8 @@
               "characterId": "tia_norica",
               "expression": "happy",
               "text": {
-                "es": "Cádiz no cayó porque es casi una isla, porque el mar nunca la dejó sola y porque aquí la gente, cuando tiene miedo, canta. Y oye… hay calles que hoy no has pisado. ¿Vuelves otro día por el otro camino?",
-                "en": "Cádiz didn't fall because it's almost an island, because the sea never left it alone, and because here, when people are scared, they sing. And listen… there are streets you haven't walked today. Will you come back another day for the other path?"
+                "es": "Caso cerrado: tres sospechosos y ningún inocente. La isla, el mar y una gente que, cuando tiene miedo, canta. Y oye… hay calles que hoy no has pisado. ¿Vuelves otro día a investigar por el otro camino?",
+                "en": "Case closed: three suspects and not one of them innocent. The island, the sea, and a people who sing when they're scared. And listen… there are streets you haven't walked today. Will you come back another day to investigate the other path?"
               }
             }
           ],

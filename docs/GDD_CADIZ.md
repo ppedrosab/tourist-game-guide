@@ -3,12 +3,24 @@
 Primera ruta de Cádiz. Pack: `content/cadiz/la-ciudad-que-no-cayo.pack.json` (es + en).
 Mismo motor que Málaga: «ramificar y reunir», dos decisiones y cuatro finales.
 
-## Misterio
+## El caso
 
-Entre febrero de 1810 y agosto de 1812 el ejército francés sitió Cádiz y no consiguió tomarla.
-¿Cómo aguantó una ciudad tan pequeña? El juego da tres razones que se complementan:
-**geografía** (casi una isla), **mar abierto** (las flotas española y británica abastecían la
-ciudad) y **una gente que no se rindió** (las Cortes y la Constitución de 1812; la guasa de las coplas).
+**Expediente Cádiz, 1810-1812.** Napoleón tenía el ejército más temido de Europa: tomó Madrid y
+Sevilla, pero se quedó dos años y medio atascado ante una ciudad que se cruza andando en veinte
+minutos. ¿Por qué no pudo con ella?
+
+La Tía Norica lo plantea como un caso de detective con **tres sospechosos**, y el jugador reúne
+pistas contra cada uno:
+
+| Sospechoso | Pistas |
+| --- | --- |
+| **El mar** | La riqueza llegaba por mar (catedral) · «Mientras hubiera barcos…» (mercado) · la bahía abierta (partes de guerra) |
+| **La isla** | Nadie la pillaba por sorpresa (Torre Tavira) · casi una isla (partes de guerra) · puerto fácil de defender desde los fenicios (museo) |
+| **Los gaditanos** | La Constitución escrita bajo las bombas (San Felipe) · las coplas contra las bombas (coplas) |
+
+Veredicto (reto final): **los tres a la vez**; no hubo un solo culpable. Las dos decisiones son
+«¿qué pista investigamos?» (el mar o la ciudad) y «¿qué testigo escuchamos?» (las coplas o los
+partes de guerra).
 
 ## Personajes
 
@@ -25,7 +37,7 @@ se llaman **Mar** y **Ciudad** (`route.branches`).
 
 | Decisión 1 (catedral) | Decisión 2 (Plaza de España) | Final |
 | --- | --- | --- |
-| `camino_mar` | `version_documentos` (partes de guerra) | Vigía del Atlántico |
+| `camino_mar` («Investigar el mar») | `version_documentos` («Leer los partes de guerra») | Vigía del Atlántico |
 | `camino_mar` | `version_coplas` | Corsario de coplas |
 | `camino_ciudad` | `version_documentos` | Diputado de las Cortes |
 | `camino_ciudad` | `version_coplas` | Chirigotero |
@@ -44,7 +56,7 @@ se llaman **Mar** y **Ciudad** (`route.branches`).
 | n4b | (narrativo) Una ciudad casi isla | — | «Casi una isla y la bahía abierta» |
 | n5 | Museo de Cádiz, Plaza de Mina | Quiz: Gadir | «Un puerto abierto y fácil de defender» |
 | n6 | La Caleta | Foto con el Balneario de la Palma | Postal de La Caleta |
-| n6b | (narrativo) Resolver | Quiz final | — |
+| n6b | (narrativo) El veredicto | Quiz final: los tres sospechosos | — |
 | n7 | Caso cerrado | — | Insignia «La ciudad que no cayó» |
 
 Escenas (`fondos/fondo_cadiz_{clave}.svg` → capas `bg_cadiz_{clave}_…`): `sanjuan`, `catedral`,
