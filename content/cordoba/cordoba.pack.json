@@ -1,0 +1,2393 @@
+{
+  "id": "cordoba",
+  "version": 1,
+  "name": {
+    "es": "Córdoba",
+    "en": "Córdoba"
+  },
+  "languages": [
+    "es",
+    "en"
+  ],
+  "center": {
+    "lat": 36.881,
+    "lng": -4.779
+  },
+  "bounds": [
+    {
+      "lat": 36.874,
+      "lng": -4.787
+    },
+    {
+      "lat": 36.891,
+      "lng": -4.771
+    }
+  ],
+  "coverImage": "img/cover_cordoba.jpg",
+  "characters": [
+    {
+      "id": "lubna",
+      "name": {
+        "es": "Lubna",
+        "en": "Lubna"
+      },
+      "description": {
+        "es": "Copista y secretaria del califa al-Hakam II en el siglo X. Sabia, paciente y enamorada de los libros.",
+        "en": "Copyist and secretary to Caliph al-Hakam II in the 10th century. Learned, patient and in love with books."
+      },
+      "avatar": "sprites/lubna/lubna_neutral.svg",
+      "era": "siglo X"
+    },
+    {
+      "id": "almanzor",
+      "name": {
+        "es": "Almanzor",
+        "en": "Almanzor"
+      },
+      "description": {
+        "es": "Al-Mansur, «el Victorioso», gobernó al-Ándalus en nombre de Hisham II. Orgulloso y calculador.",
+        "en": "Al-Mansur, “the Victorious”, ruled al-Andalus in the name of Hisham II. Proud and calculating."
+      },
+      "avatar": "sprites/almanzor/almanzor_neutral.svg",
+      "era": "c. 938-1002"
+    },
+    {
+      "id": "librero",
+      "name": {
+        "es": "El Librero",
+        "en": "The Bookseller"
+      },
+      "description": {
+        "es": "Librero del zoco de Córdoba. Simpático, nervioso y siempre con un libro que vender.",
+        "en": "A bookseller from the Córdoba souk. Friendly, nervous and always with a book to sell."
+      },
+      "avatar": "sprites/librero/librero_neutral.svg"
+    },
+    {
+      "id": "patiera",
+      "name": {
+        "es": "La Patiera",
+        "en": "The Courtyard Keeper"
+      },
+      "description": {
+        "es": "Cuida uno de los patios de flores de Córdoba. Cariñosa, habladora y muy defensora del salmorejo de su abuela.",
+        "en": "She looks after one of Córdoba's flower courtyards. Affectionate, chatty and a staunch defender of her grandmother's salmorejo."
+      },
+      "avatar": "sprites/patiera/patiera_neutral.svg"
+    },
+    {
+      "id": "ziryab",
+      "name": {
+        "es": "Ziryab",
+        "en": "Ziryab"
+      },
+      "description": {
+        "es": "Músico llegado de Bagdad a la corte de Abderramán II en el siglo IX. Elegante y un poco presumido.",
+        "en": "A musician who came from Baghdad to the court of Abd al-Rahman II in the 9th century. Elegant and a little vain."
+      },
+      "avatar": "sprites/ziryab/ziryab_neutral.svg",
+      "era": "siglo IX"
+    },
+    {
+      "id": "jornalero",
+      "name": {
+        "es": "El Jornalero",
+        "en": "The Labourer"
+      },
+      "description": {
+        "es": "Jornalero de los olivares cordobeses. Sencillo, sabio y con el dornillo siempre a mano.",
+        "en": "A labourer from the Córdoba olive groves. Simple, wise and always with his dornillo at hand."
+      },
+      "avatar": "sprites/jornalero/jornalero_neutral.svg"
+    }
+  ],
+  "routes": [
+    {
+      "id": "biblioteca-del-califa",
+      "title": {
+        "es": "La biblioteca del califa",
+        "en": "The Caliph's Library"
+      },
+      "summary": {
+        "es": "En el siglo X, Córdoba tenía la mayor biblioteca de Occidente: 400.000 libros. Desapareció. Con Lubna, la copista del califa, investiga si fue Almanzor, la guerra o los libreros.",
+        "en": "In the 10th century, Córdoba had the largest library in the West: 400,000 books. It vanished. With Lubna, the caliph's copyist, find out whether it was Almanzor, the war or the booksellers."
+      },
+      "era": "961 - 1013",
+      "guideCharacterId": "lubna",
+      "durationMin": 110,
+      "distanceKm": 2.8,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El río",
+            "en": "The river"
+          },
+          "trail": {
+            "es": "camino del río",
+            "en": "river trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Judería",
+            "en": "Jewish Quarter"
+          },
+          "trail": {
+            "es": "camino de la Judería",
+            "en": "Jewish Quarter trail"
+          }
+        }
+      },
+      "startNodeId": "n1_puente",
+      "nodes": [
+        {
+          "id": "n1_puente",
+          "title": {
+            "es": "Puerta del Puente",
+            "en": "Bridge Gate"
+          },
+          "location": {
+            "lat": 36.8789,
+            "lng": -4.7787
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_puente.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_puente.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "happy",
+              "text": {
+                "es": "Bienvenido a Córdoba, detective. Me llamo Lubna. Hace mil años fui copista en la biblioteca del califa al-Hakam II, y acabé siendo su secretaria.",
+                "en": "Welcome to Córdoba, detective. My name is Lubna. A thousand years ago I was a copyist in the library of Caliph al-Hakam II, and I ended up as his secretary."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "dramatic",
+              "text": {
+                "es": "Aquella biblioteca tenía, según las crónicas, unos 400.000 libros. La mayor de Occidente. Y desapareció. No queda ni una estantería.",
+                "en": "According to the chronicles, that library held some 400,000 books. The largest in the West. And it vanished. Not a single shelf is left."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "thinking",
+              "text": {
+                "es": "Tengo tres sospechosos: Almanzor, que mandó quemar libros; la guerra, que arrasó la ciudad; y los libreros, que compraban y vendían. Apunta cada pista: el veredicto es tuyo.",
+                "en": "I have three suspects: Almanzor, who had books burned; the war, which laid the city waste; and the booksellers, who bought and sold. Note down every clue: the verdict is yours."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El puente romano cruza el Guadalquivir desde el siglo I a. C., aunque se ha reconstruido muchas veces. La puerta que tienes delante es del siglo XVI.",
+                "en": "The Roman bridge has crossed the Guadalquivir since the 1st century BC, although it has been rebuilt many times. The gate in front of you dates from the 16th century."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué río cruza el puente romano?",
+              "en": "Which river does the Roman bridge cross?"
+            },
+            "options": [
+              {
+                "es": "El Tajo",
+                "en": "The Tagus"
+              },
+              {
+                "es": "El Guadalquivir",
+                "en": "The Guadalquivir"
+              },
+              {
+                "es": "El Genil",
+                "en": "The Genil"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El Guadalquivir, que los romanos llamaban Baetis y que daba nombre a la provincia de la Bética.",
+              "en": "The Guadalquivir, which the Romans called Baetis and which gave its name to the province of Baetica."
+            }
+          },
+          "clue": {
+            "id": "pista_catalogo",
+            "text": {
+              "es": "La guerra · Solo el catálogo de la biblioteca ocupaba 44 volúmenes. Algo tan grande no desaparece en un día.",
+              "en": "The war · The library's catalogue alone filled 44 volumes. Something that big doesn't vanish in a day."
+            }
+          },
+          "nextNodeId": "n2_mezquita",
+          "nextHint": {
+            "es": "Entra en el Patio de los Naranjos de la Mezquita. Dos minutos.",
+            "en": "Go into the Courtyard of the Orange Trees at the Mosque. Two minutes."
+          }
+        },
+        {
+          "id": "n2_mezquita",
+          "title": {
+            "es": "Patio de los Naranjos",
+            "en": "Courtyard of the Orange Trees"
+          },
+          "location": {
+            "lat": 36.8797,
+            "lng": -4.7796
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_mezquita.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_mezquita.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "almanzor",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "proud",
+              "text": {
+                "es": "Así que tú eres el detective. Soy Almanzor, al-Mansur, «el Victorioso». Gobierné al-Ándalus en nombre del califa Hisham II, que era un niño.",
+                "en": "So you're the detective. I am Almanzor, al-Mansur, “the Victorious”. I ruled al-Andalus in the name of Caliph Hisham II, who was a child."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Mezquita se empezó hacia el año 785 y se amplió varias veces. Al-Hakam II añadió el mihrab, decorado con mosaicos de artesanos venidos de Bizancio. Su bosque de columnas y sus arcos rojos y blancos son únicos.",
+                "en": "The Mosque was begun around the year 785 and enlarged several times. Al-Hakam II added the mihrab, decorated with mosaics by craftsmen from Byzantium. Its forest of columns and its red-and-white arches are unique."
+              },
+              "year": 785
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "nervous",
+              "text": {
+                "es": "Lo reconozco: mandé quemar libros de filosofía y de astronomía. Los sabios de la religión decían que eran peligrosos, y yo necesitaba tenerlos de mi parte.",
+                "en": "I admit it: I had books of philosophy and astronomy burned. The religious scholars said they were dangerous, and I needed them on my side."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "proud",
+              "text": {
+                "es": "Pero una parte, detective. Una parte. ¿Tú sabes lo que son 400.000 libros? No hay hoguera en Córdoba para tanto.",
+                "en": "But only a part, detective. A part. Do you know what 400,000 books are? There isn't a bonfire in Córdoba big enough."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué colores son los arcos de la Mezquita?",
+              "en": "What colours are the Mosque's arches?"
+            },
+            "options": [
+              {
+                "es": "Rojos y blancos",
+                "en": "Red and white"
+              },
+              {
+                "es": "Verdes y negros",
+                "en": "Green and black"
+              },
+              {
+                "es": "Azules y dorados",
+                "en": "Blue and gold"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Alternan dovelas de ladrillo rojo y de piedra blanca.",
+              "en": "They alternate voussoirs of red brick and white stone."
+            }
+          },
+          "clue": {
+            "id": "pista_hoguera",
+            "text": {
+              "es": "Almanzor · Almanzor mandó quemar libros de filosofía y astronomía para ganarse a los sabios de la religión. Pero no todos.",
+              "en": "Almanzor · Almanzor had books of philosophy and astronomy burned to win over the religious scholars. But not all of them."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "lubna",
+            "expression": "thinking",
+            "text": {
+              "es": "Dos caminos, detective. Por la Judería, donde vivían los sabios que leían esos libros, o por el río, donde estaba el poder.",
+              "en": "Two paths, detective. Through the Jewish Quarter, where the scholars who read those books lived, or along the river, where power sat."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por la Judería",
+                "en": "Through the Jewish Quarter"
+              },
+              "hint": {
+                "es": "Los sabios y sus libros",
+                "en": "The scholars and their books"
+              },
+              "targetNodeId": "a1_sinagoga",
+              "setFlags": [
+                "camino_juderia"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            },
+            {
+              "label": {
+                "es": "Por el río",
+                "en": "Along the river"
+              },
+              "hint": {
+                "es": "La noria y el alcázar",
+                "en": "The waterwheel and the fortress"
+              },
+              "targetNodeId": "b1_albolafia",
+              "setFlags": [
+                "camino_rio"
+              ],
+              "distanceM": 300,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "a1_sinagoga",
+          "title": {
+            "es": "La Sinagoga",
+            "en": "The Synagogue"
+          },
+          "location": {
+            "lat": 36.8805,
+            "lng": -4.782
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_sinagoga.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_sinagoga.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "librero",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "librero",
+              "expression": "nervous",
+              "text": {
+                "es": "¡Ah, clientes! Perdón, costumbre. Soy librero, del zoco. Mi familia lleva generaciones comprando y vendiendo libros en Córdoba.",
+                "en": "Ah, customers! Sorry, force of habit. I'm a bookseller, from the souk. My family has bought and sold books in Córdoba for generations."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Esta sinagoga es de 1315. Es una de las pocas sinagogas medievales que se conservan en España. Cerca, en la plaza de Tiberíades, está la estatua de Maimónides, nacido en Córdoba en 1138.",
+                "en": "This synagogue dates from 1315. It is one of the few medieval synagogues preserved in Spain. Nearby, in Plaza de Tiberíades, stands the statue of Maimonides, born in Córdoba in 1138."
+              },
+              "year": 1315
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "proud",
+              "text": {
+                "es": "En tiempos del califa, Córdoba estaba llena de libros. Dicen que en un solo barrio había 170 mujeres copiando a mano.",
+                "en": "In the caliph's time, Córdoba was full of books. They say that in one single district there were 170 women copying by hand."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "librero",
+              "expression": "thinking",
+              "text": {
+                "es": "Y cuando hay tantos libros… alguien los compra, alguien los vende. Yo no digo nada. Pero apúntalo.",
+                "en": "And when there are so many books… someone buys them, someone sells them. I'm not saying anything. But write it down."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué sabio cordobés tiene una estatua junto a la sinagoga?",
+              "en": "Which Córdoba scholar has a statue beside the synagogue?"
+            },
+            "options": [
+              {
+                "es": "Góngora",
+                "en": "Góngora"
+              },
+              {
+                "es": "Séneca",
+                "en": "Seneca"
+              },
+              {
+                "es": "Maimónides",
+                "en": "Maimonides"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Maimónides, médico y filósofo judío nacido en Córdoba en 1138.",
+              "en": "Maimonides, Jewish physician and philosopher born in Córdoba in 1138."
+            }
+          },
+          "clue": {
+            "id": "pista_mercado",
+            "text": {
+              "es": "Los libreros · En Córdoba había tantos libros que existía un gran mercado para comprarlos y venderlos.",
+              "en": "The booksellers · Córdoba had so many books that there was a big market for buying and selling them."
+            }
+          },
+          "nextNodeId": "a2_almodovar",
+          "nextHint": {
+            "es": "Sigue la calle Judíos hasta la Puerta de Almodóvar. Dos minutos.",
+            "en": "Follow Calle Judíos to the Almodóvar Gate. Two minutes."
+          }
+        },
+        {
+          "id": "a2_almodovar",
+          "title": {
+            "es": "Puerta de Almodóvar",
+            "en": "Almodóvar Gate"
+          },
+          "location": {
+            "lat": 36.8811,
+            "lng": -4.7834
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_almodovar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_almodovar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "librero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "happy",
+              "text": {
+                "es": "Fuera de la muralla está la estatua de Averroes. Vivió aquí un siglo y medio después que yo y escribió sobre Aristóteles. Sus libros se leyeron en toda Europa.",
+                "en": "Outside the wall stands the statue of Averroes. He lived here a century and a half after me and wrote about Aristotle. His books were read all over Europe."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Cuando empezó la guerra civil del califato, la fitna, en 1009, Córdoba sufrió asedios y saqueos. En 1013 las tropas bereberes entraron en la ciudad.",
+                "en": "When the civil war of the caliphate, the fitna, broke out in 1009, Córdoba suffered sieges and looting. In 1013 Berber troops entered the city."
+              },
+              "year": 1009
+            },
+            {
+              "type": "dialogue",
+              "characterId": "librero",
+              "expression": "nervous",
+              "text": {
+                "es": "Durante el asedio no había qué comer. Los de palacio vendieron libros del califa para pagar la guerra. Y alguno… bueno, alguno lo compré yo. A buen precio.",
+                "en": "During the siege there was nothing to eat. The palace people sold the caliph's books to pay for the war. And one or two… well, I bought one or two. At a good price."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Busca la placa de la puerta o mira la muralla. ¿De qué material es la muralla: piedra o madera?",
+              "en": "Look at the gate's plaque or the wall. What is the wall made of: stone or wood?"
+            },
+            "answer": [
+              "piedra",
+              "de piedra",
+              "stone",
+              "sillares"
+            ]
+          },
+          "clue": {
+            "id": "pista_venta",
+            "text": {
+              "es": "La guerra · Durante el asedio de la guerra se vendieron libros del califa para pagar la defensa.",
+              "en": "The war · During the wartime siege the caliph's books were sold to pay for the defence."
+            }
+          },
+          "nextNodeId": "n4_camposanto",
+          "nextHint": {
+            "es": "Baja junto a la muralla hasta el Campo Santo de los Mártires. Unos 5 minutos.",
+            "en": "Walk down along the wall to Campo Santo de los Mártires. About 5 minutes."
+          }
+        },
+        {
+          "id": "b1_albolafia",
+          "title": {
+            "es": "Molino de la Albolafia",
+            "en": "Albolafia Mill"
+          },
+          "location": {
+            "lat": 36.8776,
+            "lng": -4.7806
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_albolafia.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_albolafia.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "almanzor",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "happy",
+              "text": {
+                "es": "Esa rueda es la noria de la Albolafia. Subía agua del río hasta el palacio de los califas, que estaba justo ahí, junto a la Mezquita.",
+                "en": "That wheel is the Albolafia waterwheel. It lifted water from the river up to the caliphs' palace, which stood right there, beside the Mosque."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que Isabel la Católica mandó pararla porque el ruido no la dejaba dormir en el Alcázar.",
+                "en": "It's said that Isabella the Catholic had it stopped because the noise kept her awake in the Alcázar."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "proud",
+              "text": {
+                "es": "Yo hice más de cincuenta campañas militares. Mientras viví, nadie tocó Córdoba. Pregunta qué pasó cuando me morí, en el año 1002.",
+                "en": "I led more than fifty military campaigns. While I lived, nobody touched Córdoba. Ask what happened after I died, in the year 1002."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servía la noria de la Albolafia?",
+              "en": "What was the Albolafia waterwheel for?"
+            },
+            "options": [
+              {
+                "es": "Para moler aceitunas",
+                "en": "To press olives"
+              },
+              {
+                "es": "Para subir agua del río",
+                "en": "To lift water from the river"
+              },
+              {
+                "es": "Para mover barcos",
+                "en": "To move boats"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Subía agua del Guadalquivir para el alcázar y sus jardines.",
+              "en": "It lifted water from the Guadalquivir for the fortress and its gardens."
+            }
+          },
+          "clue": {
+            "id": "pista_despues",
+            "text": {
+              "es": "La guerra · Mientras vivió Almanzor, nadie atacó Córdoba. El desastre llegó después de su muerte, en 1002.",
+              "en": "The war · While Almanzor lived, nobody attacked Córdoba. Disaster came after his death in 1002."
+            }
+          },
+          "nextNodeId": "b2_alcazar",
+          "nextHint": {
+            "es": "Sigue la orilla hasta el Alcázar de los Reyes Cristianos. Unos 4 minutos.",
+            "en": "Follow the bank to the Alcázar of the Christian Monarchs. About 4 minutes."
+          }
+        },
+        {
+          "id": "b2_alcazar",
+          "title": {
+            "es": "Alcázar de los Reyes Cristianos",
+            "en": "Alcázar of the Christian Monarchs"
+          },
+          "location": {
+            "lat": 36.8766,
+            "lng": -4.7833
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_alcazar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_alcazar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "almanzor",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este alcázar lo levantó Alfonso XI a partir de 1328. Aquí recibieron los Reyes Católicos a Cristóbal Colón en 1486.",
+                "en": "This fortress was built by Alfonso XI from 1328 onwards. Here the Catholic Monarchs received Christopher Columbus in 1486."
+              },
+              "year": 1328
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "thinking",
+              "text": {
+                "es": "Aquí cerca estaba el alcázar de los califas, y dentro, mi biblioteca. Cuando empezó la guerra, los palacios cambiaron de manos una y otra vez.",
+                "en": "The caliphs' palace stood near here, and inside it, my library. When the war began, the palaces changed hands again and again."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "nervous",
+              "text": {
+                "es": "Medina Azahara, la ciudad palacio que construyó Abderramán III, fue saqueada en la guerra. Lo que yo quemé fue una hoguera. Lo que vino después fue un incendio.",
+                "en": "Medina Azahara, the palace city built by Abd al-Rahman III, was sacked in the war. What I burned was a bonfire. What came afterwards was a wildfire."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿A quién recibieron aquí los Reyes Católicos en 1486?",
+              "en": "Whom did the Catholic Monarchs receive here in 1486?"
+            },
+            "options": [
+              {
+                "es": "A Cristóbal Colón",
+                "en": "Christopher Columbus"
+              },
+              {
+                "es": "A Boabdil",
+                "en": "Boabdil"
+              },
+              {
+                "es": "A Cervantes",
+                "en": "Cervantes"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "A Colón, que venía a pedirles barcos para su viaje.",
+              "en": "Columbus, who came to ask them for ships for his voyage."
+            }
+          },
+          "clue": {
+            "id": "pista_saqueo",
+            "text": {
+              "es": "La guerra · En la guerra, Medina Azahara y los palacios de Córdoba fueron saqueados.",
+              "en": "The war · In the war, Medina Azahara and the palaces of Córdoba were sacked."
+            }
+          },
+          "nextNodeId": "n4_camposanto",
+          "nextHint": {
+            "es": "Al Campo Santo de los Mártires, aquí al lado. Dos minutos.",
+            "en": "To Campo Santo de los Mártires, right next door. Two minutes."
+          }
+        },
+        {
+          "id": "n4_camposanto",
+          "title": {
+            "es": "Campo Santo de los Mártires",
+            "en": "Campo Santo de los Mártires"
+          },
+          "location": {
+            "lat": 36.8776,
+            "lng": -4.7823
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_camposanto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_camposanto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "librero",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_juderia"
+                  ],
+                  "text": {
+                    "es": "Vienes de la Judería: has visto que en Córdoba los libros se compraban y se vendían. El librero no ha dicho toda la verdad.",
+                    "en": "You've come from the Jewish Quarter: you've seen that in Córdoba books were bought and sold. The bookseller hasn't told the whole truth."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Vienes del río: has visto que el desastre llegó después de Almanzor, con la guerra. Y aquí está nuestro librero, muy nervioso.",
+                    "en": "You've come along the river: you've seen that disaster came after Almanzor, with the war. And here's our bookseller, very nervous."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Aquí estaban los baños califales y, siglos después, los jardines del Alcázar. En la plaza hay un monumento a los mártires cordobeses del siglo IX.",
+                "en": "The caliphal baths stood here and, centuries later, the Alcázar gardens. The square has a monument to the Córdoba martyrs of the 9th century."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año empezó la guerra civil del califato, la fitna?",
+              "en": "In what year did the caliphate's civil war, the fitna, begin?"
+            },
+            "options": [
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              },
+              {
+                "es": "En 711",
+                "en": "In 711"
+              },
+              {
+                "es": "En 1009",
+                "en": "In 1009"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1009. En pocos años el califato de Córdoba se rompió en reinos de taifas.",
+              "en": "In 1009. Within a few years the caliphate of Córdoba broke up into taifa kingdoms."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "lubna",
+            "expression": "thinking",
+            "text": {
+              "es": "Último paso antes del veredicto. ¿Sigues el humo de la hoguera de Almanzor, o el dinero de los libros vendidos?",
+              "en": "One last step before the verdict. Will you follow the smoke of Almanzor's bonfire, or the money from the books that were sold?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Seguir el humo",
+                "en": "Follow the smoke"
+              },
+              "hint": {
+                "es": "Con Almanzor",
+                "en": "With Almanzor"
+              },
+              "targetNodeId": "n4a_humo",
+              "setFlags": [
+                "version_humo"
+              ]
+            },
+            {
+              "label": {
+                "es": "Seguir el dinero",
+                "en": "Follow the money"
+              },
+              "hint": {
+                "es": "Con el librero",
+                "en": "With the bookseller"
+              },
+              "targetNodeId": "n4b_dinero",
+              "setFlags": [
+                "version_dinero"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4a_humo",
+          "title": {
+            "es": "El humo",
+            "en": "The smoke"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "dramatic",
+              "text": {
+                "es": "La hoguera fue en el patio del alcázar. Ardieron libros de estrellas y de filósofos griegos. Los sabios aplaudieron.",
+                "en": "The bonfire was in the palace courtyard. Books about stars and Greek philosophers burned. The scholars applauded."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almanzor",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero los libros de religión, de poesía, de gramática, de medicina… se quedaron en sus estanterías. Eran la mayoría. Yo no los toqué.",
+                "en": "But the books on religion, poetry, grammar, medicine… stayed on their shelves. They were the majority. I never touched them."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_mayoria",
+            "text": {
+              "es": "Almanzor · Almanzor solo quemó una parte: la mayoría de los libros siguió en su sitio tras la hoguera.",
+              "en": "Almanzor · Almanzor only burned a part: most of the books were still there after the bonfire."
+            }
+          },
+          "nextNodeId": "n5_calahorra",
+          "nextHint": {
+            "es": "Cruza el puente romano hasta la Torre de la Calahorra. Unos 8 minutos.",
+            "en": "Cross the Roman bridge to the Calahorra Tower. About 8 minutes."
+          }
+        },
+        {
+          "id": "n4b_dinero",
+          "title": {
+            "es": "El dinero",
+            "en": "The money"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "librero",
+              "expression": "nervous",
+              "text": {
+                "es": "Está bien, está bien. Durante el asedio, el general que defendía la ciudad vendió libros del califa para pagar a sus soldados. Se vendían por carros.",
+                "en": "All right, all right. During the siege, the general defending the city sold the caliph's books to pay his soldiers. They were sold by the cartload."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "librero",
+              "expression": "thinking",
+              "text": {
+                "es": "Muchos acabaron en otras ciudades, en los reinos de taifas: Toledo, Zaragoza, Sevilla… Yo solo compré lo que otros vendían. La culpa es de la guerra, no del librero.",
+                "en": "Many ended up in other cities, in the taifa kingdoms: Toledo, Zaragoza, Seville… I only bought what others were selling. Blame the war, not the bookseller."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_taifas",
+            "text": {
+              "es": "Los libreros · Los libros vendidos en el asedio acabaron repartidos por los reinos de taifas.",
+              "en": "The booksellers · The books sold during the siege ended up scattered across the taifa kingdoms."
+            }
+          },
+          "nextNodeId": "n5_calahorra",
+          "nextHint": {
+            "es": "Cruza el puente romano hasta la Torre de la Calahorra. Unos 8 minutos.",
+            "en": "Cross the Roman bridge to the Calahorra Tower. About 8 minutes."
+          }
+        },
+        {
+          "id": "n5_calahorra",
+          "title": {
+            "es": "Torre de la Calahorra",
+            "en": "Calahorra Tower"
+          },
+          "location": {
+            "lat": 36.8759,
+            "lng": -4.7774
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_calahorra.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_calahorra.svg"
+              ],
+              "characters": [
+                {
+                  "id": "lubna",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "almanzor",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Torre de la Calahorra defendía la entrada del puente. Es de origen islámico y se reforzó en el siglo XIV. Hoy es un museo sobre la convivencia de culturas en al-Ándalus.",
+                "en": "The Calahorra Tower guarded the entrance to the bridge. It is Islamic in origin and was strengthened in the 14th century. Today it is a museum about the coexistence of cultures in al-Andalus."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "thinking",
+              "text": {
+                "es": "Desde aquí se ve toda la ciudad. Repasa el cuaderno, detective: la hoguera, el asedio, la venta, el saqueo. ¿Quién acabó con mi biblioteca?",
+                "en": "From here you can see the whole city. Go over your notebook, detective: the bonfire, the siege, the sale, the sacking. Who finished off my library?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién acabó con la biblioteca del califa?",
+              "en": "Who finished off the caliph's library?"
+            },
+            "options": [
+              {
+                "es": "Almanzor, que lo quemó todo",
+                "en": "Almanzor, who burned it all"
+              },
+              {
+                "es": "La guerra: lo que no ardió se vendió en el asedio y se perdió en el saqueo",
+                "en": "The war: what didn't burn was sold in the siege and lost in the sacking"
+              },
+              {
+                "es": "Los libreros, que la robaron",
+                "en": "The booksellers, who stole it"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La guerra. Almanzor quemó una parte y los libreros compraron lo que otros vendían, pero fue la fitna la que vació la biblioteca: se vendió para pagar la defensa y lo demás se perdió en los saqueos. Algunos libros sobrevivieron en las taifas.",
+              "en": "The war. Almanzor burned a part and the booksellers bought what others sold, but it was the fitna that emptied the library: it was sold to pay for the defence and the rest was lost in the looting. Some books survived in the taifas."
+            }
+          },
+          "nextNodeId": "n6_final"
+        },
+        {
+          "id": "n6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_juderia",
+                    "version_humo"
+                  ],
+                  "text": {
+                    "es": "La Judería y el humo: has entendido que el fuego no lo explica todo. Eres un sabio de la Judería.",
+                    "en": "The Jewish Quarter and the smoke: you've understood that fire doesn't explain everything. You're a scholar of the Jewish Quarter."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_juderia",
+                    "version_dinero"
+                  ],
+                  "text": {
+                    "es": "La Judería y el dinero: has seguido los libros de mano en mano. Eres copista de Lubna.",
+                    "en": "The Jewish Quarter and the money: you've followed the books from hand to hand. You're one of Lubna's copyists."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_humo"
+                  ],
+                  "text": {
+                    "es": "El río y el humo: has visto caer el califato desde sus palacios. Eres cronista del califa.",
+                    "en": "The river and the smoke: you've watched the caliphate fall from its palaces. You're the caliph's chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_dinero"
+                  ],
+                  "text": {
+                    "es": "El río y el dinero: has seguido a los libros hasta las taifas. Eres cazador de manuscritos.",
+                    "en": "The river and the money: you've followed the books all the way to the taifas. You're a manuscript hunter."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "happy",
+              "text": {
+                "es": "Mi biblioteca se perdió, pero no del todo: algunos libros sobrevivieron copiados en otras ciudades. Por eso copiábamos, detective. Gracias por el paseo.",
+                "en": "My library was lost, but not entirely: some books survived, copied in other cities. That's why we copied, detective. Thank you for the walk."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "sabio_juderia",
+          "requires": [
+            "camino_juderia",
+            "version_humo"
+          ],
+          "title": {
+            "es": "Sabio de la Judería",
+            "en": "Scholar of the Jewish Quarter"
+          }
+        },
+        {
+          "id": "copista_lubna",
+          "requires": [
+            "camino_juderia",
+            "version_dinero"
+          ],
+          "title": {
+            "es": "Copista de Lubna",
+            "en": "Lubna's copyist"
+          }
+        },
+        {
+          "id": "cronista_califa",
+          "requires": [
+            "camino_rio",
+            "version_humo"
+          ],
+          "title": {
+            "es": "Cronista del califa",
+            "en": "The caliph's chronicler"
+          }
+        },
+        {
+          "id": "cazador_manuscritos",
+          "requires": [
+            "camino_rio",
+            "version_dinero"
+          ],
+          "title": {
+            "es": "Cazador de manuscritos",
+            "en": "Manuscript hunter"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "calamo_lubna",
+          "name": {
+            "es": "El cálamo de Lubna",
+            "en": "Lubna's reed pen"
+          },
+          "icon": "collectibles/cordoba_calamo.svg",
+          "awardedAtNodeId": "n1_puente"
+        },
+        {
+          "id": "arcos_mezquita",
+          "name": {
+            "es": "Los arcos de la Mezquita",
+            "en": "The Mosque's arches"
+          },
+          "icon": "collectibles/cordoba_arcos.svg",
+          "awardedAtNodeId": "n2_mezquita"
+        },
+        {
+          "id": "candil",
+          "name": {
+            "es": "El candil de la Judería",
+            "en": "The Jewish Quarter oil lamp"
+          },
+          "icon": "collectibles/cordoba_candil.svg",
+          "awardedAtNodeId": "a1_sinagoga"
+        },
+        {
+          "id": "libro_averroes",
+          "name": {
+            "es": "El libro de Averroes",
+            "en": "Averroes' book"
+          },
+          "icon": "collectibles/cordoba_averroes.svg",
+          "awardedAtNodeId": "a2_almodovar"
+        },
+        {
+          "id": "noria",
+          "name": {
+            "es": "La noria de la Albolafia",
+            "en": "The Albolafia waterwheel"
+          },
+          "icon": "collectibles/cordoba_noria.svg",
+          "awardedAtNodeId": "b1_albolafia"
+        },
+        {
+          "id": "jardin_alcazar",
+          "name": {
+            "es": "Los jardines del Alcázar",
+            "en": "The Alcázar gardens"
+          },
+          "icon": "collectibles/cordoba_jardin.svg",
+          "awardedAtNodeId": "b2_alcazar"
+        },
+        {
+          "id": "catalogo",
+          "name": {
+            "es": "Los 44 catálogos",
+            "en": "The 44 catalogues"
+          },
+          "icon": "collectibles/cordoba_catalogo.svg",
+          "awardedAtNodeId": "n5_calahorra"
+        },
+        {
+          "id": "insignia_biblioteca",
+          "name": {
+            "es": "La biblioteca del califa",
+            "en": "The Caliph's Library"
+          },
+          "icon": "collectibles/cordoba_insignia.svg",
+          "awardedAtNodeId": "n6_final"
+        }
+      ]
+    },
+    {
+      "id": "tomate-salmorejo",
+      "title": {
+        "es": "¿Quién le puso tomate al salmorejo?",
+        "en": "Who Put Tomato in the Salmorejo?"
+      },
+      "summary": {
+        "es": "El salmorejo es el orgullo de Córdoba, pero el tomate llegó de América. Con una patiera, un jornalero y el refinado Ziryab, descubre quién lo puso colorado.",
+        "en": "Salmorejo is Córdoba's pride, but the tomato came from America. With a courtyard keeper, a farm labourer and the refined Ziryab, find out who turned it red."
+      },
+      "era": "Del siglo I al XIX",
+      "guideCharacterId": "patiera",
+      "durationMin": 100,
+      "distanceKm": 2.9,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Santa Marina",
+            "en": "Santa Marina"
+          },
+          "trail": {
+            "es": "camino de Santa Marina",
+            "en": "Santa Marina trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Judería",
+            "en": "Jewish Quarter"
+          },
+          "trail": {
+            "es": "camino de la Judería",
+            "en": "Jewish Quarter trail"
+          }
+        }
+      },
+      "startNodeId": "g1_corredera",
+      "nodes": [
+        {
+          "id": "g1_corredera",
+          "title": {
+            "es": "Plaza de la Corredera",
+            "en": "Plaza de la Corredera"
+          },
+          "location": {
+            "lat": 36.8826,
+            "lng": -4.7748
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_corredera.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_corredera.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola, criatura! Soy patiera: cuido uno de los patios de flores de Córdoba. Y en mi casa, el salmorejo es cosa seria.",
+                "en": "Hello, dear! I look after one of Córdoba's flower courtyards. And in my house, salmorejo is a serious matter."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "dramatic",
+              "text": {
+                "es": "Te traigo un caso. Mi abuela decía que el salmorejo es tan antiguo como Córdoba. Pero el tomate llegó de América. Entonces… ¿quién le puso tomate al salmorejo?",
+                "en": "I've got a case for you. My grandmother used to say that salmorejo is as old as Córdoba. But tomatoes came from America. So… who put tomato in the salmorejo?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Tres sospechosos: los romanos, que ya majaban pan con aceite; los andalusíes, que refinaron la cocina de esta ciudad; y los jornaleros del campo. Apúntalo todo.",
+                "en": "Three suspects: the Romans, who were already mashing bread with oil; the Andalusis, who refined this city's cooking; and the farm labourers. Note it all down."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Corredera es la única gran plaza porticada cuadrada de Andalucía. Se usó para corridas de toros y mercados, y en sus bajos sigue habiendo mercado de abastos.",
+                "en": "La Corredera is the only large, square, arcaded plaza in Andalusia. It was used for bullfights and markets, and there is still a food market on its ground floor."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuáles son los ingredientes básicos del salmorejo de hoy?",
+              "en": "What are the basic ingredients of today's salmorejo?"
+            },
+            "options": [
+              {
+                "es": "Arroz, azafrán y marisco",
+                "en": "Rice, saffron and seafood"
+              },
+              {
+                "es": "Tomate, pan, aceite, ajo y sal",
+                "en": "Tomato, bread, oil, garlic and salt"
+              },
+              {
+                "es": "Leche, huevo y azúcar",
+                "en": "Milk, egg and sugar"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Tomate, pan, aceite de oliva, ajo y sal. Se suele servir con huevo duro y jamón picados por encima.",
+              "en": "Tomato, bread, olive oil, garlic and salt. It's usually topped with chopped hard-boiled egg and ham."
+            }
+          },
+          "clue": {
+            "id": "pista_tomate",
+            "text": {
+              "es": "Los jornaleros · El tomate llegó de América en el siglo XVI: el salmorejo con tomate no puede ser más antiguo.",
+              "en": "The labourers · The tomato came from America in the 16th century: tomato salmorejo can't be older than that."
+            }
+          },
+          "nextNodeId": "g2_templo",
+          "nextHint": {
+            "es": "Sube por la calle Claudio Marcelo hasta el templo romano. Unos 4 minutos.",
+            "en": "Walk up Calle Claudio Marcelo to the Roman temple. About 4 minutes."
+          }
+        },
+        {
+          "id": "g2_templo",
+          "title": {
+            "es": "Templo romano",
+            "en": "Roman temple"
+          },
+          "location": {
+            "lat": 36.8846,
+            "lng": -4.7759
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_templo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_templo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "jornalero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jornalero",
+              "expression": "neutral",
+              "text": {
+                "es": "Buenas. Jornalero, de los olivares. Llevo toda la vida en el campo, de sol a sol. De comida sé un rato.",
+                "en": "Morning. Labourer, from the olive groves. I've spent my whole life in the fields, from dawn to dusk. I know a thing or two about food."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este templo se levantó en el siglo I, cuando Corduba era la capital de la Bética. Desde esta provincia salía aceite de oliva en ánforas hacia Roma.",
+                "en": "This temple was built in the 1st century, when Corduba was the capital of Baetica. Olive oil left this province in amphorae bound for Rome."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Los romanos ya comían pan majado con aceite, vinagre y ajo. Se parece, ¿eh? Pero sin tomate.",
+                "en": "The Romans already ate bread mashed with oil, vinegar and garlic. Sounds familiar, doesn't it? But without tomato."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué se transportaba el aceite de la Bética hasta Roma?",
+              "en": "What was Baetica's oil shipped to Rome in?"
+            },
+            "options": [
+              {
+                "es": "En ánforas de barro",
+                "en": "Clay amphorae"
+              },
+              {
+                "es": "En botellas de cristal",
+                "en": "Glass bottles"
+              },
+              {
+                "es": "En barriles de madera",
+                "en": "Wooden barrels"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En ánforas. En Roma hay una colina, el monte Testaccio, hecha con los restos de millones de ánforas, muchas de la Bética.",
+              "en": "In amphorae. In Rome there's a hill, Monte Testaccio, made of the remains of millions of amphorae, many from Baetica."
+            }
+          },
+          "clue": {
+            "id": "pista_majado",
+            "text": {
+              "es": "Los romanos · Los romanos ya comían pan majado con aceite, vinagre y ajo… pero sin tomate.",
+              "en": "The Romans · The Romans already ate bread mashed with oil, vinegar and garlic… but without tomato."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "patiera",
+            "expression": "happy",
+            "text": {
+              "es": "¿Por dónde seguimos? ¿Por Santa Marina, el barrio de los toreros, o bajamos a la Judería, a las calles de flores?",
+              "en": "Which way now? Through Santa Marina, the bullfighters' quarter, or down to the Jewish Quarter and its flower-filled streets?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Ir a Santa Marina",
+                "en": "Go to Santa Marina"
+              },
+              "hint": {
+                "es": "Patios y toreros",
+                "en": "Courtyards and bullfighters"
+              },
+              "targetNodeId": "ga1_viana",
+              "setFlags": [
+                "camino_marina"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "Ir a la Judería",
+                "en": "Go to the Jewish Quarter"
+              },
+              "hint": {
+                "es": "Flores y banquetes",
+                "en": "Flowers and banquets"
+              },
+              "targetNodeId": "gb1_flores",
+              "setFlags": [
+                "camino_juderia"
+              ],
+              "distanceM": 900,
+              "walkMin": 12
+            }
+          ]
+        },
+        {
+          "id": "ga1_viana",
+          "title": {
+            "es": "Palacio de Viana",
+            "en": "Viana Palace"
+          },
+          "location": {
+            "lat": 36.8878,
+            "lng": -4.7756
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_viana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_viana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "jornalero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Palacio de Viana tiene doce patios. Cada mayo, Córdoba celebra la Fiesta de los Patios, que la UNESCO declaró Patrimonio Inmaterial en 2012.",
+                "en": "Viana Palace has twelve courtyards. Every May, Córdoba holds its Courtyards Festival, which UNESCO declared Intangible Heritage in 2012."
+              },
+              "year": 2012
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jornalero",
+              "expression": "happy",
+              "text": {
+                "es": "En el campo, el salmorejo se hacía en el dornillo, un cuenco de madera. Pan duro, ajo, aceite, vinagre y sal, majado con la mano del mortero. Blanco, blanco.",
+                "en": "In the fields, salmorejo was made in the dornillo, a wooden bowl. Stale bread, garlic, oil, vinegar and salt, pounded with the pestle. White, completely white."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Blanco? ¡Mi abuela se desmaya!",
+                "en": "White? My grandmother would faint!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántos patios tiene el Palacio de Viana?",
+              "en": "How many courtyards does Viana Palace have?"
+            },
+            "options": [
+              {
+                "es": "Cien",
+                "en": "A hundred"
+              },
+              {
+                "es": "Dos",
+                "en": "Two"
+              },
+              {
+                "es": "Doce",
+                "en": "Twelve"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Doce, cada uno distinto: de la reja, de las columnas, de los naranjos…",
+              "en": "Twelve, each one different: of the grille, of the columns, of the orange trees…"
+            }
+          },
+          "clue": {
+            "id": "pista_blanco",
+            "text": {
+              "es": "Los jornaleros · El salmorejo de los jornaleros se majaba en el dornillo y era blanco: pan, ajo, aceite, vinagre y sal.",
+              "en": "The labourers · The labourers' salmorejo was pounded in the dornillo and it was white: bread, garlic, oil, vinegar and salt."
+            }
+          },
+          "nextNodeId": "ga2_marina",
+          "nextHint": {
+            "es": "Sube hasta la plaza de Santa Marina. Unos 3 minutos.",
+            "en": "Walk up to the Santa Marina square. About 3 minutes."
+          }
+        },
+        {
+          "id": "ga2_marina",
+          "title": {
+            "es": "Plaza de Santa Marina",
+            "en": "Santa Marina square"
+          },
+          "location": {
+            "lat": 36.8889,
+            "lng": -4.7772
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_marina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_marina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "jornalero",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "patiera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Santa Marina es el barrio de los toreros. Aquí está la estatua de Manolete, nacido en Córdoba en 1917.",
+                "en": "Santa Marina is the bullfighters' quarter. Here stands the statue of Manolete, born in Córdoba in 1917."
+              },
+              "year": 1917
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "happy",
+              "text": {
+                "es": "Y de Córdoba son también el rabo de toro, guisado a fuego lento, y el flamenquín: filete enrollado con jamón, empanado y frito. Se lo disputan pueblos de Córdoba y de Jaén.",
+                "en": "Córdoba also gives us oxtail stew, slow-cooked, and the flamenquín: a fillet rolled around ham, breaded and fried. Towns in Córdoba and Jaén both claim it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jornalero",
+              "expression": "thinking",
+              "text": {
+                "es": "El tomate tardó en entrar en las casas de los pobres. Cuando empezó a sobrar en las huertas, en el siglo XIX, lo echamos al dornillo. Y el salmorejo se puso colorao.",
+                "en": "Tomatoes took a long time to reach poor people's homes. When the market gardens had plenty to spare, in the 19th century, we tossed them into the dornillo. And the salmorejo turned red."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se hace un flamenquín?",
+              "en": "How is a flamenquín made?"
+            },
+            "options": [
+              {
+                "es": "Una sopa fría",
+                "en": "A cold soup"
+              },
+              {
+                "es": "Filete enrollado con jamón, empanado y frito",
+                "en": "A fillet rolled around ham, breaded and fried"
+              },
+              {
+                "es": "Un pastel de hojaldre",
+                "en": "A puff pastry cake"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Filete de cerdo enrollado con jamón, empanado y frito.",
+              "en": "A pork fillet rolled around ham, breaded and fried."
+            }
+          },
+          "clue": {
+            "id": "pista_huertas",
+            "text": {
+              "es": "Los jornaleros · Cuando en el siglo XIX sobró tomate en las huertas, los jornaleros lo echaron al dornillo.",
+              "en": "The labourers · When the 19th-century market gardens had tomatoes to spare, the labourers tossed them into the dornillo."
+            }
+          },
+          "nextNodeId": "g4_tendillas",
+          "nextHint": {
+            "es": "Baja hasta la plaza de las Tendillas. Unos 10 minutos.",
+            "en": "Walk down to Plaza de las Tendillas. About 10 minutes."
+          }
+        },
+        {
+          "id": "gb1_flores",
+          "title": {
+            "es": "Calleja de las Flores",
+            "en": "Calleja de las Flores"
+          },
+          "location": {
+            "lat": 36.8801,
+            "lng": -4.7801
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_flores.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_flores.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "ziryab",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ziryab",
+              "expression": "proud",
+              "text": {
+                "es": "Permíteme presentarme: Ziryab, músico, llegado de Bagdad a la corte del emir Abderramán II, en el siglo IX. Y, si me permites, árbitro de la elegancia.",
+                "en": "Allow me to introduce myself: Ziryab, musician, who came from Baghdad to the court of Emir Abd al-Rahman II in the 9th century. And, if I may, an arbiter of elegance."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que las berenjenas fritas con miel de caña, tan cordobesas, vienen de la cocina andalusí.",
+                "en": "It's said that fried aubergines with cane honey, so typical of Córdoba, come from Andalusi cooking."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Desde aquí se ve la torre de la Mezquita entre las macetas. Ziryab, ¿usted le echaba tomate a algo?",
+                "en": "From here you can see the Mosque's tower between the flowerpots. Ziryab, did you put tomato in anything?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ziryab",
+              "expression": "surprised",
+              "text": {
+                "es": "¿To-ma-te? No conozco esa fruta. En mi tiempo llegaban a Córdoba especias, azúcar, berenjenas… pero eso no.",
+                "en": "To-ma-to? I don't know that fruit. In my day spices, sugar and aubergines reached Córdoba… but not that."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "observe",
+            "prompt": {
+              "es": "Mira hacia el fondo de la calleja. ¿Qué torre se ve enmarcada entre las flores?",
+              "en": "Look to the end of the alley. Which tower is framed between the flowers?"
+            },
+            "answer": [
+              "mezquita",
+              "la mezquita",
+              "torre de la mezquita",
+              "catedral",
+              "mosque",
+              "the mosque",
+              "cathedral"
+            ]
+          },
+          "clue": {
+            "id": "pista_berenjena",
+            "text": {
+              "es": "Los andalusíes · Los andalusíes trajeron berenjenas, azúcar y especias… pero no conocían el tomate.",
+              "en": "The Andalusis · The Andalusis brought aubergines, sugar and spices… but they didn't know the tomato."
+            }
+          },
+          "nextNodeId": "gb2_almodovar",
+          "nextHint": {
+            "es": "Cruza la Judería hasta la Puerta de Almodóvar. Unos 5 minutos.",
+            "en": "Cross the Jewish Quarter to the Almodóvar Gate. About 5 minutes."
+          }
+        },
+        {
+          "id": "gb2_almodovar",
+          "title": {
+            "es": "Puerta de Almodóvar",
+            "en": "Almodóvar Gate"
+          },
+          "location": {
+            "lat": 36.8811,
+            "lng": -4.7834
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_almodovar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_almodovar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ziryab",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "patiera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ziryab",
+              "expression": "happy",
+              "text": {
+                "es": "Yo enseñé a los cordobeses a comer con orden: primero las sopas, después las carnes y al final los dulces. Y a beber en copas de cristal, no de oro.",
+                "en": "I taught the people of Córdoba to eat in order: first soups, then meats and finally sweets. And to drink from glass cups, not golden ones."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Ziryab llegó a Córdoba en el año 822. Además de la música, se le atribuyen modas en el vestir, el peinado y la mesa.",
+                "en": "Ziryab arrived in Córdoba in the year 822. Besides music, he is credited with fashions in dress, hairstyle and dining."
+              },
+              "year": 822
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Así que el orden de los platos lo trajo usted… pero el tomate no. Apuntado.",
+                "en": "So you brought the order of the courses… but not the tomato. Noted."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "Según Ziryab, ¿qué se come al final?",
+              "en": "According to Ziryab, what comes at the end?"
+            },
+            "options": [
+              {
+                "es": "Los dulces",
+                "en": "The sweets"
+              },
+              {
+                "es": "La sopa",
+                "en": "The soup"
+              },
+              {
+                "es": "La carne",
+                "en": "The meat"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los dulces: de almendra, nueces y miel.",
+              "en": "The sweets: made with almonds, walnuts and honey."
+            }
+          },
+          "clue": {
+            "id": "pista_orden",
+            "text": {
+              "es": "Los andalusíes · Ziryab trajo el orden de los platos y la elegancia en la mesa, siglos antes de que llegara el tomate.",
+              "en": "The Andalusis · Ziryab brought the order of courses and elegance at table, centuries before the tomato arrived."
+            }
+          },
+          "nextNodeId": "g4_tendillas",
+          "nextHint": {
+            "es": "Sube hasta la plaza de las Tendillas. Unos 8 minutos.",
+            "en": "Walk up to Plaza de las Tendillas. About 8 minutes."
+          }
+        },
+        {
+          "id": "g4_tendillas",
+          "title": {
+            "es": "Plaza de las Tendillas",
+            "en": "Plaza de las Tendillas"
+          },
+          "location": {
+            "lat": 36.8846,
+            "lng": -4.7792
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_tendillas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_tendillas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "jornalero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El reloj de las Tendillas da las horas con acordes de guitarra flamenca. En el centro está la estatua ecuestre del Gran Capitán, Gonzalo Fernández de Córdoba.",
+                "en": "The Tendillas clock strikes the hours with flamenco guitar chords. In the centre stands the equestrian statue of the Great Captain, Gonzalo Fernández de Córdoba."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_marina"
+                  ],
+                  "text": {
+                    "es": "Vienes de Santa Marina: ya sabes lo del dornillo y el salmorejo blanco. ¿Qué pista seguimos ahora?",
+                    "en": "You've come from Santa Marina: you know about the dornillo and white salmorejo. Which lead shall we follow now?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_juderia"
+                  ],
+                  "text": {
+                    "es": "Vienes de la Judería: Ziryab no conocía el tomate. ¿Qué pista seguimos ahora?",
+                    "en": "You've come from the Jewish Quarter: Ziryab didn't know the tomato. Which lead shall we follow now?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué instrumento suenan las horas en el reloj de las Tendillas?",
+              "en": "What instrument sounds the hours on the Tendillas clock?"
+            },
+            "options": [
+              {
+                "es": "Trompeta",
+                "en": "Trumpet"
+              },
+              {
+                "es": "Campanas",
+                "en": "Bells"
+              },
+              {
+                "es": "Guitarra flamenca",
+                "en": "Flamenco guitar"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Con acordes de guitarra flamenca.",
+              "en": "With flamenco guitar chords."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "patiera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos la pista del mortero, con el jornalero, o la del banquete, con Ziryab?",
+              "en": "Shall we follow the lead of the mortar, with the labourer, or that of the banquet, with Ziryab?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del mortero",
+                "en": "The mortar lead"
+              },
+              "hint": {
+                "es": "Con el jornalero",
+                "en": "With the labourer"
+              },
+              "targetNodeId": "g4a_mortero",
+              "setFlags": [
+                "version_mortero"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del banquete",
+                "en": "The banquet lead"
+              },
+              "hint": {
+                "es": "Con Ziryab",
+                "en": "With Ziryab"
+              },
+              "targetNodeId": "g4b_banquete",
+              "setFlags": [
+                "version_banquete"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_mortero",
+          "title": {
+            "es": "El mortero",
+            "en": "The mortar"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "jornalero",
+              "expression": "proud",
+              "text": {
+                "es": "En la recogida de la aceituna, a media mañana, se sacaba el dornillo. Cada uno mojaba su pan. Salmorejo, porra, gazpacho… todo salía del mismo cuenco.",
+                "en": "During the olive harvest, mid-morning, out came the dornillo. Everyone dipped their bread. Salmorejo, porra, gazpacho… it all came out of the same bowl."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jornalero",
+              "expression": "thinking",
+              "text": {
+                "es": "El tomate lo pusimos nosotros, cuando lo hubo barato. Y como se espesaba con el pan… se quedó así. Colorao y espeso.",
+                "en": "We were the ones who added tomato, once it was cheap. And since the bread thickened it… that's how it stayed. Red and thick."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_dornillo",
+            "text": {
+              "es": "Los jornaleros · Los jornaleros echaron tomate al dornillo cuando fue barato: así nació el salmorejo colorado y espeso.",
+              "en": "The labourers · The labourers put tomato in the dornillo once it was cheap: that's how thick red salmorejo was born."
+            }
+          },
+          "nextNodeId": "g5_potro",
+          "nextHint": {
+            "es": "Baja hasta la Plaza del Potro. Unos 10 minutos.",
+            "en": "Walk down to Plaza del Potro. About 10 minutes."
+          }
+        },
+        {
+          "id": "g4b_banquete",
+          "title": {
+            "es": "El banquete",
+            "en": "The banquet"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ziryab",
+              "expression": "dramatic",
+              "text": {
+                "es": "Un banquete como Dios manda: sopa de almendras, cordero con especias, dulces de miel. Cada cosa en su momento y en su plato.",
+                "en": "A proper banquet: almond soup, spiced lamb, honey sweets. Everything in its moment and on its plate."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ziryab",
+              "expression": "thinking",
+              "text": {
+                "es": "Las sopas frías de pan y almendra sí las conocíamos. Pero ese color rojo… eso lo pusieron otros, mucho después de mí.",
+                "en": "Cold soups of bread and almonds we did know. But that red colour… others added it, long after my time."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_sopas",
+            "text": {
+              "es": "Los andalusíes · Los andalusíes tomaban sopas frías de pan y almendra, pero el rojo del tomate vino mucho después.",
+              "en": "The Andalusis · The Andalusis ate cold soups of bread and almonds, but the red of the tomato came much later."
+            }
+          },
+          "nextNodeId": "g5_potro",
+          "nextHint": {
+            "es": "Baja hasta la Plaza del Potro. Unos 10 minutos.",
+            "en": "Walk down to Plaza del Potro. About 10 minutes."
+          }
+        },
+        {
+          "id": "g5_potro",
+          "title": {
+            "es": "Plaza del Potro",
+            "en": "Plaza del Potro"
+          },
+          "location": {
+            "lat": 36.8811,
+            "lng": -4.7735
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_potro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_potro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "patiera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "jornalero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Posada del Potro aparece en el Quijote de Cervantes. En la fuente de la plaza hay un potro que levanta las patas.",
+                "en": "The Posada del Potro inn appears in Cervantes' Don Quixote. The fountain in the square is topped by a colt raising its hooves."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "De postre, el pastel cordobés: hojaldre relleno de cabello de ángel, hecho con cidra.",
+                "en": "For dessert, pastel cordobés: puff pastry filled with angel hair, made from fig-leaf gourd."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Repasa el cuaderno. Romanos, andalusíes, jornaleros. ¿Quién le puso tomate al salmorejo?",
+                "en": "Go over your notebook. Romans, Andalusis, labourers. Who put tomato in the salmorejo?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién le puso tomate al salmorejo?",
+              "en": "Who put tomato in the salmorejo?"
+            },
+            "options": [
+              {
+                "es": "Ziryab y los andalusíes",
+                "en": "Ziryab and the Andalusis"
+              },
+              {
+                "es": "Los jornaleros, en el siglo XIX",
+                "en": "The labourers, in the 19th century"
+              },
+              {
+                "es": "Los romanos",
+                "en": "The Romans"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los jornaleros. Romanos y andalusíes ya majaban pan con aceite, ajo y vinagre, pero el tomate llegó de América y no se hizo común en el dornillo hasta el siglo XIX.",
+              "en": "The labourers. Romans and Andalusis already mashed bread with oil, garlic and vinegar, but the tomato came from America and only became common in the dornillo in the 19th century."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_marina",
+                    "version_mortero"
+                  ],
+                  "text": {
+                    "es": "Santa Marina y el mortero: sabes de dónde sale cada cucharada. Eres maestro del dornillo.",
+                    "en": "Santa Marina and the mortar: you know where every spoonful comes from. You're a master of the dornillo."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_marina",
+                    "version_banquete"
+                  ],
+                  "text": {
+                    "es": "Santa Marina y el banquete: del campo a la corte. Eres catador de patios.",
+                    "en": "Santa Marina and the banquet: from the fields to the court. You're a courtyard taster."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_juderia",
+                    "version_mortero"
+                  ],
+                  "text": {
+                    "es": "La Judería y el mortero: de Ziryab al jornalero. Eres cronista del salmorejo.",
+                    "en": "The Jewish Quarter and the mortar: from Ziryab to the labourer. You're the chronicler of salmorejo."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_juderia",
+                    "version_banquete"
+                  ],
+                  "text": {
+                    "es": "La Judería y el banquete: comes con orden y con elegancia. Eres invitado de Ziryab.",
+                    "en": "The Jewish Quarter and the banquet: you eat with order and elegance. You're Ziryab's guest."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "happy",
+              "text": {
+                "es": "Se lo voy a contar a mi abuela. Aunque ella seguirá diciendo que el salmorejo es tan viejo como Córdoba. ¡Vuelve en mayo, que los patios están en flor!",
+                "en": "I'm going to tell my grandmother. Although she'll still say salmorejo is as old as Córdoba. Come back in May, when the courtyards are in bloom!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "maestro_dornillo",
+          "requires": [
+            "camino_marina",
+            "version_mortero"
+          ],
+          "title": {
+            "es": "Maestro del dornillo",
+            "en": "Master of the dornillo"
+          }
+        },
+        {
+          "id": "catador_patios",
+          "requires": [
+            "camino_marina",
+            "version_banquete"
+          ],
+          "title": {
+            "es": "Catador de patios",
+            "en": "Courtyard taster"
+          }
+        },
+        {
+          "id": "cronista_salmorejo",
+          "requires": [
+            "camino_juderia",
+            "version_mortero"
+          ],
+          "title": {
+            "es": "Cronista del salmorejo",
+            "en": "Chronicler of salmorejo"
+          }
+        },
+        {
+          "id": "invitado_ziryab",
+          "requires": [
+            "camino_juderia",
+            "version_banquete"
+          ],
+          "title": {
+            "es": "Invitado de Ziryab",
+            "en": "Ziryab's guest"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "dornillo",
+          "name": {
+            "es": "El dornillo",
+            "en": "The dornillo"
+          },
+          "icon": "collectibles/cordoba_dornillo.svg",
+          "awardedAtNodeId": "g1_corredera"
+        },
+        {
+          "id": "anfora",
+          "name": {
+            "es": "El ánfora de la Bética",
+            "en": "The Baetica amphora"
+          },
+          "icon": "collectibles/cordoba_anfora.svg",
+          "awardedAtNodeId": "g2_templo"
+        },
+        {
+          "id": "maceta",
+          "name": {
+            "es": "La maceta del patio",
+            "en": "The courtyard flowerpot"
+          },
+          "icon": "collectibles/cordoba_maceta.svg",
+          "awardedAtNodeId": "ga1_viana"
+        },
+        {
+          "id": "flamenquin",
+          "name": {
+            "es": "El flamenquín",
+            "en": "The flamenquín"
+          },
+          "icon": "collectibles/cordoba_flamenquin.svg",
+          "awardedAtNodeId": "ga2_marina"
+        },
+        {
+          "id": "berenjenas",
+          "name": {
+            "es": "Berenjenas con miel",
+            "en": "Aubergines with honey"
+          },
+          "icon": "collectibles/cordoba_berenjenas.svg",
+          "awardedAtNodeId": "gb1_flores"
+        },
+        {
+          "id": "laud_ziryab",
+          "name": {
+            "es": "El laúd de Ziryab",
+            "en": "Ziryab's oud"
+          },
+          "icon": "collectibles/cordoba_laud.svg",
+          "awardedAtNodeId": "gb2_almodovar"
+        },
+        {
+          "id": "pastel_cordobes",
+          "name": {
+            "es": "El pastel cordobés",
+            "en": "Pastel cordobés"
+          },
+          "icon": "collectibles/cordoba_pastel.svg",
+          "awardedAtNodeId": "g5_potro"
+        },
+        {
+          "id": "insignia_salmorejo",
+          "name": {
+            "es": "¿Quién le puso tomate al salmorejo?",
+            "en": "Who Put Tomato in the Salmorejo?"
+          },
+          "icon": "collectibles/cordoba_salmorejo.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    }
+  ]
+}
