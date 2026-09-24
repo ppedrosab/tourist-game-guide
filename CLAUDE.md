@@ -73,6 +73,21 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 - La ubicación en segundo plano **no funciona en Expo Go (iOS)**: hace falta build de desarrollo
   (`npx expo run:ios` o EAS). En Expo Go funciona el GPS en primer plano.
 
+**Fase 5 hecha** (mapa; el esquema SVG probado en navegador, MapLibre sin probar en dispositivo):
+- `src/map/geometry.ts` (puro, con tests): paradas numeradas por el camino más largo (las ramas
+  paralelas comparten número; la lista del detalle usa los mismos), tramos por camino con estado
+  (recorrido / pendiente / otro camino), GeoJSON y proyector para el SVG.
+- `RouteMap`: MapLibre (`@maplibre/maplibre-react-native`, estilo OpenFreeMap en `src/map/config.ts`)
+  si la build tiene el módulo nativo; si no (Expo Go, web), `SchematicMap` en SVG. MapLibre se
+  carga bajo demanda (`maplibre.native.ts`) porque al importarse sin módulo nativo lanza.
+- Pantalla modal `/mapa` (desde Pausa y Cuaderno) y vista previa en el detalle de ruta.
+- Offline: `offlinePlan.ts` (zona + 150 m, zooms 13–17, estimación de tamaño), `offline.ts`
+  (paquetes de MapLibre por `metadata.id`, borra versiones viejas), `OfflineMapCard`.
+- `src/geo/watchPosition(.web).ts`: en web se usa `navigator.geolocation` directamente (expo-location
+  19 en web pierde las suscripciones a partir de la segunda).
+- Antes de publicar: confirmar condiciones de OpenFreeMap para descargas offline o usar teselas
+  propias (solo cambia `MAP_STYLE_URL`).
+
 ## Arquitectura
 
 ```
@@ -85,6 +100,7 @@ app/                      rutas (expo-router)
   ruta/[id]/jugar.tsx     MODO RUTA: escena + HUD + caja de diálogo (sin pestañas)
   pausa.tsx               modal transparente, vuelve al mismo punto
   cuaderno.tsx            modal: pistas, mapa, objetos
+  mapa.tsx                modal: mapa de la ruta en curso
 src/theme/                tokens (colores, radios, sombras, tipografía)
 src/components/ui/        Button3D, IconButton, Chip, Panel(+Nameplate), DialogBox, ChoiceCard,
                           Hud, TabBar, HardShadow, AzulejoBackground, Icon
@@ -96,6 +112,7 @@ src/store/progress.ts     progreso persistido
 src/hooks/                useCurrentRun (modales), useArrivalWatcher (GPS en primer plano)
 src/geo/                  geofences en segundo plano, permisos, GeofenceSync
 src/scene/                SceneStage, parallax, cast, Sprite, CastLayer, sun, voice, assets.generated
+src/map/                  geometry, RouteMap (MapLibre / SchematicMap), offline, OfflineMapCard
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
@@ -152,8 +169,8 @@ Tareas de la fase 2:
 - **3 · Escenas** (hecha, ver arriba). Se usó el sensor de reanimated en vez de expo-sensors para
   que el parallax no pase por el hilo de JS.
 - **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
-- **5 · Mapa**: MapLibre (@maplibre/maplibre-react-native), dos caminos en sus colores, descarga
-  offline por ciudad.
+- **5 · Mapa** (hecha, ver arriba). Mejora posible: trazado por calles (`path` opcional en el pack)
+  en vez de líneas rectas entre paradas.
 - **6 · Pulido**: colección, finales, i18n (inglés), analítica, pruebas en la calle.
 
 ## Contenido e historia (resumen; completo en docs/GDD.md)
