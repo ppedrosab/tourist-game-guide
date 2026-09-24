@@ -1,18 +1,21 @@
 {
   "id": "malaga",
-  "version": 4,
+  "version": 5,
   "name": { "es": "Málaga", "en": "Málaga" },
   "languages": ["es", "en"],
   "center": { "lat": 36.7205, "lng": -4.4205 },
   "bounds": [
     { "lat": 36.7160, "lng": -4.4260 },
-    { "lat": 36.7250, "lng": -4.4150 }
+    { "lat": 36.7250, "lng": -4.4060 }
   ],
   "coverImage": "img/cover_manquita.jpg",
   "characters": [
     { "id": "cenachero", "name": { "es": "Er Cenachero", "en": "Er Cenachero" }, "description": { "es": "Vendedor ambulante de pescado con sus dos cenachos. Pícaro, charlatán y más listo de lo que parece.", "en": "A street fish seller with his two baskets, the cenachos. Cheeky, chatty and sharper than he looks." }, "avatar": "sprites/cenachero/cenachero_neutral.svg", "era": "s. XIX-XX" },
     { "id": "la_manquita", "name": { "es": "La Manquita", "en": "La Manquita" }, "description": { "es": "La catedral de Málaga. Solemne, algo presumida y dolida por su torre perdida.", "en": "Málaga Cathedral, nicknamed “the one-armed lady”. Solemn, a little vain and still hurt about her missing tower." }, "avatar": "sprites/manquita/manquita_neutral.svg", "era": "1528-hoy" },
-    { "id": "lucio", "name": { "es": "Lucio, actor romano", "en": "Lucio, Roman actor" }, "description": { "es": "Actor del Teatro Romano de Malaca. Exagerado y teatral hasta para pedir la hora.", "en": "An actor from the Roman Theatre of Malaca. Over the top and theatrical, even when asking the time." }, "avatar": "sprites/lucio/lucio_neutral.svg", "era": "s. I" }
+    { "id": "lucio", "name": { "es": "Lucio, actor romano", "en": "Lucio, Roman actor" }, "description": { "es": "Actor del Teatro Romano de Malaca. Exagerado y teatral hasta para pedir la hora.", "en": "An actor from the Roman Theatre of Malaca. Over the top and theatrical, even when asking the time." }, "avatar": "sprites/lucio/lucio_neutral.svg", "era": "s. I" },
+    {"id": "espetero", "name": {"es": "El Espetero", "en": "The Espetero"}, "description": {"es": "Asa espetos en la playa, de pie junto a su barca de brasas. Malagueño, guasón y muy de su tierra.", "en": "He roasts espetos on the beach, standing by his boat of embers. Born in Málaga, a joker and fiercely local."}, "avatar": "sprites/espetero/espetero_neutral.svg"},
+    {"id": "jabegote", "name": {"es": "El Jabegote", "en": "The Jabegote"}, "description": {"es": "Rema en la jábega, la barca tradicional de pesca de Málaga. Fuerte y de pocas palabras.", "en": "He rows the jábega, Málaga's traditional fishing boat. Strong and a man of few words."}, "avatar": "sprites/jabegote/jabegote_neutral.svg"},
+    {"id": "pasera", "name": {"es": "La Pasera", "en": "The Raisin Maker"}, "description": {"es": "Seca uva moscatel al sol en los paseros de la Axarquía. Alegre y muy trabajadora.", "en": "She dries Muscat grapes in the sun on the drying beds of the Axarquía. Cheerful and hard-working."}, "avatar": "sprites/pasera/pasera_neutral.svg"}
   ],
   "routes": [
     {
@@ -271,6 +274,1141 @@
         { "id": "sello_real", "name": { "es": "El sello del rey", "en": "The king's seal" }, "icon": "collectibles/sello.svg", "awardedAtNodeId": "b1_constitucion" },
         { "id": "foto_con_picasso", "name": { "es": "Foto con Picasso", "en": "Photo with Picasso" }, "icon": "collectibles/picasso_banco.svg", "awardedAtNodeId": "n6_merced" },
         { "id": "insignia_detective_manquita", "name": { "es": "Detective de la Manquita", "en": "Manquita detective" }, "icon": "collectibles/detective_manquita.svg", "awardedAtNodeId": "n7_final" }
+      ]
+    },
+    {
+      "id": "espeto",
+      "title": {
+        "es": "¿Quién inventó el espeto?",
+        "en": "Who Invented the Espeto?"
+      },
+      "summary": {
+        "es": "Sardinas ensartadas en caña, asadas en una barca llena de brasas. ¿Lo inventaron los fenicios, los pescadores o el Migué del Palo? Con un espetero, un jabegote y una pasera de la Axarquía.",
+        "en": "Sardines skewered on canes, roasted in a boat full of embers. Did the Phoenicians invent it, the fishermen or Migué from El Palo? With an espetero, a jábega fisherman and a raisin maker from the Axarquía."
+      },
+      "era": "De Malaka a 1882",
+      "guideCharacterId": "espetero",
+      "durationMin": 100,
+      "distanceKm": 3.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El mar",
+            "en": "The sea"
+          },
+          "trail": {
+            "es": "camino del mar",
+            "en": "sea trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El centro",
+            "en": "The centre"
+          },
+          "trail": {
+            "es": "camino del centro",
+            "en": "centre trail"
+          }
+        }
+      },
+      "startNodeId": "g1_atarazanas",
+      "nodes": [
+        {
+          "id": "g1_atarazanas",
+          "title": {
+            "es": "Mercado de Atarazanas",
+            "en": "Atarazanas Market"
+          },
+          "location": {
+            "lat": 36.7186,
+            "lng": -4.4242
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_atarazanas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_atarazanas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "espetero",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Quillo, bienvenido! Soy espetero: asamos sardinas ensartadas en una caña, de pie en la arena, junto a una barca llena de brasas.",
+                "en": "Welcome, mate! I'm an espetero: we roast sardines skewered on a cane, standing in the sand, next to a boat full of embers."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Y te traigo un caso: todo el mundo sabe lo que es un espeto… pero nadie se pone de acuerdo en quién lo inventó.",
+                "en": "And I've got a case for you: everybody knows what an espeto is… but nobody agrees on who invented it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: los fenicios, que fundaron Malaka y ya vivían del pescado; los pescadores de la playa; y un tal Migué, del Palo, allá por 1882. Apunta.",
+                "en": "Three suspects: the Phoenicians, who founded Malaka and already lived off fish; the beach fishermen; and a certain Migué, from El Palo, back in 1882. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este mercado ocupa unas antiguas atarazanas, y su gran puerta es del siglo XIV, de época nazarí. Entonces el mar llegaba hasta aquí.",
+                "en": "This market stands on old shipyards, and its great gateway dates from the 14th century, the Nasrid era. Back then the sea came right up to here."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué eran las atarazanas?",
+              "en": "What were the atarazanas?"
+            },
+            "options": [
+              {
+                "es": "Molinos",
+                "en": "Mills"
+              },
+              {
+                "es": "Astilleros, donde se hacían barcos",
+                "en": "Shipyards, where boats were built"
+              },
+              {
+                "es": "Baños públicos",
+                "en": "Public baths"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Astilleros. Por eso el mar llegaba hasta la puerta nazarí del mercado.",
+              "en": "Shipyards. That's why the sea once reached the market's Nasrid gateway."
+            }
+          },
+          "clue": {
+            "id": "pista_malaka",
+            "text": {
+              "es": "Los fenicios · Los fenicios fundaron Malaka y ya vivían del pescado y de su salazón.",
+              "en": "The Phoenicians · The Phoenicians founded Malaka and already lived off fish and salting it."
+            }
+          },
+          "nextNodeId": "g2_larios",
+          "nextHint": {
+            "es": "A la calle Larios. Unos 3 minutos.",
+            "en": "To Calle Larios. About 3 minutes."
+          }
+        },
+        {
+          "id": "g2_larios",
+          "title": {
+            "es": "Calle Larios",
+            "en": "Calle Larios"
+          },
+          "location": {
+            "lat": 36.7197,
+            "lng": -4.4215
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_larios.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_larios.svg"
+              ],
+              "characters": [
+                {
+                  "id": "espetero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "pasera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pasera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Soy pasera, de la Axarquía. Allí secamos al sol la uva moscatel en los paseros, y así sale la pasa de Málaga.",
+                "en": "Hello! I'm a raisin maker from the Axarquía. There we dry Muscat grapes in the sun on drying beds, and that's how Málaga raisins are made."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El sistema de las pasas de la Axarquía está reconocido por la FAO como Patrimonio Agrícola Mundial.",
+                "en": "The Axarquía raisin system is recognised by the FAO as a Globally Important Agricultural Heritage System."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "text": {
+                "es": "La pasa, el vino de Málaga, el pescaíto… aquí todo sale del sol y del mar. Pero el espeto, ¿de dónde sale?",
+                "en": "Raisins, Málaga wine, fried fish… here everything comes from sun and sea. But the espeto, where does it come from?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué uva se hacen las pasas de Málaga?",
+              "en": "Which grape are Málaga raisins made from?"
+            },
+            "options": [
+              {
+                "es": "Moscatel",
+                "en": "Muscat"
+              },
+              {
+                "es": "Tempranillo",
+                "en": "Tempranillo"
+              },
+              {
+                "es": "Albariño",
+                "en": "Albariño"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Con uva moscatel, secada al sol en paseros durante días.",
+              "en": "Muscat grapes, dried in the sun on drying beds for days."
+            }
+          },
+          "clue": {
+            "id": "pista_sol",
+            "text": {
+              "es": "Los pescadores · En Málaga casi todo sale del sol y del mar, y en la playa siempre se asó pescado.",
+              "en": "The fishermen · In Málaga almost everything comes from sun and sea, and fish has always been roasted on the beach."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "espetero",
+            "expression": "happy",
+            "text": {
+              "es": "¿Tiramos para el mar, al puerto y a la playa, o nos quedamos en el centro, entre plazas y romanos?",
+              "en": "Shall we head for the sea, to the port and the beach, or stay in the centre, among squares and Romans?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Hacia el mar",
+                "en": "Towards the sea"
+              },
+              "hint": {
+                "es": "Puerto y Malagueta",
+                "en": "Port and Malagueta"
+              },
+              "targetNodeId": "ga1_muelle",
+              "setFlags": [
+                "camino_mar"
+              ],
+              "distanceM": 700,
+              "walkMin": 9
+            },
+            {
+              "label": {
+                "es": "Por el centro",
+                "en": "Through the centre"
+              },
+              "hint": {
+                "es": "Plazas y teatro romano",
+                "en": "Squares and Roman theatre"
+              },
+              "targetNodeId": "gb1_constitucion",
+              "setFlags": [
+                "camino_centro"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            }
+          ]
+        },
+        {
+          "id": "ga1_muelle",
+          "title": {
+            "es": "Muelle Uno",
+            "en": "Muelle Uno"
+          },
+          "location": {
+            "lat": 36.7183,
+            "lng": -4.4147
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_malaga_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "jabegote",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "espetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Jabegote: remo en la jábega, la barca de pesca de Málaga. Echábamos la red desde la orilla y tirábamos de ella entre todos.",
+                "en": "Hello! I'm a jabegote: I row the jábega, Málaga's fishing boat. We'd cast the net from the shore and haul it in together."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que el ojo pintado en la proa de las jábegas es herencia de los fenicios, para que la barca viera el camino.",
+                "en": "It's said that the eye painted on the bow of jábega boats is a Phoenician legacy, so the boat could see its way."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "thinking",
+              "text": {
+                "es": "Al volver, en la misma playa, asábamos parte de la pesca en las brasas. Con los dedos, sin plato.",
+                "en": "When we got back, right there on the beach, we'd roast part of the catch over the embers. With our fingers, no plate."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué lleva pintado en la proa una jábega?",
+              "en": "What is painted on a jábega's bow?"
+            },
+            "options": [
+              {
+                "es": "Una sardina",
+                "en": "A sardine"
+              },
+              {
+                "es": "Una estrella",
+                "en": "A star"
+              },
+              {
+                "es": "Un ojo",
+                "en": "An eye"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Un ojo. Se cuenta que viene de los fenicios.",
+              "en": "An eye. It's said to come from the Phoenicians."
+            }
+          },
+          "clue": {
+            "id": "pista_orilla",
+            "text": {
+              "es": "Los pescadores · Los pescadores de jábega asaban parte de la pesca en la misma playa, sobre brasas.",
+              "en": "The fishermen · The jábega fishermen roasted part of their catch right on the beach, over embers."
+            }
+          },
+          "nextNodeId": "ga2_malagueta",
+          "nextHint": {
+            "es": "Sigue por el paseo hasta la playa de la Malagueta. Unos 8 minutos.",
+            "en": "Follow the promenade to Malagueta beach. About 8 minutes."
+          }
+        },
+        {
+          "id": "ga2_malagueta",
+          "title": {
+            "es": "Playa de la Malagueta",
+            "en": "Malagueta Beach"
+          },
+          "location": {
+            "lat": 36.7195,
+            "lng": -4.409
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_malaga_malagueta.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_malagueta.svg"
+              ],
+              "characters": [
+                {
+                  "id": "espetero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "jabegote",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "proud",
+              "text": {
+                "es": "Mira la barca varada en la arena, llena de brasas. Las cañas se clavan inclinadas, contra el viento, y la sardina se asa despacito.",
+                "en": "Look at the boat beached on the sand, full of embers. The canes are stuck in at an angle, against the wind, and the sardines roast slowly."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Dicen en Málaga que la sardina está mejor en los meses sin erre: de mayo a agosto.",
+                "en": "They say in Málaga that sardines are best in the months without an R: from May to August."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "thinking",
+              "text": {
+                "es": "Nosotros las asábamos en unas brasas cualquiera. Lo de ensartarlas en una caña… eso no se lo vi hacer a mi abuelo.",
+                "en": "We roasted them on any old embers. Skewering them on a cane… I never saw my grandfather do that."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué meses dicen en Málaga que la sardina está mejor?",
+              "en": "In which months do they say sardines are best in Málaga?"
+            },
+            "options": [
+              {
+                "es": "En los meses con erre",
+                "en": "The months with an R"
+              },
+              {
+                "es": "En los meses sin erre",
+                "en": "The months without an R"
+              },
+              {
+                "es": "Solo en Navidad",
+                "en": "Only at Christmas"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En los meses sin erre: mayo, junio, julio y agosto.",
+              "en": "The months without an R (in Spanish): May, June, July and August."
+            }
+          },
+          "clue": {
+            "id": "pista_cana",
+            "text": {
+              "es": "El Migué · El abuelo del jabegote asaba sardinas, pero no ensartadas en una caña.",
+              "en": "El Migué · The jabegote's grandfather roasted sardines, but not skewered on a cane."
+            }
+          },
+          "nextNodeId": "g4_manquita",
+          "nextHint": {
+            "es": "Vuelve hacia la catedral por el Paseo del Parque. Unos 15 minutos.",
+            "en": "Head back to the cathedral along the Paseo del Parque. About 15 minutes."
+          }
+        },
+        {
+          "id": "gb1_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 36.7208,
+            "lng": -4.422
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pasera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "espetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La denominación de origen Málaga, para sus vinos dulces y moscateles, se creó en 1933. Es de las más antiguas de España.",
+                "en": "The Málaga designation of origin, for its sweet and Muscat wines, was created in 1933. It's one of the oldest in Spain."
+              },
+              "year": 1933
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pasera",
+              "expression": "proud",
+              "text": {
+                "es": "Aquí, en la plaza, se reunía la Málaga del siglo XIX. Los ricos comían en casa; los pobres, sardinas en la playa. Baratas y buenas.",
+                "en": "Here in the square the 19th-century Málaga would gather. The rich ate at home; the poor had sardines on the beach. Cheap and good."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Y a finales de ese siglo llegó el tranvía al Palo, y la gente de la ciudad empezó a ir a comer a la playa. Ahí hay negocio…",
+                "en": "And at the end of that century the tram reached El Palo, and city people started going to eat on the beach. There's business in that…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año se creó la denominación de origen Málaga?",
+              "en": "In what year was the Málaga designation of origin created?"
+            },
+            "options": [
+              {
+                "es": "En 1933",
+                "en": "In 1933"
+              },
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              },
+              {
+                "es": "En 2010",
+                "en": "In 2010"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1933, de las primeras de España.",
+              "en": "In 1933, one of the first in Spain."
+            }
+          },
+          "clue": {
+            "id": "pista_tranvia",
+            "text": {
+              "es": "El Migué · A finales del XIX el tranvía llevó a la gente de la ciudad a comer a las playas del Palo.",
+              "en": "El Migué · At the end of the 19th century the tram took city folk to eat on the beaches of El Palo."
+            }
+          },
+          "nextNodeId": "gb2_teatro",
+          "nextHint": {
+            "es": "A la calle Alcazabilla, junto al Teatro Romano. Unos 6 minutos.",
+            "en": "To Calle Alcazabilla, by the Roman Theatre. About 6 minutes."
+          }
+        },
+        {
+          "id": "gb2_teatro",
+          "title": {
+            "es": "Teatro Romano",
+            "en": "Roman Theatre"
+          },
+          "location": {
+            "lat": 36.7212,
+            "lng": -4.4167
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_teatro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_teatro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pasera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "jabegote",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bajo el centro de Málaga han aparecido restos fenicios y piletas romanas donde se salaba el pescado para hacer salazones y garum.",
+                "en": "Beneath central Málaga, Phoenician remains and Roman vats where fish was salted to make salted fish and garum have been found."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "happy",
+              "text": {
+                "es": "Fenicios y romanos salaban el pescado para venderlo lejos. Lo suyo era la salazón, no la brasa en la playa.",
+                "en": "Phoenicians and Romans salted fish to sell it far away. Their thing was salting, not embers on the beach."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pasera",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea, que los fenicios comían pescado, pero el espeto no lo inventaron ellos. Tachamos uno.",
+                "en": "So the Phoenicians ate fish, but they didn't invent the espeto. That's one crossed off."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hacían fenicios y romanos con el pescado de Málaga?",
+              "en": "What did Phoenicians and Romans do with Málaga's fish?"
+            },
+            "options": [
+              {
+                "es": "Lo asaban en cañas",
+                "en": "Roasted it on canes"
+              },
+              {
+                "es": "Lo tiraban al mar",
+                "en": "Threw it back in the sea"
+              },
+              {
+                "es": "Lo salaban para venderlo lejos",
+                "en": "Salted it to sell far away"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Lo salaban: salazones y garum que viajaban por todo el Mediterráneo.",
+              "en": "They salted it: salted fish and garum that travelled all over the Mediterranean."
+            }
+          },
+          "clue": {
+            "id": "pista_salazon",
+            "text": {
+              "es": "Los fenicios · Fenicios y romanos salaban el pescado para venderlo lejos: lo suyo no era el espeto.",
+              "en": "The Phoenicians · Phoenicians and Romans salted fish to sell far away: the espeto wasn't their thing."
+            }
+          },
+          "nextNodeId": "g4_manquita",
+          "nextHint": {
+            "es": "Baja hacia la catedral. Unos 3 minutos.",
+            "en": "Walk down to the cathedral. About 3 minutes."
+          }
+        },
+        {
+          "id": "g4_manquita",
+          "title": {
+            "es": "La Manquita",
+            "en": "La Manquita"
+          },
+          "location": {
+            "lat": 36.7201,
+            "lng": -4.4192
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_manquita.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_manquita.svg"
+              ],
+              "characters": [
+                {
+                  "id": "espetero",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "jabegote",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Otros platos malagueños: el ajoblanco, sopa fría de almendra y ajo; el gazpachuelo, caldo de pescado con mayonesa; y los boquerones fritos.",
+                "en": "Other Málaga dishes: ajoblanco, a cold almond and garlic soup; gazpachuelo, fish broth with mayonnaise; and fried anchovies."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar"
+                  ],
+                  "text": {
+                    "es": "Vienes del mar: el jabegote asaba sardinas, pero no en caña. ¿Seguimos la pista de la barca o la del rey?",
+                    "en": "You've come from the sea: the jabegote roasted sardines, but not on a cane. Shall we follow the boat lead or the king lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro"
+                  ],
+                  "text": {
+                    "es": "Vienes del centro: los fenicios salaban, no asaban. ¿Seguimos la pista de la barca o la del rey?",
+                    "en": "You've come through the centre: the Phoenicians salted, they didn't roast. Shall we follow the boat lead or the king lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el ajoblanco?",
+              "en": "What is ajoblanco?"
+            },
+            "options": [
+              {
+                "es": "Un vino dulce",
+                "en": "A sweet wine"
+              },
+              {
+                "es": "Una sopa fría de almendra y ajo",
+                "en": "A cold almond and garlic soup"
+              },
+              {
+                "es": "Un pescado frito",
+                "en": "A fried fish"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una sopa fría de almendra, ajo, pan, aceite y vinagre, que se sirve con uvas.",
+              "en": "A cold soup of almonds, garlic, bread, oil and vinegar, served with grapes."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "espetero",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La barca o el rey, detective?",
+              "en": "The boat or the king, detective?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la barca",
+                "en": "The boat lead"
+              },
+              "hint": {
+                "es": "Con el jabegote",
+                "en": "With the jabegote"
+              },
+              "targetNodeId": "g4a_barca",
+              "setFlags": [
+                "version_barca"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del rey",
+                "en": "The king lead"
+              },
+              "hint": {
+                "es": "Con el espetero",
+                "en": "With the espetero"
+              },
+              "targetNodeId": "g4b_rey",
+              "setFlags": [
+                "version_rey"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_barca",
+          "title": {
+            "es": "La barca",
+            "en": "The boat"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "proud",
+              "text": {
+                "es": "Mi bisabuelo conoció al Migué, en el Palo. Dice que fue el primero en clavar las sardinas en una caña, en la arena, junto a la lumbre.",
+                "en": "My great-grandfather knew Migué, in El Palo. He said Migué was the first to stick sardines on a cane, in the sand, beside the fire."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "jabegote",
+              "expression": "thinking",
+              "text": {
+                "es": "Nosotros ya asábamos en la playa. Él le puso la caña… y le dio de comer a medio Málaga. Así se hizo famoso.",
+                "en": "We already roasted on the beach. He added the cane… and fed half of Málaga. That's how he became famous."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_1882",
+            "text": {
+              "es": "El Migué · Hacia 1882, en el Palo, el Migué fue el primero en ensartar las sardinas en una caña junto a la lumbre.",
+              "en": "El Migué · Around 1882, in El Palo, Migué was the first to skewer sardines on a cane beside the fire."
+            }
+          },
+          "nextNodeId": "g5_merced",
+          "nextHint": {
+            "es": "Sube a la Plaza de la Merced. Unos 6 minutos.",
+            "en": "Walk up to Plaza de la Merced. About 6 minutes."
+          }
+        },
+        {
+          "id": "g4b_rey",
+          "title": {
+            "es": "El rey",
+            "en": "The king"
+          },
+          "content": [
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en 1885 el rey Alfonso XII probó el espeto del Migué con cuchillo y tenedor, y que el Migué le dijo: «Majestá, asín no, con los deos».",
+                "en": "It's said that in 1885 King Alfonso XII tried Migué's espeto with a knife and fork, and Migué told him: “Majesty, not like that, with your fingers.”"
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Con los dedos! Así se come un espeto. Y si hasta un rey fue a probarlo, es que el Migué ya tenía fama.",
+                "en": "With your fingers! That's how you eat an espeto. And if even a king went to try it, Migué must already have been famous."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_rey",
+            "text": {
+              "es": "El Migué · Se cuenta que hasta el rey Alfonso XII fue a probar el espeto del Migué.",
+              "en": "El Migué · It's said that even King Alfonso XII went to try Migué's espeto."
+            }
+          },
+          "nextNodeId": "g5_merced",
+          "nextHint": {
+            "es": "Sube a la Plaza de la Merced. Unos 6 minutos.",
+            "en": "Walk up to Plaza de la Merced. About 6 minutes."
+          }
+        },
+        {
+          "id": "g5_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 36.7235,
+            "lng": -4.4175
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "espetero",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "pasera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Málaga, el café se pide de muchas maneras según cuánta leche lleve: solo, largo, semilargo, mitad, entrecorto, sombra, nube…",
+                "en": "In Málaga, coffee is ordered in many ways depending on how much milk it has: solo, largo, semilargo, mitad, entrecorto, sombra, nube…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Repasa el cuaderno: fenicios, pescadores, el Migué. ¿Quién inventó el espeto?",
+                "en": "Go over your notebook: Phoenicians, fishermen, Migué. Who invented the espeto?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién inventó el espeto?",
+              "en": "Who invented the espeto?"
+            },
+            "options": [
+              {
+                "es": "El Migué, que en 1882 ensartó la sardina en la caña",
+                "en": "Migué, who in 1882 skewered the sardine on the cane"
+              },
+              {
+                "es": "Un rey",
+                "en": "A king"
+              },
+              {
+                "es": "Los fenicios",
+                "en": "The Phoenicians"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El Migué. Los pescadores ya asaban sardinas en la playa, pero fue él quien, hacia 1882 en el Palo, las clavó en una caña junto a la lumbre y lo convirtió en costumbre. Los fenicios salaban; el rey solo fue a probarlo.",
+              "en": "Migué. Fishermen already roasted sardines on the beach, but around 1882 in El Palo he was the one who stuck them on a cane by the fire and turned it into a custom. The Phoenicians salted fish; the king only came to taste it."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_barca"
+                  ],
+                  "text": {
+                    "es": "El mar y la barca: hueles a brasa y a sal. Eres espetero de honor.",
+                    "en": "The sea and the boat: you smell of embers and salt. You're an honorary espetero."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_rey"
+                  ],
+                  "text": {
+                    "es": "El mar y el rey: ya sabes cómo se come un espeto. Eres comensal de Alfonso XII.",
+                    "en": "The sea and the king: now you know how to eat an espeto. You're Alfonso XII's dining companion."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_barca"
+                  ],
+                  "text": {
+                    "es": "El centro y la barca: de los fenicios a la jábega. Eres jabegote de Malaka.",
+                    "en": "The centre and the boat: from the Phoenicians to the jábega. You're a jabegote of Malaka."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_rey"
+                  ],
+                  "text": {
+                    "es": "El centro y el rey: sabes separar la leyenda del espeto. Eres cronista del espeto.",
+                    "en": "The centre and the king: you can tell the legend from the espeto. You're the espeto's chronicler."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "happy",
+              "text": {
+                "es": "Y acuérdate: el espeto, con los dedos. ¡Que lo dijo el Migué!",
+                "en": "And remember: an espeto, with your fingers. Migué said so!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "espetero_honor",
+          "requires": [
+            "camino_mar",
+            "version_barca"
+          ],
+          "title": {
+            "es": "Espetero de honor",
+            "en": "Honorary espetero"
+          }
+        },
+        {
+          "id": "comensal_rey",
+          "requires": [
+            "camino_mar",
+            "version_rey"
+          ],
+          "title": {
+            "es": "Comensal de Alfonso XII",
+            "en": "Alfonso XII's dining companion"
+          }
+        },
+        {
+          "id": "jabegote_malaka",
+          "requires": [
+            "camino_centro",
+            "version_barca"
+          ],
+          "title": {
+            "es": "Jabegote de Malaka",
+            "en": "Jabegote of Malaka"
+          }
+        },
+        {
+          "id": "cronista_espeto",
+          "requires": [
+            "camino_centro",
+            "version_rey"
+          ],
+          "title": {
+            "es": "Cronista del espeto",
+            "en": "The espeto's chronicler"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "sardina",
+          "name": {
+            "es": "La sardina",
+            "en": "The sardine"
+          },
+          "icon": "collectibles/malaga_sardina.svg",
+          "awardedAtNodeId": "g1_atarazanas"
+        },
+        {
+          "id": "pasa",
+          "name": {
+            "es": "La pasa moscatel",
+            "en": "The Muscat raisin"
+          },
+          "icon": "collectibles/malaga_pasa.svg",
+          "awardedAtNodeId": "g2_larios"
+        },
+        {
+          "id": "jabega",
+          "name": {
+            "es": "La jábega",
+            "en": "The jábega"
+          },
+          "icon": "collectibles/malaga_jabega.svg",
+          "awardedAtNodeId": "ga1_muelle"
+        },
+        {
+          "id": "espeto",
+          "name": {
+            "es": "El espeto",
+            "en": "The espeto"
+          },
+          "icon": "collectibles/malaga_espeto.svg",
+          "awardedAtNodeId": "ga2_malagueta"
+        },
+        {
+          "id": "vino_malaga",
+          "name": {
+            "es": "El vino de Málaga",
+            "en": "Málaga wine"
+          },
+          "icon": "collectibles/malaga_vino.svg",
+          "awardedAtNodeId": "gb1_constitucion"
+        },
+        {
+          "id": "anfora_garum",
+          "name": {
+            "es": "El ánfora de garum",
+            "en": "The garum amphora"
+          },
+          "icon": "collectibles/malaga_garum.svg",
+          "awardedAtNodeId": "gb2_teatro"
+        },
+        {
+          "id": "cafe",
+          "name": {
+            "es": "El café de nueve nombres",
+            "en": "The coffee of nine names"
+          },
+          "icon": "collectibles/malaga_cafe.svg",
+          "awardedAtNodeId": "g5_merced"
+        },
+        {
+          "id": "insignia_espeto",
+          "name": {
+            "es": "¿Quién inventó el espeto?",
+            "en": "Who Invented the Espeto?"
+          },
+          "icon": "collectibles/malaga_espeto_insignia.svg",
+          "awardedAtNodeId": "g6_final"
+        }
       ]
     }
   ]

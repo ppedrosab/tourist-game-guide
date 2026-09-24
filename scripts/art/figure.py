@@ -280,6 +280,37 @@ def prop(kind, x, y, side):
         return (f'<path d="M{x - 18} {y - 20}Q{x - 24} {y + 2} {x - 18} {y + 24}H{x + 18}Q{x + 24} {y + 2} {x + 18} {y - 20}Z" fill="#B07A45" stroke="{INK}" stroke-width="2"/>'
                 f'<path d="M{x - 21} {y - 8}H{x + 21}M{x - 21} {y + 12}H{x + 21}" stroke="#4A4A55" stroke-width="3"/>'
                 f'<ellipse cx="{x}" cy="{y - 20}" rx="18" ry="4" fill="#C9935A" stroke="{INK}" stroke-width="1.6"/>')
+    if kind == "espeto":    # caña con sardinas ensartadas
+        return (f'<path d="M{x} {y + 6}L{x + s * 10} {y - 70}" stroke="{INK}" stroke-width="5"/><path d="M{x} {y + 6}L{x + s * 10} {y - 70}" stroke="#C9A96A" stroke-width="3"/>'
+                + "".join(f'<path d="M{x + s * (2 + k * 2) - 12} {y - 20 - k * 13}Q{x + s * (2 + k * 2)} {y - 26 - k * 13} {x + s * (2 + k * 2) + 12} {y - 20 - k * 13}Q{x + s * (2 + k * 2)} {y - 14 - k * 13} {x + s * (2 + k * 2) - 12} {y - 20 - k * 13}Z" fill="#8FA3AE" stroke="{INK}" stroke-width="1.4"/>' for k in range(4)))
+    if kind == "oar":       # remo
+        return (f'<path d="M{x} {y + 80}L{x + s * 6} {y - 70}" stroke="{INK}" stroke-width="6"/><path d="M{x} {y + 80}L{x + s * 6} {y - 70}" stroke="#B07A45" stroke-width="3.4"/>'
+                f'<path d="M{x - 6} {y + 70}L{x + 6} {y + 70}L{x + 4} {y + 100}L{x - 4} {y + 100}Z" fill="#B07A45" stroke="{INK}" stroke-width="1.8"/>')
+    if kind == "grapes":    # cesta de uvas pasas
+        return (f'<path d="M{x - 22} {y + 4}H{x + 22}L{x + 16} {y + 24}H{x - 16}Z" fill="#C9A05E" stroke="{INK}" stroke-width="2"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="4" fill="#7A4A6A" stroke="{INK}" stroke-width=".8"/>' for dx, dy in [(-12, 2), (-4, 0), (4, 1), (12, 2), (-8, -5), (0, -6), (8, -5)]))
+    if kind == "oranges":   # cesta de naranjas
+        return (f'<path d="M{x - 24} {y + 4}H{x + 24}L{x + 18} {y + 26}H{x - 18}Z" fill="#C9A05E" stroke="{INK}" stroke-width="2"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="6" fill="#F29A2E" stroke="{INK}" stroke-width="1"/>' for dx, dy in [(-14, 1), (-2, -1), (10, 1), (-8, -7), (4, -8)]))
+    if kind == "orange":
+        return (f'<circle cx="{x}" cy="{y - 10}" r="11" fill="#F29A2E" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x} {y - 21}Q{x + 8} {y - 30} {x + 14} {y - 24}Q{x + 6} {y - 18} {x} {y - 21}Z" fill="#4F8B5A" stroke="{INK}" stroke-width="1"/>')
+    if kind == "jar":       # tarro de mermelada
+        return (f'<path d="M{x - 12} {y - 14}H{x + 12}V{y + 16}Q{x} {y + 20} {x - 12} {y + 16}Z" fill="#E8812E" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 14} {y - 22}H{x + 14}V{y - 14}H{x - 14}Z" fill="#C0476A" stroke="{INK}" stroke-width="1.6"/>'
+                f'<path d="M{x - 8} {y - 4}H{x + 8}V{y + 6}H{x - 8}Z" fill="{PAPER}" stroke="{INK}" stroke-width="1"/>')
+    if kind == "olives":    # cuenco de aceitunas
+        return (f'<path d="M{x - 20} {y - 6}H{x + 20}Q{x + 18} {y + 12} {x} {y + 12}Q{x - 18} {y + 12} {x - 20} {y - 6}Z" fill="#C9763F" stroke="{INK}" stroke-width="2"/>'
+                + "".join(f'<ellipse cx="{x + dx}" cy="{y + dy}" rx="4" ry="5" fill="#7C8A4A" stroke="{INK}" stroke-width=".8"/>' for dx, dy in [(-12, -8), (-4, -10), (4, -9), (12, -8), (-8, -14), (2, -15)]))
+    if kind == "spicesack":  # saquitos de especias
+        return "".join(f'<path d="M{x + dx - 9} {y + 12}Q{x + dx - 11} {y - 6} {x + dx - 6} {y - 10}H{x + dx + 6}Q{x + dx + 11} {y - 6} {x + dx + 9} {y + 12}Z" fill="#E9DCC0" stroke="{INK}" stroke-width="1.6"/>'
+                       f'<ellipse cx="{x + dx}" cy="{y - 10}" rx="6" ry="2.4" fill="{c}"/>' for dx, c in [(-10, "#D98A2E"), (8, "#B8412A")])
+    if kind == "pastrytray":  # bandeja de piononos
+        return (f'<path d="M{x - 26} {y - 4}H{x + 26}L{x + 22} {y + 4}H{x - 22}Z" fill="#C9CED6" stroke="{INK}" stroke-width="1.8"/>'
+                + "".join(f'<path d="M{x + dx - 6} {y - 4}V{y - 16}H{x + dx + 6}V{y - 4}Z" fill="#E6B26A" stroke="{INK}" stroke-width="1"/><ellipse cx="{x + dx}" cy="{y - 17}" rx="6" ry="3" fill="#B8742E" stroke="{INK}" stroke-width=".8"/>' for dx in (-14, 0, 14)))
+    if kind == "box":       # caja de dulces de convento
+        return (f'<path d="M{x - 18} {y - 8}H{x + 18}V{y + 14}H{x - 18}Z" fill="{PAPER}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 18} {y - 8}H{x + 18}" stroke="{GOLD}" stroke-width="3"/><path d="M{x} {y - 8}V{y + 14}" stroke="{CLAY}" stroke-width="2"/>')
     if kind == "lute":      # laúd
         return (f'<path d="M{x - 6} {y + 4}L{x + s * 30} {y - 40}" stroke="#6E4C33" stroke-width="5"/>'
                 f'<path d="M{x + s * 26} {y - 36}L{x + s * 36} {y - 50}" stroke="#6E4C33" stroke-width="6"/>'

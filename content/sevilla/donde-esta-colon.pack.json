@@ -1,6 +1,6 @@
 {
   "id": "sevilla",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Sevilla",
     "en": "Seville"
@@ -19,7 +19,7 @@
       "lng": -6.006
     },
     {
-      "lat": 37.3885,
+      "lat": 37.391,
       "lng": -5.985
     }
   ],
@@ -63,6 +63,42 @@
       },
       "avatar": "sprites/hernando/hernando_neutral.svg",
       "era": "1488-1539"
+    },
+    {
+      "id": "naranjera",
+      "name": {
+        "es": "La Naranjera",
+        "en": "The Orange Picker"
+      },
+      "description": {
+        "es": "Recoge las naranjas amargas de las calles de Sevilla. Cariñosa, exagerada y enamorada del azahar.",
+        "en": "She picks the bitter oranges from Seville's streets. Affectionate, prone to exaggeration and in love with orange blossom."
+      },
+      "avatar": "sprites/naranjera/naranjera_neutral.svg"
+    },
+    {
+      "id": "escoces",
+      "name": {
+        "es": "El Escocés",
+        "en": "The Scot"
+      },
+      "description": {
+        "es": "Consignatario escocés que embarca naranjas amargas hacia su tierra para la mermelada. Formal y curioso.",
+        "en": "A Scottish shipping agent who sends bitter oranges home for marmalade. Formal and curious."
+      },
+      "avatar": "sprites/escoces/escoces_neutral.svg"
+    },
+    {
+      "id": "aceitunero",
+      "name": {
+        "es": "El Aceitunero",
+        "en": "The Olive Dresser"
+      },
+      "description": {
+        "es": "Aliña aceitunas manzanillas y gordales. Presumido y generoso.",
+        "en": "He seasons manzanilla and gordal olives. Proud and generous."
+      },
+      "avatar": "sprites/aceitunero/aceitunero_neutral.svg"
     }
   ],
   "routes": [
@@ -1281,6 +1317,1142 @@
           },
           "icon": "collectibles/sevilla_insignia.svg",
           "awardedAtNodeId": "n7_final"
+        }
+      ]
+    },
+    {
+      "id": "azahar",
+      "title": {
+        "es": "¿Por qué Sevilla huele a azahar?",
+        "en": "Why Does Seville Smell of Orange Blossom?"
+      },
+      "summary": {
+        "es": "Sevilla tiene miles de naranjos en la calle, pero sus naranjas son amargas y nadie se las come. ¿Fueron los andalusíes, los escoceses de la mermelada o los jardineros? Con una naranjera, un escocés y un aceitunero.",
+        "en": "Seville has thousands of street orange trees, yet their oranges are bitter and nobody eats them. Was it the Andalusis, the marmalade-loving Scots or the gardeners? With an orange picker, a Scot and an olive dresser."
+      },
+      "era": "Del siglo XII a hoy",
+      "guideCharacterId": "naranjera",
+      "durationMin": 100,
+      "distanceKm": 2.9,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El río",
+            "en": "The river"
+          },
+          "trail": {
+            "es": "camino del río",
+            "en": "river trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El centro",
+            "en": "The centre"
+          },
+          "trail": {
+            "es": "camino del centro",
+            "en": "centre trail"
+          }
+        }
+      },
+      "startNodeId": "g1_mercado",
+      "nodes": [
+        {
+          "id": "g1_mercado",
+          "title": {
+            "es": "Mercado de Triana",
+            "en": "Triana Market"
+          },
+          "location": {
+            "lat": 37.3857,
+            "lng": -6.004
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_mercado.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_mercado.svg"
+              ],
+              "characters": [
+                {
+                  "id": "naranjera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ay, qué alegría! Soy naranjera: en invierno recojo las naranjas de los árboles de la calle. Y en marzo… ¡ay, en marzo!",
+                "en": "Oh, how lovely! I'm an orange picker: in winter I gather the oranges from the street trees. And in March… oh, in March!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "text": {
+                "es": "En marzo Sevilla huele a azahar, la flor del naranjo. Pero estas naranjas son amargas: aquí nadie se las come. Entonces, ¿por qué hay miles de naranjos en las calles?",
+                "en": "In March Seville smells of azahar, orange blossom. But these oranges are bitter: nobody here eats them. So why are there thousands of orange trees in the streets?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: los andalusíes, que trajeron el naranjo; los escoceses, que se llevaban las naranjas para su mermelada; y los jardineros de la ciudad. Apunta, cariño.",
+                "en": "Three suspects: the Andalusis, who brought the orange tree; the Scots, who carried the oranges off for their marmalade; and the city's gardeners. Take notes, dear."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este mercado se levanta sobre las ruinas del castillo de San Jorge, que durante siglos fue sede de la Inquisición en Sevilla.",
+                "en": "This market stands on the ruins of San Jorge castle, which for centuries was the seat of the Inquisition in Seville."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llama la flor del naranjo?",
+              "en": "What is the orange tree's blossom called?"
+            },
+            "options": [
+              {
+                "es": "Clavel",
+                "en": "Carnation"
+              },
+              {
+                "es": "Azahar",
+                "en": "Azahar"
+              },
+              {
+                "es": "Jazmín",
+                "en": "Jasmine"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Azahar, palabra que viene del árabe y significa «flor blanca».",
+              "en": "Azahar, a word from Arabic meaning “white flower”."
+            }
+          },
+          "clue": {
+            "id": "pista_amarga",
+            "text": {
+              "es": "Los andalusíes · Las naranjas de las calles de Sevilla son amargas: el árbol no se plantó para comérselas.",
+              "en": "The Andalusis · The oranges on Seville's streets are bitter: the tree wasn't planted for eating them."
+            }
+          },
+          "nextNodeId": "g2_triana",
+          "nextHint": {
+            "es": "Sal al puente de Triana. Un minuto.",
+            "en": "Go out onto the Triana bridge. One minute."
+          }
+        },
+        {
+          "id": "g2_triana",
+          "title": {
+            "es": "Puente de Triana",
+            "en": "Triana Bridge"
+          },
+          "location": {
+            "lat": 37.3856,
+            "lng": -6.003
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_triana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_triana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "naranjera",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "aceitunero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aceitunero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Aceitunero: aliño aceitunas manzanillas y gordales, con ajo, tomillo, hinojo… Sevilla es tierra de aceituna de mesa como pocas en el mundo.",
+                "en": "Hello! Olive dresser: I season manzanilla and gordal olives with garlic, thyme, fennel… Seville is table-olive country like few places in the world."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El puente de Triana, de 1852, es el puente de hierro más antiguo de España que se conserva.",
+                "en": "The Triana bridge, from 1852, is the oldest surviving iron bridge in Spain."
+              },
+              "year": 1852
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "text": {
+                "es": "Aceitunas sí nos comemos, ¿eh? Pero las naranjas de la calle… esas acaban en otro sitio.",
+                "en": "Olives we do eat, mind you. But the street oranges… those end up somewhere else."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué año es el puente de Triana?",
+              "en": "When was the Triana bridge built?"
+            },
+            "options": [
+              {
+                "es": "De 1852",
+                "en": "1852"
+              },
+              {
+                "es": "De 1492",
+                "en": "1492"
+              },
+              {
+                "es": "De 1992",
+                "en": "1992"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "De 1852: el puente de hierro más antiguo de España que sigue en pie.",
+              "en": "1852: the oldest iron bridge still standing in Spain."
+            }
+          },
+          "clue": {
+            "id": "pista_otro_sitio",
+            "text": {
+              "es": "Los escoceses · Las naranjas amargas de la calle no se comen en Sevilla: acaban en otro sitio.",
+              "en": "The Scots · The bitter street oranges aren't eaten in Seville: they end up somewhere else."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "naranjera",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por la orilla del río, hacia la Torre del Oro, o por el centro, hacia el Salvador y la Giralda?",
+              "en": "Shall we carry on along the riverbank, towards the Torre del Oro, or through the centre, towards El Salvador and the Giralda?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por el río",
+                "en": "Along the river"
+              },
+              "hint": {
+                "es": "Torre del Oro y Alcázar",
+                "en": "Torre del Oro and Alcázar"
+              },
+              "targetNodeId": "ga1_torreoro",
+              "setFlags": [
+                "camino_rio"
+              ],
+              "distanceM": 800,
+              "walkMin": 11
+            },
+            {
+              "label": {
+                "es": "Por el centro",
+                "en": "Through the centre"
+              },
+              "hint": {
+                "es": "El Salvador y la Giralda",
+                "en": "El Salvador and the Giralda"
+              },
+              "targetNodeId": "gb1_salvador",
+              "setFlags": [
+                "camino_centro"
+              ],
+              "distanceM": 1100,
+              "walkMin": 15
+            }
+          ]
+        },
+        {
+          "id": "ga1_torreoro",
+          "title": {
+            "es": "Torre del Oro",
+            "en": "Torre del Oro"
+          },
+          "location": {
+            "lat": 37.3823,
+            "lng": -5.9964
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_torreoro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_torreoro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "escoces",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "naranjera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "escoces",
+              "expression": "happy",
+              "text": {
+                "es": "Good day! Soy consignatario escocés: cargo barcos en este muelle. Llevo naranjas amargas de Sevilla a Escocia desde hace muchos años.",
+                "en": "Good day! I'm a Scottish shipping agent: I load ships on this quay. I've been taking Seville's bitter oranges to Scotland for many years."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Torre del Oro es una torre almohade del siglo XIII que vigilaba el puerto del Guadalquivir.",
+                "en": "The Torre del Oro is a 13th-century Almohad tower that watched over the Guadalquivir port."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "escoces",
+              "expression": "proud",
+              "text": {
+                "es": "En Dundee, en 1797, se hizo la primera mermelada comercial de naranja amarga con naranjas como estas. Hoy la mermelada inglesa sigue llevando naranja de Sevilla.",
+                "en": "In Dundee, in 1797, the first commercial bitter orange marmalade was made with oranges like these. Today British marmalade still uses Seville oranges."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde se hizo la primera mermelada comercial de naranja amarga?",
+              "en": "Where was the first commercial bitter orange marmalade made?"
+            },
+            "options": [
+              {
+                "es": "En Sevilla",
+                "en": "In Seville"
+              },
+              {
+                "es": "En Madrid",
+                "en": "In Madrid"
+              },
+              {
+                "es": "En Dundee, Escocia",
+                "en": "In Dundee, Scotland"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En Dundee, Escocia, en 1797, con naranjas amargas de Sevilla.",
+              "en": "In Dundee, Scotland, in 1797, with bitter oranges from Seville."
+            }
+          },
+          "clue": {
+            "id": "pista_dundee",
+            "text": {
+              "es": "Los escoceses · Los escoceses se llevaban la naranja amarga para su mermelada desde finales del siglo XVIII.",
+              "en": "The Scots · The Scots were taking bitter oranges for their marmalade from the late 18th century."
+            }
+          },
+          "nextNodeId": "ga2_alcazar",
+          "nextHint": {
+            "es": "Al Real Alcázar. Unos 8 minutos.",
+            "en": "To the Royal Alcázar. About 8 minutes."
+          }
+        },
+        {
+          "id": "ga2_alcazar",
+          "title": {
+            "es": "Real Alcázar",
+            "en": "Royal Alcázar"
+          },
+          "location": {
+            "lat": 37.3836,
+            "lng": -5.9915
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_alcazar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_alcazar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "escoces",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "naranjera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en los jardines del Alcázar hay un naranjo que plantó el rey Pedro I en el siglo XIV.",
+                "en": "It's said that in the Alcázar gardens there's an orange tree planted by King Peter I in the 14th century."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "escoces",
+              "expression": "thinking",
+              "text": {
+                "es": "Nosotros nos llevamos las naranjas, sí. Pero cuando llegamos, los naranjos ya estaban aquí. Llevaban siglos.",
+                "en": "We take the oranges, yes. But when we arrived, the orange trees were already here. They'd been here for centuries."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Entonces los escoceses no plantaron los naranjos! Solo se llevaban la fruta. Tachamos uno.",
+                "en": "So the Scots didn't plant the orange trees! They only took the fruit. That's one crossed off."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hacían los escoceses con la naranja amarga de Sevilla?",
+              "en": "What did the Scots do with Seville's bitter oranges?"
+            },
+            "options": [
+              {
+                "es": "Pintura",
+                "en": "Paint"
+              },
+              {
+                "es": "Mermelada",
+                "en": "Marmalade"
+              },
+              {
+                "es": "Zumo",
+                "en": "Juice"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Mermelada, la famosa marmalade.",
+              "en": "Marmalade."
+            }
+          },
+          "clue": {
+            "id": "pista_ya_estaban",
+            "text": {
+              "es": "Los escoceses · Cuando llegaron los escoceses, los naranjos ya llevaban siglos en Sevilla.",
+              "en": "The Scots · When the Scots arrived, the orange trees had already been in Seville for centuries."
+            }
+          },
+          "nextNodeId": "g4_triunfo",
+          "nextHint": {
+            "es": "A la Plaza del Triunfo, aquí al lado. Un minuto.",
+            "en": "To Plaza del Triunfo, right next door. One minute."
+          }
+        },
+        {
+          "id": "gb1_salvador",
+          "title": {
+            "es": "Plaza del Salvador",
+            "en": "Plaza del Salvador"
+          },
+          "location": {
+            "lat": 37.3895,
+            "lng": -5.994
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_salvador.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_salvador.svg"
+              ],
+              "characters": [
+                {
+                  "id": "aceitunero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "naranjera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia del Salvador se levanta sobre la antigua mezquita mayor de la Isbilia andalusí. Su plaza es uno de los lugares favoritos de los sevillanos para tomar algo al aire libre.",
+                "en": "The church of El Salvador stands on the site of the old main mosque of Andalusi Isbiliya. Its square is one of Sevillians' favourite spots for an open-air bite."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aceitunero",
+              "expression": "proud",
+              "text": {
+                "es": "Mis aceitunas llevan cáscara de naranja amarga en el aliño. ¡Algo de provecho le sacamos al naranjo!",
+                "en": "My olives have bitter orange peel in the seasoning. We do get some use out of the orange tree!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "text": {
+                "es": "Y el azahar se destila para hacer agua de azahar, que perfuma dulces y roscos. El naranjo amargo se planta por la flor, más que por la fruta.",
+                "en": "And the azahar is distilled to make orange blossom water, which perfumes sweets and pastries. The bitter orange is planted for its flower more than its fruit."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué se usa el agua de azahar?",
+              "en": "What is orange blossom water used for?"
+            },
+            "options": [
+              {
+                "es": "Para perfumar dulces",
+                "en": "To perfume sweets"
+              },
+              {
+                "es": "Para regar",
+                "en": "For watering plants"
+              },
+              {
+                "es": "Para limpiar",
+                "en": "For cleaning"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Para perfumar dulces, roscos y también como perfume.",
+              "en": "To perfume sweets and pastries, and as a scent too."
+            }
+          },
+          "clue": {
+            "id": "pista_flor",
+            "text": {
+              "es": "Los andalusíes · El naranjo amargo se planta por su flor y su olor, más que por la fruta.",
+              "en": "The Andalusis · The bitter orange is planted for its blossom and scent more than for its fruit."
+            }
+          },
+          "nextNodeId": "gb2_giralda",
+          "nextHint": {
+            "es": "Baja hacia la Giralda. Unos 7 minutos.",
+            "en": "Walk down to the Giralda. About 7 minutes."
+          }
+        },
+        {
+          "id": "gb2_giralda",
+          "title": {
+            "es": "La Giralda",
+            "en": "The Giralda"
+          },
+          "location": {
+            "lat": 37.3864,
+            "lng": -5.9922
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_giralda.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_giralda.svg"
+              ],
+              "characters": [
+                {
+                  "id": "naranjera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "aceitunero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Patio de los Naranjos de la catedral era el patio de la mezquita almohade del siglo XII, donde los fieles se lavaban antes de rezar. Ya entonces estaba lleno de naranjos.",
+                "en": "The cathedral's Courtyard of the Orange Trees was the courtyard of the 12th-century Almohad mosque, where the faithful washed before prayer. Even then it was full of orange trees."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "proud",
+              "text": {
+                "es": "Los andalusíes trajeron el naranjo amargo de Oriente, siglos antes que la naranja dulce. Lo querían para sus patios: sombra, agua y perfume.",
+                "en": "The Andalusis brought the bitter orange from the East, centuries before the sweet orange. They wanted it for their courtyards: shade, water and fragrance."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "aceitunero",
+              "expression": "thinking",
+              "text": {
+                "es": "Así que el patio de la catedral ya olía a azahar hace ochocientos años…",
+                "en": "So the cathedral courtyard already smelt of azahar eight hundred years ago…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era el Patio de los Naranjos antes de ser de la catedral?",
+              "en": "What was the Courtyard of the Orange Trees before it belonged to the cathedral?"
+            },
+            "options": [
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "Un cementerio",
+                "en": "A cemetery"
+              },
+              {
+                "es": "El patio de la mezquita almohade",
+                "en": "The Almohad mosque's courtyard"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El patio de abluciones de la mezquita almohade del siglo XII.",
+              "en": "The ablutions courtyard of the 12th-century Almohad mosque."
+            }
+          },
+          "clue": {
+            "id": "pista_patio",
+            "text": {
+              "es": "Los andalusíes · El patio de la mezquita almohade ya estaba lleno de naranjos amargos hace ochocientos años.",
+              "en": "The Andalusis · The Almohad mosque's courtyard was already full of bitter orange trees eight hundred years ago."
+            }
+          },
+          "nextNodeId": "g4_triunfo",
+          "nextHint": {
+            "es": "A la Plaza del Triunfo. Dos minutos.",
+            "en": "To Plaza del Triunfo. Two minutes."
+          }
+        },
+        {
+          "id": "g4_triunfo",
+          "title": {
+            "es": "Plaza del Triunfo",
+            "en": "Plaza del Triunfo"
+          },
+          "location": {
+            "lat": 37.385,
+            "lng": -5.9916
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_triunfo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_triunfo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "naranjera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "escoces",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Sevilla tiene más de 25.000 naranjos amargos en sus calles, plazas y jardines.",
+                "en": "Seville has more than 25,000 bitter orange trees in its streets, squares and gardens."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Vienes del río: los escoceses se llevaban la fruta, pero no plantaron los árboles. ¿Seguimos la pista del barco o la del azahar?",
+                    "en": "You've come along the river: the Scots took the fruit but didn't plant the trees. Shall we follow the ship lead or the blossom lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro"
+                  ],
+                  "text": {
+                    "es": "Vienes del centro: el patio de la mezquita ya olía a azahar. ¿Seguimos la pista del barco o la del azahar?",
+                    "en": "You've come through the centre: the mosque courtyard already smelt of azahar. Shall we follow the ship lead or the blossom lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántos naranjos amargos hay, más o menos, en las calles de Sevilla?",
+              "en": "Roughly how many bitter orange trees line Seville's streets?"
+            },
+            "options": [
+              {
+                "es": "Ninguno",
+                "en": "None"
+              },
+              {
+                "es": "Más de 25.000",
+                "en": "More than 25,000"
+              },
+              {
+                "es": "Unos 50",
+                "en": "About 50"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Más de 25.000: por eso en marzo toda la ciudad huele a azahar.",
+              "en": "More than 25,000: that's why the whole city smells of blossom in March."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "naranjera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El barco o el azahar?",
+              "en": "The ship or the blossom?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del barco",
+                "en": "The ship lead"
+              },
+              "hint": {
+                "es": "Con el escocés",
+                "en": "With the Scot"
+              },
+              "targetNodeId": "g4a_barco",
+              "setFlags": [
+                "version_barco"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del azahar",
+                "en": "The blossom lead"
+              },
+              "hint": {
+                "es": "Con la naranjera",
+                "en": "With the orange picker"
+              },
+              "targetNodeId": "g4b_azahar",
+              "setFlags": [
+                "version_azahar"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_barco",
+          "title": {
+            "es": "El barco",
+            "en": "The ship"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "escoces",
+              "expression": "proud",
+              "text": {
+                "es": "Cada invierno, los operarios recogen las naranjas de las calles y las mandan en barco o en camión al Reino Unido. Toneladas y toneladas.",
+                "en": "Every winter, workers pick the oranges from the streets and send them by ship or lorry to the United Kingdom. Tonnes and tonnes."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "escoces",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero ojo: nosotros aprovechamos lo que ya había. Si mañana dejáramos de comprar, los naranjos seguirían ahí, oliendo a azahar.",
+                "en": "But mind: we make use of what was already here. If we stopped buying tomorrow, the orange trees would still be there, smelling of blossom."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_aprovechar",
+            "text": {
+              "es": "Los escoceses · Los escoceses aprovechan unas naranjas que ya estaban; los naranjos seguirían aunque dejaran de comprar.",
+              "en": "The Scots · The Scots make use of oranges already there; the trees would remain even if they stopped buying."
+            }
+          },
+          "nextNodeId": "g5_agua",
+          "nextHint": {
+            "es": "Entra en el barrio de Santa Cruz, al callejón del Agua. Unos 5 minutos.",
+            "en": "Head into the Santa Cruz quarter, to Callejón del Agua. About 5 minutes."
+          }
+        },
+        {
+          "id": "g4b_azahar",
+          "title": {
+            "es": "El azahar",
+            "en": "The blossom"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "dramatic",
+              "text": {
+                "es": "Cierra los ojos. Marzo, tarde de sol, y toda la ciudad oliendo a flor blanca. Eso buscaban los andalusíes cuando trajeron el naranjo.",
+                "en": "Close your eyes. March, a sunny afternoon, and the whole city smelling of white blossom. That's what the Andalusis were after when they brought the orange tree."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "happy",
+              "text": {
+                "es": "Los jardineros de hoy siguen plantándolos porque dan sombra, aguantan el calor y huelen de maravilla. Pero la costumbre viene de mucho antes.",
+                "en": "Today's gardeners keep planting them because they give shade, stand the heat and smell wonderful. But the custom goes back much further."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_costumbre",
+            "text": {
+              "es": "Los jardineros · Los jardineros siguen plantando naranjos, pero continúan una costumbre mucho más antigua.",
+              "en": "The gardeners · The gardeners keep planting orange trees, but they're continuing a much older custom."
+            }
+          },
+          "nextNodeId": "g5_agua",
+          "nextHint": {
+            "es": "Entra en el barrio de Santa Cruz, al callejón del Agua. Unos 5 minutos.",
+            "en": "Head into the Santa Cruz quarter, to Callejón del Agua. About 5 minutes."
+          }
+        },
+        {
+          "id": "g5_agua",
+          "title": {
+            "es": "Callejón del Agua",
+            "en": "Callejón del Agua"
+          },
+          "location": {
+            "lat": 37.384,
+            "lng": -5.9885
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_santacruz.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_santacruz.svg"
+              ],
+              "characters": [
+                {
+                  "id": "naranjera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "aceitunero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Sevilla, las tapas son costumbre de tarde y de noche: raciones pequeñas para compartir, de pie o en la calle.",
+                "en": "In Seville, tapas are an afternoon and evening custom: small portions to share, standing up or out in the street."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto: andalusíes, escoceses o jardineros. ¿Por qué Sevilla huele a azahar?",
+                "en": "Verdict time: Andalusis, Scots or gardeners. Why does Seville smell of orange blossom?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué Sevilla huele a azahar?",
+              "en": "Why does Seville smell of orange blossom?"
+            },
+            "options": [
+              {
+                "es": "Por los andalusíes, que trajeron el naranjo amargo para sus patios",
+                "en": "Because of the Andalusis, who brought the bitter orange for their courtyards"
+              },
+              {
+                "es": "Por los escoceses y su mermelada",
+                "en": "Because of the Scots and their marmalade"
+              },
+              {
+                "es": "Solo porque los jardineros los plantan hoy",
+                "en": "Only because gardeners plant them today"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por los andalusíes. Trajeron el naranjo amargo por su flor, su sombra y su perfume; los escoceses aprovecharon la fruta mucho después y los jardineros de hoy mantienen la costumbre.",
+              "en": "Because of the Andalusis. They brought the bitter orange for its blossom, shade and scent; the Scots made use of the fruit much later, and today's gardeners keep up the custom."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_barco"
+                  ],
+                  "text": {
+                    "es": "El río y el barco: de Sevilla a Dundee. Eres mermelero de Su Majestad.",
+                    "en": "The river and the ship: from Seville to Dundee. You're Her Majesty's marmalade maker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_azahar"
+                  ],
+                  "text": {
+                    "es": "El río y el azahar: tienes nariz de sevillano. Eres guardián del azahar.",
+                    "en": "The river and the blossom: you've got a Sevillian's nose. You're a guardian of the blossom."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_barco"
+                  ],
+                  "text": {
+                    "es": "El centro y el barco: del patio al muelle. Eres naranjero de ley.",
+                    "en": "The centre and the ship: from the courtyard to the quay. You're a true orange picker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_azahar"
+                  ],
+                  "text": {
+                    "es": "El centro y el azahar: ocho siglos de perfume en un paseo. Eres poeta del naranjo.",
+                    "en": "The centre and the blossom: eight centuries of fragrance in one walk. You're a poet of the orange tree."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y vuelve en marzo, que ya verás qué olor! Aunque las naranjas… mejor no las muerdas.",
+                "en": "And come back in March, you'll see what a scent! Although the oranges… better not bite them."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "mermelero",
+          "requires": [
+            "camino_rio",
+            "version_barco"
+          ],
+          "title": {
+            "es": "Mermelero de Su Majestad",
+            "en": "Her Majesty's marmalade maker"
+          }
+        },
+        {
+          "id": "guardian_azahar",
+          "requires": [
+            "camino_rio",
+            "version_azahar"
+          ],
+          "title": {
+            "es": "Guardián del azahar",
+            "en": "Guardian of the blossom"
+          }
+        },
+        {
+          "id": "naranjero_ley",
+          "requires": [
+            "camino_centro",
+            "version_barco"
+          ],
+          "title": {
+            "es": "Naranjero de ley",
+            "en": "True orange picker"
+          }
+        },
+        {
+          "id": "poeta_naranjo",
+          "requires": [
+            "camino_centro",
+            "version_azahar"
+          ],
+          "title": {
+            "es": "Poeta del naranjo",
+            "en": "Poet of the orange tree"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "naranja_amarga",
+          "name": {
+            "es": "La naranja amarga",
+            "en": "The bitter orange"
+          },
+          "icon": "collectibles/sevilla_naranja.svg",
+          "awardedAtNodeId": "g1_mercado"
+        },
+        {
+          "id": "aceitunas",
+          "name": {
+            "es": "Las aceitunas aliñadas",
+            "en": "Seasoned olives"
+          },
+          "icon": "collectibles/sevilla_aceitunas.svg",
+          "awardedAtNodeId": "g2_triana"
+        },
+        {
+          "id": "mermelada",
+          "name": {
+            "es": "La mermelada",
+            "en": "The marmalade"
+          },
+          "icon": "collectibles/sevilla_mermelada.svg",
+          "awardedAtNodeId": "ga1_torreoro"
+        },
+        {
+          "id": "naranjo_rey",
+          "name": {
+            "es": "El naranjo del rey",
+            "en": "The king's orange tree"
+          },
+          "icon": "collectibles/sevilla_naranjo.svg",
+          "awardedAtNodeId": "ga2_alcazar"
+        },
+        {
+          "id": "agua_azahar",
+          "name": {
+            "es": "El agua de azahar",
+            "en": "Orange blossom water"
+          },
+          "icon": "collectibles/sevilla_aguazahar.svg",
+          "awardedAtNodeId": "gb1_salvador"
+        },
+        {
+          "id": "patio_naranjos",
+          "name": {
+            "es": "El Patio de los Naranjos",
+            "en": "The Courtyard of the Orange Trees"
+          },
+          "icon": "collectibles/sevilla_patio.svg",
+          "awardedAtNodeId": "gb2_giralda"
+        },
+        {
+          "id": "tapa",
+          "name": {
+            "es": "La tapa",
+            "en": "The tapa"
+          },
+          "icon": "collectibles/sevilla_tapa.svg",
+          "awardedAtNodeId": "g5_agua"
+        },
+        {
+          "id": "insignia_azahar",
+          "name": {
+            "es": "¿Por qué Sevilla huele a azahar?",
+            "en": "Why Does Seville Smell of Orange Blossom?"
+          },
+          "icon": "collectibles/sevilla_azahar.svg",
+          "awardedAtNodeId": "g6_final"
         }
       ]
     }

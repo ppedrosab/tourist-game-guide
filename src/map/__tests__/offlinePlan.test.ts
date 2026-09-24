@@ -17,7 +17,7 @@ it("la zona de descarga cubre todas las paradas con margen", () => {
     expect(s.location.lat).toBeGreaterThan(south);
     expect(s.location.lat).toBeLessThan(north);
   }
-  expect(plan.id).toBe("ciudad-malaga@4");
+  expect(plan.id).toBe(`ciudad-malaga@${pack.version}`);
   expect([plan.minZoom, plan.maxZoom]).toEqual([13, 17]);
 });
 

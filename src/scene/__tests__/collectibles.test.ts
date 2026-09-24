@@ -8,8 +8,9 @@ if (!result.ok) throw new Error(result.errors.join("\n"));
 const pack: CityPack = result.pack;
 
 it("cada coleccionable del pack tiene su arte", () => {
+  const manquita = pack.routes.find((r) => r.id === "misterio-manquita");
+  expect(manquita?.rewards).toHaveLength(6);
   const icons = pack.routes.flatMap((r) => (r.rewards ?? []).map((c) => c.icon));
-  expect(icons).toHaveLength(6);
   for (const icon of icons) expect([icon, COLLECTIBLE_ART[icon] !== undefined]).toEqual([icon, true]);
 });
 

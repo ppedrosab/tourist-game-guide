@@ -1,6 +1,6 @@
 {
   "id": "granada",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Granada",
     "en": "Granada"
@@ -63,6 +63,43 @@
       },
       "avatar": "sprites/boabdil/boabdil_neutral.svg",
       "era": "s. XV"
+    },
+    {
+      "id": "especiera",
+      "name": {
+        "es": "La Especiera",
+        "en": "The Spice Seller"
+      },
+      "description": {
+        "es": "Vende especias en el centro de Granada, entre el antiguo zoco y la catedral. Lista, rápida y cotilla.",
+        "en": "She sells spices in central Granada, between the old souk and the cathedral. Clever, quick and a gossip."
+      },
+      "avatar": "sprites/especiera/especiera_neutral.svg"
+    },
+    {
+      "id": "ceferino",
+      "name": {
+        "es": "Ceferino Isla",
+        "en": "Ceferino Isla"
+      },
+      "description": {
+        "es": "Pastelero de Santa Fe que en 1897 creó el pionono. Devoto, meticuloso y muy orgulloso de su obrador.",
+        "en": "The Santa Fe pastry cook who created the pionono in 1897. Devout, meticulous and very proud of his workshop."
+      },
+      "avatar": "sprites/ceferino/ceferino_neutral.svg",
+      "era": "1897"
+    },
+    {
+      "id": "tornera",
+      "name": {
+        "es": "La Hermana Tornera",
+        "en": "The Turn Sister"
+      },
+      "description": {
+        "es": "Monja de clausura que atiende el torno por el que su convento vende dulces. Discreta y con mucho sentido del humor.",
+        "en": "A cloistered nun who tends the turntable through which her convent sells sweets. Discreet, with a great sense of humour."
+      },
+      "avatar": "sprites/tornera/tornera_neutral.svg"
     }
   ],
   "routes": [
@@ -1236,6 +1273,1142 @@
           },
           "icon": "collectibles/granada_insignia.svg",
           "awardedAtNodeId": "n7_final"
+        }
+      ]
+    },
+    {
+      "id": "pionono",
+      "title": {
+        "es": "¿Quién inventó el pionono?",
+        "en": "Who Invented the Pionono?"
+      },
+      "summary": {
+        "es": "Un pastelito de Granada con nombre de papa. ¿Lo inventaron las monjas, los moriscos o un pastelero de Santa Fe? Con una especiera, una hermana tornera y Ceferino Isla, entre zocos, conventos y almíbar.",
+        "en": "A little Granada pastry named after a pope. Was it invented by the nuns, the Moriscos or a pastry cook from Santa Fe? With a spice seller, a turn sister and Ceferino Isla, among souks, convents and syrup."
+      },
+      "era": "De la Granada nazarí a 1897",
+      "guideCharacterId": "especiera",
+      "durationMin": 100,
+      "distanceKm": 2.8,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "gastronomia",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El zoco",
+            "en": "The souk"
+          },
+          "trail": {
+            "es": "camino del zoco",
+            "en": "souk trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El Albaicín",
+            "en": "The Albaicín"
+          },
+          "trail": {
+            "es": "camino del Albaicín",
+            "en": "Albaicín trail"
+          }
+        }
+      },
+      "startNodeId": "g1_sanagustin",
+      "nodes": [
+        {
+          "id": "g1_sanagustin",
+          "title": {
+            "es": "Mercado de San Agustín",
+            "en": "San Agustín Market"
+          },
+          "location": {
+            "lat": 37.1776,
+            "lng": -3.5993
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_sanagustin.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_sanagustin.svg"
+              ],
+              "characters": [
+                {
+                  "id": "especiera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Bienvenido! Soy especiera: vendo comino, azafrán, canela y matalahúva. Mi familia lleva generaciones entre sacos de especias.",
+                "en": "Welcome! I'm a spice seller: cumin, saffron, cinnamon and aniseed. My family has spent generations among sacks of spices."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo un misterio dulce: el pionono, un pastelito de Granada con nombre de papa. ¿Quién lo inventó?",
+                "en": "I've got a sweet mystery for you: the pionono, a little Granada pastry named after a pope. Who invented it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: las monjas de clausura, que hacen dulces desde hace siglos; los moriscos, maestros de la miel y la almendra; y un pastelero de Santa Fe llamado Ceferino. Apunta.",
+                "en": "Three suspects: the cloistered nuns, who've made sweets for centuries; the Moriscos, masters of honey and almond; and a pastry cook from Santa Fe called Ceferino. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Granada es costumbre que cada bebida llegue acompañada de una tapa, sin pagarla aparte.",
+                "en": "In Granada it's customary for every drink to come with a tapa at no extra cost."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el azafrán?",
+              "en": "What is saffron?"
+            },
+            "options": [
+              {
+                "es": "Una raíz",
+                "en": "A root"
+              },
+              {
+                "es": "Los estigmas de una flor",
+                "en": "The stigmas of a flower"
+              },
+              {
+                "es": "Una semilla",
+                "en": "A seed"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los estigmas de la flor del azafrán, recogidos a mano. Por eso es tan caro.",
+              "en": "The stigmas of the saffron crocus, picked by hand. That's why it's so expensive."
+            }
+          },
+          "clue": {
+            "id": "pista_nombre",
+            "text": {
+              "es": "Ceferino · El pionono tiene nombre de papa: alguien se lo puso a propósito.",
+              "en": "Ceferino · The pionono is named after a pope: someone chose that name on purpose."
+            }
+          },
+          "nextNodeId": "g2_bibrambla",
+          "nextHint": {
+            "es": "A la plaza de Bib-Rambla. Unos 3 minutos.",
+            "en": "To Plaza de Bib-Rambla. About 3 minutes."
+          }
+        },
+        {
+          "id": "g2_bibrambla",
+          "title": {
+            "es": "Plaza de Bib-Rambla",
+            "en": "Plaza de Bib-Rambla"
+          },
+          "location": {
+            "lat": 37.1752,
+            "lng": -3.6003
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_bibrambla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_bibrambla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "especiera",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "ceferino",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "happy",
+              "text": {
+                "es": "Buenos días. Ceferino Isla, pastelero de Santa Fe, a diez kilómetros de aquí. Vengo a Granada a comprar azúcar y canela.",
+                "en": "Good morning. Ceferino Isla, pastry cook from Santa Fe, ten kilometres from here. I come to Granada to buy sugar and cinnamon."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bib-Rambla significa «puerta del arenal». Es famosa por sus puestos de flores y por los churros con chocolate.",
+                "en": "Bib-Rambla means “gate of the sands”. It's famous for its flower stalls and for churros with chocolate."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Ceferino… ¿de Santa Fe? ¡Pues ya tenemos a un sospechoso en la plaza!",
+                "en": "Ceferino… from Santa Fe? Well, we've got a suspect right here in the square!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué significa «Bib-Rambla»?",
+              "en": "What does “Bib-Rambla” mean?"
+            },
+            "options": [
+              {
+                "es": "Puerta del arenal",
+                "en": "Gate of the sands"
+              },
+              {
+                "es": "Plaza de las flores",
+                "en": "Square of flowers"
+              },
+              {
+                "es": "Casa del rey",
+                "en": "King's house"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Puerta del arenal: era una de las puertas de la muralla, junto al río Darro.",
+              "en": "Gate of the sands: it was one of the gates in the wall, by the river Darro."
+            }
+          },
+          "clue": {
+            "id": "pista_santafe",
+            "text": {
+              "es": "Ceferino · Ceferino Isla es pastelero en Santa Fe, cerca de Granada.",
+              "en": "Ceferino · Ceferino Isla is a pastry cook in Santa Fe, near Granada."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "especiera",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por la Alcaicería, el antiguo zoco, o subimos al Albaicín, donde están los conventos?",
+              "en": "Shall we go through the Alcaicería, the old souk, or climb up to the Albaicín, where the convents are?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por la Alcaicería",
+                "en": "Through the Alcaicería"
+              },
+              "hint": {
+                "es": "Zoco y Corral del Carbón",
+                "en": "Souk and Corral del Carbón"
+              },
+              "targetNodeId": "ga1_alcaiceria",
+              "setFlags": [
+                "camino_zoco"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            },
+            {
+              "label": {
+                "es": "Por el Albaicín",
+                "en": "Through the Albaicín"
+              },
+              "hint": {
+                "es": "Bañuelo y conventos",
+                "en": "Bañuelo and convents"
+              },
+              "targetNodeId": "gb1_banuelo",
+              "setFlags": [
+                "camino_albaicin"
+              ],
+              "distanceM": 900,
+              "walkMin": 13
+            }
+          ]
+        },
+        {
+          "id": "ga1_alcaiceria",
+          "title": {
+            "es": "Alcaicería",
+            "en": "Alcaicería"
+          },
+          "location": {
+            "lat": 37.1757,
+            "lng": -3.5993
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_alcaiceria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_alcaiceria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "especiera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "ceferino",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Alcaicería era el mercado de la seda de la Granada nazarí. Se quemó en 1843 y se reconstruyó con el mismo aire árabe.",
+                "en": "The Alcaicería was the silk market of Nasrid Granada. It burned down in 1843 and was rebuilt in the same Arabic style."
+              },
+              "year": 1843
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "proud",
+              "text": {
+                "es": "Los moriscos nos dejaron dulces de miel, almendra y ajonjolí: soplillos, pestiños, alfajores… Sin ellos Granada sería mucho menos dulce.",
+                "en": "The Moriscos left us sweets of honey, almond and sesame: soplillos, pestiños, alfajores… Without them Granada would be far less sweet."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "thinking",
+              "text": {
+                "es": "Nobles recetas. Pero el pionono no lleva almendra ni miel: es bizcocho, almíbar y crema tostada.",
+                "en": "Noble recipes. But the pionono has neither almond nor honey: it's sponge, syrup and toasted cream."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se vendía en la Alcaicería nazarí?",
+              "en": "What was sold in the Nasrid Alcaicería?"
+            },
+            "options": [
+              {
+                "es": "Caballos",
+                "en": "Horses"
+              },
+              {
+                "es": "Pescado",
+                "en": "Fish"
+              },
+              {
+                "es": "Seda",
+                "en": "Silk"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Seda, el gran negocio de la Granada nazarí.",
+              "en": "Silk, the great business of Nasrid Granada."
+            }
+          },
+          "clue": {
+            "id": "pista_almendra",
+            "text": {
+              "es": "Los moriscos · Los dulces moriscos llevan miel y almendra; el pionono es bizcocho, almíbar y crema.",
+              "en": "The Moriscos · Morisco sweets use honey and almond; the pionono is sponge, syrup and cream."
+            }
+          },
+          "nextNodeId": "ga2_corral",
+          "nextHint": {
+            "es": "Cruza hasta el Corral del Carbón. Dos minutos.",
+            "en": "Cross over to the Corral del Carbón. Two minutes."
+          }
+        },
+        {
+          "id": "ga2_corral",
+          "title": {
+            "es": "Corral del Carbón",
+            "en": "Corral del Carbón"
+          },
+          "location": {
+            "lat": 37.1747,
+            "lng": -3.598
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_corral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_corral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ceferino",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "especiera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Corral del Carbón es una alhóndiga nazarí del siglo XIV, donde se alojaban los mercaderes y guardaban sus mercancías.",
+                "en": "The Corral del Carbón is a 14th-century Nasrid inn where merchants lodged and stored their goods."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "proud",
+              "text": {
+                "es": "Yo soy muy devoto. Admiro al papa Pío IX, al que en España llaman Pío Nono. En 1854 proclamó el dogma de la Inmaculada.",
+                "en": "I'm very devout. I admire Pope Pius IX, whom people in Spain call Pío Nono. In 1854 he proclaimed the dogma of the Immaculate Conception."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Pío Nono? ¿Pio-no-no? ¡Ceferino, que se te ve el plumero!",
+                "en": "Pío Nono? Pio-no-no? Ceferino, you're giving yourself away!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era el Corral del Carbón?",
+              "en": "What was the Corral del Carbón?"
+            },
+            "options": [
+              {
+                "es": "Un castillo",
+                "en": "A castle"
+              },
+              {
+                "es": "Una alhóndiga para mercaderes",
+                "en": "An inn for merchants"
+              },
+              {
+                "es": "Una mezquita",
+                "en": "A mosque"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una alhóndiga: posada y almacén para los mercaderes que llegaban a Granada.",
+              "en": "An inn and warehouse for merchants arriving in Granada."
+            }
+          },
+          "clue": {
+            "id": "pista_pionono",
+            "text": {
+              "es": "Ceferino · Ceferino admira al papa Pío IX, al que en España llaman Pío Nono.",
+              "en": "Ceferino · Ceferino admires Pope Pius IX, known in Spain as Pío Nono."
+            }
+          },
+          "nextNodeId": "g4_plaza",
+          "nextHint": {
+            "es": "A la plaza Isabel la Católica. Dos minutos.",
+            "en": "To Plaza Isabel la Católica. Two minutes."
+          }
+        },
+        {
+          "id": "gb1_banuelo",
+          "title": {
+            "es": "El Bañuelo",
+            "en": "El Bañuelo"
+          },
+          "location": {
+            "lat": 37.1778,
+            "lng": -3.5922
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_banuelo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_banuelo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tornera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "especiera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tornera",
+              "expression": "happy",
+              "text": {
+                "es": "Ave María Purísima. Soy la hermana tornera: atiendo el torno del convento, por donde vendemos nuestros dulces sin que nadie nos vea.",
+                "en": "Hail Mary most pure. I'm the turn sister: I tend the convent's turntable, through which we sell our sweets without anyone seeing us."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Bañuelo es un baño árabe del siglo XI, junto al río Darro. Es uno de los mejor conservados de España.",
+                "en": "El Bañuelo is an 11th-century Arab bath beside the river Darro. It's one of the best preserved in Spain."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tornera",
+              "expression": "thinking",
+              "text": {
+                "es": "En los conventos de Granada se hacen dulces desde hace siglos: yemas, tocino de cielo, roscos… Pero el pionono no nació en un convento.",
+                "en": "Granada's convents have made sweets for centuries: yemas, tocino de cielo, roscos… But the pionono wasn't born in a convent."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el torno de un convento?",
+              "en": "What is a convent's turntable?"
+            },
+            "options": [
+              {
+                "es": "Una ventana giratoria para vender sin ser vistas",
+                "en": "A revolving hatch for selling without being seen"
+              },
+              {
+                "es": "Un horno",
+                "en": "An oven"
+              },
+              {
+                "es": "Una campana",
+                "en": "A bell"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Una ventanita giratoria: dejas el dinero, gira, y aparecen los dulces.",
+              "en": "A little revolving hatch: you leave your money, it turns, and the sweets appear."
+            }
+          },
+          "clue": {
+            "id": "pista_convento",
+            "text": {
+              "es": "Las monjas · Las monjas hacen dulces desde hace siglos, pero la tornera dice que el pionono no nació en un convento.",
+              "en": "The nuns · The nuns have made sweets for centuries, but the turn sister says the pionono wasn't born in a convent."
+            }
+          },
+          "nextNodeId": "gb2_sannicolas",
+          "nextHint": {
+            "es": "Sube al mirador de San Nicolás. Unos 12 minutos de cuesta.",
+            "en": "Climb up to the San Nicolás viewpoint. About 12 minutes uphill."
+          }
+        },
+        {
+          "id": "gb2_sannicolas",
+          "title": {
+            "es": "Mirador de San Nicolás",
+            "en": "San Nicolás viewpoint"
+          },
+          "location": {
+            "lat": 37.1811,
+            "lng": -3.5926
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_sannicolas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_sannicolas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tornera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "ceferino",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el Albaicín hay varios conventos de clausura que venden dulces por el torno. Muchos siguen recetas de hace siglos.",
+                "en": "In the Albaicín there are several cloistered convents that sell sweets through the turntable. Many follow centuries-old recipes."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "happy",
+              "text": {
+                "es": "Hermana, le confieso una cosa: yo quería hacer un dulce que recordara al Santo Padre. Redondito, vestido de blanco… y con su solideo encima.",
+                "en": "Sister, I'll confess something: I wanted to make a sweet that recalled the Holy Father. Round, dressed in white… and with his skullcap on top."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tornera",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Ceferino! ¿Así que el pionono es el papa en pequeñito?",
+                "en": "Ceferino! So the pionono is a tiny pope?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se ve enfrente del mirador de San Nicolás?",
+              "en": "What can you see opposite the San Nicolás viewpoint?"
+            },
+            "options": [
+              {
+                "es": "El mar",
+                "en": "The sea"
+              },
+              {
+                "es": "La Giralda",
+                "en": "The Giralda"
+              },
+              {
+                "es": "La Alhambra",
+                "en": "The Alhambra"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La Alhambra, con Sierra Nevada detrás.",
+              "en": "The Alhambra, with the Sierra Nevada behind it."
+            }
+          },
+          "clue": {
+            "id": "pista_forma",
+            "text": {
+              "es": "Ceferino · Ceferino quería un dulce que recordara al papa: redondito, de blanco y con el solideo encima.",
+              "en": "Ceferino · Ceferino wanted a sweet that recalled the pope: round, in white and with the skullcap on top."
+            }
+          },
+          "nextNodeId": "g4_plaza",
+          "nextHint": {
+            "es": "Baja hasta la plaza Isabel la Católica. Unos 15 minutos.",
+            "en": "Walk down to Plaza Isabel la Católica. About 15 minutes."
+          }
+        },
+        {
+          "id": "g4_plaza",
+          "title": {
+            "es": "Plaza Isabel la Católica",
+            "en": "Plaza Isabel la Católica"
+          },
+          "location": {
+            "lat": 37.176,
+            "lng": -3.5985
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_plaza.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plaza.svg"
+              ],
+              "characters": [
+                {
+                  "id": "especiera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "ceferino",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Otros sabores de Granada: las habas con jamón de la Vega, la tortilla del Sacromonte y el remojón, una ensalada de naranja con bacalao y aceitunas.",
+                "en": "Other flavours of Granada: broad beans with ham from the Vega, the Sacromonte omelette and remojón, an orange salad with salt cod and olives."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_zoco"
+                  ],
+                  "text": {
+                    "es": "Vienes del zoco: lo del pionono no huele a miel ni a almendra, y Ceferino admira mucho al papa. ¿Qué pista seguimos?",
+                    "en": "You've come from the souk: the pionono smells of neither honey nor almond, and Ceferino greatly admires the pope. Which lead shall we follow?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin"
+                  ],
+                  "text": {
+                    "es": "Vienes del Albaicín: la tornera dice que el pionono no es de convento. ¿Qué pista seguimos?",
+                    "en": "You've come from the Albaicín: the turn sister says the pionono isn't a convent sweet. Which lead shall we follow?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué lleva el remojón granadino?",
+              "en": "What goes into Granada remojón?"
+            },
+            "options": [
+              {
+                "es": "Arroz y marisco",
+                "en": "Rice and seafood"
+              },
+              {
+                "es": "Naranja, bacalao y aceitunas",
+                "en": "Orange, salt cod and olives"
+              },
+              {
+                "es": "Chocolate y nata",
+                "en": "Chocolate and cream"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Naranja, bacalao, aceitunas, cebolla y aceite.",
+              "en": "Orange, salt cod, olives, onion and oil."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "especiera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Vamos al obrador de Ceferino o al torno de la hermana?",
+              "en": "Shall we go to Ceferino's workshop or to the sister's turntable?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al obrador",
+                "en": "To the workshop"
+              },
+              "hint": {
+                "es": "Con Ceferino",
+                "en": "With Ceferino"
+              },
+              "targetNodeId": "g4a_obrador",
+              "setFlags": [
+                "version_obrador"
+              ]
+            },
+            {
+              "label": {
+                "es": "Al torno",
+                "en": "To the turntable"
+              },
+              "hint": {
+                "es": "Con la tornera",
+                "en": "With the turn sister"
+              },
+              "targetNodeId": "g4b_torno",
+              "setFlags": [
+                "version_torno"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_obrador",
+          "title": {
+            "es": "El obrador",
+            "en": "The workshop"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "proud",
+              "text": {
+                "es": "Santa Fe, 1897. Una lámina de bizcocho empapada en almíbar, enrollada como un cilindro, en su cestita de papel, y encima crema tostada.",
+                "en": "Santa Fe, 1897. A sheet of sponge soaked in syrup, rolled into a cylinder, in its little paper case, with toasted cream on top."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ceferino",
+              "expression": "happy",
+              "text": {
+                "es": "Lo llamé pionono en honor a Pío Nono. Y mi familia lo sigue haciendo en Santa Fe desde entonces.",
+                "en": "I called it the pionono in honour of Pío Nono. And my family has kept making it in Santa Fe ever since."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_1897",
+            "text": {
+              "es": "Ceferino · En 1897, en Santa Fe, Ceferino Isla creó el pionono y lo llamó así en honor a Pío Nono.",
+              "en": "Ceferino · In 1897, in Santa Fe, Ceferino Isla created the pionono and named it in honour of Pío Nono."
+            }
+          },
+          "nextNodeId": "g5_capilla",
+          "nextHint": {
+            "es": "A la Capilla Real, aquí al lado. Un minuto.",
+            "en": "To the Royal Chapel, right nearby. One minute."
+          }
+        },
+        {
+          "id": "g4b_torno",
+          "title": {
+            "es": "El torno",
+            "en": "The turntable"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tornera",
+              "expression": "thinking",
+              "text": {
+                "es": "Nosotras hacemos yemas y tocinos de cielo desde hace siglos, con las yemas que sobraban. Pero el pionono… eso es de pastelería, de Santa Fe.",
+                "en": "We've made yemas and tocino de cielo for centuries, with leftover egg yolks. But the pionono… that's a pastry-shop sweet, from Santa Fe."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tornera",
+              "expression": "happy",
+              "text": {
+                "es": "El pastelero que lo hizo era muy devoto, eso sí. Le puso el nombre del papa. ¡Qué atrevimiento… y qué rico!",
+                "en": "The pastry cook who made it was very devout, mind. He gave it the pope's name. What cheek… and how delicious!"
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_pasteleria",
+            "text": {
+              "es": "Las monjas · La tornera confirma que el pionono es un dulce de pastelería de Santa Fe, no de convento.",
+              "en": "The nuns · The turn sister confirms the pionono is a Santa Fe pastry-shop sweet, not a convent one."
+            }
+          },
+          "nextNodeId": "g5_capilla",
+          "nextHint": {
+            "es": "A la Capilla Real. Un minuto.",
+            "en": "To the Royal Chapel. One minute."
+          }
+        },
+        {
+          "id": "g5_capilla",
+          "title": {
+            "es": "Capilla Real",
+            "en": "Royal Chapel"
+          },
+          "location": {
+            "lat": 37.1763,
+            "lng": -3.5996
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_capilla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_capilla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "especiera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "tornera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Santa Fe, donde nació el pionono, es la ciudad campamento que fundaron los Reyes Católicos en 1491 durante el asedio de Granada. Allí se firmaron las Capitulaciones con Colón.",
+                "en": "Santa Fe, birthplace of the pionono, is the camp-town founded by the Catholic Monarchs in 1491 during the siege of Granada. The Capitulations with Columbus were signed there."
+              },
+              "year": 1491
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Monjas, moriscos, Ceferino. ¿Quién inventó el pionono?",
+                "en": "Verdict time. Nuns, Moriscos, Ceferino. Who invented the pionono?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién inventó el pionono?",
+              "en": "Who invented the pionono?"
+            },
+            "options": [
+              {
+                "es": "Ceferino Isla, en Santa Fe, en homenaje a Pío Nono",
+                "en": "Ceferino Isla, in Santa Fe, in homage to Pío Nono"
+              },
+              {
+                "es": "Las monjas de clausura",
+                "en": "The cloistered nuns"
+              },
+              {
+                "es": "Los moriscos",
+                "en": "The Moriscos"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Ceferino Isla, en 1897, en Santa Fe. Lo llamó pionono en honor al papa Pío IX, «Pío Nono», y le dio forma que recordara al papa: de blanco y con el solideo de crema tostada.",
+              "en": "Ceferino Isla, in 1897, in Santa Fe. He named it after Pope Pius IX, “Pío Nono”, and shaped it to recall the pope: in white, with a toasted-cream skullcap."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_zoco",
+                    "version_obrador"
+                  ],
+                  "text": {
+                    "es": "El zoco y el obrador: de las especias al almíbar. Eres pastelero de Santa Fe.",
+                    "en": "The souk and the workshop: from spices to syrup. You're a Santa Fe pastry cook."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_zoco",
+                    "version_torno"
+                  ],
+                  "text": {
+                    "es": "El zoco y el torno: sabes distinguir un dulce de convento de uno de pastelería. Eres catador de almíbar.",
+                    "en": "The souk and the turntable: you can tell a convent sweet from a pastry-shop one. You're a syrup taster."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_obrador"
+                  ],
+                  "text": {
+                    "es": "El Albaicín y el obrador: de la cuesta a la crema tostada. Eres aprendiz de Ceferino.",
+                    "en": "The Albaicín and the workshop: from the hill to the toasted cream. You're Ceferino's apprentice."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_torno"
+                  ],
+                  "text": {
+                    "es": "El Albaicín y el torno: has visto girar los dulces. Eres amigo de la hermana tornera.",
+                    "en": "The Albaicín and the turntable: you've seen the sweets spin round. You're the turn sister's friend."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "especiera",
+              "expression": "happy",
+              "text": {
+                "es": "Y ya sabes: si ves un pionono, fíjate bien. ¡Es un papa pequeñito con su solideo!",
+                "en": "And now you know: if you see a pionono, look closely. It's a tiny pope in his skullcap!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "pastelero_santafe",
+          "requires": [
+            "camino_zoco",
+            "version_obrador"
+          ],
+          "title": {
+            "es": "Pastelero de Santa Fe",
+            "en": "Santa Fe pastry cook"
+          }
+        },
+        {
+          "id": "catador_almibar",
+          "requires": [
+            "camino_zoco",
+            "version_torno"
+          ],
+          "title": {
+            "es": "Catador de almíbar",
+            "en": "Syrup taster"
+          }
+        },
+        {
+          "id": "aprendiz_ceferino",
+          "requires": [
+            "camino_albaicin",
+            "version_obrador"
+          ],
+          "title": {
+            "es": "Aprendiz de Ceferino",
+            "en": "Ceferino's apprentice"
+          }
+        },
+        {
+          "id": "amigo_tornera",
+          "requires": [
+            "camino_albaicin",
+            "version_torno"
+          ],
+          "title": {
+            "es": "Amigo de la tornera",
+            "en": "The turn sister's friend"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "especias",
+          "name": {
+            "es": "Las especias",
+            "en": "The spices"
+          },
+          "icon": "collectibles/granada_especias.svg",
+          "awardedAtNodeId": "g1_sanagustin"
+        },
+        {
+          "id": "churros",
+          "name": {
+            "es": "Churros con chocolate",
+            "en": "Churros with chocolate"
+          },
+          "icon": "collectibles/granada_churros.svg",
+          "awardedAtNodeId": "g2_bibrambla"
+        },
+        {
+          "id": "seda_alcaiceria",
+          "name": {
+            "es": "La seda de la Alcaicería",
+            "en": "Alcaicería silk"
+          },
+          "icon": "collectibles/granada_seda.svg",
+          "awardedAtNodeId": "ga1_alcaiceria"
+        },
+        {
+          "id": "alhondiga",
+          "name": {
+            "es": "La alhóndiga",
+            "en": "The merchants' inn"
+          },
+          "icon": "collectibles/granada_alhondiga.svg",
+          "awardedAtNodeId": "ga2_corral"
+        },
+        {
+          "id": "torno",
+          "name": {
+            "es": "El torno",
+            "en": "The turntable"
+          },
+          "icon": "collectibles/granada_torno.svg",
+          "awardedAtNodeId": "gb1_banuelo"
+        },
+        {
+          "id": "yemas",
+          "name": {
+            "es": "Las yemas",
+            "en": "The yemas"
+          },
+          "icon": "collectibles/granada_yemas.svg",
+          "awardedAtNodeId": "gb2_sannicolas"
+        },
+        {
+          "id": "remojon",
+          "name": {
+            "es": "El remojón",
+            "en": "Remojón"
+          },
+          "icon": "collectibles/granada_remojon.svg",
+          "awardedAtNodeId": "g5_capilla"
+        },
+        {
+          "id": "insignia_pionono",
+          "name": {
+            "es": "¿Quién inventó el pionono?",
+            "en": "Who Invented the Pionono?"
+          },
+          "icon": "collectibles/granada_pionono.svg",
+          "awardedAtNodeId": "g6_final"
         }
       ]
     }

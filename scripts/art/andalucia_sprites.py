@@ -65,6 +65,25 @@ CHARACTERS = {
                       main=PAPER, accent="#8A6243", second="#4A3A2E", apron="#8A6243", left="barrel", right="hammer"),
     "pescador": dict(skin="morena", hair=("curly", "#2A1E1A"), beard_=("short", "#2A1E1A"), hat_=("cap", INDIGO), outfit="shirt",
                      main="#E9DCC0", accent=INDIGO, second=INDIGO, left="net", right="shrimp", raise_right=True),
+    # --- Gastronomía de Málaga, Sevilla y Granada -----------------------------
+    "espetero": dict(skin="morena", hair=("short", "#2A1E1A"), beard_=("short", "#2A1E1A"), outfit="shirt", main=PAPER, accent=SEA,
+                     second="#3A5A7A", apron=PAPER, right="espeto", raise_right=True),
+    "jabegote": dict(skin="morena", hair=("curly", "#2A1E1A"), hat_=("kerchief", CLAY, PAPER), outfit="shirt", main="#DCEBE6", accent=CLAY,
+                     second="#3A3A48", left="net", right="oar"),
+    "pasera": dict(skin="morena", hair=("bun", "#3A2A1E"), hat_=("kerchief", PAPER, SEA), outfit="dress", main="#8A5A7A", accent=PAPER,
+                   second="#E9DCC0", apron=PAPER, left="grapes"),
+    "naranjera": dict(skin="media", hair=("bun", "#2A1E1A"), hat_=("flower", PAPER, GOLD), outfit="dress", main="#E8812E", accent=PAPER,
+                      second="#4F8B5A", left="oranges", right="orange", raise_right=True),
+    "escoces": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#C0643A"), beard_=("moustache", "#C0643A"), hat_=("beret", "#2F4A6E"),
+                    outfit="jacket", main="#4A6E4A", accent=CLAY, second="#6E5A44", left="scroll", right="jar", raise_right=True),
+    "aceitunero": dict(skin="media", hair=("slick", "#2A1E1A"), beard_=("moustache", "#2A1E1A"), hat_=("cap", "#4A3A2E"), outfit="vest",
+                       main=PAPER, accent=OLIVE, second="#3A3A48", left="olives"),
+    "especiera": dict(skin="media", hair=("long", "#2A1E1A"), hat_=("kerchief", "#D98A2E", "#6E2C5E"), outfit="dress", main="#6E2C5E",
+                      accent=GOLD, second="#D98A2E", apron="#F2E3C4", left="spicesack"),
+    "ceferino": dict(skin="clara", hair=("slick", "#3A2A1E"), beard_=("moustache", "#3A2A1E"), hat_=("toque", PAPER), outfit="shirt",
+                     main=PAPER, accent="#C9A05E", second="#3A3A48", apron=PAPER, right="pastrytray", raise_right=True),
+    "tornera": dict(skin="clara", hair=None, hat_=("veil", "#2B2A33"), outfit="habit", main="#2B2A33", accent=PAPER, left="box",
+                    extra=f'<path d="M66 84Q66 50 100 48Q134 50 134 84" fill="none" stroke="{PAPER}" stroke-width="5"/>', neck=PAPER),
 }
 
 if __name__ == "__main__":
