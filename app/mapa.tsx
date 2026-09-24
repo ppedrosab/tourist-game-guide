@@ -1,5 +1,6 @@
 import { useIsFocused } from "@react-navigation/native";
 import { router } from "expo-router";
+import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { Button3D, Chip } from "@/components/ui";
@@ -7,6 +8,7 @@ import { distanceM, geofenceTargets } from "@/engine/geo";
 import { useI18n } from "@/i18n";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
 import { useUserPosition } from "@/hooks/useUserPosition";
+import { useProgress } from "@/store/progress";
 import { RouteMap } from "@/map/RouteMap";
 import { branchColors, colors, type } from "@/theme";
 
@@ -16,6 +18,11 @@ export default function Mapa() {
   const current = useCurrentRun();
   const focused = useIsFocused();
   const user = useUserPosition(focused);
+  const track = useProgress((s) => s.track);
+  const routeId = current?.route.id;
+  useEffect(() => {
+    track({ name: "map_opened", routeId });
+  }, [track, routeId]);
   const close = () => router.back();
 
   if (!current) {

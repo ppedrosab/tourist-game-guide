@@ -72,7 +72,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const node = getNode(route, run.currentNodeId);
   // Nodo con ubicación: la escena espera a la llegada (guardada en el progreso). Los narrativos empiezan ya.
   const arrived = hasArrived(route, run);
-  const watch = useArrivalWatcher(node, !arrived, () => markArrived(route));
+  const watch = useArrivalWatcher(node, !arrived, () => markArrived(route, "gps"));
   const steps = useMemo(() => buildSteps(route, node, run.flags), [route, node, run.flags]);
   const [index, setIndex] = useState(0);
   const step = steps[Math.min(index, steps.length - 1)];
@@ -127,7 +127,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
         {!arrived ? (
-          <ArrivalPanel node={node} demoMode={demoMode} watch={watch} onArrive={() => markArrived(route)} />
+          <ArrivalPanel node={node} demoMode={demoMode} watch={watch} onArrive={(method) => markArrived(route, method)} />
         ) : (
           <StepView
             step={step}

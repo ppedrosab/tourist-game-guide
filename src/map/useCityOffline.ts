@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import type { CityPack } from "@/content/types";
+import { useProgress } from "@/store/progress";
 import { cityOfflineStatus, deleteCity, downloadCity, offlineSupported } from "./offline";
 
 export type CityOfflineState =
@@ -13,6 +14,8 @@ export type CityOfflineState =
 /** Estado y acciones del mapa sin conexión de una ciudad. */
 export function useCityOffline(pack: CityPack | undefined) {
   const [state, setState] = useState<CityOfflineState>(offlineSupported ? { kind: "checking" } : { kind: "unsupported" });
+  const track = useProgress((s) => s.track);
+  const cityId = pack?.id ?? "";
 
   const refresh = useCallback(async () => {
     if (!pack || !offlineSupported) return;
@@ -37,23 +40,35 @@ export function useCityOffline(pack: CityPack | undefined) {
   const download = useCallback(async () => {
     if (!pack || !offlineSupported) return;
     setState({ kind: "downloading", percentage: 0, bytes: 0 });
+    track({ name: "offline_map", cityId, action: "download" });
+    let done = false;
     try {
       await downloadCity(
         pack,
-        (percentage, bytes) =>
-          setState(percentage >= 100 ? { kind: "complete", bytes } : { kind: "downloading", percentage, bytes }),
-        (message) => setState({ kind: "error", message }),
+        (percentage, bytes) => {
+          if (percentage >= 100 && !done) {
+            done = true;
+            track({ name: "offline_map", cityId, action: "complete" });
+          }
+          setState(percentage >= 100 ? { kind: "complete", bytes } : { kind: "downloading", percentage, bytes });
+        },
+        (message) => {
+          track({ name: "offline_map", cityId, action: "error" });
+          setState({ kind: "error", message });
+        },
       );
     } catch (e) {
+      track({ name: "offline_map", cityId, action: "error" });
       setState({ kind: "error", message: String(e) });
     }
-  }, [pack]);
+  }, [pack, track, cityId]);
 
   const remove = useCallback(async () => {
     if (!pack) return;
     await deleteCity(pack);
+    track({ name: "offline_map", cityId, action: "delete" });
     setState({ kind: "none" });
-  }, [pack]);
+  }, [pack, track, cityId]);
 
   return { state, download, remove };
 }

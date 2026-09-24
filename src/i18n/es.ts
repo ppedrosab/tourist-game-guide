@@ -69,6 +69,8 @@ export const es = {
     idiomaAuto: "Automático",
     modoDemo: "Modo demo",
     modoDemoTexto: "Botón «Simular llegada» para jugar la ruta desde casa.",
+    estadisticas: "Ayudar a mejorar la app",
+    estadisticasTexto: "Estadísticas anónimas de uso: qué caminos se eligen, qué retos cuestan más. Nunca tu ubicación.",
     verBienvenida: "Ver bienvenida",
   },
   ciudad: {

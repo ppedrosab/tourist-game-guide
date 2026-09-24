@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
+import { AnalyticsEvent, ArrivalMethod, track } from "@/analytics";
 import type { Choice, PlayerProgress, Route } from "@/content/types";
 import {
   advance as advanceRun,
@@ -42,13 +43,18 @@ type ProgressStore = {
   language: "auto" | "es" | "en";
   setLanguage: (language: "auto" | "es" | "en") => void;
   setSubtitles: (on: boolean) => void;
+  /** Consentimiento para estadísticas anónimas de uso (desactivado por defecto). */
+  analytics: boolean;
+  setAnalytics: (on: boolean) => void;
+  /** Registra un evento solo si hay consentimiento. */
+  track: (event: AnalyticsEvent) => void;
 
   /** Empieza (o reinicia) la ruta desde el nodo inicial. */
   start: (cityId: string, route: Route) => PlayerProgress;
   /** Avanza la partida de la ruta; el progreso queda guardado en cada nodo. */
   advance: (route: Route, choice?: Choice) => PlayerProgress;
   /** Registra la llegada al nodo actual (GPS, geofence, "Ya estoy aquí" o modo demo). */
-  markArrived: (route: Route) => void;
+  markArrived: (route: Route, method: ArrivalMethod) => void;
   /** Apunta si se acertó el reto del nodo actual (solo cuenta el primer intento). */
   recordChallenge: (route: Route, correct: boolean) => void;
   /** Borra la partida de una ruta sin tocar la colección. */
@@ -84,7 +90,13 @@ export const useProgress = create<ProgressStore>()(
         }));
         return run;
       };
+      const emit = (event: AnalyticsEvent) => {
+        if (get().analytics) track(event);
+      };
       return {
+        analytics: false,
+        setAnalytics: (analytics) => set({ analytics }),
+        track: emit,
         runs: {},
         collection: EMPTY,
         hydrated: false,
@@ -94,25 +106,46 @@ export const useProgress = create<ProgressStore>()(
         subtitles: true,
         setVoices: (voices) => set({ voices }),
         language: "auto",
-        setLanguage: (language) => set({ language }),
+        setLanguage: (language) => {
+          set({ language });
+          emit({ name: "language_changed", language });
+        },
         setSubtitles: (subtitles) => set({ subtitles }),
-        start: (cityId, route) => save(startRoute(cityId, route)),
+        start: (cityId, route) => {
+          const replay = get().runs[route.id] !== undefined;
+          const run = save(startRoute(cityId, route));
+          emit({ name: "route_started", routeId: route.id, cityId, replay });
+          return run;
+        },
         advance: (route, choice) => {
           const run = get().runs[route.id];
           if (!run) throw new Error(`No hay partida empezada en "${route.id}"`);
-          return save(advanceRun(route, run, choice), route);
+          const next = save(advanceRun(route, run, choice), route);
+          if (choice) {
+            emit({ name: "decision_made", routeId: route.id, nodeId: run.currentNodeId, targetNodeId: choice.targetNodeId });
+          }
+          if (next.completedAt && !run.completedAt) {
+            const minutes = Math.round((Date.parse(next.completedAt) - Date.parse(next.startedAt)) / 60000);
+            const { stars } = starsFor(route, next);
+            emit({ name: "route_completed", routeId: route.id, endingId: next.endingId, stars, minutes });
+          }
+          return next;
         },
         recordChallenge: (route, correct) => {
           const run = get().runs[route.id];
           if (!run) return;
           const next = recordChallengeRun(route, run, correct);
-          if (next !== run) save(next);
+          if (next === run) return;
+          save(next);
+          emit({ name: "challenge_answered", routeId: route.id, nodeId: run.currentNodeId, correct });
         },
-        markArrived: (route) => {
+        markArrived: (route, method) => {
           const run = get().runs[route.id];
           if (!run) return;
           const next = markArrivedRun(route, run);
-          if (next !== run) save(next);
+          if (next === run) return;
+          save(next);
+          emit({ name: "stop_arrived", routeId: route.id, nodeId: run.currentNodeId, method });
         },
         discard: (routeId) =>
           set((s) => {
@@ -125,7 +158,8 @@ export const useProgress = create<ProgressStore>()(
       name: "progreso",
       version: 1,
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles, language }) => ({
+      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles, language, analytics }) => ({
+        analytics,
         language,
         runs,
         collection,

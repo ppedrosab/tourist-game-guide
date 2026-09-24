@@ -16,6 +16,8 @@ export default function Perfil() {
   const { t } = useI18n();
   const demoMode = useProgress((s) => s.demoMode);
   const setDemoMode = useProgress((s) => s.setDemoMode);
+  const analytics = useProgress((s) => s.analytics);
+  const setAnalytics = useProgress((s) => s.setAnalytics);
   const language = useProgress((s) => s.language);
   const setLanguage = useProgress((s) => s.setLanguage);
   const options: { value: LangSetting; label: string }[] = [{ value: "auto", label: t("perfil.idiomaAuto") }, ...LANGS];
@@ -51,6 +53,18 @@ export default function Perfil() {
             onValueChange={setDemoMode}
             trackColor={{ true: colors.sea }}
             accessibilityLabel={t("perfil.modoDemo")}
+          />
+        </View>
+        <View style={styles.row}>
+          <View style={{ flex: 1 }}>
+            <Text style={type.label}>{t("perfil.estadisticas")}</Text>
+            <Text style={type.caption}>{t("perfil.estadisticasTexto")}</Text>
+          </View>
+          <Switch
+            value={analytics}
+            onValueChange={setAnalytics}
+            trackColor={{ true: colors.sea }}
+            accessibilityLabel={t("perfil.estadisticas")}
           />
         </View>
       </Panel>

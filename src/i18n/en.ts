@@ -67,6 +67,8 @@ export const en: Strings = {
     idiomaAuto: "Automatic",
     modoDemo: "Demo mode",
     modoDemoTexto: "“Simulate arrival” button to play the route from home.",
+    estadisticas: "Help improve the app",
+    estadisticasTexto: "Anonymous usage stats: which paths people choose, which challenges are hardest. Never your location.",
     verBienvenida: "See welcome",
   },
   ciudad: {

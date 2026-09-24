@@ -6,7 +6,7 @@ import { colors, type } from "@/theme";
 import { Button3D } from "../ui/Button3D";
 import { Panel } from "../ui/Panel";
 
-type Props = { node: StoryNode; demoMode: boolean; watch: ArrivalWatch; onArrive: () => void };
+type Props = { node: StoryNode; demoMode: boolean; watch: ArrivalWatch; onArrive: (method: "manual" | "demo") => void };
 
 function gpsText({ status, distance }: ArrivalWatch, { t, distance: fmt }: ReturnType<typeof useI18n>): string {
   switch (status) {
@@ -37,9 +37,16 @@ export function ArrivalPanel({ node, demoMode, watch, onArrive }: Props) {
         {gpsText(watch, i18n)}
       </Text>
       {watch.manualFallback ? (
-        <Button3D label={t("jugar.yaEstoy")} icon="pin" variant={demoMode ? "secondary" : "sea"} onPress={onArrive} />
+        <Button3D
+          label={t("jugar.yaEstoy")}
+          icon="pin"
+          variant={demoMode ? "secondary" : "sea"}
+          onPress={() => onArrive("manual")}
+        />
       ) : null}
-      {demoMode ? <Button3D label={t("jugar.simular")} icon="pin" variant="sea" onPress={onArrive} /> : null}
+      {demoMode ? (
+        <Button3D label={t("jugar.simular")} icon="pin" variant="sea" onPress={() => onArrive("demo")} />
+      ) : null}
     </Panel>
   );
 }

@@ -29,7 +29,7 @@ export function GeofenceSync() {
       const { runs, markArrived } = useProgress.getState();
       for (const run of Object.values(runs)) {
         const route = findRoute(run.routeId)?.route;
-        if (route && !run.completedAt && pendingArrivalFor(run, pending)) markArrived(route);
+        if (route && !run.completedAt && pendingArrivalFor(run, pending)) markArrived(route, "geofence");
       }
     };
     apply();
