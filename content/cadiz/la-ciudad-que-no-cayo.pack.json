@@ -102,6 +102,19 @@
       },
       "avatar": "sprites/chirigotero/chirigotero_neutral.svg",
       "era": "hoy"
+    },
+    {
+      "id": "garumero",
+      "name": {
+        "es": "El Garumero",
+        "en": "The Garumero"
+      },
+      "description": {
+        "es": "Romano de Gades que fabrica garum, la salsa de pescado fermentado más famosa del Imperio. Curioso, zalamero y siempre con su tablilla de cera.",
+        "en": "A Roman from Gades who makes garum, the most famous fermented fish sauce in the Empire. Curious, smooth-talking and never without his wax tablet."
+      },
+      "avatar": "sprites/garumero/garumero_neutral.svg",
+      "era": "s. I"
     }
   ],
   "routes": [
@@ -1308,8 +1321,8 @@
               "characterId": "pescaera",
               "expression": "thinking",
               "text": {
-                "es": "Tenemos tres sospechosos: el gato de esta plaza, que se come todo lo que huele a pescao; la chirigota, que nos quiere copiar las recetas pa' una copla…",
-                "en": "We've got three suspects: the cat in this square, who eats anything that smells of fish; the chirigota, who want to copy our recipes for one of their songs…"
+                "es": "Tenemos tres sospechosos: el gato de esta plaza, que se come todo lo que huele a pescao; el Garumero, un romano muy raro que anda por ahí apuntando recetas pa' su garum…",
+                "en": "We've got three suspects: the cat in this square, who eats anything that smells of fish; the Garumero, a very odd Roman who goes around writing down recipes for his garum…"
               }
             },
             {
@@ -1554,7 +1567,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "chirigotero",
+                  "id": "garumero",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -1562,11 +1575,20 @@
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "happy",
               "text": {
-                "es": "¡Tararí, tararí! ¡Chirigotero de La Viña, pa' servirle! Aquí nació medio Carnaval de Cádiz. Y en Carnaval hay fiestas pa' comer: la erizada, la ostionada, la pestiñada…",
-                "en": "Tra-la-la! A chirigota singer from La Viña, at your service! Half of Cádiz Carnival was born here. And Carnival has feasts for eating: the erizada, the ostionada, the pestiñada…"
+                "es": "¡Salve, amigos! Soy el Garumero, de Gades, que así llamábamos a Cádiz. Hace dos mil años aquí hacíamos garum: tripas de pescado y sal, meses fermentando al sol en piletas. ¡Lo más fino de Roma!",
+                "en": "Salve, friends! I'm the Garumero, from Gades, as we called Cádiz. Two thousand years ago we made garum here: fish guts and salt, fermenting for months in the sun in stone vats. The finest thing in Rome!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
+              "expression": "happy",
+              "text": {
+                "es": "Y hoy en La Viña, en Carnaval, se hacen fiestas pa' comer: la erizada, la ostionada, la pestiñada…",
+                "en": "And today in La Viña, at Carnival, there are feasts for eating: the erizada, the ostionada, the pestiñada…"
               }
             },
             {
@@ -1581,17 +1603,17 @@
               "characterId": "pescaera",
               "expression": "thinking",
               "text": {
-                "es": "Oye… ¿y esa copla que venías cantando, la de las tortillitas? ¿De dónde la has sacado?",
-                "en": "Hang on… that song you were singing, the one about shrimp fritters? Where did you get it from?"
+                "es": "Oye… ¿y esa tablilla donde vas apuntando todo lo que decimos? ¿No será pa' copiarnos las recetas?",
+                "en": "Hang on… that tablet where you keep writing down everything we say? It wouldn't be to copy our recipes, would it?"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "nervous",
               "text": {
-                "es": "¿Yo? Na, na… cosas que se oyen por el barrio.",
-                "en": "Me? Oh, nothing… just something you hear around the neighbourhood."
+                "es": "¿Yo? Na, na… notas de viaje.",
+                "en": "Me? Oh, nothing… just travel notes."
               }
             }
           ],
@@ -1622,10 +1644,10 @@
             }
           },
           "clue": {
-            "id": "pista_copla",
+            "id": "pista_tablilla",
             "text": {
-              "es": "La chirigota · El chirigotero cantaba una copla con la receta de las tortillitas.",
-              "en": "The chirigota · The chirigota singer was singing a song with the shrimp fritter recipe."
+              "es": "El Garumero · Apunta en su tablilla de cera todas las recetas de pescado que oye.",
+              "en": "The Garumero · He writes down every fish recipe he hears on his wax tablet."
             }
           },
           "nextNodeId": "ga2_mentidero",
@@ -1985,7 +2007,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "chirigotero",
+                  "id": "garumero",
                   "expression": "talking",
                   "position": "right"
                 }
@@ -1993,16 +2015,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "talking",
               "text": {
-                "es": "¡Otra vez nos vemos! ¿Sabéis qué se bebe con todo esto? Vino de la tierra: del Marco de Jerez, el triángulo entre Jerez, Sanlúcar y El Puerto de Santa María.",
-                "en": "We meet again! Do you know what goes with all this? Local wine: from the Marco de Jerez, the triangle between Jerez, Sanlúcar and El Puerto de Santa María."
+                "es": "¡Salve de nuevo! En tiempos de Roma ya salían de esta tierra ánforas de vino y de garum hacia todo el Imperio. Hoy el vino de aquí es del Marco de Jerez: el triángulo entre Jerez, Sanlúcar y El Puerto de Santa María.",
+                "en": "Salve again! In Roman times, amphorae of wine and garum were already leaving this land for the whole Empire. Today the wine here comes from the Marco de Jerez: the triangle between Jerez, Sanlúcar and El Puerto de Santa María."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "nervous",
               "variants": [
                 {
@@ -2010,8 +2032,8 @@
                     "camino_mar"
                   ],
                   "text": {
-                    "es": "Y lo de la copla de las tortillitas… luego os lo explico, ¿eh?",
-                    "en": "And about that shrimp fritter song… I'll explain later, all right?"
+                    "es": "Y lo de mi tablilla… solo son notas, ¿eh?",
+                    "en": "And about my tablet… they're just notes, all right?"
                   }
                 },
                 {
@@ -2101,7 +2123,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "happy",
               "text": {
                 "es": "El fino se cría en barricas bajo un velo de levaduras, la «flor», que lo protege del aire. Y se va mezclando el vino joven con el viejo, bota a bota: es el sistema de criaderas y soleras.",
@@ -2117,11 +2139,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "nervous",
               "text": {
-                "es": "Por cierto… tengo una copla nueva. Va de una peña que pierde su recetario. Pura casualidad, ¿eh?",
-                "en": "By the way… I've got a new song. It's about a club that loses its recipe book. Pure coincidence, all right?"
+                "es": "Por cierto… en mi tablilla tengo una receta nueva: «garum a la gaditana». Pura inspiración, ¿eh?",
+                "en": "By the way… I've got a new recipe on my tablet: “garum Cádiz-style”. Pure inspiration, all right?"
               }
             },
             {
@@ -2129,16 +2151,16 @@
               "characterId": "chicharronero",
               "expression": "thinking",
               "text": {
-                "es": "Casualidad, dice…",
-                "en": "Coincidence, he says…"
+                "es": "Inspiración, dice…",
+                "en": "Inspiration, he says…"
               }
             }
           ],
           "clue": {
-            "id": "pista_copla_nueva",
+            "id": "pista_receta_nueva",
             "text": {
-              "es": "La chirigota · El chirigotero tiene una copla nueva sobre una peña que pierde su recetario.",
-              "en": "The chirigota · The chirigota singer has a new song about a club that loses its recipe book."
+              "es": "El Garumero · Tiene en su tablilla una receta nueva de «garum a la gaditana».",
+              "en": "The Garumero · He has a new recipe for “garum Cádiz-style” on his tablet."
             }
           },
           "nextNodeId": "g5_ancha",
@@ -2156,7 +2178,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "happy",
               "text": {
                 "es": "La manzanilla solo puede criarse en Sanlúcar de Barrameda. La brisa del mar y la humedad hacen que su velo de flor sea más grueso, y el vino sale más ligero y con un punto salino.",
@@ -2181,7 +2203,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "chirigotero",
+              "characterId": "garumero",
               "expression": "thinking",
               "text": {
                 "es": "Pescaera, te estás tocando el mandil sin parar…",
@@ -2319,8 +2341,8 @@
               "characterId": "pescaera",
               "expression": "thinking",
               "text": {
-                "es": "Hemos vuelto donde empieza el Carnaval, detective. Repasa el cuaderno: el gato, la chirigota… y yo. ¿Quién se llevó el recetario?",
-                "en": "We're back where Carnival starts, detective. Go over your notebook: the cat, the chirigota… and me. Who took the recipe book?"
+                "es": "Hemos vuelto donde empieza el Carnaval, detective. Repasa el cuaderno: el gato, el Garumero… y yo. ¿Quién se llevó el recetario?",
+                "en": "We're back where Carnival starts, detective. Go over your notebook: the cat, the Garumero… and me. Who took the recipe book?"
               }
             }
           ],
@@ -2336,8 +2358,8 @@
                 "en": "The cat, who ate it along with the fish bones"
               },
               {
-                "es": "La chirigota, para hacer una copla",
-                "en": "The chirigota, to make a song"
+                "es": "El Garumero, para mejorar su garum",
+                "en": "The Garumero, to improve his garum"
               },
               {
                 "es": "Nadie: lo llevaba la Pescaera en el mandil",
@@ -2346,8 +2368,8 @@
             ],
             "correctIndex": 2,
             "explanation": {
-              "es": "El gato solo robaba pescado y chicharrones, y la chirigota solo cantaba lo que se oía por el barrio. El recetario estuvo todo el rato en el bolsillo del mandil.",
-              "en": "The cat only stole fish and chicharrones, and the chirigota only sang what was going round the neighbourhood. The recipe book was in the apron pocket the whole time."
+              "es": "El gato solo robaba pescado y chicharrones, y el Garumero solo tomaba notas en su tablilla. El recetario estuvo todo el rato en el bolsillo del mandil.",
+              "en": "The cat only stole fish and chicharrones, and the Garumero only took notes on his tablet. The recipe book was in the apron pocket the whole time."
             }
           },
           "nextNodeId": "g7_final"

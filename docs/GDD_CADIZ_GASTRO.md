@@ -13,7 +13,7 @@ cada plato para descubrir quién se lo llevó. **Tres sospechosos**; cada pista 
 | Sospechoso | Pistas |
 | --- | --- |
 | **El gato** | Espinas y huellas junto al puesto de pescado (mercado) · falta un chicharrón (San Francisco) |
-| **La chirigota** | Una copla con la receta de las tortillitas (La Viña) · una copla nueva sobre un recetario perdido (fino) |
+| **El Garumero** | Apunta en su tablilla todas las recetas de pescado (La Viña) · tiene una receta nueva de «garum a la gaditana» (fino) |
 | **La Pescaera** | Se equivoca con los ingredientes (Mentidero) · lo lleva todo en el mandil (San Antonio) · se toca el mandil al hablar de manzanilla |
 
 Veredicto: nadie se lo llevó; el recetario estaba en el bolsillo del mandil de la Pescaera.
@@ -26,7 +26,7 @@ Personajes propios de esta ruta (no se repite ninguno de las rutas de historia):
 | --- | --- | --- |
 | `pescaera` (guía) | Vendedora del Mercado: coleta, pañuelo rojo, camiseta de rayas, mandil verde y un pescado | Defiende las recetas del **mar**; lleva el camino del mar |
 | `chicharronero` (coguía) | Maestro chicharronero: bata y gorro blancos, bigote y un papel con chicharrones | Defiende las recetas de la **tierra**; lleva el camino de la tierra |
-| `chirigotero` | Cantante de chirigota de La Viña: bombín, peluca naranja y pito de caña | Sospechoso; explica los vinos |
+| `garumero` | Romano de Gades que fabrica garum: túnica corta, delantal, ánfora y tablilla de cera | Sospechoso; explica el garum y los vinos |
 
 Los dos guías se pican entre sí: en el mercado discuten por dónde empezar y decide el jugador.
 
@@ -47,11 +47,11 @@ Huecos del motor: `dinero` (mar) = **recetas del mar**; `poder` (arcilla) = **re
 | --- | --- | --- | --- |
 | g1 | Plaza de las Flores | Pescaíto frito en cartucho, cazón en adobo («bienmesabe») | Cartucho de pescaíto |
 | g2 | Mercado Central | Atún rojo de almadraba, ronqueo, garum · **decisión 1** | — |
-| ga1 (mar) | Barrio de La Viña | Erizos y ortiguillas; fiestas gastronómicas del Carnaval | Erizo |
+| ga1 (mar) | Barrio de La Viña (Garumero) | Garum romano, erizos y ortiguillas; fiestas gastronómicas del Carnaval | Erizo |
 | ga2 (mar) | Plaza del Mentidero | Tortillitas de camarones | Tortillita |
 | gb1 (tierra) | Plaza de San Francisco | Chicharrones de Cádiz | Chicharrón con limón |
 | gb2 (tierra) | Plaza de San Antonio | Papas aliñás | Papas aliñás |
-| g4 | Plaza de Mina (Chirigotero) | Marco de Jerez · **decisión 2** | — |
+| g4 | Plaza de Mina (Garumero) | Marco de Jerez · **decisión 2** | — |
 | g4a / g4b | (narrativos) | Fino de Jerez (flor, criaderas y soleras) / manzanilla de Sanlúcar | — |
 | g5 | Calle Ancha | Pan de Cádiz; tocino de cielo (**leyenda** de las yemas) | Pan de Cádiz |
 | g6 / g7 | Plaza de San Juan de Dios | Veredicto y foto brindando | Recetario |

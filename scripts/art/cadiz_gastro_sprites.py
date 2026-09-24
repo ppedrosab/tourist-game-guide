@@ -115,7 +115,62 @@ def chicharronero():
     return lambda e: svg(e, [SHADOW, legs, coat, arms, head, face(e), rim])
 
 
+# ---------------------------------------------------------------------------
+# El Garumero: romano de Gades que fabrica garum. Túnica corta, delantal, ánfora y tablilla
+# ---------------------------------------------------------------------------
+GS = "#D9A27A"; GSD = "#B98260"; TUN = "#C9A77E"; TUND = "#A88A63"
+
+
+def garumero():
+    legs = g("legs",
+             limb("M90 206L89 240", GS, 9), limb("M110 206L111 240", GS, 9),
+             f'<path d="M84 228L95 234M84 236L95 242M105 234L116 228M105 242L116 236" stroke="#6E4C33" stroke-width="2"/>',
+             f'<path d="M78 248Q80 241 90 242Q97 243 96 248Z" fill="#8A6243" stroke="{INK}" stroke-width="2.4"/>',
+             f'<path d="M104 248Q103 243 110 242Q120 241 122 248Z" fill="#8A6243" stroke="{INK}" stroke-width="2.4"/>')
+    amphora = g("amphora",
+                f'<path d="M160 118Q180 130 178 170Q176 196 166 212L160 222L154 212Q144 196 142 170Q140 130 160 118Z" fill="#B8683A" stroke="{INK}" stroke-width="2.4"/>',
+                f'<path d="M160 120Q178 132 176 170Q174 194 164 212L160 222Q168 190 166 160Q164 132 160 120Z" fill="#96532C"/>',
+                f'<path d="M152 106H168V118H152Z" fill="#B8683A" stroke="{INK}" stroke-width="2"/>',
+                f'<path d="M152 112Q140 110 144 126M168 112Q180 110 176 126" fill="none" stroke="{INK}" stroke-width="2.4"/>',
+                f'<path d="M146 150Q160 156 174 150" fill="none" stroke="#F0C69A" stroke-width="2"/>',
+                # etiqueta pintada: un pececillo
+                f'<path d="M152 166Q160 160 166 166Q160 172 152 166ZM166 166L170 162V170Z" fill="#F4E4CC" stroke="{INK}" stroke-width="1"/>')
+    tunic = g("tunic",
+              f'<path d="M72 118Q100 106 128 118L134 210L66 210Z" fill="{TUN}" stroke="{INK}" stroke-width="2.8"/>',
+              f'<path d="M104 112Q120 112 128 118L134 210L112 210Z" fill="{TUND}"/>',
+              f'<path d="M88 112Q100 122 112 112" fill="none" stroke="{TUND}" stroke-width="3"/>',
+              f'<path d="M68 156L132 156L133 166L67 166Z" fill="#6E4C33" stroke="{INK}" stroke-width="2"/>',
+              f'<circle cx="100" cy="161" r="3.4" fill="{GOLD}" stroke="{INK}" stroke-width="1.2"/>',
+              # delantal de faena con manchas
+              f'<path d="M82 166L118 166L122 206L78 206Z" fill="#E6DCC6" stroke="{INK}" stroke-width="2"/>',
+              *[f'<circle cx="{x}" cy="{y}" r="{r}" fill="#A86F47" opacity=".5"/>' for x, y, r in [(90, 180, 3), (108, 190, 2.4), (98, 198, 2)]],
+              f'<path d="M66 208Q100 214 134 208" fill="none" stroke="{INK}" stroke-width="1.6"/>')
+    arms = g("arms",
+             limb("M76 124Q58 132 50 146", GS, 11),
+             limb("M124 124Q142 132 152 146", GS, 11),
+             # tablilla de cera con estilo
+             f'<path d="M28 138L60 132L64 160L32 166Z" fill="#8A6243" stroke="{INK}" stroke-width="2"/>',
+             f'<path d="M32 142L58 137L61 157L35 162Z" fill="#E0C06A" stroke="{INK}" stroke-width="1.2"/>',
+             *[f'<path d="M36 {146 + k * 5}L56 {142 + k * 5}" stroke="#8A6243" stroke-width="1"/>' for k in range(3)],
+             f'<circle cx="50" cy="148" r="6" fill="{GS}" stroke="{INK}" stroke-width="2.4"/>',
+             f'<circle cx="152" cy="148" r="6" fill="{GS}" stroke="{INK}" stroke-width="2.4"/>')
+    head = g("head",
+             f'<path d="M90 96L90 114L110 114L110 96Z" fill="{GS}"/>',
+             f'<ellipse cx="61" cy="80" rx="6" ry="8" fill="{GS}" stroke="{INK}" stroke-width="2.6"/>',
+             f'<ellipse cx="139" cy="80" rx="6" ry="8" fill="{GS}" stroke="{INK}" stroke-width="2.6"/>',
+             f'<path d="M62 74Q60 36 100 34Q140 36 138 74Q140 104 100 108Q60 104 62 74Z" fill="{GS}" stroke="{INK}" stroke-width="3"/>',
+             f'<path d="M118 40Q140 50 138 74Q138 100 110 107Q128 90 126 66Q124 48 118 40Z" fill="{GSD}" opacity=".5"/>',
+             # calvo por arriba, flequillo de rizos a los lados
+             *[f'<circle cx="{x}" cy="{y}" r="6" fill="#4A3222" stroke="{INK}" stroke-width="1.6"/>' for x, y in [(64, 60), (66, 48), (72, 40), (136, 60), (134, 48), (128, 40)]],
+             f'<ellipse cx="96" cy="46" rx="16" ry="6" fill="#FFF" opacity=".25"/>',
+             # barba de tres días
+             f'<path d="M70 94Q76 108 100 110Q124 108 130 94Q126 104 100 106Q74 104 70 94Z" fill="#6B5343" opacity=".45"/>',
+             f'<ellipse cx="78" cy="92" rx="6" ry="3.4" fill="#E88A78" opacity=".35"/><ellipse cx="122" cy="92" rx="6" ry="3.4" fill="#E88A78" opacity=".35"/>')
+    rim = g("rim", f'<path d="M70 126L68 206" fill="none" stroke="#FFF" stroke-width="2" opacity=".4"/>')
+    return lambda e: svg(e, [SHADOW, legs, amphora, tunic, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
+
+
 if __name__ == "__main__":
-    for key, build in [("pescaera", pescaera()), ("chicharronero", chicharronero())]:
+    for key, build in [("pescaera", pescaera()), ("chicharronero", chicharronero()), ("garumero", garumero())]:
         write(key, build)
     print("guías gastronómicos de Cádiz generados")
