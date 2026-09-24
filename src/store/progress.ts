@@ -17,7 +17,7 @@ type ProgressStore = {
   hydrated: boolean;
   /**
    * Modo demo: botón "Simular llegada" para jugar la ruta desde casa.
-   * Activo por defecto hasta que exista la geolocalización (fase 4).
+   * Activo por defecto solo en desarrollo; se cambia en Perfil.
    */
   demoMode: boolean;
   setDemoMode: (on: boolean) => void;
@@ -59,7 +59,7 @@ export const useProgress = create<ProgressStore>()(
         runs: {},
         collection: EMPTY,
         hydrated: false,
-        demoMode: true,
+        demoMode: __DEV__,
         setDemoMode: (demoMode) => set({ demoMode }),
         start: (cityId, route) => save(startRoute(cityId, route)),
         advance: (route, choice) => {

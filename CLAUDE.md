@@ -39,9 +39,21 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   coleccionables de un nodo se ganan al **completarlo** (salir de él), no al entrar.
 - `src/engine/scene.ts`: pasos de un nodo para la pantalla de juego. `outline.ts`: ficha y progreso.
 - `src/store/progress.ts`: zustand + AsyncStorage (funciona en Expo Go). Colección acumulada entre
-  partidas y ajuste `demoMode` (activo por defecto hasta la fase 4).
+  partidas y ajuste `demoMode` (activo por defecto solo en desarrollo, `__DEV__`).
 - Todas las pantallas leen del pack y del store. Tests: los 4 finales son alcanzables.
 - `babel.config.js` activa `unstable_transformImportMeta` (zustand usa `import.meta` en web).
+
+**Fase 4 hecha** (geolocalización; sin probar aún en dispositivo real):
+- `src/engine/geo.ts` (puro, con tests): distancias, `isInside` con margen por precisión (máx. 20 m),
+  `geofenceTargets` (nodo actual si no se ha llegado; si no, primeras paradas físicas de cada salida,
+  máx. 20 por el límite de iOS) y `offerManualArrival` (60 s sin GPS → "Ya estoy aquí").
+- La llegada se guarda en `PlayerProgress.arrivedAt` (runner `markArrived`/`hasArrived`).
+- `src/hooks/useArrivalWatcher.ts`: GPS en primer plano mientras la escena espera.
+- `src/geo/background.native.ts`: tarea de geofences (apunta llegadas en AsyncStorage y lanza la
+  notificación "¡Has llegado!"); `GeofenceSync` en `_layout` sincroniza regiones y aplica llegadas.
+  Web usa `background.ts`/`permissions.ts` sin segundo plano.
+- La ubicación en segundo plano **no funciona en Expo Go (iOS)**: hace falta build de desarrollo
+  (`npx expo run:ios` o EAS). En Expo Go funciona el GPS en primer plano.
 
 ## Arquitectura
 
@@ -63,7 +75,8 @@ src/components/game/      ChallengePanel, ArrivalPanel, CaseClosed
 src/content/types.ts      ESQUEMA de los packs (fuente de verdad del contenido)
 src/engine/               loadPack, schema, catalog, runner, scene, outline (+ __tests__)
 src/store/progress.ts     progreso persistido
-src/hooks/useCurrentRun   ruta en juego para los modales
+src/hooks/                useCurrentRun (modales), useArrivalWatcher (GPS en primer plano)
+src/geo/                  geofences en segundo plano, permisos, GeofenceSync
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
@@ -120,9 +133,7 @@ Tareas de la fase 2:
   factores sugeridos: cielo 0, fondo 0.1, medio 0.25, primer plano 0.6; capa fx fija), sprites
   SVG con cambio del grupo `face` por expresión y lip-sync alternando `neutral`/`talking` mientras
   suena el audio (expo-audio), sombra proyectada del personaje inclinada según el sol, subtítulos.
-- **4 · Geolocalización**: expo-location + expo-task-manager en segundo plano. **iOS solo permite
-  20 geofences**: registrar dinámicamente solo los siguientes nodos posibles del grafo. Radios de
-  30–60 m en el casco antiguo. Fallback manual "Ya estoy aquí" si el GPS falla 60 s.
+- **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
 - **5 · Mapa**: MapLibre (@maplibre/maplibre-react-native), dos caminos en sus colores, descarga
   offline por ciudad.
 - **6 · Pulido**: colección, finales, i18n (inglés), analítica, pruebas en la calle.
