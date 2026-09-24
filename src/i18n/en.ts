@@ -104,6 +104,7 @@ export const en: Strings = {
     cerrarCaso: "Close the case",
     dato: "Historical fact",
     datoAnio: "Historical fact · {year}",
+    datoGastronomico: "Food fact",
     seCuenta: "Legend has it…",
     anecdota: "Anecdote",
     antesAhora: "Then and now",

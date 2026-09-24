@@ -126,8 +126,8 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 - Llevan la seña `ThemeBadge` (chip dorado con cubiertos, «Gastronomía» / «Food & drink») en la
   ciudad, el detalle, Explorar, Pausa, Colección y el final; en Mis rutas va en el texto.
 - Primera: Cádiz «El recetario perdido» (segunda ruta del pack de Cádiz; ver `docs/GDD_CADIZ_GASTRO.md`).
-  Mismo formato de caso (tres sospechosos, dos decisiones, cuatro finales); nuevo personaje
-  `chirigotero`. Nunca exigir comer ni beber para resolver un reto; nada de nombres de bares.
+  Mismo formato de caso (tres sospechosos, dos decisiones, cuatro finales). Personajes propios, sin
+  repetir los de historia: guías `pescaera` (mar) y `chicharronero` (tierra), y `chirigotero`. Nunca exigir comer ni beber para resolver un reto; nada de nombres de bares.
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
@@ -169,7 +169,7 @@ content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia + «El recet
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)

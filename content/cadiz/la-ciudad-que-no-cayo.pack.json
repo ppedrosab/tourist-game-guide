@@ -65,6 +65,32 @@
       "era": "s. VIII a. C."
     },
     {
+      "id": "pescaera",
+      "name": {
+        "es": "La Pescaera",
+        "en": "The Fishwife"
+      },
+      "description": {
+        "es": "Vendedora de pescado del Mercado Central. Salerosa, mandona y defensora a muerte de las recetas del mar.",
+        "en": "A fish seller at the Central Market. Witty, bossy and a die-hard champion of recipes from the sea."
+      },
+      "avatar": "sprites/pescaera/pescaera_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "chicharronero",
+      "name": {
+        "es": "El Chicharronero",
+        "en": "The Chicharronero"
+      },
+      "description": {
+        "es": "Maestro chicharronero de toda la vida. Bonachón, guasón y defensor de las recetas de la tierra.",
+        "en": "A lifelong master of chicharrones. Good-natured, a joker and a champion of recipes from the land."
+      },
+      "avatar": "sprites/chicharronero/chicharronero_neutral.svg",
+      "era": "hoy"
+    },
+    {
       "id": "chirigotero",
       "name": {
         "es": "El Chirigotero",
@@ -1193,11 +1219,11 @@
         "en": "The Lost Recipe Book"
       },
       "summary": {
-        "es": "La Tía Norica ha perdido su recetario justo antes de Carnaval. Recorre Cádiz probando pescaíto, tortillitas, chicharrones y vinos de la tierra, y descubre quién se lo llevó.",
-        "en": "Tía Norica has lost her recipe book right before Carnival. Tour Cádiz tasting fried fish, shrimp fritters, chicharrones and local wines, and find out who took it."
+        "es": "El recetario de la peña ha desaparecido justo antes de Carnaval. Recorre Cádiz con la Pescaera y el Chicharronero probando pescaíto, tortillitas, chicharrones y vinos de la tierra, y descubre quién se lo llevó.",
+        "en": "The club's recipe book has vanished right before Carnival. Tour Cádiz with the Fishwife and the Chicharronero tasting fried fish, shrimp fritters, chicharrones and local wines, and find out who took it."
       },
       "era": "Cocina gaditana",
-      "guideCharacterId": "tia_norica",
+      "guideCharacterId": "pescaera",
       "durationMin": 120,
       "distanceKm": 2.4,
       "difficulty": "easy",
@@ -1248,37 +1274,60 @@
               ],
               "characters": [
                 {
-                  "id": "tia_norica",
-                  "expression": "nervous",
+                  "id": "pescaera",
+                  "expression": "happy",
                   "position": "left"
+                },
+                {
+                  "id": "chicharronero",
+                  "expression": "nervous",
+                  "position": "right"
                 }
               ]
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
-              "expression": "nervous",
-              "text": {
-                "es": "¡Ay, pisha, qué disgusto! Me han encargado la comida de Carnaval pa' toda la chirigota… y he perdido mi recetario. ¡Cuarenta años de recetas gaditanas apuntadas a mano!",
-                "en": "Oh, pisha, what a disaster! I've been put in charge of the Carnival feast for the whole chirigota… and I've lost my recipe book. Forty years of Cádiz recipes, all written by hand!"
-              }
-            },
-            {
-              "type": "dialogue",
-              "characterId": "tia_norica",
-              "expression": "thinking",
-              "text": {
-                "es": "Tengo tres sospechosos: el gato de esta plaza, que se come todo lo que huele a pescao; la chirigota, que me quiere copiar las recetas pa' una copla… y yo misma, que tengo la cabeza como un colador. Tú prueba, apunta y descubre quién fue.",
-                "en": "I've got three suspects: the cat in this square, who eats anything that smells of fish; the chirigota, who want to copy my recipes for one of their songs… and me, because my head's like a sieve. You taste, take notes and find out who did it."
-              }
-            },
-            {
-              "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "happy",
               "text": {
-                "es": "Y de paso empezamos por lo más gaditano: el pescaíto frito. Aquí mismo hay freidurías de toda la vida: lo pides al peso y te lo dan en un cartucho de papel.",
-                "en": "And while we're at it, let's start with the most Cádiz thing of all: fried fish. There are old-style freidurías right here: you order by weight and they hand it to you in a paper cone."
+                "es": "¡Illo, qué alegría! Soy la Pescaera, del Mercado de toa la vida. Y este es el Chicharronero, que es más de tierra que una maceta.",
+                "en": "Hey there, how lovely! I'm the Fishwife, from the Market, born and bred. And this is the Chicharronero, who's more of a landlubber than a flowerpot."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "nervous",
+              "text": {
+                "es": "Encantao. Tenemos un problema gordo: la peña nos encargó la comida de Carnaval… y ha desaparecido el recetario de la peña. ¡Cuarenta años de recetas gaditanas apuntadas a mano!",
+                "en": "Pleased to meet you. We've got a big problem: our Carnival club put us in charge of the feast… and the club's recipe book has vanished. Forty years of Cádiz recipes, all written by hand!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
+              "expression": "thinking",
+              "text": {
+                "es": "Tenemos tres sospechosos: el gato de esta plaza, que se come todo lo que huele a pescao; la chirigota, que nos quiere copiar las recetas pa' una copla…",
+                "en": "We've got three suspects: the cat in this square, who eats anything that smells of fish; the chirigota, who want to copy our recipes for one of their songs…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "happy",
+              "text": {
+                "es": "…y la propia Pescaera, que lo pierde todo.",
+                "en": "…and the Fishwife herself, who loses everything."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Oye! Bueno, vale, y yo. Tú prueba, apunta y descubre quién fue. Y empezamos por lo más gaditano: el pescaíto frito. Aquí lo pides al peso y te lo dan en un cartucho de papel.",
+                "en": "Hey! Well, fine, and me. You taste, take notes and find out who did it. And we'll start with the most Cádiz thing of all: fried fish. Here you order it by weight and they hand it to you in a paper cone."
               }
             },
             {
@@ -1341,24 +1390,24 @@
               ],
               "characters": [
                 {
-                  "id": "tia_norica",
-                  "expression": "surprised",
+                  "id": "pescaera",
+                  "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "magon",
-                  "expression": "proud",
+                  "id": "chicharronero",
+                  "expression": "thinking",
                   "position": "right"
                 }
               ]
             },
             {
               "type": "dialogue",
-              "characterId": "magon",
+              "characterId": "pescaera",
               "expression": "proud",
               "text": {
-                "es": "¡Saludos de nuevo, viajero! Los fenicios ya pescábamos atún en esta costa hace tres mil años. Y los romanos hacían aquí el garum, una salsa de pescado fermentado que se vendía por todo el Imperio.",
-                "en": "Greetings again, traveller! We Phoenicians were already fishing tuna off this coast three thousand years ago. And the Romans made garum here, a fermented fish sauce sold throughout the Empire."
+                "es": "¡Mi casa! Aquí la reina es el atún rojo de almadraba. Cuando llega, se para el mercado entero pa' verlo despiezar.",
+                "en": "My home! Here the queen is bluefin tuna from the almadraba. When one comes in, the whole market stops to watch it being butchered."
               }
             },
             {
@@ -1369,12 +1418,37 @@
               }
             },
             {
+              "type": "historical_fact",
+              "text": {
+                "es": "Esto viene de lejos: en esta costa los romanos tenían fábricas de salazón y de garum, una salsa de pescado fermentado que se vendía por todo el Imperio.",
+                "en": "This goes back a long way: on this coast the Romans had factories for salted fish and garum, a fermented fish sauce sold throughout the Empire."
+              }
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
               "expression": "surprised",
               "text": {
-                "es": "¡Mira! Junto al puesto de pescao hay espinas… y huellas de gato. Apunta, apunta.",
-                "en": "Look! By the fish stall there are fish bones… and cat paw prints. Write it down, write it down."
+                "es": "¡Mira! Junto al puesto hay espinas… y huellas de gato. Apunta, apunta.",
+                "en": "Look! By the stall there are fish bones… and cat paw prints. Write it down, write it down."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "talking",
+              "text": {
+                "es": "Bueno, ¿y ahora qué? Yo digo que busquemos primero las recetas de la tierra.",
+                "en": "Right, what now? I say we look for the land recipes first."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡Ni hablar! ¡Las del mar primero!",
+                "en": "No way! Sea recipes first!"
               }
             }
           ],
@@ -1412,11 +1486,11 @@
             }
           },
           "decisionIntro": {
-            "characterId": "tia_norica",
+            "characterId": "pescaera",
             "expression": "thinking",
             "text": {
-              "es": "Mi recetario tenía dos partes, detective: las recetas del mar y las de la tierra. ¿Por cuál empezamos a buscar?",
-              "en": "My recipe book had two parts, detective: recipes from the sea and recipes from the land. Which shall we start looking for?"
+              "es": "El recetario tenía dos partes, detective: las recetas del mar y las de la tierra. Decide tú, que nosotros no nos ponemos de acuerdo.",
+              "en": "The recipe book had two parts, detective: sea recipes and land recipes. You decide, because we can't agree."
             }
           },
           "choices": [
@@ -1426,8 +1500,8 @@
                 "en": "Look for the sea recipes"
               },
               "hint": {
-                "es": "Erizos, ortiguillas y tortillitas",
-                "en": "Sea urchins, anemones and shrimp fritters"
+                "es": "Con la Pescaera: erizos, ortiguillas y tortillitas",
+                "en": "With the Fishwife: sea urchins, anemones and shrimp fritters"
               },
               "distanceM": 450,
               "walkMin": 6,
@@ -1442,8 +1516,8 @@
                 "en": "Look for the land recipes"
               },
               "hint": {
-                "es": "Chicharrones y papas aliñás",
-                "en": "Chicharrones and dressed potatoes"
+                "es": "Con el Chicharronero: chicharrones y papas aliñás",
+                "en": "With the Chicharronero: chicharrones and dressed potatoes"
               },
               "distanceM": 600,
               "walkMin": 8,
@@ -1475,7 +1549,7 @@
               ],
               "characters": [
                 {
-                  "id": "tia_norica",
+                  "id": "pescaera",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -1504,11 +1578,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "thinking",
               "text": {
-                "es": "Oiga… ¿y esa copla que venía usted cantando, la de las tortillitas? ¿De dónde la ha sacado?",
-                "en": "Hang on… and that song you were singing, the one about shrimp fritters? Where did you get it from?"
+                "es": "Oye… ¿y esa copla que venías cantando, la de las tortillitas? ¿De dónde la has sacado?",
+                "en": "Hang on… that song you were singing, the one about shrimp fritters? Where did you get it from?"
               }
             },
             {
@@ -1575,8 +1649,26 @@
           "background": "fondos/fondo_cadiz_mentidero.svg",
           "content": [
             {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_mentidero.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pescaera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "chicharronero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "proud",
               "text": {
                 "es": "¡Las tortillitas de camarones! Finitas, finitas, que crujan y se transparenten. Esa receta me la sé yo de memoria…",
@@ -1592,11 +1684,20 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "nervous",
               "text": {
                 "es": "…harina, agua, camarones y… ¿canela? No, no, canela no. ¡Ay, que ya no me acuerdo!",
                 "en": "…flour, water, shrimp and… cinnamon? No, no, not cinnamon. Oh dear, I can't remember any more!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Canela! Y luego dices que no pierdes nada, Pescaera.",
+                "en": "Cinnamon! And you say you never lose anything, Fishwife."
               }
             },
             {
@@ -1637,8 +1738,8 @@
           "clue": {
             "id": "pista_memoria",
             "text": {
-              "es": "La Norica · Se sabe las recetas «de memoria»… pero se equivoca con los ingredientes.",
-              "en": "Tía Norica · She knows the recipes “by heart”… but gets the ingredients wrong."
+              "es": "La Pescaera · Presume de saberse las recetas de memoria… pero se equivoca con los ingredientes.",
+              "en": "The Fishwife · She boasts she knows the recipes by heart… but gets the ingredients wrong."
             }
           },
           "nextNodeId": "g4_mina",
@@ -1662,12 +1763,30 @@
           "background": "fondos/fondo_cadiz_sanfrancisco.svg",
           "content": [
             {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanfrancisco.svg"
+              ],
+              "characters": [
+                {
+                  "id": "chicharronero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "pescaera",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
-              "expression": "happy",
+              "characterId": "chicharronero",
+              "expression": "proud",
               "text": {
-                "es": "¡Chicharrones de Cádiz! Que no son como los de otros sitios, pisha: aquí son de panceta, cocinada despacito en manteca con especias, prensada y cortada en lonchas finas.",
-                "en": "Chicharrones de Cádiz! They're not like the ones elsewhere, pisha: here they're pork belly, cooked slowly in lard with spices, pressed and cut into thin slices."
+                "es": "¡Mi terreno! Los chicharrones de Cádiz no son como los de otros sitios: aquí son de panceta, cocinada despacito en manteca con especias, prensada y cortada en lonchas finas.",
+                "en": "My territory! Chicharrones de Cádiz aren't like the ones elsewhere: here they're pork belly, cooked slowly in lard with spices, pressed and cut into thin slices."
               }
             },
             {
@@ -1679,11 +1798,20 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "surprised",
               "text": {
-                "es": "¡Anda! Al chicharronero le falta un chicharrón… y ahí va un gato relamiéndose los bigotes.",
-                "en": "Well I never! The chicharrón seller is one short… and there goes a cat licking its whiskers."
+                "es": "¡Anda! Te falta un chicharrón… y ahí va un gato relamiéndose los bigotes.",
+                "en": "Well I never! You're one chicharrón short… and there goes a cat licking its whiskers."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡Ese gato otra vez!",
+                "en": "That cat again!"
               }
             }
           ],
@@ -1741,8 +1869,26 @@
           "background": "fondos/fondo_cadiz_sanantonio.svg",
           "content": [
             {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanantonio.svg"
+              ],
+              "characters": [
+                {
+                  "id": "chicharronero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "pescaera",
+                  "expression": "nervous",
+                  "position": "right"
+                }
+              ]
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
               "expression": "happy",
               "text": {
                 "es": "Papas aliñás: lo más sencillo y lo más rico. Papas cocidas, cebolleta, perejil, aceite de oliva, vinagre y sal. Y si quieres, melva o atún por encima.",
@@ -1758,11 +1904,20 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "nervous",
               "text": {
-                "es": "A ver… ¿dónde tengo yo la cuchara? ¡Ah, aquí, en el bolsillo del delantal! Yo en el delantal lo llevo todo, pisha.",
-                "en": "Let's see… where's my spoon? Ah, here, in my apron pocket! I carry everything in my apron, pisha."
+                "es": "A ver… ¿dónde tengo yo la cuchara? ¡Ah, aquí, en el bolsillo del mandil! Yo en el mandil lo llevo todo.",
+                "en": "Let's see… where's my spoon? Ah, here, in my apron pocket! I carry everything in my apron."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "thinking",
+              "text": {
+                "es": "Todo, todo… eso habría que verlo.",
+                "en": "Everything, eh… we'll see about that."
               }
             }
           ],
@@ -1793,10 +1948,10 @@
             }
           },
           "clue": {
-            "id": "pista_delantal",
+            "id": "pista_mandil",
             "text": {
-              "es": "La Norica · La Norica lo lleva todo en el bolsillo del delantal.",
-              "en": "Tía Norica · Tía Norica carries everything in her apron pocket."
+              "es": "La Pescaera · La Pescaera lo lleva todo en el bolsillo del mandil.",
+              "en": "The Fishwife · The Fishwife carries everything in her apron pocket."
             }
           },
           "nextNodeId": "g4_mina",
@@ -1825,7 +1980,7 @@
               ],
               "characters": [
                 {
-                  "id": "tia_norica",
+                  "id": "chicharronero",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -1841,7 +1996,7 @@
               "characterId": "chirigotero",
               "expression": "talking",
               "text": {
-                "es": "¡Otra vez nos vemos! ¿Sabe usted qué se bebe con todo esto? Vino de la tierra: del Marco de Jerez, el triángulo entre Jerez, Sanlúcar y El Puerto de Santa María.",
+                "es": "¡Otra vez nos vemos! ¿Sabéis qué se bebe con todo esto? Vino de la tierra: del Marco de Jerez, el triángulo entre Jerez, Sanlúcar y El Puerto de Santa María.",
                 "en": "We meet again! Do you know what goes with all this? Local wine: from the Marco de Jerez, the triangle between Jerez, Sanlúcar and El Puerto de Santa María."
               }
             },
@@ -1855,7 +2010,7 @@
                     "camino_mar"
                   ],
                   "text": {
-                    "es": "Y lo de la copla de las tortillitas… luego se lo explico, ¿eh?",
+                    "es": "Y lo de la copla de las tortillitas… luego os lo explico, ¿eh?",
                     "en": "And about that shrimp fritter song… I'll explain later, all right?"
                   }
                 },
@@ -1864,7 +2019,7 @@
                     "camino_tierra"
                   ],
                   "text": {
-                    "es": "Y si le preguntan, yo no he visto ningún recetario, ¿eh?",
+                    "es": "Y si os preguntan, yo no he visto ningún recetario, ¿eh?",
                     "en": "And if anyone asks, I haven't seen any recipe book, all right?"
                   }
                 }
@@ -1872,11 +2027,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
               "expression": "thinking",
               "text": {
-                "es": "Dos vinos tengo en la lista, detective: el fino de Jerez y la manzanilla de Sanlúcar. ¿Cuál investigamos? Y tranquilo: pa' resolver el caso no hace falta beber, que también hay mosto.",
-                "en": "I've got two wines on the list, detective: fino from Jerez and manzanilla from Sanlúcar. Which shall we investigate? And don't worry: you don't need to drink to solve the case, there's grape juice too."
+                "es": "Dos vinos tenemos en la lista, detective: el fino de Jerez y la manzanilla de Sanlúcar. ¿Cuál investigamos? Y tranquilo: pa' resolver el caso no hace falta beber, que también hay mosto.",
+                "en": "We've got two wines on the list, detective: fino from Jerez and manzanilla from Sanlúcar. Which shall we investigate? And don't worry: you don't need to drink to solve the case, there's grape juice too."
               }
             }
           ],
@@ -1965,16 +2120,25 @@
               "characterId": "chirigotero",
               "expression": "nervous",
               "text": {
-                "es": "Por cierto… tengo una copla nueva. Va de una abuela que pierde su recetario. Pura casualidad, ¿eh?",
-                "en": "By the way… I've got a new song. It's about a grandma who loses her recipe book. Pure coincidence, all right?"
+                "es": "Por cierto… tengo una copla nueva. Va de una peña que pierde su recetario. Pura casualidad, ¿eh?",
+                "en": "By the way… I've got a new song. It's about a club that loses its recipe book. Pure coincidence, all right?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "chicharronero",
+              "expression": "thinking",
+              "text": {
+                "es": "Casualidad, dice…",
+                "en": "Coincidence, he says…"
               }
             }
           ],
           "clue": {
             "id": "pista_copla_nueva",
             "text": {
-              "es": "La chirigota · El chirigotero tiene una copla nueva sobre una abuela que pierde su recetario.",
-              "en": "The chirigota · The chirigota singer has a new song about a grandma who loses her recipe book."
+              "es": "La chirigota · El chirigotero tiene una copla nueva sobre una peña que pierde su recetario.",
+              "en": "The chirigota · The chirigota singer has a new song about a club that loses its recipe book."
             }
           },
           "nextNodeId": "g5_ancha",
@@ -2008,11 +2172,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "surprised",
               "text": {
-                "es": "Manzanilla… manzanilla… ¡Ay, que eso lo tenía yo apuntado en la última página! Que yo… que yo… ¿dónde lo guardé?",
-                "en": "Manzanilla… manzanilla… Oh, I had that written on the last page! I… I… where did I put it?"
+                "es": "Manzanilla… manzanilla… ¡Ay, que eso estaba apuntado en la última página! Que yo… que yo… ¿dónde lo guardé?",
+                "en": "Manzanilla… manzanilla… Oh, that was written on the last page! I… I… where did I put it?"
               }
             },
             {
@@ -2020,16 +2184,16 @@
               "characterId": "chirigotero",
               "expression": "thinking",
               "text": {
-                "es": "Doña Norica, se está usted tocando el delantal sin parar…",
-                "en": "Tía Norica, you keep patting your apron…"
+                "es": "Pescaera, te estás tocando el mandil sin parar…",
+                "en": "Fishwife, you keep patting your apron…"
               }
             }
           ],
           "clue": {
-            "id": "pista_tocando_delantal",
+            "id": "pista_tocando_mandil",
             "text": {
-              "es": "La Norica · Al hablar de la manzanilla, la Norica no para de tocarse el delantal.",
-              "en": "Tía Norica · When manzanilla comes up, Tía Norica can't stop patting her apron."
+              "es": "La Pescaera · Al hablar de la manzanilla, la Pescaera no para de tocarse el mandil.",
+              "en": "The Fishwife · When manzanilla comes up, the Fishwife can't stop patting her apron."
             }
           },
           "nextNodeId": "g5_ancha",
@@ -2052,18 +2216,36 @@
           "background": "fondos/fondo_cadiz_ancha.svg",
           "content": [
             {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_ancha.svg"
+              ],
+              "characters": [
+                {
+                  "id": "chicharronero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "pescaera",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
               "expression": "happy",
               "text": {
-                "es": "¡El postre, que es lo que más me gusta! El pan de Cádiz: no es pan, es un dulce de Navidad de mazapán, relleno de boniato, cabello de ángel y fruta confitada, y tostadito por encima.",
-                "en": "Dessert, my favourite part! Pan de Cádiz: it isn't bread, it's a Christmas sweet made of marzipan, filled with sweet potato, candied squash and candied fruit, and toasted on top."
+                "es": "¡El postre, que en esto sí que estamos de acuerdo! El pan de Cádiz: no es pan, es un dulce de Navidad de mazapán, relleno de boniato, cabello de ángel y fruta confitada, y tostadito por encima.",
+                "en": "Dessert, the one thing we agree on! Pan de Cádiz: it isn't bread, it's a Christmas sweet made of marzipan, filled with sweet potato, candied squash and candied fruit, and toasted on top."
               }
             },
             {
               "type": "anecdote",
               "text": {
-                "es": "Del marco de Jerez viene también el tocino de cielo, de yemas y azúcar. Se cuenta que nació para aprovechar las yemas que sobraban en las bodegas, que usaban las claras para aclarar el vino.",
+                "es": "Del Marco de Jerez viene también el tocino de cielo, de yemas y azúcar. Se cuenta que nació para aprovechar las yemas que sobraban en las bodegas, que usaban las claras para aclarar el vino.",
                 "en": "Also from the sherry country comes tocino de cielo, made from egg yolks and sugar. They say it was invented to use up the yolks left over by the wineries, which used the egg whites to clarify their wine."
               },
               "legend": true
@@ -2115,20 +2297,38 @@
           "background": "fondos/fondo_cadiz_sanjuan.svg",
           "content": [
             {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pescaera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "chicharronero",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "thinking",
               "text": {
-                "es": "Hemos vuelto al principio, detective, donde empieza el Carnaval. Repasa el cuaderno: el gato, la chirigota… y yo. ¿Quién se llevó mi recetario?",
-                "en": "We're back where it all began, detective, where Carnival starts. Go over your notebook: the cat, the chirigota… and me. Who took my recipe book?"
+                "es": "Hemos vuelto donde empieza el Carnaval, detective. Repasa el cuaderno: el gato, la chirigota… y yo. ¿Quién se llevó el recetario?",
+                "en": "We're back where Carnival starts, detective. Go over your notebook: the cat, the chirigota… and me. Who took the recipe book?"
               }
             }
           ],
           "challenge": {
             "type": "quiz",
             "question": {
-              "es": "¿Quién se llevó el recetario de la Tía Norica?",
-              "en": "Who took Tía Norica's recipe book?"
+              "es": "¿Quién se llevó el recetario de la peña?",
+              "en": "Who took the club's recipe book?"
             },
             "options": [
               {
@@ -2140,13 +2340,13 @@
                 "en": "The chirigota, to make a song"
               },
               {
-                "es": "Nadie: lo llevaba la Norica en el delantal",
-                "en": "Nobody: Tía Norica had it in her apron"
+                "es": "Nadie: lo llevaba la Pescaera en el mandil",
+                "en": "Nobody: the Fishwife had it in her apron"
               }
             ],
             "correctIndex": 2,
             "explanation": {
-              "es": "El gato solo robaba pescado y chicharrones, y la chirigota solo cantaba lo que se oía por el barrio. El recetario estuvo todo el rato en el bolsillo del delantal.",
+              "es": "El gato solo robaba pescado y chicharrones, y la chirigota solo cantaba lo que se oía por el barrio. El recetario estuvo todo el rato en el bolsillo del mandil.",
               "en": "The cat only stole fish and chicharrones, and the chirigota only sang what was going round the neighbourhood. The recipe book was in the apron pocket the whole time."
             }
           },
@@ -2161,16 +2361,25 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "pescaera",
               "expression": "surprised",
               "text": {
-                "es": "¡Ay, mi arma! ¿Aquí, en el delantal? ¡Si lo he tenido encima todo el rato! Ya decía yo que pesaba…",
+                "es": "¡Ay, mi arma! ¿Aquí, en el mandil? ¡Si lo he tenido encima todo el rato! Ya decía yo que pesaba…",
                 "en": "Oh my goodness! Here, in my apron? I've had it on me the whole time! I did think it felt heavy…"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Lo sabía! Lo pierde todo… pero en el mandil.",
+                "en": "I knew it! She loses everything… in her apron."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
               "expression": "proud",
               "variants": [
                 {
@@ -2179,8 +2388,8 @@
                     "version_fino"
                   ],
                   "text": {
-                    "es": "Pescaíto y fino: eres un almirante del pescaíto, pisha.",
-                    "en": "Fried fish and fino: you're an admiral of fried fish, pisha."
+                    "es": "Pescaíto y fino: eres un almirante del pescaíto. ¡Lo sabía yo, que el mar gana!",
+                    "en": "Fried fish and fino: you're an admiral of fried fish. I knew the sea would win!"
                   }
                 },
                 {
@@ -2199,8 +2408,8 @@
                     "version_fino"
                   ],
                   "text": {
-                    "es": "Chicharrones, papas y fino: ¡maestro chicharronero!",
-                    "en": "Chicharrones, potatoes and fino: master of chicharrones!"
+                    "es": "Chicharrones, papas y fino… Vale, lo reconozco: eres un maestro chicharronero.",
+                    "en": "Chicharrones, potatoes and fino… Fine, I admit it: you're a master of chicharrones."
                   }
                 },
                 {
@@ -2209,19 +2418,19 @@
                     "version_manzanilla"
                   ],
                   "text": {
-                    "es": "Tierra y manzanilla: tapeas con tronío. ¡Rey del tapeo!",
-                    "en": "Land and manzanilla: you do tapas in style. King of tapas!"
+                    "es": "Tierra y manzanilla: tapeas con tronío. ¡Rey del tapeo, aunque le pese a mi pescao!",
+                    "en": "Land and manzanilla: you do tapas in style. King of tapas, even if my fish disagrees!"
                   }
                 }
               ]
             },
             {
               "type": "dialogue",
-              "characterId": "tia_norica",
+              "characterId": "chicharronero",
               "expression": "happy",
               "text": {
-                "es": "Caso cerrado y comida de Carnaval salvada. Y oiga… las recetas del otro camino también están en el recetario. ¿Vuelves otro día a probarlas?",
-                "en": "Case closed and Carnival feast saved. And listen… the recipes from the other path are in the book too. Will you come back another day to try them?"
+                "es": "Caso cerrado y Carnaval salvado. Y las recetas del otro camino también están en el recetario: ¿vuelves otro día a probarlas?",
+                "en": "Case closed and Carnival saved. And the recipes from the other path are in the book too: will you come back another day to try them?"
               }
             }
           ],
@@ -2339,8 +2548,8 @@
         {
           "id": "recetario",
           "name": {
-            "es": "El recetario de la Tía Norica",
-            "en": "Tía Norica's recipe book"
+            "es": "El recetario de la peña",
+            "en": "The club's recipe book"
           },
           "icon": "collectibles/cadiz_g_recetario.svg",
           "awardedAtNodeId": "g7_final"

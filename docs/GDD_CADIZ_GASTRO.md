@@ -6,22 +6,29 @@ de historia: caso de detective, «ramificar y reunir», dos decisiones y cuatro 
 
 ## El caso
 
-La Tía Norica tiene que preparar la comida de Carnaval para su chirigota y ha perdido su recetario.
-El jugador recorre Cádiz probando (si quiere) y aprendiendo cada plato para descubrir quién se lo
-llevó. **Tres sospechosos**; cada pista del cuaderno empieza por el suyo:
+La Pescaera y el Chicharronero tienen que preparar la comida de Carnaval de su peña y ha
+desaparecido el recetario de la peña. El jugador recorre Cádiz probando (si quiere) y aprendiendo
+cada plato para descubrir quién se lo llevó. **Tres sospechosos**; cada pista del cuaderno empieza por el suyo:
 
 | Sospechoso | Pistas |
 | --- | --- |
 | **El gato** | Espinas y huellas junto al puesto de pescado (mercado) · falta un chicharrón (San Francisco) |
 | **La chirigota** | Una copla con la receta de las tortillitas (La Viña) · una copla nueva sobre un recetario perdido (fino) |
-| **La Norica** | Se equivoca con los ingredientes (Mentidero) · lo lleva todo en el delantal (San Antonio) · se toca el delantal al hablar de manzanilla |
+| **La Pescaera** | Se equivoca con los ingredientes (Mentidero) · lo lleva todo en el mandil (San Antonio) · se toca el mandil al hablar de manzanilla |
 
-Veredicto: nadie se lo llevó; el recetario estaba en el bolsillo de su delantal.
+Veredicto: nadie se lo llevó; el recetario estaba en el bolsillo del mandil de la Pescaera.
 
 ## Personajes
 
-`tia_norica` (guía), `magon` (en el mercado: atún y garum) y **`chirigotero`** (nuevo: cantante de
-chirigota de La Viña, bombín, peluca naranja y pito de caña).
+Personajes propios de esta ruta (no se repite ninguno de las rutas de historia):
+
+| id | Quién | Papel |
+| --- | --- | --- |
+| `pescaera` (guía) | Vendedora del Mercado: coleta, pañuelo rojo, camiseta de rayas, mandil verde y un pescado | Defiende las recetas del **mar**; lleva el camino del mar |
+| `chicharronero` (coguía) | Maestro chicharronero: bata y gorro blancos, bigote y un papel con chicharrones | Defiende las recetas de la **tierra**; lleva el camino de la tierra |
+| `chirigotero` | Cantante de chirigota de La Viña: bombín, peluca naranja y pito de caña | Sospechoso; explica los vinos |
+
+Los dos guías se pican entre sí: en el mercado discuten por dónde empezar y decide el jugador.
 
 ## Caminos y finales
 
@@ -39,7 +46,7 @@ Huecos del motor: `dinero` (mar) = **recetas del mar**; `poder` (arcilla) = **re
 | Nodo | Lugar | Plato o bebida | Coleccionable |
 | --- | --- | --- | --- |
 | g1 | Plaza de las Flores | Pescaíto frito en cartucho, cazón en adobo («bienmesabe») | Cartucho de pescaíto |
-| g2 | Mercado Central (Magón) | Atún rojo de almadraba, ronqueo, garum · **decisión 1** | — |
+| g2 | Mercado Central | Atún rojo de almadraba, ronqueo, garum · **decisión 1** | — |
 | ga1 (mar) | Barrio de La Viña | Erizos y ortiguillas; fiestas gastronómicas del Carnaval | Erizo |
 | ga2 (mar) | Plaza del Mentidero | Tortillitas de camarones | Tortillita |
 | gb1 (tierra) | Plaza de San Francisco | Chicharrones de Cádiz | Chicharrón con limón |

@@ -106,6 +106,7 @@ export const es = {
     cerrarCaso: "Cerrar el caso",
     dato: "Dato histórico",
     datoAnio: "Dato histórico · {year}",
+    datoGastronomico: "Dato gastronómico",
     seCuenta: "Se cuenta…",
     anecdota: "Anécdota",
     antesAhora: "Antes y ahora",
