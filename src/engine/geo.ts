@@ -60,3 +60,24 @@ function exits(node: StoryNode, flags: readonly string[]): string[] {
   if (node.choices) return availableChoices(node, flags).map((c) => c.targetNodeId);
   return node.nextNodeId ? [node.nextNodeId] : [];
 }
+
+/** Segundos sin posición fiable tras los que se ofrece "Ya estoy aquí". */
+export const GPS_TIMEOUT_S = 60;
+
+export type GpsStatus = "asking" | "denied" | "unavailable" | "watching";
+
+/**
+ * Fallback manual: se ofrece si no hay permiso o GPS, o si llevamos
+ * GPS_TIMEOUT_S segundos sin recibir posición.
+ */
+export function offerManualArrival(gps: {
+  status: GpsStatus;
+  watchStartedAt?: number;
+  lastFixAt?: number;
+  now: number;
+}): boolean {
+  if (gps.status === "denied" || gps.status === "unavailable") return true;
+  if (gps.status !== "watching" || gps.watchStartedAt === undefined) return false;
+  const since = gps.lastFixAt ?? gps.watchStartedAt;
+  return gps.now - since >= GPS_TIMEOUT_S * 1000;
+}

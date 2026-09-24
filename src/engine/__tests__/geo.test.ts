@@ -1,6 +1,6 @@
 import raw from "@content/malaga/misterio-manquita.pack.json";
 import type { Route } from "@/content/types";
-import { distanceM, geofenceTargets, isInside } from "../geo";
+import { distanceM, geofenceTargets, isInside, offerManualArrival } from "../geo";
 import { loadPack } from "../loadPack";
 import { advance, getNode, hasArrived, markArrived, startRoute } from "../runner";
 
@@ -73,5 +73,22 @@ describe("geofenceTargets", () => {
     const run = markArrived(route, advance(route, markArrived(route, startRoute("malaga", route))));
     expect(geofenceTargets(route, run, 1)).toHaveLength(1);
     expect(geofenceTargets(route, { ...run, completedAt: "fin" })).toEqual([]);
+  });
+});
+
+describe("offerManualArrival", () => {
+  const t0 = 1_000_000;
+  it("se ofrece sin permiso o sin GPS", () => {
+    expect(offerManualArrival({ status: "denied", now: t0 })).toBe(true);
+    expect(offerManualArrival({ status: "unavailable", now: t0 })).toBe(true);
+    expect(offerManualArrival({ status: "asking", now: t0 })).toBe(false);
+  });
+
+  it("se ofrece tras 60 s sin posición", () => {
+    const gps = { status: "watching" as const, watchStartedAt: t0 };
+    expect(offerManualArrival({ ...gps, now: t0 + 59_000 })).toBe(false);
+    expect(offerManualArrival({ ...gps, now: t0 + 60_000 })).toBe(true);
+    expect(offerManualArrival({ ...gps, lastFixAt: t0 + 30_000, now: t0 + 60_000 })).toBe(false);
+    expect(offerManualArrival({ ...gps, lastFixAt: t0 + 30_000, now: t0 + 90_000 })).toBe(true);
   });
 });

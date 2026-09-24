@@ -7,9 +7,25 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#1B2A3A",
-    "ios": { "supportsTablet": false, "bundleIdentifier": "com.tuempresa.cenachero" },
-    "android": { "package": "com.tuempresa.cenachero" },
-    "plugins": ["expo-router", "expo-font"],
-    "experiments": { "typedRoutes": true }
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tuempresa.cenachero"
+    },
+    "android": {
+      "package": "com.tuempresa.cenachero"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Te guío por la ciudad: uso tu ubicación para empezar cada escena al llegar a la parada."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }
