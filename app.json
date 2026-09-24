@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "[Nombre de la app]",
+    "slug": "cenachero-app",
+    "scheme": "cenachero",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#1B2A3A",
+    "ios": { "supportsTablet": false, "bundleIdentifier": "com.tuempresa.cenachero" },
+    "android": { "package": "com.tuempresa.cenachero" },
+    "plugins": ["expo-router", "expo-font"],
+    "experiments": { "typedRoutes": true }
+  }
+}
