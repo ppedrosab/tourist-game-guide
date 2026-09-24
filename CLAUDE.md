@@ -134,7 +134,10 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   `romancero`, que **siempre habla en romance** (cuatro octosílabos, rima en los pares; el texto lleva
   saltos de línea). Con `chirigotero`, `comparsista`, `corista` y `cuartetero`. María la Hierbabuena
   es una persona real: solo homenaje en la parada de su calle, sin dibujarla ni ponerle diálogos.
-- Pendiente: ruta de Semana Santa de Cádiz, con personajes propios y tono respetuoso.
+- Cádiz «Sobre los hombros de Cádiz» (Semana Santa; ver `docs/GDD_CADIZ_SEMANA_SANTA.md`). Guía el
+  `cargador`, con `maniguetero` y `saetera`; caminos Santa María y La Viña. Tono respetuoso: nada de
+  chistes sobre imágenes ni hermandades y **no se dibujan imágenes sagradas** (pasos de palio vistos
+  desde fuera, cirios y nazarenos anónimos). Fondos en `scripts/art/cadiz_ssanta_scenes.py`.
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
@@ -172,11 +175,11 @@ src/analytics/            eventos y sink enchufable
 src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
-content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia + gastronomía + Carnaval)
+content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia, gastronomía, Carnaval y Semana Santa)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
 scripts/art/              generadores del arte de Cádiz y render de capas
-assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,cargador,maniguetero,saetera,aguador,giraldillo,hernando,irving,leon,boabdil}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/then_now/          ilustraciones de época para "antes y ahora" (viewBox 390×560, misma
                           perspectiva que la escena de hoy para que el deslizador coincida)

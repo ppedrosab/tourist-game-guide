@@ -1,6 +1,6 @@
 {
   "id": "cadiz",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Cádiz",
     "en": "Cádiz"
@@ -166,6 +166,45 @@
         "en": "A quartet member: with two sticks and a chair he can put on a parody."
       },
       "avatar": "sprites/cuartetero/cuartetero_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "cargador",
+      "name": {
+        "es": "El Cargador",
+        "en": "The Cargador"
+      },
+      "description": {
+        "es": "Lleva los pasos a hombros en la Semana Santa de Cádiz. Cercano, orgulloso de su barrio y de su oficio.",
+        "en": "He carries the floats on his shoulders in Cádiz Holy Week. Warm, proud of his neighbourhood and his task."
+      },
+      "avatar": "sprites/cargador/cargador_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "maniguetero",
+      "name": {
+        "es": "El Maniguetero",
+        "en": "The Maniguetero"
+      },
+      "description": {
+        "es": "Va junto al paso y marca el ritmo con su horquilla. Serio y de pocas palabras.",
+        "en": "He walks beside the float and marks the rhythm with his forked staff. Serious and a man of few words."
+      },
+      "avatar": "sprites/maniguetero/maniguetero_neutral.svg",
+      "era": "hoy"
+    },
+    {
+      "id": "saetera",
+      "name": {
+        "es": "La Saetera",
+        "en": "The Saetera"
+      },
+      "description": {
+        "es": "Canta saetas desde su balcón cuando el paso se para delante.",
+        "en": "She sings saetas from her balcony when the float stops in front of it."
+      },
+      "avatar": "sprites/saetera/saetera_neutral.svg",
       "era": "hoy"
     }
   ],
@@ -3874,6 +3913,1156 @@
           },
           "icon": "collectibles/carnaval_cartelon.svg",
           "awardedAtNodeId": "c7_final"
+        }
+      ]
+    },
+    {
+      "id": "sobre-los-hombros",
+      "title": {
+        "es": "Sobre los hombros de Cádiz",
+        "en": "On the Shoulders of Cádiz"
+      },
+      "summary": {
+        "es": "¿Por qué en Cádiz los pasos van a hombros, despacio, y son tan altos y estrechos? Recorre la Semana Santa gaditana con un cargador, un maniguetero y una saetera, de Santa María a La Viña.",
+        "en": "Why in Cádiz are the Holy Week floats carried on the shoulders, slowly, and so tall and narrow? Explore Cádiz Holy Week with a cargador, a maniguetero and a saeta singer, from Santa María to La Viña."
+      },
+      "era": "Semana Santa de Cádiz",
+      "guideCharacterId": "cargador",
+      "durationMin": 100,
+      "distanceKm": 2.6,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Santa María",
+            "en": "Santa María"
+          },
+          "trail": {
+            "es": "camino de Santa María",
+            "en": "Santa María trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Viña",
+            "en": "La Viña"
+          },
+          "trail": {
+            "es": "camino de La Viña",
+            "en": "La Viña trail"
+          }
+        }
+      },
+      "startNodeId": "s1_sanjuan",
+      "nodes": [
+        {
+          "id": "s1_sanjuan",
+          "title": {
+            "es": "Plaza de San Juan de Dios",
+            "en": "Plaza de San Juan de Dios"
+          },
+          "location": {
+            "lat": 36.5296,
+            "lng": -6.2921
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "maniguetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas. Soy cargador. En Sevilla nos dirían costaleros, pero aquí en Cádiz los que llevamos los pasos somos cargadores, y lo llevamos a gala.",
+                "en": "Hello. I'm a cargador. In Seville they'd call us costaleros, but here in Cádiz those of us who carry the processional floats are cargadores, and we're proud of it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "thinking",
+              "text": {
+                "es": "Y te traigo una pregunta que se hace mucha gente al ver nuestra Semana Santa: ¿por qué en Cádiz los pasos van a hombros, tan despacio, y son tan altos y tan estrechos?",
+                "en": "And I've got a question for you that lots of people ask when they see our Holy Week: why in Cádiz are the floats carried on the shoulders, so slowly, and why are they so tall and so narrow?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "neutral",
+              "text": {
+                "es": "Hay tres respuestas posibles: el puerto, las calles y el barrio. Tú irás apuntando las pistas.",
+                "en": "There are three possible answers: the port, the streets and the neighbourhood. You'll note down the clues."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Semana Santa de Cádiz va del Viernes de Dolores al Domingo de Resurrección, con unas treinta cofradías. Es Fiesta de Interés Turístico Nacional desde 2022.",
+                "en": "Holy Week in Cádiz runs from the Friday of Sorrows to Easter Sunday, with some thirty brotherhoods. It has been a Festival of National Tourist Interest since 2022."
+              },
+              "year": 2022
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que los primeros cargadores gaditanos fueron hombres del muelle, acostumbrados a llevar peso a hombros.",
+                "en": "It is said that the first Cádiz cargadores were dock workers, used to carrying loads on their shoulders."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llama en Cádiz a quienes llevan los pasos?",
+              "en": "What are the people who carry the floats called in Cádiz?"
+            },
+            "options": [
+              {
+                "es": "Costaleros",
+                "en": "Costaleros"
+              },
+              {
+                "es": "Cargadores",
+                "en": "Cargadores"
+              },
+              {
+                "es": "Hombres de trono",
+                "en": "Hombres de trono"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Cargadores. «Costaleros» es como se dice en Sevilla y «hombres de trono», en Málaga.",
+              "en": "Cargadores. “Costaleros” is the Seville word and “hombres de trono” the Málaga one."
+            }
+          },
+          "clue": {
+            "id": "pista_muelle",
+            "text": {
+              "es": "El puerto · Se cuenta que los primeros cargadores eran hombres del muelle, acostumbrados a cargar a hombros.",
+              "en": "The port · It is said the first cargadores were dock workers, used to carrying on their shoulders."
+            }
+          },
+          "nextNodeId": "s2_catedral",
+          "nextHint": {
+            "es": "A la Catedral, adonde van las cofradías a hacer estación de penitencia. Unos 4 minutos.",
+            "en": "To the Cathedral, where the brotherhoods go to make their penitential station. About 4 minutes."
+          }
+        },
+        {
+          "id": "s2_catedral",
+          "title": {
+            "es": "La Catedral",
+            "en": "The Cathedral"
+          },
+          "location": {
+            "lat": 36.5293,
+            "lng": -6.2951
+          },
+          "triggerRadiusM": 50,
+          "background": "fondos/fondo_cadiz_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "maniguetero",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "proud",
+              "text": {
+                "es": "Yo soy maniguetero. Voy junto al paso, en las maniguetas, y marco el ritmo golpeando el suelo con mi horquilla. Ese golpe seco es uno de los sonidos de la Semana Santa de Cádiz.",
+                "en": "I'm a maniguetero. I walk beside the float, at the handles, and I mark the rhythm by striking the ground with my forked staff. That sharp knock is one of the sounds of Holy Week in Cádiz."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los pasos de Cádiz son altos y estrechos: tienen que caber por las calles del casco antiguo, que son muy angostas.",
+                "en": "The floats of Cádiz are tall and narrow: they have to fit through the streets of the old town, which are very tight."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "happy",
+              "text": {
+                "es": "Y por eso andamos despacio, pasito a pasito. Aquí no se corre: se lleva al Señor y a la Virgen con cuidado por calles donde casi rozan los balcones.",
+                "en": "That's why we walk slowly, step by step. No rushing here: we carry Our Lord and Our Lady carefully through streets where the balconies almost brush the float."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué marca el maniguetero el ritmo del paso?",
+              "en": "What does the maniguetero use to mark the float's rhythm?"
+            },
+            "options": [
+              {
+                "es": "Con un tambor",
+                "en": "A drum"
+              },
+              {
+                "es": "Con una campana",
+                "en": "A bell"
+              },
+              {
+                "es": "Golpeando el suelo con una horquilla",
+                "en": "Striking the ground with a forked staff"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Con la horquilla: su golpe contra el suelo marca el paso de los cargadores.",
+              "en": "With the forked staff: its knock on the ground sets the cargadores' pace."
+            }
+          },
+          "clue": {
+            "id": "pista_estrechos",
+            "text": {
+              "es": "Las calles · Los pasos son altos y estrechos para caber por las calles del casco antiguo.",
+              "en": "The streets · The floats are tall and narrow to fit through the old town's streets."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "cargador",
+            "expression": "thinking",
+            "text": {
+              "es": "Ahora, dos barrios con mucha Semana Santa. ¿Vamos a Santa María, la del Nazareno… o a La Viña, la de la Palma?",
+              "en": "Now, two neighbourhoods full of Holy Week. Shall we go to Santa María, home of the Nazareno… or to La Viña, home of La Palma?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Ir a Santa María",
+                "en": "Go to Santa María"
+              },
+              "hint": {
+                "es": "El Nazareno y la saeta",
+                "en": "The Nazareno and the saeta"
+              },
+              "distanceM": 450,
+              "walkMin": 6,
+              "targetNodeId": "sa1_santamaria",
+              "setFlags": [
+                "camino_santamaria"
+              ]
+            },
+            {
+              "label": {
+                "es": "Ir a La Viña",
+                "en": "Go to La Viña"
+              },
+              "hint": {
+                "es": "La Palma y la cofradía del silencio",
+                "en": "La Palma and the brotherhood of silence"
+              },
+              "distanceM": 900,
+              "walkMin": 12,
+              "targetNodeId": "sb1_palma",
+              "setFlags": [
+                "camino_vina"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sa1_santamaria",
+          "title": {
+            "es": "Iglesia de Santa María",
+            "en": "Church of Santa María"
+          },
+          "location": {
+            "lat": 36.5277,
+            "lng": -6.2893
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_santamaria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_santamaria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "maniguetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "proud",
+              "text": {
+                "es": "Aquí vive el Nazareno de Santa María. En Cádiz le dicen «el Greñúo», por su melena, o «el Señor de Cádiz». Sale el Jueves Santo.",
+                "en": "This is the home of the Nazareno of Santa María. In Cádiz they call him “el Greñúo”, for his long hair, or “the Lord of Cádiz”. He goes out on Maundy Thursday."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Su cofradía es de las más antiguas de la ciudad y la imagen es de finales del siglo XVI o principios del XVII. Tiene el título honorífico de regidor perpetuo de Cádiz.",
+                "en": "His brotherhood is one of the oldest in the city and the image dates from the late 16th or early 17th century. He holds the honorary title of perpetual councillor of Cádiz."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "neutral",
+              "text": {
+                "es": "En este barrio la devoción al Nazareno se hereda: la llevan los abuelos, los padres y los nietos.",
+                "en": "In this neighbourhood devotion to the Nazareno is inherited: grandparents, parents and grandchildren all share it."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo llaman popularmente en Cádiz al Nazareno de Santa María?",
+              "en": "What do people in Cádiz call the Nazareno of Santa María?"
+            },
+            "options": [
+              {
+                "es": "El Greñúo",
+                "en": "El Greñúo"
+              },
+              {
+                "es": "El Cachorro",
+                "en": "El Cachorro"
+              },
+              {
+                "es": "El Cautivo",
+                "en": "El Cautivo"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El Greñúo, por su melena, y también el Señor de Cádiz.",
+              "en": "El Greñúo, for his long hair, and also the Lord of Cádiz."
+            }
+          },
+          "clue": {
+            "id": "pista_herencia",
+            "text": {
+              "es": "El barrio · En Santa María la devoción al Nazareno pasa de padres a hijos.",
+              "en": "The neighbourhood · In Santa María devotion to the Nazareno passes from parents to children."
+            }
+          },
+          "nextNodeId": "sa2_merced",
+          "nextHint": {
+            "es": "A la Plaza de la Merced, aquí al lado.",
+            "en": "To Plaza de la Merced, just nearby."
+          }
+        },
+        {
+          "id": "sa2_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 36.5269,
+            "lng": -6.288
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "saetera",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "saetera",
+              "expression": "proud",
+              "text": {
+                "es": "Buenas. Yo canto saetas. Una saeta es una oración cantada, sin música, casi siempre desde un balcón, cuando el paso se para delante.",
+                "en": "Good evening. I sing saetas. A saeta is a sung prayer, with no instruments, usually from a balcony, when the float stops in front of it."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El barrio de Santa María es cuna del cante flamenco gaditano: de aquí era Enrique el Mellizo. En el antiguo convento de la Merced está hoy el centro municipal de arte flamenco.",
+                "en": "The Santa María quarter is a cradle of Cádiz flamenco singing: Enrique el Mellizo came from here. The old Merced convent now houses the city's flamenco arts centre."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "saetera",
+              "expression": "thinking",
+              "text": {
+                "es": "En calles tan estrechas, el balcón queda casi encima del paso. La saeta se canta a un palmo de la imagen.",
+                "en": "In streets this narrow, the balcony is almost on top of the float. The saeta is sung just a hand's width from the image."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es una saeta?",
+              "en": "What is a saeta?"
+            },
+            "options": [
+              {
+                "es": "Una marcha para banda de música",
+                "en": "A march for brass band"
+              },
+              {
+                "es": "Una oración cantada, sin música",
+                "en": "A sung prayer, without instruments"
+              },
+              {
+                "es": "El nombre del paso de la Virgen",
+                "en": "The name of the Virgin's float"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una oración cantada a capela, con aire flamenco, que se dirige a la imagen al pasar.",
+              "en": "An unaccompanied sung prayer, flamenco in style, addressed to the image as it passes."
+            }
+          },
+          "clue": {
+            "id": "pista_balcon",
+            "text": {
+              "es": "Las calles · En calles tan estrechas la saeta se canta desde un balcón casi encima del paso.",
+              "en": "The streets · In streets this narrow the saeta is sung from a balcony almost on top of the float."
+            }
+          },
+          "nextNodeId": "s4_candelaria",
+          "nextHint": {
+            "es": "A la Plaza de la Candelaria, en la Carrera Oficial. Unos 10 minutos.",
+            "en": "To Plaza de la Candelaria, on the Official Route. About 10 minutes."
+          }
+        },
+        {
+          "id": "sb1_palma",
+          "title": {
+            "es": "Iglesia de la Palma",
+            "en": "Church of La Palma"
+          },
+          "location": {
+            "lat": 36.5316,
+            "lng": -6.304
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_palma.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_palma.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "maniguetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "proud",
+              "text": {
+                "es": "La Palma, el corazón de La Viña. Su cofradía sale el Lunes Santo, y el barrio entero la acompaña.",
+                "en": "La Palma, the heart of La Viña. Its brotherhood goes out on Holy Monday, and the whole neighbourhood goes with it."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El 1 de noviembre de 1755, el maremoto que siguió al terremoto de Lisboa inundó buena parte de Cádiz. Cada 1 de noviembre La Viña lo recuerda con el rosario y la procesión de su Virgen de la Palma.",
+                "en": "On 1 November 1755, the tsunami that followed the Lisbon earthquake flooded much of Cádiz. Every 1 November La Viña remembers it with a rosary and procession of its Virgin of La Palma."
+              },
+              "year": 1755
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Según la tradición, un sacerdote clavó el estandarte a la puerta de esta iglesia y dijo «¡Hasta aquí, Madre mía!», y el agua no pasó de ahí. El estandarte se conserva dentro.",
+                "en": "According to tradition, a priest planted the standard at the door of this church, saying “This far, my Mother!”, and the water went no further. The standard is kept inside."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué recuerda La Viña cada 1 de noviembre?",
+              "en": "What does La Viña remember every 1 November?"
+            },
+            "options": [
+              {
+                "es": "El maremoto de 1755",
+                "en": "The 1755 tsunami"
+              },
+              {
+                "es": "El fin del asedio francés",
+                "en": "The end of the French siege"
+              },
+              {
+                "es": "La llegada de Colón",
+                "en": "Columbus's arrival"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El maremoto de 1755, con el rosario y la procesión de la Virgen de la Palma.",
+              "en": "The 1755 tsunami, with the rosary and procession of the Virgin of La Palma."
+            }
+          },
+          "clue": {
+            "id": "pista_palma",
+            "text": {
+              "es": "El barrio · La Viña sale entera con su Virgen de la Palma, y así lo hace desde hace generaciones.",
+              "en": "The neighbourhood · All of La Viña turns out with its Virgin of La Palma, as it has for generations."
+            }
+          },
+          "nextNodeId": "sb2_sanagustin",
+          "nextHint": {
+            "es": "A la iglesia de San Agustín. Unos 10 minutos.",
+            "en": "To the church of San Agustín. About 10 minutes."
+          }
+        },
+        {
+          "id": "sb2_sanagustin",
+          "title": {
+            "es": "Iglesia de San Agustín",
+            "en": "Church of San Agustín"
+          },
+          "location": {
+            "lat": 36.5328,
+            "lng": -6.2952
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_sanagustin.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanagustin.svg"
+              ],
+              "characters": [
+                {
+                  "id": "maniguetero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "cargador",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "neutral",
+              "text": {
+                "es": "Aquí tiene su sede la cofradía de la Buena Muerte. La llaman «el Silencio».",
+                "en": "This is the home of the Brotherhood of the Good Death. People call it “the Silence”."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Desde 1921 sale en la noche del Viernes Santo con las luces de las calles apagadas, alumbrada solo por las velas, hasta la Catedral. Y el público también guarda silencio.",
+                "en": "Since 1921 it has gone out on the night of Good Friday with the streetlights switched off, lit only by candles, all the way to the Cathedral. And the crowd keeps silent too."
+              },
+              "year": 1921
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "thinking",
+              "text": {
+                "es": "Esa noche, en esas calles estrechas, solo se oyen los pasos… y la horquilla de mi compañero.",
+                "en": "That night, in those narrow streets, all you can hear are footsteps… and my companion's forked staff."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué llaman a la Buena Muerte «el Silencio»?",
+              "en": "Why is the Good Death brotherhood called “the Silence”?"
+            },
+            "options": [
+              {
+                "es": "Porque no lleva banda de música",
+                "en": "Because it has no band"
+              },
+              {
+                "es": "Porque sale a oscuras y en silencio, y el público también calla",
+                "en": "Because it goes out in darkness and silence, and the crowd is silent too"
+              },
+              {
+                "es": "Porque sus nazarenos no pueden hablar en todo el año",
+                "en": "Because its members may not speak all year"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Sale con las luces apagadas y en silencio absoluto, y quien la mira también guarda silencio.",
+              "en": "It goes out with the lights off in total silence, and those watching keep silent too."
+            }
+          },
+          "clue": {
+            "id": "pista_despacio",
+            "text": {
+              "es": "Las calles · En calles tan estrechas, el paso avanza despacio, a golpe de horquilla.",
+              "en": "The streets · In streets this narrow, the float moves slowly, to the knock of the staff."
+            }
+          },
+          "nextNodeId": "s4_candelaria",
+          "nextHint": {
+            "es": "A la Plaza de la Candelaria, en la Carrera Oficial. Unos 3 minutos.",
+            "en": "To Plaza de la Candelaria, on the Official Route. About 3 minutes."
+          }
+        },
+        {
+          "id": "s4_candelaria",
+          "title": {
+            "es": "Plaza de la Candelaria",
+            "en": "Plaza de la Candelaria"
+          },
+          "location": {
+            "lat": 36.5334,
+            "lng": -6.2931
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_candelaria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_candelaria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "saetera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Carrera Oficial pasa por la Plaza de San Juan de Dios, la Catedral, la Candelaria y termina en la Plaza del Palillero. Por aquí pasan todas las cofradías.",
+                "en": "The Official Route runs through Plaza de San Juan de Dios, the Cathedral and La Candelaria, and ends at Plaza del Palillero. Every brotherhood passes this way."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_santamaria"
+                  ],
+                  "text": {
+                    "es": "Vienes de Santa María: ya has visto que allí la devoción se hereda. Ahora, ¿cómo quieres ver pasar el paso?",
+                    "en": "You've come from Santa María: you've seen how devotion is inherited there. Now, how would you like to watch the float go by?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_vina"
+                  ],
+                  "text": {
+                    "es": "Vienes de La Viña y de San Agustín: ya sabes lo que es un barrio volcado y una noche en silencio. Ahora, ¿cómo quieres ver pasar el paso?",
+                    "en": "You've come from La Viña and San Agustín: you know what a devoted neighbourhood and a silent night are like. Now, how would you like to watch the float go by?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde termina la Carrera Oficial de Cádiz?",
+              "en": "Where does the Cádiz Official Route end?"
+            },
+            "options": [
+              {
+                "es": "En la Plaza del Palillero",
+                "en": "At Plaza del Palillero"
+              },
+              {
+                "es": "En La Caleta",
+                "en": "At La Caleta"
+              },
+              {
+                "es": "En el Gran Teatro Falla",
+                "en": "At the Gran Teatro Falla"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En la Plaza del Palillero, después de pasar por la Candelaria.",
+              "en": "At Plaza del Palillero, after passing La Candelaria."
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Escuchar una saeta",
+                "en": "Listen to a saeta"
+              },
+              "hint": {
+                "es": "Con la Saetera",
+                "en": "With the Saetera"
+              },
+              "targetNodeId": "s4a_saeta",
+              "setFlags": [
+                "version_saeta"
+              ]
+            },
+            {
+              "label": {
+                "es": "Guardar silencio",
+                "en": "Keep silent"
+              },
+              "hint": {
+                "es": "Con el Maniguetero",
+                "en": "With the Maniguetero"
+              },
+              "targetNodeId": "s4b_silencio",
+              "setFlags": [
+                "version_silencio"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s4a_saeta",
+          "title": {
+            "es": "La saeta",
+            "en": "The saeta"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "saetera",
+              "expression": "proud",
+              "text": {
+                "es": "El paso se para delante del balcón. La calle se calla. Y entonces se canta:",
+                "en": "The float stops in front of the balcony. The street falls silent. And then comes the song:"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "saetera",
+              "expression": "dramatic",
+              "text": {
+                "es": "«Por la calle Santa María\nva el Señor de Cádiz andando,\ny el barrio entero, callado,\nlo va de lejos rezando.»",
+                "en": "“Down the street of Santa María\nthe Lord of Cádiz goes walking,\nand the whole barrio, silent,\nprays from afar without talking.”"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "happy",
+              "text": {
+                "es": "Cuando acaba la saeta, el capataz da la orden y los cargadores volvemos a andar. Así, despacito, cabe todo: la saeta, el barrio y el paso.",
+                "en": "When the saeta ends, the foreman gives the order and we cargadores set off again. Slowly like that, everything fits: the saeta, the barrio and the float."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_saeta",
+            "text": {
+              "es": "El barrio · El barrio se detiene con el paso para escuchar la saeta: la fe del barrio marca el ritmo.",
+              "en": "The neighbourhood · The neighbourhood stops with the float to hear the saeta: its faith sets the pace."
+            }
+          },
+          "nextNodeId": "s5_palillero",
+          "nextHint": {
+            "es": "Al Palillero, donde termina la Carrera Oficial. Un par de minutos.",
+            "en": "To El Palillero, where the Official Route ends. A couple of minutes."
+          }
+        },
+        {
+          "id": "s4b_silencio",
+          "title": {
+            "es": "El silencio",
+            "en": "The silence"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "neutral",
+              "text": {
+                "es": "Escucha. Sin música, sin voces. Solo el roce de los pies de los cargadores… y la horquilla contra el suelo.",
+                "en": "Listen. No music, no voices. Just the shuffle of the cargadores' feet… and the staff against the ground."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maniguetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Cada golpe es una orden: andar, parar, levantar. En una calle así de estrecha no hay prisa que valga.",
+                "en": "Every knock is an order: walk, stop, lift. In a street this narrow there's no room for hurry."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pista_silencio",
+            "text": {
+              "es": "Las calles · En silencio se oye cómo el paso avanza a golpe de horquilla por calles estrechas.",
+              "en": "The streets · In the silence you can hear the float move to the knock of the staff through narrow streets."
+            }
+          },
+          "nextNodeId": "s5_palillero",
+          "nextHint": {
+            "es": "Al Palillero, donde termina la Carrera Oficial. Un par de minutos.",
+            "en": "To El Palillero, where the Official Route ends. A couple of minutes."
+          }
+        },
+        {
+          "id": "s5_palillero",
+          "title": {
+            "es": "Plaza del Palillero",
+            "en": "Plaza del Palillero"
+          },
+          "location": {
+            "lat": 36.5346,
+            "lng": -6.2938
+          },
+          "triggerRadiusM": 45,
+          "background": "fondos/fondo_cadiz_palillero.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_palillero.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cargador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "maniguetero",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Cuaresma y Semana Santa no faltan en las casas gaditanas las torrijas y los pestiños.",
+                "en": "During Lent and Holy Week, Cádiz homes are never without torrijas and pestiños."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "thinking",
+              "text": {
+                "es": "Hemos llegado al final de la Carrera Oficial. Repasa el cuaderno: el puerto, las calles, el barrio. ¿Por qué los pasos de Cádiz son como son?",
+                "en": "We've reached the end of the Official Route. Go over your notebook: the port, the streets, the neighbourhood. Why are the floats of Cádiz the way they are?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué en Cádiz los pasos van a hombros, despacio, y son altos y estrechos?",
+              "en": "Why in Cádiz are the floats carried on the shoulders, slowly, and tall and narrow?"
+            },
+            "options": [
+              {
+                "es": "Solo por la tradición del puerto",
+                "en": "Only because of the port tradition"
+              },
+              {
+                "es": "Por las tres cosas juntas: el puerto, las calles estrechas y la devoción de los barrios",
+                "en": "All three together: the port, the narrow streets and the neighbourhoods' devotion"
+              },
+              {
+                "es": "Porque así lo manda una ley",
+                "en": "Because a law says so"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La costumbre de cargar a hombros, que la tradición une a los hombres del muelle; unas calles estrechas que piden pasos altos y estrechos y paso lento; y unos barrios que heredan la devoción. Las tres cosas juntas.",
+              "en": "The custom of carrying on the shoulders, which tradition links to the dock workers; narrow streets that call for tall, narrow floats and a slow pace; and neighbourhoods that inherit their devotion. All three together."
+            }
+          },
+          "nextNodeId": "s6_final"
+        },
+        {
+          "id": "s6_final",
+          "title": {
+            "es": "Recogida",
+            "en": "Return"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_santamaria",
+                    "version_saeta"
+                  ],
+                  "text": {
+                    "es": "Santa María y una saeta: te llevas la voz de Cádiz. Eres voz de Santa María.",
+                    "en": "Santa María and a saeta: you take the voice of Cádiz with you. You're a voice of Santa María."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_santamaria",
+                    "version_silencio"
+                  ],
+                  "text": {
+                    "es": "Santa María y el silencio: has entendido el paso por dentro. Eres cargador de honor.",
+                    "en": "Santa María and the silence: you've understood the float from the inside. You're an honorary cargador."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_vina",
+                    "version_saeta"
+                  ],
+                  "text": {
+                    "es": "La Viña y una saeta: el barrio cantando a su Virgen. Eres saeta de La Viña.",
+                    "en": "La Viña and a saeta: the barrio singing to its Virgin. You're a saeta of La Viña."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_vina",
+                    "version_silencio"
+                  ],
+                  "text": {
+                    "es": "La Viña y el silencio de San Agustín: sabes escuchar lo que no suena. Eres guardián del silencio.",
+                    "en": "La Viña and the silence of San Agustín: you know how to hear what makes no sound. You're a keeper of the silence."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "happy",
+              "text": {
+                "es": "Y si vuelves en Semana Santa, búscanos: estaremos debajo de un paso, pasito a pasito. Hay barrios que hoy no has pisado.",
+                "en": "And if you come back in Holy Week, look for us: we'll be under a float, step by step. There are neighbourhoods you haven't walked today."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "voz_santamaria",
+          "requires": [
+            "camino_santamaria",
+            "version_saeta"
+          ],
+          "title": {
+            "es": "Voz de Santa María",
+            "en": "Voice of Santa María"
+          }
+        },
+        {
+          "id": "cargador_honor",
+          "requires": [
+            "camino_santamaria",
+            "version_silencio"
+          ],
+          "title": {
+            "es": "Cargador de honor",
+            "en": "Honorary cargador"
+          }
+        },
+        {
+          "id": "saeta_vina",
+          "requires": [
+            "camino_vina",
+            "version_saeta"
+          ],
+          "title": {
+            "es": "Saeta de La Viña",
+            "en": "Saeta of La Viña"
+          }
+        },
+        {
+          "id": "guardian_silencio",
+          "requires": [
+            "camino_vina",
+            "version_silencio"
+          ],
+          "title": {
+            "es": "Guardián del silencio",
+            "en": "Keeper of the silence"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "cirio",
+          "name": {
+            "es": "El cirio",
+            "en": "The candle"
+          },
+          "icon": "collectibles/ssanta_cirio.svg",
+          "awardedAtNodeId": "s1_sanjuan"
+        },
+        {
+          "id": "horquilla",
+          "name": {
+            "es": "La horquilla",
+            "en": "The forked staff"
+          },
+          "icon": "collectibles/ssanta_horquilla.svg",
+          "awardedAtNodeId": "s2_catedral"
+        },
+        {
+          "id": "cruz_guia",
+          "name": {
+            "es": "La cruz de guía",
+            "en": "The guiding cross"
+          },
+          "icon": "collectibles/ssanta_cruz.svg",
+          "awardedAtNodeId": "sa1_santamaria"
+        },
+        {
+          "id": "saeta",
+          "name": {
+            "es": "La saeta",
+            "en": "The saeta"
+          },
+          "icon": "collectibles/ssanta_saeta.svg",
+          "awardedAtNodeId": "sa2_merced"
+        },
+        {
+          "id": "estandarte",
+          "name": {
+            "es": "El estandarte de la Palma",
+            "en": "The standard of La Palma"
+          },
+          "icon": "collectibles/ssanta_estandarte.svg",
+          "awardedAtNodeId": "sb1_palma"
+        },
+        {
+          "id": "vela_silencio",
+          "name": {
+            "es": "La vela del silencio",
+            "en": "The candle of silence"
+          },
+          "icon": "collectibles/ssanta_silencio.svg",
+          "awardedAtNodeId": "sb2_sanagustin"
+        },
+        {
+          "id": "torrija",
+          "name": {
+            "es": "La torrija",
+            "en": "The torrija"
+          },
+          "icon": "collectibles/ssanta_torrija.svg",
+          "awardedAtNodeId": "s5_palillero"
+        },
+        {
+          "id": "palio",
+          "name": {
+            "es": "Sobre los hombros de Cádiz",
+            "en": "On the Shoulders of Cádiz"
+          },
+          "icon": "collectibles/ssanta_palio.svg",
+          "awardedAtNodeId": "s6_final"
         }
       ]
     }
