@@ -10,9 +10,14 @@ npx expo install --fix     # alinea las versiones de todas las dependencias con 
 npx expo start             # pulsa "a" (Android), "i" (iOS) o escanea el QR con Expo Go
 ```
 
-> `package.json` fija Expo SDK 54 y deja el resto en `*` para que `expo install --fix`
-> elija las versiones compatibles. Si quieres el SDK más reciente:
-> `npx expo install expo@latest && npx expo install --fix`.
+> `package.json` fija las versiones del SDK 54 (y `package-lock.json` las congela).
+> Para subir de SDK: `npx expo install expo@latest && npx expo install --fix`.
+
+```bash
+npm run typecheck          # 0 errores
+npm test                   # tests del motor (los 4 finales son alcanzables)
+npx expo start --web       # probar en el navegador
+```
 
 ## Subir a GitHub
 

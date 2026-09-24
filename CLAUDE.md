@@ -21,6 +21,8 @@ ciudad es solo **contenido** (un pack JSON + assets).
 npm install && npx expo install --fix   # primera vez: alinea versiones con el SDK de Expo
 npx expo start                          # desarrollo
 npm run typecheck                       # tsc --noEmit (debe quedar en 0 errores)
+npm test                                # jest-expo: motor, cargador de packs y store
+npx expo start --web                    # probar en navegador (sin simulador)
 ```
 
 Tras cada cambio relevante: `npm run typecheck` y probar en Expo Go o simulador.
@@ -28,11 +30,18 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 
 ## Estado actual
 
-**Fase 1 hecha** (nunca se ha ejecutado todavía: el código se escribió sin poder instalar
-dependencias; lo primero es arrancarlo y corregir lo que falle):
-- Tema en `src/theme` y componentes en `src/components/ui`.
-- Navegación en dos modos: pestañas fuera de la ruta, pantalla de juego con HUD dentro.
-- Pantallas con datos fijos (maqueta) que la fase 2 debe conectar al motor.
+**Fase 1 hecha y verificada**: dependencias fijadas al SDK 54, typecheck en 0, bundles iOS/Android/web OK.
+
+**Fase 2 hecha** (motor narrativo):
+- `src/engine/schema.ts` + `loadPack.ts`: validación zod y de referencias; nunca lanza.
+- `src/engine/catalog.ts`: packs incluidos (añadir ciudad = añadir su JSON aquí).
+- `src/engine/runner.ts`: funciones puras (`advance`, `resolveText`, `routeStops`…). La pista y los
+  coleccionables de un nodo se ganan al **completarlo** (salir de él), no al entrar.
+- `src/engine/scene.ts`: pasos de un nodo para la pantalla de juego. `outline.ts`: ficha y progreso.
+- `src/store/progress.ts`: zustand + AsyncStorage (funciona en Expo Go). Colección acumulada entre
+  partidas y ajuste `demoMode` (activo por defecto hasta la fase 4).
+- Todas las pantallas leen del pack y del store. Tests: los 4 finales son alcanzables.
+- `babel.config.js` activa `unstable_transformImportMeta` (zustand usa `import.meta` en web).
 
 ## Arquitectura
 
@@ -50,7 +59,11 @@ src/theme/                tokens (colores, radios, sombras, tipografía)
 src/components/ui/        Button3D, IconButton, Chip, Panel(+Nameplate), DialogBox, ChoiceCard,
                           Hud, TabBar, HardShadow, AzulejoBackground, Icon
 src/components/layout/    Screen, TopBar
+src/components/game/      ChallengePanel, ArrivalPanel, CaseClosed
 src/content/types.ts      ESQUEMA de los packs (fuente de verdad del contenido)
+src/engine/               loadPack, schema, catalog, runner, scene, outline (+ __tests__)
+src/store/progress.ts     progreso persistido
+src/hooks/useCurrentRun   ruta en juego para los modales
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
@@ -80,7 +93,7 @@ Reglas de navegación (no romperlas):
 - Accesibilidad: objetivos táctiles ≥ 44 px, `accessibilityRole/Label` en todo lo pulsable,
   subtítulos siempre disponibles.
 
-## Motor narrativo (fase 2, lo siguiente)
+## Motor narrativo (fase 2, hecha)
 
 El pack es un **grafo** de `StoryNode` (ver `src/content/types.ts`):
 - Nodo **con `location`** → espera al geofence (o al botón "Simular llegada" en modo demo).
