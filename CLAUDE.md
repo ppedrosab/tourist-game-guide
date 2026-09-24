@@ -21,7 +21,8 @@ ciudad es solo **contenido** (un pack JSON + assets).
 npm install && npx expo install --fix   # primera vez: alinea versiones con el SDK de Expo
 npx expo start                          # desarrollo
 npm run typecheck                       # tsc --noEmit (debe quedar en 0 errores)
-npm test                                # jest-expo: motor, cargador de packs y store
+npm test                                # jest-expo: motor, cargador de packs, store y escenas
+npm run gen:assets                      # regenerar src/scene/assets.generated.ts
 npx expo start --web                    # probar en navegador (sin simulador)
 ```
 
@@ -42,6 +43,23 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   partidas y ajuste `demoMode` (activo por defecto solo en desarrollo, `__DEV__`).
 - Todas las pantallas leen del pack y del store. Tests: los 4 finales son alcanzables.
 - `babel.config.js` activa `unstable_transformImportMeta` (zustand usa `import.meta` en web).
+
+**Fase 3 hecha** (escenas; probada en navegador, falta probar el giroscopio en dispositivo):
+- `npm run gen:assets` → `src/scene/assets.generated.ts` (no editar): capas por escena, sprites
+  partidos (sombra · cuerpo · cara · luz de borde; entre expresiones solo cambia `face`) y audios de
+  `assets/audio/**` por la ruta del pack. Regenerar al añadir capas, sprites o voces.
+- `src/scene/parallax.ts` (puro/worklet, con tests): profundidades cielo 0 · fondo 0.1 · medio/mar
+  0.25 · primer plano 0.6 · fx fija. Inclinación con tanh (acotada), amplitud proporcional al
+  escenario y **misma escala para todas las capas** (~8 %): nunca asoma un borde y en reposo se ve la
+  composición original. Suavizado por dt y recentrado lento a la postura natural.
+- `src/scene/SceneStage.tsx`: todo el parallax en el hilo de interfaz (sensor de reanimated →
+  `useFrameCallback` → estilos). Personajes a la profundidad del primer plano (no "patinan"), por
+  encima de fx. Congelado bajo modales/segundo plano, quieto con "Reducir movimiento". En web, el
+  puntero hace de giroscopio.
+- `cast.ts` (reparto por paso), `Sprite`/`CastLayer` (expresiones, lip-sync), `sun.ts` (sombra según
+  el sol real de la parada), `useVoice` (expo-audio; sin audio simula la duración para el lip-sync).
+- Pendiente de dispositivo: confirmar el sentido de roll/pitch del sensor en iOS y Android (si el
+  parallax va "al revés", invertir el signo en `stepTilt`).
 
 **Fase 4 hecha** (geolocalización; sin probar aún en dispositivo real):
 - `src/engine/geo.ts` (puro, con tests): distancias, `isInside` con margen por precisión (máx. 20 m),
@@ -77,6 +95,8 @@ src/engine/               loadPack, schema, catalog, runner, scene, outline (+ _
 src/store/progress.ts     progreso persistido
 src/hooks/                useCurrentRun (modales), useArrivalWatcher (GPS en primer plano)
 src/geo/                  geofences en segundo plano, permisos, GeofenceSync
+src/scene/                SceneStage, parallax, cast, Sprite, CastLayer, sun, voice, assets.generated
+scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
@@ -129,10 +149,8 @@ Tareas de la fase 2:
 
 ## Fases siguientes
 
-- **3 · Escenas**: `SceneStage` con capas WebP y parallax por giroscopio (expo-sensors;
-  factores sugeridos: cielo 0, fondo 0.1, medio 0.25, primer plano 0.6; capa fx fija), sprites
-  SVG con cambio del grupo `face` por expresión y lip-sync alternando `neutral`/`talking` mientras
-  suena el audio (expo-audio), sombra proyectada del personaje inclinada según el sol, subtítulos.
+- **3 · Escenas** (hecha, ver arriba). Se usó el sensor de reanimated en vez de expo-sensors para
+  que el parallax no pase por el hilo de JS.
 - **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
 - **5 · Mapa**: MapLibre (@maplibre/maplibre-react-native), dos caminos en sus colores, descarga
   offline por ciudad.
