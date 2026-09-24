@@ -6,9 +6,9 @@ import { useProgress } from "@/store/progress";
 import { border, colors, radius, type } from "@/theme";
 import { Screen } from "../layout/Screen";
 import { Button3D } from "../ui/Button3D";
-import { Chip } from "../ui/Chip";
 import { Icon } from "../ui/Icon";
 import { Panel } from "../ui/Panel";
+import { CollectibleArt } from "./CollectibleArt";
 import { Stars } from "./Stars";
 
 type Props = { route: Route; run: PlayerProgress; onReplay: () => void; onExit: () => void };
@@ -44,7 +44,10 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
         <Panel nameplate={t("final.coleccionables")}>
           <View style={styles.chips}>
             {rewards.map((r) => (
-              <Chip key={r.id} label={L(r.name)} icon="trophy" variant="sand" />
+              <View key={r.id} style={styles.reward} accessible accessibilityLabel={L(r.name)}>
+                <CollectibleArt icon={r.icon} size={72} />
+                <Text style={[type.caption, { textAlign: "center", color: colors.ink }]}>{L(r.name)}</Text>
+              </View>
             ))}
           </View>
         </Panel>
@@ -68,5 +71,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  chips: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
+  chips: { flexDirection: "row", flexWrap: "wrap", gap: 10, justifyContent: "center" },
+  reward: { width: 92, alignItems: "center", gap: 4 },
 });

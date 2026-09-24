@@ -46,8 +46,10 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 
 **Fase 3 hecha** (escenas; probada en navegador, falta probar el giroscopio en dispositivo):
 - `npm run gen:assets` → `src/scene/assets.generated.ts` (no editar): capas por escena, sprites
-  partidos (sombra · cuerpo · cara · luz de borde; entre expresiones solo cambia `face`) y audios de
-  `assets/audio/**` por la ruta del pack. Regenerar al añadir capas, sprites o voces.
+  partidos (sombra · cuerpo · cara · luz de borde; entre expresiones solo cambia `face`), audios de
+  `assets/audio/**` y coleccionables de `assets/collectibles/*.svg` (medallones 120×124 con sombra
+  dura; el `icon` del pack es "collectibles/x.svg"), todo por la ruta del pack. Regenerar al añadir
+  capas, sprites, voces o coleccionables.
 - `src/scene/parallax.ts` (puro/worklet, con tests): profundidades cielo 0 · fondo 0.1 · medio/mar
   0.25 · primer plano 0.6 · fx fija. Inclinación con tanh (acotada), amplitud proporcional al
   escenario y **misma escala para todas las capas** (~8 %): nunca asoma un borde y en reposo se ve la
@@ -131,6 +133,7 @@ src/field/                prueba de campo: registro y análisis
 scripts/gen-scene-assets  genera el manifiesto de capas, sprites y audios
 content/malaga/           misterio-manquita.pack.json
 assets/sprites/           {cenachero,manquita,lucio}/{id}_{expresion}.svg  (viewBox 200×260)
+assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
 assets/backgrounds/svg/   fondo_{parada}.svg (viewBox 390×560)
 assets/backgrounds/layers bg_{parada}_{n}_{capa}@2x/@3x.webp  (capas para parallax)
 ```
@@ -203,7 +206,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Voces: decidir locutores reales o síntesis (y si también en inglés).
 - Revisión de la traducción inglesa por un nativo.
 - Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
-- Imágenes de coleccionables y de "antes y ahora" (el pack las referencia, aún no existen).
+- Imágenes de "antes y ahora" de calle Larios (el pack las referencia, aún no existen).
 
 ## Qué NO hacer
 

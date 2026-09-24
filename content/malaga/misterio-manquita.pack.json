@@ -261,12 +261,12 @@
         { "id": "cuentacuentos", "requires": ["camino_poder", "version_america"], "title": { "es": "Cuentacuentos", "en": "Storyteller" } }
       ],
       "rewards": [
-        { "id": "cenacho_dorado", "name": { "es": "Cenacho dorado", "en": "Golden basket" }, "icon": "img/collectibles/cenacho.png", "awardedAtNodeId": "n1_cenachero" },
-        { "id": "arco_nazari", "name": { "es": "Arco nazarí", "en": "Nasrid arch" }, "icon": "img/collectibles/arco.png", "awardedAtNodeId": "a1_atarazanas" },
-        { "id": "tiza_de_guardia", "name": { "es": "La tiza de Guardia", "en": "The Guardia chalk" }, "icon": "img/collectibles/tiza.png", "awardedAtNodeId": "a2_casa_guardia" },
-        { "id": "sello_real", "name": { "es": "El sello del rey", "en": "The king's seal" }, "icon": "img/collectibles/sello.png", "awardedAtNodeId": "b1_constitucion" },
-        { "id": "foto_con_picasso", "name": { "es": "Foto con Picasso", "en": "Photo with Picasso" }, "icon": "img/collectibles/picasso_banco.png", "awardedAtNodeId": "n6_merced" },
-        { "id": "insignia_detective_manquita", "name": { "es": "Detective de la Manquita", "en": "Manquita detective" }, "icon": "img/collectibles/detective_manquita.png", "awardedAtNodeId": "n7_final" }
+        { "id": "cenacho_dorado", "name": { "es": "Cenacho dorado", "en": "Golden basket" }, "icon": "collectibles/cenacho.svg", "awardedAtNodeId": "n1_cenachero" },
+        { "id": "arco_nazari", "name": { "es": "Arco nazarí", "en": "Nasrid arch" }, "icon": "collectibles/arco.svg", "awardedAtNodeId": "a1_atarazanas" },
+        { "id": "tiza_de_guardia", "name": { "es": "La tiza de Guardia", "en": "The Guardia chalk" }, "icon": "collectibles/tiza.svg", "awardedAtNodeId": "a2_casa_guardia" },
+        { "id": "sello_real", "name": { "es": "El sello del rey", "en": "The king's seal" }, "icon": "collectibles/sello.svg", "awardedAtNodeId": "b1_constitucion" },
+        { "id": "foto_con_picasso", "name": { "es": "Foto con Picasso", "en": "Photo with Picasso" }, "icon": "collectibles/picasso_banco.svg", "awardedAtNodeId": "n6_merced" },
+        { "id": "insignia_detective_manquita", "name": { "es": "Detective de la Manquita", "en": "Manquita detective" }, "icon": "collectibles/detective_manquita.svg", "awardedAtNodeId": "n7_final" }
       ]
     }
   ]

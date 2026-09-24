@@ -5,6 +5,8 @@
  *    (Metro elige @2x/@3x solo; `require` apunta al nombre sin escala).
  *  - Audios: assets/audio/**.mp3|m4a|aac|wav, con la ruta relativa a assets/ como
  *    clave (la misma que usa el pack: "audio/es/n1_a.mp3").
+ *  - Coleccionables: assets/collectibles/*.svg, con la ruta que usa el pack como
+ *    clave ("collectibles/cenacho.svg") y el SVG completo como texto.
  *  - Sprites: assets/sprites/{personaje}/{personaje}_{expresion}.svg, partidos en
  *    sombra · cuerpo · cara · luz de borde. Entre expresiones solo cambia `face`,
  *    así que la cara se guarda aparte y el resto una sola vez.
@@ -111,6 +113,20 @@ function walk(dir, rel) {
 if (existsSync(audioDir)) walk(audioDir, "audio");
 
 // ---------------------------------------------------------------------------
+// Coleccionables
+// ---------------------------------------------------------------------------
+const collectiblesDir = join(root, "assets/collectibles");
+const collectibles = {};
+if (existsSync(collectiblesDir)) {
+  for (const file of readdirSync(collectiblesDir).filter((f) => f.endsWith(".svg")).sort()) {
+    // role/aria-label fuera: la accesibilidad la da el contenedor (en web SvgXml los pasa mal al DOM).
+    collectibles[`collectibles/${file}`] = readFileSync(join(collectiblesDir, file), "utf8")
+      .replace(/\s(role|aria-label)="[^"]*"/g, "")
+      .trim();
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Salida
 // ---------------------------------------------------------------------------
 const lines = [
@@ -132,6 +148,8 @@ lines.push("/** Audios disponibles, por la ruta que usa el pack. Vacío hasta qu
 lines.push("export const AUDIO: Record<string, number> = {");
 for (const a of audios) lines.push(`  ${JSON.stringify(a)}: require(${JSON.stringify(`../../assets/${a}`)}),`);
 lines.push("};");
+lines.push("", "/** Arte de los coleccionables (SVG completo), por la ruta que usa el pack en `icon`. */");
+lines.push(`export const COLLECTIBLE_ART: Record<string, string> = ${JSON.stringify(collectibles, null, 2)};`);
 lines.push("", `export const SPRITES: Record<string, SpriteParts> = ${JSON.stringify(sprites, null, 2)};`, "");
 writeFileSync(out, lines.join("\n"));
-console.log(`OK: ${scenes.size} escenas, ${audios.length} audios, ${Object.keys(sprites).length} personajes → ${out}`);
+console.log(`OK: ${scenes.size} escenas, ${audios.length} audios, ${Object.keys(collectibles).length} coleccionables, ${Object.keys(sprites).length} personajes → ${out}`);

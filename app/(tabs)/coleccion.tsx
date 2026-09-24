@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
 import { Icon } from "@/components/ui";
 import type { LangCode, Route } from "@/content/types";
+import { CollectibleArt } from "@/components/game/CollectibleArt";
 import { Stars } from "@/components/game/Stars";
 import { getCatalog } from "@/engine/catalog";
 import { localize } from "@/engine/runner";
@@ -61,11 +62,17 @@ export default function Coleccion() {
               <View style={styles.grid}>
                 {route.rewards.map((r) => {
                   const unlocked = collection.collectibleIds.includes(r.id);
-                  const fg = unlocked ? colors.ink : colors.muted;
                   return (
-                    <View key={r.id} style={[styles.card, unlocked ? styles.gold : styles.locked]}>
-                      <Icon name={unlocked ? "trophy" : "lock"} color={fg} />
-                      <Text style={[styles.title, { color: fg }]}>{unlocked ? L(r.name) : t("coleccion.oculto")}</Text>
+                    <View
+                      key={r.id}
+                      style={[styles.collectible, !unlocked && styles.collectibleLocked]}
+                      accessible
+                      accessibilityLabel={unlocked ? L(r.name) : t("coleccion.oculto")}
+                    >
+                      <CollectibleArt icon={r.icon} size={84} locked={!unlocked} />
+                      <Text style={[styles.title, styles.center, { color: unlocked ? colors.ink : colors.muted }]}>
+                        {unlocked ? L(r.name) : t("coleccion.oculto")}
+                      </Text>
                     </View>
                   );
                 })}
@@ -80,9 +87,21 @@ export default function Coleccion() {
 
 const styles = StyleSheet.create({
   grid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
+  collectible: {
+    width: "31%",
+    alignItems: "center",
+    gap: 6,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    borderRadius: radius.lg,
+    borderWidth: border.thin,
+    borderColor: colors.ink,
+    backgroundColor: colors.paper,
+  },
+  collectibleLocked: { borderStyle: "dashed", borderColor: colors.line, backgroundColor: "transparent" },
+  center: { textAlign: "center" },
   card: { width: "48%", gap: 6, padding: 12, borderRadius: radius.lg, borderWidth: border.base },
   unlocked: { backgroundColor: colors.clay, borderColor: colors.ink },
-  gold: { backgroundColor: colors.gold, borderColor: colors.ink },
   locked: { backgroundColor: colors.sand, borderColor: colors.line, borderStyle: "dashed" },
   title: { fontFamily: fonts.bold, fontSize: 14 },
   combo: { fontFamily: fonts.body, fontSize: 11 },

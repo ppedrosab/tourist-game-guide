@@ -1,7 +1,8 @@
 import { router } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
-import { Button3D, Chip, Icon } from "@/components/ui";
+import { CollectibleArt } from "@/components/game/CollectibleArt";
+import { Button3D, Icon } from "@/components/ui";
 import { useI18n } from "@/i18n";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
 import { branchColors, border, colors, fonts, radius, type } from "@/theme";
@@ -62,7 +63,10 @@ export default function Cuaderno() {
           <Text style={type.overline}>{t("cuaderno.objetos")}</Text>
           <View style={styles.chips}>
             {objects.map((r) => (
-              <Chip key={r.id} label={L(r.name)} icon="trophy" variant="sand" />
+              <View key={r.id} style={styles.object} accessible accessibilityLabel={L(r.name)}>
+                <CollectibleArt icon={r.icon} size={64} />
+                <Text style={[type.caption, { textAlign: "center", color: colors.ink }]}>{L(r.name)}</Text>
+              </View>
             ))}
           </View>
         </>
@@ -87,5 +91,6 @@ const styles = StyleSheet.create({
   locked: { borderStyle: "dashed", borderColor: colors.line, backgroundColor: "transparent" },
   medal: { width: 34, height: 34, borderRadius: 10, borderWidth: border.thin, borderColor: colors.ink, alignItems: "center", justifyContent: "center" },
   where: { fontFamily: fonts.bold, fontSize: 12 },
-  chips: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
+  chips: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
+  object: { width: 90, alignItems: "center", gap: 4 },
 });
