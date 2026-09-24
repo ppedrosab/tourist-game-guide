@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArrivalPanel } from "@/components/game/ArrivalPanel";
 import { CaseClosed } from "@/components/game/CaseClosed";
@@ -12,6 +12,8 @@ import { findRoute } from "@/engine/catalog";
 import { useArrivalWatcher } from "@/hooks/useArrivalWatcher";
 import { getNode, hasArrived, localize, routeStops } from "@/engine/runner";
 import { buildSteps, SceneStep } from "@/engine/scene";
+import { SCENE_ASPECT, SceneStage } from "@/scene/SceneStage";
+import { sceneKeyFor } from "@/scene/sceneFor";
 import { useProgress } from "@/store/progress";
 import { border, colors, fonts, radius, type } from "@/theme";
 
@@ -53,6 +55,9 @@ export default function Jugar() {
 
 function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: PlayerProgress }) {
   const insets = useSafeAreaInsets();
+  const window = useWindowDimensions();
+  // Escenario con la proporción de las ilustraciones; en pantallas bajas se recorta ("cover").
+  const stageHeight = Math.min(window.width / SCENE_ASPECT, window.height * 0.8);
   const advance = useProgress((s) => s.advance);
   const demoMode = useProgress((s) => s.demoMode);
   const markArrived = useProgress((s) => s.markArrived);
@@ -66,6 +71,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   // Al acabar los pasos de un nodo sin salida explícita, el siguiente nodo narrativo se lanza solo.
   const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
   const { stops, current } = routeStops(route, run);
+  const sceneKey = sceneKeyFor(route, run);
 
   const characterName = (characterId?: string) =>
     localize(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
@@ -73,9 +79,13 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   return (
     <View style={styles.root}>
       <AzulejoBackground />
-      {/* Fase 3: <SceneStage> con fondo por capas, parallax y sprites. */}
-      <View style={styles.stage}>
-        <Text style={styles.stageText}>{localize(node.title)}</Text>
+      <View style={[styles.stage, { height: stageHeight }]}>
+        <SceneStage
+          key={sceneKey}
+          sceneKey={sceneKey}
+          testID="escenario"
+          fallback={<Text style={styles.stageText}>{localize(node.title)}</Text>}
+        />
       </View>
 
       <View style={[styles.hud, { top: insets.top + 8 }]}>
@@ -201,12 +211,8 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    height: "70%",
-    backgroundColor: colors.sand,
     borderBottomWidth: border.thick,
     borderColor: colors.ink,
-    alignItems: "center",
-    justifyContent: "center",
   },
   stageText: { fontFamily: fonts.bold, color: colors.muted },
   hud: { position: "absolute", left: 14, right: 14 },

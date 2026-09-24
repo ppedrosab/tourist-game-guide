@@ -19,6 +19,7 @@
     "@expo/metro-runtime": "~6.1.2",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@react-navigation/bottom-tabs": "^7.4.0",
+    "@react-navigation/native": "^7.4.1",
     "expo": "~54.0.0",
     "expo-audio": "~1.1.1",
     "expo-constants": "~18.0.14",
@@ -54,7 +55,8 @@
     "preset": "jest-expo",
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1",
-      "^@content/(.*)$": "<rootDir>/content/$1"
+      "^@content/(.*)$": "<rootDir>/content/$1",
+      "\\.(webp|png|jpe?g)$": "<rootDir>/test/assetStub.js"
     }
   }
 }
