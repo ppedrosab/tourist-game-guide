@@ -243,9 +243,14 @@ def magon():
     return lambda e: svg(e, [SHADOW, legs, amphora, tunic, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
 
 
-for key, build in [("norica", norica()), ("pepa", pepa()), ("magon", magon())]:
+def write(key, build):
     os.makedirs(os.path.join(SPR, key), exist_ok=True)
     for e in EXPR:
         with open(os.path.join(SPR, key, f"{key}_{e}.svg"), "w") as f:
             f.write(build(e))
-print("sprites de Cádiz generados")
+
+
+if __name__ == "__main__":
+    for key, build in [("norica", norica()), ("pepa", pepa()), ("magon", magon())]:
+        write(key, build)
+    print("sprites de Cádiz generados")

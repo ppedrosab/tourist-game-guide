@@ -179,8 +179,13 @@ ART = {
     "cadiz_caleta": (GOLD, caleta, "Postal de La Caleta"),
     "cadiz_insignia": (GOLD, insignia, "La ciudad que no cayó"),
 }
-os.makedirs(OUT, exist_ok=True)
-for name, (ring, art, title) in ART.items():
-    with open(os.path.join(OUT, f"{name}.svg"), "w") as f:
-        f.write(frame(ring, art, title, f"clip-{name}"))
-print("coleccionables de Cádiz generados")
+def write(art_map):
+    os.makedirs(OUT, exist_ok=True)
+    for name, (ring, art, title) in art_map.items():
+        with open(os.path.join(OUT, f"{name}.svg"), "w") as f:
+            f.write(frame(ring, art, title, f"clip-{name}"))
+
+
+if __name__ == "__main__":
+    write(ART)
+    print("coleccionables de Cádiz generados")
