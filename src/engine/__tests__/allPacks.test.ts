@@ -55,6 +55,33 @@ describe.each(packs)("pack %s", (_source, pack) => {
   });
 });
 
+/** Personajes que aparecen en una ruta: guía, hablantes, reparto de escena y quien presenta las decisiones. */
+function routeCharacters(route: Route): Set<string> {
+  const ids = new Set([route.guideCharacterId]);
+  for (const node of route.nodes) {
+    if (node.decisionIntro) ids.add(node.decisionIntro.characterId);
+    for (const block of node.content) {
+      if (block.type === "dialogue") ids.add(block.characterId);
+      if (block.type === "scene") for (const c of block.characters) ids.add(c.id);
+    }
+  }
+  return ids;
+}
+
+describe.each(packs)("reparto del pack %s", (_source, pack) => {
+  it("ningún personaje se repite entre las rutas de la ciudad", () => {
+    const owner = new Map<string, string>();
+    const repeated: string[] = [];
+    for (const route of pack.routes)
+      for (const id of routeCharacters(route)) {
+        const first = owner.get(id);
+        if (first && first !== route.id) repeated.push(`${id} (${first} y ${route.id})`);
+        else owner.set(id, route.id);
+      }
+    expect(repeated).toEqual([]);
+  });
+});
+
 describe.each(routes)("ruta %s", (_id, pack, route) => {
   it("todos los finales son alcanzables y toda partida acaba en uno", () => {
     const games = allPlaythroughs(pack, route);

@@ -289,6 +289,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 
 ## Qué NO hacer
 
+- No repetir personajes entre las rutas de una misma ciudad (lo comprueba `allPacks.test.ts`) salvo que
+  el usuario diga lo contrario: cada ruta nueva lleva su propio reparto.
 - No meter contenido de ciudad en el código: todo sale del pack.
 - No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts` y `en.ts`.
 - No usar colores o tamaños sueltos: usar `src/theme`.
