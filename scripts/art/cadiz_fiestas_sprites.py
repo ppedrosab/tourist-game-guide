@@ -5,7 +5,7 @@ Comparsista, el Corista y el Cuartetero. El Chirigotero está en cadiz_sprites.p
 
 Uso: python3 scripts/art/cadiz_fiestas_sprites.py && npm run gen:assets
 """
-import os, sys
+import os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from cadiz_sprites import (INK, CLAY, CLAYD, SEA, SEAD, GOLD, GOLDD, PAPER, SHADOW, face_of, g, limb, svg, write)
 
@@ -243,11 +243,34 @@ def maniguetero():
              limb("M124 124Q142 118 152 104", PURPLE, 12),
              f'<circle cx="70" cy="162" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>',
              f'<circle cx="154" cy="102" r="6" fill="{AS}" stroke="{INK}" stroke-width="2.4"/>')
-    head = g("head", *head_base("#E3AE88", "#C58E68", [
-        f'<path d="M60 70Q58 40 100 36Q142 40 140 70Q128 52 100 50Q72 52 60 70Z" fill="#8A8480" stroke="{INK}" stroke-width="2.2"/>',
-        f'<path d="M62 70L64 86M138 70L136 86" stroke="#8A8480" stroke-width="5"/>']))
+    # capirote y antifaz: el nazareno lleva la cara tapada; solo se le ven los ojos
+    head = g("head",
+             f'<path d="M64 60L100 4L136 60Z" fill="{PURPLE}" stroke="{INK}" stroke-width="2.8"/>',
+             f'<path d="M100 4L136 60L114 60Z" fill="{PURPLED}"/>',
+             f'<path d="M100 4L90 58M100 4L112 58" fill="none" stroke="{PURPLED}" stroke-width="1.6"/>',
+             f'<path d="M64 96Q58 132 70 152Q100 162 130 152Q142 132 136 96Z" fill="{PURPLE}" stroke="{INK}" stroke-width="2.8"/>',
+             f'<path d="M116 100Q138 118 130 152Q120 156 110 157Q124 130 116 100Z" fill="{PURPLED}"/>',
+             f'<circle cx="100" cy="134" r="9" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>',
+             f'<path d="M100 128V140M95 132H105" stroke="{PURPLED}" stroke-width="2.2"/>',
+             f'<path d="M62 74Q60 44 100 40Q140 44 138 74Q140 104 100 110Q60 104 62 74Z" fill="{PURPLE}" stroke="{INK}" stroke-width="3"/>',
+             f'<path d="M118 44Q140 52 138 74Q138 100 110 108Q128 90 126 68Q124 52 118 44Z" fill="{PURPLED}" opacity=".7"/>',
+             *[f'<ellipse cx="{x}" cy="80" rx="10.5" ry="10" fill="#C58E68" stroke="{INK}" stroke-width="2.4"/>'
+               f'<path d="M{x - 9} 76Q{x} 68 {x + 9} 76Q{x} 72 {x - 9} 76Z" fill="#9A6A4C" opacity=".6"/>' for x in (83.8, 116.2)])
     rim = g("rim", f'<path d="M68 126L64 236" fill="none" stroke="#FFF" stroke-width="2" opacity=".3"/>')
-    return lambda e: svg(e, [SHADOW, staff, robe, arms, head, face_of(e).replace("#5A3A22", "#3A2A1E"), rim])
+    return lambda e: svg(e, [SHADOW, staff, robe, arms, head, masked_face(e), rim])
+
+
+def masked_face(e):
+    """Cara bajo el antifaz: de la cara común solo quedan los ojos (y los adornos fuera de la cabeza)."""
+    face = face_of(e).replace("#5A3A22", "#3A2A1E").replace("#E0A77A", "#C58E68")
+    keep = []
+    for el in re.findall(r"<(?:ellipse|circle|path)[^>]*/>", face):
+        m = re.search(r'c[x]="([\d.]+)" cy="([\d.]+)"', el) or re.search(r'd="M([\d.]+) ([\d.]+)', el)
+        x, y = float(m.group(1)), float(m.group(2))
+        if "#EE7F6B" in el or (70 <= x <= 130 and not 69 <= y <= 92):
+            continue
+        keep.append(el)
+    return g("face", *keep)
 
 
 def saetera():

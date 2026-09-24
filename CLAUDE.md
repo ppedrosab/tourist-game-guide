@@ -137,7 +137,8 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
 - Cádiz «Sobre los hombros de Cádiz» (Semana Santa; ver `docs/GDD_CADIZ_SEMANA_SANTA.md`). Guía el
   `cargador`, con `maniguetero` y `saetera`; caminos Santa María y La Viña. Tono respetuoso: nada de
   chistes sobre imágenes ni hermandades y **no se dibujan imágenes sagradas** (pasos de palio vistos
-  desde fuera, cirios y nazarenos anónimos). Fondos en `scripts/art/cadiz_ssanta_scenes.py`.
+  desde fuera, cirios y nazarenos anónimos). Los penitentes van con la cara tapada: el `maniguetero`
+  lleva capirote y antifaz y su cara (`masked_face`) solo muestra los ojos. Fondos en `scripts/art/cadiz_ssanta_scenes.py`.
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el

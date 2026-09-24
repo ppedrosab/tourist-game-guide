@@ -31,7 +31,7 @@ Veredicto (quiz en el Palillero): **las tres cosas juntas**.
 | id | Quién | Papel |
 | --- | --- | --- |
 | `cargador` (guía) | Camisa blanca, faja negra, almohadilla al hombro | Cercano; orgulloso de su barrio |
-| `maniguetero` | Túnica morada con cíngulo blanco y horquilla | Marca el ritmo; serio, de pocas palabras |
+| `maniguetero` | Nazareno: túnica morada, cíngulo blanco, capirote y antifaz (cara tapada, solo los ojos) y horquilla | Marca el ritmo; serio, de pocas palabras |
 | `saetera` | Vestido negro y peineta (mantilla por detrás) | Canta la saeta desde el balcón |
 
 ## Caminos y finales
