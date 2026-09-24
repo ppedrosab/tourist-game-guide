@@ -258,8 +258,8 @@
           "clue": {
             "id": "pista_america",
             "text": {
-              "es": "A Cádiz la riqueza le llegaba por mar, con el comercio de América.",
-              "en": "Cádiz's wealth came in by sea, with the trade from the Americas."
+              "es": "El mar · A Cádiz la riqueza le llegaba por mar, con el comercio de América.",
+              "en": "The sea · Cádiz's wealth came in by sea, with the trade from the Americas."
             }
           },
           "decisionIntro": {
@@ -375,8 +375,8 @@
           "clue": {
             "id": "pista_barcos",
             "text": {
-              "es": "Mientras hubiera barcos, Cádiz tendría comida.",
-              "en": "As long as there were ships, Cádiz would have food."
+              "es": "El mar · Mientras hubiera barcos, Cádiz tendría comida.",
+              "en": "The sea · As long as there were ships, Cádiz would have food."
             }
           },
           "nextNodeId": "a2_tavira",
@@ -448,8 +448,8 @@
           "clue": {
             "id": "pista_vigias",
             "text": {
-              "es": "Desde las torres se veía venir a cualquiera: a Cádiz nadie la pillaba por sorpresa.",
-              "en": "From the towers you could see anyone coming: nobody caught Cádiz by surprise."
+              "es": "La isla · Desde las torres se veía venir a cualquiera: a Cádiz nadie la pillaba por sorpresa.",
+              "en": "The island · From the towers you could see anyone coming: nobody caught Cádiz by surprise."
             }
           },
           "nextNodeId": "n4_plaza_espana",
@@ -546,8 +546,8 @@
           "clue": {
             "id": "pista_cortes",
             "text": {
-              "es": "Con la ciudad sitiada, sus diputados escribieron la Constitución de 1812.",
-              "en": "With the city under siege, its deputies wrote the Constitution of 1812."
+              "es": "Los gaditanos · Con la ciudad sitiada, sus diputados escribieron la Constitución de 1812.",
+              "en": "The people of Cádiz · With the city under siege, its deputies wrote the Constitution of 1812."
             }
           },
           "nextNodeId": "n4_plaza_espana",
@@ -734,8 +734,8 @@
           "clue": {
             "id": "pista_coplas",
             "text": {
-              "es": "Las bombas asustaban poco: la gente les sacaba coplas.",
-              "en": "The bombs didn't scare anyone much: people made up songs about them."
+              "es": "Los gaditanos · Las bombas asustaban poco: la gente les sacaba coplas.",
+              "en": "The people of Cádiz · The bombs didn't scare anyone much: people made up songs about them."
             }
           },
           "nextNodeId": "n5_museo",
@@ -796,8 +796,8 @@
           "clue": {
             "id": "pista_isla",
             "text": {
-              "es": "Cádiz era casi una isla y las flotas mantenían abierta la bahía.",
-              "en": "Cádiz was almost an island and the fleets kept the bay open."
+              "es": "La isla · Cádiz era casi una isla y las flotas mantenían abierta la bahía.",
+              "en": "The island · Cádiz was almost an island and the fleets kept the bay open."
             }
           },
           "nextNodeId": "n5_museo",
@@ -901,8 +901,8 @@
           "clue": {
             "id": "pista_gadir",
             "text": {
-              "es": "Desde los fenicios, Cádiz vive de un puerto abierto al mar y fácil de defender.",
-              "en": "Ever since the Phoenicians, Cádiz has lived on a port open to the sea and easy to defend."
+              "es": "La isla · Desde los fenicios, Cádiz vive de un puerto abierto al mar y fácil de defender.",
+              "en": "The island · Ever since the Phoenicians, Cádiz has lived on a port open to the sea and easy to defend."
             }
           },
           "nextNodeId": "n6_caleta",

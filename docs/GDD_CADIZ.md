@@ -18,6 +18,8 @@ pistas contra cada uno:
 | **La isla** | Nadie la pillaba por sorpresa (Torre Tavira) · casi una isla (partes de guerra) · puerto fácil de defender desde los fenicios (museo) |
 | **Los gaditanos** | La Constitución escrita bajo las bombas (San Felipe) · las coplas contra las bombas (coplas) |
 
+Cada pista del cuaderno empieza por su sospechoso («El mar · …», «La isla · …», «Los gaditanos · …»).
+
 Veredicto (reto final): **los tres a la vez**; no hubo un solo culpable. Las dos decisiones son
 «¿qué pista investigamos?» (el mar o la ciudad) y «¿qué testigo escuchamos?» (las coplas o los
 partes de guerra).
