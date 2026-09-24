@@ -1,11 +1,12 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
-import { Button3D, Chip, IconButton, Panel } from "@/components/ui";
+import { Button3D, Chip, Panel } from "@/components/ui";
 import { findRoute } from "@/engine/catalog";
 import { routeFacts, routeOutline } from "@/engine/outline";
 import { localize } from "@/engine/runner";
 import { routeMapData } from "@/map/geometry";
+import { OfflineMapCard } from "@/map/OfflineMapCard";
 import { RouteMap } from "@/map/RouteMap";
 import { useActiveRun, useProgress } from "@/store/progress";
 import { border, branchColors, colors, fonts, type } from "@/theme";
@@ -47,6 +48,7 @@ export default function DetalleRuta() {
       </View>
       <Text style={type.body}>{localize(route.summary)}</Text>
       <RouteMap route={route} run={active} height={230} />
+      <OfflineMapCard pack={pack} />
       <Panel>
         {outline.map((item, i) =>
           item.kind === "stop" ? (
@@ -76,7 +78,6 @@ export default function DetalleRuta() {
         )}
       </Panel>
       <View style={styles.actions}>
-        <IconButton icon="download" label="Descargar ruta para jugar sin datos" />
         <View style={{ flex: 1 }}>
           {active ? (
             <Button3D label="Continuar" icon="play" onPress={play} />
