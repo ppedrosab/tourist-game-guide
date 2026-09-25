@@ -102,40 +102,43 @@
       "avatar": "sprites/tornera/tornera_neutral.svg"
     },
     {
-      "id": "cabezudo",
+      "id": "tarasca",
       "name": {
-        "es": "El Cabezudo",
-        "en": "The Cabezudo"
+        "es": "La Tarasca",
+        "en": "The Tarasca"
       },
       "description": {
-        "es": "Lleva una cabeza enorme de cartón en el Corpus y persigue a los niños. Bromista y juguetón.",
-        "en": "He wears an enormous papier-mâché head at Corpus and chases the children. A prankster and playful."
+        "es": "El dragón del Corpus de Granada, con su muñeca encima que estrena vestido cada año. Presumida y curiosa.",
+        "en": "The dragon of Granada's Corpus, with a doll on top that wears a new dress every year. Vain and curious."
       },
-      "avatar": "sprites/cabezudo/cabezudo_neutral.svg"
+      "avatar": "sprites/tarasca/tarasca_neutral.svg",
+      "era": "1633 - hoy"
     },
     {
-      "id": "modista",
+      "id": "marianapineda",
       "name": {
-        "es": "La Modista",
-        "en": "The Dressmaker"
+        "es": "Mariana Pineda",
+        "en": "Mariana Pineda"
       },
       "description": {
-        "es": "Modista granadina, entendida en la muñeca de la Tarasca. Coqueta y muy observadora.",
-        "en": "A Granada dressmaker, an expert on the Tarasca's doll. Stylish and very observant."
+        "es": "Heroína liberal granadina; bordaba, y una bandera bordada la llevó a juicio. Valiente y muy observadora.",
+        "en": "A liberal heroine from Granada; she embroidered, and an embroidered flag brought her to trial. Brave and very observant."
       },
-      "avatar": "sprites/modista/modista_neutral.svg"
+      "avatar": "sprites/marianapineda/marianapineda_neutral.svg",
+      "era": "1804 - 1831"
     },
     {
-      "id": "tamborilero",
+      "id": "falla",
       "name": {
-        "es": "El Tamborilero",
-        "en": "The Drummer"
+        "es": "Manuel de Falla",
+        "en": "Manuel de Falla"
       },
       "description": {
-        "es": "Toca el tambor en el desfile de gigantes y cabezudos. Serio con el ritmo, alegre con la gente.",
-        "en": "He plays the drum in the parade of giants and cabezudos. Serious about rhythm, cheerful with people."
+        "es": "Compositor que vivió en Granada de 1920 a 1939, a los pies de la Alhambra. Serio con el ritmo, amable con la gente.",
+        "en": "A composer who lived in Granada from 1920 to 1939, at the foot of the Alhambra. Serious about rhythm, kind to people."
       },
-      "avatar": "sprites/tamborilero/tamborilero_neutral.svg"
+      "avatar": "sprites/falla/falla_neutral.svg",
+      "era": "1876 - 1946"
     }
   ],
   "routes": [
@@ -2455,11 +2458,11 @@
         "en": "Where Does the Tarasca Come From?"
       },
       "summary": {
-        "es": "En el Corpus de Granada desfila un dragón con una muñeca vestida a la moda. ¿Viene de Francia, es granadino o es cosa de modistas? Con un cabezudo, una modista y un tamborilero.",
-        "en": "In Granada's Corpus a dragon parades with a fashionably dressed doll. Does it come from France, is it from Granada, or is it the dressmakers' doing? With a cabezudo, a dressmaker and a drummer."
+        "es": "En el Corpus de Granada desfila un dragón con una muñeca vestida a la moda. ¿Viene de Francia, es granadino o es cosa de modistas? Con la propia Tarasca, Mariana Pineda y Manuel de Falla.",
+        "en": "In Granada's Corpus a dragon parades with a fashionably dressed doll. Does it come from France, is it from Granada, or is it the dressmakers' doing? With the Tarasca herself, Mariana Pineda and Manuel de Falla."
       },
       "era": "1633 - hoy",
-      "guideCharacterId": "cabezudo",
+      "guideCharacterId": "tarasca",
       "durationMin": 100,
       "distanceKm": 2.8,
       "difficulty": "medium",
@@ -2510,7 +2513,7 @@
               ],
               "characters": [
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -2518,29 +2521,29 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "happy",
               "text": {
-                "es": "¡Aquí está el cabezudo! Llevo esta cabeza enorme en el Corpus, detrás de la Tarasca y los gigantes. Los niños corren, yo persigo.",
-                "en": "Here comes the cabezudo! I wear this enormous head at Corpus, behind the Tarasca and the giants. The children run, I chase."
+                "es": "¡Hola! Soy la Tarasca: un dragón con una muñeca encima, vestida a la última. Cada Corpus salgo del ayuntamiento y media Granada me mira el vestido.",
+                "en": "Hello! I'm the Tarasca: a dragon with a doll on top, dressed in the latest fashion. Every Corpus I set out from the town hall and half of Granada stares at my dress."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "thinking",
               "text": {
-                "es": "Te traigo un misterio: la Tarasca, un dragón con una muñeca encima vestida a la última moda. ¿De dónde viene ese bicho?",
-                "en": "I've got a mystery for you: the Tarasca, a dragon with a doll on top dressed in the latest fashion. Where does that creature come from?"
+                "es": "Y te confieso un misterio: ni yo misma sé de dónde vengo. ¿Me ayudas a averiguarlo?",
+                "en": "And I'll confess a mystery: not even I know where I come from. Will you help me find out?"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "proud",
               "text": {
-                "es": "Tres sospechosos: Francia, porque hay un pueblo que se llama Tarascón; Granada, que dice que es suya de siempre; y la moda, por lo del vestido. Apunta.",
-                "en": "Three suspects: France, because there's a town called Tarascon; Granada, which says it's always been hers; and fashion, because of the dress. Take notes."
+                "es": "Tres sospechosos: Francia, porque allí hay un pueblo que se llama Tarascón; Granada, que dice que soy suya de siempre; y la moda, por lo del vestido. Apunta.",
+                "en": "Three suspects: France, because there's a town there called Tarascon; Granada, which says I've always been hers; and fashion, because of the dress. Take notes."
               }
             },
             {
@@ -2610,12 +2613,12 @@
               ],
               "characters": [
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "neutral",
                   "position": "left"
                 },
                 {
-                  "id": "modista",
+                  "id": "marianapineda",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2623,11 +2626,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "happy",
               "text": {
-                "es": "¡Hola, cielo! Soy modista. Cada año un diseñador granadino viste a la muñeca de la Tarasca, y nadie sabe cómo será hasta el miércoles.",
-                "en": "Hello, love! I'm a dressmaker. Every year a Granada designer dresses the Tarasca's doll, and nobody knows what it'll look like until Wednesday."
+                "es": "Buenas tardes. Mariana Pineda, granadina. Yo bordaba, así que de telas entiendo. Y tu vestido, Tarasca, lo estrena cada año un diseñador distinto, y nadie lo ve hasta el miércoles.",
+                "en": "Good afternoon. Mariana Pineda, from Granada. I used to embroider, so I know about fabrics. And your dress, Tarasca, is made each year by a different designer, and nobody sees it until Wednesday."
               }
             },
             {
@@ -2639,7 +2642,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "thinking",
               "text": {
                 "es": "El vestido es moda, sí. Pero el dragón… el dragón es mucho más viejo que cualquier moda.",
@@ -2681,7 +2684,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "cabezudo",
+            "characterId": "tarasca",
             "expression": "happy",
             "text": {
               "es": "¿Seguimos por la catedral y la Alcaicería, por donde pasa el Corpus, o por Plaza Nueva y el Darro?",
@@ -2744,12 +2747,12 @@
               ],
               "characters": [
                 {
-                  "id": "tamborilero",
+                  "id": "falla",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2757,11 +2760,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "happy",
               "text": {
-                "es": "¡Rataplán! Tamborilero del Corpus. Marco el paso de gigantes, cabezudos y Tarasca por toda la ciudad.",
-                "en": "Rat-a-tat! Corpus drummer. I set the pace for giants, cabezudos and Tarasca all through the city."
+                "es": "Manuel de Falla, músico. Viví muchos años a los pies de la Alhambra, y el Corpus de Granada se oye antes de verse: tambores y dulzainas.",
+                "en": "Manuel de Falla, musician. I lived for many years at the foot of the Alhambra, and Granada's Corpus is heard before it's seen: drums and shawms."
               }
             },
             {
@@ -2774,7 +2777,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "thinking",
               "text": {
                 "es": "O sea, que en Granada la Tarasca tiene casi cuatrocientos años. Pero ¿la inventaron aquí?",
@@ -2842,12 +2845,12 @@
               ],
               "characters": [
                 {
-                  "id": "modista",
+                  "id": "marianapineda",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "tamborilero",
+                  "id": "falla",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2862,7 +2865,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "proud",
               "text": {
                 "es": "Si hay tarascas en tantas ciudades, no puede ser un invento granadino. Tuvo que venir de algún sitio.",
@@ -2871,11 +2874,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "thinking",
               "text": {
-                "es": "Mi maestro decía que el nombre viene de un dragón de Francia. De un río, de un pueblo…",
-                "en": "My teacher used to say the name comes from a dragon in France. From a river, a town…"
+                "es": "En mis viajes oí que el nombre viene de un dragón de Francia. De un río, de un pueblo…",
+                "en": "On my travels I heard that the name comes from a dragon in France. From a river, a town…"
               }
             }
           ],
@@ -2939,12 +2942,12 @@
               ],
               "characters": [
                 {
-                  "id": "tamborilero",
+                  "id": "falla",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "modista",
+                  "id": "marianapineda",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2959,16 +2962,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "proud",
               "text": {
-                "es": "Yo toco el tambor, pero sé de dragones. El de la Tarasca es un dragón vencido: por eso lo sacan en procesión, domado.",
-                "en": "I play the drum, but I know about dragons. The Tarasca's dragon is a defeated one: that's why it's paraded, tamed."
+                "es": "Manuel de Falla, músico y vecino de Granada. Escribo música, pero de dragones sé algo: el de la Tarasca es un dragón vencido. Por eso sale en procesión, domado.",
+                "en": "Manuel de Falla, musician and Granada resident. I write music, but I know a little about dragons: the Tarasca's is a defeated one. That's why it's paraded, tamed."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "thinking",
               "text": {
                 "es": "Un dragón domado… Eso me suena a cuento antiguo, no a moda.",
@@ -3036,12 +3039,12 @@
               ],
               "characters": [
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "tamborilero",
+                  "id": "falla",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3057,16 +3060,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "happy",
               "text": {
-                "es": "¡Ahí está! El dragón de Tarascón: la tarasca. Un bicho de río, como el Darro que tienes al lado.",
-                "en": "There it is! The dragon of Tarascon: the tarasque. A river beast, like the Darro right beside you."
+                "es": "¡Ahí está! El dragón de Tarascón: la tarasca… ¡O sea, yo! Una bestia de río, como el Darro que tienes al lado.",
+                "en": "There it is! The dragon of Tarascon: the tarasque… In other words, me! A river beast, like the Darro right beside you."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "thinking",
               "text": {
                 "es": "Así que el nombre y el dragón son franceses… y a Granada llegó por el Corpus.",
@@ -3133,12 +3136,12 @@
               ],
               "characters": [
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "modista",
+                  "id": "marianapineda",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3153,7 +3156,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "thinking",
               "variants": [
                 {
@@ -3204,7 +3207,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "cabezudo",
+            "characterId": "tarasca",
             "expression": "thinking",
             "text": {
               "es": "¿El vestido o el tambor?",
@@ -3218,8 +3221,8 @@
                 "en": "The dress lead"
               },
               "hint": {
-                "es": "Con la modista",
-                "en": "With the dressmaker"
+                "es": "Con Mariana Pineda",
+                "en": "With Mariana Pineda"
               },
               "targetNodeId": "f4a_vestido",
               "setFlags": [
@@ -3232,8 +3235,8 @@
                 "en": "The drum lead"
               },
               "hint": {
-                "es": "Con el tamborilero",
-                "en": "With the drummer"
+                "es": "Con Falla",
+                "en": "With Falla"
               },
               "targetNodeId": "f4b_tambor",
               "setFlags": [
@@ -3251,7 +3254,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "dramatic",
               "text": {
                 "es": "Te lo confieso: la moda es lo que hace nuestra Tarasca tan granadina. Pero el dragón no lo cosimos nosotras.",
@@ -3260,7 +3263,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "modista",
+              "characterId": "marianapineda",
               "expression": "happy",
               "text": {
                 "es": "El dragón vino con el nombre, de Francia. Aquí le pusimos encima la muñeca más elegante del año.",
@@ -3290,7 +3293,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "proud",
               "text": {
                 "es": "Las fiestas del Corpus se llenaron de figuras de toda Europa: gigantes, dragones, cabezudos. La tarasca viajó de Francia a Castilla y de ahí a Granada.",
@@ -3299,11 +3302,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tamborilero",
+              "characterId": "falla",
               "expression": "happy",
               "text": {
-                "es": "¡Y aquí se quedó! Con su tambor, que ese sí es mío.",
-                "en": "And here she stayed! With her drum, which is definitely mine."
+                "es": "¡Y aquí se quedó, con su tambor y su dulzaina! Esa música sí que suena a Granada.",
+                "en": "And here she stayed, with her drum and her shawm! That music really does sound like Granada."
               }
             }
           ],
@@ -3340,12 +3343,12 @@
               ],
               "characters": [
                 {
-                  "id": "cabezudo",
+                  "id": "tarasca",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "modista",
+                  "id": "marianapineda",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -3360,7 +3363,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto: Francia, Granada o la moda. ¿De dónde viene la Tarasca?",
@@ -3405,7 +3408,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "proud",
               "variants": [
                 {
@@ -3452,11 +3455,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cabezudo",
+              "characterId": "tarasca",
               "expression": "happy",
               "text": {
-                "es": "¡Y ahora, a correr, que va el cabezudo! Nos vemos el miércoles del Corpus.",
-                "en": "And now, run, here comes the cabezudo! See you on Corpus Wednesday."
+                "es": "¡Y ahora, a desfilar, que me espera el Corpus! Nos vemos el miércoles… y fíjate en mi vestido.",
+                "en": "And now, off to parade, Corpus is waiting! See you on Wednesday… and take a good look at my dress."
               }
             }
           ],
@@ -3522,8 +3525,8 @@
         {
           "id": "tijeras",
           "name": {
-            "es": "Las tijeras de la modista",
-            "en": "The dressmaker's scissors"
+            "es": "Las tijeras de bordar",
+            "en": "The embroidery scissors"
           },
           "icon": "collectibles/granada_fiesta_tijeras.svg",
           "awardedAtNodeId": "f2_bibrambla"

@@ -122,16 +122,17 @@
       "avatar": "sprites/podador/podador_neutral.svg"
     },
     {
-      "id": "ganadero",
+      "id": "iranzo",
       "name": {
-        "es": "El Ganadero",
-        "en": "The Livestock Farmer"
+        "es": "El condestable Iranzo",
+        "en": "Constable Iranzo"
       },
       "description": {
-        "es": "Lleva cada año a bendecir a sus animales por San Antón. Bonachón y muy hablador.",
-        "en": "Every year he takes his animals to be blessed for San Antón. Good-natured and very talkative."
+        "es": "Miguel Lucas de Iranzo, condestable de Castilla afincado en Jaén; la crónica de sus hechos cuenta las fiestas que daba en la ciudad. Bonachón y muy hablador.",
+        "en": "Miguel Lucas de Iranzo, Constable of Castile, settled in Jaén; the chronicle of his deeds tells of the festivities he held in the city. Good-natured and very talkative."
       },
-      "avatar": "sprites/ganadero/ganadero_neutral.svg"
+      "avatar": "sprites/iranzo/iranzo_neutral.svg",
+      "era": "s. XV"
     }
   ],
   "routes": [
@@ -2402,8 +2403,8 @@
         "en": "Why Does Jaén Light Bonfires for San Antón?"
       },
       "summary": {
-        "es": "Cada 16 de enero Jaén se llena de hogueras. ¿Por el santo, por el frío o por el olivo? Con una melenchonera, un podador y un ganadero, entre coplas, leña y el Jaén antiguo.",
-        "en": "Every 16 January Jaén fills with bonfires. Because of the saint, the cold or the olive tree? With a melenchón singer, a pruner and a farmer, among songs, firewood and old Jaén."
+        "es": "Cada 16 de enero Jaén se llena de hogueras. ¿Por el santo, por el frío o por el olivo? Con una melenchonera, un podador y el condestable Iranzo, entre coplas, leña y el Jaén antiguo.",
+        "en": "Every 16 January Jaén fills with bonfires. Because of the saint, the cold or the olive tree? With a melenchón singer, a pruner and Constable Iranzo, among songs, firewood and old Jaén."
       },
       "era": "Siglo XIX - hoy",
       "guideCharacterId": "melenchonera",
@@ -2691,7 +2692,7 @@
               ],
               "characters": [
                 {
-                  "id": "ganadero",
+                  "id": "iranzo",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -2704,11 +2705,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "happy",
               "text": {
-                "es": "¡Buenas! Ganadero. El día de San Antón llevo a bendecir a mis animales: la burra, el perro, las cabras… ¡hasta el canario!",
-                "en": "Hello! Livestock farmer. On San Antón's day I take my animals to be blessed: the donkey, the dog, the goats… even the canary!"
+                "es": "Buenas noches. Miguel Lucas de Iranzo, condestable de Castilla. Viví en Jaén, y la crónica de mis hechos está llena de fiestas: justas, danzas y banquetes. De fiestas sé un rato.",
+                "en": "Good evening. Miguel Lucas de Iranzo, Constable of Castile. I lived in Jaén, and the chronicle of my deeds is full of festivities: jousts, dances and banquets. I know a thing or two about festivities."
               }
             },
             {
@@ -2720,7 +2721,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "thinking",
               "text": {
                 "es": "El santo pone el día, eso sí. Pero bendecir animales no es encender hogueras…",
@@ -2793,7 +2794,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "ganadero",
+                  "id": "iranzo",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2817,7 +2818,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "surprised",
               "text": {
                 "es": "¡Anda! ¿Así que la leña de las lumbres sale del olivo?",
@@ -2982,7 +2983,7 @@
               ],
               "characters": [
                 {
-                  "id": "ganadero",
+                  "id": "iranzo",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -3002,11 +3003,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "happy",
               "text": {
-                "es": "Y alrededor del fuego, los vecinos: melenchones, rosetas de maíz y buena conversación.",
-                "en": "And around the fire, the neighbours: melenchones, popcorn and good conversation."
+                "es": "Miguel Lucas de Iranzo, condestable de Castilla; viví en Jaén y de fiestas sé un rato. Alrededor del fuego, los vecinos: melenchones, rosetas de maíz y buena conversación.",
+                "en": "Miguel Lucas de Iranzo, Constable of Castile; I lived in Jaén and know a thing or two about festivities. Around the fire, the neighbours: melenchones, popcorn and good conversation."
               }
             },
             {
@@ -3083,7 +3084,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "ganadero",
+                  "id": "iranzo",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3106,8 +3107,8 @@
                     "camino_centro"
                   ],
                   "text": {
-                    "es": "Vienes del centro: el ganadero y el podador te han dado sus razones. ¿Seguimos la pista de la leña o la de la copla?",
-                    "en": "You've come from the centre: the farmer and the pruner gave you their reasons. Shall we follow the firewood lead or the song lead?"
+                    "es": "Vienes del centro: el condestable y el podador te han dado sus razones. ¿Seguimos la pista de la leña o la de la copla?",
+                    "en": "You've come from the centre: the constable and the pruner gave you their reasons. Shall we follow the firewood lead or the song lead?"
                   }
                 },
                 {
@@ -3177,8 +3178,8 @@
                 "en": "The song lead"
               },
               "hint": {
-                "es": "Con el ganadero",
-                "en": "With the farmer"
+                "es": "Con el condestable",
+                "en": "With the constable"
               },
               "targetNodeId": "g4b_copla",
               "setFlags": [
@@ -3235,16 +3236,16 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "dramatic",
               "text": {
-                "es": "Mi abuela cantaba melenchones y decía: «la lumbre es de San Antón, la leña es del olivar». Por algo lo diría.",
-                "en": "My grandmother sang melenchones and used to say: 'the fire belongs to San Antón, the wood to the olive grove.' She must have had her reasons."
+                "es": "Yo organicé muchas fiestas, y te digo una cosa: la fecha la pone el santo, pero lo que arde es lo que hay a mano. Y en Jaén, a mano, siempre hay olivo.",
+                "en": "I organised many festivities, and I'll tell you something: the saint sets the date, but what burns is whatever is at hand. And in Jaén, olive wood is always at hand."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "ganadero",
+              "characterId": "iranzo",
               "expression": "thinking",
               "text": {
                 "es": "El santo da la fecha; el olivo, el fuego. Y el frío… el frío viene solo.",

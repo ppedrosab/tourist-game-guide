@@ -101,40 +101,42 @@
       "avatar": "sprites/aceitunero/aceitunero_neutral.svg"
     },
     {
-      "id": "flamenca",
+      "id": "cigarrera",
       "name": {
-        "es": "La Flamenca",
-        "en": "The Flamenca"
+        "es": "La Cigarrera",
+        "en": "The Cigar Maker"
       },
       "description": {
-        "es": "Sevillana de traje de volantes que cuenta los días para la feria. Salerosa y muy resuelta.",
-        "en": "A Sevillian in a ruffled dress who counts the days to the fair. Witty and very determined."
+        "es": "Trabaja en la Fábrica de Tabacos, como las cigarreras que hicieron famosa a Sevilla, y no se pierde una feria. Salerosa y muy resuelta.",
+        "en": "She works at the Tobacco Factory, like the cigar makers who made Seville famous, and never misses a fair. Witty and very determined."
       },
-      "avatar": "sprites/flamenca/flamenca_neutral.svg"
+      "avatar": "sprites/cigarrera/cigarrera_neutral.svg"
     },
     {
-      "id": "tratante",
+      "id": "ybarra",
       "name": {
-        "es": "El Tratante",
-        "en": "The Livestock Dealer"
+        "es": "José María de Ybarra",
+        "en": "José María de Ybarra"
       },
       "description": {
-        "es": "Tratante de ganado del siglo XIX que vendía mulas y caballos en las ferias. Pícaro y buen negociante.",
-        "en": "A 19th-century livestock dealer who sold mules and horses at the fairs. Crafty and a sharp negotiator."
+        "es": "Comerciante vasco afincado en Sevilla y concejal; en 1846 propuso la feria con Bonaplata. Formal y buen negociante.",
+        "en": "A Basque merchant settled in Seville and a councillor; in 1846 he proposed the fair with Bonaplata. Formal and a sharp negotiator."
       },
-      "avatar": "sprites/tratante/tratante_neutral.svg"
+      "avatar": "sprites/ybarra/ybarra_neutral.svg",
+      "era": "s. XIX"
     },
     {
-      "id": "farolillero",
+      "id": "bonaplata",
       "name": {
-        "es": "El Farolillero",
-        "en": "The Lantern Maker"
+        "es": "Narciso Bonaplata",
+        "en": "Narciso Bonaplata"
       },
       "description": {
-        "es": "Hace los farolillos de papel del real. Minucioso y soñador.",
-        "en": "He makes the fairground's paper lanterns. Meticulous and a dreamer."
+        "es": "Empresario catalán afincado en Sevilla y concejal; firmó con Ybarra la propuesta de la feria. Minucioso y algo quejica.",
+        "en": "A Catalan businessman settled in Seville and a councillor; he signed the fair proposal with Ybarra. Meticulous and a bit of a grumbler."
       },
-      "avatar": "sprites/farolillero/farolillero_neutral.svg"
+      "avatar": "sprites/bonaplata/bonaplata_neutral.svg",
+      "era": "s. XIX"
     }
   ],
   "routes": [
@@ -2499,11 +2501,11 @@
         "en": "Who Invented the April Fair?"
       },
       "summary": {
-        "es": "La fiesta más sevillana nació en 1847. ¿La inventaron los ganaderos, unos forasteros o las familias de las casetas? Con una flamenca, un tratante de ganado y un farolillero.",
-        "en": "Seville's most Sevillian party was born in 1847. Was it invented by the cattlemen, some outsiders or the marquee families? With a flamenca, a livestock dealer and a lantern maker."
+        "es": "La fiesta más sevillana nació en 1847. ¿La inventaron los ganaderos, unos forasteros o las familias de las casetas? Con una cigarrera y los concejales Ybarra y Bonaplata.",
+        "en": "Seville's most Sevillian party was born in 1847. Was it invented by the cattlemen, some outsiders or the marquee families? With a cigar maker and the councillors Ybarra and Bonaplata."
       },
       "era": "1846 - hoy",
-      "guideCharacterId": "flamenca",
+      "guideCharacterId": "cigarrera",
       "durationMin": 110,
       "distanceKm": 3.6,
       "difficulty": "easy",
@@ -2554,7 +2556,7 @@
               ],
               "characters": [
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -2562,16 +2564,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "happy",
               "text": {
-                "es": "¡Olé! Mira qué traje de flamenca, con sus volantes y su mantoncillo. Estoy contando los días para la Feria de Abril.",
-                "en": "Olé! Look at my flamenca dress, with its ruffles and its little shawl. I'm counting the days to the April Fair."
+                "es": "¡Olé! Soy cigarrera de la Fábrica de Tabacos, y ya me he puesto el traje de flamenca con su mantoncillo. Estoy contando los días para la Feria de Abril.",
+                "en": "Olé! I'm a cigar maker at the Tobacco Factory, and I've already put on my flamenca dress and little shawl. I'm counting the days to the April Fair."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "thinking",
               "text": {
                 "es": "Y te traigo un misterio: la fiesta más sevillana de todas… ¿quién la inventó? Porque alguien la inventaría, ¿no?",
@@ -2580,7 +2582,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "proud",
               "text": {
                 "es": "Tres sospechosos: los ganaderos, que venían a vender animales; los forasteros que vivían en Sevilla; y las familias que montaron las primeras casetas. Apunta.",
@@ -2654,12 +2656,12 @@
               ],
               "characters": [
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "neutral",
                   "position": "left"
                 },
                 {
-                  "id": "tratante",
+                  "id": "ybarra",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2667,11 +2669,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "happy",
               "text": {
-                "es": "¡Buen día! Tratante de ganado. Compro y vendo caballos, mulas y vacas en las ferias de Andalucía. Y la de Sevilla… ¡esa es la mía!",
-                "en": "Good day! Livestock dealer. I buy and sell horses, mules and cows at the fairs of Andalusia. And the Seville one… that's my fair!"
+                "es": "Buenos días. José María de Ybarra, comerciante y concejal. Nací en el País Vasco, pero Sevilla es mi casa. De ferias de ganado sé un rato.",
+                "en": "Good morning. José María de Ybarra, merchant and councillor. I was born in the Basque Country, but Seville is my home. I know a thing or two about livestock fairs."
               }
             },
             {
@@ -2683,11 +2685,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "thinking",
               "text": {
-                "es": "La feria de Sevilla empezó siendo de ganado, como las demás. Pero a mí no me preguntes quién la pidió: yo solo venía a vender.",
-                "en": "The Seville fair began as a livestock fair, like the others. But don't ask me who asked for it: I just came to sell."
+                "es": "La feria de Sevilla empezó siendo de ganado, como las demás. ¿Quién la pidió? Eso… ya lo averiguará usted.",
+                "en": "The Seville fair began as a livestock fair, like the others. Who asked for it? That… you'll find out for yourself."
               }
             }
           ],
@@ -2725,7 +2727,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "flamenca",
+            "characterId": "cigarrera",
             "expression": "happy",
             "text": {
               "es": "¿Vamos al Prado de San Sebastián, donde se puso la primera feria, o por el río, por donde llegaba el ganado?",
@@ -2788,12 +2790,12 @@
               ],
               "characters": [
                 {
-                  "id": "tratante",
+                  "id": "ybarra",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2809,20 +2811,20 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "proud",
               "text": {
-                "es": "¡Aquí vendí yo mi primera mula! Y me acuerdo de los que pidieron la feria al ayuntamiento: dos concejales que no eran de aquí.",
-                "en": "I sold my first mule right here! And I remember who asked the council for the fair: two councillors who weren't from here."
+                "es": "Aquí se abrió la primera feria. Y sí, la pidieron al ayuntamiento dos concejales que no habían nacido en Sevilla… No diré nombres.",
+                "en": "The first fair opened right here. And yes, it was requested from the council by two councillors who weren't born in Seville… I won't name names."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "surprised",
               "text": {
-                "es": "¿Que no eran de Sevilla? ¿La feria de Sevilla la pidieron dos de fuera?",
-                "en": "They weren't from Seville? Two outsiders asked for the Seville fair?"
+                "es": "¿Dos de fuera? ¡Don José María, que usted es vasco!",
+                "en": "Two outsiders? Don José María, you're Basque yourself!"
               }
             }
           ],
@@ -2886,12 +2888,12 @@
               ],
               "characters": [
                 {
-                  "id": "farolillero",
+                  "id": "bonaplata",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "tratante",
+                  "id": "ybarra",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2899,11 +2901,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "happy",
               "text": {
-                "es": "¡Hola! Farolillero: hago los farolillos de papel que cuelgan sobre las calles del real. ¡Miles y miles!",
-                "en": "Hello! Lantern maker: I make the paper lanterns that hang over the fairground streets. Thousands and thousands!"
+                "es": "Narciso Bonaplata, para servirle. Catalán de nacimiento y sevillano de adopción: tengo mis negocios en esta ciudad.",
+                "en": "Narciso Bonaplata, at your service. Catalan by birth and Sevillian by adoption: my businesses are in this city."
               }
             },
             {
@@ -2916,11 +2918,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "thinking",
               "text": {
-                "es": "Un tal Ybarra, vasco, y un tal Bonaplata, catalán. Eso contaba mi abuelo. Los dos vivían en Sevilla y tenían negocios aquí.",
-                "en": "A certain Ybarra, a Basque, and a certain Bonaplata, a Catalan. That's what my grandfather used to say. Both lived in Seville and had businesses here."
+                "es": "Ybarra y yo éramos concejales, y Sevilla necesitaba negocio. Pero de ahí a inventar una fiesta… Yo solo firmé un papel.",
+                "en": "Ybarra and I were councillors, and Seville needed business. But from that to inventing a party… I only signed a piece of paper."
               }
             }
           ],
@@ -2984,12 +2986,12 @@
               ],
               "characters": [
                 {
-                  "id": "farolillero",
+                  "id": "bonaplata",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2997,11 +2999,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "proud",
               "text": {
-                "es": "Farolillero, para servirle. Sin farolillos no hay feria: de noche el real parece un cielo de papel.",
-                "en": "Lantern maker, at your service. No lanterns, no fair: at night the fairground looks like a paper sky."
+                "es": "Narciso Bonaplata, concejal, catalán de nacimiento. Yo propuse un mercado de ganado, no tanto farolillo: ¡ahora de noche el real parece un cielo de papel!",
+                "en": "Narciso Bonaplata, councillor, Catalan by birth. I proposed a livestock market, not all these lanterns: now at night the fairground looks like a paper sky!"
               }
             },
             {
@@ -3014,7 +3016,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "thinking",
               "text": {
                 "es": "O sea, que las casetas llegaron después. La feria ya existía.",
@@ -3082,12 +3084,12 @@
               ],
               "characters": [
                 {
-                  "id": "tratante",
+                  "id": "ybarra",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "farolillero",
+                  "id": "bonaplata",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3102,16 +3104,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "happy",
               "text": {
-                "es": "Por aquí pasábamos con los animales camino del Prado. Y los señores que pidieron la feria querían eso: negocio para Sevilla.",
-                "en": "We passed this way with the animals on our way to the Prado. And the gentlemen who asked for the fair wanted exactly that: business for Seville."
+                "es": "Por aquí pasaba el ganado camino del Prado. Queríamos eso: negocio para Sevilla, un buen mercado de animales.",
+                "en": "The livestock passed this way on its way to the Prado. That's what we wanted: business for Seville, a good animal market."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "thinking",
               "text": {
                 "es": "Negocio… y lo que salió fue la fiesta más grande de la ciudad.",
@@ -3178,12 +3180,12 @@
               ],
               "characters": [
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "farolillero",
+                  "id": "bonaplata",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3198,7 +3200,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "thinking",
               "variants": [
                 {
@@ -3249,7 +3251,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "flamenca",
+            "characterId": "cigarrera",
             "expression": "thinking",
             "text": {
               "es": "¿El ganado o el farolillo?",
@@ -3263,8 +3265,8 @@
                 "en": "The livestock lead"
               },
               "hint": {
-                "es": "Con el tratante",
-                "en": "With the dealer"
+                "es": "Con Ybarra",
+                "en": "With Ybarra"
               },
               "targetNodeId": "f4a_ganado",
               "setFlags": [
@@ -3277,8 +3279,8 @@
                 "en": "The lantern lead"
               },
               "hint": {
-                "es": "Con el farolillero",
-                "en": "With the lantern maker"
+                "es": "Con Bonaplata",
+                "en": "With Bonaplata"
               },
               "targetNodeId": "f4b_farolillo",
               "setFlags": [
@@ -3296,20 +3298,20 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "proud",
               "text": {
-                "es": "En agosto de 1846, Ybarra y Bonaplata pidieron al ayuntamiento una feria de ganado de tres días en abril. La aprobó la reina Isabel II.",
-                "en": "In August 1846, Ybarra and Bonaplata asked the council for a three-day livestock fair in April. Queen Isabella II approved it."
+                "es": "Lo confieso: en agosto de 1846, Bonaplata y yo pedimos al ayuntamiento una feria de ganado de tres días en abril. La aprobó la reina Isabel II.",
+                "en": "I confess: in August 1846, Bonaplata and I asked the council for a three-day livestock fair in April. Queen Isabella II approved it."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "tratante",
+              "characterId": "ybarra",
               "expression": "happy",
               "text": {
-                "es": "Nosotros, los ganaderos, pusimos los animales. Pero la idea fue de ellos dos.",
-                "en": "We cattlemen brought the animals. But the idea was theirs."
+                "es": "Los ganaderos pusieron los animales. Pero la idea… fue nuestra.",
+                "en": "The cattlemen brought the animals. But the idea… was ours."
               }
             }
           ],
@@ -3335,20 +3337,20 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "dramatic",
               "text": {
-                "es": "Cada farolillo lleva su alambre, su papel y su color. Los primeros años no había ni uno: era un mercado de ganado.",
-                "en": "Every lantern has its wire, its paper and its colour. In the first years there wasn't a single one: it was a livestock market."
+                "es": "Nosotros pedimos un mercado de ganado. Ni farolillos ni casetas de baile: el primer año todo eran mulas y caballos.",
+                "en": "We asked for a livestock market. No lanterns, no dance marquees: the first year it was all mules and horses."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "farolillero",
+              "characterId": "bonaplata",
               "expression": "thinking",
               "text": {
-                "es": "Los farolillos, las casetas y las sevillanas llegaron después. La feria la trajeron dos señores de fuera; la fiesta, los sevillanos.",
-                "en": "The lanterns, the marquees and the sevillanas came later. Two gentlemen from outside brought the fair; the Sevillians brought the party."
+                "es": "Los farolillos, las casetas y las sevillanas los pusieron los sevillanos. La feria la trajimos Ybarra y yo; la fiesta, Sevilla.",
+                "en": "The Sevillians added the lanterns, the marquees and the sevillanas. Ybarra and I brought the fair; Seville brought the party."
               }
             }
           ],
@@ -3385,12 +3387,12 @@
               ],
               "characters": [
                 {
-                  "id": "flamenca",
+                  "id": "cigarrera",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "tratante",
+                  "id": "ybarra",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -3405,7 +3407,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto: ganaderos, forasteros o casetas. ¿Quién inventó la Feria de Abril?",
@@ -3450,7 +3452,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "proud",
               "variants": [
                 {
@@ -3497,7 +3499,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "flamenca",
+              "characterId": "cigarrera",
               "expression": "happy",
               "text": {
                 "es": "¡Y ahora, a bailar por sevillanas! Que la feria la inventaron dos de fuera… pero la baila Sevilla entera.",

@@ -140,14 +140,14 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   desde fuera, cirios y nazarenos anónimos). Los penitentes van con la cara tapada: el `maniguetero`
   lleva capirote y antifaz y su cara (`masked_face`) solo muestra los ojos. Fondos en `scripts/art/cadiz_ssanta_scenes.py`.
 - Una ruta de fiestas en cada una de las otras siete ciudades (ver `docs/GDD_FIESTAS_ANDALUCIA.md`):
-  - Málaga «¿Qué celebra la Feria de Agosto?» (`cantaora`, `verdialero`, `cochero`);
-  - Sevilla «¿Quién inventó la Feria de Abril?» (`flamenca`, `tratante`, `farolillero`);
-  - Granada «¿De dónde viene la Tarasca?» (`cabezudo`, `modista`, `tamborilero`);
-  - Córdoba «¿Cuál es la fiesta más antigua de mayo?» (`crucera`, `caballista`, `pregonero`);
-  - Huelva «¿Quién inventó las Colombinas?» (`grumete`, `pinzon`, `colombina`);
-  - Jaén «¿Por qué Jaén enciende lumbres por San Antón?» (`melenchonera`, `podador`, `ganadero`; la
-    escena final es de noche);
-  - Almería «¿Por qué la feria de Almería es en agosto?» (`bailaora`, `torrero`, `cohetero`).
+  - Málaga «¿Qué celebra la Feria de Agosto?» (la Trini, `verdialero`, `biznaguero`);
+  - Sevilla «¿Quién inventó la Feria de Abril?» (`cigarrera`, los concejales Ybarra y Bonaplata);
+  - Granada «¿De dónde viene la Tarasca?» (la propia `tarasca`, Mariana Pineda, Manuel de Falla);
+  - Córdoba «¿Cuál es la fiesta más antigua de mayo?» (la Chiquita Piconera, Romero de Torres, Góngora);
+  - Huelva «¿Quién inventó las Colombinas?» (Alonso Sánchez de Huelva, Pinzón, Braulio Santamaría);
+  - Jaén «¿Por qué Jaén enciende lumbres por San Antón?» (`melenchonera`, `podador`, el condestable
+    Iranzo; la escena final es de noche);
+  - Almería «¿Por qué la feria de Almería es en agosto?» (Carmen de Burgos, Andrés de Jaén, Nicolás Salmerón).
 
   Lo que tiene raíz religiosa se cuenta como tradición y nunca se dibuja la imagen: del santuario de
   la Virgen del Mar se ve solo la fachada. Arte en `scripts/art/fiestas_andalucia_*.py`; los personajes
@@ -306,6 +306,9 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 
 - No repetir personajes entre las rutas de una misma ciudad (lo comprueba `allPacks.test.ts`) salvo que
   el usuario diga lo contrario: cada ruta nueva lleva su propio reparto.
+- Los personajes tienen que ser propios de la ciudad: personas reales históricas o figuras
+  características de ese lugar (la Tarasca, la Chiquita Piconera, el biznaguero, el verdialero…).
+  Nada de oficios o tipos genéricos que valdrían para cualquier sitio.
 - No meter contenido de ciudad en el código: todo sale del pack.
 - No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts` y `en.ts`.
 - No usar colores o tamaños sueltos: usar `src/theme`.

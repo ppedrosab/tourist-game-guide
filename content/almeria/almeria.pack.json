@@ -99,16 +99,17 @@
       "avatar": "sprites/pescador/pescador_neutral.svg"
     },
     {
-      "id": "bailaora",
+      "id": "carmendeburgos",
       "name": {
-        "es": "La Bailaora",
-        "en": "The Flamenco Dancer"
+        "es": "Carmen de Burgos",
+        "en": "Carmen de Burgos"
       },
       "description": {
-        "es": "Baila flamenco en la feria de día y de noche. Incansable, alegre y con mucho genio.",
-        "en": "She dances flamenco at the fair day and night. Tireless, cheerful and fiery."
+        "es": "Periodista y escritora almeriense que firmaba «Colombine»; fue de las primeras corresponsales de guerra de España. Incansable y con mucho genio.",
+        "en": "A journalist and writer from Almería who signed as 'Colombine'; she was one of Spain's first women war correspondents. Tireless and fiery."
       },
-      "avatar": "sprites/bailaora/bailaora_neutral.svg"
+      "avatar": "sprites/carmendeburgos/carmendeburgos_neutral.svg",
+      "era": "1867 - 1932"
     },
     {
       "id": "torrero",
@@ -124,16 +125,17 @@
       "era": "1502"
     },
     {
-      "id": "cohetero",
+      "id": "salmeron",
       "name": {
-        "es": "El Cohetero",
-        "en": "The Fireworks Master"
+        "es": "Nicolás Salmerón",
+        "en": "Nicolás Salmerón"
       },
       "description": {
-        "es": "Maestro pirotécnico de la feria. Ruidoso, exagerado y con buen corazón.",
-        "en": "The fair's pyrotechnics master. Loud, over the top and big-hearted."
+        "es": "Político y filósofo almeriense, presidente de la Primera República en 1873; el parque del puerto lleva su nombre. Serio, pero con buen humor.",
+        "en": "A politician and philosopher from Almería, president of the First Republic in 1873; the port park bears his name. Serious, but good-humoured."
       },
-      "avatar": "sprites/cohetero/cohetero_neutral.svg"
+      "avatar": "sprites/salmeron/salmeron_neutral.svg",
+      "era": "1838 - 1908"
     }
   ],
   "routes": [
@@ -2416,11 +2418,11 @@
         "en": "Why Is the Almería Fair in August?"
       },
       "summary": {
-        "es": "Almería se va de feria a finales de agosto. ¿Por la patrona, por el verano o por el puerto? Con una bailaora, un cohetero y el guarda de una torre de 1502.",
-        "en": "Almería goes to the fair at the end of August. Because of the patroness, the summer or the port? With a flamenco dancer, a fireworks master and the guard of a 1502 tower."
+        "es": "Almería se va de feria a finales de agosto. ¿Por la patrona, por el verano o por el puerto? Con Carmen de Burgos, Nicolás Salmerón y el guarda de una torre de 1502.",
+        "en": "Almería goes to the fair at the end of August. Because of the patroness, the summer or the port? With Carmen de Burgos, Nicolás Salmerón and the guard of a 1502 tower."
       },
       "era": "1502 - hoy",
-      "guideCharacterId": "bailaora",
+      "guideCharacterId": "carmendeburgos",
       "durationMin": 95,
       "distanceKm": 2.8,
       "difficulty": "easy",
@@ -2471,7 +2473,7 @@
               ],
               "characters": [
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -2479,16 +2481,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "happy",
               "text": {
-                "es": "¡Olé! Bailaora de flamenco. En la feria de Almería bailo en la calle a mediodía y en el recinto por la noche. ¡No paro!",
-                "en": "Olé! Flamenco dancer. At the Almería fair I dance in the street at midday and at the fairground at night. I never stop!"
+                "es": "¡Hola! Carmen de Burgos, almeriense y periodista; firmaba mis artículos como «Colombine». En la feria de mi tierra se baila en la calle a mediodía y en el recinto por la noche. ¡No hay quien pare!",
+                "en": "Hello! Carmen de Burgos, from Almería, a journalist; I signed my articles as 'Colombine'. At my hometown's fair people dance in the street at midday and at the fairground at night. There's no stopping them!"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "thinking",
               "text": {
                 "es": "Pero dime una cosa: ¿por qué la feria de aquí es a finales de agosto y no en abril, como la de Sevilla?",
@@ -2497,7 +2499,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "proud",
               "text": {
                 "es": "Tres sospechosos: la patrona, la Virgen del Mar; el verano, que llena la costa; y el puerto, que traía barcos y negocio. Apunta.",
@@ -2571,12 +2573,12 @@
               ],
               "characters": [
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "neutral",
                   "position": "left"
                 },
                 {
-                  "id": "cohetero",
+                  "id": "salmeron",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2584,11 +2586,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "happy",
               "text": {
-                "es": "¡Pum, pum, pum! Cohetero, maestro pirotécnico. La feria de Almería empieza y acaba con fuegos. Y los míos son los más ruidosos.",
-                "en": "Boom, boom, boom! Fireworks master. The Almería fair starts and ends with fireworks. And mine are the loudest."
+                "es": "Buenos días. Nicolás Salmerón, almeriense; fui presidente de la Primera República. El parque del puerto lleva mi nombre, y en feria se ven desde él los fuegos.",
+                "en": "Good morning. Nicolás Salmerón, from Almería; I was president of the First Republic. The port park bears my name, and at fair time you can watch the fireworks from it."
               }
             },
             {
@@ -2600,11 +2602,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "thinking",
               "text": {
-                "es": "Yo creo que la feria es en agosto por el calor: con este sol, ¿quién va a querer trabajar?",
-                "en": "I reckon the fair's in August because of the heat: with this sun, who wants to work?"
+                "es": "Yo sospecho que la feria es en agosto por el verano: con este sol, la ciudad pide fiesta.",
+                "en": "I suspect the fair is in August because of the summer: with this sun, the city asks for a party."
               }
             }
           ],
@@ -2637,12 +2639,12 @@
           "clue": {
             "id": "fvm_pista_calor",
             "text": {
-              "es": "El verano · El cohetero cree que la feria es en agosto por el calor.",
-              "en": "The summer · The fireworks master thinks the fair is in August because of the heat."
+              "es": "El verano · Salmerón sospecha que la feria es en agosto por el verano.",
+              "en": "The summer · Salmerón suspects the fair is in August because of the summer."
             }
           },
           "decisionIntro": {
-            "characterId": "bailaora",
+            "characterId": "carmendeburgos",
             "expression": "happy",
             "text": {
               "es": "¿Bajamos al puerto, donde se tiran los fuegos, o vamos a la Plaza Vieja y al santuario de la patrona?",
@@ -2705,12 +2707,12 @@
               ],
               "characters": [
                 {
-                  "id": "cohetero",
+                  "id": "salmeron",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2725,7 +2727,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "proud",
               "text": {
                 "es": "¡Y en feria, fuegos sobre el mar! Los barcos pitan, la gente aplaude… Por algo digo yo que la feria es cosa del puerto.",
@@ -2734,7 +2736,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "thinking",
               "text": {
                 "es": "El puerto trajo dinero, eso sí. Pero la uva se embarcaba en otoño, no en agosto…",
@@ -2807,7 +2809,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "cohetero",
+                  "id": "salmeron",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2832,11 +2834,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "surprised",
               "text": {
-                "es": "¿Del mar? ¡Entonces la patrona también viene del mar, como mis fuegos!",
-                "en": "From the sea? So the patroness also comes from the sea, like my fireworks!"
+                "es": "¿Del mar? Entonces la patrona también viene del mar, como tantas cosas en Almería.",
+                "en": "From the sea? So the patroness also came from the sea, like so many things in Almería."
               }
             }
           ],
@@ -2905,7 +2907,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2930,7 +2932,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "thinking",
               "text": {
                 "es": "O sea, que la historia de la patrona empieza en la playa… y en invierno. Y la feria es en verano. ¡Qué lío!",
@@ -3003,7 +3005,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3028,7 +3030,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "surprised",
               "text": {
                 "es": "¿Le dedica la feria? Entonces la feria es… en su honor.",
@@ -3095,12 +3097,12 @@
               ],
               "characters": [
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "cohetero",
+                  "id": "salmeron",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3115,7 +3117,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "thinking",
               "variants": [
                 {
@@ -3166,7 +3168,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "bailaora",
+            "characterId": "carmendeburgos",
             "expression": "thinking",
             "text": {
               "es": "¿Los fuegos o el cartel?",
@@ -3180,8 +3182,8 @@
                 "en": "The fireworks lead"
               },
               "hint": {
-                "es": "Con el cohetero",
-                "en": "With the fireworks master"
+                "es": "Con Salmerón",
+                "en": "With Salmerón"
               },
               "targetNodeId": "g4a_fuegos",
               "setFlags": [
@@ -3213,16 +3215,16 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "dramatic",
               "text": {
-                "es": "Vale, lo reconozco: mis fuegos son para la feria, y la feria es para la patrona. Por eso se tiran en su semana, no cuando a mí me da la gana.",
-                "en": "Fine, I admit it: my fireworks are for the fair, and the fair is for the patroness. That's why they go off in her week, not whenever I feel like it."
+                "es": "Lo reconozco: los fuegos son para la feria, y la feria es para la patrona. Por eso se tiran en su semana y no en otra.",
+                "en": "I admit it: the fireworks are for the fair, and the fair is for the patroness. That's why they go off in her week and no other."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "cohetero",
+              "characterId": "salmeron",
               "expression": "happy",
               "text": {
                 "es": "El verano pone el calor y el puerto pone el escenario. ¡Pero la fecha es de ella!",
@@ -3302,12 +3304,12 @@
               ],
               "characters": [
                 {
-                  "id": "bailaora",
+                  "id": "carmendeburgos",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "cohetero",
+                  "id": "salmeron",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -3322,7 +3324,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto, con toda Almería a los pies. La patrona, el verano o el puerto: ¿por qué la feria es a finales de agosto?",
@@ -3367,7 +3369,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "proud",
               "variants": [
                 {
@@ -3414,7 +3416,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "bailaora",
+              "characterId": "carmendeburgos",
               "expression": "happy",
               "text": {
                 "es": "¡Y ahora, a bailar, que la feria no espera! Te guardo sitio en el Paseo.",

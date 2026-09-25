@@ -16,9 +16,9 @@
     {"id": "espetero", "name": {"es": "El Espetero", "en": "The Espetero"}, "description": {"es": "Asa espetos en la playa, de pie junto a su barca de brasas. Malagueño, guasón y muy de su tierra.", "en": "He roasts espetos on the beach, standing by his boat of embers. Born in Málaga, a joker and fiercely local."}, "avatar": "sprites/espetero/espetero_neutral.svg"},
     {"id": "jabegote", "name": {"es": "El Jabegote", "en": "The Jabegote"}, "description": {"es": "Rema en la jábega, la barca tradicional de pesca de Málaga. Fuerte y de pocas palabras.", "en": "He rows the jábega, Málaga's traditional fishing boat. Strong and a man of few words."}, "avatar": "sprites/jabegote/jabegote_neutral.svg"},
     {"id": "pasera", "name": {"es": "La Pasera", "en": "The Raisin Maker"}, "description": {"es": "Seca uva moscatel al sol en los paseros de la Axarquía. Alegre y muy trabajadora.", "en": "She dries Muscat grapes in the sun on the drying beds of the Axarquía. Cheerful and hard-working."}, "avatar": "sprites/pasera/pasera_neutral.svg"},
-    {"id": "cantaora", "name": {"es": "La Cantaora", "en": "The Flamenco Singer"}, "description": {"es": "Canta malagueñas y no se pierde una feria. Apasionada y con mucho arte.", "en": "She sings malagueñas and never misses a fair. Passionate and full of flair."}, "avatar": "sprites/cantaora/cantaora_neutral.svg"},
+    {"id": "latrini", "name": {"es": "La Trini", "en": "La Trini"}, "description": {"es": "Trinidad Navarro, cantaora malagueña; la «malagueña de la Trini» lleva su nombre. Apasionada y con mucho arte.", "en": "Trinidad Navarro, a flamenco singer from Málaga; the 'malagueña de la Trini' is named after her. Passionate and full of flair."}, "avatar": "sprites/latrini/latrini_neutral.svg", "era": "1868 - 1930"},
     {"id": "verdialero", "name": {"es": "El Verdialero", "en": "The Verdiales Player"}, "description": {"es": "Toca el violín en una panda de verdiales, con su sombrero de flores y espejos. Alegre y despistado.", "en": "He plays violin in a verdiales band, with his hat of flowers and mirrors. Cheerful and scatterbrained."}, "avatar": "sprites/verdialero/verdialero_neutral.svg"},
-    {"id": "cochero", "name": {"es": "El Cochero", "en": "The Carriage Driver"}, "description": {"es": "Lleva coche de caballos por el centro de Málaga. Presumido y buen conversador.", "en": "He drives a horse carriage through central Málaga. Dapper and a good talker."}, "avatar": "sprites/cochero/cochero_neutral.svg"}
+    {"id": "biznaguero", "name": {"es": "El Biznaguero", "en": "The Biznaga Seller"}, "description": {"es": "Vende biznagas de jazmín por las calles de Málaga, como el de la estatua del parque. Presumido y buen conversador.", "en": "He sells jasmine biznagas in the streets of Málaga, like the one in the statue in the park. Dapper and a good talker."}, "avatar": "sprites/biznaguero/biznaguero_neutral.svg"}
   ],
   "routes": [
     {
@@ -1421,11 +1421,11 @@
         "en": "What Does the August Fair Celebrate?"
       },
       "summary": {
-        "es": "Cada agosto Málaga se va de feria, pero pocos saben qué celebra. ¿La conquista de 1487, el verano o un centenario? Con una cantaora, un verdialero y un cochero.",
-        "en": "Every August Málaga goes to the fair, but few know what it celebrates. The conquest of 1487, the summer or a centenary? With a flamenco singer, a verdiales player and a carriage driver."
+        "es": "Cada agosto Málaga se va de feria, pero pocos saben qué celebra. ¿La conquista de 1487, el verano o un centenario? Con la Trini, un verdialero y un biznaguero.",
+        "en": "Every August Málaga goes to the fair, but few know what it celebrates. The conquest of 1487, the summer or a centenary? With La Trini, a verdiales player and a biznaga seller."
       },
       "era": "1487 - 1887",
-      "guideCharacterId": "cantaora",
+      "guideCharacterId": "latrini",
       "durationMin": 100,
       "distanceKm": 2.9,
       "difficulty": "easy",
@@ -1476,7 +1476,7 @@
               ],
               "characters": [
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -1484,16 +1484,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "happy",
               "text": {
-                "es": "¡Ay, que ya es agosto! Soy cantaora: canto malagueñas, que es el cante de esta tierra. Y en agosto, Málaga entera se va de feria.",
-                "en": "Oh, it's August already! I'm a flamenco singer: I sing malagueñas, the song of this land. And in August, all of Málaga goes to the fair."
+                "es": "¡Ay, que ya es agosto! Soy la Trini, cantaora de Málaga. Hay una malagueña que lleva mi nombre, fíjate. Y en agosto, Málaga entera se va de feria.",
+                "en": "Oh, it's August already! I'm La Trini, a flamenco singer from Málaga. There's a malagueña that bears my name, imagine that. And in August, all of Málaga goes to the fair."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "thinking",
               "text": {
                 "es": "Te traigo una pregunta que casi nadie sabe contestar: la Feria de Agosto… ¿qué celebra? Porque algo celebrará, digo yo.",
@@ -1502,7 +1502,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "proud",
               "text": {
                 "es": "Tres sospechosos: la conquista de 1487, el verano de toda la vida y un centenario de 1887. Apúntalo, que el veredicto es tuyo.",
@@ -1576,7 +1576,7 @@
               ],
               "characters": [
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "neutral",
                   "position": "left"
                 },
@@ -1647,7 +1647,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "cantaora",
+            "characterId": "latrini",
             "expression": "happy",
             "text": {
               "es": "¿Bajamos al mar, donde empieza la feria con los fuegos, o subimos a la Alcazaba, donde acabó el asedio de 1487?",
@@ -1710,12 +1710,12 @@
               ],
               "characters": [
                 {
-                  "id": "cochero",
+                  "id": "biznaguero",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -1723,11 +1723,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cochero",
+              "characterId": "biznaguero",
               "expression": "happy",
               "text": {
-                "es": "¡Arre, que nos vamos! Cochero de caballos. En feria llevo a la gente de punta en blanco, con el caballo enjaezado.",
-                "en": "Giddy-up, off we go! Horse-carriage driver. At the fair I carry people dressed to the nines, with the horse all decked out."
+                "es": "¡Biznagas, biznagas! Soy biznaguero: hago biznagas con flores de jazmín pinchadas en un tallo seco. En feria, la biznaga es la flor de Málaga.",
+                "en": "Biznagas, biznagas! I'm a biznaga seller: I make biznagas, jasmine flowers pinned onto a dry stalk. At the fair, the biznaga is the flower of Málaga."
               }
             },
             {
@@ -1739,7 +1739,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cochero",
+              "characterId": "biznaguero",
               "expression": "thinking",
               "text": {
                 "es": "Mi padre decía que la feria de ahora nació para dar trabajo cuando Málaga estaba en crisis. Que había que atraer gente.",
@@ -1776,8 +1776,8 @@
           "clue": {
             "id": "fag_pista_crisis",
             "text": {
-              "es": "El centenario · El cochero cuenta que la feria moderna nació para atraer gente cuando Málaga estaba en crisis.",
-              "en": "The centenary · The carriage driver says the modern fair was born to draw people in when Málaga was in crisis."
+              "es": "El centenario · El biznaguero cuenta que la feria moderna nació para atraer gente cuando Málaga estaba en crisis.",
+              "en": "The centenary · The biznaga seller says the modern fair was born to draw people in when Málaga was in crisis."
             }
           },
           "nextNodeId": "fa2_malagueta",
@@ -1807,7 +1807,7 @@
               ],
               "characters": [
                 {
-                  "id": "cochero",
+                  "id": "biznaguero",
                   "expression": "proud",
                   "position": "left"
                 },
@@ -1828,7 +1828,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cochero",
+              "characterId": "biznaguero",
               "expression": "proud",
               "text": {
                 "es": "Ahí lo tienes: 1887, cuarto centenario. Casetas, carreras de caballos, visitantes… ¡La feria como la conocemos!",
@@ -1905,7 +1905,7 @@
               ],
               "characters": [
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -1935,7 +1935,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "thinking",
               "text": {
                 "es": "La Alcazaba y el castillo de Gibralfaro, ahí arriba, fueron lo último en rendirse. Fue uno de los asedios más duros de aquella guerra.",
@@ -2008,7 +2008,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "proud",
                   "position": "right"
                 }
@@ -2024,7 +2024,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "proud",
               "text": {
                 "es": "¡Un acta! Eso es una prueba de las buenas. La fiesta de agosto nació para recordar la conquista.",
@@ -2100,12 +2100,12 @@
               ],
               "characters": [
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "cochero",
+                  "id": "biznaguero",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2120,7 +2120,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "thinking",
               "variants": [
                 {
@@ -2128,8 +2128,8 @@
                     "camino_mar"
                   ],
                   "text": {
-                    "es": "Vienes del mar: el cochero te ha contado lo de 1887. ¿Seguimos la pista de los verdiales o la de los caballos?",
-                    "en": "You've come from the sea: the carriage driver told you about 1887. Shall we follow the verdiales lead or the horses lead?"
+                    "es": "Vienes del mar: el biznaguero te ha contado lo de 1887. ¿Seguimos la pista de los verdiales o la de las biznagas?",
+                    "en": "You've come from the sea: the biznaga seller told you about 1887. Shall we follow the verdiales lead or the biznagas lead?"
                   }
                 },
                 {
@@ -2137,8 +2137,8 @@
                     "camino_alcazaba"
                   ],
                   "text": {
-                    "es": "Vienes de la Alcazaba: ya sabes lo del 19 de agosto y el acta de 1491. ¿Seguimos la pista de los verdiales o la de los caballos?",
-                    "en": "You've come from the Alcazaba: you know about 19 August and the 1491 record. Shall we follow the verdiales lead or the horses lead?"
+                    "es": "Vienes de la Alcazaba: ya sabes lo del 19 de agosto y el acta de 1491. ¿Seguimos la pista de los verdiales o la de las biznagas?",
+                    "en": "You've come from the Alcazaba: you know about 19 August and the 1491 record. Shall we follow the verdiales lead or the biznagas lead?"
                   }
                 }
               ]
@@ -2171,11 +2171,11 @@
             }
           },
           "decisionIntro": {
-            "characterId": "cantaora",
+            "characterId": "latrini",
             "expression": "thinking",
             "text": {
-              "es": "¿Los verdiales o los caballos?",
-              "en": "The verdiales or the horses?"
+              "es": "¿Los verdiales o las biznagas?",
+              "en": "The verdiales or the biznagas?"
             }
           },
           "choices": [
@@ -2195,12 +2195,12 @@
             },
             {
               "label": {
-                "es": "La pista de los caballos",
-                "en": "The horses lead"
+                "es": "La pista de las biznagas",
+                "en": "The biznagas lead"
               },
               "hint": {
-                "es": "Con el cochero",
-                "en": "With the carriage driver"
+                "es": "Con el biznaguero",
+                "en": "With the biznaga seller"
               },
               "targetNodeId": "f4b_caballos",
               "setFlags": [
@@ -2251,22 +2251,22 @@
         {
           "id": "f4b_caballos",
           "title": {
-            "es": "Los caballos",
-            "en": "The horses"
+            "es": "Las biznagas",
+            "en": "The biznagas"
           },
           "content": [
             {
               "type": "dialogue",
-              "characterId": "cochero",
+              "characterId": "biznaguero",
               "expression": "proud",
               "text": {
-                "es": "En 1887 la feria se hizo grande para salir de la crisis, sí. Pero se eligió ese año porque se cumplían 400 años de la conquista.",
-                "en": "In 1887 the fair was made big to get out of the crisis, yes. But that year was chosen because it was 400 years since the conquest."
+                "es": "Soy biznaguero, y de feria sé un rato: en 1887 se hizo grande para salir de la crisis, sí. Pero se eligió ese año porque se cumplían 400 años de la conquista.",
+                "en": "I'm a biznaga seller, and I know my fairs: in 1887 it was made big to get out of the crisis, yes. But that year was chosen because it was 400 years since the conquest."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "cochero",
+              "characterId": "biznaguero",
               "expression": "thinking",
               "text": {
                 "es": "O sea: el centenario la relanzó, pero lo que celebraba ya venía de 1487.",
@@ -2307,7 +2307,7 @@
               ],
               "characters": [
                 {
-                  "id": "cantaora",
+                  "id": "latrini",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -2328,7 +2328,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto. La conquista, el verano o el centenario. ¿Qué celebra la Feria de Agosto?",
@@ -2373,7 +2373,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "proud",
               "variants": [
                 {
@@ -2392,8 +2392,8 @@
                     "version_caballos"
                   ],
                   "text": {
-                    "es": "El mar y los caballos: del pregón al paseo. Eres cochero de feria.",
-                    "en": "The sea and the horses: from the opening speech to the carriage ride. You're a fair carriage driver."
+                    "es": "El mar y las biznagas: del pregón al jazmín. Eres biznaguero de feria.",
+                    "en": "The sea and the biznagas: from the opening speech to the jasmine. You're a fair biznaga seller."
                   }
                 },
                 {
@@ -2412,15 +2412,15 @@
                     "version_caballos"
                   ],
                   "text": {
-                    "es": "La Alcazaba y los caballos: de 1487 a 1887. Eres heraldo de los reyes.",
-                    "en": "The Alcazaba and the horses: from 1487 to 1887. You're the monarchs' herald."
+                    "es": "La Alcazaba y las biznagas: de 1487 a 1887. Eres heraldo de los reyes.",
+                    "en": "The Alcazaba and the biznagas: from 1487 to 1887. You're the monarchs' herald."
                   }
                 }
               ]
             },
             {
               "type": "dialogue",
-              "characterId": "cantaora",
+              "characterId": "latrini",
               "expression": "happy",
               "text": {
                 "es": "Y ahora, a la feria… ¡que esto se celebra cantando! Ay, malagueña…",
@@ -2444,14 +2444,14 @@
           }
         },
         {
-          "id": "cochero_feria",
+          "id": "biznaguero_feria",
           "requires": [
             "camino_mar",
             "version_caballos"
           ],
           "title": {
-            "es": "Cochero de feria",
-            "en": "Fair carriage driver"
+            "es": "Biznaguero de feria",
+            "en": "Fair biznaga seller"
           }
         },
         {
@@ -2497,12 +2497,12 @@
           "awardedAtNodeId": "f2_larios"
         },
         {
-          "id": "coche_caballos",
+          "id": "biznaga",
           "name": {
-            "es": "El coche de caballos",
-            "en": "The horse carriage"
+            "es": "La biznaga",
+            "en": "The biznaga"
           },
-          "icon": "collectibles/malaga_fiesta_coche.svg",
+          "icon": "collectibles/malaga_fiesta_biznaga.svg",
           "awardedAtNodeId": "fa1_muelle"
         },
         {

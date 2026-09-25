@@ -98,16 +98,17 @@
       "avatar": "sprites/cortador/cortador_neutral.svg"
     },
     {
-      "id": "grumete",
+      "id": "alonsosanchez",
       "name": {
-        "es": "El Grumete",
-        "en": "The Ship's Boy"
+        "es": "Alonso Sánchez de Huelva",
+        "en": "Alonso Sánchez de Huelva"
       },
       "description": {
-        "es": "El más joven de la tripulación, con gorro de marinero y ganas de aventura. Curioso y charlatán.",
-        "en": "The youngest of the crew, with a sailor's cap and a thirst for adventure. Curious and chatty."
+        "es": "Piloto onubense de leyenda: se cuenta que llegó a unas islas del oeste antes que Colón y le pasó sus apuntes. Curioso y charlatán.",
+        "en": "A legendary Huelva pilot: it's said he reached some western islands before Columbus and passed him his notes. Curious and chatty."
       },
-      "avatar": "sprites/grumete/grumete_neutral.svg"
+      "avatar": "sprites/alonsosanchez/alonsosanchez_neutral.svg",
+      "era": "s. XV (leyenda)"
     },
     {
       "id": "pinzon",
@@ -123,16 +124,17 @@
       "era": "1441 - 1493"
     },
     {
-      "id": "colombina",
+      "id": "santamaria",
       "name": {
-        "es": "La Socia Colombina",
-        "en": "The Society Member"
+        "es": "Braulio Santamaría",
+        "en": "Braulio Santamaría"
       },
       "description": {
-        "es": "Socia de la Real Sociedad Colombina Onubense, con su abanico y sus actas. Formal y muy puntillosa.",
-        "en": "A member of the Royal Columbian Society of Huelva, with her fan and her minutes. Formal and very meticulous."
+        "es": "Director de periódico en Huelva; en 1880 impulsó la fundación de la Real Sociedad Colombina Onubense. Formal y muy puntilloso.",
+        "en": "A Huelva newspaper editor; in 1880 he drove the founding of the Royal Columbian Society of Huelva. Formal and very meticulous."
       },
-      "avatar": "sprites/colombina/colombina_neutral.svg"
+      "avatar": "sprites/santamaria/santamaria_neutral.svg",
+      "era": "s. XIX"
     }
   ],
   "routes": [
@@ -2414,11 +2416,11 @@
         "en": "Who Invented the Colombinas?"
       },
       "summary": {
-        "es": "Huelva celebra cada verano las Colombinas, pero ¿quién las inventó? ¿Colón, los hermanos Pinzón o una sociedad de 1880? Con un grumete, Martín Alonso Pinzón y una socia colombina.",
-        "en": "Every summer Huelva celebrates the Colombinas, but who invented them? Columbus, the Pinzón brothers or an 1880 society? With a ship's boy, Martín Alonso Pinzón and a Society member."
+        "es": "Huelva celebra cada verano las Colombinas, pero ¿quién las inventó? ¿Colón, los hermanos Pinzón o una sociedad de 1880? Con el piloto Alonso Sánchez de Huelva, Martín Alonso Pinzón y el periodista Braulio Santamaría.",
+        "en": "Every summer Huelva celebrates the Colombinas, but who invented them? Columbus, the Pinzón brothers or an 1880 society? With the pilot Alonso Sánchez de Huelva, Martín Alonso Pinzón and the journalist Braulio Santamaría."
       },
       "era": "1492 - 1892",
-      "guideCharacterId": "grumete",
+      "guideCharacterId": "alonsosanchez",
       "durationMin": 100,
       "distanceKm": 3.3,
       "difficulty": "easy",
@@ -2469,7 +2471,7 @@
               ],
               "characters": [
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -2477,16 +2479,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "happy",
               "text": {
-                "es": "¡Ah del barco! Soy grumete, el más joven de a bordo: friego la cubierta, canto las horas y subo a la cofa. Y en verano, en Huelva, ¡Colombinas!",
-                "en": "Ahoy! I'm the ship's boy, the youngest on board: I scrub the deck, call out the hours and climb to the crow's nest. And in summer, in Huelva, it's the Colombinas!"
+                "es": "¡Ah del barco! Alonso Sánchez de Huelva, piloto. Hay quien cuenta que crucé el océano antes que Colón… pero esa es otra historia. Y en verano, en Huelva, ¡Colombinas!",
+                "en": "Ahoy! Alonso Sánchez de Huelva, ship's pilot. Some say I crossed the ocean before Columbus… but that's another story. And in summer, in Huelva, it's the Colombinas!"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "thinking",
               "text": {
                 "es": "Las fiestas de la ciudad se llaman Colombinas por Colón. Pero ¿quién las inventó? Eso no lo sabe ni el capitán.",
@@ -2495,7 +2497,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "proud",
               "text": {
                 "es": "Tres sospechosos: el mismísimo Colón, los hermanos Pinzón de Palos y una sociedad de señores muy serios de Huelva. ¡Apunta en el cuaderno de bitácora!",
@@ -2570,12 +2572,12 @@
               ],
               "characters": [
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "neutral",
                   "position": "left"
                 },
                 {
-                  "id": "colombina",
+                  "id": "santamaria",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2583,11 +2585,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Soy socia de la Real Sociedad Colombina Onubense. Cuidamos la memoria del Descubrimiento… y organizamos alguna que otra fiesta.",
-                "en": "Good afternoon. I'm a member of the Royal Columbian Society of Huelva. We look after the memory of the Discovery… and organise the odd party."
+                "es": "Buenas tardes. Braulio Santamaría, periodista de Huelva. Promoví la Real Sociedad Colombina Onubense para cuidar la memoria del Descubrimiento… y organizar alguna que otra fiesta.",
+                "en": "Good afternoon. Braulio Santamaría, a Huelva journalist. I promoted the Royal Columbian Society of Huelva to look after the memory of the Discovery… and organise the odd party."
               }
             },
             {
@@ -2600,7 +2602,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "thinking",
               "text": {
                 "es": "Mire usted: Colón zarpó, sí. Pero ¿estuvo él en una sola Colombina? Piénselo.",
@@ -2642,7 +2644,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "grumete",
+            "characterId": "alonsosanchez",
             "expression": "happy",
             "text": {
               "es": "¿Bajamos a la ría, por donde salían los barcos, o nos quedamos en la ciudad, donde se reunían los señores de la Sociedad?",
@@ -2710,7 +2712,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2802,7 +2804,7 @@
               ],
               "characters": [
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -2823,7 +2825,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "happy",
               "text": {
                 "es": "¡Hasta el fútbol lleva el nombre de Colón! Aquí todo es colombino: el trofeo, las fiestas, las calles…",
@@ -2900,12 +2902,12 @@
               ],
               "characters": [
                 {
-                  "id": "colombina",
+                  "id": "santamaria",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2921,7 +2923,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "proud",
               "text": {
                 "es": "Y ese mismo verano de 1880 celebramos el aniversario de la salida: el 3 de agosto. Fueron las primeras fiestas colombinas.",
@@ -2930,7 +2932,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "surprised",
               "text": {
                 "es": "¿Las primeras? ¿Las inventaron ustedes?",
@@ -2998,7 +3000,7 @@
               ],
               "characters": [
                 {
-                  "id": "colombina",
+                  "id": "santamaria",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -3019,7 +3021,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "happy",
               "text": {
                 "es": "El centenario las hizo grandes. Pero la idea, la fecha y la primera fiesta… esas salieron de nuestra Sociedad.",
@@ -3031,8 +3033,8 @@
               "characterId": "pinzon",
               "expression": "proud",
               "text": {
-                "es": "Pues que conste en acta que sin Palos no hay viaje, ni aniversario, ni nada.",
-                "en": "Then let it be recorded that without Palos there's no voyage, no anniversary, nothing."
+                "es": "Martín Alonso Pinzón, de Palos, capitán de la Pinta. Que conste en acta: sin Palos no hay viaje, ni aniversario, ni nada.",
+                "en": "Martín Alonso Pinzón, from Palos, captain of the Pinta. Let it be recorded: without Palos there's no voyage, no anniversary, nothing."
               }
             }
           ],
@@ -3095,12 +3097,12 @@
               ],
               "characters": [
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "colombina",
+                  "id": "santamaria",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3115,7 +3117,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "thinking",
               "variants": [
                 {
@@ -3166,7 +3168,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "grumete",
+            "characterId": "alonsosanchez",
             "expression": "thinking",
             "text": {
               "es": "¿La carabela o el acta?",
@@ -3194,8 +3196,8 @@
                 "en": "The minutes lead"
               },
               "hint": {
-                "es": "Con la socia",
-                "en": "With the Society member"
+                "es": "Con Santamaría",
+                "en": "With Santamaría"
               },
               "targetNodeId": "g4b_acta",
               "setFlags": [
@@ -3252,7 +3254,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "proud",
               "text": {
                 "es": "En las actas de la Sociedad está todo: la fundación en 1880 y la propuesta de celebrar cada 3 de agosto la salida de las carabelas.",
@@ -3261,7 +3263,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "colombina",
+              "characterId": "santamaria",
               "expression": "happy",
               "text": {
                 "es": "El nombre es de Colón y la gloria es de los marinos. Pero la fiesta… la fiesta es nuestra.",
@@ -3302,12 +3304,12 @@
               ],
               "characters": [
                 {
-                  "id": "grumete",
+                  "id": "alonsosanchez",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "colombina",
+                  "id": "santamaria",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -3322,7 +3324,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto, que se nos va la marea. Colón, los Pinzón o la Sociedad Colombina: ¿quién inventó las Colombinas?",
@@ -3367,7 +3369,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "proud",
               "variants": [
                 {
@@ -3414,7 +3416,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "grumete",
+              "characterId": "alonsosanchez",
               "expression": "happy",
               "text": {
                 "es": "¡Tierra a la vista! O mejor dicho: ¡feria a la vista! Nos vemos el 3 de agosto.",

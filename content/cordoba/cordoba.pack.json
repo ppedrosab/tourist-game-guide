@@ -101,40 +101,43 @@
       "avatar": "sprites/jornalero/jornalero_neutral.svg"
     },
     {
-      "id": "crucera",
+      "id": "piconera",
       "name": {
-        "es": "La Crucera",
-        "en": "The Cross Maker"
+        "es": "La Chiquita Piconera",
+        "en": "The Chiquita Piconera"
       },
       "description": {
-        "es": "Monta cada mayo la cruz de flores de su hermandad. Orgullosa, competitiva y muy cordobesa.",
-        "en": "Every May she builds her brotherhood's cross of flowers. Proud, competitive and very Cordoban."
+        "es": "La muchacha del último cuadro de Romero de Torres (1930), junto a su brasero de picón. Cada mayo monta una cruz de flores. Orgullosa y muy cordobesa.",
+        "en": "The girl in Romero de Torres's last painting (1930), beside her charcoal brazier. Every May she builds a cross of flowers. Proud and very Cordoban."
       },
-      "avatar": "sprites/crucera/crucera_neutral.svg"
+      "avatar": "sprites/piconera/piconera_neutral.svg",
+      "era": "1930"
     },
     {
-      "id": "caballista",
+      "id": "romerotorres",
       "name": {
-        "es": "El Caballista",
-        "en": "The Horseman"
+        "es": "Julio Romero de Torres",
+        "en": "Julio Romero de Torres"
       },
       "description": {
-        "es": "Jinete de traje corto que pasea a caballo por la feria. Elegante y de pocas palabras.",
-        "en": "A rider in a short jacket who rides through the fair. Elegant and a man of few words."
+        "es": "Pintor cordobés de las mujeres de su ciudad; su casa es hoy su museo, junto a la plaza del Potro. Elegante y de pocas palabras.",
+        "en": "A Cordoban painter of the women of his city; his home is now his museum, by the Plaza del Potro. Elegant and a man of few words."
       },
-      "avatar": "sprites/caballista/caballista_neutral.svg"
+      "avatar": "sprites/romerotorres/romerotorres_neutral.svg",
+      "era": "1874 - 1930"
     },
     {
-      "id": "pregonero",
+      "id": "gongora",
       "name": {
-        "es": "El Pregonero",
-        "en": "The Crier"
+        "es": "Luis de Góngora",
+        "en": "Luis de Góngora"
       },
       "description": {
-        "es": "Anuncia a voces la feria desde tiempos inmemoriales. Teatral y con memoria de elefante.",
-        "en": "He's been crying out the fair since time immemorial. Theatrical, with an elephant's memory."
+        "es": "El gran poeta del Siglo de Oro, nacido y muerto en Córdoba. Teatral, ingenioso y con memoria de elefante.",
+        "en": "The great poet of the Golden Age, born and died in Córdoba. Theatrical, witty and with an elephant's memory."
       },
-      "avatar": "sprites/pregonero/pregonero_neutral.svg"
+      "avatar": "sprites/gongora/gongora_neutral.svg",
+      "era": "1561 - 1627"
     }
   ],
   "routes": [
@@ -2432,11 +2435,11 @@
         "en": "Which Is the Oldest May Festival?"
       },
       "summary": {
-        "es": "En mayo Córdoba encadena Cruces, Patios y Feria. ¿Cuál es la más antigua? Con una crucera, un caballista y el pregonero de la feria, entre flores, caballos y privilegios reales.",
-        "en": "In May Córdoba strings together Crosses, Courtyards and Fair. Which is the oldest? With a cross maker, a horseman and the fair crier, among flowers, horses and royal privileges."
+        "es": "En mayo Córdoba encadena Cruces, Patios y Feria. ¿Cuál es la más antigua? Con la Chiquita Piconera, Julio Romero de Torres y Luis de Góngora, entre flores, caballos y privilegios reales.",
+        "en": "In May Córdoba strings together Crosses, Courtyards and Fair. Which is the oldest? With the Chiquita Piconera, Julio Romero de Torres and Luis de Góngora, among flowers, horses and royal privileges."
       },
       "era": "1284 - hoy",
-      "guideCharacterId": "crucera",
+      "guideCharacterId": "piconera",
       "durationMin": 110,
       "distanceKm": 3.6,
       "difficulty": "easy",
@@ -2487,7 +2490,7 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -2495,16 +2498,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "happy",
               "text": {
-                "es": "¡Hola, vecino! Soy crucera: cada mayo monto con mi hermandad una cruz de flores en la plaza. Claveles, macetas, mantones…",
-                "en": "Hello, neighbour! I'm a cross maker: every May, with my brotherhood, I build a cross of flowers in the square. Carnations, flowerpots, shawls…"
+                "es": "¡Hola, vecino! Soy la Chiquita Piconera, la del cuadro de Romero de Torres. Cada mayo monto con mis vecinas una cruz de flores en la plaza. Claveles, macetas, mantones…",
+                "en": "Hello, neighbour! I'm the Chiquita Piconera, the girl in Romero de Torres's painting. Every May, with my neighbours, I build a cross of flowers in the square. Carnations, flowerpots, shawls…"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "thinking",
               "text": {
                 "es": "En mayo Córdoba tiene tres fiestas seguidas: las Cruces, los Patios y la Feria. Y te traigo un pique: ¿cuál es la más antigua?",
@@ -2513,11 +2516,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "proud",
               "text": {
-                "es": "Yo digo que las Cruces. Pero la de los patios dice que los Patios, y el de la feria… la Feria. Tú decides.",
-                "en": "I say the Crosses. But the courtyard lady says the Courtyards, and the fair man… the Fair. You decide."
+                "es": "Yo digo que las Cruces. Pero las de los patios dicen que los Patios, y los de la feria… la Feria. Tú decides.",
+                "en": "I say the Crosses. But the courtyard ladies say the Courtyards, and the fair folk… the Fair. You decide."
               }
             },
             {
@@ -2587,12 +2590,12 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "neutral",
                   "position": "left"
                 },
                 {
-                  "id": "pregonero",
+                  "id": "gongora",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -2600,11 +2603,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pregonero",
+              "characterId": "gongora",
               "expression": "happy",
               "text": {
-                "es": "¡Oíd, oíd! Pregonero de la feria. Yo anuncio a voces la fiesta desde hace… uf, desde hace mucho.",
-                "en": "Hear ye, hear ye! Fair crier. I've been announcing the fair at the top of my voice for… oh, for a long time."
+                "es": "Luis de Góngora, poeta de Córdoba. Pregonar a voces no es lo mío, pero de esta feria sé versos… y fechas.",
+                "en": "Luis de Góngora, poet of Córdoba. Crying out at the top of my voice isn't my style, but I know verses about this fair… and dates."
               }
             },
             {
@@ -2616,11 +2619,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pregonero",
+              "characterId": "gongora",
               "expression": "thinking",
               "text": {
-                "es": "Mi feria es de ganado, de las de antes. Y las de ganado son muy viejas en Castilla… pero no te lo voy a decir todo tan pronto.",
-                "en": "My fair is a livestock fair, the old-fashioned kind. And livestock fairs are very old in Castile… but I'm not telling you everything so soon."
+                "es": "En mis tiempos la feria era de ganado, de las de antes. Y las de ganado son muy viejas en Castilla… pero no te lo voy a decir todo tan pronto.",
+                "en": "In my day the fair was a livestock fair, the old-fashioned kind. And livestock fairs are very old in Castile… but I'm not telling you everything so soon."
               }
             }
           ],
@@ -2658,7 +2661,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "crucera",
+            "characterId": "piconera",
             "expression": "happy",
             "text": {
               "es": "¿Seguimos por las cruces y los patios de Santa Marina, o por la feria de antes, junto a la Puerta de Sevilla?",
@@ -2721,12 +2724,12 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "caballista",
+                  "id": "romerotorres",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2734,11 +2737,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "caballista",
+              "characterId": "romerotorres",
               "expression": "neutral",
               "text": {
-                "es": "Buenas. Caballista. En feria saco mi caballo y paseo por El Arenal. Pero en mayo también vengo a ver patios, que mi madre tenía uno.",
-                "en": "Hello. Horseman. At the fair I take my horse out and ride around El Arenal. But in May I also come to see courtyards; my mother had one."
+                "es": "Buenas. Julio Romero de Torres, pintor. Pinto a las mujeres de Córdoba, y en mayo vengo a los patios a buscar modelos y luz.",
+                "en": "Hello. Julio Romero de Torres, painter. I paint the women of Córdoba, and in May I come to the courtyards looking for models and light."
               }
             },
             {
@@ -2751,7 +2754,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "proud",
               "text": {
                 "es": "¡1921! Los Patios, como concurso, son jovencitos. Uno menos.",
@@ -2819,12 +2822,12 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "happy",
                   "position": "left"
                 },
                 {
-                  "id": "caballista",
+                  "id": "romerotorres",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2839,7 +2842,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "happy",
               "text": {
                 "es": "Mira mi cruz: claveles rojos, mantón de Manila, cobre y macetas. La costumbre de adornar cruces en mayo es muy antigua…",
@@ -2848,11 +2851,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "caballista",
+              "characterId": "romerotorres",
               "expression": "thinking",
               "text": {
-                "es": "Antigua sí. Pero ¿más que una feria con privilegio de un rey?",
-                "en": "Old, yes. But older than a fair granted by a king?"
+                "es": "Antigua sí, Chiquita. Pero ¿más que una feria con privilegio de un rey?",
+                "en": "Old, yes, Chiquita. But older than a fair granted by a king?"
               }
             }
           ],
@@ -2885,8 +2888,8 @@
           "clue": {
             "id": "may_pista_rey",
             "text": {
-              "es": "La Feria · El caballista habla de una feria concedida por un rey.",
-              "en": "The Fair · The horseman talks about a fair granted by a king."
+              "es": "La Feria · Romero de Torres habla de una feria concedida por un rey.",
+              "en": "The Fair · Romero de Torres talks about a fair granted by a king."
             }
           },
           "nextNodeId": "f4_puente",
@@ -2916,12 +2919,12 @@
               ],
               "characters": [
                 {
-                  "id": "pregonero",
+                  "id": "gongora",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2937,16 +2940,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pregonero",
+              "characterId": "gongora",
               "expression": "proud",
               "text": {
-                "es": "¡1665! Pero ojo: entonces a la feria solo le cambiaron el nombre. La feria ya existía.",
-                "en": "1665! But mind: back then the fair only changed its name. The fair already existed."
+                "es": "1665: eso fue después de mis días. Pero ojo: entonces a la feria solo le cambiaron el nombre. La feria ya existía.",
+                "en": "1665: that was after my time. But mind: back then the fair only changed its name. The fair already existed."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "surprised",
               "text": {
                 "es": "¿Que ya existía? ¿Desde cuándo?",
@@ -3014,12 +3017,12 @@
               ],
               "characters": [
                 {
-                  "id": "caballista",
+                  "id": "romerotorres",
                   "expression": "proud",
                   "position": "left"
                 },
                 {
-                  "id": "pregonero",
+                  "id": "gongora",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3027,11 +3030,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "caballista",
+              "characterId": "romerotorres",
               "expression": "proud",
               "text": {
-                "es": "Caballista, para servirle. Los reyes de Castilla daban privilegios para hacer ferias de ganado. Y en Córdoba uno lo dio muy pronto…",
-                "en": "Horseman, at your service. The kings of Castile granted privileges to hold livestock fairs. And in Córdoba one granted it very early…"
+                "es": "Romero de Torres, para servirle. Me gusta la historia de mi ciudad: los reyes de Castilla daban privilegios para hacer ferias de ganado. Y en Córdoba uno lo dio muy pronto…",
+                "en": "Romero de Torres, at your service. I love my city's history: the kings of Castile granted privileges to hold livestock fairs. And in Córdoba one granted it very early…"
               }
             },
             {
@@ -3044,11 +3047,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pregonero",
+              "characterId": "gongora",
               "expression": "happy",
               "text": {
-                "es": "¡1284! Más de setecientos años. Eso lo pregono yo bien alto.",
-                "en": "1284! More than seven hundred years. I'll cry that out loud."
+                "es": "¡1284! Más de setecientos años. Eso merece un soneto.",
+                "en": "1284! More than seven hundred years. That deserves a sonnet."
               }
             }
           ],
@@ -3111,12 +3114,12 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "pregonero",
+                  "id": "gongora",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -3131,7 +3134,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "thinking",
               "variants": [
                 {
@@ -3139,8 +3142,8 @@
                     "camino_cruces"
                   ],
                   "text": {
-                    "es": "Vienes de las cruces: los Patios son de 1921 y el caballista habla de un rey. ¿Seguimos la pista del caballo o la del pregón?",
-                    "en": "You've come by the crosses: the Courtyards date from 1921 and the horseman talks of a king. Shall we follow the horse lead or the crier lead?"
+                    "es": "Vienes de las cruces: los Patios son de 1921 y Romero de Torres habla de un rey. ¿Seguimos la pista del pintor o la del poeta?",
+                    "en": "You've come by the crosses: the Courtyards date from 1921 and Romero de Torres talks of a king. Shall we follow the painter lead or the poet lead?"
                   }
                 },
                 {
@@ -3148,8 +3151,8 @@
                     "camino_feria"
                   ],
                   "text": {
-                    "es": "Vienes de la feria antigua: 1665, 1284… ¿Seguimos la pista del caballo o la del pregón?",
-                    "en": "You've come by the old fair: 1665, 1284… Shall we follow the horse lead or the crier lead?"
+                    "es": "Vienes de la feria antigua: 1665, 1284… ¿Seguimos la pista del pintor o la del poeta?",
+                    "en": "You've come by the old fair: 1665, 1284… Shall we follow the painter lead or the poet lead?"
                   }
                 }
               ]
@@ -3182,22 +3185,22 @@
             }
           },
           "decisionIntro": {
-            "characterId": "crucera",
+            "characterId": "piconera",
             "expression": "thinking",
             "text": {
-              "es": "¿El caballo o el pregón?",
-              "en": "The horse or the crier?"
+              "es": "¿El pintor o el poeta?",
+              "en": "The painter or the poet?"
             }
           },
           "choices": [
             {
               "label": {
-                "es": "La pista del caballo",
-                "en": "The horse lead"
+                "es": "La pista del pintor",
+                "en": "The painter lead"
               },
               "hint": {
-                "es": "Con el caballista",
-                "en": "With the horseman"
+                "es": "Con Romero de Torres",
+                "en": "With Romero de Torres"
               },
               "targetNodeId": "f4a_caballo",
               "setFlags": [
@@ -3206,12 +3209,12 @@
             },
             {
               "label": {
-                "es": "La pista del pregón",
-                "en": "The crier lead"
+                "es": "La pista del poeta",
+                "en": "The poet lead"
               },
               "hint": {
-                "es": "Con el pregonero",
-                "en": "With the crier"
+                "es": "Con Góngora",
+                "en": "With Góngora"
               },
               "targetNodeId": "f4b_pregon",
               "setFlags": [
@@ -3223,22 +3226,22 @@
         {
           "id": "f4a_caballo",
           "title": {
-            "es": "El caballo",
-            "en": "The horse"
+            "es": "El pintor",
+            "en": "The painter"
           },
           "content": [
             {
               "type": "dialogue",
-              "characterId": "caballista",
+              "characterId": "romerotorres",
               "expression": "dramatic",
               "text": {
-                "es": "Las ferias de ganado eran lo más importante del año: se vendían caballos, mulas, bueyes. Sin ellas no había campo.",
-                "en": "Livestock fairs were the most important event of the year: horses, mules and oxen were sold. Without them there was no farming."
+                "es": "Las ferias de ganado eran lo más importante del año: se vendían caballos, mulas, bueyes. Sin ellas no había campo, ni feria que pintar.",
+                "en": "Livestock fairs were the most important event of the year: horses, mules and oxen were sold. Without them there was no farming, and no fair to paint."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "caballista",
+              "characterId": "romerotorres",
               "expression": "thinking",
               "text": {
                 "es": "Las Cruces tienen siglos de costumbre, sí, pero la Feria tiene papel del rey: 1284. Eso no lo tiene nadie más en mayo.",
@@ -3262,34 +3265,34 @@
         {
           "id": "f4b_pregon",
           "title": {
-            "es": "El pregón",
-            "en": "The crier"
+            "es": "El poeta",
+            "en": "The poet"
           },
           "content": [
             {
               "type": "dialogue",
-              "characterId": "pregonero",
+              "characterId": "gongora",
               "expression": "proud",
               "text": {
-                "es": "¡Oíd! En 1284, feria de ganado por privilegio del rey Sancho. En 1422, a principios de mayo. En 1665, de la Salud. ¡Y aquí seguimos!",
-                "en": "Hear ye! In 1284, a livestock fair by privilege of King Sancho. In 1422, moved to early May. In 1665, of Our Lady of Health. And here we still are!"
+                "es": "Escuchad: en 1284, feria de ganado por privilegio del rey Sancho. En 1422, a principios de mayo. En 1665, de la Salud. ¡Y aquí seguimos!",
+                "en": "Listen: in 1284, a livestock fair by privilege of King Sancho. In 1422, moved to early May. In 1665, of Our Lady of Health. And here we still are!"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "nervous",
               "text": {
-                "es": "Vale, vale… mis cruces serán muy bonitas, pero tu feria tiene más papeles.",
-                "en": "All right, all right… my crosses may be lovely, but your fair has more paperwork."
+                "es": "Vale, vale, don Luis… mis cruces serán muy bonitas, pero su feria tiene más papeles.",
+                "en": "All right, all right, Don Luis… my crosses may be lovely, but your fair has more paperwork."
               }
             }
           ],
           "clue": {
             "id": "may_pista_cronologia",
             "text": {
-              "es": "Las Cruces · La crucera reconoce que la Feria tiene documentos más antiguos que las Cruces.",
-              "en": "The Crosses · The cross maker admits the Fair has older documents than the Crosses."
+              "es": "Las Cruces · La Chiquita Piconera reconoce que la Feria tiene documentos más antiguos que las Cruces.",
+              "en": "The Crosses · The Chiquita Piconera admits the Fair has older documents than the Crosses."
             }
           },
           "nextNodeId": "f5_arenal",
@@ -3318,12 +3321,12 @@
               ],
               "characters": [
                 {
-                  "id": "crucera",
+                  "id": "piconera",
                   "expression": "thinking",
                   "position": "left"
                 },
                 {
-                  "id": "caballista",
+                  "id": "romerotorres",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -3339,7 +3342,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto: Cruces, Patios o Feria. ¿Cuál es la fiesta más antigua del mayo cordobés?",
@@ -3384,7 +3387,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "proud",
               "variants": [
                 {
@@ -3393,8 +3396,8 @@
                     "version_caballo"
                   ],
                   "text": {
-                    "es": "Las cruces y el caballo: de las flores al real. Eres jinete de mayo.",
-                    "en": "The crosses and the horse: from flowers to fairground. You're a May rider."
+                    "es": "Las cruces y el pintor: de las flores al lienzo. Eres modelo de Romero de Torres.",
+                    "en": "The crosses and the painter: from flowers to canvas. You're a Romero de Torres model."
                   }
                 },
                 {
@@ -3403,8 +3406,8 @@
                     "version_pregon"
                   ],
                   "text": {
-                    "es": "Las cruces y el pregón: sabes contar mayo entero. Eres pregonero de patios.",
-                    "en": "The crosses and the crier: you can tell all of May. You're the courtyards' crier."
+                    "es": "Las cruces y el poeta: sabes contar mayo entero en verso. Eres poeta de patios.",
+                    "en": "The crosses and the poet: you can tell all of May in verse. You're the courtyards' poet."
                   }
                 },
                 {
@@ -3413,8 +3416,8 @@
                     "version_caballo"
                   ],
                   "text": {
-                    "es": "La feria antigua y el caballo: de 1284 a El Arenal. Eres tratante del rey Sancho.",
-                    "en": "The old fair and the horse: from 1284 to El Arenal. You're King Sancho's dealer."
+                    "es": "La feria antigua y el pintor: de 1284 a El Arenal. Eres tratante del rey Sancho.",
+                    "en": "The old fair and the painter: from 1284 to El Arenal. You're King Sancho's dealer."
                   }
                 },
                 {
@@ -3423,15 +3426,15 @@
                     "version_pregon"
                   ],
                   "text": {
-                    "es": "La feria antigua y el pregón: siete siglos de fiesta en un paseo. Eres cronista del mayo cordobés.",
-                    "en": "The old fair and the crier: seven centuries of celebration in one walk. You're the Córdoba May's chronicler."
+                    "es": "La feria antigua y el poeta: siete siglos de fiesta en un paseo. Eres cronista del mayo cordobés.",
+                    "en": "The old fair and the poet: seven centuries of celebration in one walk. You're the Córdoba May's chronicler."
                   }
                 }
               ]
             },
             {
               "type": "dialogue",
-              "characterId": "crucera",
+              "characterId": "piconera",
               "expression": "happy",
               "text": {
                 "es": "Aunque la más antigua sea la feria… ¡la cruz más bonita es la mía! Vuelve en mayo, que se nota.",
@@ -3444,25 +3447,25 @@
       ],
       "endings": [
         {
-          "id": "jinete_mayo",
+          "id": "modelo_romero",
           "requires": [
             "camino_cruces",
             "version_caballo"
           ],
           "title": {
-            "es": "Jinete de mayo",
-            "en": "May rider"
+            "es": "Modelo de Romero de Torres",
+            "en": "Romero de Torres model"
           }
         },
         {
-          "id": "pregonero_patios",
+          "id": "poeta_patios",
           "requires": [
             "camino_cruces",
             "version_pregon"
           ],
           "title": {
-            "es": "Pregonero de patios",
-            "en": "The courtyards' crier"
+            "es": "Poeta de patios",
+            "en": "The courtyards' poet"
           }
         },
         {

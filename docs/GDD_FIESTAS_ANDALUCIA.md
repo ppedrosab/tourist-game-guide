@@ -2,7 +2,8 @@
 
 Siete rutas `theme: "fiestas"` (chip morado «Fiestas»), una por ciudad; Cádiz ya tenía Carnaval y
 Semana Santa. Mismo formato de caso que el resto: tres sospechosos, dos decisiones y cuatro finales.
-**Cada ruta tiene su propio reparto**, sin repetir personajes de otras rutas de la misma ciudad (lo
+**Los personajes son personas reales de la ciudad o figuras propias de ella** (nada de oficios genéricos), y
+**cada ruta tiene su propio reparto**, sin repetir personajes de otras rutas de la misma ciudad (lo
 comprueba `allPacks.test.ts`). Arte:
 - personajes en `scripts/art/andalucia_sprites.py`;
 - coleccionables en `scripts/art/fiestas_andalucia_collectibles.py`;
@@ -28,9 +29,9 @@ reyes; el centenario de 1887 la relanzó.
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `cantaora` (guía) | Cantaora de malagueñas | Narra |
-| `verdialero` | Violinista de una panda de verdiales | Coguía |
-| `cochero` | Cochero de caballos | Coguía |
+| `latrini` (guía) | La Trini (Trinidad Navarro, 1868-1930), cantaora de la «malagueña de la Trini» | Narra |
+| `verdialero` | Violinista de una panda de verdiales (folclore de los Montes de Málaga) | Coguía |
+| `biznaguero` | Vendedor de biznagas, la flor de la feria | Coguía |
 
 Caminos: `dinero` = **El mar**; `poder` = **La Alcazaba**.
 
@@ -38,9 +39,9 @@ Caminos: `dinero` = **El mar**; `poder` = **La Alcazaba**.
 | --- | --- | --- |
 | f1 | Plaza de la Constitución | El abanico |
 | f2 | Calle Larios · **decisión 1** | El sombrero de verdiales |
-| fa1 · fa2 | Muelle Uno · Malagueta | El coche de caballos · Los fuegos |
+| fa1 · fa2 | Muelle Uno · Malagueta | La biznaga · Los fuegos |
 | fb1 · fb2 | Alcazaba (fondo nuevo) · Teatro Romano | El estandarte de 1487 · El acta de 1491 |
-| f4 | Plaza de la Merced · **decisión 2** (verdiales / caballos) | — |
+| f4 | Plaza de la Merced · **decisión 2** (verdiales / biznagas) | — |
 | f5 | La Manquita · **veredicto** | El farolillo |
 
 ## Sevilla · «¿Quién inventó la Feria de Abril?» (`feria-abril`)
@@ -56,9 +57,9 @@ Sebastián, con 19 casetas y unos 25 000 visitantes.
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `flamenca` (guía) | Sevillana con traje de volantes | Narra |
-| `tratante` | Tratante de ganado del XIX | Coguía |
-| `farolillero` | Hace los farolillos del real | Coguía |
+| `cigarrera` (guía) | Cigarrera de la Fábrica de Tabacos, vestida de flamenca | Narra |
+| `ybarra` | José María de Ybarra, uno de los dos concejales | Sospechoso |
+| `bonaplata` | Narciso Bonaplata, el otro concejal | Sospechoso |
 
 Caminos: `dinero` = **El Prado**; `poder` = **El río**. Fondos nuevos: Prado, Plaza de España,
 Fábrica de Tabacos y portada de la Feria (Los Remedios).
@@ -72,9 +73,9 @@ Fábrica de Tabacos y portada de la Feria (Los Remedios).
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `cabezudo` (guía) | Lleva una cabeza de cartón en el Corpus | Narra |
-| `modista` | Modista, experta en la muñeca | Coguía |
-| `tamborilero` | Toca en el desfile de gigantes | Coguía |
+| `tarasca` (guía) | La propia Tarasca, que no sabe de dónde viene | Narra |
+| `marianapineda` | Mariana Pineda (1804-1831), bordadora | Coguía |
+| `falla` | Manuel de Falla, vecino de Granada de 1920 a 1939 | Coguía |
 
 Caminos: `dinero` = **La catedral**; `poder` = **El Darro**. Fondos nuevos: Plaza del Carmen
 (ayuntamiento), Plaza de las Pasiegas y Plaza Nueva.
@@ -89,9 +90,9 @@ Caminos: `dinero` = **La catedral**; `poder` = **El Darro**. Fondos nuevos: Plaz
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `crucera` (guía) | Monta la cruz de flores de su hermandad | Narra |
-| `caballista` | Jinete de traje corto | Coguía |
-| `pregonero` | Pregona la feria | Coguía |
+| `piconera` (guía) | La Chiquita Piconera, del último cuadro de Romero de Torres (1930) | Narra |
+| `romerotorres` | Julio Romero de Torres (1874-1930), pintor | Coguía |
+| `gongora` | Luis de Góngora (1561-1627), poeta | Coguía |
 
 Caminos: `dinero` = **Las cruces**; `poder` = **La feria antigua**. Fondos nuevos: cruz de mayo en
 San Andrés, Puerta de Sevilla y El Arenal.
@@ -108,9 +109,9 @@ San Andrés, Puerta de Sevilla y El Arenal.
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `grumete` (guía) | El más joven de la tripulación | Narra |
+| `alonsosanchez` (guía) | Alonso Sánchez de Huelva, piloto de leyenda (se cuenta que llegó antes que Colón) | Narra |
 | `pinzon` | Martín Alonso Pinzón (1441-1493) | Sospechoso |
-| `colombina` | Socia de la Sociedad Colombina | Coguía |
+| `santamaria` | Braulio Santamaría, periodista que impulsó la Sociedad en 1880 | Sospechoso |
 
 Caminos: `dinero` = **La ría**; `poder` = **La ciudad**. Fondo nuevo: Paseo de la Ría con la noria
 de la feria.
@@ -127,7 +128,7 @@ de la feria.
 | --- | --- | --- |
 | `melenchonera` (guía) | Canta melenchones | Narra |
 | `podador` | Poda olivos | Coguía |
-| `ganadero` | Lleva a bendecir a sus animales | Coguía |
+| `iranzo` | Miguel Lucas de Iranzo, condestable de Castilla en Jaén (s. XV), famoso por sus fiestas | Coguía |
 
 Caminos: `dinero` = **El centro**; `poder` = **El Jaén antiguo**. Fondo nuevo: Plaza de San Juan de
 noche, con la lumbre y el corro de melenchones.
@@ -142,9 +143,9 @@ noche, con la lumbre y el corro de melenchones.
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `bailaora` (guía) | Baila en la feria de día y de noche | Narra |
+| `carmendeburgos` (guía) | Carmen de Burgos «Colombine» (1867-1932), periodista almeriense | Narra |
 | `torrero` | Andrés de Jaén, guarda de Torregarcía (según la tradición) | Coguía, tono sereno |
-| `cohetero` | Maestro pirotécnico | Coguía |
+| `salmeron` | Nicolás Salmerón (1838-1908), presidente de la Primera República | Coguía |
 
 Caminos: `dinero` = **El puerto**; `poder` = **La patrona**. Fondo nuevo: fachada del santuario (antiguo
 convento de Santo Domingo), sin la imagen.
@@ -170,6 +171,7 @@ convento de Santo Domingo), sin la imagen.
   - Los años de la Casa Colón (hotel de la década de 1880).
   - El Trofeo Colombino desde 1965.
   - Ubicación exacta del recinto de la feria en el Paseo de la Ría.
+- **Personajes reales.** Revisar con historiadores cómo se les hace hablar, en especial Mariana Pineda, Góngora, Salmerón y Carmen de Burgos. Braulio Santamaría: confirmar sus fechas.
 - **Jaén.**
   - La relación de las lumbres con la leña de la poda es la explicación popular; confirmarla con un
     historiador local.

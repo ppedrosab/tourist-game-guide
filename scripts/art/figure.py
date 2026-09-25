@@ -7,7 +7,7 @@ Lo usan los personajes de Córdoba, Huelva, Jaén, Almería y las rutas gastron�
     figure(skin="#E3AE88", hair=("short", "#3A2A1E"), hat=("cordobes", "#2B2A33"),
            outfit="jacket", main="#2F3E5C", accent=GOLD, left="book", right="staff")
 """
-import os, sys
+import math, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from cadiz_sprites import INK, CLAY, SEA, GOLD, PAPER, SHADOW, face_of, g, limb, svg
 
@@ -146,6 +146,11 @@ def hat(kind, c, c2=GOLD):
                 + "".join(f'<path d="M{x} 32Q{x} {y + 6} {x + (x - 100) * .15} {y}" fill="none" stroke="{shade(c)}" stroke-width="2.2"/>' for x, y in [(82, 20), (91, 12), (100, 9), (109, 12), (118, 20)])
                 + f'<path d="M62 74Q60 36 100 34Q140 36 138 74Q132 48 100 46Q68 48 62 74Z" fill="#2A1E1A" stroke="{INK}" stroke-width="2.4"/>'
                 + f'<circle cx="132" cy="50" r="9" fill="{c2}" stroke="{INK}" stroke-width="1.8"/><circle cx="132" cy="50" r="3.4" fill="{GOLD}"/>')
+    if kind == "tophat":    # chistera del XIX
+        return (f'<path d="M48 54Q100 44 152 54Q148 60 100 57Q52 60 48 54Z" fill="{c}" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M70 54L72 6H128L130 54Z" fill="{c}" stroke="{INK}" stroke-width="2.6"/>'
+                f'<path d="M71 44H129V50H71Z" fill="{c2}" stroke="{INK}" stroke-width="1.2"/>'
+                f'<path d="M80 12Q84 30 82 40" fill="none" stroke="#FFF" stroke-width="2" opacity=".25"/>')
     if kind == "flower":    # flor en el pelo
         return (f'<circle cx="132" cy="46" r="9" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
                 f'<circle cx="132" cy="46" r="3.4" fill="{c2}"/>')
@@ -379,6 +384,19 @@ def prop(kind, x, y, side):
         return (f'<circle cx="{x}" cy="{y - 10}" r="21" fill="#F2E3C4" stroke="{INK}" stroke-width="2.4"/>'
                 f'<circle cx="{x}" cy="{y - 10}" r="21" fill="none" stroke="#B8642E" stroke-width="5" opacity=".8"/>'
                 + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="3" fill="{GOLD}" stroke="{INK}" stroke-width="1"/>' for dx, dy in [(-21, -10), (21, -10), (0, -31), (0, 11)]))
+    if kind == "biznaga":   # biznaga: flores de jazmín pinchadas en un tallo seco
+        return (f'<path d="M{x} {y + 8}V{y - 34}" stroke="#8A6243" stroke-width="3"/>'
+                + "".join(f'<circle cx="{x + 15 * math.cos(math.radians(a)):.1f}" cy="{y - 50 + 15 * math.sin(math.radians(a)):.1f}" r="4.4" fill="#FFFFFF" stroke="{INK}" stroke-width="1"/>' for a in range(0, 360, 30))
+                + f'<circle cx="{x}" cy="{y - 50}" r="11" fill="#FFFFFF" stroke="{INK}" stroke-width="1.2"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y - 50 + dy}" r="2" fill="#F2E6A0"/>' for dx, dy in [(-4, -3), (4, 2), (0, 5), (3, -5)]))
+    if kind == "palette":   # paleta de pintor con pincel
+        return (f'<path d="M{x - 22} {y}Q{x - 24} {y - 22} {x} {y - 22}Q{x + 24} {y - 20} {x + 20} {y + 2}Q{x + 12} {y + 10} {x + 4} {y + 4}Q{x - 2} {y + 16} {x - 22} {y}Z" fill="#D9B48A" stroke="{INK}" stroke-width="2"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="3.4" fill="{c}"/>' for dx, dy, c in [(-12, -12, "#D8412F"), (-2, -16, GOLD), (8, -14, SEA), (14, -6, "#2B2A33")])
+                + f'<path d="M{x - 14} {y + 10}L{x + 18} {y - 30}" stroke="{INK}" stroke-width="3"/><path d="M{x + 16} {y - 28}L{x + 22} {y - 34}" stroke="#D8412F" stroke-width="4"/>')
+    if kind == "brazier":   # brasero de cobre con picón
+        return (f'<ellipse cx="{x}" cy="{y + 2}" rx="24" ry="6" fill="#C98A4A" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 24} {y + 2}Q{x} {y + 26} {x + 24} {y + 2}" fill="#B8742E" stroke="{INK}" stroke-width="2"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y}" r="3.4" fill="{c}"/>' for dx, c in [(-12, "#D8412F"), (-4, "#F29A2E"), (4, "#D8412F"), (12, "#F29A2E")]))
     if kind == "carnations":  # ramo de claveles
         return (f'<path d="M{x - 4} {y + 6}L{x - 10} {y - 22}M{x} {y + 6}V{y - 26}M{x + 4} {y + 6}L{x + 10} {y - 22}" stroke="#4F8B5A" stroke-width="2.4"/>'
                 + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="6.4" fill="{c}" stroke="{INK}" stroke-width="1.4"/>' for dx, dy, c in [(-10, -24, "#D8412F"), (0, -30, "#E8744A"), (10, -24, "#D8412F")]))

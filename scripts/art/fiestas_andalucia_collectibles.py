@@ -86,12 +86,11 @@ m_sombrero = (BG + f'<path d="M20 74Q60 60 100 74Q60 84 20 74Z" fill="#2B2A33" s
               + "".join(f'<rect x="{x}" y="{y}" width="6" height="6" transform="rotate(45 {x + 3} {y + 3})" fill="#DDE8F0" stroke="{INK}" stroke-width="1"/>' for x, y in [(40, 60), (74, 62), (58, 48)])
               + "".join(f'<path d="M{x} 76Q{x + w} 90 {x} 104" fill="none" stroke="{c}" stroke-width="3.6"/>' for x, w, c in [(28, -6, RED), (36, 5, GOLD), (84, 6, BLUE), (92, -5, LEAF)]))
 
-m_coche = (BG + f'<path d="M14 94H106" stroke="{INK}" stroke-width="2"/>'
-           + f'<path d="M30 60H78V80H30Z" fill="{NAVY}" stroke="{INK}" stroke-width="2.2"/><path d="M34 60Q34 42 54 42H74V60Z" fill="{NAVY}" stroke="{INK}" stroke-width="2.2"/>'
-           + f'<path d="M78 70H100" stroke="{WOOD}" stroke-width="3"/>'
-           + "".join(f'<circle cx="{x}" cy="84" r="{r}" fill="none" stroke="{INK}" stroke-width="3"/><circle cx="{x}" cy="84" r="2.4" fill="{GOLD}"/>' for x, r in [(40, 12), (72, 9)])
-           + "".join(f'<path d="M{40 + 12 * math.cos(math.radians(a)):.1f} {84 + 12 * math.sin(math.radians(a)):.1f}L40 84" stroke="{INK}" stroke-width="1.2"/>' for a in range(0, 360, 45))
-           + f'<path d="M50 60V52H70" fill="none" stroke="{GOLD}" stroke-width="2"/>' + carnation(98, 44, .6))
+m_biznaga = (BG + f'<path d="M60 104V64" stroke="{WOOD}" stroke-width="4"/>'
+             + "".join(f'<circle cx="{60 + 20 * math.cos(math.radians(a)):.1f}" cy="{52 + 20 * math.sin(math.radians(a)):.1f}" r="7" fill="{WHITE}" stroke="{INK}" stroke-width="1.4"/>' for a in range(0, 360, 30))
+             + "".join(f'<circle cx="{60 + 10 * math.cos(math.radians(a)):.1f}" cy="{52 + 10 * math.sin(math.radians(a)):.1f}" r="6" fill="{WHITE}" stroke="{INK}" stroke-width="1.2"/>' for a in range(15, 360, 45))
+             + f'<circle cx="60" cy="52" r="7" fill="{WHITE}" stroke="{INK}" stroke-width="1.2"/>'
+             + f'<path d="M60 88Q72 80 80 86Q70 92 60 88Z" fill="{LEAF}" stroke="{INK}" stroke-width="1.2"/>' + sparkle(96, 92, 5, GOLD))
 
 m_fuegos = (NIGHT + waves(92, SEA, "#2F6F73") + burst(44, 44, 20, GOLD) + burst(80, 36, 14, RED) + burst(76, 70, 10, PAPER)
             + sparkle(28, 76, 5, GOLD))
@@ -329,7 +328,7 @@ a_insignia = (NIGHT + waves(92, SEA, "#2F6F73") + f'<path d="M86 92L88 50H100L10
 ART = {
     "malaga_fiesta_abanico": (GOLD, m_abanico, "El abanico"),
     "malaga_fiesta_sombrero": (GOLD, m_sombrero, "El sombrero de verdiales"),
-    "malaga_fiesta_coche": (SEA, m_coche, "El coche de caballos"),
+    "malaga_fiesta_biznaga": (SEA, m_biznaga, "La biznaga"),
     "malaga_fiesta_fuegos": (SEA, m_fuegos, "Los fuegos de la Malagueta"),
     "malaga_fiesta_estandarte": (CLAY, m_estandarte, "El estandarte de 1487"),
     "malaga_fiesta_acta": (CLAY, m_acta, "El acta de 1491"),
