@@ -167,6 +167,10 @@ ciudad, más cortas (6 paradas) y pensadas para el atardecer; diseño y datos a 
 
 La leyenda va como «se cuenta» (`legend: true`) y el veredicto separa lo que dicen los documentos.
 Arte en `scripts/art/leyendas_andalucia_*.py`.
+- Se juegan **de noche**: todas sus escenas (y las de las lumbres de Jaén) usan fondos de noche. Un fondo
+  de día se pasa a noche con `python3 scripts/art/night_variants.py {escena}` → `fondo_{escena}_noche.svg`
+  (cielo con luna, capas oscurecidas con filtro y ventanas y farolas encendidas); luego
+  `render_layers.py {escena}_noche` y `npm run gen:assets`. Los guías saludan con «Buenas noches».
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el

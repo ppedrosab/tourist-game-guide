@@ -3641,12 +3641,12 @@
             "lng": -2.463
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_almeria_purchena.svg",
+          "background": "fondos/fondo_almeria_purchena_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_purchena.svg"
+                "fondos/fondo_almeria_purchena_noche.svg"
               ],
               "characters": [
                 {
@@ -3661,7 +3661,7 @@
               "characterId": "santisteban",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Joaquín Santisteban, profesor, arqueólogo y cronista de Almería. Viví y morí a los pies de la Alcazaba, así que sus secretos los conozco bien.",
+                "es": "Buenas noches. Joaquín Santisteban, profesor, arqueólogo y cronista de Almería. Viví y morí a los pies de la Alcazaba, así que sus secretos los conozco bien.",
                 "en": "Good evening. Joaquín Santisteban, teacher, archaeologist and chronicler of Almería. I lived and died at the foot of the Alcazaba, so I know its secrets well."
               }
             },
@@ -3741,12 +3741,12 @@
             "lng": -2.466
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_almeria_plazavieja.svg",
+          "background": "fondos/fondo_almeria_plazavieja_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_plazavieja.svg"
+                "fondos/fondo_almeria_plazavieja_noche.svg"
               ],
               "characters": [
                 {
@@ -3875,12 +3875,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_almeria_muralla.svg",
+          "background": "fondos/fondo_almeria_muralla_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_muralla.svg"
+                "fondos/fondo_almeria_muralla_noche.svg"
               ],
               "characters": [
                 {
@@ -3973,12 +3973,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_almeria_chanca.svg",
+          "background": "fondos/fondo_almeria_chanca_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_chanca.svg"
+                "fondos/fondo_almeria_chanca_noche.svg"
               ],
               "characters": [
                 {
@@ -4069,12 +4069,12 @@
             "lng": -2.4666
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_almeria_catedral.svg",
+          "background": "fondos/fondo_almeria_catedral_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_catedral.svg"
+                "fondos/fondo_almeria_catedral_noche.svg"
               ],
               "characters": [
                 {
@@ -4276,12 +4276,12 @@
             "lng": -2.4705
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_almeria_alcazaba.svg",
+          "background": "fondos/fondo_almeria_alcazaba_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_almeria_alcazaba.svg"
+                "fondos/fondo_almeria_alcazaba_noche.svg"
               ],
               "characters": [
                 {

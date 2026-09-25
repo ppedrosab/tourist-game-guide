@@ -3724,12 +3724,12 @@
             "lng": -5.994
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_sevilla_salvador.svg",
+          "background": "fondos/fondo_sevilla_salvador_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_sevilla_salvador.svg"
+                "fondos/fondo_sevilla_salvador_noche.svg"
               ],
               "characters": [
                 {
@@ -3824,12 +3824,12 @@
             "lng": -5.9908
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_sevilla_alfalfa.svg",
+          "background": "fondos/fondo_sevilla_alfalfa_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_sevilla_alfalfa.svg"
+                "fondos/fondo_sevilla_alfalfa_noche.svg"
               ],
               "characters": [
                 {
@@ -4056,12 +4056,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_sevilla_pilatos.svg",
+          "background": "fondos/fondo_sevilla_pilatos_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_sevilla_pilatos.svg"
+                "fondos/fondo_sevilla_pilatos_noche.svg"
               ],
               "characters": [
                 {
@@ -4152,12 +4152,12 @@
             "lng": -5.9922
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_sevilla_giralda.svg",
+          "background": "fondos/fondo_sevilla_giralda_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_sevilla_giralda.svg"
+                "fondos/fondo_sevilla_giralda_noche.svg"
               ],
               "characters": [
                 {

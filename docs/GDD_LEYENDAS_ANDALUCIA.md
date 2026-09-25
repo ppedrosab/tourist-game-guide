@@ -12,7 +12,9 @@ Categoría `theme: "leyendas"`: chip añil con luna, «Leyendas» / «Legends».
 Arte:
 - personajes en `scripts/art/andalucia_sprites.py`;
 - coleccionables en `scripts/art/leyendas_andalucia_collectibles.py`;
-- fondos nuevos en `scripts/art/leyendas_andalucia_scenes.py` (cuatro de noche).
+- fondos nuevos en `scripts/art/leyendas_andalucia_scenes.py` (cuatro de noche);
+- el resto de escenas usa la versión nocturna de su fondo (`scripts/art/night_variants.py`): toda la
+  ruta transcurre de noche.
 
 ## Málaga · «¿De quién eran las siete cabezas?» (`siete-cabezas`)
 

@@ -2608,12 +2608,12 @@
             "lng": -4.422
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_constitucion.svg",
+          "background": "fondos/fondo_constitucion_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_constitucion.svg"
+                "fondos/fondo_constitucion_noche.svg"
               ],
               "characters": [
                 {
@@ -2628,7 +2628,7 @@
               "characterId": "diazescovar",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Narciso Díaz de Escovar, malagueño, escritor y coleccionista de tradiciones. En 1899 publiqué un libro lleno de historias viejas de esta ciudad.",
+                "es": "Buenas noches. Narciso Díaz de Escovar, malagueño, escritor y coleccionista de tradiciones. En 1899 publiqué un libro lleno de historias viejas de esta ciudad.",
                 "en": "Good evening. Narciso Díaz de Escovar, from Málaga, a writer and collector of traditions. In 1899 I published a book full of this city's old stories."
               }
             },
@@ -2708,12 +2708,12 @@
             "lng": -4.4215
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_larios.svg",
+          "background": "fondos/fondo_larios_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_larios.svg"
+                "fondos/fondo_larios_noche.svg"
               ],
               "characters": [
                 {
@@ -2842,12 +2842,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_atarazanas.svg",
+          "background": "fondos/fondo_atarazanas_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_atarazanas.svg"
+                "fondos/fondo_atarazanas_noche.svg"
               ],
               "characters": [
                 {
@@ -2939,12 +2939,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_teatro.svg",
+          "background": "fondos/fondo_teatro_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_teatro.svg"
+                "fondos/fondo_teatro_noche.svg"
               ],
               "characters": [
                 {
@@ -3036,12 +3036,12 @@
             "lng": -4.4175
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_merced.svg",
+          "background": "fondos/fondo_merced_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_merced.svg"
+                "fondos/fondo_merced_noche.svg"
               ],
               "characters": [
                 {
@@ -3243,12 +3243,12 @@
             "lng": -4.4203
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_manquita.svg",
+          "background": "fondos/fondo_manquita_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_manquita.svg"
+                "fondos/fondo_manquita_noche.svg"
               ],
               "characters": [
                 {

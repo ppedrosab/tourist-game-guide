@@ -3641,12 +3641,12 @@
             "lng": -6.9502
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_huelva_monjas.svg",
+          "background": "fondos/fondo_huelva_monjas_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_monjas.svg"
+                "fondos/fondo_huelva_monjas_noche.svg"
               ],
               "characters": [
                 {
@@ -3741,12 +3741,12 @@
             "lng": -6.9442
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_huelva_museo.svg",
+          "background": "fondos/fondo_huelva_museo_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_museo.svg"
+                "fondos/fondo_huelva_museo_noche.svg"
               ],
               "characters": [
                 {
@@ -3876,12 +3876,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_huelva_muelle.svg",
+          "background": "fondos/fondo_huelva_muelle_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_muelle.svg"
+                "fondos/fondo_huelva_muelle_noche.svg"
               ],
               "characters": [
                 {
@@ -3974,12 +3974,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_huelva_sanpedro.svg",
+          "background": "fondos/fondo_huelva_sanpedro_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_sanpedro.svg"
+                "fondos/fondo_huelva_sanpedro_noche.svg"
               ],
               "characters": [
                 {
@@ -4070,12 +4070,12 @@
             "lng": -6.9519
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_huelva_punto.svg",
+          "background": "fondos/fondo_huelva_punto_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_punto.svg"
+                "fondos/fondo_huelva_punto_noche.svg"
               ],
               "characters": [
                 {
@@ -4277,12 +4277,12 @@
             "lng": -6.9585
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_huelva_paseoria.svg",
+          "background": "fondos/fondo_huelva_paseoria_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_huelva_paseoria.svg"
+                "fondos/fondo_huelva_paseoria_noche.svg"
               ],
               "characters": [
                 {

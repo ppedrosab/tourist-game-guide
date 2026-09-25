@@ -3658,12 +3658,12 @@
             "lng": -4.7792
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cordoba_tendillas.svg",
+          "background": "fondos/fondo_cordoba_tendillas_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cordoba_tendillas.svg"
+                "fondos/fondo_cordoba_tendillas_noche.svg"
               ],
               "characters": [
                 {
@@ -3678,7 +3678,7 @@
               "characterId": "ramirezarellano",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Teodoro Ramírez de Arellano, cordobés. Escribí «Paseos por Córdoba»: recorrí calle a calle la ciudad apuntando su historia y sus leyendas.",
+                "es": "Buenas noches. Teodoro Ramírez de Arellano, cordobés. Escribí «Paseos por Córdoba»: recorrí calle a calle la ciudad apuntando su historia y sus leyendas.",
                 "en": "Good evening. Teodoro Ramírez de Arellano, from Córdoba. I wrote “Paseos por Córdoba”: I walked the city street by street, writing down its history and legends."
               }
             },
@@ -3758,12 +3758,12 @@
             "lng": -4.7772
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cordoba_marina.svg",
+          "background": "fondos/fondo_cordoba_marina_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cordoba_marina.svg"
+                "fondos/fondo_cordoba_marina_noche.svg"
               ],
               "characters": [
                 {
@@ -3892,12 +3892,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_cordoba_viana.svg",
+          "background": "fondos/fondo_cordoba_viana_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cordoba_viana.svg"
+                "fondos/fondo_cordoba_viana_noche.svg"
               ],
               "characters": [
                 {
@@ -3989,12 +3989,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_cordoba_cruz.svg",
+          "background": "fondos/fondo_cordoba_cruz_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cordoba_cruz.svg"
+                "fondos/fondo_cordoba_cruz_noche.svg"
               ],
               "characters": [
                 {
@@ -4085,12 +4085,12 @@
             "lng": -4.7772
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cordoba_colon.svg",
+          "background": "fondos/fondo_cordoba_colon_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cordoba_colon.svg"
+                "fondos/fondo_cordoba_colon_noche.svg"
               ],
               "characters": [
                 {

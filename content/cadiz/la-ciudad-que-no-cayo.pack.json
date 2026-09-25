@@ -5158,12 +5158,12 @@
             "lng": -6.2924
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cadiz_sanjuan.svg",
+          "background": "fondos/fondo_cadiz_sanjuan_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_sanjuan.svg"
+                "fondos/fondo_cadiz_sanjuan_noche.svg"
               ],
               "characters": [
                 {
@@ -5178,7 +5178,7 @@
               "characterId": "adolfocastro",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Adolfo de Castro, gaditano. Escribí la historia de Cádiz… y, lo confieso, alguna vez me inventé un papel antiguo. De leyendas sé un rato.",
+                "es": "Buenas noches. Adolfo de Castro, gaditano. Escribí la historia de Cádiz… y, lo confieso, alguna vez me inventé un papel antiguo. De leyendas sé un rato.",
                 "en": "Good evening. Adolfo de Castro, from Cádiz. I wrote the history of Cádiz… and, I confess, I once invented an old document. I know a thing or two about legends."
               }
             },
@@ -5258,12 +5258,12 @@
             "lng": -6.2951
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cadiz_catedral.svg",
+          "background": "fondos/fondo_cadiz_catedral_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_catedral.svg"
+                "fondos/fondo_cadiz_catedral_noche.svg"
               ],
               "characters": [
                 {
@@ -5393,12 +5393,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_cadiz_tavira.svg",
+          "background": "fondos/fondo_cadiz_tavira_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_tavira.svg"
+                "fondos/fondo_cadiz_tavira_noche.svg"
               ],
               "characters": [
                 {
@@ -5489,12 +5489,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_cadiz_gadir.svg",
+          "background": "fondos/fondo_cadiz_gadir_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_gadir.svg"
+                "fondos/fondo_cadiz_gadir_noche.svg"
               ],
               "characters": [
                 {
@@ -5585,12 +5585,12 @@
             "lng": -6.295
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cadiz_mina.svg",
+          "background": "fondos/fondo_cadiz_mina_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_mina.svg"
+                "fondos/fondo_cadiz_mina_noche.svg"
               ],
               "characters": [
                 {
@@ -5792,12 +5792,12 @@
             "lng": -6.3043
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_cadiz_genoves.svg",
+          "background": "fondos/fondo_cadiz_genoves_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_cadiz_genoves.svg"
+                "fondos/fondo_cadiz_genoves_noche.svg"
               ],
               "characters": [
                 {

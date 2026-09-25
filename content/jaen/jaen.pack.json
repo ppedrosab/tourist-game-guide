@@ -248,8 +248,8 @@
               "characterId": "lagarto",
               "expression": "happy",
               "text": {
-                "es": "¡Buenas noches! No te asustes: soy el lagarto de la Malena. O lo que queda de mi leyenda. Aquí en Jaén todo el mundo me conoce.",
-                "en": "Good evening! Don't be scared: I'm the lizard of La Malena. Or what's left of my legend. Here in Jaén everybody knows me."
+                "es": "¡Buenas! No te asustes: soy el lagarto de la Malena. O lo que queda de mi leyenda. Aquí en Jaén todo el mundo me conoce.",
+                "en": "Hello there! Don't be scared: I'm the lizard of La Malena. Or what's left of my legend. Here in Jaén everybody knows me."
               }
             },
             {
@@ -2489,12 +2489,12 @@
             "lng": -3.7862
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "background": "fondos/fondo_jaen_sanildefonso_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_sanildefonso.svg"
+                "fondos/fondo_jaen_sanildefonso_noche.svg"
               ],
               "characters": [
                 {
@@ -2589,12 +2589,12 @@
             "lng": -3.7897
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_catedral.svg",
+          "background": "fondos/fondo_jaen_catedral_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_catedral.svg"
+                "fondos/fondo_jaen_catedral_noche.svg"
               ],
               "characters": [
                 {
@@ -2723,12 +2723,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_jaen_mercado.svg",
+          "background": "fondos/fondo_jaen_mercado_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_mercado.svg"
+                "fondos/fondo_jaen_mercado_noche.svg"
               ],
               "characters": [
                 {
@@ -2820,12 +2820,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_jaen_constitucion.svg",
+          "background": "fondos/fondo_jaen_constitucion_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_constitucion.svg"
+                "fondos/fondo_jaen_constitucion_noche.svg"
               ],
               "characters": [
                 {
@@ -2917,12 +2917,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "background": "fondos/fondo_jaen_sanlorenzo_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_sanlorenzo.svg"
+                "fondos/fondo_jaen_sanlorenzo_noche.svg"
               ],
               "characters": [
                 {
@@ -3014,12 +3014,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_jaen_banos.svg",
+          "background": "fondos/fondo_jaen_banos_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_banos.svg"
+                "fondos/fondo_jaen_banos_noche.svg"
               ],
               "characters": [
                 {
@@ -3110,12 +3110,12 @@
             "lng": -3.7932
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_magdalena.svg",
+          "background": "fondos/fondo_jaen_magdalena_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_magdalena.svg"
+                "fondos/fondo_jaen_magdalena_noche.svg"
               ],
               "characters": [
                 {
@@ -3623,12 +3623,12 @@
             "lng": -3.7897
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_catedral.svg",
+          "background": "fondos/fondo_jaen_catedral_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_catedral.svg"
+                "fondos/fondo_jaen_catedral_noche.svg"
               ],
               "characters": [
                 {
@@ -3724,12 +3724,12 @@
             "lng": -3.7891
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_velez.svg",
+          "background": "fondos/fondo_jaen_velez_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_velez.svg"
+                "fondos/fondo_jaen_velez_noche.svg"
               ],
               "characters": [
                 {
@@ -3859,12 +3859,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "background": "fondos/fondo_jaen_sanildefonso_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_sanildefonso.svg"
+                "fondos/fondo_jaen_sanildefonso_noche.svg"
               ],
               "characters": [
                 {
@@ -3957,12 +3957,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_jaen_banos.svg",
+          "background": "fondos/fondo_jaen_banos_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_banos.svg"
+                "fondos/fondo_jaen_banos_noche.svg"
               ],
               "characters": [
                 {
@@ -4053,12 +4053,12 @@
             "lng": -3.7908
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "background": "fondos/fondo_jaen_sanlorenzo_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_jaen_sanlorenzo.svg"
+                "fondos/fondo_jaen_sanlorenzo_noche.svg"
               ],
               "characters": [
                 {

@@ -3680,12 +3680,12 @@
             "lng": -3.596
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_granada_plazanueva.svg",
+          "background": "fondos/fondo_granada_plazanueva_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_plazanueva.svg"
+                "fondos/fondo_granada_plazanueva_noche.svg"
               ],
               "characters": [
                 {
@@ -3700,7 +3700,7 @@
               "characterId": "ganivet",
               "expression": "happy",
               "text": {
-                "es": "Buenas tardes. Ángel Ganivet, granadino. Escribí «Granada la bella»: un librito sobre cómo cuidar el alma de esta ciudad.",
+                "es": "Buenas noches. Ángel Ganivet, granadino. Escribí «Granada la bella»: un librito sobre cómo cuidar el alma de esta ciudad.",
                 "en": "Good evening. Ángel Ganivet, from Granada. I wrote “Granada la bella”: a little book about how to look after this city's soul."
               }
             },
@@ -3780,12 +3780,12 @@
             "lng": -3.5922
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_granada_banuelo.svg",
+          "background": "fondos/fondo_granada_banuelo_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_banuelo.svg"
+                "fondos/fondo_granada_banuelo_noche.svg"
               ],
               "characters": [
                 {
@@ -3913,12 +3913,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "dinero",
-          "background": "fondos/fondo_granada_tristes.svg",
+          "background": "fondos/fondo_granada_tristes_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_tristes.svg"
+                "fondos/fondo_granada_tristes_noche.svg"
               ],
               "characters": [
                 {
@@ -4011,12 +4011,12 @@
           },
           "triggerRadiusM": 40,
           "branch": "poder",
-          "background": "fondos/fondo_granada_darhorra.svg",
+          "background": "fondos/fondo_granada_darhorra_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_darhorra.svg"
+                "fondos/fondo_granada_darhorra_noche.svg"
               ],
               "characters": [
                 {
@@ -4107,12 +4107,12 @@
             "lng": -3.592
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_granada_pesas.svg",
+          "background": "fondos/fondo_granada_pesas_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_pesas.svg"
+                "fondos/fondo_granada_pesas_noche.svg"
               ],
               "characters": [
                 {
@@ -4314,12 +4314,12 @@
             "lng": -3.5917
           },
           "triggerRadiusM": 40,
-          "background": "fondos/fondo_granada_castril.svg",
+          "background": "fondos/fondo_granada_castril_noche.svg",
           "content": [
             {
               "type": "scene",
               "layers": [
-                "fondos/fondo_granada_castril.svg"
+                "fondos/fondo_granada_castril_noche.svg"
               ],
               "characters": [
                 {

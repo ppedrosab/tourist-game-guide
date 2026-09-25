@@ -11,6 +11,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_x_flat.webp") },
   ],
+  "almeria_alcazaba_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_alcazaba_noche_x_flat.webp") },
+  ],
   "almeria_aljibes": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_aljibes_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_aljibes_1_far.webp") },
@@ -36,6 +44,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_x_flat.webp") },
   ],
+  "almeria_catedral_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_catedral_noche_x_flat.webp") },
+  ],
   "almeria_chanca": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_1_far.webp") },
@@ -43,6 +59,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_x_flat.webp") },
+  ],
+  "almeria_chanca_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_chanca_noche_x_flat.webp") },
   ],
   "almeria_mercado": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_mercado_0_sky.webp") },
@@ -60,6 +84,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_x_flat.webp") },
   ],
+  "almeria_muralla_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_muralla_noche_x_flat.webp") },
+  ],
   "almeria_plazavieja": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_1_far.webp") },
@@ -67,6 +99,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_x_flat.webp") },
+  ],
+  "almeria_plazavieja_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_plazavieja_noche_x_flat.webp") },
   ],
   "almeria_puerto": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_puerto_0_sky.webp") },
@@ -84,6 +124,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_x_flat.webp") },
+  ],
+  "almeria_purchena_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_almeria_purchena_noche_x_flat.webp") },
   ],
   "almeria_refugios": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_almeria_refugios_0_sky.webp") },
@@ -108,6 +156,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_atarazanas_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_atarazanas_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_atarazanas_x_flat.webp") },
+  ],
+  "atarazanas_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_atarazanas_noche_x_flat.webp") },
   ],
   "cadiz_ancha": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_ancha_0_sky.webp") },
@@ -140,6 +196,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_x_flat.webp") },
+  ],
+  "cadiz_catedral_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_catedral_noche_x_flat.webp") },
   ],
   "cadiz_coros": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_coros_0_sky.webp") },
@@ -181,6 +245,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_x_flat.webp") },
   ],
+  "cadiz_gadir_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_gadir_noche_x_flat.webp") },
+  ],
   "cadiz_genoves": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_1_far.webp") },
@@ -189,6 +261,15 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_4_near.webp") },
     { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_5_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_x_flat.webp") },
+  ],
+  "cadiz_genoves_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_1_far.webp") },
+    { order: "2", role: "sea", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_2_sea.webp") },
+    { order: "3", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_3_mid.webp") },
+    { order: "4", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_4_near.webp") },
+    { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_5_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_genoves_noche_x_flat.webp") },
   ],
   "cadiz_mentidero": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_mentidero_0_sky.webp") },
@@ -221,6 +302,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_x_flat.webp") },
+  ],
+  "cadiz_mina_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_mina_noche_x_flat.webp") },
   ],
   "cadiz_palillero": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_palillero_0_sky.webp") },
@@ -294,6 +383,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_x_flat.webp") },
   ],
+  "cadiz_sanjuan_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_sanjuan_noche_x_flat.webp") },
+  ],
   "cadiz_santamaria": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_santamaria_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_santamaria_1_far.webp") },
@@ -309,6 +406,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_x_flat.webp") },
+  ],
+  "cadiz_tavira_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cadiz_tavira_noche_x_flat.webp") },
   ],
   "cadiz_vina": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cadiz_vina_0_sky.webp") },
@@ -331,6 +436,13 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "2", role: "near", source: require("../../assets/backgrounds/layers/bg_constitucion_2_near.webp") },
     { order: "3", role: "fx", source: require("../../assets/backgrounds/layers/bg_constitucion_3_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_constitucion_x_flat.webp") },
+  ],
+  "constitucion_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_constitucion_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_constitucion_noche_1_far.webp") },
+    { order: "2", role: "near", source: require("../../assets/backgrounds/layers/bg_constitucion_noche_2_near.webp") },
+    { order: "3", role: "fx", source: require("../../assets/backgrounds/layers/bg_constitucion_noche_3_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_constitucion_noche_x_flat.webp") },
   ],
   "cordoba_albolafia": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_albolafia_0_sky.webp") },
@@ -391,6 +503,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_x_flat.webp") },
   ],
+  "cordoba_colon_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_colon_noche_x_flat.webp") },
+  ],
   "cordoba_corredera": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_corredera_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_corredera_1_far.webp") },
@@ -406,6 +526,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_x_flat.webp") },
+  ],
+  "cordoba_cruz_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_cruz_noche_x_flat.webp") },
   ],
   "cordoba_flores": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_flores_0_sky.webp") },
@@ -430,6 +558,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_x_flat.webp") },
+  ],
+  "cordoba_marina_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_marina_noche_x_flat.webp") },
   ],
   "cordoba_mezquita": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_mezquita_0_sky.webp") },
@@ -487,6 +623,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_x_flat.webp") },
   ],
+  "cordoba_tendillas_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_tendillas_noche_x_flat.webp") },
+  ],
   "cordoba_viana": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_1_far.webp") },
@@ -494,6 +638,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_x_flat.webp") },
+  ],
+  "cordoba_viana_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_cordoba_viana_noche_x_flat.webp") },
   ],
   "granada_alcaiceria": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_alcaiceria_0_sky.webp") },
@@ -510,6 +662,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_x_flat.webp") },
+  ],
+  "granada_banuelo_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_banuelo_noche_x_flat.webp") },
   ],
   "granada_bibrambla": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_bibrambla_0_sky.webp") },
@@ -551,6 +711,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_castril_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_castril_x_flat.webp") },
   ],
+  "granada_castril_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_castril_noche_x_flat.webp") },
+  ],
   "granada_catedral": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_catedral_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_catedral_1_far.webp") },
@@ -575,6 +743,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_x_flat.webp") },
   ],
+  "granada_darhorra_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_darhorra_noche_x_flat.webp") },
+  ],
   "granada_justicia": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_justicia_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_justicia_1_far.webp") },
@@ -591,6 +767,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_pesas_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_pesas_x_flat.webp") },
   ],
+  "granada_pesas_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_pesas_noche_x_flat.webp") },
+  ],
   "granada_plaza": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_plaza_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_plaza_1_far.webp") },
@@ -606,6 +790,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_x_flat.webp") },
+  ],
+  "granada_plazanueva_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_plazanueva_noche_x_flat.webp") },
   ],
   "granada_sanagustin": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_sanagustin_0_sky.webp") },
@@ -630,6 +822,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_tristes_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_tristes_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_tristes_x_flat.webp") },
+  ],
+  "granada_tristes_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_1_far.webp") },
+    { order: "2", role: "sea", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_2_sea.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_granada_tristes_noche_x_flat.webp") },
   ],
   "huelva_carmen": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_carmen_0_sky.webp") },
@@ -680,6 +880,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_x_flat.webp") },
   ],
+  "huelva_monjas_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_monjas_noche_x_flat.webp") },
+  ],
   "huelva_muelle": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_1_far.webp") },
@@ -689,6 +897,15 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_5_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_x_flat.webp") },
   ],
+  "huelva_muelle_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_1_far.webp") },
+    { order: "2", role: "sea", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_2_sea.webp") },
+    { order: "3", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_3_mid.webp") },
+    { order: "4", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_4_near.webp") },
+    { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_5_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_muelle_noche_x_flat.webp") },
+  ],
   "huelva_museo": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_museo_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_museo_1_far.webp") },
@@ -696,6 +913,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_museo_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_museo_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_museo_x_flat.webp") },
+  ],
+  "huelva_museo_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_museo_noche_x_flat.webp") },
   ],
   "huelva_obrero": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_obrero_0_sky.webp") },
@@ -714,6 +939,15 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_5_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_x_flat.webp") },
   ],
+  "huelva_paseoria_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_1_far.webp") },
+    { order: "2", role: "sea", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_2_sea.webp") },
+    { order: "3", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_3_mid.webp") },
+    { order: "4", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_4_near.webp") },
+    { order: "5", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_5_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_paseoria_noche_x_flat.webp") },
+  ],
   "huelva_punto": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_punto_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_punto_1_far.webp") },
@@ -721,6 +955,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_punto_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_punto_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_punto_x_flat.webp") },
+  ],
+  "huelva_punto_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_punto_noche_x_flat.webp") },
   ],
   "huelva_sanpedro": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_0_sky.webp") },
@@ -730,6 +972,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_x_flat.webp") },
   ],
+  "huelva_sanpedro_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_huelva_sanpedro_noche_x_flat.webp") },
+  ],
   "jaen_banos": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_banos_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_banos_1_far.webp") },
@@ -737,6 +987,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_banos_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_banos_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_banos_x_flat.webp") },
+  ],
+  "jaen_banos_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_banos_noche_x_flat.webp") },
   ],
   "jaen_catedral": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_0_sky.webp") },
@@ -746,6 +1004,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_x_flat.webp") },
   ],
+  "jaen_catedral_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_catedral_noche_x_flat.webp") },
+  ],
   "jaen_constitucion": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_1_far.webp") },
@@ -753,6 +1019,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_x_flat.webp") },
+  ],
+  "jaen_constitucion_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_constitucion_noche_x_flat.webp") },
   ],
   "jaen_lumbre": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_lumbre_0_sky.webp") },
@@ -770,6 +1044,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_x_flat.webp") },
   ],
+  "jaen_magdalena_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_magdalena_noche_x_flat.webp") },
+  ],
   "jaen_mercado": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_1_far.webp") },
@@ -777,6 +1059,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_x_flat.webp") },
+  ],
+  "jaen_mercado_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_mercado_noche_x_flat.webp") },
   ],
   "jaen_raudal": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_raudal_0_sky.webp") },
@@ -802,6 +1092,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_x_flat.webp") },
   ],
+  "jaen_sanildefonso_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_sanildefonso_noche_x_flat.webp") },
+  ],
   "jaen_sanjuan": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_sanjuan_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_sanjuan_1_far.webp") },
@@ -818,6 +1116,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_x_flat.webp") },
   ],
+  "jaen_sanlorenzo_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_sanlorenzo_noche_x_flat.webp") },
+  ],
   "jaen_velez": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_velez_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_velez_1_far.webp") },
@@ -826,6 +1132,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_velez_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_velez_x_flat.webp") },
   ],
+  "jaen_velez_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_jaen_velez_noche_x_flat.webp") },
+  ],
   "larios": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_larios_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_larios_1_far.webp") },
@@ -833,6 +1147,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_larios_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_larios_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_larios_x_flat.webp") },
+  ],
+  "larios_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_larios_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_larios_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_larios_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_larios_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_larios_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_larios_noche_x_flat.webp") },
   ],
   "malaga_alcazaba": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_malaga_alcazaba_0_sky.webp") },
@@ -868,6 +1190,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_manquita_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_manquita_x_flat.webp") },
   ],
+  "manquita_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_manquita_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_manquita_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_manquita_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_manquita_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_manquita_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_manquita_noche_x_flat.webp") },
+  ],
   "marina": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_marina_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_marina_1_far.webp") },
@@ -882,6 +1212,13 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "2", role: "near", source: require("../../assets/backgrounds/layers/bg_merced_2_near.webp") },
     { order: "3", role: "fx", source: require("../../assets/backgrounds/layers/bg_merced_3_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_merced_x_flat.webp") },
+  ],
+  "merced_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_merced_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_merced_noche_1_far.webp") },
+    { order: "2", role: "near", source: require("../../assets/backgrounds/layers/bg_merced_noche_2_near.webp") },
+    { order: "3", role: "fx", source: require("../../assets/backgrounds/layers/bg_merced_noche_3_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_merced_noche_x_flat.webp") },
   ],
   "sevilla_alcazar": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_alcazar_0_sky.webp") },
@@ -898,6 +1235,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_x_flat.webp") },
+  ],
+  "sevilla_alfalfa_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_alfalfa_noche_x_flat.webp") },
   ],
   "sevilla_archivo": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_archivo_0_sky.webp") },
@@ -947,6 +1292,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_x_flat.webp") },
   ],
+  "sevilla_giralda_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_giralda_noche_x_flat.webp") },
+  ],
   "sevilla_mercado": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_mercado_0_sky.webp") },
     { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_sevilla_mercado_1_far.webp") },
@@ -962,6 +1315,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_x_flat.webp") },
+  ],
+  "sevilla_pilatos_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_pilatos_noche_x_flat.webp") },
   ],
   "sevilla_plazaespana": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_plazaespana_0_sky.webp") },
@@ -994,6 +1355,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_x_flat.webp") },
+  ],
+  "sevilla_salvador_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_sevilla_salvador_noche_x_flat.webp") },
   ],
   "sevilla_santacruz": [
     { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_sevilla_santacruz_0_sky.webp") },
@@ -1042,6 +1411,14 @@ export const SCENE_LAYERS: Record<string, SceneLayerAsset[]> = {
     { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_teatro_3_near.webp") },
     { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_teatro_4_fx.webp") },
     { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_teatro_x_flat.webp") },
+  ],
+  "teatro_noche": [
+    { order: "0", role: "sky", source: require("../../assets/backgrounds/layers/bg_teatro_noche_0_sky.webp") },
+    { order: "1", role: "far", source: require("../../assets/backgrounds/layers/bg_teatro_noche_1_far.webp") },
+    { order: "2", role: "mid", source: require("../../assets/backgrounds/layers/bg_teatro_noche_2_mid.webp") },
+    { order: "3", role: "near", source: require("../../assets/backgrounds/layers/bg_teatro_noche_3_near.webp") },
+    { order: "4", role: "fx", source: require("../../assets/backgrounds/layers/bg_teatro_noche_4_fx.webp") },
+    { order: "x", role: "flat", source: require("../../assets/backgrounds/layers/bg_teatro_noche_x_flat.webp") },
   ],
 };
 
