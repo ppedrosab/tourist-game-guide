@@ -61,6 +61,13 @@ export const es = {
     final: "Final: {title}",
   },
   coleccion: {
+    personajes: "Álbum de personajes",
+    personajesTexto: "Cada personaje que conoces en una ruta queda aquí, con su historia. Completa el álbum de cada ciudad.",
+    conocidos: "{n} de {total}",
+    albumCompleto: "Álbum completo",
+    personajeOculto: "Personaje por conocer",
+    nadieAun: "Aún no conoces a nadie de aquí: juega una de sus rutas.",
+    rutas: "Rutas",
     finales: "Finales",
     coleccionables: "Coleccionables",
     oculto: "???",

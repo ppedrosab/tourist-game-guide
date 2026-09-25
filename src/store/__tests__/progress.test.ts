@@ -78,3 +78,12 @@ it("discard borra la partida pero no la colección", () => {
 it("no se puede avanzar sin empezar", () => {
   expect(() => useProgress.getState().advance(route)).toThrow(/No hay partida/);
 });
+
+it("el álbum apunta a los personajes según se conocen", () => {
+  useProgress.getState().start("malaga", route);
+  expect(useProgress.getState().collection.characterIds).toEqual(["malaga/cenachero"]);
+  playToEnd(0);
+  expect(useProgress.getState().collection.characterIds).toEqual(
+    expect.arrayContaining(["malaga/cenachero", "malaga/la_manquita", "malaga/lucio"]),
+  );
+});

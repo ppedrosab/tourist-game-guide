@@ -3,6 +3,8 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { AnalyticsEvent, ArrivalMethod, track } from "@/analytics";
 import type { Choice, PlayerProgress, Route } from "@/content/types";
+import { findRoute } from "@/engine/catalog";
+import { metCharacters } from "@/engine/outline";
 import {
   advance as advanceRun,
   markArrived as markArrivedRun,
@@ -16,6 +18,8 @@ export type Collection = {
   collectibleIds: string[];
   endingIds: string[];
   clueIds: string[];
+  /** Personajes conocidos, como "ciudad/personaje" (álbum de personajes). */
+  characterIds?: string[];
   /** Mejor puntuación (1–3 estrellas) de cada ruta terminada. */
   bestStars?: Record<string, number>;
 };
@@ -69,7 +73,10 @@ function collect(collection: Collection, run: PlayerProgress, route?: Route): Co
     const { stars } = starsFor(route, run);
     if (stars > (bestStars?.[run.routeId] ?? 0)) bestStars = { ...bestStars, [run.routeId]: stars };
   }
+  const found = findRoute(run.routeId);
+  const met = found ? metCharacters(found.pack, found.route, run) : [];
   return {
+    characterIds: merge(collection.characterIds ?? [], met),
     collectibleIds: merge(collection.collectibleIds, run.collectibleIds),
     endingIds: run.endingId ? merge(collection.endingIds, [run.endingId]) : collection.endingIds,
     clueIds: merge(collection.clueIds, run.clueIds),
@@ -168,7 +175,12 @@ export const useProgress = create<ProgressStore>()(
         voices,
         subtitles,
       }),
-      onRehydrateStorage: () => () => useProgress.setState({ hydrated: true }),
+      onRehydrateStorage: () => () =>
+        // Las partidas guardadas antes del álbum de personajes también cuentan.
+        useProgress.setState((s) => ({
+          hydrated: true,
+          collection: Object.values(s.runs).reduce((c, run) => collect(c, run), s.collection),
+        })),
     },
   ),
 );

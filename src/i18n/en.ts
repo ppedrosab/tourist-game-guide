@@ -59,6 +59,13 @@ export const en: Strings = {
     final: "Ending: {title}",
   },
   coleccion: {
+    personajes: "Character album",
+    personajesTexto: "Every character you meet on a route is kept here, with their story. Complete each city's album.",
+    conocidos: "{n} of {total}",
+    albumCompleto: "Album complete",
+    personajeOculto: "Character yet to meet",
+    nadieAun: "You haven't met anyone here yet: play one of its routes.",
+    rutas: "Routes",
     finales: "Endings",
     coleccionables: "Collectibles",
     oculto: "???",

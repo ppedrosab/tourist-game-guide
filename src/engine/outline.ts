@@ -65,3 +65,8 @@ export function routeCast(pack: CityPack, route: Route, nodeIds?: string[]): Cha
     .map((id) => pack.characters.find((c) => c.id === id))
     .filter((c): c is Character => Boolean(c));
 }
+
+/** Personajes que el jugador ya ha conocido en una partida, como "ciudad/personaje". */
+export function metCharacters(pack: CityPack, route: Route, run: PlayerProgress): string[] {
+  return routeCast(pack, route, [...run.visitedNodeIds, run.currentNodeId]).map((c) => `${pack.id}/${c.id}`);
+}

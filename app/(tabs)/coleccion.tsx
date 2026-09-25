@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Screen } from "@/components/layout/Screen";
 import { Icon, ThemeBadge } from "@/components/ui";
 import type { LangCode, Route } from "@/content/types";
+import { CharacterAlbum } from "@/components/game/CharacterAlbum";
 import { CollectibleArt } from "@/components/game/CollectibleArt";
 import { Stars } from "@/components/game/Stars";
 import { getCatalog } from "@/engine/catalog";
@@ -28,6 +29,12 @@ export default function Coleccion() {
   return (
     <Screen withTabBar>
       <Text style={type.title}>{t("tabs.coleccion")}</Text>
+      <Text style={type.overline}>{t("coleccion.personajes")}</Text>
+      <Text style={type.secondary}>{t("coleccion.personajesTexto")}</Text>
+      {packs.map((pack) => (
+        <CharacterAlbum key={pack.id} pack={pack} met={collection.characterIds ?? []} />
+      ))}
+      <Text style={type.overline}>{t("coleccion.rutas")}</Text>
       {routes.map((route) => (
         <View key={route.id} style={{ gap: 12 }}>
           <Text style={type.subtitle}>{L(route.title)}</Text>
