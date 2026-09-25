@@ -19,3 +19,11 @@ export function mouthPhaseMs(seed: number, phase: number): number {
   const r = x - Math.floor(x);
   return phase % 2 === 0 ? 90 + r * 80 : 70 + r * 60; // abierta 90–170 ms, cerrada 70–130 ms
 }
+
+/** Tono de la voz sintética por personaje (0,85–1,2): cada uno suena algo distinto. */
+export function speakerPitch(speaker: string | undefined): number {
+  if (!speaker) return 1;
+  let h = 0;
+  for (const ch of speaker) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return 0.85 + (h % 36) / 100;
+}

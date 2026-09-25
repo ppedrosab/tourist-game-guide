@@ -186,10 +186,10 @@ function spokenLine(step: SceneStep, key: string, L: (text: I18nText) => string)
   switch (step.kind) {
     case "text":
       return step.source === "dialogue" || step.source === "narration"
-        ? { key, text: L(step.text), audio: step.audio }
+        ? { key, text: L(step.text), audio: step.audio, speaker: step.characterId }
         : undefined;
     case "decision":
-      return step.intro ? { key, text: L(step.intro.text) } : undefined;
+      return step.intro ? { key, text: L(step.intro.text), speaker: step.intro.characterId } : undefined;
     case "continue":
       return step.hint ? { key, text: L(step.hint) } : undefined;
     default:

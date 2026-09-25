@@ -173,7 +173,7 @@ export const es = {
     verMapaTexto: "Siguiente parada y caminos",
     cuadernoTexto: "Pistas y objetos",
     voces: "Voces",
-    vocesTexto: "Locuciones grabadas",
+    vocesTexto: "Grabadas o con la voz del móvil",
     subtitulos: "Subtítulos",
     subtitulosTexto: "Texto de los diálogos",
     salir: "Salir y guardar",

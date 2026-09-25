@@ -1,4 +1,4 @@
-import { estimateSpeechMs, mouthPhaseMs } from "../voice";
+import { estimateSpeechMs, mouthPhaseMs, speakerPitch } from "../voice";
 
 it("estima la duración con ritmo de narración y límites", () => {
   expect(estimateSpeechMs("Hola")).toBe(1200);
@@ -17,4 +17,15 @@ it("el ritmo de boca varía pero se mantiene en rangos naturales", () => {
     else expect(ms).toBeGreaterThanOrEqual(70), expect(ms).toBeLessThanOrEqual(130);
   });
   expect(mouthPhaseMs(7, 3)).toBe(mouthPhaseMs(7, 3));
+});
+
+describe("tono de la voz sintética", () => {
+  it("es estable por personaje y está entre 0,85 y 1,2", () => {
+    expect(speakerPitch("cenachero")).toBe(speakerPitch("cenachero"));
+    for (const id of ["cenachero", "norica", "irving", "lagarto", "abderraman"]) {
+      expect(speakerPitch(id)).toBeGreaterThanOrEqual(0.85);
+      expect(speakerPitch(id)).toBeLessThanOrEqual(1.2);
+    }
+    expect(speakerPitch(undefined)).toBe(1);
+  });
 });

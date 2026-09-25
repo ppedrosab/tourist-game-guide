@@ -171,7 +171,7 @@ export const en: Strings = {
     verMapaTexto: "Next stop and paths",
     cuadernoTexto: "Clues and items",
     voces: "Voices",
-    vocesTexto: "Recorded narration",
+    vocesTexto: "Recorded or your phone's voice",
     subtitulos: "Subtitles",
     subtitulosTexto: "Dialogue text",
     salir: "Save and exit",

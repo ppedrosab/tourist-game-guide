@@ -59,7 +59,8 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   encima de fx. Congelado bajo modales/segundo plano, quieto con "Reducir movimiento". En web, el
   puntero hace de giroscopio.
 - `cast.ts` (reparto por paso), `Sprite`/`CastLayer` (expresiones, lip-sync), `sun.ts` (sombra según
-  el sol real de la parada), `useVoice` (expo-audio; sin audio simula la duración para el lip-sync).
+  el sol real de la parada), `useVoice` (expo-audio con las voces grabadas; sin grabación, voz sintética
+  del móvil con expo-speech y un tono por personaje, `speakerPitch`; el reloj simulado mueve la boca y la barra).
 - Pendiente de dispositivo: confirmar el sentido de roll/pitch del sensor en iOS y Android (si el
   parallax va "al revés", invertir el signo en `stepTilt`).
 
