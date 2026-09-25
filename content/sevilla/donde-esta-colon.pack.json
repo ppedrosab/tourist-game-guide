@@ -125,29 +125,6 @@
       ]
     },
     {
-      "id": "aceitunero",
-      "name": {
-        "es": "El Aceitunero",
-        "en": "The Olive Dresser"
-      },
-      "description": {
-        "es": "Aliña aceitunas manzanillas y gordales. Presumido y generoso.",
-        "en": "He seasons manzanilla and gordal olives. Proud and generous."
-      },
-      "avatar": "sprites/aceitunero/aceitunero_neutral.svg",
-      "kind": "tipo",
-      "bio": {
-        "es": "La provincia de Sevilla es la gran productora de aceituna de mesa, sobre todo manzanilla y gordal. Los aceituneros la aliñan en casa con ajo, tomillo, hinojo y naranja amarga, cada uno con su receta. La gordal sevillana es de las aceitunas más grandes del mundo.",
-        "en": "The province of Seville is the great producer of table olives, especially manzanilla and gordal. Aceituneros dress them at home with garlic, thyme, fennel and bitter orange, each with their own recipe. Seville's gordal is one of the largest olives in the world."
-      },
-      "sources": [
-        {
-          "title": "Wikipedia: Aceitunas aliñadas",
-          "url": "https://es.wikipedia.org/wiki/Aceitunas_ali%C3%B1adas"
-        }
-      ]
-    },
-    {
       "id": "cigarrera",
       "name": {
         "es": "La Cigarrera",
@@ -321,6 +298,31 @@
         {
           "title": "Wikipedia (en): Keiller's marmalade",
           "url": "https://en.wikipedia.org/wiki/Keiller%27s_marmalade"
+        }
+      ]
+    },
+    {
+      "id": "ibnalawwam",
+      "name": {
+        "es": "Ibn al-Awwam",
+        "en": "Ibn al-Awwam"
+      },
+      "description": {
+        "es": "Agrónomo sevillano del siglo XII, autor del «Libro de agricultura». Sabio, paciente y enamorado de los huertos del Aljarafe.",
+        "en": "A 12th-century Sevillian agronomist, author of the “Book of Agriculture”. Wise, patient and in love with the orchards of the Aljarafe."
+      },
+      "avatar": "sprites/ibnalawwam/ibnalawwam_neutral.svg",
+      "era": "s. XII",
+      "kind": "real",
+      "lived": "s. XII - XIII",
+      "bio": {
+        "es": "Abu Zacaría Ibn al-Awwam fue un agrónomo andalusí de Sevilla, de finales del siglo XII. Su «Kitab al-Filaha» (Libro de agricultura) reúne en 35 capítulos lo que se sabía de más de 400 plantas cultivables: injertos, abonos, riegos (describe el riego gota a gota), árboles frutales y huertos. El libro se redescubrió en la biblioteca de El Escorial y se publicó en Madrid en 1802.",
+        "en": "Abu Zakariya Ibn al-Awwam was an Andalusi agronomist from Seville in the late 12th century. His “Kitab al-Filaha” (Book of Agriculture) gathers in 35 chapters what was known about more than 400 cultivated plants: grafting, manuring, irrigation (he describes drip irrigation), fruit trees and orchards. The book was rediscovered in the El Escorial library and published in Madrid in 1802."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Ibn al-ʿAwwām",
+          "url": "https://es.wikipedia.org/wiki/Ibn_al-%CA%BFAww%C4%81m"
         }
       ]
     }
@@ -1588,8 +1590,8 @@
         "en": "Why Does Seville Smell of Orange Blossom?"
       },
       "summary": {
-        "es": "Sevilla tiene miles de naranjos en la calle, pero sus naranjas son amargas y nadie se las come. ¿Fueron los andalusíes, los escoceses de la mermelada o los jardineros? Con una naranjera, la escocesa Janet Keiller y un aceitunero.",
-        "en": "Seville has thousands of street orange trees, yet their oranges are bitter and nobody eats them. Was it the Andalusis, the marmalade-loving Scots or the gardeners? With an orange picker, the Scotswoman Janet Keiller and an olive dresser."
+        "es": "Sevilla tiene miles de naranjos en la calle, pero sus naranjas son amargas y nadie se las come. ¿Fueron los andalusíes, los escoceses de la mermelada o los jardineros? Con una naranjera, la escocesa Janet Keiller y el agrónomo andalusí Ibn al-Awwam.",
+        "en": "Seville has thousands of street orange trees, yet their oranges are bitter and nobody eats them. Was it the Andalusis, the marmalade-loving Scots or the gardeners? With an orange picker, the Scotswoman Janet Keiller and the Andalusi agronomist Ibn al-Awwam."
       },
       "era": "Del siglo XII a hoy",
       "guideCharacterId": "naranjera",
@@ -1748,7 +1750,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "aceitunero",
+                  "id": "ibnalawwam",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -1756,11 +1758,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "aceitunero",
+              "characterId": "ibnalawwam",
               "expression": "happy",
               "text": {
-                "es": "¡Buenas! Aceitunero: aliño aceitunas manzanillas y gordales, con ajo, tomillo, hinojo… Sevilla es tierra de aceituna de mesa como pocas en el mundo.",
-                "en": "Hello! Olive dresser: I season manzanilla and gordal olives with garlic, thyme, fennel… Seville is table-olive country like few places in the world."
+                "es": "Salam. Soy Ibn al-Awwam, sevillano del siglo XII. Escribí el «Libro de agricultura»: cómo injertar, regar y cuidar los olivos del Aljarafe, las higueras, los granados… y los naranjos.",
+                "en": "Salaam. I'm Ibn al-Awwam, a Sevillian of the 12th century. I wrote the “Book of Agriculture”: how to graft, water and tend the olive trees of the Aljarafe, the figs, the pomegranates… and the orange trees."
               }
             },
             {
@@ -2073,7 +2075,7 @@
               ],
               "characters": [
                 {
-                  "id": "aceitunero",
+                  "id": "ibnalawwam",
                   "expression": "proud",
                   "position": "left"
                 },
@@ -2093,11 +2095,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "aceitunero",
+              "characterId": "ibnalawwam",
               "expression": "proud",
               "text": {
-                "es": "Mis aceitunas llevan cáscara de naranja amarga en el aliño. ¡Algo de provecho le sacamos al naranjo!",
-                "en": "My olives have bitter orange peel in the seasoning. We do get some use out of the orange tree!"
+                "es": "En mis tiempos el naranjo amargo se plantaba por su sombra, su flor y su perfume más que por su fruta: en los patios y junto a las fuentes.",
+                "en": "In my day the bitter orange was planted for its shade, its blossom and its scent more than for its fruit: in courtyards and beside fountains."
               }
             },
             {
@@ -2175,7 +2177,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "aceitunero",
+                  "id": "ibnalawwam",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2199,11 +2201,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "aceitunero",
+              "characterId": "ibnalawwam",
               "expression": "thinking",
               "text": {
-                "es": "Así que el patio de la catedral ya olía a azahar hace ochocientos años…",
-                "en": "So the cathedral courtyard already smelt of azahar eight hundred years ago…"
+                "es": "El patio de la mezquita mayor, hoy de la catedral, ya olía a azahar cuando yo escribía, hace ochocientos años.",
+                "en": "The courtyard of the great mosque, now the cathedral's, already smelled of orange blossom when I was writing, eight hundred years ago."
               }
             }
           ],
@@ -2478,7 +2480,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "aceitunero",
+                  "id": "ibnalawwam",
                   "expression": "happy",
                   "position": "right"
                 }

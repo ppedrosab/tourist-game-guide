@@ -194,7 +194,7 @@ cada una; diseño y datos a verificar en `docs/GDD_CORDOBA.md`, `GDD_HUELVA.md`,
 - Huelva: «¿Quién trajo el fútbol a España?» (el doctor Mackay, de «usted»; minero; Charles Adam) y «¿Por
   qué nos llaman choqueros?» (choquera, fresera, cortador).
 - Jaén: «¿Quién mató al lagarto de la Malena?» (el propio lagarto, preso, pastor; veredicto: nadie, la piel de un
-  caimán) y «¿Quién plantó el mar de olivos?» (catadora, vareador, molinero).
+  caimán) y «¿Quién plantó el mar de olivos?» (catadora, molinero y Miguel Hernández, autor de «Aceituneros»).
 - Almería: «¿Qué significa Almería?» (vigía, Jayrán, sedera) y «¿Quién convirtió el desierto en
   huerta?» (hortelana, barrilero, Paco el Piloto).
 - Personajes paramétricos: `scripts/art/figure.py` (misma cabeza y 8 caras; pelo, barba, tocado, ropa y
@@ -205,7 +205,7 @@ cada una; diseño y datos a verificar en `docs/GDD_CORDOBA.md`, `GDD_HUELVA.md`,
 
 **Rutas gastronómicas de Málaga, Sevilla y Granada** (ver `docs/GDD_GASTRO_ANDALUCIA.md`): «¿Quién
 inventó el espeto?» (espetero, jabegote, pasera), «¿Por qué Sevilla huele a azahar?» (naranjera,
-Janet Keiller, aceitunero) y «¿Quién inventó el pionono?» (Lorca, Ceferino Isla, hermana tornera).
+Janet Keiller, el agrónomo Ibn al-Awwam) y «¿Quién inventó el pionono?» (Lorca, Ceferino Isla, hermana tornera).
 Reutilizan los fondos de historia; los nuevos en `scripts/art/gastro_andalucia_scenes.py`. El pack de
 Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin reformatear el archivo.
 

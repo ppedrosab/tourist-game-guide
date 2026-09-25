@@ -43,7 +43,7 @@ jardineros** (siguen plantándolos hoy). **Veredicto: los andalusíes.**
 | --- | --- | --- |
 | `naranjera` (guía) | Recoge las naranjas de las calles | Narra |
 | `keiller` | Janet Keiller, de Dundee, a la que la tradición atribuye la primera mermelada comercial de naranja de Sevilla | Sospechosa |
-| `aceitunero` | Aliña aceitunas manzanillas y gordales | Coguía |
+| `ibnalawwam` | Ibn al-Awwam, agrónomo sevillano del s. XII, autor del «Libro de agricultura» (sustituye al aceitunero) | Coguía |
 
 Caminos: `dinero` = **El río**; `poder` = **El centro**.
 

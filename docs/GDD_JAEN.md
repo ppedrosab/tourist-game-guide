@@ -46,7 +46,7 @@ siglos XIX y XX.**
 | id | Personaje | Papel |
 | --- | --- | --- |
 | `catadora` (guía) | Catadora de aceite, con su copa azul | Narra |
-| `vareador` | Vareador de aceituna | Coguía |
+| `miguelhernandez` | Miguel Hernández, que escribió en Jaén «Aceituneros» (1937), hoy himno de la provincia (sustituye al vareador) | Coguía |
 | `molinero` | Molinero de almazara | Coguía |
 
 Caminos: `dinero` (mar) = **La plaza**; `poder` (arcilla) = **Los baños**.
