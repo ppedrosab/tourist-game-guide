@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LayoutChangeEvent, StyleSheet, View } from "react-native";
-import Svg, { Circle, G, Line, Rect, Text as SvgText } from "react-native-svg";
+import Svg, { Circle, G, Polyline, Rect, Text as SvgText } from "react-native-svg";
 import type { LatLng } from "@/content/types";
 import { useI18n } from "@/i18n";
 import { branchColors, colors, fonts } from "@/theme";
@@ -21,7 +21,6 @@ export function SchematicMap({ data, user }: Props) {
   const onLayout = (e: LayoutChangeEvent) => setSize(e.nativeEvent.layout);
   const { width, height } = size;
   const project = projector(data.bounds, width, height, PADDING);
-  const pos = (id: string) => project(data.stops.find((s) => s.id === id)!.location);
   const me = user ? project(user) : undefined;
   const meInside = me && me.x >= 0 && me.x <= width && me.y >= 0 && me.y <= height;
 
@@ -32,19 +31,17 @@ export function SchematicMap({ data, user }: Props) {
           <Rect width={width} height={height} fill={colors.paper} />
           {/* Contorno de tinta bajo los tramos, como el resto del juego. */}
           {data.segments.map((s) => {
-            const a = pos(s.from);
-            const b = pos(s.to);
+            const points = s.coordinates.map((c) => project(c)).map((p) => `${p.x},${p.y}`).join(" ");
             return (
               <G key={s.id} opacity={s.status === "other" ? 0.35 : 1}>
-                <Line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={colors.ink} strokeWidth={9} strokeLinecap="round" />
-                <Line
-                  x1={a.x}
-                  y1={a.y}
-                  x2={b.x}
-                  y2={b.y}
+                <Polyline points={points} fill="none" stroke={colors.ink} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" />
+                <Polyline
+                  points={points}
+                  fill="none"
                   stroke={s.branch ? branchColors[s.branch] : colors.sand}
                   strokeWidth={5}
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeDasharray={dash(s.status)}
                 />
               </G>

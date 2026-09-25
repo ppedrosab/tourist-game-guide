@@ -77,7 +77,7 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   (`npx expo run:ios` o EAS). En Expo Go funciona el GPS en primer plano.
 
 **Fase 5 hecha** (mapa; el esquema SVG probado en navegador, MapLibre sin probar en dispositivo):
-- `src/map/geometry.ts` (puro, con tests): paradas numeradas por el camino más largo (las ramas
+- `src/map/geometry.ts` (puro, con tests; los tramos siguen `route.paths` si existe): paradas numeradas por el camino más largo (las ramas
   paralelas comparten número; la lista del detalle usa los mismos), tramos por camino con estado
   (recorrido / pendiente / otro camino), GeoJSON y proyector para el SVG.
 - `RouteMap`: MapLibre (`@maplibre/maplibre-react-native`, estilo OpenFreeMap en `src/map/config.ts`)
@@ -303,8 +303,10 @@ Tareas de la fase 2:
 - **3 · Escenas** (hecha, ver arriba). Se usó el sensor de reanimated en vez de expo-sensors para
   que el parallax no pase por el hilo de JS.
 - **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
-- **5 · Mapa** (hecha, ver arriba). Mejora posible: trazado por calles (`path` opcional en el pack)
-  en vez de líneas rectas entre paradas.
+- **5 · Mapa** (hecha, ver arriba). Los tramos van por las calles: `npm run gen:paths`
+  (`scripts/gen_paths.py`, enrutador a pie de OpenStreetMap, caché en `scripts/.cache/`) guarda
+  `route.paths["desde->hasta"]` y corrige `distanceM`/`walkMin` de las decisiones. Regenerar al mover
+  una parada o añadir una ruta; el test exige trazado en cada tramo.
 - **6 · Pulido** (hecha, ver arriba). Siguiente: salir a la calle con `docs/PRUEBAS_CALLE.md`.
 
 ## Contenido e historia (resumen; completo en docs/GDD.md)

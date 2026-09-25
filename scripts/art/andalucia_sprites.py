@@ -44,8 +44,9 @@ CHARACTERS = {
                    main=PAPER, accent="#C9A77E", second="#5A4A3A", right="staff"),
     "catadora": dict(skin="clara", hair=("bun", "#6B4A2A"), outfit="jacket", main=OLIVE, accent=GOLD, second="#3A3A48",
                      left="oil", right="blueglass", raise_right=True),
-    "vareador": dict(skin="morena", hair=("short", "#2A1E1A"), hat_=("cap", "#5A4A3A"), outfit="shirt", main="#C9A05E", accent="#4A3A2E",
-                     second="#3A3A48", right="staff", left="olive"),
+    # Miguel Hernández (1910-1942): pelo al rape, chaqueta de pana y la rama de olivo de «Aceituneros»
+    "miguelhernandez": dict(skin="morena", hair=("short", "#2A1E1A"), outfit="jacket", main="#7A5A3A", accent=PAPER,
+                            second="#4A3A2E", left="olive", right="quill", raise_right=True),
     "molinero": dict(skin="media", hair=("bald", GREY), beard_=("moustache", GREY), outfit="shirt", main="#E9DCC0", accent=CLAY,
                      second="#5A4A3A", apron="#C9B48A", left="jug", right="oil"),
     # --- Almería ---------------------------------------------------------
@@ -68,8 +69,9 @@ CHARACTERS = {
                    second="#E9DCC0", apron=PAPER, left="grapes"),
     "naranjera": dict(skin="media", hair=("bun", "#2A1E1A"), hat_=("flower", PAPER, GOLD), outfit="dress", main="#E8812E", accent=PAPER,
                       second="#4F8B5A", left="oranges", right="orange", raise_right=True),
-    "aceitunero": dict(skin="media", hair=("slick", "#2A1E1A"), beard_=("moustache", "#2A1E1A"), hat_=("cap", "#4A3A2E"), outfit="vest",
-                       main=PAPER, accent=OLIVE, second="#3A3A48", left="olives"),
+    # Ibn al-Awwam, agrónomo sevillano del s. XII: su «Libro de agricultura» y una rama de olivo
+    "ibnalawwam": dict(skin="morena", hair=("short", "#1E1A1A"), beard_=("full", GREY), hat_=("turban", PAPER, OLIVE), outfit="toga",
+                       main="#6B7A3A", accent=GOLD, second=PAPER, left="book", right="olive"),
     "ceferino": dict(skin="clara", hair=("slick", "#3A2A1E"), beard_=("moustache", "#3A2A1E"), hat_=("toque", PAPER), outfit="shirt",
                      main=PAPER, accent="#C9A05E", second="#3A3A48", apron=PAPER, right="pastrytray", raise_right=True),
     "tornera": dict(skin="clara", hair=None, hat_=("veil", "#2B2A33"), outfit="habit", main="#2B2A33", accent=PAPER, left="box",

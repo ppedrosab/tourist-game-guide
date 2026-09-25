@@ -25,7 +25,8 @@ export type MapSegment = {
   id: string;
   from: string;
   to: string;
-  coordinates: [LatLng, LatLng];
+  /** Por las calles si la ruta trae su trazado (`route.paths`); si no, en línea recta. */
+  coordinates: LatLng[];
   branch?: BranchId;
   status: SegmentStatus;
 };
@@ -96,19 +97,22 @@ export function routeMapData(route: Route, run?: PlayerProgress): RouteMapData {
       let status: SegmentStatus = "pending";
       if (visited(from.id) && visited(to.id)) status = "walked";
       else if (isOther(from) || isOther(to)) status = "other";
+      const id = `${from.id}->${to.id}`;
+      const path = (route.paths?.[id] ?? []).map(([lng, lat]) => ({ lat, lng }));
       segments.push({
-        id: `${from.id}->${to.id}`,
+        id,
         from: from.id,
         to: to.id,
-        coordinates: [from.location!, to.location!],
+        coordinates: [from.location!, ...path, to.location!],
         branch: to.branch ?? from.branch,
         status,
       });
     }
   }
 
-  const lats = physical.map((s) => s.location!.lat);
-  const lngs = physical.map((s) => s.location!.lng);
+  const points = [...physical.map((s) => s.location!), ...segments.flatMap((s) => s.coordinates)];
+  const lats = points.map((p) => p.lat);
+  const lngs = points.map((p) => p.lng);
   const bounds: [LatLng, LatLng] = [
     { lat: Math.min(...lats), lng: Math.min(...lngs) },
     { lat: Math.max(...lats), lng: Math.max(...lngs) },

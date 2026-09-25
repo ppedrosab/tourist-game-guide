@@ -109,6 +109,7 @@ const route = z.object({
   rewards: z
     .array(z.object({ id: z.string().min(1), name: i18nText, icon: assetRef, awardedAtNodeId: z.string() }))
     .optional(),
+  paths: z.record(z.string(), z.array(z.tuple([z.number(), z.number()]))).optional(),
   bestTime: z.literal("noche").optional(),
   sources: z.array(source).optional(),
 });

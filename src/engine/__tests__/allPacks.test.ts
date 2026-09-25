@@ -6,6 +6,8 @@ import { BUNDLED_PACKS } from "../catalog";
 import { loadPack } from "../loadPack";
 import { advance, availableChoices, getNode, isFinished, startRoute } from "../runner";
 import { missingTranslations } from "../translations";
+import { routeMapData } from "@/map/geometry";
+import { distanceM } from "../geo";
 
 /**
  * Comprobaciones que debe cumplir cualquier ciudad incluida en la app: añadir un
@@ -153,5 +155,21 @@ describe("fichas y fuentes", () => {
 
   it.each(routes)("%s cita sus fuentes", (_, __, route) => {
     expect(route.sources?.length).toBeGreaterThan(0);
+  });
+});
+
+describe("mapa por calles", () => {
+  it.each(routes)("%s: cada tramo tiene trazado a pie que empieza y acaba en sus paradas", (_, __, route) => {
+    const { segments, stops } = routeMapData(route);
+    const at = Object.fromEntries(stops.map((s) => [s.id, s.location]));
+    for (const s of segments) {
+      const path = route.paths?.[s.id];
+      expect([s.id, path !== undefined]).toEqual([s.id, true]);
+      const first = { lng: path![0][0], lat: path![0][1] };
+      const last = { lng: path![path!.length - 1][0], lat: path![path!.length - 1][1] };
+      // el enrutador engancha la parada a la calle más cercana
+      expect(distanceM(first, at[s.from])).toBeLessThan(120);
+      expect(distanceM(last, at[s.to])).toBeLessThan(120);
+    }
   });
 });

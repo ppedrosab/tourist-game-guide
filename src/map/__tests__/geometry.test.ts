@@ -78,3 +78,12 @@ it("la proyección encaja las paradas en el lienzo sin deformar", () => {
   const marina = project(stops.find((s) => s.id === "n1_cenachero")!.location);
   expect(merced.y).toBeLessThan(marina.y);
 });
+
+it("los tramos siguen el trazado a pie si la ruta lo trae", () => {
+  const withPath: Route = { ...route, paths: { "n1_cenachero->n2_larios": [[-4.42, 36.719], [-4.421, 36.7195]] } };
+  const seg = byId(routeMapData(withPath).segments)["n1_cenachero->n2_larios"];
+  expect(seg.coordinates).toHaveLength(4);
+  expect(seg.coordinates[1]).toEqual({ lat: 36.719, lng: -4.42 });
+  const plain = byId(routeMapData({ ...route, paths: undefined }).segments)["n1_cenachero->n2_larios"];
+  expect(plain.coordinates).toHaveLength(2);
+});

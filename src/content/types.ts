@@ -81,6 +81,11 @@ export interface Route {
   nodes: StoryNode[];
   endings?: Ending[];
   rewards?: Collectible[];
+  /**
+   * Trazado a pie de cada tramo entre paradas físicas, por clave "desde->hasta" (la de los tramos del
+   * mapa), como [lng, lat]. Lo genera `npm run gen:paths`; sin él, el mapa une las paradas en línea recta.
+   */
+  paths?: Record<string, [number, number][]>;
   /** "noche": la ruta está pensada para hacerse al anochecer (el detalle avisa si aún es de día). */
   bestTime?: "noche";
   /** Fuentes de la ruta: de dónde salen la historia y los datos. */
