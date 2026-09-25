@@ -5,8 +5,17 @@ escena empiece sola al llegar, ni antes ni después, y que los tiempos a pie sea
 
 ## Antes de salir
 
-- **Build de desarrollo** en el móvil (`npx expo run:ios` / `run:android` o EAS). En Expo Go no
-  hay geofences en segundo plano ni callejero MapLibre.
+- **Revisar las coordenadas** con `npm run check:stops` → `docs/COORDENADAS.md`: lista las paradas
+  que se alejan de donde OpenStreetMap sitúa ese lugar. Corregir las claras y regenerar los
+  trazados con `npm run gen:paths`. Las dudosas, a comprobar en la calle.
+- **Build de desarrollo** en el móvil. En Expo Go no hay geofences en segundo plano ni callejero
+  MapLibre. Con EAS (el proyecto trae `eas.json` y `expo-dev-client`):
+  1. `npm i -g eas-cli && eas login`, y la primera vez `eas init` (enlaza el proyecto).
+  2. Cambiar `ios.bundleIdentifier` y `android.package` de `app.json` (ahora `com.tuempresa.…`).
+  3. `eas build --profile development --platform android` → APK para instalar directamente;
+     `--platform ios` pide registrar el iPhone (`eas device:create`) y una cuenta de Apple Developer.
+  4. En el ordenador, `npx expo start --dev-client` y abrir la app instalada (mismo wifi o túnel).
+  Sin EAS: `npx expo run:android` / `run:ios` con Android Studio o Xcode.
 - Permisos: ubicación **«siempre»** y notificaciones (pantalla de bienvenida → permisos).
 - Perfil → **Modo prueba de campo** activado. **Modo demo desactivado** (si no, las llegadas
   simuladas no sirven como dato).
