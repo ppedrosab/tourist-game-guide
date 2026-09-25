@@ -117,7 +117,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const focused = useIsFocused();
   const voicesOn = useProgress((s) => s.voices);
   const subtitles = useProgress((s) => s.subtitles);
-  const line = arrived ? spokenLine(step, `${node.id}:${index}`, L) : undefined;
+  const line = arrived ? spokenLine(step, `${node.id}:${index}`, L, pack) : undefined;
   const voice = useVoice(line, { enabled: voicesOn, active: focused, lang });
   // Mientras se espera la llegada, en escena solo está el guía.
   const cast = useMemo(
@@ -182,14 +182,17 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 }
 
 /** Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. */
-function spokenLine(step: SceneStep, key: string, L: (text: I18nText) => string) {
+function spokenLine(step: SceneStep, key: string, L: (text: I18nText) => string, pack: CityPack) {
+  const voiceOf = (id?: string) => pack.characters.find((c) => c.id === id)?.voice;
   switch (step.kind) {
     case "text":
       return step.source === "dialogue" || step.source === "narration"
-        ? { key, text: L(step.text), audio: step.audio, speaker: step.characterId }
+        ? { key, text: L(step.text), audio: step.audio, speaker: step.characterId, voice: voiceOf(step.characterId) }
         : undefined;
     case "decision":
-      return step.intro ? { key, text: L(step.intro.text), speaker: step.intro.characterId } : undefined;
+      return step.intro
+        ? { key, text: L(step.intro.text), speaker: step.intro.characterId, voice: voiceOf(step.intro.characterId) }
+        : undefined;
     case "continue":
       return step.hint ? { key, text: L(step.hint) } : undefined;
     default:

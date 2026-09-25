@@ -1,9 +1,9 @@
 import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import * as Speech from "expo-speech";
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { AssetRef, LangCode } from "@/content/types";
+import type { AssetRef, CharacterVoice, LangCode } from "@/content/types";
 import { AUDIO } from "@/scene/assets.generated";
-import { estimateSpeechMs, speakerPitch } from "@/scene/voice";
+import { estimateSpeechMs, pickVoice, speakerPitch, SystemVoice } from "@/scene/voice";
 
 export type Voice = {
   /** Hay locución sonando (real o simulada): mueve la boca del personaje. */
@@ -17,7 +17,15 @@ export type Voice = {
   replay: () => void;
 };
 
-type Line = { key: string; text: string; audio?: Partial<Record<LangCode, AssetRef>>; speaker?: string } | undefined;
+type Line =
+  | { key: string; text: string; audio?: Partial<Record<LangCode, AssetRef>>; speaker?: string; voice?: CharacterVoice }
+  | undefined;
+
+// Voces instaladas en el sistema: se piden una vez (en algunos sistemas tardan en estar listas).
+let systemVoices: SystemVoice[] = [];
+Speech.getAvailableVoicesAsync()
+  .then((v) => (systemVoices = v))
+  .catch(() => undefined);
 
 const SPEECH_LANG: Record<string, string> = { es: "es-ES", en: "en-GB" };
 
@@ -40,16 +48,19 @@ export function useVoice(line: Line, { enabled, active, lang = "es" }: { enabled
     if (!line) return;
     Speech.stop();
     setTts("idle");
+    const locale = SPEECH_LANG[lang] ?? lang;
+    const system = line.voice ? pickVoice(systemVoices, locale, line.voice.gender) : undefined;
     Speech.speak(line.text, {
-      language: SPEECH_LANG[lang] ?? lang,
-      pitch: speakerPitch(line.speaker),
-      rate: 0.95,
+      language: system?.language ?? locale,
+      voice: system?.identifier,
+      pitch: speakerPitch(line.speaker, line.voice),
+      rate: line.voice?.rate ?? 0.95,
       onStart: () => setTts("speaking"),
       onDone: () => setTts("done"),
       onStopped: () => setTts((s) => (s === "speaking" ? "idle" : s)),
       onError: () => setTts("idle"),
     });
-  }, [line?.key, line?.text, line?.speaker, lang]);
+  }, [line?.key, line?.text, line?.speaker, line?.voice, lang]);
 
   const player = useAudioPlayer(null);
   const status = useAudioPlayerStatus(player);

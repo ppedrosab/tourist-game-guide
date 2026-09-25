@@ -49,7 +49,10 @@
           "title": "Wikipedia: Washington Irving",
           "url": "https://es.wikipedia.org/wiki/Washington_Irving"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "leon",
@@ -74,7 +77,10 @@
           "title": "Wikipedia: Patio de los Leones",
           "url": "https://es.wikipedia.org/wiki/Patio_de_los_Leones"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "boabdil",
@@ -99,7 +105,10 @@
           "title": "Wikipedia: Boabdil",
           "url": "https://es.wikipedia.org/wiki/Boabdil"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "ceferino",
@@ -124,7 +133,10 @@
           "title": "Wikipedia: Pionono",
           "url": "https://es.wikipedia.org/wiki/Pionono"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "tornera",
@@ -147,7 +159,10 @@
           "title": "Wikipedia: Pionono",
           "url": "https://es.wikipedia.org/wiki/Pionono"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "tarasca",
@@ -175,7 +190,10 @@
           "title": "Wikipedia: Corpus Christi de Granada",
           "url": "https://es.wikipedia.org/wiki/Corpus_Christi_de_Granada"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "marianapineda",
@@ -200,7 +218,10 @@
           "title": "Wikipedia: Mariana Pineda",
           "url": "https://es.wikipedia.org/wiki/Mariana_Pineda"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "falla",
@@ -225,7 +246,10 @@
           "title": "Wikipedia: Manuel de Falla",
           "url": "https://es.wikipedia.org/wiki/Manuel_de_Falla"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "ganivet",
@@ -250,7 +274,10 @@
           "title": "Wikipedia: Ángel Ganivet",
           "url": "https://es.wikipedia.org/wiki/%C3%81ngel_Ganivet"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "zafra",
@@ -279,7 +306,10 @@
           "title": "Wikipedia: Casa de Castril",
           "url": "https://es.wikipedia.org/wiki/Casa_de_Castril"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "elvira",
@@ -308,7 +338,10 @@
           "title": "Inmsol, «La leyenda de la Casa de Castril»",
           "url": "https://www.inmsol.com/es/blog-escuela/leyendas-granada/la-leyenda-de-la-casa-de-castril/"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "lorca",
@@ -333,7 +366,10 @@
           "title": "Wikipedia: Federico García Lorca",
           "url": "https://es.wikipedia.org/wiki/Federico_Garc%C3%ADa_Lorca"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [

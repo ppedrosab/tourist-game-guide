@@ -1,4 +1,4 @@
-import { estimateSpeechMs, mouthPhaseMs, speakerPitch } from "../voice";
+import { estimateSpeechMs, mouthPhaseMs, pickVoice, speakerPitch } from "../voice";
 
 it("estima la duración con ritmo de narración y límites", () => {
   expect(estimateSpeechMs("Hola")).toBe(1200);
@@ -27,5 +27,29 @@ describe("tono de la voz sintética", () => {
       expect(speakerPitch(id)).toBeLessThanOrEqual(1.2);
     }
     expect(speakerPitch(undefined)).toBe(1);
+  });
+});
+
+describe("voz del sistema por género", () => {
+  const voices = [
+    { identifier: "a", name: "Mónica", language: "es-ES" },
+    { identifier: "b", name: "Jorge", language: "es-ES", quality: "Enhanced" },
+    { identifier: "c", name: "Paulina", language: "es-MX" },
+    { identifier: "d", name: "Google UK English Female", language: "en-GB" },
+    { identifier: "e", name: "Daniel", language: "en_GB" },
+  ];
+  it("prefiere la del país y del género pedido", () => {
+    expect(pickVoice(voices, "es-ES", "f")?.identifier).toBe("a");
+    expect(pickVoice(voices, "es-ES", "m")?.identifier).toBe("b");
+    expect(pickVoice(voices, "en-GB", "f")?.identifier).toBe("d");
+    expect(pickVoice(voices, "en-GB", "m")?.identifier).toBe("e");
+  });
+  it("sin voz de ese género no elige ninguna", () => {
+    expect(pickVoice([{ identifier: "x", name: "Google español", language: "es-ES" }], "es-ES", "f")).toBeUndefined();
+  });
+  it("el tono va con el género", () => {
+    expect(speakerPitch("norica", { gender: "f" })).toBeGreaterThan(1);
+    expect(speakerPitch("cenachero", { gender: "m" })).toBeLessThan(1);
+    expect(speakerPitch("x", { gender: "m", pitch: 1.3 })).toBe(1.3);
   });
 });

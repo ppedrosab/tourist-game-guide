@@ -136,8 +136,9 @@ describe.each(routes)("ruta %s", (_id, pack, route) => {
 describe("fichas y fuentes", () => {
   const characters = packs.flatMap(([, pack]) => pack.characters.map((c) => [`${pack.id}/${c.id}`, c] as const));
 
-  it.each(characters)("%s tiene ficha: qué es y su historia", (_, c) => {
+  it.each(characters)("%s tiene ficha: qué es, su historia y su voz", (_, c) => {
     expect(c.kind).toBeDefined();
+    expect(c.voice?.gender).toMatch(/^[fm]$/);
     expect(c.bio?.es.length).toBeGreaterThan(80);
   });
 

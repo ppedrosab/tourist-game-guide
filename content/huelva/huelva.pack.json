@@ -52,7 +52,10 @@
           "title": "Wikipedia: Real Club Recreativo de Huelva",
           "url": "https://es.wikipedia.org/wiki/Real_Club_Recreativo_de_Huelva"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "minero",
@@ -75,7 +78,10 @@
           "title": "Wikipedia: Minas de Riotinto",
           "url": "https://es.wikipedia.org/wiki/Minas_de_Riotinto"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "choquera",
@@ -98,7 +104,10 @@
           "title": "Wikipedia: Onubense",
           "url": "https://es.wikipedia.org/wiki/Onubense"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "fresera",
@@ -125,7 +134,10 @@
           "title": "Wikipedia: Palos de la Frontera",
           "url": "https://es.wikipedia.org/wiki/Palos_de_la_Frontera"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "cortador",
@@ -148,7 +160,10 @@
           "title": "Wikipedia: Denominación de origen protegida Jabugo",
           "url": "https://es.wikipedia.org/wiki/Denominaci%C3%B3n_de_origen_protegida_Jabugo"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "alonsosanchez",
@@ -173,7 +188,10 @@
           "title": "Wikipedia: Alonso Sánchez de Huelva",
           "url": "https://es.wikipedia.org/wiki/Alonso_S%C3%A1nchez_de_Huelva"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "pinzon",
@@ -198,7 +216,10 @@
           "title": "Wikipedia: Martín Alonso Pinzón",
           "url": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Alonso_Pinz%C3%B3n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "santamaria",
@@ -223,7 +244,10 @@
           "title": "Wikipedia: Real Sociedad Colombina Onubense",
           "url": "https://es.wikipedia.org/wiki/Real_Sociedad_Colombina_Onubense"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "argantonio",
@@ -252,7 +276,10 @@
           "title": "Wikipedia: Tartessos",
           "url": "https://es.wikipedia.org/wiki/Tartessos"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "colaeo",
@@ -277,7 +304,10 @@
           "title": "Wikipedia: Coleo de Samos",
           "url": "https://es.wikipedia.org/wiki/Coleo_de_Samos"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "habis",
@@ -306,7 +336,10 @@
           "title": "Wikipedia: Habis",
           "url": "https://es.wikipedia.org/wiki/Habis"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "charlesadam",
@@ -331,7 +364,10 @@
           "title": "Wikipedia (en): Charles Wilson Adam",
           "url": "https://en.wikipedia.org/wiki/Charles_Wilson_Adam"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [

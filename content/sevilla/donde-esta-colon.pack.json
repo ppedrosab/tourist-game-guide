@@ -49,7 +49,10 @@
           "title": "Wikipedia: El aguador de Sevilla",
           "url": "https://es.wikipedia.org/wiki/El_aguador_de_Sevilla"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "giraldillo",
@@ -74,7 +77,10 @@
           "title": "Wikipedia: Giraldillo",
           "url": "https://es.wikipedia.org/wiki/Giraldillo"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "hernando",
@@ -99,7 +105,10 @@
           "title": "Wikipedia: Hernando Colón",
           "url": "https://es.wikipedia.org/wiki/Hernando_Col%C3%B3n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "naranjera",
@@ -122,7 +131,10 @@
           "title": "Wikipedia: Citrus × aurantium",
           "url": "https://es.wikipedia.org/wiki/Citrus_%C3%97_aurantium"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "aceitunero",
@@ -145,7 +157,10 @@
           "title": "Wikipedia: Aceitunas aliñadas",
           "url": "https://es.wikipedia.org/wiki/Aceitunas_ali%C3%B1adas"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "cigarrera",
@@ -168,7 +183,10 @@
           "title": "Wikipedia: Real Fábrica de Tabacos de Sevilla",
           "url": "https://es.wikipedia.org/wiki/Real_F%C3%A1brica_de_Tabacos_de_Sevilla"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "ybarra",
@@ -193,7 +211,10 @@
           "title": "Wikipedia: Feria de Abril",
           "url": "https://es.wikipedia.org/wiki/Feria_de_Abril"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "bonaplata",
@@ -222,7 +243,10 @@
           "title": "Wikipedia: Feria de Abril",
           "url": "https://es.wikipedia.org/wiki/Feria_de_Abril"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "becquer",
@@ -247,7 +271,10 @@
           "title": "Wikipedia: Gustavo Adolfo Bécquer",
           "url": "https://es.wikipedia.org/wiki/Gustavo_Adolfo_B%C3%A9cquer"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "viejacandil",
@@ -272,7 +299,10 @@
           "title": "Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»",
           "url": "https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "reypedro",
@@ -297,7 +327,10 @@
           "title": "Wikipedia: Pedro I de Castilla",
           "url": "https://es.wikipedia.org/wiki/Pedro_I_de_Castilla"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "keiller",
@@ -322,7 +355,10 @@
           "title": "Wikipedia (en): Keiller's marmalade",
           "url": "https://en.wikipedia.org/wiki/Keiller%27s_marmalade"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     }
   ],
   "routes": [

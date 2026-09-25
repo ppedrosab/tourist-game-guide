@@ -47,7 +47,10 @@
           "title": "Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal",
           "url": "https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "jayran",
@@ -76,7 +79,10 @@
           "title": "Wikipedia: Taifa de Almería",
           "url": "https://es.wikipedia.org/wiki/Taifa_de_Almer%C3%ADa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "sedera",
@@ -99,7 +105,10 @@
           "title": "Wikipedia: Taifa de Almería",
           "url": "https://es.wikipedia.org/wiki/Taifa_de_Almer%C3%ADa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "hortelana",
@@ -122,7 +131,10 @@
           "title": "Wikipedia: Agricultura intensiva de la provincia de Almería",
           "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "barrilero",
@@ -145,7 +157,10 @@
           "title": "Wikipedia: Uva de Ohanes",
           "url": "https://es.wikipedia.org/wiki/Uva_de_Ohanes"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "carmendeburgos",
@@ -170,7 +185,10 @@
           "title": "Wikipedia: Carmen de Burgos",
           "url": "https://es.wikipedia.org/wiki/Carmen_de_Burgos"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "torrero",
@@ -199,7 +217,10 @@
           "title": "Wikipedia: Virgen del Mar",
           "url": "https://es.wikipedia.org/wiki/Virgen_del_Mar"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "salmeron",
@@ -224,7 +245,10 @@
           "title": "Wikipedia: Nicolás Salmerón",
           "url": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Salmer%C3%B3n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "santisteban",
@@ -253,7 +277,10 @@
           "title": "Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»",
           "url": "https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "almotacin",
@@ -278,7 +305,10 @@
           "title": "Wikipedia: Almotacín",
           "url": "https://es.wikipedia.org/wiki/Almotac%C3%ADn"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "abderraman",
@@ -311,7 +341,10 @@
           "title": "Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»",
           "url": "https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "pacopiloto",
@@ -340,7 +373,10 @@
           "title": "Wikipedia: Agricultura intensiva de la provincia de Almería",
           "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [

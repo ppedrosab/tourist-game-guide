@@ -53,7 +53,10 @@
           "title": "Wikipedia: Alhakén II",
           "url": "https://es.wikipedia.org/wiki/Alhak%C3%A9n_II"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "almanzor",
@@ -78,7 +81,10 @@
           "title": "Wikipedia: Almanzor",
           "url": "https://es.wikipedia.org/wiki/Almanzor"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "librero",
@@ -101,7 +107,10 @@
           "title": "Wikipedia: Alhakén II",
           "url": "https://es.wikipedia.org/wiki/Alhak%C3%A9n_II"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "patiera",
@@ -124,7 +133,10 @@
           "title": "Wikipedia: Festival de los Patios Cordobeses",
           "url": "https://es.wikipedia.org/wiki/Festival_de_los_Patios_Cordobeses"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "ziryab",
@@ -149,7 +161,10 @@
           "title": "Wikipedia: Ziryab",
           "url": "https://es.wikipedia.org/wiki/Ziryab"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "jornalero",
@@ -172,7 +187,10 @@
           "title": "Wikipedia: Salmorejo",
           "url": "https://es.wikipedia.org/wiki/Salmorejo"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "piconera",
@@ -197,7 +215,10 @@
           "title": "Wikipedia: La chiquita piconera (Julio Romero de Torres)",
           "url": "https://es.wikipedia.org/wiki/La_chiquita_piconera_(Julio_Romero_de_Torres)"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "romerotorres",
@@ -222,7 +243,10 @@
           "title": "Wikipedia: Julio Romero de Torres",
           "url": "https://es.wikipedia.org/wiki/Julio_Romero_de_Torres"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "gongora",
@@ -247,7 +271,10 @@
           "title": "Wikipedia: Luis de Góngora",
           "url": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "ramirezarellano",
@@ -272,7 +299,10 @@
           "title": "Wikipedia: Teodomiro Ramírez de Arellano",
           "url": "https://es.wikipedia.org/wiki/Teodomiro_Ram%C3%ADrez_de_Arellano"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "juandemena",
@@ -297,7 +327,10 @@
           "title": "Wikipedia: Juan de Mena",
           "url": "https://es.wikipedia.org/wiki/Juan_de_Mena"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "duquerivas",
@@ -322,7 +355,10 @@
           "title": "Wikipedia: Duque de Rivas",
           "url": "https://es.wikipedia.org/wiki/Duque_de_Rivas"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [

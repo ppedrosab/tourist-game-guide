@@ -134,6 +134,9 @@ export const cityPackSchema = z.object({
       lived: z.string().optional(),
       bio: i18nText.optional(),
       sources: z.array(source).optional(),
+      voice: z
+        .object({ gender: z.enum(["f", "m"]), pitch: z.number().min(0.5).max(2).optional(), rate: z.number().min(0.5).max(2).optional() })
+        .optional(),
     }),
   ),
   routes: z.array(route).min(1),

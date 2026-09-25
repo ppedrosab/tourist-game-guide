@@ -48,7 +48,10 @@
           "title": "Wikipedia: Lagarto de la Malena",
           "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "pastor",
@@ -72,7 +75,10 @@
           "title": "Wikipedia: Lagarto de la Malena",
           "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "catadora",
@@ -95,7 +101,10 @@
           "title": "Wikipedia: Aceite de oliva",
           "url": "https://es.wikipedia.org/wiki/Aceite_de_oliva"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "vareador",
@@ -118,7 +127,10 @@
           "title": "Wikipedia: Provincia de Jaén",
           "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "molinero",
@@ -141,7 +153,10 @@
           "title": "Wikipedia: Aceite de oliva",
           "url": "https://es.wikipedia.org/wiki/Aceite_de_oliva"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "melenchonera",
@@ -164,7 +179,10 @@
           "title": "Wikipedia: Fiestas de San Antón de Jaén",
           "url": "https://es.wikipedia.org/wiki/Fiestas_de_San_Ant%C3%B3n_de_Ja%C3%A9n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "podador",
@@ -187,7 +205,10 @@
           "title": "Wikipedia: Provincia de Jaén",
           "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "iranzo",
@@ -212,7 +233,10 @@
           "title": "Wikipedia: Miguel Lucas de Iranzo",
           "url": "https://es.wikipedia.org/wiki/Miguel_Lucas_de_Iranzo"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "mona",
@@ -241,7 +265,10 @@
           "title": "Wikipedia: Catedral de la Asunción (Jaén)",
           "url": "https://es.wikipedia.org/wiki/Catedral_de_la_Asunci%C3%B3n_(Ja%C3%A9n)"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "vandelvira",
@@ -266,7 +293,10 @@
           "title": "Wikipedia: Andrés de Vandelvira",
           "url": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Vandelvira"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "bernardolopez",
@@ -291,7 +321,10 @@
           "title": "Wikipedia: Bernardo López García",
           "url": "https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "lagarto",
@@ -320,7 +353,10 @@
           "title": "Wikipedia: Leyendas de Jaén",
           "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [

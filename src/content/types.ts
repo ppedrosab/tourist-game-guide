@@ -48,6 +48,15 @@ export interface Source {
   url?: string;
 }
 
+/** Voz sintética del personaje: de hombre o de mujer, y si se quiere un tono y un ritmo propios. */
+export interface CharacterVoice {
+  gender: "f" | "m";
+  /** 0,5–2 (1 = normal). Sin él, uno según el género con un pequeño matiz por personaje. */
+  pitch?: number;
+  /** 0,5–2 (1 = normal). */
+  rate?: number;
+}
+
 export interface Character {
   id: string;
   name: I18nText;
@@ -60,6 +69,7 @@ export interface Character {
   /** Su historia, para la ficha del personaje. */
   bio?: I18nText;
   sources?: Source[];
+  voice?: CharacterVoice;
 }
 
 export interface Route {

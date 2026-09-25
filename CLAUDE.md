@@ -60,7 +60,9 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   puntero hace de giroscopio.
 - `cast.ts` (reparto por paso), `Sprite`/`CastLayer` (expresiones, lip-sync), `sun.ts` (sombra según
   el sol real de la parada), `useVoice` (expo-audio con las voces grabadas; sin grabación, voz sintética
-  del móvil con expo-speech y un tono por personaje, `speakerPitch`; el reloj simulado mueve la boca y la barra).
+  del móvil con expo-speech; cada personaje lleva `voice.gender` (y si se quiere `pitch`/`rate`): `pickVoice`
+  elige una voz del sistema de ese género e idioma y `speakerPitch` le da tono propio; el reloj simulado
+  mueve la boca y la barra).
 - Pendiente de dispositivo: confirmar el sentido de roll/pitch del sensor en iOS y Android (si el
   parallax va "al revés", invertir el signo en `stepTilt`).
 
@@ -321,7 +323,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Verificar sobre el terreno coordenadas, radios y tiempos a pie (son estimaciones).
 - Pedir permiso a la Antigua Casa de Guardia (el reto implica entrar al local).
 - Revisión de un historiador local antes de grabar audios.
-- Voces: decidir locutores reales o síntesis (y si también en inglés).
+- Voces: de momento síntesis del móvil (decidido). Si se graban, basta con dejar los audios en assets/audio.
 - Revisión de la traducción inglesa por un nativo.
 - Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
 - Revisar con un historiador la ilustración de calle Larios en 1891 (`assets/then_now`).

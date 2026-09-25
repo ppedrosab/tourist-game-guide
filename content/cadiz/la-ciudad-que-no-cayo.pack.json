@@ -49,7 +49,10 @@
           "title": "Wikipedia: Tía Norica",
           "url": "https://es.wikipedia.org/wiki/T%C3%ADa_Norica"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "la_pepa",
@@ -74,7 +77,10 @@
           "title": "Wikipedia: Constitución española de 1812",
           "url": "https://es.wikipedia.org/wiki/Constituci%C3%B3n_espa%C3%B1ola_de_1812"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "magon",
@@ -99,7 +105,10 @@
           "title": "Wikipedia: Historia de Cádiz",
           "url": "https://es.wikipedia.org/wiki/Historia_de_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "pescaera",
@@ -123,7 +132,10 @@
           "title": "Wikipedia: Plaza de abastos (Cádiz)",
           "url": "https://es.wikipedia.org/wiki/Plaza_de_abastos_(C%C3%A1diz)"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "chicharronero",
@@ -147,7 +159,10 @@
           "title": "Wikipedia: Chicharrón",
           "url": "https://es.wikipedia.org/wiki/Chicharr%C3%B3n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "chirigotero",
@@ -171,7 +186,10 @@
           "title": "Wikipedia: Chirigota",
           "url": "https://es.wikipedia.org/wiki/Chirigota"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "garumero",
@@ -196,7 +214,10 @@
           "title": "Wikipedia: Garo (salsa)",
           "url": "https://es.wikipedia.org/wiki/Garo_(salsa)"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "romancero",
@@ -220,7 +241,10 @@
           "title": "Wikipedia: Carnaval de Cádiz",
           "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "comparsista",
@@ -244,7 +268,10 @@
           "title": "Wikipedia: Comparsa",
           "url": "https://es.wikipedia.org/wiki/Comparsa"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "corista",
@@ -268,7 +295,10 @@
           "title": "Wikipedia: Carnaval de Cádiz",
           "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "cuartetero",
@@ -292,7 +322,10 @@
           "title": "Wikipedia: Carnaval de Cádiz",
           "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "cargador",
@@ -316,7 +349,10 @@
           "title": "Wikipedia: Semana Santa en Cádiz",
           "url": "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "maniguetero",
@@ -340,7 +376,10 @@
           "title": "Wikipedia: Semana Santa en Cádiz",
           "url": "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%A1diz"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "saetera",
@@ -364,7 +403,10 @@
           "title": "Wikipedia: Saeta (música)",
           "url": "https://es.wikipedia.org/wiki/Saeta_(m%C3%BAsica)"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "f"
+      }
     },
     {
       "id": "adolfocastro",
@@ -389,7 +431,10 @@
           "title": "Wikipedia: Adolfo de Castro",
           "url": "https://es.wikipedia.org/wiki/Adolfo_de_Castro"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "hercules",
@@ -418,7 +463,10 @@
           "title": "Wikipedia: Gerión",
           "url": "https://es.wikipedia.org/wiki/Geri%C3%B3n"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     },
     {
       "id": "gerion",
@@ -447,7 +495,10 @@
           "title": "Wikipedia: Drago",
           "url": "https://es.wikipedia.org/wiki/Drago"
         }
-      ]
+      ],
+      "voice": {
+        "gender": "m"
+      }
     }
   ],
   "routes": [
