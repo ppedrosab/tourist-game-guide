@@ -131,6 +131,21 @@ def hat(kind, c, c2=GOLD):
     if kind == "laurel":
         return "".join(f'<ellipse cx="{x}" cy="{y}" rx="7" ry="3.4" transform="rotate({r} {x} {y})" fill="#6E9A4E" stroke="{INK}" stroke-width="1.2"/>'
                        for x, y, r in [(66, 58, -60), (72, 46, -40), (82, 38, -20), (118, 38, 20), (128, 46, 40), (134, 58, 60)])
+    if kind == "verdiales":  # sombrero de verdiales: flores, cintas y espejitos
+        return (f'<path d="M50 56Q100 42 150 56Q100 64 50 56Z" fill="{c}" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M70 52Q68 22 100 20Q132 22 130 52Z" fill="{c}" stroke="{INK}" stroke-width="2.4"/>'
+                + "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{f}" stroke="{INK}" stroke-width="1.2"/>' for x, y, r, f in [(80, 30, 6, "#D8412F"), (96, 22, 6, GOLD), (112, 26, 6, "#C0476A"), (124, 36, 5, "#4F8B5A"), (86, 42, 5, "#3A6EA5"), (106, 40, 5, "#D8412F")])
+                + "".join(f'<rect x="{x}" y="{y}" width="6" height="6" transform="rotate(45 {x + 3} {y + 3})" fill="#DDE8F0" stroke="{INK}" stroke-width="1"/>' for x, y in [(74, 44), (116, 46), (98, 32)])
+                + "".join(f'<path d="M{x} 58Q{x + w} 80 {x} 100" fill="none" stroke="{f}" stroke-width="3.4"/>' for x, w, f in [(54, -6, "#D8412F"), (60, 4, GOLD), (140, 6, "#3A6EA5"), (146, -4, "#4F8B5A")]))
+    if kind == "morion":    # morrión de guarda del XVI
+        return (f'<path d="M46 60Q100 50 154 60Q146 68 100 64Q54 68 46 60Z" fill="#AEB5BE" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M68 60Q66 24 100 22Q134 24 132 60Z" fill="#AEB5BE" stroke="{INK}" stroke-width="2.6"/>'
+                f'<path d="M100 10Q112 14 110 36Q106 48 100 60Q94 48 90 36Q88 14 100 10Z" fill="#9AA3AD" stroke="{INK}" stroke-width="2"/>')
+    if kind == "peineta":   # peineta de carey asomando por detrás del moño, con flor
+        return (f'<path d="M74 42Q72 8 100 4Q128 8 126 42Q114 34 100 34Q86 34 74 42Z" fill="{c}" stroke="{INK}" stroke-width="2.2" opacity=".92"/>'
+                + "".join(f'<path d="M{x} 32Q{x} {y + 6} {x + (x - 100) * .15} {y}" fill="none" stroke="{shade(c)}" stroke-width="2.2"/>' for x, y in [(82, 20), (91, 12), (100, 9), (109, 12), (118, 20)])
+                + f'<path d="M62 74Q60 36 100 34Q140 36 138 74Q132 48 100 46Q68 48 62 74Z" fill="#2A1E1A" stroke="{INK}" stroke-width="2.4"/>'
+                + f'<circle cx="132" cy="50" r="9" fill="{c2}" stroke="{INK}" stroke-width="1.8"/><circle cx="132" cy="50" r="3.4" fill="{GOLD}"/>')
     if kind == "flower":    # flor en el pelo
         return (f'<circle cx="132" cy="46" r="9" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
                 f'<circle cx="132" cy="46" r="3.4" fill="{c2}"/>')
@@ -320,6 +335,53 @@ def prop(kind, x, y, side):
         return (f'<path d="M{x - 22} {y - 8}H{x + 22}Q{x + 20} {y + 14} {x} {y + 14}Q{x - 20} {y + 14} {x - 22} {y - 8}Z" fill="#9A6B45" stroke="{INK}" stroke-width="2"/>'
                 f'<ellipse cx="{x}" cy="{y - 8}" rx="22" ry="5" fill="#E8744A" stroke="{INK}" stroke-width="1.6"/>'
                 f'<path d="M{x + 6} {y - 8}L{x + 18} {y - 34}" stroke="{INK}" stroke-width="7"/><path d="M{x + 6} {y - 8}L{x + 18} {y - 34}" stroke="#C9A77E" stroke-width="4"/>')
+    if kind == "violin":    # violín de verdiales, apoyado en el hombro
+        return (f'<path d="M{x} {y}L{x - s * 8} {y - 56}" stroke="#5B3A26" stroke-width="5"/>'
+                f'<path d="M{x - 13} {y + 2}Q{x - 18} {y + 14} {x - 10} {y + 22}Q{x - 16} {y + 32} {x - 8} {y + 42}Q{x} {y + 46} {x + 8} {y + 42}Q{x + 16} {y + 32} {x + 10} {y + 22}Q{x + 18} {y + 14} {x + 13} {y + 2}Q{x} {y - 4} {x - 13} {y + 2}Z" fill="#B8642E" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 4} {y + 18}q-2 6 0 10M{x + 4} {y + 18}q2 6 0 10" fill="none" stroke="{INK}" stroke-width="1.4"/>'
+                f'<path d="M{x - s * 30} {y - 20}L{x + s * 20} {y + 36}" stroke="{INK}" stroke-width="2"/>')
+    if kind == "whip":      # fusta de cochero
+        return (f'<path d="M{x} {y + 8}L{x + s * 6} {y - 70}" stroke="{INK}" stroke-width="4"/>'
+                f'<path d="M{x + s * 6} {y - 70}Q{x + s * 26} {y - 80} {x + s * 20} {y - 50}" fill="none" stroke="{INK}" stroke-width="1.6"/>')
+    if kind == "castanets":  # castañuelas
+        return "".join(f'<ellipse cx="{x + dx}" cy="{y - 6}" rx="7" ry="9" fill="#6E3A22" stroke="{INK}" stroke-width="1.8"/>'
+                       f'<path d="M{x + dx} {y - 15}V{y - 20}" stroke="{CLAY}" stroke-width="2"/>' for dx in (-5, 5))
+    if kind == "paperlantern":  # farolillo de papel de feria
+        return (f'<path d="M{x} {y - 4}V{y - 16}" stroke="{INK}" stroke-width="1.6"/>'
+                f'<path d="M{x - 10} {y - 16}H{x + 10}Q{x + 24} {y - 36} {x + 10} {y - 58}H{x - 10}Q{x - 24} {y - 36} {x - 10} {y - 16}Z" fill="{PAPER}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 17} {y - 26}Q{x} {y - 22} {x + 17} {y - 26}M{x - 18} {y - 46}Q{x} {y - 50} {x + 18} {y - 46}" fill="none" stroke="#C9B48A" stroke-width="1.4"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="3.4" fill="{c}"/>' for dx, dy, c in [(-8, -24, CLAY), (6, -30, "#4F8B5A"), (-4, -44, "#4F8B5A"), (9, -48, CLAY)]))
+    if kind == "drum":      # tambor con baquetas
+        return (f'<ellipse cx="{x}" cy="{y - 4}" rx="24" ry="7" fill="{PAPER}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 24} {y - 4}V{y + 22}Q{x} {y + 30} {x + 24} {y + 22}V{y - 4}Q{x} {y + 4} {x - 24} {y - 4}Z" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 22} {y + 2}L{x - 8} {y + 24}L{x + 6} {y + 2}L{x + 20} {y + 24}" fill="none" stroke="{GOLD}" stroke-width="1.8"/>'
+                f'<path d="M{x + 4} {y - 8}L{x + 18} {y - 30}" stroke="{INK}" stroke-width="3"/>')
+    if kind == "scissors":  # tijeras de modista
+        return (f'<circle cx="{x - 6}" cy="{y + 6}" r="5" fill="none" stroke="{INK}" stroke-width="2.4"/><circle cx="{x + 6}" cy="{y + 6}" r="5" fill="none" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M{x - 3} {y + 2}L{x + 6} {y - 30}M{x + 3} {y + 2}L{x - 6} {y - 30}" stroke="#9AA3AD" stroke-width="3.4"/>'
+                f'<circle cx="{x}" cy="{y - 8}" r="1.6" fill="{INK}"/>')
+    if kind == "bighead":   # cabeza de cabezudo, de cartón piedra, bajo el brazo
+        return (f'<circle cx="{x + 4}" cy="{y - 4}" r="27" fill="#F0C8A0" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M{x - 23} {y - 10}Q{x - 20} {y - 36} {x + 4} {y - 32}Q{x + 30} {y - 36} {x + 31} {y - 10}Q{x + 20} {y - 24} {x + 4} {y - 22}Q{x - 12} {y - 24} {x - 23} {y - 10}Z" fill="#2A1E1A"/>'
+                f'<circle cx="{x - 5}" cy="{y - 6}" r="3" fill="{INK}"/><circle cx="{x + 13}" cy="{y - 6}" r="3" fill="{INK}"/>'
+                f'<circle cx="{x - 11}" cy="{y + 4}" r="4.4" fill="#E8866A" opacity=".7"/><circle cx="{x + 19}" cy="{y + 4}" r="4.4" fill="#E8866A" opacity=".7"/>'
+                f'<path d="M{x - 4} {y + 8}Q{x + 4} {y + 16} {x + 12} {y + 8}" fill="none" stroke="{INK}" stroke-width="2"/>')
+    if kind == "shears":    # tijeras de podar
+        return (f'<path d="M{x - 3} {y + 16}L{x - 2} {y - 6}M{x + 5} {y + 16}L{x + 2} {y - 6}" stroke="{CLAY}" stroke-width="5"/>'
+                f'<path d="M{x - 2} {y - 6}Q{x - 10} {y - 22} {x - 4} {y - 34}Q{x + 2} {y - 22} {x + 2} {y - 6}Z" fill="#9AA3AD" stroke="{INK}" stroke-width="1.6"/>'
+                f'<path d="M{x + 2} {y - 6}Q{x + 12} {y - 18} {x + 8} {y - 28}Q{x} {y - 20} {x - 2} {y - 6}Z" fill="#7F8891" stroke="{INK}" stroke-width="1.6"/>')
+    if kind == "rocket":    # cohete de feria
+        return (f'<path d="M{x} {y + 14}V{y - 50}" stroke="#8A6243" stroke-width="2.4"/>'
+                f'<path d="M{x - 7} {y - 30}H{x + 7}V{y - 70}H{x - 7}Z" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 7} {y - 70}L{x} {y - 84}L{x + 7} {y - 70}Z" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>'
+                f'<path d="M{x - 7} {y - 50}H{x + 7}" stroke="{PAPER}" stroke-width="3"/>')
+    if kind == "pandero":   # pandero con sonajas
+        return (f'<circle cx="{x}" cy="{y - 10}" r="21" fill="#F2E3C4" stroke="{INK}" stroke-width="2.4"/>'
+                f'<circle cx="{x}" cy="{y - 10}" r="21" fill="none" stroke="#B8642E" stroke-width="5" opacity=".8"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="3" fill="{GOLD}" stroke="{INK}" stroke-width="1"/>' for dx, dy in [(-21, -10), (21, -10), (0, -31), (0, 11)]))
+    if kind == "carnations":  # ramo de claveles
+        return (f'<path d="M{x - 4} {y + 6}L{x - 10} {y - 22}M{x} {y + 6}V{y - 26}M{x + 4} {y + 6}L{x + 10} {y - 22}" stroke="#4F8B5A" stroke-width="2.4"/>'
+                + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="6.4" fill="{c}" stroke="{INK}" stroke-width="1.4"/>' for dx, dy, c in [(-10, -24, "#D8412F"), (0, -30, "#E8744A"), (10, -24, "#D8412F")]))
     return ""
 
 
