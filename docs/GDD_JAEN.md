@@ -15,7 +15,7 @@ Tercera versión, la del caballero de la armadura de espejos, contada como «se 
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `sereno` (guía) | Sereno del barrio, con farol y chuzo | Narra |
+| `lagarto` (guía) | El propio lagarto de la Malena, que no recuerda quién lo mató | Narra |
 | `preso` | El preso de la versión del pan y la pólvora | Sospechoso |
 | `pastor` | El pastor de la versión de la piel de cordero | Sospechoso |
 
@@ -23,7 +23,7 @@ Caminos: `dinero` (mar) = **El preso**; `poder` (arcilla) = **El pastor**.
 
 | Nodo | Lugar | Tema | Coleccionable |
 | --- | --- | --- | --- |
-| n1 | Catedral (Vandelvira, s. XVI) | El caso; primera noticia escrita en 1628 | El farol del sereno |
+| n1 | Catedral (Vandelvira, s. XVI) | El caso; primera noticia escrita en 1628 | El farol |
 | n2 | Arco de San Lorenzo | El preso · **decisión 1** | El arco de San Lorenzo |
 | a1 (preso) | Basílica de San Ildefonso | Pan y pólvora; la piel colgada, luego tapada con un San Cristóbal | Los panes del preso |
 | a2 (preso) | Plaza de la Constitución | Santo Reino (1246); el preso no estuvo allí | Las llaves del Santo Reino |

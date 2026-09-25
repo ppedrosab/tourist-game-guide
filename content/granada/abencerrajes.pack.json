@@ -65,18 +65,6 @@
       "era": "s. XV"
     },
     {
-      "id": "especiera",
-      "name": {
-        "es": "La Especiera",
-        "en": "The Spice Seller"
-      },
-      "description": {
-        "es": "Vende especias en el centro de Granada, entre el antiguo zoco y la catedral. Lista, rápida y cotilla.",
-        "en": "She sells spices in central Granada, between the old souk and the cathedral. Clever, quick and a gossip."
-      },
-      "avatar": "sprites/especiera/especiera_neutral.svg"
-    },
-    {
       "id": "ceferino",
       "name": {
         "es": "Ceferino Isla",
@@ -178,6 +166,19 @@
       },
       "avatar": "sprites/elvira/elvira_neutral.svg",
       "era": "leyenda"
+    },
+    {
+      "id": "lorca",
+      "name": {
+        "es": "Federico García Lorca",
+        "en": "Federico García Lorca"
+      },
+      "description": {
+        "es": "Poeta y dramaturgo de la Vega de Granada, nacido en Fuente Vaqueros, a un paso de Santa Fe. Alegre, goloso y gran conversador.",
+        "en": "Poet and playwright from the Vega of Granada, born in Fuente Vaqueros, a stone's throw from Santa Fe. Cheerful, sweet-toothed and a great talker."
+      },
+      "avatar": "sprites/lorca/lorca_neutral.svg",
+      "era": "1898 - 1936"
     }
   ],
   "routes": [
@@ -1361,11 +1362,11 @@
         "en": "Who Invented the Pionono?"
       },
       "summary": {
-        "es": "Un pastelito de Granada con nombre de papa. ¿Lo inventaron las monjas, los moriscos o un pastelero de Santa Fe? Con una especiera, una hermana tornera y Ceferino Isla, entre zocos, conventos y almíbar.",
-        "en": "A little Granada pastry named after a pope. Was it invented by the nuns, the Moriscos or a pastry cook from Santa Fe? With a spice seller, a turn sister and Ceferino Isla, among souks, convents and syrup."
+        "es": "Un pastelito de Granada con nombre de papa. ¿Lo inventaron las monjas, los moriscos o un pastelero de Santa Fe? Con Federico García Lorca, una hermana tornera y Ceferino Isla, entre zocos, conventos y almíbar.",
+        "en": "A little Granada pastry named after a pope. Was it invented by the nuns, the Moriscos or a pastry cook from Santa Fe? With Federico García Lorca, a turn sister and Ceferino Isla, among souks, convents and syrup."
       },
       "era": "De la Granada nazarí a 1897",
-      "guideCharacterId": "especiera",
+      "guideCharacterId": "lorca",
       "durationMin": 100,
       "distanceKm": 2.8,
       "difficulty": "medium",
@@ -1416,7 +1417,7 @@
               ],
               "characters": [
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -1424,16 +1425,16 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "happy",
               "text": {
-                "es": "¡Bienvenido! Soy especiera: vendo comino, azafrán, canela y matalahúva. Mi familia lleva generaciones entre sacos de especias.",
-                "en": "Welcome! I'm a spice seller: cumin, saffron, cinnamon and aniseed. My family has spent generations among sacks of spices."
+                "es": "¡Bienvenido! Soy Federico García Lorca, de Fuente Vaqueros, en la Vega de Granada: a un paso de Santa Fe. Y goloso como pocos.",
+                "en": "Welcome! I'm Federico García Lorca, from Fuente Vaqueros, in the Vega of Granada: a stone's throw from Santa Fe. And sweet-toothed like few others."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "thinking",
               "text": {
                 "es": "Te traigo un misterio dulce: el pionono, un pastelito de Granada con nombre de papa. ¿Quién lo inventó?",
@@ -1442,7 +1443,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "proud",
               "text": {
                 "es": "Tres sospechosos: las monjas de clausura, que hacen dulces desde hace siglos; los moriscos, maestros de la miel y la almendra; y un pastelero de Santa Fe llamado Ceferino. Apunta.",
@@ -1516,7 +1517,7 @@
               ],
               "characters": [
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "neutral",
                   "position": "left"
                 },
@@ -1545,11 +1546,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "thinking",
               "text": {
-                "es": "Ceferino… ¿de Santa Fe? ¡Pues ya tenemos a un sospechoso en la plaza!",
-                "en": "Ceferino… from Santa Fe? Well, we've got a suspect right here in the square!"
+                "es": "Ceferino… ¿de Santa Fe? ¡Casi un vecino mío! Pues ya tenemos a un sospechoso en la plaza.",
+                "en": "Ceferino… from Santa Fe? Practically my neighbour! Well, we've got a suspect right here in the square."
               }
             }
           ],
@@ -1587,7 +1588,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "especiera",
+            "characterId": "lorca",
             "expression": "happy",
             "text": {
               "es": "¿Seguimos por la Alcaicería, el antiguo zoco, o subimos al Albaicín, donde están los conventos?",
@@ -1650,7 +1651,7 @@
               ],
               "characters": [
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "proud",
                   "position": "left"
                 },
@@ -1671,7 +1672,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "proud",
               "text": {
                 "es": "Los moriscos nos dejaron dulces de miel, almendra y ajonjolí: soplillos, pestiños, alfajores… Sin ellos Granada sería mucho menos dulce.",
@@ -1753,7 +1754,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -1777,7 +1778,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "surprised",
               "text": {
                 "es": "¿Pío Nono? ¿Pio-no-no? ¡Ceferino, que se te ve el plumero!",
@@ -1850,7 +1851,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2038,7 +2039,7 @@
               ],
               "characters": [
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -2058,7 +2059,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "thinking",
               "variants": [
                 {
@@ -2109,7 +2110,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "especiera",
+            "characterId": "lorca",
             "expression": "thinking",
             "text": {
               "es": "¿Vamos al obrador de Ceferino o al torno de la hermana?",
@@ -2245,7 +2246,7 @@
               ],
               "characters": [
                 {
-                  "id": "especiera",
+                  "id": "lorca",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -2266,7 +2267,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "thinking",
               "text": {
                 "es": "Hora del veredicto. Monjas, moriscos, Ceferino. ¿Quién inventó el pionono?",
@@ -2311,7 +2312,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "proud",
               "variants": [
                 {
@@ -2358,7 +2359,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "especiera",
+              "characterId": "lorca",
               "expression": "happy",
               "text": {
                 "es": "Y ya sabes: si ves un pionono, fíjate bien. ¡Es un papa pequeñito con su solideo!",

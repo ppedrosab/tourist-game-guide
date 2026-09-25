@@ -87,18 +87,6 @@
       "avatar": "sprites/barrilero/barrilero_neutral.svg"
     },
     {
-      "id": "pescador",
-      "name": {
-        "es": "El Pescador",
-        "en": "The Fisherman"
-      },
-      "description": {
-        "es": "Pescador del barrio de la Chanca. Madrugador, bromista y experto en gamba roja.",
-        "en": "A fisherman from the La Chanca quarter. An early riser, a joker and an expert on red prawns."
-      },
-      "avatar": "sprites/pescador/pescador_neutral.svg"
-    },
-    {
       "id": "carmendeburgos",
       "name": {
         "es": "Carmen de Burgos",
@@ -175,6 +163,19 @@
       },
       "avatar": "sprites/galiana/galiana_neutral.svg",
       "era": "leyenda"
+    },
+    {
+      "id": "pacopiloto",
+      "name": {
+        "es": "Paco el Piloto",
+        "en": "Paco el Piloto"
+      },
+      "description": {
+        "es": "Francisco Fuentes, de Roquetas de Mar: pastor, motorista de barcos de pesca y agricultor. En 1963 levantó el primer invernadero de Almería. Ingenioso y muy trabajador.",
+        "en": "Francisco Fuentes, from Roquetas de Mar: shepherd, fishing-boat engineer and farmer. In 1963 he built Almería's first greenhouse. Inventive and hard-working."
+      },
+      "avatar": "sprites/pacopiloto/pacopiloto_neutral.svg",
+      "era": "1922 - 1973"
     }
   ],
   "routes": [
@@ -1321,8 +1322,8 @@
         "en": "Who Turned the Desert into a Garden?"
       },
       "summary": {
-        "es": "Almería es una de las tierras más secas de Europa y hoy es una de sus grandes huertas. ¿Fue la uva de barco, la arena o el plástico? Con una hortelana, un barrilero y un pescador de la Chanca.",
-        "en": "Almería is one of the driest places in Europe, yet today it's one of its great market gardens. Was it the ship grapes, the sand or the plastic? With a market gardener, a barrel maker and a fisherman from La Chanca."
+        "es": "Almería es una de las tierras más secas de Europa y hoy es una de sus grandes huertas. ¿Fue la uva de barco, la arena o el plástico? Con una hortelana, un barrilero y Paco el Piloto, el del primer invernadero.",
+        "en": "Almería is one of the driest lands in Europe and today one of its great market gardens. Was it the export grapes, the sand or the plastic? With a market gardener, a barrel maker and Paco el Piloto, who built the first greenhouse."
       },
       "era": "Del siglo XIX a hoy",
       "guideCharacterId": "hortelana",
@@ -1806,7 +1807,7 @@
               ],
               "characters": [
                 {
-                  "id": "pescador",
+                  "id": "pacopiloto",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -1819,11 +1820,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pescador",
+              "characterId": "pacopiloto",
               "expression": "happy",
               "text": {
-                "es": "¡Buenas! Pescador de la Chanca. Lo mío es la gamba roja y el pulpo seco, que se cuelga al sol como la ropa.",
-                "en": "Hello! Fisherman from La Chanca. My thing is red prawns and dried octopus, hung out in the sun like washing."
+                "es": "¡Buenas! Francisco Fuentes, aunque todos me llaman Paco el Piloto. Fui pastor, motorista de barcos de pesca y, al final, agricultor en Roquetas de Mar.",
+                "en": "Hello! Francisco Fuentes, though everyone calls me Paco el Piloto. I was a shepherd, a fishing-boat engineer and, in the end, a farmer in Roquetas de Mar."
               }
             },
             {
@@ -1835,11 +1836,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pescador",
+              "characterId": "pacopiloto",
               "expression": "thinking",
               "text": {
-                "es": "Mi padre dejó la barca en los sesenta y se fue al Poniente. Allí unos vecinos echaban arena de la playa sobre la tierra… y los tomates salían antes que en ningún sitio.",
-                "en": "My father left his boat in the sixties and went to the Poniente. There some neighbours were spreading beach sand over the soil… and their tomatoes came up earlier than anywhere else."
+                "es": "En el Poniente los vecinos echaban arena de la playa sobre la tierra… y los tomates salían antes que en ningún sitio.",
+                "en": "Out in the Poniente, neighbours spread beach sand over the soil… and the tomatoes came up earlier than anywhere else."
               }
             }
           ],
@@ -1903,7 +1904,7 @@
               ],
               "characters": [
                 {
-                  "id": "pescador",
+                  "id": "pacopiloto",
                   "expression": "proud",
                   "position": "left"
                 },
@@ -1932,7 +1933,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pescador",
+              "characterId": "pacopiloto",
               "expression": "proud",
               "text": {
                 "es": "Y del mar vino la arena. ¡Ya ves, el mar también ayudó a la huerta!",
@@ -2004,7 +2005,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "pescador",
+                  "id": "pacopiloto",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2084,8 +2085,8 @@
                 "en": "The sand lead"
               },
               "hint": {
-                "es": "Con el pescador",
-                "en": "With the fisherman"
+                "es": "Con Paco el Piloto",
+                "en": "With Paco el Piloto"
               },
               "targetNodeId": "g4a_arena",
               "setFlags": [
@@ -2117,7 +2118,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "pescador",
+              "characterId": "pacopiloto",
               "expression": "thinking",
               "text": {
                 "es": "Con arena solo, al aire libre, los tomates salían antes, sí. Pero el viento y el frío de la noche se los llevaban.",
@@ -2126,11 +2127,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "pescador",
+              "characterId": "pacopiloto",
               "expression": "happy",
               "text": {
-                "es": "Hasta que alguien le puso un techo de plástico a la arena. Y ahí cambió todo.",
-                "en": "Until someone put a plastic roof over the sand. And that changed everything."
+                "es": "Hasta que en 1963 yo le puse un techo de plástico a la arena, con la ayuda de mi hijo, que tenía once años. Y ahí cambió todo.",
+                "en": "Until in 1963 I put a plastic roof over the sand, with help from my son, who was eleven. And that changed everything."
               }
             }
           ],

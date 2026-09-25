@@ -9,7 +9,7 @@ formato novela visual en la calle. Técnica de guion: **ramificar y reunir** (br
   habla malagueño ("quillo", "pa'"). Estatua de bronce de 1968 en la Plaza de la Marina.
 - **La Manquita**: la catedral personificada. Solemne, presumida, dolida por su torre (lleva una
   tirita en la torre sur inacabada).
-- **Lucio**: actor del Teatro Romano de Malaca (época de Augusto). Exagerado y teatral.
+- **El Teatro Romano** (id `lucio`): el propio teatro de Malaca, que habla con su máscara de actor. Exagerado y teatral.
 - Futuros: el biznaguero (s. XIX), un mercader fenicio, un poeta andalusí.
 
 Sprites: 8 expresiones cada uno → neutral, talking, happy, thinking, surprised, nervous, proud,

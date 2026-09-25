@@ -50,18 +50,6 @@
       "avatar": "sprites/minero/minero_neutral.svg"
     },
     {
-      "id": "marinero",
-      "name": {
-        "es": "El Marinero",
-        "en": "The Sailor"
-      },
-      "description": {
-        "es": "Marinero de un vapor británico que atraca en Huelva. Viajero y charlatán.",
-        "en": "A sailor on a British steamer that docks in Huelva. Well-travelled and chatty."
-      },
-      "avatar": "sprites/marinero/marinero_neutral.svg"
-    },
-    {
       "id": "choquera",
       "name": {
         "es": "La Choquera",
@@ -174,6 +162,19 @@
       },
       "avatar": "sprites/habis/habis_neutral.svg",
       "era": "mito"
+    },
+    {
+      "id": "charlesadam",
+      "name": {
+        "es": "Charles Adam",
+        "en": "Charles Adam"
+      },
+      "description": {
+        "es": "Ingeniero escocés que dirigía la fábrica de gas de Huelva y fue el primer presidente del Recreativo (1889-1896). Amigo de los marineros del puerto.",
+        "en": "A Scottish engineer who ran Huelva's gasworks and was the first president of Recreativo (1889-1896). A friend to the sailors in the port."
+      },
+      "avatar": "sprites/charlesadam/charlesadam_neutral.svg",
+      "era": "1848 - 1924"
     }
   ],
   "routes": [
@@ -184,8 +185,8 @@
         "en": "Who Brought Football to Spain?"
       },
       "summary": {
-        "es": "Huelva presume del club de fútbol más antiguo de España, pero la pelota ya rodaba antes. Con el doctor Mackay, un minero y un marinero, recorre la Huelva británica del siglo XIX.",
-        "en": "Huelva boasts Spain's oldest football club, but the ball was already rolling before. With Doctor Mackay, a miner and a sailor, explore the British Huelva of the 19th century."
+        "es": "Huelva presume del club de fútbol más antiguo de España, pero la pelota ya rodaba antes. Con el doctor Mackay, un minero y el ingeniero Charles Adam, recorre la Huelva británica del siglo XIX.",
+        "en": "Huelva boasts Spain's oldest football club, but the ball was already rolling before. With Doctor Mackay, a miner and the engineer Charles Adam, explore the British Huelva of the 19th century."
       },
       "era": "1873 - 1929",
       "guideCharacterId": "mackay",
@@ -474,7 +475,7 @@
               ],
               "characters": [
                 {
-                  "id": "marinero",
+                  "id": "charlesadam",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -487,11 +488,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "marinero",
+              "characterId": "charlesadam",
               "expression": "happy",
               "text": {
-                "es": "Ahoy! Marinero de un vapor de Liverpool. Descargamos carbón y cargamos mineral. Y mientras esperamos la marea… football en el muelle.",
-                "en": "Ahoy! Sailor off a Liverpool steamer. We unload coal and load ore. And while we wait for the tide… football on the quay."
+                "es": "Good day! Charles Adam, ingeniero escocés: dirijo la fábrica de gas de Huelva. En este puerto conozco a muchos marineros británicos: descargan carbón, cargan mineral y, mientras esperan la marea… football en el muelle.",
+                "en": "Good day! Charles Adam, Scottish engineer: I run the Huelva gasworks. In this port I know many British sailors: they unload coal, load ore and, while they wait for the tide… football on the quay."
               }
             },
             {
@@ -571,7 +572,7 @@
               ],
               "characters": [
                 {
-                  "id": "marinero",
+                  "id": "charlesadam",
                   "expression": "nervous",
                   "position": "left"
                 },
@@ -592,7 +593,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "marinero",
+              "characterId": "charlesadam",
               "expression": "nervous",
               "text": {
                 "es": "¿Estudiantes? En Bilbao dicen que el fútbol lo trajeron chicos que estudiaban en Inglaterra. Pero eso fue más tarde, al acabar el siglo.",
@@ -1066,7 +1067,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "marinero",
+                  "id": "charlesadam",
                   "expression": "neutral",
                   "position": "right"
                 }

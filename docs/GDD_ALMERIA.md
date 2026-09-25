@@ -45,7 +45,7 @@ de 1963, plástico sobre enarenado**, copiado por miles de familias.
 | --- | --- | --- |
 | `hortelana` (guía) | Cultiva en un invernadero del Poniente | Narra |
 | `barrilero` | Hacía barriles para la uva de barco | Coguía |
-| `pescador` | Pescador de la Chanca (gamba roja, pulpo seco) | Coguía |
+| `pacopiloto` | Paco el Piloto (Francisco Fuentes, Roquetas de Mar): motorista de barcos de pesca que levantó el primer invernadero en 1963 | Coguía |
 
 Caminos: `dinero` (mar) = **El puerto**; `poder` (arcilla) = **La Chanca**.
 

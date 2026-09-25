@@ -16,7 +16,7 @@ Huelva.
 | --- | --- | --- |
 | `mackay` (guía) | El doctor William Alexander Mackay, médico escocés de la Rio Tinto (llegó en 1883). Persona real; trata de «usted». | Narra |
 | `minero` | Minero de Riotinto (ficticio) | Sospechoso |
-| `marinero` | Marinero de un vapor británico (ficticio) | Sospechoso |
+| `charlesadam` | Charles Adam (1848-1924), ingeniero escocés de la fábrica de gas, primer presidente del Recreativo; amigo de los marineros del puerto | Sospechoso |
 
 Caminos: `dinero` (mar) = **El puerto**; `poder` (arcilla) = **Los barrios ingleses**.
 

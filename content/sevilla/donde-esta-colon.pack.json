@@ -77,18 +77,6 @@
       "avatar": "sprites/naranjera/naranjera_neutral.svg"
     },
     {
-      "id": "escoces",
-      "name": {
-        "es": "El Escocés",
-        "en": "The Scot"
-      },
-      "description": {
-        "es": "Consignatario escocés que embarca naranjas amargas hacia su tierra para la mermelada. Formal y curioso.",
-        "en": "A Scottish shipping agent who sends bitter oranges home for marmalade. Formal and curious."
-      },
-      "avatar": "sprites/escoces/escoces_neutral.svg"
-    },
-    {
       "id": "aceitunero",
       "name": {
         "es": "El Aceitunero",
@@ -176,6 +164,19 @@
       },
       "avatar": "sprites/reypedro/reypedro_neutral.svg",
       "era": "1334 - 1369"
+    },
+    {
+      "id": "keiller",
+      "name": {
+        "es": "Janet Keiller",
+        "en": "Janet Keiller"
+      },
+      "description": {
+        "es": "Escocesa de Dundee a la que la tradición atribuye la primera mermelada comercial de naranja amarga de Sevilla (1797). Práctica y muy golosa.",
+        "en": "A Scotswoman from Dundee whom tradition credits with the first commercial Seville bitter-orange marmalade (1797). Practical and very sweet-toothed."
+      },
+      "avatar": "sprites/keiller/keiller_neutral.svg",
+      "era": "1737 - 1813"
     }
   ],
   "routes": [
@@ -1404,8 +1405,8 @@
         "en": "Why Does Seville Smell of Orange Blossom?"
       },
       "summary": {
-        "es": "Sevilla tiene miles de naranjos en la calle, pero sus naranjas son amargas y nadie se las come. ¿Fueron los andalusíes, los escoceses de la mermelada o los jardineros? Con una naranjera, un escocés y un aceitunero.",
-        "en": "Seville has thousands of street orange trees, yet their oranges are bitter and nobody eats them. Was it the Andalusis, the marmalade-loving Scots or the gardeners? With an orange picker, a Scot and an olive dresser."
+        "es": "Sevilla tiene miles de naranjos en la calle, pero sus naranjas son amargas y nadie se las come. ¿Fueron los andalusíes, los escoceses de la mermelada o los jardineros? Con una naranjera, la escocesa Janet Keiller y un aceitunero.",
+        "en": "Seville has thousands of street orange trees, yet their oranges are bitter and nobody eats them. Was it the Andalusis, the marmalade-loving Scots or the gardeners? With an orange picker, the Scotswoman Janet Keiller and an olive dresser."
       },
       "era": "Del siglo XII a hoy",
       "guideCharacterId": "naranjera",
@@ -1694,7 +1695,7 @@
               ],
               "characters": [
                 {
-                  "id": "escoces",
+                  "id": "keiller",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -1707,11 +1708,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "escoces",
+              "characterId": "keiller",
               "expression": "happy",
               "text": {
-                "es": "Good day! Soy consignatario escocés: cargo barcos en este muelle. Llevo naranjas amargas de Sevilla a Escocia desde hace muchos años.",
-                "en": "Good day! I'm a Scottish shipping agent: I load ships on this quay. I've been taking Seville's bitter oranges to Scotland for many years."
+                "es": "Good day! Janet Keiller, de Dundee, en Escocia. Se cuenta que un barco con naranjas amargas de Sevilla atracó en mi ciudad, y que mi hijo compró toda la carga, muy barata.",
+                "en": "Good day! Janet Keiller, from Dundee, in Scotland. It's said a ship carrying bitter Seville oranges docked in my town, and that my son bought the whole cargo, very cheaply."
               }
             },
             {
@@ -1723,7 +1724,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "escoces",
+              "characterId": "keiller",
               "expression": "proud",
               "text": {
                 "es": "En Dundee, en 1797, se hizo la primera mermelada comercial de naranja amarga con naranjas como estas. Hoy la mermelada inglesa sigue llevando naranja de Sevilla.",
@@ -1791,7 +1792,7 @@
               ],
               "characters": [
                 {
-                  "id": "escoces",
+                  "id": "keiller",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -1812,7 +1813,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "escoces",
+              "characterId": "keiller",
               "expression": "thinking",
               "text": {
                 "es": "Nosotros nos llevamos las naranjas, sí. Pero cuando llegamos, los naranjos ya estaban aquí. Llevaban siglos.",
@@ -2087,7 +2088,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "escoces",
+                  "id": "keiller",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2167,8 +2168,8 @@
                 "en": "The ship lead"
               },
               "hint": {
-                "es": "Con el escocés",
-                "en": "With the Scot"
+                "es": "Con Janet Keiller",
+                "en": "With Janet Keiller"
               },
               "targetNodeId": "g4a_barco",
               "setFlags": [
@@ -2200,7 +2201,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "escoces",
+              "characterId": "keiller",
               "expression": "proud",
               "text": {
                 "es": "Cada invierno, los operarios recogen las naranjas de las calles y las mandan en barco o en camión al Reino Unido. Toneladas y toneladas.",
@@ -2209,7 +2210,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "escoces",
+              "characterId": "keiller",
               "expression": "thinking",
               "text": {
                 "es": "Pero ojo: nosotros aprovechamos lo que ya había. Si mañana dejáramos de comprar, los naranjos seguirían ahí, oliendo a azahar.",

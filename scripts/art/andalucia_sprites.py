@@ -31,8 +31,6 @@ CHARACTERS = {
                    outfit="jacket", main="#6E5A44", accent=CLAY, second="#5A4A3A", left="bag", right="ball", raise_right=True),
     "minero": dict(skin="morena", hair=("short", "#2A1E1A"), beard_=("short", "#2A1E1A"), hat_=("miner", "#8C939C"), outfit="shirt",
                    main="#8C8478", accent="#4A3A2E", second="#3A3A48", right="pick"),
-    "marinero": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#D9B26A"), beard_=("short", "#D9B26A"), hat_=("sailor", INDIGO),
-                     outfit="shirt", main=INDIGO, accent=PAPER, second=INDIGO, neck=PAPER, left="ball"),
     "choquera": dict(skin="media", hair=("bun", "#2A1E1A"), outfit="dress", main=SEA, accent=PAPER, second="#DCEBE6", apron=PAPER,
                      left="basket", right="cuttlefish", raise_right=True),
     "fresera": dict(skin="morena", hair=("braid", "#3A2A1E"), hat_=("straw", "#D8412F"), outfit="dress", main="#D8412F", accent=PAPER,
@@ -40,8 +38,6 @@ CHARACTERS = {
     "cortador": dict(skin="media", hair=("slick", "#2A1E1A"), beard_=("short", "#2A1E1A"), outfit="vest", main=PAPER, accent=BLACK,
                      second=BLACK, apron=PAPER, left="ham", right="knife"),
     # --- Jaén ------------------------------------------------------------
-    "sereno": dict(skin="media", hair=("short", GREY), beard_=("moustache", GREY), hat_=("peaked", "#2F3E5C", GOLD), outfit="jacket",
-                   main="#2F3E5C", accent=GOLD, second="#2B2A33", left="lantern", right="staff"),
     "preso": dict(skin="media", hair=("curly", "#3A2A1E"), beard_=("short", "#3A2A1E"), outfit="shirt", main="#D9CDB4", accent="#8A6243",
                   second="#6E5A44", left="bread", right="bag"),
     "pastor": dict(skin="morena", hair=("short", "#4A3222"), beard_=("short", "#4A3222"), hat_=("straw", "#8A6243"), outfit="vest",
@@ -63,8 +59,6 @@ CHARACTERS = {
                       second="#3A5A7A", left="basket", right="tomato", raise_right=True),
     "barrilero": dict(skin="media", hair=("short", GREY), beard_=("moustache", GREY), hat_=("cap", "#4A3A2E"), outfit="vest",
                       main=PAPER, accent="#8A6243", second="#4A3A2E", apron="#8A6243", left="barrel", right="hammer"),
-    "pescador": dict(skin="morena", hair=("curly", "#2A1E1A"), beard_=("short", "#2A1E1A"), hat_=("cap", INDIGO), outfit="shirt",
-                     main="#E9DCC0", accent=INDIGO, second=INDIGO, left="net", right="shrimp", raise_right=True),
     # --- Gastronomía de Málaga, Sevilla y Granada -----------------------------
     "espetero": dict(skin="morena", hair=("short", "#2A1E1A"), beard_=("short", "#2A1E1A"), outfit="shirt", main=PAPER, accent=SEA,
                      second="#3A5A7A", apron=PAPER, right="espeto", raise_right=True),
@@ -74,12 +68,8 @@ CHARACTERS = {
                    second="#E9DCC0", apron=PAPER, left="grapes"),
     "naranjera": dict(skin="media", hair=("bun", "#2A1E1A"), hat_=("flower", PAPER, GOLD), outfit="dress", main="#E8812E", accent=PAPER,
                       second="#4F8B5A", left="oranges", right="orange", raise_right=True),
-    "escoces": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#C0643A"), beard_=("moustache", "#C0643A"), hat_=("beret", "#2F4A6E"),
-                    outfit="jacket", main="#4A6E4A", accent=CLAY, second="#6E5A44", left="scroll", right="jar", raise_right=True),
     "aceitunero": dict(skin="media", hair=("slick", "#2A1E1A"), beard_=("moustache", "#2A1E1A"), hat_=("cap", "#4A3A2E"), outfit="vest",
                        main=PAPER, accent=OLIVE, second="#3A3A48", left="olives"),
-    "especiera": dict(skin="media", hair=("long", "#2A1E1A"), hat_=("kerchief", "#D98A2E", "#6E2C5E"), outfit="dress", main="#6E2C5E",
-                      accent=GOLD, second="#D98A2E", apron="#F2E3C4", left="spicesack"),
     "ceferino": dict(skin="clara", hair=("slick", "#3A2A1E"), beard_=("moustache", "#3A2A1E"), hat_=("toque", PAPER), outfit="shirt",
                      main=PAPER, accent="#C9A05E", second="#3A3A48", apron=PAPER, right="pastrytray", raise_right=True),
     "tornera": dict(skin="clara", hair=None, hat_=("veil", "#2B2A33"), outfit="habit", main="#2B2A33", accent=PAPER, left="box",
@@ -184,6 +174,20 @@ CHARACTERS = {
                       main="#2F6F73", accent=GOLD, second="#E8C872", left="scroll", right="lute"),
     "galiana": dict(skin="media", hair=("long", "#1E1A1A"), hat_=("veil", "#C0476A"), outfit="dress", main="#E8C872", accent="#C0476A",
                     second="#C0476A", left="flower", raise_right=True),
+    # --- Personajes reales o propios que sustituyen a los genéricos ------------------
+    "lagarto": dict(skin="#7FA35A", eyes="#2B2A33", hair=None, hat_=None, outfit="tunic", main="#5E8A45", accent="#C9A05E",
+                    extra_back='<path d="M120 230Q180 236 188 200Q192 176 172 170Q184 196 160 212Q140 222 120 214Z" fill="#6E9A4E" stroke="#1B2A3A" stroke-width="2.4"/>',
+                    extra='<path d="M78 40L86 26L94 38L100 22L106 38L114 26L122 40" fill="#C9A05E" stroke="#1B2A3A" stroke-width="1.8"/>'
+                          '<circle cx="80" cy="84" r="3" fill="#5E8A45"/><circle cx="118" cy="88" r="3" fill="#5E8A45"/><circle cx="100" cy="96" r="2.4" fill="#5E8A45"/>'),
+    "charlesadam": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#8A5A3A"), beard_=("full", "#8A5A3A"), hat_=("bowler", "#4A4A55", BLACK),
+                        outfit="jacket", main="#4A3A2E", accent=PAPER, second="#3A3A48", left="scroll", right="ball", raise_right=True),
+    "keiller": dict(skin="clara", eyes="#3A5A7A", hair=("bun", "#8A5A3A"), hat_=("kerchief", PAPER, "#2F4A6E"), outfit="dress", main="#2F6F4A",
+                    accent="#D8412F", second="#7A2335", apron=PAPER, left="jar", right="orange", raise_right=True),
+    "pacopiloto": dict(skin="morena", hair=("short", "#2A1E1A"), beard_=("moustache", "#2A1E1A"), hat_=("cap", "#6E5A44"), outfit="shirt",
+                       main="#DCEBE6", accent="#3A6EA5", second="#3A3A48", left="tomato", right="hammer"),
+    "lorca": dict(skin="media", hair=("slick", "#1E1A1A"), outfit="jacket", main="#3A3A48", accent="#D8412F", second="#2B2A33",
+                  left="book", right="quill", raise_right=True,
+                  extra='<path d="M74 58Q84 52 92 56M108 56Q116 52 126 58" fill="none" stroke="#1E1A1A" stroke-width="4"/>'),
 }
 
 if __name__ == "__main__":

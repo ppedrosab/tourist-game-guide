@@ -177,12 +177,12 @@ Arte en `scripts/art/leyendas_andalucia_*.py`.
 cada una; diseño y datos a verificar en `docs/GDD_CORDOBA.md`, `GDD_HUELVA.md`, `GDD_JAEN.md`, `GDD_ALMERIA.md`):
 - Córdoba: «La biblioteca del califa» (Lubna, Almanzor, un librero) y «¿Quién le puso tomate al
   salmorejo?» (patiera, Ziryab, jornalero).
-- Huelva: «¿Quién trajo el fútbol a España?» (el doctor Mackay, de «usted»; minero; marinero) y «¿Por
+- Huelva: «¿Quién trajo el fútbol a España?» (el doctor Mackay, de «usted»; minero; Charles Adam) y «¿Por
   qué nos llaman choqueros?» (choquera, fresera, cortador).
-- Jaén: «¿Quién mató al lagarto de la Malena?» (sereno, preso, pastor; veredicto: nadie, la piel de un
+- Jaén: «¿Quién mató al lagarto de la Malena?» (el propio lagarto, preso, pastor; veredicto: nadie, la piel de un
   caimán) y «¿Quién plantó el mar de olivos?» (catadora, vareador, molinero).
 - Almería: «¿Qué significa Almería?» (vigía, Jayrán, sedera) y «¿Quién convirtió el desierto en
-  huerta?» (hortelana, barrilero, pescador).
+  huerta?» (hortelana, barrilero, Paco el Piloto).
 - Personajes paramétricos: `scripts/art/figure.py` (misma cabeza y 8 caras; pelo, barba, tocado, ropa y
   objetos en las manos) y el reparto en `scripts/art/andalucia_sprites.py`. Medallones y fondos por
   ciudad en `scripts/art/{ciudad}_collectibles.py` y `{ciudad}_scenes.py`.
@@ -191,7 +191,7 @@ cada una; diseño y datos a verificar en `docs/GDD_CORDOBA.md`, `GDD_HUELVA.md`,
 
 **Rutas gastronómicas de Málaga, Sevilla y Granada** (ver `docs/GDD_GASTRO_ANDALUCIA.md`): «¿Quién
 inventó el espeto?» (espetero, jabegote, pasera), «¿Por qué Sevilla huele a azahar?» (naranjera,
-escocés, aceitunero) y «¿Quién inventó el pionono?» (especiera, Ceferino Isla, hermana tornera).
+Janet Keiller, aceitunero) y «¿Quién inventó el pionono?» (Lorca, Ceferino Isla, hermana tornera).
 Reutilizan los fondos de historia; los nuevos en `scripts/art/gastro_andalucia_scenes.py`. El pack de
 Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin reformatear el archivo.
 

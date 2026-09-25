@@ -26,18 +26,6 @@
   "coverImage": "img/cover_jaen.jpg",
   "characters": [
     {
-      "id": "sereno",
-      "name": {
-        "es": "El Sereno",
-        "en": "The Night Watchman"
-      },
-      "description": {
-        "es": "Sereno del barrio: guarda las llaves de los portales y todas las leyendas de Jaén. Socarrón y noctámbulo.",
-        "en": "The neighbourhood night watchman: he keeps the keys to the doorways and all of Jaén's legends. Wry and a night owl."
-      },
-      "avatar": "sprites/sereno/sereno_neutral.svg"
-    },
-    {
       "id": "preso",
       "name": {
         "es": "El Preso",
@@ -172,6 +160,19 @@
       },
       "avatar": "sprites/bernardolopez/bernardolopez_neutral.svg",
       "era": "1838 - 1870"
+    },
+    {
+      "id": "lagarto",
+      "name": {
+        "es": "El Lagarto de la Malena",
+        "en": "The Lizard of La Malena"
+      },
+      "description": {
+        "es": "El bicho de la leyenda más famosa de Jaén, que hoy tiene estatua junto al Raudal. Despistado, bonachón y con mucho humor.",
+        "en": "The beast of Jaén's most famous legend, which now has a statue by the Raudal. Absent-minded, good-natured and full of humour."
+      },
+      "avatar": "sprites/lagarto/lagarto_neutral.svg",
+      "era": "leyenda"
     }
   ],
   "routes": [
@@ -182,11 +183,11 @@
         "en": "Who Killed the Lizard of La Malena?"
       },
       "summary": {
-        "es": "Cuentan que un lagarto gigante aterrorizaba Jaén desde la fuente de la Magdalena. ¿Lo mató un preso, un pastor… o nunca existió? Con el sereno, recorre el Jaén de las leyendas.",
-        "en": "They say a giant lizard terrorised Jaén from the Magdalena fountain. Did a prisoner kill it, a shepherd… or did it never exist? With the night watchman, explore the Jaén of legends."
+        "es": "Cuentan que un lagarto gigante aterrorizaba Jaén desde la fuente de la Magdalena. ¿Lo mató un preso, un pastor… o nunca existió? Con el propio lagarto, recorre el Jaén de las leyendas.",
+        "en": "They say a giant lizard terrorised Jaén from the Magdalena fountain. Did a prisoner kill it, a shepherd… or did it never exist? With the lizard himself, explore the Jaén of legends."
       },
       "era": "1246 - 1628",
-      "guideCharacterId": "sereno",
+      "guideCharacterId": "lagarto",
       "durationMin": 100,
       "distanceKm": 2.6,
       "difficulty": "medium",
@@ -236,7 +237,7 @@
               ],
               "characters": [
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "happy",
                   "position": "left"
                 }
@@ -244,25 +245,25 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "happy",
               "text": {
-                "es": "¡Las diez y sereno! Buenas noches… o buenos días, que con este farol ya no sé. Soy el sereno del barrio: guardo las llaves de los portales y todas las historias de Jaén.",
-                "en": "Ten o'clock and all's well! Good evening… or good morning, with this lantern I lose track. I'm the neighbourhood night watchman: I keep the keys to the doorways and all of Jaén's stories."
+                "es": "¡Buenas noches! No te asustes: soy el lagarto de la Malena. O lo que queda de mi leyenda. Aquí en Jaén todo el mundo me conoce.",
+                "en": "Good evening! Don't be scared: I'm the lizard of La Malena. Or what's left of my legend. Here in Jaén everybody knows me."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "dramatic",
               "text": {
-                "es": "Y la más famosa es la del lagarto de la Malena: un bicho enorme que vivía junto a la fuente de la Magdalena y se comía a vecinos y ovejas. Alguien lo mató. ¿Quién?",
-                "en": "And the most famous is the lizard of La Malena: an enormous beast that lived by the Magdalena fountain and ate neighbours and sheep. Somebody killed it. Who?"
+                "es": "Dicen que vivía junto a la fuente de la Magdalena y que me comía a vecinos y ovejas. Y dicen que alguien me mató… pero no me acuerdo de quién. ¿Me ayudas?",
+                "en": "They say I lived by the Magdalena fountain and ate neighbours and sheep. And they say somebody killed me… but I can't remember who. Will you help?"
               }
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "text": {
                 "es": "Cada abuela lo cuenta a su manera. Unos dicen que fue un preso; otros, un pastor. Y hay quien dice que todo salió de una piel. Apúntalo todo, detective.",
@@ -336,7 +337,7 @@
               ],
               "characters": [
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "neutral",
                   "position": "left"
                 },
@@ -365,7 +366,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "text": {
                 "es": "Él dice que fue él. Pero en la Malena hay un pastor que dice lo mismo. ¿A quién seguimos?",
@@ -407,7 +408,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "sereno",
+            "characterId": "lagarto",
             "expression": "thinking",
             "text": {
               "es": "Dos versiones, dos caminos. ¿Seguimos al preso hacia San Ildefonso, o al pastor por los baños árabes y San Juan?",
@@ -475,7 +476,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -499,11 +500,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "surprised",
               "text": {
-                "es": "¿Una piel de verdad? Entonces algo hubo… Pero, ¿era de un lagarto de Jaén?",
-                "en": "A real skin? Then there was something… But was it from a Jaén lizard?"
+                "es": "¿Una piel de verdad? Entonces algo hubo… Pero ¿era mía?",
+                "en": "A real skin? Then there was something… But was it mine?"
               }
             }
           ],
@@ -572,7 +573,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "thinking",
                   "position": "right"
                 }
@@ -597,7 +598,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "text": {
                 "es": "Ahá. Un preso que no estuvo allí. Apuntado.",
@@ -670,7 +671,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -694,7 +695,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "text": {
                 "es": "El preso dice pólvora y pan; el pastor, yesca y cordero. Los dos lo mataron… de maneras distintas.",
@@ -767,7 +768,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -792,7 +793,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "happy",
               "text": {
                 "es": "Historias de dragones y lagartos hay en muchas ciudades de Europa. Y en muchas iglesias colgaba la piel de algún bicho raro traído de lejos.",
@@ -849,7 +850,7 @@
               ],
               "characters": [
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "thinking",
                   "position": "left"
                 },
@@ -869,7 +870,7 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "variants": [
                 {
@@ -920,7 +921,7 @@
             }
           },
           "decisionIntro": {
-            "characterId": "sereno",
+            "characterId": "lagarto",
             "expression": "thinking",
             "text": {
               "es": "¿Bajamos a buscar la cueva del lagarto con el pastor, o seguimos la pista de la piel con el preso?",
@@ -1056,7 +1057,7 @@
               ],
               "characters": [
                 {
-                  "id": "sereno",
+                  "id": "lagarto",
                   "expression": "proud",
                   "position": "left"
                 },
@@ -1077,11 +1078,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "thinking",
               "text": {
-                "es": "Aquí lo tienes, de piedra. Repasa el cuaderno: el preso, el pastor, la piel. ¿Quién mató al lagarto de la Malena?",
-                "en": "Here it is, in stone. Go over your notebook: the prisoner, the shepherd, the skin. Who killed the lizard of La Malena?"
+                "es": "Aquí estoy, de piedra. Repasa el cuaderno: el preso, el pastor, la piel. ¿Quién mató al lagarto de la Malena?",
+                "en": "Here I am, in stone. Go over your notebook: the prisoner, the shepherd, the skin. Who killed the lizard of La Malena?"
               }
             }
           ],
@@ -1122,7 +1123,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "proud",
               "variants": [
                 {
@@ -1169,11 +1170,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "sereno",
+              "characterId": "lagarto",
               "expression": "happy",
               "text": {
-                "es": "Y si una noche oyes algo moverse junto a la fuente… es el sereno. Soy yo. ¡Las once y sereno!",
-                "en": "And if one night you hear something moving by the fountain… it's the night watchman. It's me. Eleven o'clock and all's well!"
+                "es": "Y si una noche oyes algo moverse junto a la fuente… tranquilo, soy yo. Y ya no como vecinos.",
+                "en": "And if one night you hear something moving by the fountain… don't worry, it's me. And I don't eat neighbours any more."
               }
             }
           ],

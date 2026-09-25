@@ -42,7 +42,7 @@ jardineros** (siguen plantándolos hoy). **Veredicto: los andalusíes.**
 | id | Personaje | Papel |
 | --- | --- | --- |
 | `naranjera` (guía) | Recoge las naranjas de las calles | Narra |
-| `escoces` | Consignatario escocés que embarca naranjas | Sospechoso |
+| `keiller` | Janet Keiller, de Dundee, a la que la tradición atribuye la primera mermelada comercial de naranja de Sevilla | Sospechosa |
 | `aceitunero` | Aliña aceitunas manzanillas y gordales | Coguía |
 
 Caminos: `dinero` = **El río**; `poder` = **El centro**.
@@ -66,7 +66,7 @@ Isla**, que lo llamó así en honor al papa Pío IX, «Pío Nono», y le dio for
 
 | id | Personaje | Papel |
 | --- | --- | --- |
-| `especiera` (guía) | Vende especias junto al antiguo zoco | Narra |
+| `lorca` (guía) | Federico García Lorca, de Fuente Vaqueros, a un paso de Santa Fe | Narra |
 | `ceferino` | Ceferino Isla, pastelero de Santa Fe (1897). Persona real. | Sospechoso |
 | `tornera` | Monja que atiende el torno del convento | Sospechosa |
 
