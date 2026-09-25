@@ -1,6 +1,6 @@
 {
   "id": "jaen",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Jaén",
     "en": "Jaén"
@@ -133,6 +133,45 @@
       },
       "avatar": "sprites/iranzo/iranzo_neutral.svg",
       "era": "s. XV"
+    },
+    {
+      "id": "mona",
+      "name": {
+        "es": "La Mona",
+        "en": "The Mona"
+      },
+      "description": {
+        "es": "Figura de piedra de la fachada de la catedral de Jaén, con fama de traer mala suerte. Coqueta, dramática y muy harta de que la culpen.",
+        "en": "A stone figure on the front of Jaén Cathedral, said to bring bad luck. Vain, dramatic and very tired of being blamed."
+      },
+      "avatar": "sprites/mona/mona_neutral.svg",
+      "era": "leyenda"
+    },
+    {
+      "id": "vandelvira",
+      "name": {
+        "es": "Andrés de Vandelvira",
+        "en": "Andrés de Vandelvira"
+      },
+      "description": {
+        "es": "Arquitecto del Renacimiento que trazó la catedral de Jaén. Práctico, serio y nada supersticioso.",
+        "en": "The Renaissance architect who designed Jaén Cathedral. Practical, serious and not at all superstitious."
+      },
+      "avatar": "sprites/vandelvira/vandelvira_neutral.svg",
+      "era": "1509 - 1575"
+    },
+    {
+      "id": "bernardolopez",
+      "name": {
+        "es": "Bernardo López García",
+        "en": "Bernardo López García"
+      },
+      "description": {
+        "es": "Poeta jiennense del siglo XIX, autor de la «Oda al Dos de Mayo». Valiente con las palabras y amigo de las historias.",
+        "en": "A 19th-century Jaén poet, author of the “Ode to the Second of May”. Brave with words and fond of stories."
+      },
+      "avatar": "sprites/bernardolopez/bernardolopez_neutral.svg",
+      "era": "1838 - 1870"
     }
   ],
   "routes": [
@@ -3527,6 +3566,931 @@
           },
           "icon": "collectibles/jaen_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "fantasma-san-bartolome",
+      "title": {
+        "es": "¿Quién era el fantasma de San Bartolomé?",
+        "en": "Who Was the Ghost of San Bartolomé?"
+      },
+      "summary": {
+        "es": "Un fantasma con sábana y cadenas rondaba una plaza de Jaén. ¿El hijo de un conde, la Mona de la catedral o alguien de carne y hueso? Con la Mona, Andrés de Vandelvira y el poeta Bernardo López García.",
+        "en": "A ghost with a sheet and chains haunted a square in Jaén. A count's son, the cathedral's Mona or someone of flesh and blood? With the Mona, Andrés de Vandelvira and the poet Bernardo López García."
+      },
+      "era": "s. XVI - XIX",
+      "guideCharacterId": "mona",
+      "durationMin": 60,
+      "distanceKm": 2.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Las piedras",
+            "en": "The stones"
+          },
+          "trail": {
+            "es": "camino de las piedras",
+            "en": "stones trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los fantasmas",
+            "en": "The ghosts"
+          },
+          "trail": {
+            "es": "camino de los fantasmas",
+            "en": "ghosts trail"
+          }
+        }
+      },
+      "startNodeId": "l1_catedral",
+      "nodes": [
+        {
+          "id": "l1_catedral",
+          "title": {
+            "es": "Catedral de Jaén",
+            "en": "Jaén Cathedral"
+          },
+          "location": {
+            "lat": 37.7654,
+            "lng": -3.7897
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mona",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "happy",
+              "text": {
+                "es": "¡Psst! Aquí arriba, en la fachada. Soy la Mona, una figura de piedra de la catedral. Dicen que traigo mala suerte a los recién casados. ¡Qué fama!",
+                "en": "Psst! Up here, on the front. I'm the Mona, a stone figure on the cathedral. They say I bring bad luck to newlyweds. What a reputation!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "thinking",
+              "text": {
+                "es": "Y ahora encima me echan la culpa de un fantasma que se paseaba por la plaza de San Bartolomé. ¿Me ayudas a descubrir quién era?",
+                "en": "And now on top of that they blame me for a ghost that wandered around Plaza de San Bartolomé. Will you help me find out who it was?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: el hijo de un conde que murió en esa casa, yo misma bajando de noche de mi fachada… o alguien de carne y hueso. Apunta.",
+                "en": "Three suspects: the son of a count who died in that house, me coming down from my façade at night… or someone of flesh and blood. Take notes."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que la Mona era una joven bellísima a la que un mago convirtió en piedra, y que trae desgracia a quien la desafía.",
+                "en": "It's said the Mona was a beautiful young woman whom a wizard turned to stone, and that she brings misfortune to whoever challenges her."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿A quién dice la tradición que trae mala suerte la Mona?",
+              "en": "Who does tradition say the Mona brings bad luck to?"
+            },
+            "options": [
+              {
+                "es": "A los músicos",
+                "en": "Musicians"
+              },
+              {
+                "es": "A los recién casados",
+                "en": "Newlyweds"
+              },
+              {
+                "es": "A los panaderos",
+                "en": "Bakers"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "A los recién casados, que por eso evitaban pasar por su fachada.",
+              "en": "Newlyweds, who avoided walking past her façade for that reason."
+            }
+          },
+          "clue": {
+            "id": "fsb_pista_mona",
+            "text": {
+              "es": "La Mona · A la Mona, figura de piedra de la catedral, le echan la culpa de muchas desgracias.",
+              "en": "The Mona · The Mona, a stone figure on the cathedral, is blamed for many misfortunes."
+            }
+          },
+          "nextNodeId": "l2_velez",
+          "nextHint": {
+            "es": "Rodea la catedral hasta la calle Valparaíso. Dos minutos.",
+            "en": "Walk round the cathedral to Calle Valparaíso. Two minutes."
+          }
+        },
+        {
+          "id": "l2_velez",
+          "title": {
+            "es": "Palacio de los Vélez",
+            "en": "Palace of the Vélez"
+          },
+          "location": {
+            "lat": 37.7653,
+            "lng": -3.7891
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_velez.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_velez.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mona",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "vandelvira",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vandelvira",
+              "expression": "proud",
+              "text": {
+                "es": "Andrés de Vandelvira, arquitecto. Trazé esa catedral en el siglo XVI. Y te digo una cosa: las piedras no bajan a pasear.",
+                "en": "Andrés de Vandelvira, architect. I designed that cathedral in the 16th century. And I'll tell you something: stones don't come down for a walk."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en este palacio una joven fue encerrada en la torre por amar a un criado, y que su fantasma aún se asoma a las ventanas.",
+                "en": "It's said that in this palace a young woman was locked in the tower for loving a servant, and that her ghost still looks out of the windows."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Otro fantasma más? En Jaén hay más fantasmas que olivos…",
+                "en": "Another ghost? Jaén has more ghosts than olive trees…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién trazó la catedral de Jaén?",
+              "en": "Who designed Jaén Cathedral?"
+            },
+            "options": [
+              {
+                "es": "Andrés de Vandelvira",
+                "en": "Andrés de Vandelvira"
+              },
+              {
+                "es": "Gaudí",
+                "en": "Gaudí"
+              },
+              {
+                "es": "Herrera",
+                "en": "Herrera"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Andrés de Vandelvira, el gran arquitecto del Renacimiento andaluz.",
+              "en": "Andrés de Vandelvira, the great architect of the Andalusian Renaissance."
+            }
+          },
+          "clue": {
+            "id": "fsb_pista_piedras",
+            "text": {
+              "es": "La Mona · Vandelvira asegura que las figuras de piedra no bajan a pasear.",
+              "en": "The Mona · Vandelvira insists stone figures don't come down for a walk."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "mona",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Vamos a ver otras caras de piedra de la ciudad o a buscar otros fantasmas?",
+              "en": "Shall we go and see other stone faces in the city, or look for other ghosts?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Las caras de piedra",
+                "en": "The stone faces"
+              },
+              "hint": {
+                "es": "San Ildefonso",
+                "en": "San Ildefonso"
+              },
+              "targetNodeId": "la_sanildefonso",
+              "setFlags": [
+                "camino_piedra"
+              ],
+              "distanceM": 400,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "Los fantasmas",
+                "en": "The ghosts"
+              },
+              "hint": {
+                "es": "Baños árabes",
+                "en": "Arab Baths"
+              },
+              "targetNodeId": "lb_banos",
+              "setFlags": [
+                "camino_fantasmas"
+              ],
+              "distanceM": 600,
+              "walkMin": 9
+            }
+          ]
+        },
+        {
+          "id": "la_sanildefonso",
+          "title": {
+            "es": "Basílica de San Ildefonso",
+            "en": "Basilica of San Ildefonso"
+          },
+          "location": {
+            "lat": 37.7644,
+            "lng": -3.7862
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanildefonso.svg"
+              ],
+              "characters": [
+                {
+                  "id": "vandelvira",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "mona",
+                  "expression": "surprised",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que la cabeza de piedra de un contrafuerte de esta iglesia es la de un joven que, a finales del siglo XVI, robó las lámparas de plata de la capilla y fue ajusticiado.",
+                "en": "It's said that the stone head on a buttress of this church belongs to a young man who, at the end of the 16th century, stole the chapel's silver lamps and was executed."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vandelvira",
+              "expression": "neutral",
+              "text": {
+                "es": "Otra cara de piedra, y tampoco se mueve. Las tallamos para que se queden quietas, créeme.",
+                "en": "Another stone face, and it doesn't move either. We carve them to stay still, believe me."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "surprised",
+              "text": {
+                "es": "Entonces… si ni él ni yo nos movemos, el fantasma tenía que ser otra cosa.",
+                "en": "So… if neither he nor I move, the ghost had to be something else."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué robó, según la leyenda, el joven de la cabeza de piedra?",
+              "en": "What did the young man with the stone head steal, according to legend?"
+            },
+            "options": [
+              {
+                "es": "Un caballo",
+                "en": "A horse"
+              },
+              {
+                "es": "Una campana",
+                "en": "A bell"
+              },
+              {
+                "es": "Lámparas de plata",
+                "en": "Silver lamps"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Las lámparas de plata de la capilla.",
+              "en": "The chapel's silver lamps."
+            }
+          },
+          "clue": {
+            "id": "fsb_pista_quietas",
+            "text": {
+              "es": "Un vivo · Ni la Mona ni la cabeza de San Ildefonso se mueven: el fantasma era otra cosa.",
+              "en": "Someone alive · Neither the Mona nor the San Ildefonso head moves: the ghost was something else."
+            }
+          },
+          "nextNodeId": "l4_sanlorenzo",
+          "nextHint": {
+            "es": "Ve hacia el Arco de San Lorenzo. Unos 12 minutos.",
+            "en": "Head to the San Lorenzo Arch. About 12 minutes."
+          }
+        },
+        {
+          "id": "lb_banos",
+          "title": {
+            "es": "Baños árabes",
+            "en": "Arab Baths"
+          },
+          "location": {
+            "lat": 37.7702,
+            "lng": -3.7915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_banos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_banos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "bernardolopez",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "mona",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bernardolopez",
+              "expression": "happy",
+              "text": {
+                "es": "Bernardo López García, poeta de Jaén. Vivía por aquí cuando en la plaza de San Bartolomé empezaron a hablar de un fantasma con sábana y cadenas.",
+                "en": "Bernardo López García, a Jaén poet. I lived around here when people in Plaza de San Bartolomé started talking about a ghost with a sheet and chains."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los baños árabes de Jaén, del siglo XI, están bajo el Palacio de Villardompardo. Son de los más grandes que se conservan en España.",
+                "en": "Jaén's Arab baths, from the 11th century, lie beneath the Villardompardo Palace. They are among the largest surviving in Spain."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bernardolopez",
+              "expression": "thinking",
+              "text": {
+                "es": "Sábana blanca, cadenas… Un fantasma de libro. Demasiado de libro, diría yo.",
+                "en": "A white sheet, chains… A textbook ghost. Too textbook, if you ask me."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Bajo qué palacio están los baños árabes de Jaén?",
+              "en": "Beneath which palace are Jaén's Arab baths?"
+            },
+            "options": [
+              {
+                "es": "El Palacio Real",
+                "en": "The Royal Palace"
+              },
+              {
+                "es": "El Palacio de Villardompardo",
+                "en": "The Villardompardo Palace"
+              },
+              {
+                "es": "La Alhambra",
+                "en": "The Alhambra"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Bajo el Palacio de Villardompardo.",
+              "en": "Beneath the Villardompardo Palace."
+            }
+          },
+          "clue": {
+            "id": "fsb_pista_sabana",
+            "text": {
+              "es": "Un vivo · El fantasma llevaba sábana y cadenas: demasiado de libro.",
+              "en": "Someone alive · The ghost wore a sheet and chains: too textbook."
+            }
+          },
+          "nextNodeId": "l4_sanlorenzo",
+          "nextHint": {
+            "es": "Al Arco de San Lorenzo. Unos 4 minutos.",
+            "en": "To the San Lorenzo Arch. About 4 minutes."
+          }
+        },
+        {
+          "id": "l4_sanlorenzo",
+          "title": {
+            "es": "Arco de San Lorenzo",
+            "en": "San Lorenzo Arch"
+          },
+          "location": {
+            "lat": 37.768,
+            "lng": -3.7908
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanlorenzo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mona",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "bernardolopez",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Arco de San Lorenzo es lo que queda de una iglesia medieval. En él se guarda una capilla con decoración mudéjar.",
+                "en": "The San Lorenzo Arch is what remains of a medieval church. It houses a chapel with Mudéjar decoration."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_piedra"
+                  ],
+                  "text": {
+                    "es": "Vienes de las caras de piedra: ninguna se mueve. ¿Seguimos la pista del valiente o la de la casa?",
+                    "en": "You've come from the stone faces: none of them move. Shall we follow the brave man lead or the house lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fantasmas"
+                  ],
+                  "text": {
+                    "es": "Vienes de los fantasmas: uno con sábana demasiado de libro. ¿Seguimos la pista del valiente o la de la casa?",
+                    "en": "You've come from the ghosts: one with a too-textbook sheet. Shall we follow the brave man lead or the house lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es hoy el Arco de San Lorenzo?",
+              "en": "What is the San Lorenzo Arch today?"
+            },
+            "options": [
+              {
+                "es": "Lo que queda de una iglesia medieval",
+                "en": "What remains of a medieval church"
+              },
+              {
+                "es": "Una estación",
+                "en": "A station"
+              },
+              {
+                "es": "Un puente",
+                "en": "A bridge"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los restos de una iglesia medieval, con una capilla mudéjar.",
+              "en": "The remains of a medieval church, with a Mudéjar chapel."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "mona",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El valiente o la casa?",
+              "en": "The brave man or the house?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del valiente",
+                "en": "The brave man lead"
+              },
+              "hint": {
+                "es": "Con Bernardo López",
+                "en": "With Bernardo López"
+              },
+              "targetNodeId": "l4a_valiente",
+              "setFlags": [
+                "version_valiente"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la casa",
+                "en": "The house lead"
+              },
+              "hint": {
+                "es": "Con Vandelvira",
+                "en": "With Vandelvira"
+              },
+              "targetNodeId": "l4b_casa",
+              "setFlags": [
+                "version_casa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_valiente",
+          "title": {
+            "es": "El valiente",
+            "en": "The brave man"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "bernardolopez",
+              "expression": "dramatic",
+              "text": {
+                "es": "Una noche un joven valiente se plantó delante del fantasma y le tiró de la sábana. ¿Y qué había debajo? ¡Un caballero!",
+                "en": "One night a brave young man stood in front of the ghost and pulled off its sheet. And what was underneath? A gentleman!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bernardolopez",
+              "expression": "happy",
+              "text": {
+                "es": "Iba disfrazado a ver a su amante, para que nadie lo reconociera. Más miedo le daba que lo descubrieran que cualquier fantasma.",
+                "en": "He went in disguise to visit his sweetheart, so nobody would recognise him. He was more afraid of being found out than of any ghost."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fsb_pista_disfraz",
+            "text": {
+              "es": "Un vivo · Bajo la sábana apareció un caballero que iba disfrazado a ver a su amante.",
+              "en": "Someone alive · Under the sheet was a gentleman who went in disguise to see his sweetheart."
+            }
+          },
+          "nextNodeId": "l5_sanbartolome",
+          "nextHint": {
+            "es": "A la plaza de San Bartolomé, aquí al lado. Un minuto.",
+            "en": "To Plaza de San Bartolomé, right next door. One minute."
+          }
+        },
+        {
+          "id": "l4b_casa",
+          "title": {
+            "es": "La casa",
+            "en": "The house"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "vandelvira",
+              "expression": "thinking",
+              "text": {
+                "es": "La casa de la plaza la levantó en el siglo XIX el arquitecto Felipe Mingo, mucho después de mí. Casas nuevas, fantasmas nuevos.",
+                "en": "The house on the square was built in the 19th century by the architect Felipe Mingo, long after my time. New houses, new ghosts."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "vandelvira",
+              "expression": "proud",
+              "text": {
+                "es": "Y te digo como arquitecto: un fantasma que hace ruido de cadenas y va siempre a la misma hora… tiene pies, y bien firmes.",
+                "en": "And I tell you as an architect: a ghost that rattles chains and always comes at the same time… has feet, and very firm ones."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fsb_pista_pies",
+            "text": {
+              "es": "Un vivo · Un fantasma con horario fijo y ruido de cadenas tiene pies.",
+              "en": "Someone alive · A ghost with a fixed schedule and rattling chains has feet."
+            }
+          },
+          "nextNodeId": "l5_sanbartolome",
+          "nextHint": {
+            "es": "A la plaza de San Bartolomé, aquí al lado. Un minuto.",
+            "en": "To Plaza de San Bartolomé, right next door. One minute."
+          }
+        },
+        {
+          "id": "l5_sanbartolome",
+          "title": {
+            "es": "Plaza de San Bartolomé",
+            "en": "Plaza de San Bartolomé"
+          },
+          "location": {
+            "lat": 37.7681,
+            "lng": -3.7914
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_sanbartolome.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanbartolome.svg"
+              ],
+              "characters": [
+                {
+                  "id": "mona",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "bernardolopez",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La plaza toma su nombre de la iglesia de San Bartolomé, de origen medieval. La casa del fantasma se levantó aquí en el siglo XIX.",
+                "en": "The square takes its name from the church of San Bartolomé, of medieval origin. The ghost's house was built here in the 19th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. El hijo del conde, yo misma o alguien de carne y hueso: ¿quién era el fantasma de San Bartolomé?",
+                "en": "Verdict time. The count's son, me, or someone of flesh and blood: who was the ghost of San Bartolomé?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién era el fantasma, según la leyenda?",
+              "en": "Who was the ghost, according to the legend?"
+            },
+            "options": [
+              {
+                "es": "El hijo del conde",
+                "en": "The count's son"
+              },
+              {
+                "es": "La Mona, bajada de la catedral",
+                "en": "The Mona, down from the cathedral"
+              },
+              {
+                "es": "Un caballero disfrazado que iba a ver a su amante",
+                "en": "A disguised gentleman visiting his sweetheart"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Un vivo. Según la leyenda, un joven valiente destapó al fantasma y encontró a un caballero con sábana que iba a ver a su amante sin ser reconocido. La Mona es inocente… al menos de esto.",
+              "en": "Someone alive. According to the legend, a brave young man unmasked the ghost and found a gentleman in a sheet visiting his sweetheart unrecognised. The Mona is innocent… of this, at least."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_piedra",
+                    "version_valiente"
+                  ],
+                  "text": {
+                    "es": "Las piedras y el valiente: tiraste de la sábana. Eres cazafantasmas de Jaén.",
+                    "en": "The stones and the brave man: you pulled the sheet. You're Jaén's ghostbuster."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_piedra",
+                    "version_casa"
+                  ],
+                  "text": {
+                    "es": "Las piedras y la casa: piensas como un arquitecto. Eres aparejador de leyendas.",
+                    "en": "The stones and the house: you think like an architect. You're a builder of legends."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fantasmas",
+                    "version_valiente"
+                  ],
+                  "text": {
+                    "es": "Los fantasmas y el valiente: sin miedo a nada. Eres sereno de San Bartolomé.",
+                    "en": "The ghosts and the brave man: afraid of nothing. You're San Bartolomé's night watchman."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fantasmas",
+                    "version_casa"
+                  ],
+                  "text": {
+                    "es": "Los fantasmas y la casa: a ti no te la dan con sábanas. Eres detective de la Mona.",
+                    "en": "The ghosts and the house: nobody fools you with a sheet. You're the Mona's detective."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "happy",
+              "text": {
+                "es": "¡Por fin limpio mi nombre! Y ahora vuelvo a mi fachada… Si te casas, no me mires, por si acaso.",
+                "en": "At last my name is cleared! Now back to my façade… If you get married, don't look at me, just in case."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "cazafantasmas_jaen",
+          "requires": [
+            "camino_piedra",
+            "version_valiente"
+          ],
+          "title": {
+            "es": "Cazafantasmas de Jaén",
+            "en": "Jaén's ghostbuster"
+          }
+        },
+        {
+          "id": "aparejador_leyendas",
+          "requires": [
+            "camino_piedra",
+            "version_casa"
+          ],
+          "title": {
+            "es": "Aparejador de leyendas",
+            "en": "Builder of legends"
+          }
+        },
+        {
+          "id": "sereno_sanbartolome",
+          "requires": [
+            "camino_fantasmas",
+            "version_valiente"
+          ],
+          "title": {
+            "es": "Sereno de San Bartolomé",
+            "en": "San Bartolomé's night watchman"
+          }
+        },
+        {
+          "id": "detective_mona",
+          "requires": [
+            "camino_fantasmas",
+            "version_casa"
+          ],
+          "title": {
+            "es": "Detective de la Mona",
+            "en": "The Mona's detective"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "mona",
+          "name": {
+            "es": "La Mona",
+            "en": "The Mona"
+          },
+          "icon": "collectibles/jaen_leyenda_mona.svg",
+          "awardedAtNodeId": "l1_catedral"
+        },
+        {
+          "id": "compas",
+          "name": {
+            "es": "El compás de Vandelvira",
+            "en": "Vandelvira's compass"
+          },
+          "icon": "collectibles/jaen_leyenda_compas.svg",
+          "awardedAtNodeId": "l2_velez"
+        },
+        {
+          "id": "lampara_plata",
+          "name": {
+            "es": "La lámpara de plata",
+            "en": "The silver lamp"
+          },
+          "icon": "collectibles/jaen_leyenda_lampara.svg",
+          "awardedAtNodeId": "la_sanildefonso"
+        },
+        {
+          "id": "cadenas",
+          "name": {
+            "es": "Las cadenas",
+            "en": "The chains"
+          },
+          "icon": "collectibles/jaen_leyenda_cadenas.svg",
+          "awardedAtNodeId": "lb_banos"
+        },
+        {
+          "id": "sabana",
+          "name": {
+            "es": "La sábana del fantasma",
+            "en": "The ghost's sheet"
+          },
+          "icon": "collectibles/jaen_leyenda_sabana.svg",
+          "awardedAtNodeId": "l5_sanbartolome"
+        },
+        {
+          "id": "insignia_fantasma",
+          "name": {
+            "es": "¿Quién era el fantasma de San Bartolomé?",
+            "en": "Who Was the Ghost of San Bartolomé?"
+          },
+          "icon": "collectibles/jaen_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

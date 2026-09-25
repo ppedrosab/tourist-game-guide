@@ -1,6 +1,6 @@
 {
   "id": "almeria",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Almería",
     "en": "Almería"
@@ -136,6 +136,45 @@
       },
       "avatar": "sprites/salmeron/salmeron_neutral.svg",
       "era": "1838 - 1908"
+    },
+    {
+      "id": "santisteban",
+      "name": {
+        "es": "Joaquín Santisteban",
+        "en": "Joaquín Santisteban"
+      },
+      "description": {
+        "es": "Profesor, arqueólogo y cronista de Almería, que recogió las leyendas de la Alcazaba y murió pobre a sus pies. Sabio y entrañable.",
+        "en": "A teacher, archaeologist and chronicler of Almería, who gathered the Alcazaba's legends and died poor at its foot. Learned and endearing."
+      },
+      "avatar": "sprites/santisteban/santisteban_neutral.svg",
+      "era": "s. XIX - XX"
+    },
+    {
+      "id": "almotacin",
+      "name": {
+        "es": "Almotacín",
+        "en": "Almotacín"
+      },
+      "description": {
+        "es": "Rey de la taifa de Almería en el siglo XI, protector de poetas. Orgulloso y generoso.",
+        "en": "King of the taifa of Almería in the 11th century, a patron of poets. Proud and generous."
+      },
+      "avatar": "sprites/almotacin/almotacin_neutral.svg",
+      "era": "s. XI"
+    },
+    {
+      "id": "galiana",
+      "name": {
+        "es": "Galiana",
+        "en": "Galiana"
+      },
+      "description": {
+        "es": "La favorita del rey Almotacín en las leyendas de la Alcazaba. Observadora y con mucha guasa.",
+        "en": "King Almotacín's favourite in the legends of the Alcazaba. Observant and full of fun."
+      },
+      "avatar": "sprites/galiana/galiana_neutral.svg",
+      "era": "leyenda"
     }
   ],
   "routes": [
@@ -3545,6 +3584,930 @@
           },
           "icon": "collectibles/almeria_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "tesoro-alcazaba",
+      "title": {
+        "es": "¿Dónde está el tesoro de la Alcazaba?",
+        "en": "Where Is the Alcazaba's Treasure?"
+      },
+      "summary": {
+        "es": "Todo Almería ha oído hablar del tesoro escondido de la Alcazaba. ¿Un palacio encantado, una familia que se hizo rica o ningún tesoro? Con el cronista Joaquín Santisteban, el rey Almotacín y Galiana.",
+        "en": "All of Almería has heard of the Alcazaba's hidden treasure. An enchanted palace, a family that got rich or no treasure at all? With the chronicler Joaquín Santisteban, King Almotacín and Galiana."
+      },
+      "era": "s. XI - XIX",
+      "guideCharacterId": "santisteban",
+      "durationMin": 70,
+      "distanceKm": 2.4,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La muralla",
+            "en": "The wall"
+          },
+          "trail": {
+            "es": "camino de la muralla",
+            "en": "wall trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Chanca",
+            "en": "La Chanca"
+          },
+          "trail": {
+            "es": "camino de La Chanca",
+            "en": "La Chanca trail"
+          }
+        }
+      },
+      "startNodeId": "l1_purchena",
+      "nodes": [
+        {
+          "id": "l1_purchena",
+          "title": {
+            "es": "Puerta de Purchena",
+            "en": "Puerta de Purchena"
+          },
+          "location": {
+            "lat": 36.8425,
+            "lng": -2.463
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_purchena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_purchena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "santisteban",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Joaquín Santisteban, profesor, arqueólogo y cronista de Almería. Viví y morí a los pies de la Alcazaba, así que sus secretos los conozco bien.",
+                "en": "Good evening. Joaquín Santisteban, teacher, archaeologist and chronicler of Almería. I lived and died at the foot of the Alcazaba, so I know its secrets well."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "text": {
+                "es": "Hay una leyenda que todos los almerienses han oído: bajo la Alcazaba hay un tesoro escondido. ¿Dónde está?",
+                "en": "There's a legend every Almerian has heard: there's hidden treasure beneath the Alcazaba. Where is it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: un palacio encantado que se abre la noche de San Juan, la casa de una familia que se hizo rica de repente… o ningún sitio. Apunte.",
+                "en": "Three suspects: an enchanted palace that opens on Midsummer Night, the house of a family that suddenly got rich… or nowhere at all. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Puerta de Purchena fue una de las puertas de la muralla medieval de Almería. Hoy es el cruce más concurrido de la ciudad.",
+                "en": "The Puerta de Purchena was one of the gates in Almería's medieval wall. Today it's the city's busiest crossroads."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué fue la Puerta de Purchena?",
+              "en": "What was the Puerta de Purchena?"
+            },
+            "options": [
+              {
+                "es": "Un teatro",
+                "en": "A theatre"
+              },
+              {
+                "es": "Una puerta de la muralla medieval",
+                "en": "A gate in the medieval wall"
+              },
+              {
+                "es": "Un puerto",
+                "en": "A port"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una puerta de la muralla. Hoy es un cruce de calles.",
+              "en": "A gate in the wall. Today it's a crossroads."
+            }
+          },
+          "clue": {
+            "id": "tal_pista_leyenda",
+            "text": {
+              "es": "El palacio encantado · Todos en Almería han oído hablar del tesoro de la Alcazaba.",
+              "en": "The enchanted palace · Everyone in Almería has heard about the Alcazaba treasure."
+            }
+          },
+          "nextNodeId": "l2_plazavieja",
+          "nextHint": {
+            "es": "A la Plaza Vieja. Unos 7 minutos.",
+            "en": "To the Plaza Vieja. About 7 minutes."
+          }
+        },
+        {
+          "id": "l2_plazavieja",
+          "title": {
+            "es": "Plaza Vieja",
+            "en": "Plaza Vieja"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_plazavieja.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_plazavieja.svg"
+              ],
+              "characters": [
+                {
+                  "id": "santisteban",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "almotacin",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almotacin",
+              "expression": "proud",
+              "text": {
+                "es": "Almotacín, rey de la taifa de Almería en el siglo XI. En mi corte había poetas, músicos y sabios. Y en mi palacio de la Alcazaba… riquezas, claro.",
+                "en": "Almotacín, king of the taifa of Almería in the 11th century. My court had poets, musicians and scholars. And in my palace in the Alcazaba… riches, of course."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XI Almería fue uno de los grandes puertos del Mediterráneo, famosa por sus tejidos de seda.",
+                "en": "In the 11th century Almería was one of the great ports of the Mediterranean, famous for its silk textiles."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "text": {
+                "es": "Un rey rico y una fortaleza enorme: con eso ya hay leyenda de tesoro para mil años.",
+                "en": "A rich king and an enormous fortress: that's enough for a thousand years of treasure legends."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué era famosa la Almería del siglo XI?",
+              "en": "What was 11th-century Almería famous for?"
+            },
+            "options": [
+              {
+                "es": "Por sus tejidos de seda",
+                "en": "Its silk textiles"
+              },
+              {
+                "es": "Por sus coches",
+                "en": "Its cars"
+              },
+              {
+                "es": "Por el tabaco",
+                "en": "Tobacco"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por la seda y por su gran puerto.",
+              "en": "For silk and for its great port."
+            }
+          },
+          "clue": {
+            "id": "tal_pista_rey",
+            "text": {
+              "es": "El palacio encantado · El rey Almotacín tuvo una corte rica en la Alcazaba del siglo XI.",
+              "en": "The enchanted palace · King Almotacín held a rich court in the 11th-century Alcazaba."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "santisteban",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos la leyenda de la noche de San Juan por la muralla, o bajamos a La Chanca, donde nacen otras historias?",
+              "en": "Shall we follow the Midsummer Night legend along the wall, or go down to La Chanca, where other stories are born?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por la muralla",
+                "en": "Along the wall"
+              },
+              "hint": {
+                "es": "Muralla de Jayrán",
+                "en": "Jayrán's Wall"
+              },
+              "targetNodeId": "la_muralla",
+              "setFlags": [
+                "camino_muralla"
+              ],
+              "distanceM": 400,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "A La Chanca",
+                "en": "To La Chanca"
+              },
+              "hint": {
+                "es": "Barrio de La Chanca",
+                "en": "La Chanca district"
+              },
+              "targetNodeId": "lb_chanca",
+              "setFlags": [
+                "camino_chanca"
+              ],
+              "distanceM": 700,
+              "walkMin": 10
+            }
+          ]
+        },
+        {
+          "id": "la_muralla",
+          "title": {
+            "es": "Muralla de Jayrán",
+            "en": "Jayrán's Wall"
+          },
+          "location": {
+            "lat": 36.843,
+            "lng": -2.4692
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_muralla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_muralla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "galiana",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "santisteban",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "galiana",
+              "expression": "happy",
+              "text": {
+                "es": "Soy Galiana, la favorita del rey Almotacín, según cuentan. Desde mi torre veía toda la ciudad… y oía todos sus secretos.",
+                "en": "I'm Galiana, King Almotacín's favourite, or so they say. From my tower I could see the whole city… and hear all its secrets."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Santisteban dejó escrito que quien entrara en la Alcazaba la noche de San Juan, a medianoche, vería abrirse un pasadizo hacia un palacio encantado lleno de tesoros… y que quien se llevara algo quedaría condenado a vagar.",
+                "en": "Santisteban wrote that whoever entered the Alcazaba on Midsummer Night, at midnight, would see a passage open to an enchanted palace full of treasure… and that whoever took anything would be condemned to wander."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "galiana",
+              "expression": "thinking",
+              "text": {
+                "es": "Palacio encantado… Yo viví en la Alcazaba y nunca vi ese pasadizo. Aunque a medianoche yo dormía, la verdad.",
+                "en": "Enchanted palace… I lived in the Alcazaba and never saw that passage. Though at midnight I was asleep, to be fair."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué noche se abría el pasadizo, según la leyenda?",
+              "en": "Which night did the passage open, according to the legend?"
+            },
+            "options": [
+              {
+                "es": "Nochevieja",
+                "en": "New Year's Eve"
+              },
+              {
+                "es": "La noche de Reyes",
+                "en": "Twelfth Night"
+              },
+              {
+                "es": "La noche de San Juan",
+                "en": "Midsummer Night"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La noche de San Juan, a medianoche.",
+              "en": "Midsummer Night, at midnight."
+            }
+          },
+          "clue": {
+            "id": "tal_pista_sanjuan",
+            "text": {
+              "es": "El palacio encantado · Según la leyenda, un pasadizo se abre la noche de San Juan hacia un palacio encantado.",
+              "en": "The enchanted palace · According to legend, a passage opens on Midsummer Night to an enchanted palace."
+            }
+          },
+          "nextNodeId": "l4_catedral",
+          "nextHint": {
+            "es": "Baja hacia la catedral. Unos 10 minutos.",
+            "en": "Walk down to the cathedral. About 10 minutes."
+          }
+        },
+        {
+          "id": "lb_chanca",
+          "title": {
+            "es": "Barrio de La Chanca",
+            "en": "La Chanca district"
+          },
+          "location": {
+            "lat": 36.8388,
+            "lng": -2.4748
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_chanca.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_chanca.svg"
+              ],
+              "characters": [
+                {
+                  "id": "santisteban",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "almotacin",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Chanca es un barrio de casas de colores y cuevas, a los pies de la Alcazaba. Su nombre viene de las chancas, los lugares donde se salaba el pescado.",
+                "en": "La Chanca is a district of colourful houses and caves at the foot of the Alcazaba. Its name comes from the chancas, the places where fish were salted."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "proud",
+              "text": {
+                "es": "En el siglo XIX llegó a Almería una familia alemana, los Scheidnagel. Se contaba que, cavando en su casa, dieron con una galería y se hicieron ricos de golpe.",
+                "en": "In the 19th century a German family, the Scheidnagels, came to Almería. People said that, digging in their house, they struck a gallery and got rich overnight."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "almotacin",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Mi tesoro, en manos de unos alemanes? Eso habría que verlo…",
+                "en": "My treasure, in the hands of some Germans? That remains to be seen…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De dónde viene el nombre de La Chanca?",
+              "en": "Where does the name La Chanca come from?"
+            },
+            "options": [
+              {
+                "es": "De una fiesta",
+                "en": "From a festival"
+              },
+              {
+                "es": "De los lugares donde se salaba el pescado",
+                "en": "From the places where fish were salted"
+              },
+              {
+                "es": "De un rey",
+                "en": "From a king"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "De las chancas, donde se salaba el pescado.",
+              "en": "From the chancas, where fish were salted."
+            }
+          },
+          "clue": {
+            "id": "tal_pista_scheidnagel",
+            "text": {
+              "es": "La familia alemana · Se contaba que la familia Scheidnagel se hizo rica tras encontrar una galería.",
+              "en": "The German family · People said the Scheidnagel family got rich after finding a gallery."
+            }
+          },
+          "nextNodeId": "l4_catedral",
+          "nextHint": {
+            "es": "Ve hacia la catedral. Unos 10 minutos.",
+            "en": "Head to the cathedral. About 10 minutes."
+          }
+        },
+        {
+          "id": "l4_catedral",
+          "title": {
+            "es": "Catedral de Almería",
+            "en": "Almería Cathedral"
+          },
+          "location": {
+            "lat": 36.8384,
+            "lng": -2.4666
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "santisteban",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "galiana",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La catedral de Almería, del siglo XVI, parece una fortaleza: tiene torres y almenas porque la costa sufría ataques de piratas.",
+                "en": "Almería Cathedral, from the 16th century, looks like a fortress: it has towers and battlements because the coast suffered pirate attacks."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_muralla"
+                  ],
+                  "text": {
+                    "es": "Vienes de la muralla: un palacio encantado que nadie ha visto. ¿Seguimos la pista del mapa o la del arqueólogo?",
+                    "en": "You've come along the wall: an enchanted palace nobody has seen. Shall we follow the map lead or the archaeologist lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca"
+                  ],
+                  "text": {
+                    "es": "Vienes de La Chanca: una familia rica de golpe. ¿Seguimos la pista del mapa o la del arqueólogo?",
+                    "en": "You've come from La Chanca: a family suddenly rich. Shall we follow the map lead or the archaeologist lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué la catedral de Almería parece una fortaleza?",
+              "en": "Why does Almería Cathedral look like a fortress?"
+            },
+            "options": [
+              {
+                "es": "Por los ataques de piratas",
+                "en": "Because of pirate attacks"
+              },
+              {
+                "es": "Porque era un castillo",
+                "en": "Because it was a castle"
+              },
+              {
+                "es": "Por moda",
+                "en": "Because it was fashionable"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Para defenderse de los ataques de los piratas del siglo XVI.",
+              "en": "To defend itself from 16th-century pirate attacks."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "santisteban",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El mapa o el arqueólogo?",
+              "en": "The map or the archaeologist?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del mapa",
+                "en": "The map lead"
+              },
+              "hint": {
+                "es": "Con Galiana",
+                "en": "With Galiana"
+              },
+              "targetNodeId": "l4a_mapa",
+              "setFlags": [
+                "version_mapa"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del arqueólogo",
+                "en": "The archaeologist lead"
+              },
+              "hint": {
+                "es": "Con Santisteban",
+                "en": "With Santisteban"
+              },
+              "targetNodeId": "l4b_arqueologo",
+              "setFlags": [
+                "version_arqueologo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_mapa",
+          "title": {
+            "es": "El mapa",
+            "en": "The map"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "galiana",
+              "expression": "dramatic",
+              "text": {
+                "es": "Durante generaciones hubo gente buscando con mapas viejos y cuentos de abuelas. Cavaron, cavaron… y el oro nunca salió.",
+                "en": "For generations people searched with old maps and grandmothers' tales. They dug and dug… and the gold never came out."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "galiana",
+              "expression": "thinking",
+              "text": {
+                "es": "Si en mil años nadie lo ha encontrado, quizá no es un tesoro de monedas lo que esconde la Alcazaba.",
+                "en": "If nobody has found it in a thousand years, perhaps it isn't a treasure of coins the Alcazaba hides."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tal_pista_mapas",
+            "text": {
+              "es": "Ningún tesoro · Generaciones buscaron con mapas y nunca apareció el oro.",
+              "en": "No treasure · Generations searched with maps and the gold never appeared."
+            }
+          },
+          "nextNodeId": "l5_alcazaba",
+          "nextHint": {
+            "es": "Sube a la Alcazaba. Unos 10 minutos.",
+            "en": "Climb up to the Alcazaba. About 10 minutes."
+          }
+        },
+        {
+          "id": "l4b_arqueologo",
+          "title": {
+            "es": "El arqueólogo",
+            "en": "The archaeologist"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "proud",
+              "text": {
+                "es": "Yo excavé y estudié esta tierra. Lo que sale de la Alcazaba son muros, cerámicas, aljibes, restos de palacios: la historia de Almería.",
+                "en": "I dug and studied this land. What comes out of the Alcazaba is walls, pottery, cisterns, remains of palaces: the history of Almería."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "text": {
+                "es": "Ese es el tesoro que yo encontré. Y no me hizo rico, se lo aseguro: morí pobre, al pie de la fortaleza.",
+                "en": "That's the treasure I found. And it didn't make me rich, I assure you: I died poor, at the foot of the fortress."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tal_pista_historia",
+            "text": {
+              "es": "Ningún tesoro · Lo que aparece en la Alcazaba son restos de su historia, no monedas de oro.",
+              "en": "No treasure · What turns up in the Alcazaba is the remains of its history, not gold coins."
+            }
+          },
+          "nextNodeId": "l5_alcazaba",
+          "nextHint": {
+            "es": "Sube a la Alcazaba. Unos 10 minutos.",
+            "en": "Climb up to the Alcazaba. About 10 minutes."
+          }
+        },
+        {
+          "id": "l5_alcazaba",
+          "title": {
+            "es": "Alcazaba",
+            "en": "Alcazaba"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.4705
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_alcazaba.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_alcazaba.svg"
+              ],
+              "characters": [
+                {
+                  "id": "santisteban",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "almotacin",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Alcazaba de Almería, fundada en el siglo X, es una de las mayores fortalezas andalusíes que se conservan. Tiene tres recintos a lo largo del cerro.",
+                "en": "Almería's Alcazaba, founded in the 10th century, is one of the largest surviving Andalusi fortresses. It has three enclosures along the hill."
+              },
+              "year": 955
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Palacio encantado, familia alemana o ningún tesoro: ¿dónde está el tesoro de la Alcazaba?",
+                "en": "Verdict time. Enchanted palace, German family or no treasure: where is the Alcazaba's treasure?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se sabe del tesoro de la Alcazaba?",
+              "en": "What is known about the Alcazaba's treasure?"
+            },
+            "options": [
+              {
+                "es": "Que está en un palacio que se abre la noche de San Juan",
+                "en": "That it lies in a palace that opens on Midsummer Night"
+              },
+              {
+                "es": "Que se lo llevó una familia alemana",
+                "en": "That a German family took it"
+              },
+              {
+                "es": "Que nunca ha aparecido: lo que sale de la tierra es la historia de la ciudad",
+                "en": "That it has never appeared: what comes out of the ground is the city's history"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Ningún tesoro de oro ha aparecido nunca. El palacio encantado es una leyenda y lo de los Scheidnagel, un rumor. Lo que sí sacan los arqueólogos son los restos de mil años de historia.",
+              "en": "No gold treasure has ever appeared. The enchanted palace is a legend and the Scheidnagel story a rumour. What archaeologists do bring out is the remains of a thousand years of history."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_muralla",
+                    "version_mapa"
+                  ],
+                  "text": {
+                    "es": "La muralla y el mapa: de leyenda en leyenda. Eres buscador de San Juan.",
+                    "en": "The wall and the map: from legend to legend. You're a Midsummer seeker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_muralla",
+                    "version_arqueologo"
+                  ],
+                  "text": {
+                    "es": "La muralla y el arqueólogo: el mejor tesoro es la historia. Eres cronista de la Alcazaba.",
+                    "en": "The wall and the archaeologist: the best treasure is history. You're the Alcazaba's chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca",
+                    "version_mapa"
+                  ],
+                  "text": {
+                    "es": "La Chanca y el mapa: rumores y cuevas. Eres rastreador de La Chanca.",
+                    "en": "La Chanca and the map: rumours and caves. You're La Chanca's tracker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_chanca",
+                    "version_arqueologo"
+                  ],
+                  "text": {
+                    "es": "La Chanca y el arqueólogo: desmontaste un rumor. Eres heredero de Santisteban.",
+                    "en": "La Chanca and the archaeologist: you debunked a rumour. You're Santisteban's heir."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "happy",
+              "text": {
+                "es": "Y si una noche de San Juan pasa por aquí y ve abrirse un pasadizo… llámeme. Por si acaso.",
+                "en": "And if one Midsummer Night you pass by and see a passage open… call me. Just in case."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "buscador_sanjuan",
+          "requires": [
+            "camino_muralla",
+            "version_mapa"
+          ],
+          "title": {
+            "es": "Buscador de San Juan",
+            "en": "Midsummer seeker"
+          }
+        },
+        {
+          "id": "cronista_alcazaba",
+          "requires": [
+            "camino_muralla",
+            "version_arqueologo"
+          ],
+          "title": {
+            "es": "Cronista de la Alcazaba",
+            "en": "The Alcazaba's chronicler"
+          }
+        },
+        {
+          "id": "rastreador_chanca",
+          "requires": [
+            "camino_chanca",
+            "version_mapa"
+          ],
+          "title": {
+            "es": "Rastreador de La Chanca",
+            "en": "La Chanca's tracker"
+          }
+        },
+        {
+          "id": "heredero_santisteban",
+          "requires": [
+            "camino_chanca",
+            "version_arqueologo"
+          ],
+          "title": {
+            "es": "Heredero de Santisteban",
+            "en": "Santisteban's heir"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "llave_puerta",
+          "name": {
+            "es": "La llave de la puerta",
+            "en": "The gate key"
+          },
+          "icon": "collectibles/almeria_leyenda_llave.svg",
+          "awardedAtNodeId": "l1_purchena"
+        },
+        {
+          "id": "seda_taifa",
+          "name": {
+            "es": "La seda de la taifa",
+            "en": "The taifa's silk"
+          },
+          "icon": "collectibles/almeria_leyenda_seda.svg",
+          "awardedAtNodeId": "l2_plazavieja"
+        },
+        {
+          "id": "luna_sanjuan",
+          "name": {
+            "es": "La luna de San Juan",
+            "en": "The Midsummer moon"
+          },
+          "icon": "collectibles/almeria_leyenda_luna.svg",
+          "awardedAtNodeId": "la_muralla"
+        },
+        {
+          "id": "pico_minero",
+          "name": {
+            "es": "El pico del buscador",
+            "en": "The seeker's pick"
+          },
+          "icon": "collectibles/almeria_leyenda_pico.svg",
+          "awardedAtNodeId": "lb_chanca"
+        },
+        {
+          "id": "cofre",
+          "name": {
+            "es": "El cofre vacío",
+            "en": "The empty chest"
+          },
+          "icon": "collectibles/almeria_leyenda_cofre.svg",
+          "awardedAtNodeId": "l5_alcazaba"
+        },
+        {
+          "id": "insignia_tesoro",
+          "name": {
+            "es": "¿Dónde está el tesoro de la Alcazaba?",
+            "en": "Where Is the Alcazaba's Treasure?"
+          },
+          "icon": "collectibles/almeria_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

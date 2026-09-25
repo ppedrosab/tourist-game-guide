@@ -1,6 +1,6 @@
 {
   "id": "huelva",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Huelva",
     "en": "Huelva"
@@ -135,6 +135,45 @@
       },
       "avatar": "sprites/santamaria/santamaria_neutral.svg",
       "era": "s. XIX"
+    },
+    {
+      "id": "argantonio",
+      "name": {
+        "es": "Argantonio",
+        "en": "Argantonio"
+      },
+      "description": {
+        "es": "Rey de Tartessos según Heródoto, famoso por su plata y su larga vida. Generoso y un poco despistado.",
+        "en": "King of Tartessos according to Herodotus, famous for his silver and long life. Generous and a bit absent-minded."
+      },
+      "avatar": "sprites/argantonio/argantonio_neutral.svg",
+      "era": "s. VI a. C. (leyenda)"
+    },
+    {
+      "id": "colaeo",
+      "name": {
+        "es": "Colaeo de Samos",
+        "en": "Colaeus of Samos"
+      },
+      "description": {
+        "es": "Marino griego que, según Heródoto, llegó a Tartessos por una tormenta y volvió rico. Aventurero y exagerado.",
+        "en": "A Greek sailor who, according to Herodotus, reached Tartessos by storm and went home rich. Adventurous and prone to exaggeration."
+      },
+      "avatar": "sprites/colaeo/colaeo_neutral.svg",
+      "era": "s. VII a. C. (leyenda)"
+    },
+    {
+      "id": "habis",
+      "name": {
+        "es": "Habis",
+        "en": "Habis"
+      },
+      "description": {
+        "es": "Rey mítico de Tartessos que, según la leyenda, enseñó a su pueblo a arar. Sencillo y muy práctico.",
+        "en": "A mythical king of Tartessos who, according to legend, taught his people to plough. Simple and very practical."
+      },
+      "avatar": "sprites/habis/habis_neutral.svg",
+      "era": "mito"
     }
   ],
   "routes": [
@@ -3545,6 +3584,930 @@
           },
           "icon": "collectibles/huelva_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "tartessos",
+      "title": {
+        "es": "¿Dónde estaba Tartessos?",
+        "en": "Where Was Tartessos?"
+      },
+      "summary": {
+        "es": "El reino de la plata de los griegos se perdió en la leyenda. ¿Estaba en Doñana, bajo el mar o bajo Huelva? Con el rey Argantonio, el marino Colaeo de Samos y el rey Habis.",
+        "en": "The Greeks' kingdom of silver was lost to legend. Was it in Doñana, under the sea or beneath Huelva? With King Argantonio, the sailor Colaeus of Samos and King Habis."
+      },
+      "era": "s. X - VI a. C.",
+      "guideCharacterId": "argantonio",
+      "durationMin": 75,
+      "distanceKm": 3.4,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La ría",
+            "en": "The estuary"
+          },
+          "trail": {
+            "es": "camino de la ría",
+            "en": "estuary trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los cabezos",
+            "en": "The hills"
+          },
+          "trail": {
+            "es": "camino de los cabezos",
+            "en": "hills trail"
+          }
+        }
+      },
+      "startNodeId": "l1_monjas",
+      "nodes": [
+        {
+          "id": "l1_monjas",
+          "title": {
+            "es": "Plaza de las Monjas",
+            "en": "Plaza de las Monjas"
+          },
+          "location": {
+            "lat": 37.2583,
+            "lng": -6.9502
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_monjas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_monjas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "argantonio",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "happy",
+              "text": {
+                "es": "Salud, viajero. Soy Argantonio, rey de Tartessos, el reino de la plata. Heródoto escribió que reiné ochenta años y viví ciento veinte.",
+                "en": "Greetings, traveller. I'm Argantonio, king of Tartessos, the kingdom of silver. Herodotus wrote that I reigned eighty years and lived a hundred and twenty."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "Tengo un problema: han pasado tantos siglos que ya nadie sabe dónde estaba mi reino. ¿Me ayudas a encontrarlo?",
+                "en": "I have a problem: so many centuries have passed that nobody knows where my kingdom was. Will you help me find it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: las marismas de Doñana, el fondo del mar o esta misma ciudad. Apunta.",
+                "en": "Three suspects: the Doñana marshes, the bottom of the sea, or this very city. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bajo las calles de esta zona, entre la calle Méndez Núñez y la Plaza de las Monjas, los arqueólogos hallaron un santuario con miles de piezas de cerámica fenicia y local de hace unos 3.000 años.",
+                "en": "Beneath the streets around here, between Calle Méndez Núñez and Plaza de las Monjas, archaeologists found a sanctuary with thousands of pieces of Phoenician and local pottery about 3,000 years old."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hallaron los arqueólogos bajo esta zona?",
+              "en": "What did archaeologists find beneath this area?"
+            },
+            "options": [
+              {
+                "es": "Un castillo",
+                "en": "A castle"
+              },
+              {
+                "es": "Un santuario con miles de cerámicas antiguas",
+                "en": "A sanctuary with thousands of ancient pots"
+              },
+              {
+                "es": "Un barco vikingo",
+                "en": "A Viking ship"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Un santuario con cerámica fenicia y local de hace unos 3.000 años.",
+              "en": "A sanctuary with Phoenician and local pottery about 3,000 years old."
+            }
+          },
+          "clue": {
+            "id": "trt_pista_santuario",
+            "text": {
+              "es": "Huelva · Bajo Huelva apareció un santuario de hace unos 3.000 años, con cerámica fenicia y local.",
+              "en": "Huelva · Beneath Huelva a sanctuary about 3,000 years old appeared, with Phoenician and local pottery."
+            }
+          },
+          "nextNodeId": "l2_museo",
+          "nextHint": {
+            "es": "Al Museo de Huelva. Unos 10 minutos.",
+            "en": "To the Huelva Museum. About 10 minutes."
+          }
+        },
+        {
+          "id": "l2_museo",
+          "title": {
+            "es": "Museo de Huelva",
+            "en": "Huelva Museum"
+          },
+          "location": {
+            "lat": 37.2616,
+            "lng": -6.9442
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_museo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_museo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "argantonio",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "habis",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "habis",
+              "expression": "proud",
+              "text": {
+                "es": "Soy Habis, otro rey de Tartessos, de los de leyenda. Me abandonaron de niño y me criaron los animales. Luego enseñé a mi pueblo a arar la tierra.",
+                "en": "I'm Habis, another king of Tartessos, a legendary one. I was abandoned as a child and raised by animals. Then I taught my people to plough the land."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1923, al dragar la ría de Huelva, aparecieron más de 400 objetos de bronce: espadas, lanzas y cascos de hace unos 3.000 años.",
+                "en": "In 1923, while dredging the Huelva estuary, more than 400 bronze objects appeared: swords, spears and helmets about 3,000 years old."
+              },
+              "year": 1923
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Cuatrocientas armas en el fondo de la ría? Eso no se pierde por casualidad…",
+                "en": "Four hundred weapons at the bottom of the estuary? That doesn't get lost by chance…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué apareció en 1923 al dragar la ría?",
+              "en": "What appeared in 1923 when the estuary was dredged?"
+            },
+            "options": [
+              {
+                "es": "Más de 400 objetos de bronce",
+                "en": "More than 400 bronze objects"
+              },
+              {
+                "es": "Un tesoro de oro romano",
+                "en": "Roman gold treasure"
+              },
+              {
+                "es": "Una ballena",
+                "en": "A whale"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Más de 400 objetos de bronce: el depósito de la ría de Huelva.",
+              "en": "More than 400 bronze objects: the Huelva estuary hoard."
+            }
+          },
+          "clue": {
+            "id": "trt_pista_ria",
+            "text": {
+              "es": "Huelva · En la ría de Huelva aparecieron más de 400 bronces de hace unos 3.000 años.",
+              "en": "Huelva · More than 400 bronzes about 3,000 years old appeared in the Huelva estuary."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "argantonio",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Bajamos a la ría, por donde llegaban los barcos, o subimos a los cabezos, donde vivía mi gente?",
+              "en": "Shall we go down to the estuary, where the ships came in, or climb the hills, where my people lived?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "A la ría",
+                "en": "To the estuary"
+              },
+              "hint": {
+                "es": "Muelle del Tinto",
+                "en": "Tinto Pier"
+              },
+              "targetNodeId": "la_muelle",
+              "setFlags": [
+                "camino_ria"
+              ],
+              "distanceM": 1200,
+              "walkMin": 15
+            },
+            {
+              "label": {
+                "es": "A los cabezos",
+                "en": "To the hills"
+              },
+              "hint": {
+                "es": "Cabezo de San Pedro",
+                "en": "San Pedro hill"
+              },
+              "targetNodeId": "lb_sanpedro",
+              "setFlags": [
+                "camino_cabezos"
+              ],
+              "distanceM": 700,
+              "walkMin": 10
+            }
+          ]
+        },
+        {
+          "id": "la_muelle",
+          "title": {
+            "es": "Muelle del Tinto",
+            "en": "Tinto Pier"
+          },
+          "location": {
+            "lat": 37.2523,
+            "lng": -6.9569
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "colaeo",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "argantonio",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colaeo",
+              "expression": "happy",
+              "text": {
+                "es": "¡Colaeo de Samos, marino griego! Una tormenta me desvió más allá de las columnas de Hércules y llegué a Tartessos. ¡Volví a casa rico de plata!",
+                "en": "Colaeus of Samos, Greek sailor! A storm blew me beyond the Pillars of Hercules and I reached Tartessos. I went home rich with silver!"
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Heródoto cuenta que Colaeo llegó a Tartessos hacia el año 630 a. C. y que con parte de la plata ofreció un gran caldero de bronce en el templo de Hera, en Samos.",
+                "en": "Herodotus tells that Colaeus reached Tartessos around 630 BC and that with part of the silver he offered a great bronze cauldron at the temple of Hera, on Samos."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "proud",
+              "text": {
+                "es": "Mi plata venía de las minas del interior y salía por estas rías. Los barcos griegos y fenicios la esperaban aquí.",
+                "en": "My silver came from the mines inland and went out through these estuaries. Greek and Phoenician ships waited for it here."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué metal hizo famoso a Tartessos?",
+              "en": "Which metal made Tartessos famous?"
+            },
+            "options": [
+              {
+                "es": "El hierro",
+                "en": "Iron"
+              },
+              {
+                "es": "El estaño de Cornualles",
+                "en": "Cornish tin"
+              },
+              {
+                "es": "La plata",
+                "en": "Silver"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La plata, que salía por las rías del Tinto y el Odiel.",
+              "en": "Silver, which went out through the Tinto and Odiel estuaries."
+            }
+          },
+          "clue": {
+            "id": "trt_pista_plata",
+            "text": {
+              "es": "Huelva · La plata de Tartessos salía por las rías de Huelva, y aquí la esperaban los barcos.",
+              "en": "Huelva · Tartessos's silver left through the Huelva estuaries, and ships waited for it here."
+            }
+          },
+          "nextNodeId": "l4_punto",
+          "nextHint": {
+            "es": "Sube a la Plaza del Punto. Unos 12 minutos.",
+            "en": "Walk up to Plaza del Punto. About 12 minutes."
+          }
+        },
+        {
+          "id": "lb_sanpedro",
+          "title": {
+            "es": "Cabezo de San Pedro",
+            "en": "San Pedro hill"
+          },
+          "location": {
+            "lat": 37.2606,
+            "lng": -6.9514
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_sanpedro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_sanpedro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "habis",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "argantonio",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Huelva está rodeada de cabezos, colinas de arena y arcilla. En el de San Pedro los arqueólogos encontraron restos de poblado de la época tartésica.",
+                "en": "Huelva is surrounded by cabezos, hills of sand and clay. On San Pedro hill archaeologists found remains of a settlement from the Tartessian era."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "habis",
+              "expression": "happy",
+              "text": {
+                "es": "Aquí arriba se vivía bien: se veían las dos rías, el mar y los barcos. ¿Dónde iba a estar mejor un reino?",
+                "en": "Life was good up here: you could see both estuaries, the sea and the ships. Where better to put a kingdom?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "Un alemán, Schulten, me buscó en Doñana en los años veinte. Excavó y excavó… y no me encontró.",
+                "en": "A German, Schulten, looked for me in Doñana in the 1920s. He dug and dug… and didn't find me."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué son los cabezos de Huelva?",
+              "en": "What are Huelva's cabezos?"
+            },
+            "options": [
+              {
+                "es": "Estatuas",
+                "en": "Statues"
+              },
+              {
+                "es": "Colinas de arena y arcilla",
+                "en": "Hills of sand and clay"
+              },
+              {
+                "es": "Barcos de pesca",
+                "en": "Fishing boats"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Colinas de arena y arcilla que rodean la ciudad.",
+              "en": "Hills of sand and clay surrounding the city."
+            }
+          },
+          "clue": {
+            "id": "trt_pista_schulten",
+            "text": {
+              "es": "Doñana · Schulten buscó Tartessos en Doñana en los años veinte y no lo encontró.",
+              "en": "Doñana · Schulten looked for Tartessos in Doñana in the 1920s and didn't find it."
+            }
+          },
+          "nextNodeId": "l4_punto",
+          "nextHint": {
+            "es": "Baja a la Plaza del Punto. Dos minutos.",
+            "en": "Walk down to Plaza del Punto. Two minutes."
+          }
+        },
+        {
+          "id": "l4_punto",
+          "title": {
+            "es": "Plaza del Punto",
+            "en": "Plaza del Punto"
+          },
+          "location": {
+            "lat": 37.2595,
+            "lng": -6.9519
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_punto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_punto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "argantonio",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "colaeo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los griegos llamaban Tartessos a un reino rico del suroeste de la península. Hoy los arqueólogos hablan de una cultura tartésica, entre los ríos Guadiana y Guadalquivir.",
+                "en": "The Greeks called a rich kingdom in the south-west of the peninsula Tartessos. Today archaeologists speak of a Tartessian culture, between the Guadiana and Guadalquivir rivers."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ría: plata, barcos y un griego con suerte. ¿Seguimos la pista de la Atlántida o la del arqueólogo?",
+                    "en": "You've come from the estuary: silver, ships and a lucky Greek. Shall we follow the Atlantis lead or the archaeologist lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_cabezos"
+                  ],
+                  "text": {
+                    "es": "Vienes de los cabezos: un poblado y un alemán que se equivocó de sitio. ¿Seguimos la pista de la Atlántida o la del arqueólogo?",
+                    "en": "You've come from the hills: a settlement and a German who got the wrong place. Shall we follow the Atlantis lead or the archaeologist lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Entre qué ríos se extendía la cultura tartésica?",
+              "en": "Between which rivers did the Tartessian culture spread?"
+            },
+            "options": [
+              {
+                "es": "Entre el Guadiana y el Guadalquivir",
+                "en": "Between the Guadiana and the Guadalquivir"
+              },
+              {
+                "es": "Entre el Ebro y el Duero",
+                "en": "Between the Ebro and the Duero"
+              },
+              {
+                "es": "Entre el Nilo y el Tíber",
+                "en": "Between the Nile and the Tiber"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Entre el Guadiana y el Guadalquivir, con Huelva en medio.",
+              "en": "Between the Guadiana and the Guadalquivir, with Huelva in the middle."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "argantonio",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La Atlántida o el arqueólogo?",
+              "en": "Atlantis or the archaeologist?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la Atlántida",
+                "en": "The Atlantis lead"
+              },
+              "hint": {
+                "es": "Con Colaeo",
+                "en": "With Colaeus"
+              },
+              "targetNodeId": "l4a_atlantida",
+              "setFlags": [
+                "version_atlantida"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del arqueólogo",
+                "en": "The archaeologist lead"
+              },
+              "hint": {
+                "es": "Con Argantonio",
+                "en": "With Argantonio"
+              },
+              "targetNodeId": "l4b_arqueologo",
+              "setFlags": [
+                "version_arqueologo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_atlantida",
+          "title": {
+            "es": "La Atlántida",
+            "en": "Atlantis"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "colaeo",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡Algunos dicen que Tartessos era la Atlántida y que se hundió en el mar! Queda precioso… pero yo navegué por aquí y había tierra firme, y mucha plata.",
+                "en": "Some say Tartessos was Atlantis and sank beneath the sea! It sounds lovely… but I sailed here, and there was solid ground, and lots of silver."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colaeo",
+              "expression": "thinking",
+              "text": {
+                "es": "Los reinos de verdad dejan cerámica, bronces y casas. Los del cuento, solo cuentos.",
+                "en": "Real kingdoms leave pottery, bronzes and houses. Storybook ones leave only stories."
+              }
+            }
+          ],
+          "clue": {
+            "id": "trt_pista_atlantida",
+            "text": {
+              "es": "Bajo el mar · La idea de una Tartessos hundida es un cuento; los reinos reales dejan restos.",
+              "en": "Under the sea · The idea of a sunken Tartessos is a tale; real kingdoms leave remains."
+            }
+          },
+          "nextNodeId": "l5_ria",
+          "nextHint": {
+            "es": "Baja hasta el Paseo de la Ría. Unos 15 minutos.",
+            "en": "Walk down to the Paseo de la Ría. About 15 minutes."
+          }
+        },
+        {
+          "id": "l4b_arqueologo",
+          "title": {
+            "es": "El arqueólogo",
+            "en": "The archaeologist"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "proud",
+              "text": {
+                "es": "Lo que no encontró Schulten en Doñana apareció bajo Huelva: santuarios, cerámica de hace 3.000 años, bronces en la ría.",
+                "en": "What Schulten didn't find in Doñana turned up beneath Huelva: sanctuaries, 3,000-year-old pottery, bronzes in the estuary."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "No digo que todo mi reino estuviera aquí. Pero esta ciudad fue uno de sus grandes puertos. Eso, las piedras no lo discuten.",
+                "en": "I'm not saying my whole kingdom was here. But this city was one of its great ports. The stones don't argue about that."
+              }
+            }
+          ],
+          "clue": {
+            "id": "trt_pista_puerto",
+            "text": {
+              "es": "Huelva · Huelva fue uno de los grandes puertos de la cultura tartésica.",
+              "en": "Huelva · Huelva was one of the great ports of the Tartessian culture."
+            }
+          },
+          "nextNodeId": "l5_ria",
+          "nextHint": {
+            "es": "Baja hasta el Paseo de la Ría. Unos 15 minutos.",
+            "en": "Walk down to the Paseo de la Ría. About 15 minutes."
+          }
+        },
+        {
+          "id": "l5_ria",
+          "title": {
+            "es": "Paseo de la Ría",
+            "en": "Paseo de la Ría"
+          },
+          "location": {
+            "lat": 37.25,
+            "lng": -6.9585
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_paseoria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_paseoria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "argantonio",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "habis",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Huelva está entre las desembocaduras del Tinto y el Odiel. Hace 3.000 años, el mar entraba mucho más y la ciudad era casi una península.",
+                "en": "Huelva lies between the mouths of the Tinto and the Odiel. 3,000 years ago the sea came much further in and the city was almost a peninsula."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Doñana, el fondo del mar o esta ciudad: ¿dónde estaba Tartessos?",
+                "en": "Verdict time. Doñana, the bottom of the sea or this city: where was Tartessos?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dicen hoy los hallazgos sobre Tartessos?",
+              "en": "What do the finds say about Tartessos today?"
+            },
+            "options": [
+              {
+                "es": "Que estaba solo en Doñana",
+                "en": "That it was only in Doñana"
+              },
+              {
+                "es": "Que estaba bajo el mar, como la Atlántida",
+                "en": "That it lay under the sea, like Atlantis"
+              },
+              {
+                "es": "Que Huelva fue uno de sus grandes centros y puertos",
+                "en": "That Huelva was one of its great centres and ports"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Huelva. Tartessos fue una cultura del suroeste, no una sola ciudad; pero los santuarios, las cerámicas y los bronces de la ría hacen de Huelva uno de sus grandes centros y puertos. La Atlántida es un cuento, y en Doñana no apareció.",
+              "en": "Huelva. Tartessos was a culture of the south-west, not a single city; but the sanctuaries, pottery and estuary bronzes make Huelva one of its great centres and ports. Atlantis is a tale, and nothing turned up in Doñana."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_atlantida"
+                  ],
+                  "text": {
+                    "es": "La ría y la Atlántida: has hundido un mito. Eres piloto de Samos.",
+                    "en": "The estuary and Atlantis: you've sunk a myth. You're a pilot of Samos."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_arqueologo"
+                  ],
+                  "text": {
+                    "es": "La ría y el arqueólogo: plata y bronces. Eres mercader tartésico.",
+                    "en": "The estuary and the archaeologist: silver and bronzes. You're a Tartessian merchant."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_cabezos",
+                    "version_atlantida"
+                  ],
+                  "text": {
+                    "es": "Los cabezos y la Atlántida: con los pies en la tierra. Eres vigía de los cabezos.",
+                    "en": "The hills and Atlantis: feet on the ground. You're the hills' lookout."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_cabezos",
+                    "version_arqueologo"
+                  ],
+                  "text": {
+                    "es": "Los cabezos y el arqueólogo: donde Schulten falló, tú aciertas. Eres heredero de Argantonio.",
+                    "en": "The hills and the archaeologist: where Schulten failed, you succeed. You're Argantonio's heir."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "happy",
+              "text": {
+                "es": "¡Por fin sé dónde estaba mi casa! Bueno… una de mis casas. Un rey de la plata tiene muchas.",
+                "en": "At last I know where my home was! Well… one of my homes. A silver king has many."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "piloto_samos",
+          "requires": [
+            "camino_ria",
+            "version_atlantida"
+          ],
+          "title": {
+            "es": "Piloto de Samos",
+            "en": "Pilot of Samos"
+          }
+        },
+        {
+          "id": "mercader_tartesico",
+          "requires": [
+            "camino_ria",
+            "version_arqueologo"
+          ],
+          "title": {
+            "es": "Mercader tartésico",
+            "en": "Tartessian merchant"
+          }
+        },
+        {
+          "id": "vigia_cabezos",
+          "requires": [
+            "camino_cabezos",
+            "version_atlantida"
+          ],
+          "title": {
+            "es": "Vigía de los cabezos",
+            "en": "The hills' lookout"
+          }
+        },
+        {
+          "id": "heredero_argantonio",
+          "requires": [
+            "camino_cabezos",
+            "version_arqueologo"
+          ],
+          "title": {
+            "es": "Heredero de Argantonio",
+            "en": "Argantonio's heir"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "ceramica",
+          "name": {
+            "es": "La cerámica del santuario",
+            "en": "The sanctuary pottery"
+          },
+          "icon": "collectibles/huelva_leyenda_ceramica.svg",
+          "awardedAtNodeId": "l1_monjas"
+        },
+        {
+          "id": "espada_ria",
+          "name": {
+            "es": "La espada de la ría",
+            "en": "The estuary sword"
+          },
+          "icon": "collectibles/huelva_leyenda_espada.svg",
+          "awardedAtNodeId": "l2_museo"
+        },
+        {
+          "id": "caldero_samos",
+          "name": {
+            "es": "El caldero de Samos",
+            "en": "The Samos cauldron"
+          },
+          "icon": "collectibles/huelva_leyenda_caldero.svg",
+          "awardedAtNodeId": "la_muelle"
+        },
+        {
+          "id": "arado_habis",
+          "name": {
+            "es": "El arado de Habis",
+            "en": "Habis's plough"
+          },
+          "icon": "collectibles/huelva_leyenda_arado.svg",
+          "awardedAtNodeId": "lb_sanpedro"
+        },
+        {
+          "id": "lingote_plata",
+          "name": {
+            "es": "El lingote de plata",
+            "en": "The silver ingot"
+          },
+          "icon": "collectibles/huelva_leyenda_plata.svg",
+          "awardedAtNodeId": "l5_ria"
+        },
+        {
+          "id": "insignia_tartessos",
+          "name": {
+            "es": "¿Dónde estaba Tartessos?",
+            "en": "Where Was Tartessos?"
+          },
+          "icon": "collectibles/huelva_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

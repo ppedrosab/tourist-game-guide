@@ -1,6 +1,6 @@
 {
   "id": "cadiz",
-  "version": 4,
+  "version": 5,
   "name": {
     "es": "Cádiz",
     "en": "Cádiz"
@@ -206,6 +206,45 @@
       },
       "avatar": "sprites/saetera/saetera_neutral.svg",
       "era": "hoy"
+    },
+    {
+      "id": "adolfocastro",
+      "name": {
+        "es": "Adolfo de Castro",
+        "en": "Adolfo de Castro"
+      },
+      "description": {
+        "es": "Erudito gaditano, autor de una historia de Cádiz; también inventó un texto «de Cervantes» que engañó a muchos. Sabio y pícaro.",
+        "en": "A Cádiz scholar, author of a history of Cádiz; he also invented a “Cervantes” text that fooled many. Learned and roguish."
+      },
+      "avatar": "sprites/adolfocastro/adolfocastro_neutral.svg",
+      "era": "1823 - 1898"
+    },
+    {
+      "id": "hercules",
+      "name": {
+        "es": "Hércules",
+        "en": "Hercules"
+      },
+      "description": {
+        "es": "El héroe del escudo de Cádiz, fundador de la ciudad según el mito. Fanfarrón y bonachón.",
+        "en": "The hero on the Cádiz coat of arms, founder of the city according to myth. Boastful and good-natured."
+      },
+      "avatar": "sprites/hercules/hercules_neutral.svg",
+      "era": "mito"
+    },
+    {
+      "id": "gerion",
+      "name": {
+        "es": "Gerión",
+        "en": "Geryon"
+      },
+      "description": {
+        "es": "El gigante de tres cuerpos del mito, rey de la isla de Eritea. Dramático y un poco presumido.",
+        "en": "The three-bodied giant of myth, king of the island of Erytheia. Dramatic and a bit vain."
+      },
+      "avatar": "sprites/gerion/gerion_neutral.svg",
+      "era": "mito"
     }
   ],
   "routes": [
@@ -5063,6 +5102,928 @@
           },
           "icon": "collectibles/ssanta_palio.svg",
           "awardedAtNodeId": "s6_final"
+        }
+      ]
+    },
+    {
+      "id": "sangre-drago",
+      "title": {
+        "es": "¿Por qué sangra el drago?",
+        "en": "Why Does the Dragon Tree Bleed?"
+      },
+      "summary": {
+        "es": "En un parque de Cádiz hay un árbol que sangra. ¿Es la sangre del gigante Gerión, la flecha de Hércules o algo más sencillo? Con Adolfo de Castro, Hércules y Gerión.",
+        "en": "In a Cádiz park there's a tree that bleeds. Is it the giant Geryon's blood, Hercules's arrow or something simpler? With Adolfo de Castro, Hercules and Geryon."
+      },
+      "era": "Mito - hoy",
+      "guideCharacterId": "adolfocastro",
+      "durationMin": 60,
+      "distanceKm": 2.0,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El mito",
+            "en": "The myth"
+          },
+          "trail": {
+            "es": "camino del mito",
+            "en": "myth trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La tierra",
+            "en": "The ground"
+          },
+          "trail": {
+            "es": "camino de la tierra",
+            "en": "ground trail"
+          }
+        }
+      },
+      "startNodeId": "l1_sanjuan",
+      "nodes": [
+        {
+          "id": "l1_sanjuan",
+          "title": {
+            "es": "Plaza de San Juan de Dios",
+            "en": "Plaza de San Juan de Dios"
+          },
+          "location": {
+            "lat": 36.5302,
+            "lng": -6.2924
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "adolfocastro",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Adolfo de Castro, gaditano. Escribí la historia de Cádiz… y, lo confieso, alguna vez me inventé un papel antiguo. De leyendas sé un rato.",
+                "en": "Good evening. Adolfo de Castro, from Cádiz. I wrote the history of Cádiz… and, I confess, I once invented an old document. I know a thing or two about legends."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "thinking",
+              "text": {
+                "es": "En un parque de esta ciudad hay un árbol que, si le haces una herida, suelta un jugo rojo como la sangre. ¿Por qué sangra el drago de Cádiz?",
+                "en": "In a park in this city there's a tree that, if you cut it, oozes a juice as red as blood. Why does the dragon tree of Cádiz bleed?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la sangre de un gigante, la flecha de un héroe o algo que lleva el árbol dentro. Apunte.",
+                "en": "Three suspects: a giant's blood, a hero's arrow, or something the tree carries inside. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el escudo de Cádiz aparece Hércules entre dos leones, con la leyenda «Hercules Fundator Gadium Dominatorque»: Hércules, fundador y señor de Cádiz.",
+                "en": "The Cádiz coat of arms shows Hercules between two lions, with the motto “Hercules Fundator Gadium Dominatorque”: Hercules, founder and lord of Cádiz."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién aparece en el escudo de Cádiz?",
+              "en": "Who appears on the Cádiz coat of arms?"
+            },
+            "options": [
+              {
+                "es": "Un rey fenicio",
+                "en": "A Phoenician king"
+              },
+              {
+                "es": "Hércules entre dos leones",
+                "en": "Hercules between two lions"
+              },
+              {
+                "es": "Un barco y una torre",
+                "en": "A ship and a tower"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Hércules, sujetando a dos leones, como fundador de la ciudad.",
+              "en": "Hercules, holding two lions, as the city's founder."
+            }
+          },
+          "clue": {
+            "id": "sdg_pista_escudo",
+            "text": {
+              "es": "Hércules · Cádiz presume de que su fundador fue Hércules: sale en su escudo.",
+              "en": "Hercules · Cádiz boasts that its founder was Hercules: he's on its coat of arms."
+            }
+          },
+          "nextNodeId": "l2_catedral",
+          "nextHint": {
+            "es": "A la plaza de la Catedral. Unos 4 minutos.",
+            "en": "To the Cathedral square. About 4 minutes."
+          }
+        },
+        {
+          "id": "l2_catedral",
+          "title": {
+            "es": "La Catedral",
+            "en": "The Cathedral"
+          },
+          "location": {
+            "lat": 36.5293,
+            "lng": -6.2951
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "adolfocastro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "hercules",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hercules",
+              "expression": "proud",
+              "text": {
+                "es": "¡Hércules en persona! Uno de mis doce trabajos fue robar los bueyes de Gerión, el gigante de tres cuerpos que vivía en una isla de estas aguas.",
+                "en": "Hercules in person! One of my twelve labours was stealing the cattle of Geryon, the three-bodied giant who lived on an island in these waters."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Según el mito griego, Gerión vivía en Eritea, una isla del fin del mundo. Muchos autores antiguos la situaron en la bahía de Cádiz.",
+                "en": "According to Greek myth, Geryon lived on Erytheia, an island at the end of the world. Many ancient writers placed it in the Bay of Cádiz."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hercules",
+              "expression": "happy",
+              "text": {
+                "es": "Una flecha y listo. ¿Que si sangró? Pues claro, era un gigante.",
+                "en": "One arrow and done. Did he bleed? Of course, he was a giant."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué fue a buscar Hércules a la isla de Gerión?",
+              "en": "What did Hercules go to Geryon's island for?"
+            },
+            "options": [
+              {
+                "es": "Sus bueyes",
+                "en": "His cattle"
+              },
+              {
+                "es": "Una manzana de oro",
+                "en": "A golden apple"
+              },
+              {
+                "es": "Un león",
+                "en": "A lion"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los bueyes de Gerión: su décimo trabajo.",
+              "en": "Geryon's cattle: his tenth labour."
+            }
+          },
+          "clue": {
+            "id": "sdg_pista_flecha",
+            "text": {
+              "es": "Gerión · Hércules mató a Gerión con una flecha en una isla de la bahía.",
+              "en": "Geryon · Hercules killed Geryon with an arrow on an island in the bay."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "adolfocastro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Subimos a mirar la bahía donde estaba la isla del mito, o bajamos a ver lo que ha salido de la tierra?",
+              "en": "Shall we climb up to look at the bay where the mythical island was, or go down to see what has come out of the ground?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "El mito",
+                "en": "The myth"
+              },
+              "hint": {
+                "es": "Torre Tavira",
+                "en": "Torre Tavira"
+              },
+              "targetNodeId": "la_tavira",
+              "setFlags": [
+                "camino_mito"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            },
+            {
+              "label": {
+                "es": "La tierra",
+                "en": "The ground"
+              },
+              "hint": {
+                "es": "Yacimiento Gadir",
+                "en": "Gadir site"
+              },
+              "targetNodeId": "lb_gadir",
+              "setFlags": [
+                "camino_tierra"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "la_tavira",
+          "title": {
+            "es": "Torre Tavira",
+            "en": "Torre Tavira"
+          },
+          "location": {
+            "lat": 36.5343,
+            "lng": -6.2968
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_tavira.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_tavira.svg"
+              ],
+              "characters": [
+                {
+                  "id": "gerion",
+                  "expression": "dramatic",
+                  "position": "left"
+                },
+                {
+                  "id": "hercules",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "gerion",
+              "expression": "dramatic",
+              "text": {
+                "es": "¡Gerión, rey de estas islas! Tres cuerpos, seis brazos y los mejores bueyes del mundo… hasta que llegó este.",
+                "en": "Geryon, king of these islands! Three bodies, six arms and the finest cattle in the world… until this one showed up."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Torre Tavira, del siglo XVIII, es la torre vigía más alta de Cádiz. Desde ella los comerciantes vigilaban la llegada de sus barcos.",
+                "en": "Torre Tavira, from the 18th century, is the tallest watchtower in Cádiz. From it merchants watched for their ships arriving."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que sobre la tumba de Gerión crecieron árboles que goteaban sangre. Un autor griego, Filóstrato, ya hablaba de ellos.",
+                "en": "It's said that trees dripping blood grew over Geryon's tomb. A Greek writer, Philostratus, already mentioned them."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían las torres vigía de Cádiz?",
+              "en": "What were the Cádiz watchtowers for?"
+            },
+            "options": [
+              {
+                "es": "Para tocar campanas",
+                "en": "To ring bells"
+              },
+              {
+                "es": "Para guardar grano",
+                "en": "To store grain"
+              },
+              {
+                "es": "Para ver llegar los barcos",
+                "en": "To watch ships arrive"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Para vigilar la llegada de los barcos de los comerciantes.",
+              "en": "To watch for the merchants' ships arriving."
+            }
+          },
+          "clue": {
+            "id": "sdg_pista_tumba",
+            "text": {
+              "es": "Gerión · Autores antiguos hablaban de árboles que goteaban sangre sobre la tumba de Gerión.",
+              "en": "Geryon · Ancient writers told of trees dripping blood over Geryon's tomb."
+            }
+          },
+          "nextNodeId": "l4_mina",
+          "nextHint": {
+            "es": "A la plaza de Mina. Unos 3 minutos.",
+            "en": "To Plaza de Mina. About 3 minutes."
+          }
+        },
+        {
+          "id": "lb_gadir",
+          "title": {
+            "es": "Yacimiento Gadir",
+            "en": "Gadir archaeological site"
+          },
+          "location": {
+            "lat": 36.5322,
+            "lng": -6.2979
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_gadir.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_gadir.svg"
+              ],
+              "characters": [
+                {
+                  "id": "adolfocastro",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "hercules",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Bajo el teatro de la Tía Norica se conservan casas y calles de la Gadir fenicia, de hace más de 2.800 años.",
+                "en": "Beneath the Tía Norica puppet theatre lie houses and streets of Phoenician Gadir, more than 2,800 years old."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "proud",
+              "text": {
+                "es": "Los fenicios de Tiro fundaron Gadir y levantaron un gran templo a su dios Melqart. Los griegos lo confundieron con Hércules.",
+                "en": "The Phoenicians of Tyre founded Gadir and built a great temple to their god Melqart. The Greeks confused him with Hercules."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "hercules",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Confundido? ¿A mí? Bueno… Melqart y yo nos parecemos bastante, lo reconozco.",
+                "en": "Confused? Me? Well… Melqart and I do look quite alike, I admit."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pueblo fundó Gadir?",
+              "en": "Which people founded Gadir?"
+            },
+            "options": [
+              {
+                "es": "Los vikingos",
+                "en": "The Vikings"
+              },
+              {
+                "es": "Los fenicios",
+                "en": "The Phoenicians"
+              },
+              {
+                "es": "Los romanos",
+                "en": "The Romans"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los fenicios de Tiro. El Hércules de Cádiz nace de su dios Melqart.",
+              "en": "The Phoenicians of Tyre. The Hercules of Cádiz comes from their god Melqart."
+            }
+          },
+          "clue": {
+            "id": "sdg_pista_melqart",
+            "text": {
+              "es": "Hércules · El Hércules de Cádiz era en realidad Melqart, el dios de los fenicios.",
+              "en": "Hercules · The Hercules of Cádiz was really Melqart, the Phoenicians' god."
+            }
+          },
+          "nextNodeId": "l4_mina",
+          "nextHint": {
+            "es": "A la plaza de Mina. Unos 6 minutos.",
+            "en": "To Plaza de Mina. About 6 minutes."
+          }
+        },
+        {
+          "id": "l4_mina",
+          "title": {
+            "es": "Plaza de Mina",
+            "en": "Plaza de Mina"
+          },
+          "location": {
+            "lat": 36.5375,
+            "lng": -6.295
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_mina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_mina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "adolfocastro",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "gerion",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el Museo de Cádiz, en esta plaza, se exponen dos sarcófagos fenicios de mármol con forma humana: uno de hombre, hallado en 1887, y otro de mujer, hallado en 1980.",
+                "en": "The Cádiz Museum, on this square, displays two human-shaped Phoenician marble sarcophagi: a man's, found in 1887, and a woman's, found in 1980."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mito"
+                  ],
+                  "text": {
+                    "es": "Vienes del mito: Gerión y sus árboles de sangre. ¿Seguimos la pista del jardinero o la del cuento?",
+                    "en": "You've come from the myth: Geryon and his blood trees. Shall we follow the gardener lead or the tale lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_tierra"
+                  ],
+                  "text": {
+                    "es": "Vienes de la tierra: Gadir y Melqart. ¿Seguimos la pista del jardinero o la del cuento?",
+                    "en": "You've come from the ground: Gadir and Melqart. Shall we follow the gardener lead or the tale lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dos piezas famosas guarda el Museo de Cádiz?",
+              "en": "Which two famous pieces does the Cádiz Museum keep?"
+            },
+            "options": [
+              {
+                "es": "Dos sarcófagos fenicios",
+                "en": "Two Phoenician sarcophagi"
+              },
+              {
+                "es": "Dos cañones",
+                "en": "Two cannons"
+              },
+              {
+                "es": "Dos coronas",
+                "en": "Two crowns"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Dos sarcófagos fenicios de mármol, de hombre y de mujer.",
+              "en": "Two Phoenician marble sarcophagi, a man's and a woman's."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "adolfocastro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El jardinero o el cuento?",
+              "en": "The gardener or the tale?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del jardinero",
+                "en": "The gardener lead"
+              },
+              "hint": {
+                "es": "Con Adolfo de Castro",
+                "en": "With Adolfo de Castro"
+              },
+              "targetNodeId": "l4a_jardinero",
+              "setFlags": [
+                "version_jardinero"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del cuento",
+                "en": "The tale lead"
+              },
+              "hint": {
+                "es": "Con Gerión",
+                "en": "With Geryon"
+              },
+              "targetNodeId": "l4b_cuento",
+              "setFlags": [
+                "version_cuento"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_jardinero",
+          "title": {
+            "es": "El jardinero",
+            "en": "The gardener"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "proud",
+              "text": {
+                "es": "Los jardineros lo saben: el drago tiene una resina roja que se oscurece al aire. Se llama «sangre de drago» y ya los romanos la usaban.",
+                "en": "Gardeners know: the dragon tree has a red resin that darkens in the air. It's called “dragon's blood” and the Romans already used it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "thinking",
+              "text": {
+                "es": "El drago viene de Canarias y de las costas de África. Su sangre es suya, no de ningún gigante.",
+                "en": "The dragon tree comes from the Canaries and the coasts of Africa. Its blood is its own, not a giant's."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sdg_pista_resina",
+            "text": {
+              "es": "La savia · La «sangre de drago» es una resina roja del propio árbol.",
+              "en": "The sap · “Dragon's blood” is the tree's own red resin."
+            }
+          },
+          "nextNodeId": "l5_genoves",
+          "nextHint": {
+            "es": "Al Parque Genovés. Unos 8 minutos.",
+            "en": "To Parque Genovés. About 8 minutes."
+          }
+        },
+        {
+          "id": "l4b_cuento",
+          "title": {
+            "es": "El cuento",
+            "en": "The tale"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "gerion",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mi sangre, derramada en la isla, dio vida a un árbol rojo. ¡Por eso sus ramas salen de tres en tres, como mis cuerpos!",
+                "en": "My blood, spilled on the island, gave life to a red tree. That's why its branches grow in threes, like my bodies!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "gerion",
+              "expression": "thinking",
+              "text": {
+                "es": "Bueno… eso cuentan. Yo solo sé que el árbol sangra y a mí me gusta pensar que es por mí.",
+                "en": "Well… that's what they say. All I know is the tree bleeds and I like to think it's because of me."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sdg_pista_ramas",
+            "text": {
+              "es": "Gerión · El cuento dice que el drago nació de la sangre de Gerión, pero ni él está seguro.",
+              "en": "Geryon · The tale says the dragon tree was born from Geryon's blood, but not even he is sure."
+            }
+          },
+          "nextNodeId": "l5_genoves",
+          "nextHint": {
+            "es": "Al Parque Genovés. Unos 8 minutos.",
+            "en": "To Parque Genovés. About 8 minutes."
+          }
+        },
+        {
+          "id": "l5_genoves",
+          "title": {
+            "es": "Parque Genovés",
+            "en": "Parque Genovés"
+          },
+          "location": {
+            "lat": 36.5357,
+            "lng": -6.3043
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_genoves.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_genoves.svg"
+              ],
+              "characters": [
+                {
+                  "id": "adolfocastro",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "gerion",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el Parque Genovés crece un drago de más de un siglo, de tronco grueso y copa en forma de paraguas. Su savia roja se llama «sangre de drago».",
+                "en": "In Parque Genovés grows a dragon tree over a century old, with a thick trunk and an umbrella-shaped crown. Its red sap is called “dragon's blood”."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Gigante, héroe o árbol: ¿por qué sangra el drago de Cádiz?",
+                "en": "Verdict time. Giant, hero or tree: why does the dragon tree of Cádiz bleed?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué «sangra» el drago?",
+              "en": "Why does the dragon tree “bleed”?"
+            },
+            "options": [
+              {
+                "es": "Por la sangre de Gerión",
+                "en": "Because of Geryon's blood"
+              },
+              {
+                "es": "Por la flecha de Hércules",
+                "en": "Because of Hercules's arrow"
+              },
+              {
+                "es": "Porque su savia es una resina roja",
+                "en": "Because its sap is a red resin"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La savia. El drago produce una resina roja, la «sangre de drago». El mito de Gerión la explicó a su manera: autores antiguos ya hablaban de árboles que sangraban sobre su tumba.",
+              "en": "The sap. The dragon tree produces a red resin, “dragon's blood”. The Geryon myth explained it in its own way: ancient writers already told of trees bleeding over his tomb."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mito",
+                    "version_jardinero"
+                  ],
+                  "text": {
+                    "es": "El mito y el jardinero: del gigante a la resina. Eres botánico de la Tacita.",
+                    "en": "The myth and the gardener: from giant to resin. You're the Tacita's botanist."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_mito",
+                    "version_cuento"
+                  ],
+                  "text": {
+                    "es": "El mito y el cuento: te sabes a Gerión de memoria. Eres rapsoda de Eritea.",
+                    "en": "The myth and the tale: you know Geryon by heart. You're Erytheia's bard."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_tierra",
+                    "version_jardinero"
+                  ],
+                  "text": {
+                    "es": "La tierra y el jardinero: fenicios y savia. Eres arqueólogo de Gadir.",
+                    "en": "The ground and the gardener: Phoenicians and sap. You're Gadir's archaeologist."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_tierra",
+                    "version_cuento"
+                  ],
+                  "text": {
+                    "es": "La tierra y el cuento: de Melqart a Hércules. Eres sacerdote del templo.",
+                    "en": "The ground and the tale: from Melqart to Hercules. You're the temple's priest."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "happy",
+              "text": {
+                "es": "Ya lo ve: en Cádiz hasta los árboles tienen leyenda. Y esta vez, se lo juro, no me la he inventado yo.",
+                "en": "You see: in Cádiz even the trees have a legend. And this time, I swear, I didn't make it up."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "botanico_tacita",
+          "requires": [
+            "camino_mito",
+            "version_jardinero"
+          ],
+          "title": {
+            "es": "Botánico de la Tacita",
+            "en": "The Tacita's botanist"
+          }
+        },
+        {
+          "id": "rapsoda_eritea",
+          "requires": [
+            "camino_mito",
+            "version_cuento"
+          ],
+          "title": {
+            "es": "Rapsoda de Eritea",
+            "en": "Erytheia's bard"
+          }
+        },
+        {
+          "id": "arqueologo_gadir",
+          "requires": [
+            "camino_tierra",
+            "version_jardinero"
+          ],
+          "title": {
+            "es": "Arqueólogo de Gadir",
+            "en": "Gadir's archaeologist"
+          }
+        },
+        {
+          "id": "sacerdote_templo",
+          "requires": [
+            "camino_tierra",
+            "version_cuento"
+          ],
+          "title": {
+            "es": "Sacerdote del templo",
+            "en": "The temple's priest"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "escudo_hercules",
+          "name": {
+            "es": "El escudo de Hércules",
+            "en": "The Hercules shield"
+          },
+          "icon": "collectibles/cadiz_leyenda_escudo.svg",
+          "awardedAtNodeId": "l1_sanjuan"
+        },
+        {
+          "id": "bueyes_gerion",
+          "name": {
+            "es": "Los bueyes de Gerión",
+            "en": "Geryon's cattle"
+          },
+          "icon": "collectibles/cadiz_leyenda_bueyes.svg",
+          "awardedAtNodeId": "l2_catedral"
+        },
+        {
+          "id": "flecha",
+          "name": {
+            "es": "La flecha",
+            "en": "The arrow"
+          },
+          "icon": "collectibles/cadiz_leyenda_flecha.svg",
+          "awardedAtNodeId": "la_tavira"
+        },
+        {
+          "id": "anfora_gadir",
+          "name": {
+            "es": "El ánfora de Gadir",
+            "en": "The Gadir amphora"
+          },
+          "icon": "collectibles/cadiz_leyenda_anfora.svg",
+          "awardedAtNodeId": "lb_gadir"
+        },
+        {
+          "id": "drago",
+          "name": {
+            "es": "El drago",
+            "en": "The dragon tree"
+          },
+          "icon": "collectibles/cadiz_leyenda_drago.svg",
+          "awardedAtNodeId": "l5_genoves"
+        },
+        {
+          "id": "insignia_drago",
+          "name": {
+            "es": "¿Por qué sangra el drago?",
+            "en": "Why Does the Dragon Tree Bleed?"
+          },
+          "icon": "collectibles/cadiz_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

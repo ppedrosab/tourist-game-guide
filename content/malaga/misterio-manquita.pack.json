@@ -1,6 +1,6 @@
 {
   "id": "malaga",
-  "version": 6,
+  "version": 7,
   "name": { "es": "Málaga", "en": "Málaga" },
   "languages": ["es", "en"],
   "center": { "lat": 36.7205, "lng": -4.4205 },
@@ -18,7 +18,10 @@
     {"id": "pasera", "name": {"es": "La Pasera", "en": "The Raisin Maker"}, "description": {"es": "Seca uva moscatel al sol en los paseros de la Axarquía. Alegre y muy trabajadora.", "en": "She dries Muscat grapes in the sun on the drying beds of the Axarquía. Cheerful and hard-working."}, "avatar": "sprites/pasera/pasera_neutral.svg"},
     {"id": "latrini", "name": {"es": "La Trini", "en": "La Trini"}, "description": {"es": "Trinidad Navarro, cantaora malagueña; la «malagueña de la Trini» lleva su nombre. Apasionada y con mucho arte.", "en": "Trinidad Navarro, a flamenco singer from Málaga; the 'malagueña de la Trini' is named after her. Passionate and full of flair."}, "avatar": "sprites/latrini/latrini_neutral.svg", "era": "1868 - 1930"},
     {"id": "verdialero", "name": {"es": "El Verdialero", "en": "The Verdiales Player"}, "description": {"es": "Toca el violín en una panda de verdiales, con su sombrero de flores y espejos. Alegre y despistado.", "en": "He plays violin in a verdiales band, with his hat of flowers and mirrors. Cheerful and scatterbrained."}, "avatar": "sprites/verdialero/verdialero_neutral.svg"},
-    {"id": "biznaguero", "name": {"es": "El Biznaguero", "en": "The Biznaga Seller"}, "description": {"es": "Vende biznagas de jazmín por las calles de Málaga, como el de la estatua del parque. Presumido y buen conversador.", "en": "He sells jasmine biznagas in the streets of Málaga, like the one in the statue in the park. Dapper and a good talker."}, "avatar": "sprites/biznaguero/biznaguero_neutral.svg"}
+    {"id": "biznaguero", "name": {"es": "El Biznaguero", "en": "The Biznaga Seller"}, "description": {"es": "Vende biznagas de jazmín por las calles de Málaga, como el de la estatua del parque. Presumido y buen conversador.", "en": "He sells jasmine biznagas in the streets of Málaga, like the one in the statue in the park. Dapper and a good talker."}, "avatar": "sprites/biznaguero/biznaguero_neutral.svg"},
+    {"id": "diazescovar", "name": {"es": "Narciso Díaz de Escovar", "en": "Narciso Díaz de Escovar"}, "description": {"es": "Escritor malagueño que recogió las tradiciones de su ciudad en «Curiosidades malagueñas» (1899). Curioso y muy conversador.", "en": "A Málaga writer who gathered his city's traditions in “Curiosidades malagueñas” (1899). Curious and very talkative."}, "avatar": "sprites/diazescovar/diazescovar_neutral.svg", "era": "1860 - 1935"},
+    {"id": "sanchalara", "name": {"es": "Doña Sancha de Lara", "en": "Doña Sancha de Lara"}, "description": {"es": "Dama de la tradición de las Siete Cabezas, tía de don Álvaro. Orgullosa e implacable.", "en": "The lady of the Seven Heads tradition, Don Álvaro's aunt. Proud and relentless."}, "avatar": "sprites/sanchalara/sanchalara_neutral.svg", "era": "1639 (tradición)"},
+    {"id": "olavarria", "name": {"es": "El corregidor Olavarría", "en": "Magistrate Olavarría"}, "description": {"es": "Don Pedro de Olavarría, el corregidor duro de la tradición de las Siete Cabezas. Soberbio y, al final, arrepentido.", "en": "Don Pedro de Olavarría, the harsh magistrate of the Seven Heads tradition. Arrogant and, in the end, remorseful."}, "avatar": "sprites/olavarria/olavarria_neutral.svg", "era": "1639 (tradición)"}
   ],
   "routes": [
     {
@@ -2549,6 +2552,929 @@
           },
           "icon": "collectibles/malaga_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
+        }
+      ]
+    },
+    {
+      "id": "siete-cabezas",
+      "title": {
+        "es": "¿De quién eran las siete cabezas?",
+        "en": "Whose Were the Seven Heads?"
+      },
+      "summary": {
+        "es": "Frente a la catedral hubo una casa con siete cabezas de piedra. ¿Bandoleros, un castigo del rey o un adorno? Con el escritor Narciso Díaz de Escovar, doña Sancha de Lara y el corregidor Olavarría.",
+        "en": "Facing the cathedral there was a house with seven stone heads. Bandits, a royal punishment or decoration? With the writer Narciso Díaz de Escovar, Doña Sancha de Lara and magistrate Olavarría."
+      },
+      "era": "1639",
+      "guideCharacterId": "diazescovar",
+      "durationMin": 60,
+      "distanceKm": 1.8,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El corregidor",
+            "en": "The magistrate"
+          },
+          "trail": {
+            "es": "camino del corregidor",
+            "en": "magistrate trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Doña Sancha",
+            "en": "Doña Sancha"
+          },
+          "trail": {
+            "es": "camino de doña Sancha",
+            "en": "Doña Sancha trail"
+          }
+        }
+      },
+      "startNodeId": "l1_constitucion",
+      "nodes": [
+        {
+          "id": "l1_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 36.7208,
+            "lng": -4.422
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazescovar",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Narciso Díaz de Escovar, malagueño, escritor y coleccionista de tradiciones. En 1899 publiqué un libro lleno de historias viejas de esta ciudad.",
+                "en": "Good evening. Narciso Díaz de Escovar, from Málaga, a writer and collector of traditions. In 1899 I published a book full of this city's old stories."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "text": {
+                "es": "Una de ellas me quita el sueño: la casa de las Siete Cabezas. Una casa frente a la catedral con siete cabezas de piedra en la fachada. ¿De quién eran?",
+                "en": "One of them keeps me awake: the House of the Seven Heads. A house facing the cathedral with seven stone heads on its front. Whose heads were they?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: siete bandoleros ajusticiados, un castigo de la justicia del rey o un simple adorno de cantero. Apunte, que la tarde es corta.",
+                "en": "Three suspects: seven executed bandits, a punishment by the king's justice, or just a stonemason's decoration. Take notes, the evening is short."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XVII esta era la plaza mayor de Málaga: aquí estaban el cabildo, la cárcel y el lugar de las ejecuciones públicas.",
+                "en": "In the 17th century this was Málaga's main square: the town council, the prison and the site of public executions were here."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué había en esta plaza en el siglo XVII?",
+              "en": "What was in this square in the 17th century?"
+            },
+            "options": [
+              {
+                "es": "Una plaza de toros",
+                "en": "A bullring"
+              },
+              {
+                "es": "El cabildo y la cárcel",
+                "en": "The town council and the prison"
+              },
+              {
+                "es": "Un puerto",
+                "en": "A port"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El cabildo y la cárcel: era la plaza mayor de la ciudad.",
+              "en": "The town council and the prison: it was the city's main square."
+            }
+          },
+          "clue": {
+            "id": "sca_pista_plaza",
+            "text": {
+              "es": "La justicia · La tradición empieza en la plaza mayor, donde estaban la cárcel y la horca.",
+              "en": "Justice · The tradition begins in the main square, where the prison and the gallows stood."
+            }
+          },
+          "nextNodeId": "l2_larios",
+          "nextHint": {
+            "es": "A la calle Larios. Un minuto.",
+            "en": "To Calle Larios. One minute."
+          }
+        },
+        {
+          "id": "l2_larios",
+          "title": {
+            "es": "Calle Larios",
+            "en": "Calle Larios"
+          },
+          "location": {
+            "lat": 36.7197,
+            "lng": -4.4215
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_larios.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_larios.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazescovar",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "olavarria",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La calle Larios se abrió en 1891. En 1639, cuando pasa esta historia, aquí había un laberinto de callejas estrechas.",
+                "en": "Calle Larios was opened in 1891. In 1639, when this story takes place, there was a maze of narrow alleys here."
+              },
+              "year": 1891
+            },
+            {
+              "type": "dialogue",
+              "characterId": "olavarria",
+              "expression": "proud",
+              "text": {
+                "es": "Don Pedro de Olavarría, corregidor de Málaga. Aquí mando yo, y quien no me respete lo paga. Eso dicen de mí, y a mucha honra.",
+                "en": "Don Pedro de Olavarría, chief magistrate of Málaga. I'm in charge here, and whoever disrespects me pays for it. That's what they say about me, and I'm proud of it."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en 1639, en una función de comedias, un joven llamado don Álvaro Torres no quiso saludar al corregidor, y que Olavarría lo mandó prender esa misma noche.",
+                "en": "It's said that in 1639, at a play, a young man called Don Álvaro Torres refused to greet the magistrate, and that Olavarría had him arrested that very night."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año se abrió la calle Larios?",
+              "en": "In what year was Calle Larios opened?"
+            },
+            "options": [
+              {
+                "es": "En 1891",
+                "en": "In 1891"
+              },
+              {
+                "es": "En 1639",
+                "en": "In 1639"
+              },
+              {
+                "es": "En 1487",
+                "en": "In 1487"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1891. En 1639 aquí había callejas estrechas.",
+              "en": "In 1891. In 1639 there were narrow alleys here."
+            }
+          },
+          "clue": {
+            "id": "sca_pista_alvaro",
+            "text": {
+              "es": "La justicia · Don Álvaro Torres ofendió al corregidor en una función de comedias y lo prendieron.",
+              "en": "Justice · Don Álvaro Torres offended the magistrate at a play and was arrested."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "diazescovar",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos al corregidor hacia el puerto o buscamos a la dueña de la casa por el teatro y la Alcazaba?",
+              "en": "Shall we follow the magistrate towards the port, or look for the owner of the house by the theatre and the Alcazaba?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Tras el corregidor",
+                "en": "After the magistrate"
+              },
+              "hint": {
+                "es": "Atarazanas",
+                "en": "Atarazanas"
+              },
+              "targetNodeId": "la_atarazanas",
+              "setFlags": [
+                "camino_corregidor"
+              ],
+              "distanceM": 300,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "Tras doña Sancha",
+                "en": "After Doña Sancha"
+              },
+              "hint": {
+                "es": "Teatro Romano",
+                "en": "Roman Theatre"
+              },
+              "targetNodeId": "lb_teatro",
+              "setFlags": [
+                "camino_sancha"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "la_atarazanas",
+          "title": {
+            "es": "Mercado de Atarazanas",
+            "en": "Atarazanas Market"
+          },
+          "location": {
+            "lat": 36.7186,
+            "lng": -4.4242
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_atarazanas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_atarazanas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "olavarria",
+                  "expression": "nervous",
+                  "position": "left"
+                },
+                {
+                  "id": "diazescovar",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La puerta del mercado de Atarazanas es nazarí, del siglo XIV. Entonces el mar llegaba casi hasta aquí.",
+                "en": "The gate of Atarazanas market is Nasrid, from the 14th century. Back then the sea came almost up to here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "olavarria",
+              "expression": "nervous",
+              "text": {
+                "es": "Juicio rápido y a la horca: así se hacían las cosas. ¿Que era sobrino de una dama principal? Peor para él… o eso creía yo.",
+                "en": "A quick trial and off to the gallows: that's how things were done. That he was the nephew of a noble lady? Too bad for him… or so I thought."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "text": {
+                "es": "«O eso creía»… Eso suena a que al corregidor le salió cara la prisa.",
+                "en": "“Or so I thought”… That sounds like the magistrate's haste cost him dearly."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué época es la puerta de Atarazanas?",
+              "en": "What period is the Atarazanas gate from?"
+            },
+            "options": [
+              {
+                "es": "Romana",
+                "en": "Roman"
+              },
+              {
+                "es": "Del siglo XX",
+                "en": "20th century"
+              },
+              {
+                "es": "Nazarí, del siglo XIV",
+                "en": "Nasrid, 14th century"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Nazarí, del siglo XIV: por ella se entraba a los astilleros.",
+              "en": "Nasrid, 14th century: it led into the shipyards."
+            }
+          },
+          "clue": {
+            "id": "sca_pista_prisa",
+            "text": {
+              "es": "La justicia · El corregidor ahorcó a don Álvaro tras un juicio sumarísimo, y la prisa le salió cara.",
+              "en": "Justice · The magistrate hanged Don Álvaro after a summary trial, and his haste cost him dearly."
+            }
+          },
+          "nextNodeId": "l4_merced",
+          "nextHint": {
+            "es": "Sube hacia la Plaza de la Merced. Unos 12 minutos.",
+            "en": "Head up to Plaza de la Merced. About 12 minutes."
+          }
+        },
+        {
+          "id": "lb_teatro",
+          "title": {
+            "es": "Teatro Romano",
+            "en": "Roman Theatre"
+          },
+          "location": {
+            "lat": 36.7212,
+            "lng": -4.4167
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_teatro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_teatro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "sanchalara",
+                  "expression": "dramatic",
+                  "position": "left"
+                },
+                {
+                  "id": "diazescovar",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sanchalara",
+              "expression": "dramatic",
+              "text": {
+                "es": "Doña Sancha de Lara. Aquel corregidor mandó ahorcar a mi sobrino Álvaro por no quitarse el sombrero. Yo no lloré: escribí al rey Felipe IV.",
+                "en": "Doña Sancha de Lara. That magistrate had my nephew Álvaro hanged for not taking off his hat. I didn't weep: I wrote to King Philip IV."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Este teatro romano, del siglo I, estuvo enterrado durante siglos. Se descubrió en 1951, al hacer unas obras.",
+                "en": "This Roman theatre, from the 1st century, lay buried for centuries. It was discovered in 1951 during building work."
+              },
+              "year": 1951
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "text": {
+                "es": "En 1639 nadie sabía que bajo sus pies dormía un teatro. Ellos tenían su propia función… y acabó en tragedia.",
+                "en": "In 1639 nobody knew a theatre lay sleeping beneath their feet. They had their own play… and it ended in tragedy."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuándo se descubrió el Teatro Romano de Málaga?",
+              "en": "When was Málaga's Roman Theatre discovered?"
+            },
+            "options": [
+              {
+                "es": "En 1487",
+                "en": "In 1487"
+              },
+              {
+                "es": "En 1951",
+                "en": "In 1951"
+              },
+              {
+                "es": "En 1639",
+                "en": "In 1639"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En 1951, al hacer unas obras junto a la Alcazaba.",
+              "en": "In 1951, during building work next to the Alcazaba."
+            }
+          },
+          "clue": {
+            "id": "sca_pista_carta",
+            "text": {
+              "es": "La justicia · Doña Sancha escribió al rey Felipe IV para pedir justicia por su sobrino.",
+              "en": "Justice · Doña Sancha wrote to King Philip IV to demand justice for her nephew."
+            }
+          },
+          "nextNodeId": "l4_merced",
+          "nextHint": {
+            "es": "Sube a la Plaza de la Merced. Unos 5 minutos.",
+            "en": "Walk up to Plaza de la Merced. About 5 minutes."
+          }
+        },
+        {
+          "id": "l4_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 36.7235,
+            "lng": -4.4175
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazescovar",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "sanchalara",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La plaza toma su nombre del convento de la Merced, que estuvo aquí durante siglos. En el siglo XVII era uno de los lugares más concurridos de la ciudad.",
+                "en": "The square takes its name from the Merced convent, which stood here for centuries. In the 17th century it was one of the busiest places in the city."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_corregidor"
+                  ],
+                  "text": {
+                    "es": "Vienes tras el corregidor: prisa, horca y un «o eso creía yo». ¿Seguimos la pista de la carta o la de la piedra?",
+                    "en": "You've followed the magistrate: haste, gallows and an “or so I thought”. Shall we follow the letter lead or the stone lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_sancha"
+                  ],
+                  "text": {
+                    "es": "Vienes con doña Sancha: una tía furiosa y una carta al rey. ¿Seguimos la pista de la carta o la de la piedra?",
+                    "en": "You've come with Doña Sancha: a furious aunt and a letter to the king. Shall we follow the letter lead or the stone lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De dónde viene el nombre de la Plaza de la Merced?",
+              "en": "Where does the name Plaza de la Merced come from?"
+            },
+            "options": [
+              {
+                "es": "De un convento que estuvo aquí",
+                "en": "From a convent that stood here"
+              },
+              {
+                "es": "De un barco",
+                "en": "From a ship"
+              },
+              {
+                "es": "De una reina",
+                "en": "From a queen"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Del convento de la Merced.",
+              "en": "From the Merced convent."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "diazescovar",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La carta o la piedra?",
+              "en": "The letter or the stone?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la carta",
+                "en": "The letter lead"
+              },
+              "hint": {
+                "es": "Con doña Sancha",
+                "en": "With Doña Sancha"
+              },
+              "targetNodeId": "l4a_carta",
+              "setFlags": [
+                "version_carta"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la piedra",
+                "en": "The stone lead"
+              },
+              "hint": {
+                "es": "Con el corregidor",
+                "en": "With the magistrate"
+              },
+              "targetNodeId": "l4b_piedra",
+              "setFlags": [
+                "version_piedra"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_carta",
+          "title": {
+            "es": "La carta",
+            "en": "The letter"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "sanchalara",
+              "expression": "proud",
+              "text": {
+                "es": "El rey mandó investigar. Y la justicia cayó sobre el corregidor y sobre los que le ayudaron: seis en total acabaron en el patíbulo.",
+                "en": "The king ordered an inquiry. And justice fell on the magistrate and on those who helped him: six in all ended on the scaffold."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "sanchalara",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mandé labrar sus seis cabezas en la fachada de mi casa, para que nadie olvidara. Y una séptima: la de mi Álvaro.",
+                "en": "I had their six heads carved on the front of my house, so nobody would forget. And a seventh: my Álvaro's."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sca_pista_seis",
+            "text": {
+              "es": "La justicia · Según la tradición, seis culpables murieron por orden del rey, y doña Sancha labró sus cabezas y la de su sobrino.",
+              "en": "Justice · According to tradition, six culprits died by the king's order, and Doña Sancha carved their heads and her nephew's."
+            }
+          },
+          "nextNodeId": "l5_obispo",
+          "nextHint": {
+            "es": "Baja a la Plaza del Obispo, frente a la catedral. Unos 6 minutos.",
+            "en": "Walk down to Plaza del Obispo, facing the cathedral. About 6 minutes."
+          }
+        },
+        {
+          "id": "l4b_piedra",
+          "title": {
+            "es": "La piedra",
+            "en": "The stone"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "olavarria",
+              "expression": "nervous",
+              "text": {
+                "es": "Está bien, lo confieso: el rey me pidió cuentas. Y no solo a mí: a todos los que firmaron aquella sentencia.",
+                "en": "All right, I confess: the king called me to account. And not only me: everyone who signed that sentence."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "olavarria",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mi mujer huyó y nunca más se supo de ella. Y nuestras caras acabaron en piedra, en la casa de esa señora. Ni bandoleros ni adornos: justicia.",
+                "en": "My wife fled and was never heard of again. And our faces ended up in stone, on that lady's house. Neither bandits nor decoration: justice."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sca_pista_rostros",
+            "text": {
+              "es": "La justicia · El corregidor reconoce que las caras de piedra eran las de los que firmaron la sentencia.",
+              "en": "Justice · The magistrate admits the stone faces belonged to those who signed the sentence."
+            }
+          },
+          "nextNodeId": "l5_obispo",
+          "nextHint": {
+            "es": "Baja a la Plaza del Obispo, frente a la catedral. Unos 6 minutos.",
+            "en": "Walk down to Plaza del Obispo, facing the cathedral. About 6 minutes."
+          }
+        },
+        {
+          "id": "l5_obispo",
+          "title": {
+            "es": "Plaza del Obispo",
+            "en": "Plaza del Obispo"
+          },
+          "location": {
+            "lat": 36.7201,
+            "lng": -4.4203
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_manquita.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_manquita.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazescovar",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "sanchalara",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La casa de doña Sancha estaba en esta plaza, frente a la catedral, que en 1639 aún estaba en obras. Hoy la plaza la preside el Palacio Episcopal, del siglo XVIII.",
+                "en": "Doña Sancha's house stood in this square, facing the cathedral, which in 1639 was still being built. Today the square is dominated by the 18th-century Bishop's Palace."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Bandoleros, justicia del rey o adorno de cantero: ¿de quién eran las siete cabezas?",
+                "en": "Verdict time. Bandits, the king's justice or a stonemason's decoration: whose were the seven heads?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De quién eran las siete cabezas, según la tradición?",
+              "en": "Whose were the seven heads, according to tradition?"
+            },
+            "options": [
+              {
+                "es": "Eran solo un adorno",
+                "en": "They were just decoration"
+              },
+              {
+                "es": "De siete bandoleros",
+                "en": "Seven bandits"
+              },
+              {
+                "es": "De los seis culpables castigados por el rey y del sobrino de doña Sancha",
+                "en": "The six culprits punished by the king, and Doña Sancha's nephew"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Según la tradición que recogió Díaz de Escovar, doña Sancha mandó labrar las cabezas de los seis culpables y la de su sobrino don Álvaro. Es una tradición: la casa ya no existe y no se conservan documentos del caso.",
+              "en": "According to the tradition collected by Díaz de Escovar, Doña Sancha had the heads of the six culprits and of her nephew Don Álvaro carved. It is a tradition: the house no longer exists and no records of the case survive."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_corregidor",
+                    "version_carta"
+                  ],
+                  "text": {
+                    "es": "El corregidor y la carta: la prisa y la justicia. Eres escribano del rey.",
+                    "en": "The magistrate and the letter: haste and justice. You're the king's scribe."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_corregidor",
+                    "version_piedra"
+                  ],
+                  "text": {
+                    "es": "El corregidor y la piedra: le has sacado la confesión. Eres juez de residencia.",
+                    "en": "The magistrate and the stone: you got his confession. You're the royal inspector."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_sancha",
+                    "version_carta"
+                  ],
+                  "text": {
+                    "es": "Doña Sancha y la carta: una tía que no se rinde. Eres mensajero de la Corte.",
+                    "en": "Doña Sancha and the letter: an aunt who never gives up. You're the Court's messenger."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_sancha",
+                    "version_piedra"
+                  ],
+                  "text": {
+                    "es": "Doña Sancha y la piedra: siete caras que no olvidan. Eres cantero de las Siete Cabezas.",
+                    "en": "Doña Sancha and the stone: seven faces that don't forget. You're the Seven Heads' stonemason."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "happy",
+              "text": {
+                "es": "Y así lo apunté en mis Curiosidades malagueñas. Si algún día ve una cabeza de piedra en una fachada… pregúntele su historia.",
+                "en": "And that's how I wrote it down in my Curiosidades malagueñas. If you ever see a stone head on a building… ask it for its story."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "escribano_rey",
+          "requires": [
+            "camino_corregidor",
+            "version_carta"
+          ],
+          "title": {
+            "es": "Escribano del rey",
+            "en": "The king's scribe"
+          }
+        },
+        {
+          "id": "juez_residencia",
+          "requires": [
+            "camino_corregidor",
+            "version_piedra"
+          ],
+          "title": {
+            "es": "Juez de residencia",
+            "en": "Royal inspector"
+          }
+        },
+        {
+          "id": "mensajero_corte",
+          "requires": [
+            "camino_sancha",
+            "version_carta"
+          ],
+          "title": {
+            "es": "Mensajero de la Corte",
+            "en": "The Court's messenger"
+          }
+        },
+        {
+          "id": "cantero_cabezas",
+          "requires": [
+            "camino_sancha",
+            "version_piedra"
+          ],
+          "title": {
+            "es": "Cantero de las Siete Cabezas",
+            "en": "The Seven Heads' stonemason"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "farol_plaza",
+          "name": {
+            "es": "El farol de la plaza",
+            "en": "The square's lantern"
+          },
+          "icon": "collectibles/malaga_leyenda_farol.svg",
+          "awardedAtNodeId": "l1_constitucion"
+        },
+        {
+          "id": "sombrero_alvaro",
+          "name": {
+            "es": "El sombrero de don Álvaro",
+            "en": "Don Álvaro's hat"
+          },
+          "icon": "collectibles/malaga_leyenda_sombrero.svg",
+          "awardedAtNodeId": "l2_larios"
+        },
+        {
+          "id": "vara_corregidor",
+          "name": {
+            "es": "La vara del corregidor",
+            "en": "The magistrate's staff"
+          },
+          "icon": "collectibles/malaga_leyenda_vara.svg",
+          "awardedAtNodeId": "la_atarazanas"
+        },
+        {
+          "id": "carta_rey",
+          "name": {
+            "es": "La carta al rey",
+            "en": "The letter to the king"
+          },
+          "icon": "collectibles/malaga_leyenda_carta.svg",
+          "awardedAtNodeId": "lb_teatro"
+        },
+        {
+          "id": "cabeza_piedra",
+          "name": {
+            "es": "La cabeza de piedra",
+            "en": "The stone head"
+          },
+          "icon": "collectibles/malaga_leyenda_cabeza.svg",
+          "awardedAtNodeId": "l5_obispo"
+        },
+        {
+          "id": "insignia_siete_cabezas",
+          "name": {
+            "es": "¿De quién eran las siete cabezas?",
+            "en": "Whose Were the Seven Heads?"
+          },
+          "icon": "collectibles/malaga_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

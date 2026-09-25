@@ -1,6 +1,6 @@
 {
   "id": "sevilla",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Sevilla",
     "en": "Seville"
@@ -19,7 +19,7 @@
       "lng": -6.006
     },
     {
-      "lat": 37.391,
+      "lat": 37.393,
       "lng": -5.983
     }
   ],
@@ -137,6 +137,45 @@
       },
       "avatar": "sprites/bonaplata/bonaplata_neutral.svg",
       "era": "s. XIX"
+    },
+    {
+      "id": "becquer",
+      "name": {
+        "es": "Gustavo Adolfo Bécquer",
+        "en": "Gustavo Adolfo Bécquer"
+      },
+      "description": {
+        "es": "Poeta sevillano de las «Rimas» y las «Leyendas». Romántico, soñador y amigo de la noche.",
+        "en": "Sevillian poet of the “Rhymes” and the “Legends”. Romantic, dreamy and fond of the night."
+      },
+      "avatar": "sprites/becquer/becquer_neutral.svg",
+      "era": "1836 - 1870"
+    },
+    {
+      "id": "viejacandil",
+      "name": {
+        "es": "La vieja del candil",
+        "en": "The Old Woman with the Lamp"
+      },
+      "description": {
+        "es": "La testigo de la leyenda de la calle Candilejo. Curiosa, lista y más valiente de lo que parece.",
+        "en": "The witness in the legend of Calle Candilejo. Nosy, clever and braver than she looks."
+      },
+      "avatar": "sprites/viejacandil/viejacandil_neutral.svg",
+      "era": "s. XIV (leyenda)"
+    },
+    {
+      "id": "reypedro",
+      "name": {
+        "es": "El rey don Pedro",
+        "en": "King Peter"
+      },
+      "description": {
+        "es": "Pedro I de Castilla, que vivió en el Alcázar de Sevilla. El Cruel o el Justiciero, según a quién se pregunte.",
+        "en": "Peter I of Castile, who lived in the Alcázar of Seville. The Cruel or the Just, depending on whom you ask."
+      },
+      "avatar": "sprites/reypedro/reypedro_neutral.svg",
+      "era": "1334 - 1369"
     }
   ],
   "routes": [
@@ -3628,6 +3667,929 @@
           },
           "icon": "collectibles/sevilla_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
+        }
+      ]
+    },
+    {
+      "id": "cabeza-rey-pedro",
+      "title": {
+        "es": "¿Quién mató al caballero del Candilejo?",
+        "en": "Who Killed the Knight of the Candilejo?"
+      },
+      "summary": {
+        "es": "Una noche del siglo XIV, un caballero murió a espada en una esquina de Sevilla. Una vieja con un candil vio algo. Con Bécquer, la vieja del candil y el rey don Pedro.",
+        "en": "One night in the 14th century, a knight died by the sword on a Seville corner. An old woman with an oil lamp saw something. With Bécquer, the old woman with the lamp and King Peter."
+      },
+      "era": "s. XIV",
+      "guideCharacterId": "becquer",
+      "durationMin": 60,
+      "distanceKm": 2.2,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La testigo",
+            "en": "The witness"
+          },
+          "trail": {
+            "es": "camino de la testigo",
+            "en": "witness trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El palacio",
+            "en": "The palace"
+          },
+          "trail": {
+            "es": "camino del palacio",
+            "en": "palace trail"
+          }
+        }
+      },
+      "startNodeId": "l1_salvador",
+      "nodes": [
+        {
+          "id": "l1_salvador",
+          "title": {
+            "es": "Plaza del Salvador",
+            "en": "Plaza del Salvador"
+          },
+          "location": {
+            "lat": 37.3895,
+            "lng": -5.994
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_salvador.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_salvador.svg"
+              ],
+              "characters": [
+                {
+                  "id": "becquer",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas noches. Gustavo Adolfo Bécquer, sevillano. Escribí rimas y leyendas, y esta ciudad tiene más leyendas que calles.",
+                "en": "Good evening. Gustavo Adolfo Bécquer, from Seville. I wrote rhymes and legends, and this city has more legends than streets."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "text": {
+                "es": "Esta noche le traigo un crimen del siglo XIV: un caballero muerto a espada en una esquina, a oscuras. ¿Quién lo mató?",
+                "en": "Tonight I bring you a 14th-century crime: a knight killed by the sword on a corner, in the dark. Who killed him?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: un ladrón cualquiera, un rival de su propia familia… o alguien muy, muy importante. Apunte.",
+                "en": "Three suspects: some thief, a rival from his own family… or someone very, very important. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia del Salvador se levanta donde estuvo la mezquita mayor de la Isbiliya del siglo IX. Es una de las iglesias más grandes de Sevilla.",
+                "en": "The church of El Salvador stands where the main mosque of 9th-century Isbiliya once was. It is one of the largest churches in Seville."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hubo antes donde está la iglesia del Salvador?",
+              "en": "What stood before where the church of El Salvador is?"
+            },
+            "options": [
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "Una mezquita",
+                "en": "A mosque"
+              },
+              {
+                "es": "Un teatro romano",
+                "en": "A Roman theatre"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La mezquita mayor de la Isbiliya del siglo IX.",
+              "en": "The main mosque of 9th-century Isbiliya."
+            }
+          },
+          "clue": {
+            "id": "crp_pista_siglo",
+            "text": {
+              "es": "Un ladrón · El crimen ocurrió de noche, en el siglo XIV, en una esquina del centro.",
+              "en": "A thief · The crime happened at night, in the 14th century, on a corner in the centre."
+            }
+          },
+          "nextNodeId": "l2_alfalfa",
+          "nextHint": {
+            "es": "A la plaza de la Alfalfa. Unos 4 minutos.",
+            "en": "To Plaza de la Alfalfa. About 4 minutes."
+          }
+        },
+        {
+          "id": "l2_alfalfa",
+          "title": {
+            "es": "Plaza de la Alfalfa",
+            "en": "Plaza de la Alfalfa"
+          },
+          "location": {
+            "lat": 37.3904,
+            "lng": -5.9908
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_alfalfa.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_alfalfa.svg"
+              ],
+              "characters": [
+                {
+                  "id": "becquer",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "viejacandil",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "viejacandil",
+              "expression": "neutral",
+              "text": {
+                "es": "Buenas noches, hijo. Soy una vieja de estas calles. Aquella noche oí ruido de espadas y me asomé con mi candil.",
+                "en": "Good evening, dear. I'm an old woman from these streets. That night I heard swords clashing and looked out with my oil lamp."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Alfalfa fue durante siglos un mercado. Cerca se cruzaban varias calles en un lugar que llamaban los Cuatro Cantillos.",
+                "en": "La Alfalfa was a market for centuries. Nearby several streets met at a spot people called the Cuatro Cantillos, the Four Corners."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "viejacandil",
+              "expression": "thinking",
+              "text": {
+                "es": "Vi a uno en el suelo y a otro que se iba. No le vi la cara… pero le oí algo muy raro al andar.",
+                "en": "I saw one man on the ground and another walking away. I didn't see his face… but I heard something very strange when he walked."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo llamaban al cruce de calles cercano?",
+              "en": "What was the nearby crossroads called?"
+            },
+            "options": [
+              {
+                "es": "Los Cuatro Cantillos",
+                "en": "The Cuatro Cantillos"
+              },
+              {
+                "es": "Las Siete Revueltas",
+                "en": "Las Siete Revueltas"
+              },
+              {
+                "es": "La Campana",
+                "en": "La Campana"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los Cuatro Cantillos: allí pasó el crimen.",
+              "en": "The Cuatro Cantillos: that's where the crime happened."
+            }
+          },
+          "clue": {
+            "id": "crp_pista_ruido",
+            "text": {
+              "es": "El rey · La testigo no vio la cara del asesino, pero le oyó algo raro al andar.",
+              "en": "The king · The witness didn't see the killer's face, but heard something strange as he walked."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "becquer",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos a la testigo por su calle o al sospechoso hacia los palacios?",
+              "en": "Shall we follow the witness down her street, or the suspect towards the palaces?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Con la testigo",
+                "en": "With the witness"
+              },
+              "hint": {
+                "es": "Calle Candilejo",
+                "en": "Calle Candilejo"
+              },
+              "targetNodeId": "la_candilejo",
+              "setFlags": [
+                "camino_testigo"
+              ],
+              "distanceM": 80,
+              "walkMin": 1
+            },
+            {
+              "label": {
+                "es": "Tras el sospechoso",
+                "en": "After the suspect"
+              },
+              "hint": {
+                "es": "Casa de Pilatos",
+                "en": "Casa de Pilatos"
+              },
+              "targetNodeId": "lb_pilatos",
+              "setFlags": [
+                "camino_palacio"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "la_candilejo",
+          "title": {
+            "es": "Calle Candilejo",
+            "en": "Calle Candilejo"
+          },
+          "location": {
+            "lat": 37.3898,
+            "lng": -5.9902
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_candilejo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_candilejo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "viejacandil",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "becquer",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "viejacandil",
+              "expression": "proud",
+              "text": {
+                "es": "Esta calle se llama Candilejo por mi candil. ¡Fíjate si fue importante lo que vi!",
+                "en": "This street is called Candilejo after my oil lamp. Just imagine how important what I saw was!"
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que la vieja reconoció al asesino por el crujido de sus rodillas al andar, y que en Sevilla solo había un hombre con las rodillas así.",
+                "en": "It's said the old woman recognised the killer by the creaking of his knees as he walked, and that in Seville only one man had knees like that."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "text": {
+                "es": "Unas rodillas que crujen… Eso no es una pista cualquiera: es una firma.",
+                "en": "Creaking knees… That's not just any clue: it's a signature."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De dónde toma su nombre la calle Candilejo?",
+              "en": "Where does Calle Candilejo get its name?"
+            },
+            "options": [
+              {
+                "es": "De una tienda de velas",
+                "en": "From a candle shop"
+              },
+              {
+                "es": "De un farol del rey",
+                "en": "From a royal lantern"
+              },
+              {
+                "es": "Del candil de la vieja testigo",
+                "en": "From the old witness's oil lamp"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Del candil con el que la vieja se asomó aquella noche.",
+              "en": "From the lamp the old woman held up that night."
+            }
+          },
+          "clue": {
+            "id": "crp_pista_rodillas",
+            "text": {
+              "es": "El rey · El asesino tenía las rodillas que crujían, y en Sevilla solo había uno así.",
+              "en": "The king · The killer had creaking knees, and there was only one man like that in Seville."
+            }
+          },
+          "nextNodeId": "l4_giralda",
+          "nextHint": {
+            "es": "Ve hacia la Giralda por Santa Cruz. Unos 12 minutos.",
+            "en": "Head to the Giralda through Santa Cruz. About 12 minutes."
+          }
+        },
+        {
+          "id": "lb_pilatos",
+          "title": {
+            "es": "Casa de Pilatos",
+            "en": "Casa de Pilatos"
+          },
+          "location": {
+            "lat": 37.3902,
+            "lng": -5.9872
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_pilatos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_pilatos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "reypedro",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "becquer",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "reypedro",
+              "expression": "proud",
+              "text": {
+                "es": "Pedro I, rey de Castilla. Unos me llaman el Cruel y otros el Justiciero. De noche me gustaba pasear por Sevilla sin que nadie me reconociera.",
+                "en": "Peter I, King of Castile. Some call me the Cruel and others the Just. At night I liked to walk around Seville without anyone recognising me."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa de Pilatos es un palacio de los siglos XV y XVI que mezcla mudéjar, gótico y renacimiento. Durante un tiempo guardó un busto muy relacionado con esta historia.",
+                "en": "Casa de Pilatos is a 15th-16th century palace mixing Mudéjar, Gothic and Renaissance styles. For a time it kept a bust closely linked to this story."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Paseos nocturnos de incógnito, majestad? Qué casualidad…",
+                "en": "Night walks in disguise, Your Majesty? What a coincidence…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué dos apodos se conoce a Pedro I?",
+              "en": "By which two nicknames is Peter I known?"
+            },
+            "options": [
+              {
+                "es": "El Grande y el Breve",
+                "en": "The Great and the Brief"
+              },
+              {
+                "es": "El Cruel y el Justiciero",
+                "en": "The Cruel and the Just"
+              },
+              {
+                "es": "El Sabio y el Santo",
+                "en": "The Wise and the Saint"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El Cruel, para sus enemigos, y el Justiciero, para sus partidarios.",
+              "en": "The Cruel, to his enemies, and the Just, to his supporters."
+            }
+          },
+          "clue": {
+            "id": "crp_pista_incognito",
+            "text": {
+              "es": "El rey · El rey paseaba de noche por Sevilla sin que lo reconocieran.",
+              "en": "The king · The king walked Seville at night without being recognised."
+            }
+          },
+          "nextNodeId": "l4_giralda",
+          "nextHint": {
+            "es": "Baja hacia la Giralda. Unos 12 minutos.",
+            "en": "Walk down to the Giralda. About 12 minutes."
+          }
+        },
+        {
+          "id": "l4_giralda",
+          "title": {
+            "es": "La Giralda",
+            "en": "La Giralda"
+          },
+          "location": {
+            "lat": 37.3864,
+            "lng": -5.9922
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_giralda.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_giralda.svg"
+              ],
+              "characters": [
+                {
+                  "id": "becquer",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "viejacandil",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "A mediados del siglo XIV, el rey Pedro I vivió en el Real Alcázar, junto a la catedral, y mandó levantar allí su palacio mudéjar.",
+                "en": "In the mid-14th century, King Peter I lived in the Royal Alcázar, next to the cathedral, and had his Mudéjar palace built there."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_testigo"
+                  ],
+                  "text": {
+                    "es": "Vienes con la testigo: un candil y unas rodillas que crujen. ¿Seguimos la pista del espejo o la de la recompensa?",
+                    "en": "You've come with the witness: a lamp and creaking knees. Shall we follow the mirror lead or the reward lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_palacio"
+                  ],
+                  "text": {
+                    "es": "Vienes del palacio: un rey que pasea de incógnito. ¿Seguimos la pista del espejo o la de la recompensa?",
+                    "en": "You've come from the palace: a king who walks in disguise. Shall we follow the mirror lead or the reward lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde vivió el rey Pedro I en Sevilla?",
+              "en": "Where did King Peter I live in Seville?"
+            },
+            "options": [
+              {
+                "es": "En el Real Alcázar",
+                "en": "In the Royal Alcázar"
+              },
+              {
+                "es": "En la Torre del Oro",
+                "en": "In the Torre del Oro"
+              },
+              {
+                "es": "En Triana",
+                "en": "In Triana"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En el Real Alcázar, donde mandó levantar su palacio.",
+              "en": "In the Royal Alcázar, where he had his palace built."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "becquer",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El espejo o la recompensa?",
+              "en": "The mirror or the reward?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del espejo",
+                "en": "The mirror lead"
+              },
+              "hint": {
+                "es": "Con la testigo",
+                "en": "With the witness"
+              },
+              "targetNodeId": "l4a_espejo",
+              "setFlags": [
+                "version_espejo"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la recompensa",
+                "en": "The reward lead"
+              },
+              "hint": {
+                "es": "Con el rey",
+                "en": "With the king"
+              },
+              "targetNodeId": "l4b_recompensa",
+              "setFlags": [
+                "version_recompensa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_espejo",
+          "title": {
+            "es": "El espejo",
+            "en": "The mirror"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "viejacandil",
+              "expression": "dramatic",
+              "text": {
+                "es": "El rey prometió castigar al culpable y me mandó llamar. Yo no me atreví a decirlo… así que le puse un espejo delante.",
+                "en": "The king promised to punish the culprit and sent for me. I didn't dare say it… so I held a mirror up in front of him."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "viejacandil",
+              "expression": "proud",
+              "text": {
+                "es": "«Ahí tenéis la cara del hombre que mató al caballero», le dije. Y se quedó callado.",
+                "en": "“There you have the face of the man who killed the knight,” I told him. And he fell silent."
+              }
+            }
+          ],
+          "clue": {
+            "id": "crp_pista_espejo",
+            "text": {
+              "es": "El rey · La vieja le puso un espejo al rey: la cara del asesino era la suya.",
+              "en": "The king · The old woman held a mirror up to the king: the killer's face was his own."
+            }
+          },
+          "nextNodeId": "l5_cabezarey",
+          "nextHint": {
+            "es": "Vuelve hacia la Alfalfa, a la calle Cabeza del Rey Don Pedro. Unos 10 minutos.",
+            "en": "Head back towards La Alfalfa, to Calle Cabeza del Rey Don Pedro. About 10 minutes."
+          }
+        },
+        {
+          "id": "l4b_recompensa",
+          "title": {
+            "es": "La recompensa",
+            "en": "The reward"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "reypedro",
+              "expression": "nervous",
+              "text": {
+                "es": "Juré que pondría la cabeza del culpable en el lugar del crimen. Y un rey no puede faltar a su palabra.",
+                "en": "I swore I'd put the culprit's head at the scene of the crime. And a king can't break his word."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "reypedro",
+              "expression": "proud",
+              "text": {
+                "es": "Así que di la recompensa a la vieja… y mandé poner allí mi cabeza. De piedra, claro.",
+                "en": "So I gave the old woman the reward… and had my head put there. In stone, of course."
+              }
+            }
+          ],
+          "clue": {
+            "id": "crp_pista_palabra",
+            "text": {
+              "es": "El rey · El rey cumplió su juramento poniendo en la esquina una cabeza de piedra: la suya.",
+              "en": "The king · The king kept his oath by placing a stone head on the corner: his own."
+            }
+          },
+          "nextNodeId": "l5_cabezarey",
+          "nextHint": {
+            "es": "Vuelve hacia la Alfalfa, a la calle Cabeza del Rey Don Pedro. Unos 10 minutos.",
+            "en": "Head back towards La Alfalfa, to Calle Cabeza del Rey Don Pedro. About 10 minutes."
+          }
+        },
+        {
+          "id": "l5_cabezarey",
+          "title": {
+            "es": "Calle Cabeza del Rey Don Pedro",
+            "en": "Calle Cabeza del Rey Don Pedro"
+          },
+          "location": {
+            "lat": 37.3898,
+            "lng": -5.9898
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_cabezarey.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_cabezarey.svg"
+              ],
+              "characters": [
+                {
+                  "id": "becquer",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "reypedro",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En una hornacina de esta calle hay un busto del rey Pedro I. El que se ve hoy es de hacia 1600-1630; el antiguo pasó a la Casa de Pilatos.",
+                "en": "In a niche on this street there is a bust of King Peter I. The one you see today dates from around 1600-1630; the old one went to Casa de Pilatos."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Un ladrón, un rival o alguien muy importante: ¿quién mató al caballero del Candilejo?",
+                "en": "Verdict time. A thief, a rival or someone very important: who killed the knight of the Candilejo?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién mató al caballero, según la leyenda?",
+              "en": "Who killed the knight, according to the legend?"
+            },
+            "options": [
+              {
+                "es": "Un ladrón",
+                "en": "A thief"
+              },
+              {
+                "es": "Un rival de su familia",
+                "en": "A rival from his family"
+              },
+              {
+                "es": "El propio rey Pedro I",
+                "en": "King Peter I himself"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El rey. Según la leyenda, Pedro I mató al caballero en un lance nocturno; la vieja lo reconoció por el crujido de sus rodillas, y el rey cumplió su promesa poniendo en la esquina su propia cabeza, en piedra.",
+              "en": "The king. According to the legend, Peter I killed the knight in a night-time fight; the old woman recognised him by his creaking knees, and the king kept his promise by placing his own head, in stone, on the corner."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_testigo",
+                    "version_espejo"
+                  ],
+                  "text": {
+                    "es": "La testigo y el espejo: la verdad a la luz del candil. Eres el candil de Sevilla.",
+                    "en": "The witness and the mirror: the truth by lamplight. You're Seville's lamp."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_testigo",
+                    "version_recompensa"
+                  ],
+                  "text": {
+                    "es": "La testigo y la recompensa: la palabra de un rey vale una cabeza. Eres notario de la leyenda.",
+                    "en": "The witness and the reward: a king's word is worth a head. You're the legend's notary."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_palacio",
+                    "version_espejo"
+                  ],
+                  "text": {
+                    "es": "El palacio y el espejo: has pillado a un rey. Eres alguacil de Sevilla.",
+                    "en": "The palace and the mirror: you've caught a king. You're Seville's constable."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_palacio",
+                    "version_recompensa"
+                  ],
+                  "text": {
+                    "es": "El palacio y la recompensa: sabes cómo piensa un rey. Eres consejero del Justiciero.",
+                    "en": "The palace and the reward: you know how a king thinks. You're the Just King's adviser."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "happy",
+              "text": {
+                "es": "Y ahora, cuando pase por esta esquina, salude a la cabeza del rey. Es de piedra… pero nunca se sabe.",
+                "en": "And now, when you pass this corner, greet the king's head. It's made of stone… but you never know."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "candil_sevilla",
+          "requires": [
+            "camino_testigo",
+            "version_espejo"
+          ],
+          "title": {
+            "es": "El candil de Sevilla",
+            "en": "Seville's lamp"
+          }
+        },
+        {
+          "id": "notario_leyenda",
+          "requires": [
+            "camino_testigo",
+            "version_recompensa"
+          ],
+          "title": {
+            "es": "Notario de la leyenda",
+            "en": "The legend's notary"
+          }
+        },
+        {
+          "id": "alguacil_sevilla",
+          "requires": [
+            "camino_palacio",
+            "version_espejo"
+          ],
+          "title": {
+            "es": "Alguacil de Sevilla",
+            "en": "Seville's constable"
+          }
+        },
+        {
+          "id": "consejero_justiciero",
+          "requires": [
+            "camino_palacio",
+            "version_recompensa"
+          ],
+          "title": {
+            "es": "Consejero del Justiciero",
+            "en": "The Just King's adviser"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "pluma_becquer",
+          "name": {
+            "es": "La pluma de Bécquer",
+            "en": "Bécquer's pen"
+          },
+          "icon": "collectibles/sevilla_leyenda_pluma.svg",
+          "awardedAtNodeId": "l1_salvador"
+        },
+        {
+          "id": "candil_vieja",
+          "name": {
+            "es": "El candil",
+            "en": "The oil lamp"
+          },
+          "icon": "collectibles/sevilla_leyenda_candil.svg",
+          "awardedAtNodeId": "l2_alfalfa"
+        },
+        {
+          "id": "rodillas",
+          "name": {
+            "es": "Las rodillas que crujen",
+            "en": "The creaking knees"
+          },
+          "icon": "collectibles/sevilla_leyenda_rodillas.svg",
+          "awardedAtNodeId": "la_candilejo"
+        },
+        {
+          "id": "espada_rey",
+          "name": {
+            "es": "La espada del rey",
+            "en": "The king's sword"
+          },
+          "icon": "collectibles/sevilla_leyenda_espada.svg",
+          "awardedAtNodeId": "lb_pilatos"
+        },
+        {
+          "id": "busto_rey",
+          "name": {
+            "es": "El busto del rey",
+            "en": "The king's bust"
+          },
+          "icon": "collectibles/sevilla_leyenda_busto.svg",
+          "awardedAtNodeId": "l5_cabezarey"
+        },
+        {
+          "id": "insignia_candilejo",
+          "name": {
+            "es": "¿Quién mató al caballero del Candilejo?",
+            "en": "Who Killed the Knight of the Candilejo?"
+          },
+          "icon": "collectibles/sevilla_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

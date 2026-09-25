@@ -1,6 +1,6 @@
 {
   "id": "cordoba",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Córdoba",
     "en": "Córdoba"
@@ -19,7 +19,7 @@
       "lng": -4.788
     },
     {
-      "lat": 37.891,
+      "lat": 37.894,
       "lng": -4.764
     }
   ],
@@ -138,6 +138,45 @@
       },
       "avatar": "sprites/gongora/gongora_neutral.svg",
       "era": "1561 - 1627"
+    },
+    {
+      "id": "ramirezarellano",
+      "name": {
+        "es": "Teodoro Ramírez de Arellano",
+        "en": "Teodoro Ramírez de Arellano"
+      },
+      "description": {
+        "es": "Cronista cordobés, autor de «Paseos por Córdoba». Paciente, sabio y amigo de las fechas.",
+        "en": "A Cordoban chronicler, author of “Paseos por Córdoba”. Patient, learned and fond of dates."
+      },
+      "avatar": "sprites/ramirezarellano/ramirezarellano_neutral.svg",
+      "era": "s. XIX"
+    },
+    {
+      "id": "juandemena",
+      "name": {
+        "es": "Juan de Mena",
+        "en": "Juan de Mena"
+      },
+      "description": {
+        "es": "Poeta cordobés del siglo XV, autor del «Laberinto de Fortuna». Culto y algo cotilla.",
+        "en": "A 15th-century Cordoban poet, author of the “Laberinto de Fortuna”. Learned and a bit of a gossip."
+      },
+      "avatar": "sprites/juandemena/juandemena_neutral.svg",
+      "era": "1411 - 1456"
+    },
+    {
+      "id": "duquerivas",
+      "name": {
+        "es": "El duque de Rivas",
+        "en": "The Duke of Rivas"
+      },
+      "description": {
+        "es": "Ángel de Saavedra, poeta y dramaturgo romántico nacido en Córdoba, autor de «Romances históricos». Teatral y apasionado.",
+        "en": "Ángel de Saavedra, a Romantic poet and playwright born in Córdoba, author of “Romances históricos”. Theatrical and passionate."
+      },
+      "avatar": "sprites/duquerivas/duquerivas_neutral.svg",
+      "era": "1791 - 1865"
     }
   ],
   "routes": [
@@ -3563,6 +3602,929 @@
           },
           "icon": "collectibles/cordoba_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
+        }
+      ]
+    },
+    {
+      "id": "malmuerta",
+      "title": {
+        "es": "¿Por qué se llama torre de la Malmuerta?",
+        "en": "Why Is It Called the Malmuerta Tower?"
+      },
+      "summary": {
+        "es": "Una torre de la muralla lleva un nombre terrible. ¿Fue la penitencia por un crimen de 1448? Con el cronista Teodoro Ramírez de Arellano y los poetas Juan de Mena y el duque de Rivas.",
+        "en": "A tower in the city wall bears a terrible name. Was it the penance for a crime in 1448? With the chronicler Teodoro Ramírez de Arellano and the poets Juan de Mena and the Duke of Rivas."
+      },
+      "era": "1404 - 1448",
+      "guideCharacterId": "ramirezarellano",
+      "durationMin": 65,
+      "distanceKm": 2.2,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Los poetas",
+            "en": "The poets"
+          },
+          "trail": {
+            "es": "camino de los poetas",
+            "en": "poets' trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Las piedras",
+            "en": "The stones"
+          },
+          "trail": {
+            "es": "camino de las piedras",
+            "en": "stones trail"
+          }
+        }
+      },
+      "startNodeId": "l1_tendillas",
+      "nodes": [
+        {
+          "id": "l1_tendillas",
+          "title": {
+            "es": "Plaza de las Tendillas",
+            "en": "Plaza de las Tendillas"
+          },
+          "location": {
+            "lat": 37.8846,
+            "lng": -4.7792
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_tendillas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_tendillas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ramirezarellano",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Teodoro Ramírez de Arellano, cordobés. Escribí «Paseos por Córdoba»: recorrí calle a calle la ciudad apuntando su historia y sus leyendas.",
+                "en": "Good evening. Teodoro Ramírez de Arellano, from Córdoba. I wrote “Paseos por Córdoba”: I walked the city street by street, writing down its history and legends."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "thinking",
+              "text": {
+                "es": "Hoy le llevo a una torre con un nombre tremendo: la Malmuerta. ¿Por qué se llama así?",
+                "en": "Today I'm taking you to a tower with a dreadful name: the Malmuerta, “the badly killed woman”. Why is it called that?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: una penitencia por un crimen, unos poetas con mucha imaginación o lo que dice la propia piedra. Apunte.",
+                "en": "Three suspects: a penance for a crime, some poets with a lot of imagination, or what the stone itself says. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El reloj de las Tendillas da las horas con toques de guitarra flamenca: una grabación del guitarrista cordobés Juan Serrano.",
+                "en": "The Tendillas clock chimes the hours with flamenco guitar notes: a recording by the Cordoban guitarist Juan Serrano."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué suena el reloj de las Tendillas?",
+              "en": "What does the Tendillas clock chime with?"
+            },
+            "options": [
+              {
+                "es": "Con trompetas",
+                "en": "Trumpets"
+              },
+              {
+                "es": "Con toques de guitarra flamenca",
+                "en": "Flamenco guitar notes"
+              },
+              {
+                "es": "Con campanas de iglesia",
+                "en": "Church bells"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Con guitarra flamenca, grabada por Juan Serrano.",
+              "en": "Flamenco guitar, recorded by Juan Serrano."
+            }
+          },
+          "clue": {
+            "id": "mlm_pista_nombre",
+            "text": {
+              "es": "La penitencia · La torre se llama de la Malmuerta, un nombre que suena a crimen.",
+              "en": "The penance · The tower is called the Malmuerta, a name that sounds like a crime."
+            }
+          },
+          "nextNodeId": "l2_marina",
+          "nextHint": {
+            "es": "Sube hacia la plaza de Santa Marina. Unos 12 minutos.",
+            "en": "Head up to Plaza de Santa Marina. About 12 minutes."
+          }
+        },
+        {
+          "id": "l2_marina",
+          "title": {
+            "es": "Plaza de Santa Marina",
+            "en": "Plaza de Santa Marina"
+          },
+          "location": {
+            "lat": 37.8889,
+            "lng": -4.7772
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_marina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_marina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ramirezarellano",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "duquerivas",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "duquerivas",
+              "expression": "proud",
+              "text": {
+                "es": "Ángel de Saavedra, duque de Rivas, cordobés de nacimiento. Poeta romántico: a mí dame un crimen antiguo y te hago un romance.",
+                "en": "Ángel de Saavedra, Duke of Rivas, Cordoban by birth. A Romantic poet: give me an old crime and I'll make you a ballad."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Santa Marina es una de las iglesias «fernandinas» que se levantaron en Córdoba tras la conquista cristiana de 1236.",
+                "en": "Santa Marina is one of the “Fernandine” churches built in Córdoba after the Christian conquest of 1236."
+              },
+              "year": 1236
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en 1448 un caballero de Córdoba mató a su esposa por celos, y que el rey, para perdonarle, le mandó levantar una torre: la de la Malmuerta.",
+                "en": "It's said that in 1448 a Córdoba knight killed his wife out of jealousy, and that the king, to pardon him, ordered him to build a tower: the Malmuerta."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué son las iglesias «fernandinas» de Córdoba?",
+              "en": "What are Córdoba's “Fernandine” churches?"
+            },
+            "options": [
+              {
+                "es": "Las que se levantaron tras la conquista de 1236",
+                "en": "Those built after the conquest of 1236"
+              },
+              {
+                "es": "Las que pagó Fernando VII",
+                "en": "Those paid for by Ferdinand VII"
+              },
+              {
+                "es": "Iglesias del siglo XX",
+                "en": "20th-century churches"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Las levantadas tras la conquista de Fernando III, en 1236.",
+              "en": "Those built after Ferdinand III's conquest in 1236."
+            }
+          },
+          "clue": {
+            "id": "mlm_pista_1448",
+            "text": {
+              "es": "La penitencia · La leyenda dice que la torre fue la penitencia por un crimen de 1448.",
+              "en": "The penance · The legend says the tower was the penance for a crime committed in 1448."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "ramirezarellano",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Buscamos a los poetas que contaron el crimen o vamos a mirar las piedras del barrio?",
+              "en": "Shall we look for the poets who told the crime, or go and look at the stones of the district?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Con los poetas",
+                "en": "With the poets"
+              },
+              "hint": {
+                "es": "Palacio de Viana",
+                "en": "Viana Palace"
+              },
+              "targetNodeId": "la_viana",
+              "setFlags": [
+                "camino_poetas"
+              ],
+              "distanceM": 300,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "Por las piedras",
+                "en": "By the stones"
+              },
+              "hint": {
+                "es": "Plaza de San Andrés",
+                "en": "Plaza de San Andrés"
+              },
+              "targetNodeId": "lb_sanandres",
+              "setFlags": [
+                "camino_piedras"
+              ],
+              "distanceM": 400,
+              "walkMin": 6
+            }
+          ]
+        },
+        {
+          "id": "la_viana",
+          "title": {
+            "es": "Palacio de Viana",
+            "en": "Viana Palace"
+          },
+          "location": {
+            "lat": 37.8878,
+            "lng": -4.7756
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_viana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_viana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "juandemena",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "duquerivas",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "juandemena",
+              "expression": "happy",
+              "text": {
+                "es": "Juan de Mena, poeta, nacido en Córdoba en 1411. Yo vivía cuando pasó aquello de 1448: fue un escándalo en la ciudad.",
+                "en": "Juan de Mena, poet, born in Córdoba in 1411. I was alive when that business of 1448 happened: it caused a scandal in the city."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Más de un siglo después, Lope de Vega convirtió aquel crimen en una obra de teatro: «Los comendadores de Córdoba».",
+                "en": "More than a century later, Lope de Vega turned that crime into a play: “Los comendadores de Córdoba”."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "duquerivas",
+              "expression": "proud",
+              "text": {
+                "es": "Y los románticos seguimos contándolo. Cuanto más se cuenta una historia, más cosas se le pegan… torres incluidas.",
+                "en": "And we Romantics kept telling it. The more a story is told, the more things stick to it… towers included."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué obra de teatro escribió Lope de Vega sobre el crimen de 1448?",
+              "en": "Which play did Lope de Vega write about the 1448 crime?"
+            },
+            "options": [
+              {
+                "es": "«Fuenteovejuna»",
+                "en": "“Fuenteovejuna”"
+              },
+              {
+                "es": "«El perro del hortelano»",
+                "en": "“The Dog in the Manger”"
+              },
+              {
+                "es": "«Los comendadores de Córdoba»",
+                "en": "“Los comendadores de Córdoba”"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "«Los comendadores de Córdoba».",
+              "en": "“Los comendadores de Córdoba”."
+            }
+          },
+          "clue": {
+            "id": "mlm_pista_lope",
+            "text": {
+              "es": "Los poetas · El crimen de 1448 lo contaron Lope de Vega y los románticos, y a la historia se le fueron pegando cosas.",
+              "en": "The poets · The 1448 crime was told by Lope de Vega and the Romantics, and things kept sticking to the story."
+            }
+          },
+          "nextNodeId": "l4_colon",
+          "nextHint": {
+            "es": "Ve hacia la plaza de Colón. Unos 10 minutos.",
+            "en": "Head to Plaza de Colón. About 10 minutes."
+          }
+        },
+        {
+          "id": "lb_sanandres",
+          "title": {
+            "es": "Plaza de San Andrés",
+            "en": "Plaza de San Andrés"
+          },
+          "location": {
+            "lat": 37.8858,
+            "lng": -4.7731
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_cruz.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_cruz.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ramirezarellano",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "juandemena",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "proud",
+              "text": {
+                "es": "Yo me fijo en las piedras. Las torres, los arcos, las lápidas: todo en Córdoba lleva su fecha si uno sabe mirar.",
+                "en": "I look at the stones. Towers, arches, gravestones: everything in Córdoba bears its date if you know how to look."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La muralla de la Axerquía, el barrio oriental de Córdoba, tenía torres y puertas. A principios del siglo XV se reforzó con nuevas torres albarranas.",
+                "en": "The wall of the Axerquía, Córdoba's eastern district, had towers and gates. In the early 15th century it was strengthened with new albarrana towers."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "juandemena",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Una torre albarrana, dice? Esas se separan de la muralla y se unen a ella con un arco… como la Malmuerta.",
+                "en": "An albarrana tower, you say? Those stand apart from the wall and join it with an arch… like the Malmuerta."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es una torre albarrana?",
+              "en": "What is an albarrana tower?"
+            },
+            "options": [
+              {
+                "es": "Un faro",
+                "en": "A lighthouse"
+              },
+              {
+                "es": "Una torre separada de la muralla y unida a ella por un arco",
+                "en": "A tower set apart from the wall and joined to it by an arch"
+              },
+              {
+                "es": "Una torre de iglesia",
+                "en": "A church tower"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una torre adelantada de la muralla, unida a ella por un arco.",
+              "en": "A tower set in front of the wall, joined to it by an arch."
+            }
+          },
+          "clue": {
+            "id": "mlm_pista_albarrana",
+            "text": {
+              "es": "La inscripción · La Malmuerta es una torre albarrana de la muralla, reforzada a principios del siglo XV.",
+              "en": "The inscription · The Malmuerta is an albarrana tower of the wall, built up in the early 15th century."
+            }
+          },
+          "nextNodeId": "l4_colon",
+          "nextHint": {
+            "es": "Ve hacia la plaza de Colón. Unos 10 minutos.",
+            "en": "Head to Plaza de Colón. About 10 minutes."
+          }
+        },
+        {
+          "id": "l4_colon",
+          "title": {
+            "es": "Plaza de Colón",
+            "en": "Plaza de Colón"
+          },
+          "location": {
+            "lat": 37.889,
+            "lng": -4.7772
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_colon.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_colon.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ramirezarellano",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "duquerivas",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la plaza de Colón está el Palacio de la Merced, antiguo convento y hoy sede de la Diputación de Córdoba, con su fachada barroca roja y blanca.",
+                "en": "On Plaza de Colón stands the Palacio de la Merced, a former convent and now the seat of the Córdoba Provincial Council, with its red and white Baroque front."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_poetas"
+                  ],
+                  "text": {
+                    "es": "Vienes con los poetas: Lope y los románticos adornaron el crimen. ¿Seguimos la pista de la fecha o la del romance?",
+                    "en": "You've come with the poets: Lope and the Romantics embellished the crime. Shall we follow the date lead or the ballad lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_piedras"
+                  ],
+                  "text": {
+                    "es": "Vienes de las piedras: la torre es albarrana, de principios del XV. ¿Seguimos la pista de la fecha o la del romance?",
+                    "en": "You've come by the stones: the tower is an albarrana from the early 15th century. Shall we follow the date lead or the ballad lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hay hoy en el Palacio de la Merced?",
+              "en": "What is in the Palacio de la Merced today?"
+            },
+            "options": [
+              {
+                "es": "La Diputación de Córdoba",
+                "en": "The Córdoba Provincial Council"
+              },
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "Una estación",
+                "en": "A station"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La Diputación de Córdoba, en un antiguo convento.",
+              "en": "The Córdoba Provincial Council, in a former convent."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "ramirezarellano",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La fecha o el romance?",
+              "en": "The date or the ballad?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la fecha",
+                "en": "The date lead"
+              },
+              "hint": {
+                "es": "Con Ramírez de Arellano",
+                "en": "With Ramírez de Arellano"
+              },
+              "targetNodeId": "l4a_fecha",
+              "setFlags": [
+                "version_fecha"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del romance",
+                "en": "The ballad lead"
+              },
+              "hint": {
+                "es": "Con el duque de Rivas",
+                "en": "With the Duke of Rivas"
+              },
+              "targetNodeId": "l4b_romance",
+              "setFlags": [
+                "version_romance"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_fecha",
+          "title": {
+            "es": "La fecha",
+            "en": "The date"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "proud",
+              "text": {
+                "es": "La torre se levantó entre 1404 y 1408, en tiempos de Enrique III. Tiene una inscripción bajo el arco que lo recuerda.",
+                "en": "The tower was built between 1404 and 1408, in the time of Henry III. It has an inscription under the arch that records it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea: la torre ya estaba en pie cuarenta años antes del crimen de 1448. Mal pudo ser su penitencia.",
+                "en": "In other words: the tower was already standing forty years before the crime of 1448. It could hardly have been his penance."
+              }
+            }
+          ],
+          "clue": {
+            "id": "mlm_pista_1404",
+            "text": {
+              "es": "La inscripción · La torre se construyó entre 1404 y 1408: cuarenta años antes del crimen.",
+              "en": "The inscription · The tower was built between 1404 and 1408: forty years before the crime."
+            }
+          },
+          "nextNodeId": "l5_malmuerta",
+          "nextHint": {
+            "es": "Cruza hasta la torre, al final de la plaza. Dos minutos.",
+            "en": "Cross to the tower, at the end of the square. Two minutes."
+          }
+        },
+        {
+          "id": "l4b_romance",
+          "title": {
+            "es": "El romance",
+            "en": "The ballad"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "duquerivas",
+              "expression": "dramatic",
+              "text": {
+                "es": "Lo confieso: a los poetas nos encanta unir una torre sombría y un crimen. ¡Queda de maravilla en verso!",
+                "en": "I confess: we poets love to join a gloomy tower and a crime. It sounds marvellous in verse!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "duquerivas",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero una cosa es el romance y otra la piedra. Y la piedra de esa torre tiene su propia fecha escrita.",
+                "en": "But a ballad is one thing and stone is another. And that tower's stone has its own date written on it."
+              }
+            }
+          ],
+          "clue": {
+            "id": "mlm_pista_verso",
+            "text": {
+              "es": "Los poetas · Los poetas unieron la torre y el crimen, pero la piedra tiene su propia fecha.",
+              "en": "The poets · The poets joined the tower and the crime, but the stone has its own date."
+            }
+          },
+          "nextNodeId": "l5_malmuerta",
+          "nextHint": {
+            "es": "Cruza hasta la torre, al final de la plaza. Dos minutos.",
+            "en": "Cross to the tower, at the end of the square. Two minutes."
+          }
+        },
+        {
+          "id": "l5_malmuerta",
+          "title": {
+            "es": "Torre de la Malmuerta",
+            "en": "Malmuerta Tower"
+          },
+          "location": {
+            "lat": 37.8917,
+            "lng": -4.7777
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_malmuerta.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_malmuerta.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ramirezarellano",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "juandemena",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La torre de la Malmuerta es octogonal y está unida a la antigua muralla por un arco. Se construyó entre 1404 y 1408, por orden de Enrique III.",
+                "en": "The Malmuerta tower is octagonal and joined to the old wall by an arch. It was built between 1404 and 1408, by order of Henry III."
+              },
+              "year": 1408
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. Penitencia, poetas o inscripción: ¿por qué la torre se llama de la Malmuerta?",
+                "en": "Verdict time. Penance, poets or inscription: why is the tower called the Malmuerta?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dice la historia de la torre?",
+              "en": "What does the tower's history tell us?"
+            },
+            "options": [
+              {
+                "es": "Que la construyó Lope de Vega",
+                "en": "That Lope de Vega built it"
+              },
+              {
+                "es": "Que se construyó como penitencia por el crimen de 1448",
+                "en": "That it was built as penance for the 1448 crime"
+              },
+              {
+                "es": "Que se levantó entre 1404 y 1408, antes del crimen; la leyenda se le pegó después",
+                "en": "That it was built in 1404-1408, before the crime; the legend attached itself later"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La inscripción y los documentos. La torre es de 1404-1408, cuarenta años anterior al crimen de 1448; la leyenda de la penitencia se le unió después, con ayuda de los poetas. El origen del nombre sigue sin estar claro.",
+              "en": "The inscription and the records. The tower dates from 1404-1408, forty years before the 1448 crime; the penance legend attached itself later, with help from the poets. The origin of the name is still unclear."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_poetas",
+                    "version_fecha"
+                  ],
+                  "text": {
+                    "es": "Los poetas y la fecha: del verso al documento. Eres cronista de Córdoba.",
+                    "en": "The poets and the date: from verse to document. You're Córdoba's chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poetas",
+                    "version_romance"
+                  ],
+                  "text": {
+                    "es": "Los poetas y el romance: sabes separar el cuento de la piedra. Eres crítico romántico.",
+                    "en": "The poets and the ballad: you know how to separate the tale from the stone. You're a Romantic critic."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_piedras",
+                    "version_fecha"
+                  ],
+                  "text": {
+                    "es": "Las piedras y la fecha: la torre habló. Eres maestro de obras de Enrique III.",
+                    "en": "The stones and the date: the tower spoke. You're Henry III's master builder."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_piedras",
+                    "version_romance"
+                  ],
+                  "text": {
+                    "es": "Las piedras y el romance: muralla y verso. Eres guardián de la Axerquía.",
+                    "en": "The stones and the ballad: wall and verse. You're the Axerquía's guardian."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "happy",
+              "text": {
+                "es": "Así apuntaba yo mis paseos: primero la leyenda, luego la fecha. Y casi siempre ganaba la fecha.",
+                "en": "That's how I wrote my walks: first the legend, then the date. And the date almost always won."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "cronista_cordoba",
+          "requires": [
+            "camino_poetas",
+            "version_fecha"
+          ],
+          "title": {
+            "es": "Cronista de Córdoba",
+            "en": "Córdoba's chronicler"
+          }
+        },
+        {
+          "id": "critico_romantico",
+          "requires": [
+            "camino_poetas",
+            "version_romance"
+          ],
+          "title": {
+            "es": "Crítico romántico",
+            "en": "Romantic critic"
+          }
+        },
+        {
+          "id": "maestro_obras",
+          "requires": [
+            "camino_piedras",
+            "version_fecha"
+          ],
+          "title": {
+            "es": "Maestro de obras de Enrique III",
+            "en": "Henry III's master builder"
+          }
+        },
+        {
+          "id": "guardian_axerquia",
+          "requires": [
+            "camino_piedras",
+            "version_romance"
+          ],
+          "title": {
+            "es": "Guardián de la Axerquía",
+            "en": "The Axerquía's guardian"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "reloj_tendillas",
+          "name": {
+            "es": "El reloj de las Tendillas",
+            "en": "The Tendillas clock"
+          },
+          "icon": "collectibles/cordoba_leyenda_reloj.svg",
+          "awardedAtNodeId": "l1_tendillas"
+        },
+        {
+          "id": "romance",
+          "name": {
+            "es": "El romance",
+            "en": "The ballad"
+          },
+          "icon": "collectibles/cordoba_leyenda_romance.svg",
+          "awardedAtNodeId": "l2_marina"
+        },
+        {
+          "id": "comedia_lope",
+          "name": {
+            "es": "La comedia de Lope",
+            "en": "Lope's play"
+          },
+          "icon": "collectibles/cordoba_leyenda_comedia.svg",
+          "awardedAtNodeId": "la_viana"
+        },
+        {
+          "id": "almena",
+          "name": {
+            "es": "La almena",
+            "en": "The battlement"
+          },
+          "icon": "collectibles/cordoba_leyenda_almena.svg",
+          "awardedAtNodeId": "lb_sanandres"
+        },
+        {
+          "id": "torre_octogonal",
+          "name": {
+            "es": "La torre octogonal",
+            "en": "The octagonal tower"
+          },
+          "icon": "collectibles/cordoba_leyenda_torre.svg",
+          "awardedAtNodeId": "l5_malmuerta"
+        },
+        {
+          "id": "insignia_malmuerta",
+          "name": {
+            "es": "¿Por qué se llama torre de la Malmuerta?",
+            "en": "Why Is It Called the Malmuerta Tower?"
+          },
+          "icon": "collectibles/cordoba_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

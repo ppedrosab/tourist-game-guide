@@ -153,6 +153,21 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   la Virgen del Mar se ve solo la fachada. Arte en `scripts/art/fiestas_andalucia_*.py`; los personajes
   están en `andalucia_sprites.py`.
 
+**Rutas de leyendas** (`route.theme: "leyendas"`: chip añil con luna, color `night` en tokens). Una por
+ciudad, más cortas (6 paradas) y pensadas para el atardecer; diseño y datos a verificar en
+`docs/GDD_LEYENDAS_ANDALUCIA.md`:
+- Málaga, las Siete Cabezas: Díaz de Escovar, doña Sancha, el corregidor Olavarría.
+- Sevilla, la Cabeza del Rey Don Pedro: Bécquer, la vieja del candil, Pedro I.
+- Granada, la ventana de la Casa de Castril: Ganivet, Hernando de Zafra, Elvira.
+- Córdoba, la torre de la Malmuerta: Ramírez de Arellano, Juan de Mena, el duque de Rivas.
+- Cádiz, la sangre del drago: Adolfo de Castro, Hércules, Gerión.
+- Huelva, Tartessos: Argantonio, Colaeo de Samos, Habis.
+- Jaén, el fantasma de San Bartolomé: la Mona, Vandelvira, Bernardo López García.
+- Almería, el tesoro de la Alcazaba: Santisteban, Almotacín, Galiana.
+
+La leyenda va como «se cuenta» (`legend: true`) y el veredicto separa lo que dicen los documentos.
+Arte en `scripts/art/leyendas_andalucia_*.py`.
+
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
   León de la fuente y Boabdil. Tres sospechosos (el sultán, los Zegríes, nadie); caminos Albaicín y
@@ -214,7 +229,7 @@ content/malaga/           misterio-manquita.pack.json
 content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia, gastronomía, Carnaval y Semana Santa)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
-content/cordoba/, huelva/, jaen/, almeria/  {ciudad}.pack.json (historia, gastronomía y fiestas)
+content/cordoba/, huelva/, jaen/, almeria/  {ciudad}.pack.json (historia, gastronomía, fiestas y leyendas)
 scripts/art/              generadores del arte de Cádiz y render de capas
 assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,cargador,maniguetero,saetera,aguador,giraldillo,hernando,irving,leon,boabdil,…}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
@@ -299,7 +314,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Granada: lo mismo con `docs/GDD_GRANADA.md`; cuestas fuertes y horarios del recinto de la Alhambra.
 - Córdoba, Huelva, Jaén y Almería, y las rutas gastronómicas de Málaga, Sevilla y Granada: coordenadas,
   radios y la lista de «Datos a verificar» de cada GDD. Jaén y Almería tienen cuestas.
-- Rutas de fiestas: la lista de «Datos a verificar» de `docs/GDD_FIESTAS_ANDALUCIA.md`. En Almería,
+- Rutas de fiestas y de leyendas: la lista de «Datos a verificar» de `docs/GDD_FIESTAS_ANDALUCIA.md` y `docs/GDD_LEYENDAS_ANDALUCIA.md`. En Almería,
   revisar el tono de la parada del santuario con la parroquia.
 
 ## Qué NO hacer

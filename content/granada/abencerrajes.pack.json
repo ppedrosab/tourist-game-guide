@@ -1,6 +1,6 @@
 {
   "id": "granada",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Granada",
     "en": "Granada"
@@ -139,6 +139,45 @@
       },
       "avatar": "sprites/falla/falla_neutral.svg",
       "era": "1876 - 1946"
+    },
+    {
+      "id": "ganivet",
+      "name": {
+        "es": "Ángel Ganivet",
+        "en": "Ángel Ganivet"
+      },
+      "description": {
+        "es": "Escritor granadino, autor de «Granada la bella» (1896). Pensativo, irónico y enamorado de su ciudad.",
+        "en": "A Granada writer, author of “Granada la bella” (1896). Thoughtful, ironic and in love with his city."
+      },
+      "avatar": "sprites/ganivet/ganivet_neutral.svg",
+      "era": "1865 - 1898"
+    },
+    {
+      "id": "zafra",
+      "name": {
+        "es": "Hernando de Zafra",
+        "en": "Hernando de Zafra"
+      },
+      "description": {
+        "es": "Secretario de los Reyes Católicos; tras la conquista recibió casas y palacios en Granada. Serio y amigo de los papeles.",
+        "en": "Secretary to the Catholic Monarchs; after the conquest he received houses and palaces in Granada. Serious and fond of documents."
+      },
+      "avatar": "sprites/zafra/zafra_neutral.svg",
+      "era": "c. 1444 - 1507"
+    },
+    {
+      "id": "elvira",
+      "name": {
+        "es": "Elvira",
+        "en": "Elvira"
+      },
+      "description": {
+        "es": "La hija de la leyenda de la Casa de Castril. Soñadora y más lista que la historia que cuentan de ella.",
+        "en": "The daughter in the legend of the Casa de Castril. Dreamy, and cleverer than the story told about her."
+      },
+      "avatar": "sprites/elvira/elvira_neutral.svg",
+      "era": "leyenda"
     }
   ],
   "routes": [
@@ -3584,6 +3623,929 @@
           },
           "icon": "collectibles/granada_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
+        }
+      ]
+    },
+    {
+      "id": "ventana-castril",
+      "title": {
+        "es": "¿Qué espera la ventana de la Casa de Castril?",
+        "en": "What Is the Castril Window Waiting For?"
+      },
+      "summary": {
+        "es": "En la Carrera del Darro hay una ventana tapiada con una frase: «Esperándola del cielo». ¿Un paje, unos enamorados o un símbolo? Con Ángel Ganivet, Hernando de Zafra y Elvira.",
+        "en": "On Carrera del Darro there's a bricked-up window with a phrase: “Waiting for it from heaven”. A page, lovers or a symbol? With Ángel Ganivet, Hernando de Zafra and Elvira."
+      },
+      "era": "1507 - 1539",
+      "guideCharacterId": "ganivet",
+      "durationMin": 70,
+      "distanceKm": 2.1,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "leyendas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El río",
+            "en": "The river"
+          },
+          "trail": {
+            "es": "camino del río",
+            "en": "river trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El Albaicín",
+            "en": "The Albaicín"
+          },
+          "trail": {
+            "es": "camino del Albaicín",
+            "en": "Albaicín trail"
+          }
+        }
+      },
+      "startNodeId": "l1_plazanueva",
+      "nodes": [
+        {
+          "id": "l1_plazanueva",
+          "title": {
+            "es": "Plaza Nueva",
+            "en": "Plaza Nueva"
+          },
+          "location": {
+            "lat": 37.1768,
+            "lng": -3.596
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_plazanueva.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plazanueva.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganivet",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Ángel Ganivet, granadino. Escribí «Granada la bella»: un librito sobre cómo cuidar el alma de esta ciudad.",
+                "en": "Good evening. Ángel Ganivet, from Granada. I wrote “Granada la bella”: a little book about how to look after this city's soul."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "thinking",
+              "text": {
+                "es": "Río arriba hay un palacio con una ventana tapiada y una frase grabada: «Esperándola del cielo». ¿Qué espera esa ventana?",
+                "en": "Upriver there's a palace with a bricked-up window and a carved phrase: “Esperándola del cielo”, “Waiting for it from heaven”. What is that window waiting for?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: un paje inocente que pedía justicia, unos enamorados perdidos o un símbolo que nadie sabe leer. Apunte.",
+                "en": "Three suspects: an innocent page asking for justice, a pair of lost lovers, or a symbol nobody knows how to read. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Plaza Nueva está construida sobre el río Darro, que pasa por debajo. En ella está la Real Chancillería, del siglo XVI.",
+                "en": "Plaza Nueva is built over the river Darro, which runs underneath. The 16th-century Royal Chancery stands here."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué río pasa por debajo de Plaza Nueva?",
+              "en": "Which river runs beneath Plaza Nueva?"
+            },
+            "options": [
+              {
+                "es": "El Guadalquivir",
+                "en": "The Guadalquivir"
+              },
+              {
+                "es": "El Darro",
+                "en": "The Darro"
+              },
+              {
+                "es": "El Genil",
+                "en": "The Genil"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El Darro, abovedado bajo la plaza.",
+              "en": "The Darro, vaulted over beneath the square."
+            }
+          },
+          "clue": {
+            "id": "vcs_pista_frase",
+            "text": {
+              "es": "El símbolo · La ventana tapiada lleva grabada la frase «Esperándola del cielo».",
+              "en": "The symbol · The bricked-up window bears the carved phrase “Esperándola del cielo”."
+            }
+          },
+          "nextNodeId": "l2_banuelo",
+          "nextHint": {
+            "es": "Sube por la Carrera del Darro hasta el Bañuelo. Unos 5 minutos.",
+            "en": "Walk up Carrera del Darro to the Bañuelo. About 5 minutes."
+          }
+        },
+        {
+          "id": "l2_banuelo",
+          "title": {
+            "es": "El Bañuelo",
+            "en": "El Bañuelo"
+          },
+          "location": {
+            "lat": 37.1778,
+            "lng": -3.5922
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_banuelo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_banuelo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganivet",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "elvira",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "elvira",
+              "expression": "neutral",
+              "text": {
+                "es": "Me llamo Elvira. Dicen que viví en esa casa, que me enamoré de quien no debía y que mi padre tapió mi ventana. Eso dicen…",
+                "en": "My name is Elvira. They say I lived in that house, that I fell in love with the wrong man and that my father bricked up my window. That's what they say…"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Bañuelo es un baño árabe del siglo XI, uno de los mejor conservados de España. Sus bóvedas tienen lucernarios con forma de estrella.",
+                "en": "El Bañuelo is an 11th-century Arab bath, one of the best preserved in Spain. Its vaults have star-shaped skylights."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que un paje, Luisillo, ayudó a escapar al enamorado de Elvira, y que el padre, al encontrarlo, lo castigó sin escucharle. Antes de morir pidió la justicia que nadie le daba: la del cielo.",
+                "en": "It's said that a page, Luisillo, helped Elvira's sweetheart escape, and that her father, on finding him, punished him without listening. Before he died he asked for the justice no one would give him: heaven's."
+              },
+              "legend": true
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué siglo es el Bañuelo?",
+              "en": "Which century is the Bañuelo from?"
+            },
+            "options": [
+              {
+                "es": "Del siglo XI",
+                "en": "11th century"
+              },
+              {
+                "es": "Del siglo XVIII",
+                "en": "18th century"
+              },
+              {
+                "es": "Del siglo XX",
+                "en": "20th century"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Del siglo XI: un baño árabe con lucernarios de estrella.",
+              "en": "The 11th century: an Arab bath with star-shaped skylights."
+            }
+          },
+          "clue": {
+            "id": "vcs_pista_luisillo",
+            "text": {
+              "es": "El paje · Según la leyenda, el paje Luisillo murió pidiendo la justicia del cielo.",
+              "en": "The page · According to the legend, the page Luisillo died asking for heaven's justice."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "ganivet",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos el río, como los enamorados, o subimos al Albaicín, a la casa del padre de Elvira?",
+              "en": "Shall we follow the river, like the lovers, or climb into the Albaicín, to the house of Elvira's father?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por el río",
+                "en": "Along the river"
+              },
+              "hint": {
+                "es": "Paseo de los Tristes",
+                "en": "Paseo de los Tristes"
+              },
+              "targetNodeId": "la_tristes",
+              "setFlags": [
+                "camino_rio"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            },
+            {
+              "label": {
+                "es": "Al Albaicín",
+                "en": "Up to the Albaicín"
+              },
+              "hint": {
+                "es": "Palacio de Dar al-Horra",
+                "en": "Dar al-Horra Palace"
+              },
+              "targetNodeId": "lb_darhorra",
+              "setFlags": [
+                "camino_albaicin"
+              ],
+              "distanceM": 600,
+              "walkMin": 12
+            }
+          ]
+        },
+        {
+          "id": "la_tristes",
+          "title": {
+            "es": "Paseo de los Tristes",
+            "en": "Paseo de los Tristes"
+          },
+          "location": {
+            "lat": 37.1792,
+            "lng": -3.5905
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_tristes.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_tristes.svg"
+              ],
+              "characters": [
+                {
+                  "id": "elvira",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "ganivet",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Granada se dice «llueve más que cuando enterraron a Zafra»: se cuenta que en 1600 una crecida del Darro se llevó el ataúd de un descendiente de Hernando de Zafra.",
+                "en": "In Granada they say “it's raining more than when they buried Zafra”: it's said that in 1600 a Darro flood swept away the coffin of one of Hernando de Zafra's descendants."
+              },
+              "year": 1600
+            },
+            {
+              "type": "dialogue",
+              "characterId": "elvira",
+              "expression": "thinking",
+              "text": {
+                "es": "Zafra… Ese era el apellido de mi padre, según la leyenda. Hernando de Zafra.",
+                "en": "Zafra… That was my father's surname, according to the legend. Hernando de Zafra."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "happy",
+              "text": {
+                "es": "Hernando de Zafra fue secretario de los Reyes Católicos. Un hombre de papeles, no de cuentos. Tomemos nota.",
+                "en": "Hernando de Zafra was secretary to the Catholic Monarchs. A man of documents, not tales. Let's take note."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se dice en Granada cuando llueve mucho?",
+              "en": "What do they say in Granada when it rains a lot?"
+            },
+            "options": [
+              {
+                "es": "«Llueve como en la Alhambra»",
+                "en": "“It's raining like in the Alhambra”"
+              },
+              {
+                "es": "«Llueve a cántaros de Darro»",
+                "en": "“It's pouring Darro jugs”"
+              },
+              {
+                "es": "«Llueve más que cuando enterraron a Zafra»",
+                "en": "“It's raining more than when they buried Zafra”"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Por la crecida del Darro de 1600, según la tradición.",
+              "en": "Because of the Darro flood of 1600, according to tradition."
+            }
+          },
+          "clue": {
+            "id": "vcs_pista_zafra",
+            "text": {
+              "es": "Los enamorados · El padre de la leyenda sería Hernando de Zafra, secretario de los Reyes Católicos.",
+              "en": "The lovers · The father in the legend would be Hernando de Zafra, secretary to the Catholic Monarchs."
+            }
+          },
+          "nextNodeId": "l4_pesas",
+          "nextHint": {
+            "es": "Sube por la cuesta hasta el Arco de las Pesas. Unos 15 minutos.",
+            "en": "Climb up to the Arco de las Pesas. About 15 minutes."
+          }
+        },
+        {
+          "id": "lb_darhorra",
+          "title": {
+            "es": "Palacio de Dar al-Horra",
+            "en": "Dar al-Horra Palace"
+          },
+          "location": {
+            "lat": 37.1816,
+            "lng": -3.5964
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_darhorra.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_darhorra.svg"
+              ],
+              "characters": [
+                {
+                  "id": "zafra",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "ganivet",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "zafra",
+              "expression": "proud",
+              "text": {
+                "es": "Hernando de Zafra, secretario de los Reyes Católicos. Firmé capitulaciones, cuentas y cartas. Tras la conquista, este palacio pasó a mis manos.",
+                "en": "Hernando de Zafra, secretary to the Catholic Monarchs. I signed treaties, accounts and letters. After the conquest, this palace passed into my hands."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Dar al-Horra, «la casa de la señora», fue la residencia de Aixa, la madre de Boabdil. Es un palacio nazarí del siglo XV.",
+                "en": "Dar al-Horra, “the lady's house”, was the residence of Aixa, Boabdil's mother. It is a 15th-century Nasrid palace."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "zafra",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Y esa historia de que ahorqué a un paje y tapié una ventana? Pregúntele a mis papeles cuándo me morí.",
+                "en": "And that story about me hanging a page and bricking up a window? Ask my papers when I died."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién vivió en el palacio de Dar al-Horra?",
+              "en": "Who lived in the Dar al-Horra palace?"
+            },
+            "options": [
+              {
+                "es": "Carlos V",
+                "en": "Charles V"
+              },
+              {
+                "es": "Aixa, la madre de Boabdil",
+                "en": "Aixa, Boabdil's mother"
+              },
+              {
+                "es": "Washington Irving",
+                "en": "Washington Irving"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Aixa, la madre de Boabdil: por eso se llama «la casa de la señora».",
+              "en": "Aixa, Boabdil's mother: that's why it's called “the lady's house”."
+            }
+          },
+          "clue": {
+            "id": "vcs_pista_papeles",
+            "text": {
+              "es": "El símbolo · Zafra insiste en que sus papeles dicen cuándo murió.",
+              "en": "The symbol · Zafra insists his papers say when he died."
+            }
+          },
+          "nextNodeId": "l4_pesas",
+          "nextHint": {
+            "es": "Al Arco de las Pesas, en la Plaza Larga. Unos 5 minutos.",
+            "en": "To the Arco de las Pesas, in Plaza Larga. About 5 minutes."
+          }
+        },
+        {
+          "id": "l4_pesas",
+          "title": {
+            "es": "Arco de las Pesas",
+            "en": "Arco de las Pesas"
+          },
+          "location": {
+            "lat": 37.1826,
+            "lng": -3.592
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_pesas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_pesas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganivet",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "zafra",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Arco de las Pesas era una puerta de la muralla del Albaicín, del siglo XI. Allí se colgaban las pesas falsas requisadas en el mercado.",
+                "en": "The Arco de las Pesas was an 11th-century gate in the Albaicín wall. The false weights confiscated at the market were hung there."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Vienes del río: Zafra, un apellido de papeles. ¿Seguimos la pista de la fecha o la del ave?",
+                    "en": "You've come along the river: Zafra, a man of documents. Shall we follow the date lead or the bird lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin"
+                  ],
+                  "text": {
+                    "es": "Vienes del palacio de Zafra, que presume de papeles. ¿Seguimos la pista de la fecha o la del ave?",
+                    "en": "You've come from Zafra's palace, and he's proud of his papers. Shall we follow the date lead or the bird lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se colgaba en el Arco de las Pesas?",
+              "en": "What was hung on the Arco de las Pesas?"
+            },
+            "options": [
+              {
+                "es": "Las pesas falsas del mercado",
+                "en": "The market's false weights"
+              },
+              {
+                "es": "Los faroles de feria",
+                "en": "Fair lanterns"
+              },
+              {
+                "es": "Las llaves de la ciudad",
+                "en": "The city keys"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Las pesas falsas requisadas a los tramposos del mercado.",
+              "en": "The false weights confiscated from market cheats."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "ganivet",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La fecha o el ave?",
+              "en": "The date or the bird?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la fecha",
+                "en": "The date lead"
+              },
+              "hint": {
+                "es": "Con Zafra",
+                "en": "With Zafra"
+              },
+              "targetNodeId": "l4a_fecha",
+              "setFlags": [
+                "version_fecha"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del ave",
+                "en": "The bird lead"
+              },
+              "hint": {
+                "es": "Con Elvira",
+                "en": "With Elvira"
+              },
+              "targetNodeId": "l4b_ave",
+              "setFlags": [
+                "version_ave"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l4a_fecha",
+          "title": {
+            "es": "La fecha",
+            "en": "The date"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "zafra",
+              "expression": "proud",
+              "text": {
+                "es": "Aquí lo tiene: yo, Hernando de Zafra, morí en 1507. Y la casa de la ventana se construyó en 1539. Treinta y dos años después.",
+                "en": "There you have it: I, Hernando de Zafra, died in 1507. And the house with the window was built in 1539. Thirty-two years later."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "zafra",
+              "expression": "thinking",
+              "text": {
+                "es": "Mal pude ahorcar a nadie desde mi tumba. Esa leyenda me la han colgado a mí.",
+                "en": "I could hardly hang anyone from my grave. That legend has been hung on me."
+              }
+            }
+          ],
+          "clue": {
+            "id": "vcs_pista_1539",
+            "text": {
+              "es": "El símbolo · Zafra murió en 1507 y la casa se construyó en 1539: la leyenda no cuadra.",
+              "en": "The symbol · Zafra died in 1507 and the house was built in 1539: the legend doesn't add up."
+            }
+          },
+          "nextNodeId": "l5_castril",
+          "nextHint": {
+            "es": "Baja a la Carrera del Darro, a la Casa de Castril. Unos 12 minutos.",
+            "en": "Walk down to Carrera del Darro, to the Casa de Castril. About 12 minutes."
+          }
+        },
+        {
+          "id": "l4b_ave",
+          "title": {
+            "es": "El ave",
+            "en": "The bird"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "elvira",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Sabes qué hay tallado junto a la frase? Un ave que renace de sus cenizas: un fénix.",
+                "en": "Do you know what's carved beside the phrase? A bird reborn from its ashes: a phoenix."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "elvira",
+              "expression": "thinking",
+              "text": {
+                "es": "El fénix es un símbolo de resurrección. Quizá la frase no habla de un paje… sino de la vida eterna que el dueño esperaba del cielo.",
+                "en": "The phoenix is a symbol of resurrection. Perhaps the phrase isn't about a page… but about the eternal life the owner hoped for from heaven."
+              }
+            }
+          ],
+          "clue": {
+            "id": "vcs_pista_fenix",
+            "text": {
+              "es": "El símbolo · Junto a la frase hay un fénix, símbolo de resurrección.",
+              "en": "The symbol · Beside the phrase there's a phoenix, a symbol of resurrection."
+            }
+          },
+          "nextNodeId": "l5_castril",
+          "nextHint": {
+            "es": "Baja a la Carrera del Darro, a la Casa de Castril. Unos 12 minutos.",
+            "en": "Walk down to Carrera del Darro, to the Casa de Castril. About 12 minutes."
+          }
+        },
+        {
+          "id": "l5_castril",
+          "title": {
+            "es": "Casa de Castril",
+            "en": "Casa de Castril"
+          },
+          "location": {
+            "lat": 37.1787,
+            "lng": -3.5917
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_castril.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_castril.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganivet",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "elvira",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa de Castril es un palacio renacentista de 1539. Desde 1917 alberga el Museo Arqueológico de Granada. En su fachada está la ventana tapiada con la frase «Esperándola del cielo».",
+                "en": "The Casa de Castril is a Renaissance palace from 1539. Since 1917 it has housed Granada's Archaeological Museum. On its front is the bricked-up window with the phrase “Esperándola del cielo”."
+              },
+              "year": 1539
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. El paje, los enamorados o el símbolo: ¿qué espera la ventana de la Casa de Castril?",
+                "en": "Verdict time. The page, the lovers or the symbol: what is the window of the Casa de Castril waiting for?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué espera la ventana, según los historiadores?",
+              "en": "What is the window waiting for, according to historians?"
+            },
+            "options": [
+              {
+                "es": "La justicia para un paje ahorcado",
+                "en": "Justice for a hanged page"
+              },
+              {
+                "es": "El regreso de un enamorado",
+                "en": "A lover's return"
+              },
+              {
+                "es": "La vida eterna, como el fénix tallado a su lado",
+                "en": "Eternal life, like the phoenix carved beside it"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El símbolo. La frase acompaña a un fénix, símbolo de resurrección: el dueño esperaba del cielo la vida eterna. La leyenda del paje es romántica, pero no cuadra: Hernando de Zafra murió en 1507 y la casa es de 1539.",
+              "en": "The symbol. The phrase goes with a phoenix, a symbol of resurrection: the owner hoped for eternal life from heaven. The legend of the page is romantic, but it doesn't add up: Hernando de Zafra died in 1507 and the house dates from 1539."
+            }
+          },
+          "nextNodeId": "l6_final"
+        },
+        {
+          "id": "l6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_fecha"
+                  ],
+                  "text": {
+                    "es": "El río y la fecha: 1507 y 1539 no mienten. Eres archivero del Darro.",
+                    "en": "The river and the date: 1507 and 1539 don't lie. You're the Darro's archivist."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_ave"
+                  ],
+                  "text": {
+                    "es": "El río y el ave: has leído la piedra. Eres intérprete de símbolos.",
+                    "en": "The river and the bird: you've read the stone. You're an interpreter of symbols."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_fecha"
+                  ],
+                  "text": {
+                    "es": "El Albaicín y la fecha: has limpiado el nombre de Zafra. Eres abogado de la Chancillería.",
+                    "en": "The Albaicín and the date: you've cleared Zafra's name. You're a lawyer of the Chancery."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_albaicin",
+                    "version_ave"
+                  ],
+                  "text": {
+                    "es": "El Albaicín y el ave: del palacio al fénix. Eres guardián de la ventana.",
+                    "en": "The Albaicín and the bird: from the palace to the phoenix. You're the window's guardian."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "happy",
+              "text": {
+                "es": "Granada está llena de ventanas que cuentan cosas. Mírelas despacio: la belleza, como el fénix, siempre vuelve.",
+                "en": "Granada is full of windows that tell stories. Look at them slowly: beauty, like the phoenix, always comes back."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "archivero_darro",
+          "requires": [
+            "camino_rio",
+            "version_fecha"
+          ],
+          "title": {
+            "es": "Archivero del Darro",
+            "en": "The Darro's archivist"
+          }
+        },
+        {
+          "id": "interprete_simbolos",
+          "requires": [
+            "camino_rio",
+            "version_ave"
+          ],
+          "title": {
+            "es": "Intérprete de símbolos",
+            "en": "Interpreter of symbols"
+          }
+        },
+        {
+          "id": "abogado_chancilleria",
+          "requires": [
+            "camino_albaicin",
+            "version_fecha"
+          ],
+          "title": {
+            "es": "Abogado de la Chancillería",
+            "en": "Lawyer of the Chancery"
+          }
+        },
+        {
+          "id": "guardian_ventana",
+          "requires": [
+            "camino_albaicin",
+            "version_ave"
+          ],
+          "title": {
+            "es": "Guardián de la ventana",
+            "en": "The window's guardian"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "libro_ganivet",
+          "name": {
+            "es": "«Granada la bella»",
+            "en": "“Granada la bella”"
+          },
+          "icon": "collectibles/granada_leyenda_libro.svg",
+          "awardedAtNodeId": "l1_plazanueva"
+        },
+        {
+          "id": "estrella_banuelo",
+          "name": {
+            "es": "La estrella del Bañuelo",
+            "en": "The Bañuelo star"
+          },
+          "icon": "collectibles/granada_leyenda_estrella.svg",
+          "awardedAtNodeId": "l2_banuelo"
+        },
+        {
+          "id": "paraguas_zafra",
+          "name": {
+            "es": "La lluvia de Zafra",
+            "en": "Zafra's rain"
+          },
+          "icon": "collectibles/granada_leyenda_lluvia.svg",
+          "awardedAtNodeId": "la_tristes"
+        },
+        {
+          "id": "sello_zafra",
+          "name": {
+            "es": "El sello de Zafra",
+            "en": "Zafra's seal"
+          },
+          "icon": "collectibles/granada_leyenda_sello.svg",
+          "awardedAtNodeId": "lb_darhorra"
+        },
+        {
+          "id": "fenix",
+          "name": {
+            "es": "El fénix",
+            "en": "The phoenix"
+          },
+          "icon": "collectibles/granada_leyenda_fenix.svg",
+          "awardedAtNodeId": "l5_castril"
+        },
+        {
+          "id": "insignia_castril",
+          "name": {
+            "es": "¿Qué espera la ventana de la Casa de Castril?",
+            "en": "What Is the Castril Window Waiting For?"
+          },
+          "icon": "collectibles/granada_leyenda_insignia.svg",
+          "awardedAtNodeId": "l6_final"
         }
       ]
     }

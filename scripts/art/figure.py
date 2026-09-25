@@ -397,6 +397,9 @@ def prop(kind, x, y, side):
         return (f'<ellipse cx="{x}" cy="{y + 2}" rx="24" ry="6" fill="#C98A4A" stroke="{INK}" stroke-width="2"/>'
                 f'<path d="M{x - 24} {y + 2}Q{x} {y + 26} {x + 24} {y + 2}" fill="#B8742E" stroke="{INK}" stroke-width="2"/>'
                 + "".join(f'<circle cx="{x + dx}" cy="{y}" r="3.4" fill="{c}"/>' for dx, c in [(-12, "#D8412F"), (-4, "#F29A2E"), (4, "#D8412F"), (12, "#F29A2E")]))
+    if kind == "club":      # maza de Hércules
+        return (f'<path d="M{x - 4} {y + 10}L{x + s * 8} {y - 60}Q{x + s * 22} {y - 70} {x + s * 20} {y - 50}L{x + 4} {y + 12}Z" fill="#8A6243" stroke="{INK}" stroke-width="2.2"/>'
+                + "".join(f'<circle cx="{x + s * dx}" cy="{y + dy}" r="2.4" fill="#6E4C33"/>' for dx, dy in [(10, -48), (14, -38), (8, -28)]))
     if kind == "carnations":  # ramo de claveles
         return (f'<path d="M{x - 4} {y + 6}L{x - 10} {y - 22}M{x} {y + 6}V{y - 26}M{x + 4} {y + 6}L{x + 10} {y - 22}" stroke="#4F8B5A" stroke-width="2.4"/>'
                 + "".join(f'<circle cx="{x + dx}" cy="{y + dy}" r="6.4" fill="{c}" stroke="{INK}" stroke-width="1.4"/>' for dx, dy, c in [(-10, -24, "#D8412F"), (0, -30, "#E8744A"), (10, -24, "#D8412F")]))
