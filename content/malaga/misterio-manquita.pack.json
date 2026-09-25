@@ -9,6 +9,7 @@
     { "lat": 36.7250, "lng": -4.4060 }
   ],
   "coverImage": "img/cover_manquita.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {"id": "cenachero", "name": {"es": "Er Cenachero", "en": "Er Cenachero"}, "description": {"es": "Vendedor ambulante de pescado con sus dos cenachos. Pícaro, charlatán y más listo de lo que parece.", "en": "A street fish seller with his two baskets, the cenachos. Cheeky, chatty and sharper than he looks."}, "avatar": "sprites/cenachero/cenachero_neutral.svg", "era": "s. XIX-XX", "kind": "tipo", "bio": {"es": "Los cenacheros vendían por las calles de Málaga el pescado recién sacado, en dos cenachos (cestas de esparto) colgados de una vara al hombro, y lo pregonaban a voces. El oficio desapareció a mediados del siglo XX; desde 1964 lo recuerda la estatua de Jaime Fernández Pimentel junto a la Plaza de la Marina.", "en": "Cenacheros sold freshly caught fish through the streets of Málaga, carrying it in two esparto baskets (cenachos) hung from a pole on the shoulder and crying their wares. The trade died out in the mid-20th century; since 1964 a statue by Jaime Fernández Pimentel near Plaza de la Marina remembers it."}, "sources": [{"title": "Wikipedia: Cenachero", "url": "https://es.wikipedia.org/wiki/Cenachero"}]},
     {"id": "la_manquita", "name": {"es": "La Manquita", "en": "La Manquita"}, "description": {"es": "La catedral de Málaga. Solemne, algo presumida y dolida por su torre perdida.", "en": "Málaga Cathedral, nicknamed “the one-armed lady”. Solemn, a little vain and still hurt about her missing tower."}, "avatar": "sprites/manquita/manquita_neutral.svg", "era": "1528-hoy", "kind": "simbolo", "lived": "1528-hoy", "bio": {"es": "La catedral de la Encarnación de Málaga se empezó en 1528 sobre la antigua mezquita mayor. Las obras se pararon en 1782 con la torre sur sin terminar, y por eso los malagueños la llaman «la Manquita». La causa documentada es la falta de dinero; la leyenda dice que ese dinero ayudó a la independencia de los Estados Unidos.", "en": "Málaga's Cathedral of the Incarnation was begun in 1528 on the site of the old great mosque. Work stopped in 1782 with the south tower unfinished, which is why locals call it “la Manquita” (the one-armed lady). The documented reason is lack of money; legend says that money helped the United States win its independence."}, "sources": [{"title": "Wikipedia: Catedral de Málaga", "url": "https://es.wikipedia.org/wiki/Catedral_de_M%C3%A1laga"}]},
@@ -2577,6 +2578,7 @@
     },
     {
       "id": "siete-cabezas",
+      "bestTime": "noche",
       "title": {
         "es": "¿De quién eran las siete cabezas?",
         "en": "Whose Were the Seven Heads?"

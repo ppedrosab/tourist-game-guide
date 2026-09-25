@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_huelva.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "mackay",
@@ -4757,7 +4758,8 @@
           "title": "Santuario fenicio de Méndez Núñez-Plaza de las Monjas (Academia.edu)",
           "url": "https://www.academia.edu/67834617/"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

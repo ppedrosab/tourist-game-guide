@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_sevilla.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "aguador",
@@ -4816,7 +4817,8 @@
           "title": "Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»",
           "url": "https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

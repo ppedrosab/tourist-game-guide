@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { Button3D, Chip, Panel, ThemeBadge } from "@/components/ui";
 import { CastList } from "@/components/game/CastList";
+import { NightHint } from "@/components/game/NightHint";
 import { SourceList } from "@/components/game/SourceList";
 import { findRoute } from "@/engine/catalog";
 import { routeCast, routeFacts, routeOutline } from "@/engine/outline";
@@ -49,6 +50,7 @@ export default function DetalleRuta() {
         {facts.endings > 0 ? <Chip label={t("comun.finales", { n: facts.endings })} icon="star" /> : null}
       </View>
       <Text style={type.body}>{L(route.summary)}</Text>
+      <NightHint pack={pack} route={route} />
       <RouteMap route={route} run={active} height={230} />
       <OfflineMapCard pack={pack} />
       <Panel>

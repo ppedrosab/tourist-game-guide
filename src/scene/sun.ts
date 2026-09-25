@@ -79,3 +79,17 @@ export function castShadow(sun: SunPosition): CastShadow {
   const opacity = 0.2 + 0.1 * Math.min(1, sun.elevation / 30);
   return { visible: true, length, skewDeg, opacity };
 }
+
+/** Ya es de noche (el sol está más de 3° bajo el horizonte: acabó el crepúsculo civil). */
+export function isDark(date: Date, lat: number, lng: number): boolean {
+  return sunPosition(date, lat, lng).elevation < -3;
+}
+
+/** Próximo momento en que se hace de noche (según `isDark`), buscando hasta 24 h, con precisión de 5 min. */
+export function nextDusk(from: Date, lat: number, lng: number): Date | undefined {
+  for (let m = 5; m <= 24 * 60; m += 5) {
+    const d = new Date(from.getTime() + m * 60000);
+    if (isDark(d, lat, lng)) return d;
+  }
+  return undefined;
+}

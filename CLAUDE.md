@@ -107,6 +107,8 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   ruta enseña el reparto (`routeCast`) y las fuentes; `/personaje` es la ficha (modal, también desde
   el Cuaderno con los personajes ya conocidos). `allPacks.test.ts` exige ficha a todos y referencias a
   los reales y de leyenda. Enlaces a Wikipedia comprobados y codificados (%C3%A1…).
+- Álbum de personajes: `collection.characterIds` ("ciudad/personaje", con `metCharacters`) y
+  `CharacterAlbum` en Colección; al completar una ciudad, seña «Álbum completo».
 - Prueba de campo: `src/field` (registro y análisis por parada: coordenada y radio sugeridos),
   pantalla `/campo` y guía `docs/PRUEBAS_CALLE.md`.
 
@@ -176,6 +178,8 @@ Arte en `scripts/art/leyendas_andalucia_*.py`.
   de día se pasa a noche con `python3 scripts/art/night_variants.py {escena}` → `fondo_{escena}_noche.svg`
   (cielo con luna, capas oscurecidas con filtro y ventanas y farolas encendidas); luego
   `render_layers.py {escena}_noche` y `npm run gen:assets`. Los guías saludan con «Buenas noches».
+- Llevan `route.bestTime: "noche"` (también las lumbres): el detalle (`NightHint`) dice si ya es de noche
+  o a qué hora anochece hoy en la ciudad (`sun.ts`: `isDark`, `nextDusk`; hora en `pack.timeZone`).
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el

@@ -109,6 +109,7 @@ const route = z.object({
   rewards: z
     .array(z.object({ id: z.string().min(1), name: i18nText, icon: assetRef, awardedAtNodeId: z.string() }))
     .optional(),
+  bestTime: z.literal("noche").optional(),
   sources: z.array(source).optional(),
 });
 
@@ -120,6 +121,7 @@ export const cityPackSchema = z.object({
   center: latLng,
   bounds: z.tuple([latLng, latLng]),
   coverImage: assetRef,
+  timeZone: z.string().optional(),
   characters: z.array(
     z.object({
       id: z.string().min(1),

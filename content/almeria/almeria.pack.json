@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_almeria.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "vigia",
@@ -4753,7 +4754,8 @@
           "title": "Noticias de Almería, homenaje a Joaquín Santisteban Delgado",
           "url": "https://www.noticiasdealmeria.com/noticia/75861/capital/el-ayuntamiento-reconoce-la-figura-del-historiador-profesor-y-cronista-almeriense-joaquin-santisteban-delgado-con-una-placa-.html"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

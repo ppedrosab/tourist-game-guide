@@ -88,6 +88,9 @@ export const en: Strings = {
     verRutaTexto: "Stops, paths and map",
   },
   ruta: {
+    yaDeNoche: "Good timing: it's already dark. This route is best enjoyed with the streets at night.",
+    mejorAnochecer: "This route is best enjoyed at dusk. Today it gets dark at {hour}.",
+    mejorAnochecerSinHora: "This route is best enjoyed at dusk.",
     noEncontrada: "Route not found",
     noValida: "This route doesn't exist or its content isn't valid.",
     decision: "Decision {n}",

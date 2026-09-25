@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_jaen.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "preso",
@@ -3758,7 +3759,8 @@
         {
           "title": "«Hechos del condestable don Miguel Lucas de Iranzo» (crónica del siglo XV)"
         }
-      ]
+      ],
+      "bestTime": "noche"
     },
     {
       "id": "fantasma-san-bartolome",
@@ -4701,7 +4703,8 @@
           "title": "Wikipedia: Bernardo López García",
           "url": "https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

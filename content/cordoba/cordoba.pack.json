@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_cordoba.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "lubna",
@@ -4749,7 +4750,8 @@
         {
           "title": "Teodomiro Ramírez de Arellano, «Paseos por Córdoba» (1873-1877)"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

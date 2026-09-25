@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_cadiz.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "tia_norica",
@@ -6329,7 +6330,8 @@
           "title": "Cuaderno de Cádiz, «La sangre del drago»",
           "url": "http://cuadernodecadiz.blogspot.com/2010/12/4-el-taller-del-mito-la-sangre-de.html"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { castShadow, sunPosition } from "../sun";
+import { castShadow, isDark, nextDusk, sunPosition } from "../sun";
 
 // Plaza de la Marina, Málaga.
 const LAT = 36.7188;
@@ -49,5 +49,18 @@ describe("sombra proyectada", () => {
     expect(rasante.length).toBe(1.4);
     expect(Math.abs(rasante.skewDeg)).toBeLessThanOrEqual(35);
     expect(castShadow({ elevation: -10, azimuth: 0 }).visible).toBe(false);
+  });
+});
+
+describe("anochecer", () => {
+  const [lat, lng] = [36.7213, -4.4214];
+  it("a mediodía es de día y a medianoche de noche", () => {
+    expect(isDark(new Date("2026-06-21T12:00:00Z"), lat, lng)).toBe(false);
+    expect(isDark(new Date("2026-06-21T23:30:00Z"), lat, lng)).toBe(true);
+  });
+  it("en junio anochece en Málaga entre la puesta de sol (21:43) y el fin del crepúsculo civil (22:13)", () => {
+    const dusk = nextDusk(new Date("2026-06-21T12:00:00Z"), lat, lng)!.getTime();
+    expect(dusk).toBeGreaterThan(Date.parse("2026-06-21T19:43:00Z"));
+    expect(dusk).toBeLessThan(Date.parse("2026-06-21T20:13:00Z"));
   });
 });

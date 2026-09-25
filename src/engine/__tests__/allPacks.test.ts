@@ -146,6 +146,11 @@ describe("fichas y fuentes", () => {
     },
   );
 
+  it.each(routes.filter(([, , r]) => r.theme === "leyendas"))("%s se juega al anochecer", (_, pack, route) => {
+    expect(route.bestTime).toBe("noche");
+    expect(pack.timeZone).toBeDefined();
+  });
+
   it.each(routes)("%s cita sus fuentes", (_, __, route) => {
     expect(route.sources?.length).toBeGreaterThan(0);
   });

@@ -33,6 +33,8 @@ export interface CityPack {
   center: LatLng;
   bounds: [LatLng, LatLng];
   coverImage: AssetRef;
+  /** Zona horaria de la ciudad (IANA), para dar horas locales: la puesta de sol, por ejemplo. */
+  timeZone?: string;
   characters: Character[];
   routes: Route[];
 }
@@ -79,6 +81,8 @@ export interface Route {
   nodes: StoryNode[];
   endings?: Ending[];
   rewards?: Collectible[];
+  /** "noche": la ruta está pensada para hacerse al anochecer (el detalle avisa si aún es de día). */
+  bestTime?: "noche";
   /** Fuentes de la ruta: de dónde salen la historia y los datos. */
   sources?: Source[];
 }

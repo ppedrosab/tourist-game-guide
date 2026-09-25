@@ -24,6 +24,7 @@
     }
   ],
   "coverImage": "img/cover_granada.jpg",
+  "timeZone": "Europe/Madrid",
   "characters": [
     {
       "id": "irving",
@@ -4780,7 +4781,8 @@
           "title": "Inmsol, «La leyenda de la Casa de Castril»",
           "url": "https://www.inmsol.com/es/blog-escuela/leyendas-granada/la-leyenda-de-la-casa-de-castril/"
         }
-      ]
+      ],
+      "bestTime": "noche"
     }
   ]
 }

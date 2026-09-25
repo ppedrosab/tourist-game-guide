@@ -90,6 +90,9 @@ export const es = {
     verRutaTexto: "Paradas, caminos y mapa",
   },
   ruta: {
+    yaDeNoche: "Buen momento: ya es de noche. Esta ruta se disfruta más con las calles a oscuras.",
+    mejorAnochecer: "Esta ruta se disfruta más al anochecer. Hoy se hace de noche a las {hour}.",
+    mejorAnochecerSinHora: "Esta ruta se disfruta más al anochecer.",
     noEncontrada: "Ruta no encontrada",
     noValida: "Esta ruta no existe o su contenido no es válido.",
     decision: "Decisión {n}",
