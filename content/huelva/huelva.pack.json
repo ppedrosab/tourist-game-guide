@@ -1,6 +1,6 @@
 {
   "id": "huelva",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Huelva",
     "en": "Huelva"
@@ -15,7 +15,7 @@
   },
   "bounds": [
     {
-      "lat": 37.25,
+      "lat": 37.248,
       "lng": -6.96
     },
     {
@@ -96,6 +96,43 @@
         "en": "A ham carver from the Aracena hills. Serious with the knife, warm with people."
       },
       "avatar": "sprites/cortador/cortador_neutral.svg"
+    },
+    {
+      "id": "grumete",
+      "name": {
+        "es": "El Grumete",
+        "en": "The Ship's Boy"
+      },
+      "description": {
+        "es": "El más joven de la tripulación, con gorro de marinero y ganas de aventura. Curioso y charlatán.",
+        "en": "The youngest of the crew, with a sailor's cap and a thirst for adventure. Curious and chatty."
+      },
+      "avatar": "sprites/grumete/grumete_neutral.svg"
+    },
+    {
+      "id": "pinzon",
+      "name": {
+        "es": "Martín Alonso Pinzón",
+        "en": "Martín Alonso Pinzón"
+      },
+      "description": {
+        "es": "Marino de Palos, capitán de la Pinta en 1492. Orgulloso y con mucho carácter.",
+        "en": "A sailor from Palos, captain of the Pinta in 1492. Proud and strong-willed."
+      },
+      "avatar": "sprites/pinzon/pinzon_neutral.svg",
+      "era": "1441 - 1493"
+    },
+    {
+      "id": "colombina",
+      "name": {
+        "es": "La Socia Colombina",
+        "en": "The Society Member"
+      },
+      "description": {
+        "es": "Socia de la Real Sociedad Colombina Onubense, con su abanico y sus actas. Formal y muy puntillosa.",
+        "en": "A member of the Royal Columbian Society of Huelva, with her fan and her minutes. Formal and very meticulous."
+      },
+      "avatar": "sprites/colombina/colombina_neutral.svg"
     }
   ],
   "routes": [
@@ -1182,7 +1219,7 @@
           "awardedAtNodeId": "a1_carmen"
         },
         {
-          "id": "carabela",
+          "id": "carabela_decano",
           "name": {
             "es": "La carabela",
             "en": "The caravel"
@@ -2366,6 +2403,1145 @@
             "en": "Why Do They Call Us Choqueros?"
           },
           "icon": "collectibles/huelva_choqueros.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "colombinas",
+      "title": {
+        "es": "¿Quién inventó las Colombinas?",
+        "en": "Who Invented the Colombinas?"
+      },
+      "summary": {
+        "es": "Huelva celebra cada verano las Colombinas, pero ¿quién las inventó? ¿Colón, los hermanos Pinzón o una sociedad de 1880? Con un grumete, Martín Alonso Pinzón y una socia colombina.",
+        "en": "Every summer Huelva celebrates the Colombinas, but who invented them? Columbus, the Pinzón brothers or an 1880 society? With a ship's boy, Martín Alonso Pinzón and a Society member."
+      },
+      "era": "1492 - 1892",
+      "guideCharacterId": "grumete",
+      "durationMin": 100,
+      "distanceKm": 3.3,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La ría",
+            "en": "The estuary"
+          },
+          "trail": {
+            "es": "camino de la ría",
+            "en": "estuary trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La ciudad",
+            "en": "The town"
+          },
+          "trail": {
+            "es": "camino de la ciudad",
+            "en": "town trail"
+          }
+        }
+      },
+      "startNodeId": "g1_monjas",
+      "nodes": [
+        {
+          "id": "g1_monjas",
+          "title": {
+            "es": "Plaza de las Monjas",
+            "en": "Plaza de las Monjas"
+          },
+          "location": {
+            "lat": 37.2583,
+            "lng": -6.9502
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_monjas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_monjas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "grumete",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ah del barco! Soy grumete, el más joven de a bordo: friego la cubierta, canto las horas y subo a la cofa. Y en verano, en Huelva, ¡Colombinas!",
+                "en": "Ahoy! I'm the ship's boy, the youngest on board: I scrub the deck, call out the hours and climb to the crow's nest. And in summer, in Huelva, it's the Colombinas!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "thinking",
+              "text": {
+                "es": "Las fiestas de la ciudad se llaman Colombinas por Colón. Pero ¿quién las inventó? Eso no lo sabe ni el capitán.",
+                "en": "The city's festival is called the Colombinas after Columbus. But who invented it? Not even the captain knows."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: el mismísimo Colón, los hermanos Pinzón de Palos y una sociedad de señores muy serios de Huelva. ¡Apunta en el cuaderno de bitácora!",
+                "en": "Three suspects: Columbus himself, the Pinzón brothers of Palos, and a society of very serious gentlemen from Huelva. Write it in the logbook!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las Fiestas Colombinas se celebran a finales de julio y principios de agosto. Terminan hacia el 3 de agosto, el día en que las carabelas zarparon de Palos en 1492.",
+                "en": "The Colombinas are held in late July and early August. They end around 3 August, the day the caravels set sail from Palos in 1492."
+              },
+              "year": 1492
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué día zarparon las carabelas de Palos?",
+              "en": "On what day did the caravels sail from Palos?"
+            },
+            "options": [
+              {
+                "es": "El 2 de enero de 1492",
+                "en": "2 January 1492"
+              },
+              {
+                "es": "El 3 de agosto de 1492",
+                "en": "3 August 1492"
+              },
+              {
+                "es": "El 12 de octubre de 1492",
+                "en": "12 October 1492"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El 3 de agosto de 1492. El 12 de octubre es la llegada a América.",
+              "en": "3 August 1492. 12 October is the arrival in America."
+            }
+          },
+          "clue": {
+            "id": "col_pista_3agosto",
+            "text": {
+              "es": "Colón · Las fiestas giran en torno al 3 de agosto, el día de la salida de Colón.",
+              "en": "Columbus · The festival revolves around 3 August, the day Columbus set sail."
+            }
+          },
+          "nextNodeId": "g2_colon",
+          "nextHint": {
+            "es": "A la Casa Colón. Unos 7 minutos.",
+            "en": "To the Casa Colón. About 7 minutes."
+          }
+        },
+        {
+          "id": "g2_colon",
+          "title": {
+            "es": "Casa Colón",
+            "en": "Casa Colón"
+          },
+          "location": {
+            "lat": 37.2606,
+            "lng": -6.945
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_colon.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_colon.svg"
+              ],
+              "characters": [
+                {
+                  "id": "grumete",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "colombina",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "happy",
+              "text": {
+                "es": "Buenas tardes. Soy socia de la Real Sociedad Colombina Onubense. Cuidamos la memoria del Descubrimiento… y organizamos alguna que otra fiesta.",
+                "en": "Good afternoon. I'm a member of the Royal Columbian Society of Huelva. We look after the memory of the Discovery… and organise the odd party."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa Colón se levantó en la década de 1880 como gran hotel. En 1892, en el cuarto centenario del viaje, acogió a los invitados de los grandes actos.",
+                "en": "The Casa Colón was built in the 1880s as a grand hotel. In 1892, at the fourth centenary of the voyage, it hosted the guests of the big celebrations."
+              },
+              "year": 1892
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "thinking",
+              "text": {
+                "es": "Mire usted: Colón zarpó, sí. Pero ¿estuvo él en una sola Colombina? Piénselo.",
+                "en": "Look: Columbus set sail, yes. But did he ever attend a single Colombinas? Think about it."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué fue la Casa Colón cuando se construyó?",
+              "en": "What was the Casa Colón when it was built?"
+            },
+            "options": [
+              {
+                "es": "Un gran hotel",
+                "en": "A grand hotel"
+              },
+              {
+                "es": "La casa de Colón",
+                "en": "Columbus's house"
+              },
+              {
+                "es": "Un convento",
+                "en": "A convent"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Un gran hotel. Colón nunca vivió aquí: el nombre es un homenaje.",
+              "en": "A grand hotel. Columbus never lived here: the name is a tribute."
+            }
+          },
+          "clue": {
+            "id": "col_pista_casa",
+            "text": {
+              "es": "Colón · Colón no vivió en la Casa Colón ni vio nunca unas Colombinas.",
+              "en": "Columbus · Columbus never lived in the Casa Colón and never saw a Colombinas."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "grumete",
+            "expression": "happy",
+            "text": {
+              "es": "¿Bajamos a la ría, por donde salían los barcos, o nos quedamos en la ciudad, donde se reunían los señores de la Sociedad?",
+              "en": "Shall we go down to the estuary, where the ships sailed out, or stay in town, where the Society gentlemen used to meet?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "A la ría",
+                "en": "To the estuary"
+              },
+              "hint": {
+                "es": "Muelle de Levante y Muelle del Tinto",
+                "en": "Levante Pier and Tinto Pier"
+              },
+              "targetNodeId": "ga1_levante",
+              "setFlags": [
+                "camino_ria"
+              ],
+              "distanceM": 900,
+              "walkMin": 12
+            },
+            {
+              "label": {
+                "es": "Por la ciudad",
+                "en": "Through town"
+              },
+              "hint": {
+                "es": "Museo y Plaza de la Merced",
+                "en": "Museum and Plaza de la Merced"
+              },
+              "targetNodeId": "gb1_museo",
+              "setFlags": [
+                "camino_ciudad"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            }
+          ]
+        },
+        {
+          "id": "ga1_levante",
+          "title": {
+            "es": "Muelle de Levante",
+            "en": "Levante Pier"
+          },
+          "location": {
+            "lat": 37.253,
+            "lng": -6.9442
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_levante.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_levante.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pinzon",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "grumete",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "proud",
+              "text": {
+                "es": "Martín Alonso Pinzón, de Palos, capitán de la Pinta. Sin mí y sin mis hermanos, el genovés no encuentra marineros ni en sueños.",
+                "en": "Martín Alonso Pinzón, from Palos, captain of the Pinta. Without me and my brothers, the Genoese wouldn't have found sailors even in his dreams."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los hermanos Pinzón eran marinos de Palos. Martín Alonso capitaneó la Pinta y Vicente Yáñez, la Niña. Su prestigio animó a muchos marineros de la comarca a embarcarse.",
+                "en": "The Pinzón brothers were sailors from Palos. Martín Alonso captained the Pinta and Vicente Yáñez the Niña. Their standing persuaded many local sailors to sign on."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Fiestas? Nosotros volvimos en 1493 y bastante tuvimos. De fiestas en Huelva se encargaron otros, siglos después.",
+                "en": "Festivities? We came back in 1493 and had enough on our plate. Others took care of the Huelva festivities, centuries later."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué carabela capitaneó Martín Alonso Pinzón?",
+              "en": "Which caravel did Martín Alonso Pinzón captain?"
+            },
+            "options": [
+              {
+                "es": "La Santa María",
+                "en": "The Santa María"
+              },
+              {
+                "es": "La Victoria",
+                "en": "The Victoria"
+              },
+              {
+                "es": "La Pinta",
+                "en": "The Pinta"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La Pinta. Su hermano Vicente Yáñez llevó la Niña; Colón iba en la Santa María.",
+              "en": "The Pinta. His brother Vicente Yáñez took the Niña; Columbus sailed on the Santa María."
+            }
+          },
+          "clue": {
+            "id": "col_pista_pinzon",
+            "text": {
+              "es": "Los Pinzón · Pinzón dice que las fiestas las organizaron otros, siglos después del viaje.",
+              "en": "The Pinzóns · Pinzón says the festivities were organised by others, centuries after the voyage."
+            }
+          },
+          "nextNodeId": "ga2_tinto",
+          "nextHint": {
+            "es": "Sigue la ría hasta el Muelle del Tinto. Unos 12 minutos.",
+            "en": "Follow the estuary to the Tinto Pier. About 12 minutes."
+          }
+        },
+        {
+          "id": "ga2_tinto",
+          "title": {
+            "es": "Muelle del Tinto",
+            "en": "Tinto Pier"
+          },
+          "location": {
+            "lat": 37.2523,
+            "lng": -6.9569
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "grumete",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "pinzon",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Desde 1965 se juega en Huelva el Trofeo Colombino, un torneo de fútbol de verano que organiza el Recreativo, el club más antiguo de España.",
+                "en": "Since 1965 Huelva has hosted the Trofeo Colombino, a summer football tournament organised by Recreativo, Spain's oldest club."
+              },
+              "year": 1965
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hasta el fútbol lleva el nombre de Colón! Aquí todo es colombino: el trofeo, las fiestas, las calles…",
+                "en": "Even the football is named after Columbus! Everything here is 'Columbian': the trophy, the festival, the streets…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "thinking",
+              "text": {
+                "es": "Colombino, colombino… ¿Y pinzoniano, nada? Así es la fama, muchacho.",
+                "en": "Columbian, Columbian… and nothing 'Pinzonian'? That's fame for you, lad."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el Trofeo Colombino?",
+              "en": "What is the Trofeo Colombino?"
+            },
+            "options": [
+              {
+                "es": "Un premio de poesía",
+                "en": "A poetry prize"
+              },
+              {
+                "es": "Un torneo de fútbol de verano",
+                "en": "A summer football tournament"
+              },
+              {
+                "es": "Una regata de carabelas",
+                "en": "A caravel regatta"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Un torneo de fútbol de verano, desde 1965.",
+              "en": "A summer football tournament, since 1965."
+            }
+          },
+          "clue": {
+            "id": "col_pista_nombre",
+            "text": {
+              "es": "Colón · Colón da nombre a las fiestas, pero dar nombre no es inventar.",
+              "en": "Columbus · Columbus gives the festival its name, but giving a name isn't inventing."
+            }
+          },
+          "nextNodeId": "g4_punto",
+          "nextHint": {
+            "es": "Sube a la Plaza del Punto. Unos 12 minutos.",
+            "en": "Walk up to Plaza del Punto. About 12 minutes."
+          }
+        },
+        {
+          "id": "gb1_museo",
+          "title": {
+            "es": "Museo de Huelva",
+            "en": "Huelva Museum"
+          },
+          "location": {
+            "lat": 37.2616,
+            "lng": -6.9442
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_museo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_museo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "colombina",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "grumete",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Real Sociedad Colombina Onubense se fundó en 1880 para recordar el viaje de Colón y el papel de los marinos de esta tierra.",
+                "en": "The Royal Columbian Society of Huelva was founded in 1880 to remember Columbus's voyage and the role of the local sailors."
+              },
+              "year": 1880
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "proud",
+              "text": {
+                "es": "Y ese mismo verano de 1880 celebramos el aniversario de la salida: el 3 de agosto. Fueron las primeras fiestas colombinas.",
+                "en": "And that same summer of 1880 we celebrated the anniversary of the departure: 3 August. That was the first Colombinas."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Las primeras? ¿Las inventaron ustedes?",
+                "en": "The first? You invented them?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año se fundó la Real Sociedad Colombina Onubense?",
+              "en": "In what year was the Royal Columbian Society of Huelva founded?"
+            },
+            "options": [
+              {
+                "es": "En 1880",
+                "en": "In 1880"
+              },
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              },
+              {
+                "es": "En 1992",
+                "en": "In 1992"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1880. Ese mismo verano organizó las primeras fiestas.",
+              "en": "In 1880. That same summer it organised the first festival."
+            }
+          },
+          "clue": {
+            "id": "col_pista_1880",
+            "text": {
+              "es": "La Sociedad Colombina · La Sociedad Colombina se fundó en 1880 y ese verano celebró el 3 de agosto.",
+              "en": "The Columbian Society · The Columbian Society was founded in 1880 and that summer celebrated 3 August."
+            }
+          },
+          "nextNodeId": "gb2_merced",
+          "nextHint": {
+            "es": "A la Plaza de la Merced. Unos 5 minutos.",
+            "en": "To Plaza de la Merced. About 5 minutes."
+          }
+        },
+        {
+          "id": "gb2_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 37.2638,
+            "lng": -6.9478
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "colombina",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "pinzon",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1892 se cumplieron 400 años del viaje. Huelva lo celebró a lo grande, con visitantes de medio mundo, y desde entonces las Colombinas se consolidaron.",
+                "en": "In 1892 it was 400 years since the voyage. Huelva celebrated in style, with visitors from all over the world, and from then on the Colombinas took root."
+              },
+              "year": 1892
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "happy",
+              "text": {
+                "es": "El centenario las hizo grandes. Pero la idea, la fecha y la primera fiesta… esas salieron de nuestra Sociedad.",
+                "en": "The centenary made them big. But the idea, the date and the first party… those came from our Society."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "proud",
+              "text": {
+                "es": "Pues que conste en acta que sin Palos no hay viaje, ni aniversario, ni nada.",
+                "en": "Then let it be recorded that without Palos there's no voyage, no anniversary, nothing."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué aniversario se celebró en Huelva en 1892?",
+              "en": "Which anniversary did Huelva celebrate in 1892?"
+            },
+            "options": [
+              {
+                "es": "Los 100 años del puerto",
+                "en": "100 years of the port"
+              },
+              {
+                "es": "La fundación de la ciudad",
+                "en": "The founding of the city"
+              },
+              {
+                "es": "Los 400 años del viaje de Colón",
+                "en": "400 years since Columbus's voyage"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El cuarto centenario del viaje de 1492.",
+              "en": "The fourth centenary of the 1492 voyage."
+            }
+          },
+          "clue": {
+            "id": "col_pista_1892",
+            "text": {
+              "es": "La Sociedad Colombina · El cuarto centenario de 1892 consolidó unas fiestas que ya existían.",
+              "en": "The Columbian Society · The 1892 fourth centenary consolidated a festival that already existed."
+            }
+          },
+          "nextNodeId": "g4_punto",
+          "nextHint": {
+            "es": "Baja a la Plaza del Punto. Unos 5 minutos.",
+            "en": "Walk down to Plaza del Punto. About 5 minutes."
+          }
+        },
+        {
+          "id": "g4_punto",
+          "title": {
+            "es": "Plaza del Punto",
+            "en": "Plaza del Punto"
+          },
+          "location": {
+            "lat": 37.2595,
+            "lng": -6.9519
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_punto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_punto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "grumete",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "colombina",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Hoy las Colombinas tienen feria con casetas, cabalgata, conciertos y fuegos artificiales junto a la ría.",
+                "en": "Today the Colombinas have a fairground with marquees, a parade, concerts and fireworks by the estuary."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ría: Pinzón dice que las fiestas son cosa de otros. ¿Seguimos la pista de la carabela o la del acta?",
+                    "en": "You've come from the estuary: Pinzón says the festival is someone else's doing. Shall we follow the caravel lead or the minutes lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ciudad: ya sabes lo de 1880 y 1892. ¿Seguimos la pista de la carabela o la del acta?",
+                    "en": "You've come through town: you know about 1880 and 1892. Shall we follow the caravel lead or the minutes lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué NO forma parte de las Colombinas de hoy?",
+              "en": "Which of these is NOT part of today's Colombinas?"
+            },
+            "options": [
+              {
+                "es": "Fuegos junto a la ría",
+                "en": "Fireworks by the estuary"
+              },
+              {
+                "es": "Una carrera de carabelas hasta América",
+                "en": "A caravel race to America"
+              },
+              {
+                "es": "Casetas y cabalgata",
+                "en": "Marquees and a parade"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Nada de carabelas hasta América: hay casetas, cabalgata, conciertos y fuegos.",
+              "en": "No caravels to America: there are marquees, a parade, concerts and fireworks."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "grumete",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La carabela o el acta?",
+              "en": "The caravel or the minutes?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la carabela",
+                "en": "The caravel lead"
+              },
+              "hint": {
+                "es": "Con Pinzón",
+                "en": "With Pinzón"
+              },
+              "targetNodeId": "g4a_carabela",
+              "setFlags": [
+                "version_carabela"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del acta",
+                "en": "The minutes lead"
+              },
+              "hint": {
+                "es": "Con la socia",
+                "en": "With the Society member"
+              },
+              "targetNodeId": "g4b_acta",
+              "setFlags": [
+                "version_acta"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_carabela",
+          "title": {
+            "es": "La carabela",
+            "en": "The caravel"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "dramatic",
+              "text": {
+                "es": "Colón y yo hicimos el viaje. Pero no inventamos fiesta ninguna: bastante tuvimos con volver vivos.",
+                "en": "Columbus and I made the voyage. But we didn't invent any festival: we had enough on our hands getting back alive."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pinzon",
+              "expression": "thinking",
+              "text": {
+                "es": "La fiesta la pusieron los de Huelva, casi cuatro siglos después, para que no se olvidara lo que hicimos.",
+                "en": "The people of Huelva started the festival, nearly four centuries later, so that what we did wouldn't be forgotten."
+              }
+            }
+          ],
+          "clue": {
+            "id": "col_pista_viaje",
+            "text": {
+              "es": "Los Pinzón · Colón y los Pinzón hicieron el viaje, pero no inventaron ninguna fiesta.",
+              "en": "The Pinzóns · Columbus and the Pinzóns made the voyage, but didn't invent any festival."
+            }
+          },
+          "nextNodeId": "g5_ria",
+          "nextHint": {
+            "es": "Baja al Paseo de la Ría. Unos 15 minutos.",
+            "en": "Walk down to the Paseo de la Ría. About 15 minutes."
+          }
+        },
+        {
+          "id": "g4b_acta",
+          "title": {
+            "es": "El acta",
+            "en": "The minutes"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "proud",
+              "text": {
+                "es": "En las actas de la Sociedad está todo: la fundación en 1880 y la propuesta de celebrar cada 3 de agosto la salida de las carabelas.",
+                "en": "It's all in the Society's minutes: its founding in 1880 and the proposal to celebrate the caravels' departure every 3 August."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colombina",
+              "expression": "happy",
+              "text": {
+                "es": "El nombre es de Colón y la gloria es de los marinos. Pero la fiesta… la fiesta es nuestra.",
+                "en": "The name is Columbus's and the glory belongs to the sailors. But the festival… the festival is ours."
+              }
+            }
+          ],
+          "clue": {
+            "id": "col_pista_idea",
+            "text": {
+              "es": "La Sociedad Colombina · La idea de celebrar cada 3 de agosto salió de la Sociedad Colombina.",
+              "en": "The Columbian Society · The idea of celebrating every 3 August came from the Columbian Society."
+            }
+          },
+          "nextNodeId": "g5_ria",
+          "nextHint": {
+            "es": "Baja al Paseo de la Ría. Unos 15 minutos.",
+            "en": "Walk down to the Paseo de la Ría. About 15 minutes."
+          }
+        },
+        {
+          "id": "g5_ria",
+          "title": {
+            "es": "Paseo de la Ría",
+            "en": "Paseo de la Ría"
+          },
+          "location": {
+            "lat": 37.25,
+            "lng": -6.9585
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_paseoria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_paseoria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "grumete",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "colombina",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "A lo largo de la ría se monta cada verano la feria de las Colombinas, con sus casetas y su noria.",
+                "en": "Every summer the Colombinas fairground, with its marquees and Ferris wheel, is set up along the estuary."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, que se nos va la marea. Colón, los Pinzón o la Sociedad Colombina: ¿quién inventó las Colombinas?",
+                "en": "Verdict time, before the tide goes out. Columbus, the Pinzóns or the Columbian Society: who invented the Colombinas?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién inventó las Colombinas?",
+              "en": "Who invented the Colombinas?"
+            },
+            "options": [
+              {
+                "es": "La Real Sociedad Colombina Onubense, en 1880",
+                "en": "The Royal Columbian Society of Huelva, in 1880"
+              },
+              {
+                "es": "Los hermanos Pinzón",
+                "en": "The Pinzón brothers"
+              },
+              {
+                "es": "Colón",
+                "en": "Columbus"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La Sociedad Colombina. Colón y los Pinzón hicieron el viaje de 1492, pero las fiestas las creó la Sociedad en 1880 para recordarlo cada 3 de agosto; el centenario de 1892 las hizo grandes.",
+              "en": "The Columbian Society. Columbus and the Pinzóns made the 1492 voyage, but the festival was created by the Society in 1880 to remember it every 3 August; the 1892 centenary made it big."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_carabela"
+                  ],
+                  "text": {
+                    "es": "La ría y la carabela: sal, viento y gloria. Eres marinero de la Pinta.",
+                    "en": "The estuary and the caravel: salt, wind and glory. You're a sailor of the Pinta."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ria",
+                    "version_acta"
+                  ],
+                  "text": {
+                    "es": "La ría y el acta: del muelle al papel. Eres cronista colombino.",
+                    "en": "The estuary and the minutes: from the pier to the page. You're a Columbian chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad",
+                    "version_carabela"
+                  ],
+                  "text": {
+                    "es": "La ciudad y la carabela: museo y mar. Eres grumete de honor.",
+                    "en": "The town and the caravel: museum and sea. You're an honorary ship's boy."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_ciudad",
+                    "version_acta"
+                  ],
+                  "text": {
+                    "es": "La ciudad y el acta: 1880 de pe a pa. Eres socio colombino.",
+                    "en": "The town and the minutes: 1880 inside out. You're a member of the Columbian Society."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "grumete",
+              "expression": "happy",
+              "text": {
+                "es": "¡Tierra a la vista! O mejor dicho: ¡feria a la vista! Nos vemos el 3 de agosto.",
+                "en": "Land ho! Or rather: fair ho! See you on 3 August."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "marinero_pinta",
+          "requires": [
+            "camino_ria",
+            "version_carabela"
+          ],
+          "title": {
+            "es": "Marinero de la Pinta",
+            "en": "Sailor of the Pinta"
+          }
+        },
+        {
+          "id": "cronista_colombino",
+          "requires": [
+            "camino_ria",
+            "version_acta"
+          ],
+          "title": {
+            "es": "Cronista colombino",
+            "en": "Columbian chronicler"
+          }
+        },
+        {
+          "id": "grumete_honor",
+          "requires": [
+            "camino_ciudad",
+            "version_carabela"
+          ],
+          "title": {
+            "es": "Grumete de honor",
+            "en": "Honorary ship's boy"
+          }
+        },
+        {
+          "id": "socio_colombino",
+          "requires": [
+            "camino_ciudad",
+            "version_acta"
+          ],
+          "title": {
+            "es": "Socio colombino",
+            "en": "Columbian Society member"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "carabela_colombina",
+          "name": {
+            "es": "La carabela",
+            "en": "The caravel"
+          },
+          "icon": "collectibles/huelva_fiesta_carabela.svg",
+          "awardedAtNodeId": "g1_monjas"
+        },
+        {
+          "id": "medalla_colombina",
+          "name": {
+            "es": "La medalla colombina",
+            "en": "The Columbian medal"
+          },
+          "icon": "collectibles/huelva_fiesta_medalla.svg",
+          "awardedAtNodeId": "g2_colon"
+        },
+        {
+          "id": "timon",
+          "name": {
+            "es": "El timón de la Pinta",
+            "en": "The Pinta's helm"
+          },
+          "icon": "collectibles/huelva_fiesta_timon.svg",
+          "awardedAtNodeId": "ga1_levante"
+        },
+        {
+          "id": "trofeo",
+          "name": {
+            "es": "El Trofeo Colombino",
+            "en": "The Colombino Trophy"
+          },
+          "icon": "collectibles/huelva_fiesta_trofeo.svg",
+          "awardedAtNodeId": "ga2_tinto"
+        },
+        {
+          "id": "acta_1880",
+          "name": {
+            "es": "El acta de 1880",
+            "en": "The 1880 minutes"
+          },
+          "icon": "collectibles/huelva_fiesta_acta.svg",
+          "awardedAtNodeId": "gb1_museo"
+        },
+        {
+          "id": "cartel_1892",
+          "name": {
+            "es": "El cartel de 1892",
+            "en": "The 1892 poster"
+          },
+          "icon": "collectibles/huelva_fiesta_cartel.svg",
+          "awardedAtNodeId": "gb2_merced"
+        },
+        {
+          "id": "noria_ria",
+          "name": {
+            "es": "La noria de la ría",
+            "en": "The estuary Ferris wheel"
+          },
+          "icon": "collectibles/huelva_fiesta_noria.svg",
+          "awardedAtNodeId": "g5_ria"
+        },
+        {
+          "id": "insignia_colombinas",
+          "name": {
+            "es": "¿Quién inventó las Colombinas?",
+            "en": "Who Invented the Colombinas?"
+          },
+          "icon": "collectibles/huelva_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
       ]

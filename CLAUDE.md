@@ -139,6 +139,19 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   chistes sobre imágenes ni hermandades y **no se dibujan imágenes sagradas** (pasos de palio vistos
   desde fuera, cirios y nazarenos anónimos). Los penitentes van con la cara tapada: el `maniguetero`
   lleva capirote y antifaz y su cara (`masked_face`) solo muestra los ojos. Fondos en `scripts/art/cadiz_ssanta_scenes.py`.
+- Una ruta de fiestas en cada una de las otras siete ciudades (ver `docs/GDD_FIESTAS_ANDALUCIA.md`):
+  - Málaga «¿Qué celebra la Feria de Agosto?» (`cantaora`, `verdialero`, `cochero`);
+  - Sevilla «¿Quién inventó la Feria de Abril?» (`flamenca`, `tratante`, `farolillero`);
+  - Granada «¿De dónde viene la Tarasca?» (`cabezudo`, `modista`, `tamborilero`);
+  - Córdoba «¿Cuál es la fiesta más antigua de mayo?» (`crucera`, `caballista`, `pregonero`);
+  - Huelva «¿Quién inventó las Colombinas?» (`grumete`, `pinzon`, `colombina`);
+  - Jaén «¿Por qué Jaén enciende lumbres por San Antón?» (`melenchonera`, `podador`, `ganadero`; la
+    escena final es de noche);
+  - Almería «¿Por qué la feria de Almería es en agosto?» (`bailaora`, `torrero`, `cohetero`).
+
+  Lo que tiene raíz religiosa se cuenta como tradición y nunca se dibuja la imagen: del santuario de
+  la Virgen del Mar se ve solo la fachada. Arte en `scripts/art/fiestas_andalucia_*.py`; los personajes
+  están en `andalucia_sprites.py`.
 
 **Cuarta ciudad: Granada** («¿Quién mató a los Abencerrajes?», ver `docs/GDD_GRANADA.md`):
 - Pack `content/granada/abencerrajes.pack.json` (es/en). Guía Washington Irving (de «usted»), con el
@@ -201,7 +214,7 @@ content/malaga/           misterio-manquita.pack.json
 content/cadiz/            la-ciudad-que-no-cayo.pack.json (historia, gastronomía, Carnaval y Semana Santa)
 content/sevilla/          donde-esta-colon.pack.json
 content/granada/          abencerrajes.pack.json
-content/cordoba/, huelva/, jaen/, almeria/  {ciudad}.pack.json (historia y gastronomía)
+content/cordoba/, huelva/, jaen/, almeria/  {ciudad}.pack.json (historia, gastronomía y fiestas)
 scripts/art/              generadores del arte de Cádiz y render de capas
 assets/sprites/           {cenachero,manquita,lucio,norica,pepa,magon,chirigotero,pescaera,chicharronero,garumero,romancero,comparsista,corista,cuartetero,cargador,maniguetero,saetera,aguador,giraldillo,hernando,irving,leon,boabdil,…}/{id}_{expresion}.svg  (viewBox 200×260)
 assets/collectibles/      {coleccionable}.svg (medallón viewBox 120×124, color del camino en el aro)
@@ -286,6 +299,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Granada: lo mismo con `docs/GDD_GRANADA.md`; cuestas fuertes y horarios del recinto de la Alhambra.
 - Córdoba, Huelva, Jaén y Almería, y las rutas gastronómicas de Málaga, Sevilla y Granada: coordenadas,
   radios y la lista de «Datos a verificar» de cada GDD. Jaén y Almería tienen cuestas.
+- Rutas de fiestas: la lista de «Datos a verificar» de `docs/GDD_FIESTAS_ANDALUCIA.md`. En Almería,
+  revisar el tono de la parada del santuario con la parroquia.
 
 ## Qué NO hacer
 

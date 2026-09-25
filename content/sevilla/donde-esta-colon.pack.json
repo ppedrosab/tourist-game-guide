@@ -1,6 +1,6 @@
 {
   "id": "sevilla",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Sevilla",
     "en": "Seville"
@@ -15,12 +15,12 @@
   },
   "bounds": [
     {
-      "lat": 37.38,
+      "lat": 37.372,
       "lng": -6.006
     },
     {
       "lat": 37.391,
-      "lng": -5.985
+      "lng": -5.983
     }
   ],
   "coverImage": "img/cover_sevilla.jpg",
@@ -99,6 +99,42 @@
         "en": "He seasons manzanilla and gordal olives. Proud and generous."
       },
       "avatar": "sprites/aceitunero/aceitunero_neutral.svg"
+    },
+    {
+      "id": "flamenca",
+      "name": {
+        "es": "La Flamenca",
+        "en": "The Flamenca"
+      },
+      "description": {
+        "es": "Sevillana de traje de volantes que cuenta los días para la feria. Salerosa y muy resuelta.",
+        "en": "A Sevillian in a ruffled dress who counts the days to the fair. Witty and very determined."
+      },
+      "avatar": "sprites/flamenca/flamenca_neutral.svg"
+    },
+    {
+      "id": "tratante",
+      "name": {
+        "es": "El Tratante",
+        "en": "The Livestock Dealer"
+      },
+      "description": {
+        "es": "Tratante de ganado del siglo XIX que vendía mulas y caballos en las ferias. Pícaro y buen negociante.",
+        "en": "A 19th-century livestock dealer who sold mules and horses at the fairs. Crafty and a sharp negotiator."
+      },
+      "avatar": "sprites/tratante/tratante_neutral.svg"
+    },
+    {
+      "id": "farolillero",
+      "name": {
+        "es": "El Farolillero",
+        "en": "The Lantern Maker"
+      },
+      "description": {
+        "es": "Hace los farolillos de papel del real. Minucioso y soñador.",
+        "en": "He makes the fairground's paper lanterns. Meticulous and a dreamer."
+      },
+      "avatar": "sprites/farolillero/farolillero_neutral.svg"
     }
   ],
   "routes": [
@@ -2453,6 +2489,1143 @@
           },
           "icon": "collectibles/sevilla_azahar.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "feria-abril",
+      "title": {
+        "es": "¿Quién inventó la Feria de Abril?",
+        "en": "Who Invented the April Fair?"
+      },
+      "summary": {
+        "es": "La fiesta más sevillana nació en 1847. ¿La inventaron los ganaderos, unos forasteros o las familias de las casetas? Con una flamenca, un tratante de ganado y un farolillero.",
+        "en": "Seville's most Sevillian party was born in 1847. Was it invented by the cattlemen, some outsiders or the marquee families? With a flamenca, a livestock dealer and a lantern maker."
+      },
+      "era": "1846 - hoy",
+      "guideCharacterId": "flamenca",
+      "durationMin": 110,
+      "distanceKm": 3.6,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El Prado",
+            "en": "The Prado"
+          },
+          "trail": {
+            "es": "camino del Prado",
+            "en": "Prado trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El río",
+            "en": "The river"
+          },
+          "trail": {
+            "es": "camino del río",
+            "en": "river trail"
+          }
+        }
+      },
+      "startNodeId": "f1_triunfo",
+      "nodes": [
+        {
+          "id": "f1_triunfo",
+          "title": {
+            "es": "Plaza del Triunfo",
+            "en": "Plaza del Triunfo"
+          },
+          "location": {
+            "lat": 37.385,
+            "lng": -5.9916
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_triunfo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_triunfo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "flamenca",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "happy",
+              "text": {
+                "es": "¡Olé! Mira qué traje de flamenca, con sus volantes y su mantoncillo. Estoy contando los días para la Feria de Abril.",
+                "en": "Olé! Look at my flamenca dress, with its ruffles and its little shawl. I'm counting the days to the April Fair."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "thinking",
+              "text": {
+                "es": "Y te traigo un misterio: la fiesta más sevillana de todas… ¿quién la inventó? Porque alguien la inventaría, ¿no?",
+                "en": "And I've got a mystery for you: the most Sevillian party of all… who invented it? Someone must have, right?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: los ganaderos, que venían a vender animales; los forasteros que vivían en Sevilla; y las familias que montaron las primeras casetas. Apunta.",
+                "en": "Three suspects: the cattlemen, who came to sell animals; the outsiders living in Seville; and the families who set up the first marquees. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Feria de Abril se celebra en el Real de la Feria, en el barrio de Los Remedios, con más de mil casetas y calles con nombres de toreros.",
+                "en": "The April Fair is held at the Real de la Feria, in the Los Remedios district, with more than a thousand marquees and streets named after bullfighters."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde se celebra hoy la Feria de Abril?",
+              "en": "Where is the April Fair held today?"
+            },
+            "options": [
+              {
+                "es": "En el Alcázar",
+                "en": "In the Alcázar"
+              },
+              {
+                "es": "En el Real de la Feria, en Los Remedios",
+                "en": "At the Real de la Feria, in Los Remedios"
+              },
+              {
+                "es": "En la Plaza de España",
+                "en": "In Plaza de España"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En el Real de la Feria, en Los Remedios, al otro lado del río.",
+              "en": "At the Real de la Feria, in Los Remedios, across the river."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_casetas",
+            "text": {
+              "es": "Las casetas · Hoy la feria tiene más de mil casetas. Alguien puso la primera.",
+              "en": "The marquees · Today the fair has more than a thousand marquees. Someone put up the first one."
+            }
+          },
+          "nextNodeId": "f2_colon",
+          "nextHint": {
+            "es": "A los jardines de Murillo, junto al monumento a Colón. Unos 6 minutos.",
+            "en": "To the Murillo gardens, by the Columbus monument. About 6 minutes."
+          }
+        },
+        {
+          "id": "f2_colon",
+          "title": {
+            "es": "Jardines de Murillo",
+            "en": "Murillo Gardens"
+          },
+          "location": {
+            "lat": 37.3822,
+            "lng": -5.9873
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_colon.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_colon.svg"
+              ],
+              "characters": [
+                {
+                  "id": "flamenca",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "tratante",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buen día! Tratante de ganado. Compro y vendo caballos, mulas y vacas en las ferias de Andalucía. Y la de Sevilla… ¡esa es la mía!",
+                "en": "Good day! Livestock dealer. I buy and sell horses, mules and cows at the fairs of Andalusia. And the Seville one… that's my fair!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XIX, en muchos pueblos de Andalucía había ferias de ganado: eran mercados para comprar y vender animales.",
+                "en": "In the 19th century, many Andalusian towns held livestock fairs: markets for buying and selling animals."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "thinking",
+              "text": {
+                "es": "La feria de Sevilla empezó siendo de ganado, como las demás. Pero a mí no me preguntes quién la pidió: yo solo venía a vender.",
+                "en": "The Seville fair began as a livestock fair, like the others. But don't ask me who asked for it: I just came to sell."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían las ferias de ganado?",
+              "en": "What were livestock fairs for?"
+            },
+            "options": [
+              {
+                "es": "Para comprar y vender animales",
+                "en": "For buying and selling animals"
+              },
+              {
+                "es": "Para bailar",
+                "en": "For dancing"
+              },
+              {
+                "es": "Para rezar",
+                "en": "For praying"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Eran mercados de animales. La fiesta vino después.",
+              "en": "They were animal markets. The party came later."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_ganado",
+            "text": {
+              "es": "Los ganaderos · La feria de Sevilla empezó siendo de ganado, como las de muchos pueblos.",
+              "en": "The cattlemen · The Seville fair began as a livestock fair, like those in many towns."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "flamenca",
+            "expression": "happy",
+            "text": {
+              "es": "¿Vamos al Prado de San Sebastián, donde se puso la primera feria, o por el río, por donde llegaba el ganado?",
+              "en": "Shall we go to the Prado de San Sebastián, where the first fair was held, or along the river, where the livestock arrived?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al Prado",
+                "en": "To the Prado"
+              },
+              "hint": {
+                "es": "Prado y Plaza de España",
+                "en": "Prado and Plaza de España"
+              },
+              "targetNodeId": "fa1_prado",
+              "setFlags": [
+                "camino_prado"
+              ],
+              "distanceM": 300,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "Por el río",
+                "en": "Along the river"
+              },
+              "hint": {
+                "es": "Alcázar y Fábrica de Tabacos",
+                "en": "Alcázar and Tobacco Factory"
+              },
+              "targetNodeId": "fb1_alcazar",
+              "setFlags": [
+                "camino_rio"
+              ],
+              "distanceM": 500,
+              "walkMin": 7
+            }
+          ]
+        },
+        {
+          "id": "fa1_prado",
+          "title": {
+            "es": "Prado de San Sebastián",
+            "en": "Prado de San Sebastián"
+          },
+          "location": {
+            "lat": 37.38,
+            "lng": -5.9845
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_prado.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_prado.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tratante",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "flamenca",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La primera Feria de Abril se inauguró aquí, en el Prado de San Sebastián, el 18 de abril de 1847. Tuvo 19 casetas y unos 25.000 visitantes.",
+                "en": "The first April Fair opened here, at the Prado de San Sebastián, on 18 April 1847. It had 19 marquees and around 25,000 visitors."
+              },
+              "year": 1847
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "proud",
+              "text": {
+                "es": "¡Aquí vendí yo mi primera mula! Y me acuerdo de los que pidieron la feria al ayuntamiento: dos concejales que no eran de aquí.",
+                "en": "I sold my first mule right here! And I remember who asked the council for the fair: two councillors who weren't from here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Que no eran de Sevilla? ¿La feria de Sevilla la pidieron dos de fuera?",
+                "en": "They weren't from Seville? Two outsiders asked for the Seville fair?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año fue la primera Feria de Abril?",
+              "en": "In what year was the first April Fair?"
+            },
+            "options": [
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              },
+              {
+                "es": "En 1929",
+                "en": "In 1929"
+              },
+              {
+                "es": "En 1847",
+                "en": "In 1847"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1847, aquí mismo, en el Prado de San Sebastián.",
+              "en": "In 1847, right here, at the Prado de San Sebastián."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_concejales",
+            "text": {
+              "es": "Los forasteros · La feria la pidieron al ayuntamiento dos concejales que no eran sevillanos.",
+              "en": "The outsiders · The fair was requested from the council by two councillors who weren't from Seville."
+            }
+          },
+          "nextNodeId": "fa2_espana",
+          "nextHint": {
+            "es": "Cruza el parque hasta la Plaza de España. Unos 6 minutos.",
+            "en": "Cross the park to Plaza de España. About 6 minutes."
+          }
+        },
+        {
+          "id": "fa2_espana",
+          "title": {
+            "es": "Plaza de España",
+            "en": "Plaza de España"
+          },
+          "location": {
+            "lat": 37.3772,
+            "lng": -5.9869
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_plazaespana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_plazaespana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "farolillero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "tratante",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Farolillero: hago los farolillos de papel que cuelgan sobre las calles del real. ¡Miles y miles!",
+                "en": "Hello! Lantern maker: I make the paper lanterns that hang over the fairground streets. Thousands and thousands!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Plaza de España se construyó para la Exposición Iberoamericana de 1929. Sus bancos de azulejo representan las provincias españolas.",
+                "en": "Plaza de España was built for the 1929 Ibero-American Exposition. Its tiled benches represent the Spanish provinces."
+              },
+              "year": 1929
+            },
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "thinking",
+              "text": {
+                "es": "Un tal Ybarra, vasco, y un tal Bonaplata, catalán. Eso contaba mi abuelo. Los dos vivían en Sevilla y tenían negocios aquí.",
+                "en": "A certain Ybarra, a Basque, and a certain Bonaplata, a Catalan. That's what my grandfather used to say. Both lived in Seville and had businesses here."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué acontecimiento se construyó la Plaza de España?",
+              "en": "What event was Plaza de España built for?"
+            },
+            "options": [
+              {
+                "es": "La Expo de 1992",
+                "en": "Expo '92"
+              },
+              {
+                "es": "La Exposición Iberoamericana de 1929",
+                "en": "The 1929 Ibero-American Exposition"
+              },
+              {
+                "es": "La primera feria",
+                "en": "The first fair"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Para la Exposición Iberoamericana de 1929.",
+              "en": "For the 1929 Ibero-American Exposition."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_ybarra",
+            "text": {
+              "es": "Los forasteros · Los concejales se llamaban Ybarra, vasco, y Bonaplata, catalán.",
+              "en": "The outsiders · The councillors were called Ybarra, a Basque, and Bonaplata, a Catalan."
+            }
+          },
+          "nextNodeId": "f4_torreoro",
+          "nextHint": {
+            "es": "Sube por el paseo de las Delicias hasta la Torre del Oro. Unos 15 minutos.",
+            "en": "Walk up Paseo de las Delicias to the Torre del Oro. About 15 minutes."
+          }
+        },
+        {
+          "id": "fb1_alcazar",
+          "title": {
+            "es": "Real Alcázar",
+            "en": "Royal Alcázar"
+          },
+          "location": {
+            "lat": 37.3836,
+            "lng": -5.9915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_alcazar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_alcazar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "farolillero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "flamenca",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "proud",
+              "text": {
+                "es": "Farolillero, para servirle. Sin farolillos no hay feria: de noche el real parece un cielo de papel.",
+                "en": "Lantern maker, at your service. No lanterns, no fair: at night the fairground looks like a paper sky."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Muy pronto, en 1848, se montaron las primeras casetas de recreo: la de los duques de Montpensier, la del ayuntamiento y la del Casino. La feria de ganado empezó a ser fiesta.",
+                "en": "Very soon, in 1848, the first leisure marquees went up: the Dukes of Montpensier's, the council's and the Casino's. The livestock fair began to become a party."
+              },
+              "year": 1848
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea, que las casetas llegaron después. La feria ya existía.",
+                "en": "So the marquees came later. The fair already existed."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quiénes montaron algunas de las primeras casetas de recreo?",
+              "en": "Who put up some of the first leisure marquees?"
+            },
+            "options": [
+              {
+                "es": "Los duques de Montpensier",
+                "en": "The Dukes of Montpensier"
+              },
+              {
+                "es": "Los romanos",
+                "en": "The Romans"
+              },
+              {
+                "es": "Los marineros de Colón",
+                "en": "Columbus's sailors"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los duques de Montpensier, el ayuntamiento y el Casino, en 1848.",
+              "en": "The Dukes of Montpensier, the council and the Casino, in 1848."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_1848",
+            "text": {
+              "es": "Las casetas · Las primeras casetas de recreo llegaron en 1848, un año después de la primera feria.",
+              "en": "The marquees · The first leisure marquees arrived in 1848, a year after the first fair."
+            }
+          },
+          "nextNodeId": "fb2_tabacos",
+          "nextHint": {
+            "es": "A la antigua Fábrica de Tabacos. Unos 4 minutos.",
+            "en": "To the old Tobacco Factory. About 4 minutes."
+          }
+        },
+        {
+          "id": "fb2_tabacos",
+          "title": {
+            "es": "Fábrica de Tabacos",
+            "en": "Tobacco Factory"
+          },
+          "location": {
+            "lat": 37.3808,
+            "lng": -5.9918
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_tabacos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_tabacos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tratante",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "farolillero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La antigua Real Fábrica de Tabacos, del siglo XVIII, es hoy sede de la Universidad de Sevilla. Aquí trabajaban las cigarreras, como la Carmen de la ópera.",
+                "en": "The old Royal Tobacco Factory, from the 18th century, is now home to the University of Seville. The cigar makers worked here, like Carmen in the opera."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "happy",
+              "text": {
+                "es": "Por aquí pasábamos con los animales camino del Prado. Y los señores que pidieron la feria querían eso: negocio para Sevilla.",
+                "en": "We passed this way with the animals on our way to the Prado. And the gentlemen who asked for the fair wanted exactly that: business for Seville."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "thinking",
+              "text": {
+                "es": "Negocio… y lo que salió fue la fiesta más grande de la ciudad.",
+                "en": "Business… and what came out of it was the biggest party in the city."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es hoy la antigua Fábrica de Tabacos?",
+              "en": "What is the old Tobacco Factory today?"
+            },
+            "options": [
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "Una estación",
+                "en": "A station"
+              },
+              {
+                "es": "La Universidad de Sevilla",
+                "en": "The University of Seville"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "La sede de la Universidad de Sevilla.",
+              "en": "The main building of the University of Seville."
+            }
+          },
+          "clue": {
+            "id": "fab_pista_negocio",
+            "text": {
+              "es": "Los ganaderos · Los que pidieron la feria buscaban negocio para Sevilla: un mercado de ganado.",
+              "en": "The cattlemen · Those who asked for the fair wanted business for Seville: a livestock market."
+            }
+          },
+          "nextNodeId": "f4_torreoro",
+          "nextHint": {
+            "es": "Baja hasta la Torre del Oro. Unos 6 minutos.",
+            "en": "Walk down to the Torre del Oro. About 6 minutes."
+          }
+        },
+        {
+          "id": "f4_torreoro",
+          "title": {
+            "es": "Torre del Oro",
+            "en": "Torre del Oro"
+          },
+          "location": {
+            "lat": 37.3823,
+            "lng": -5.9964
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_torreoro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_torreoro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "flamenca",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "farolillero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La feria empieza con el alumbrado: la noche del «pescaíto», a medianoche, se encienden a la vez la portada y miles de bombillas.",
+                "en": "The fair begins with the lighting-up: on the night of the “pescaíto”, at midnight, the entrance arch and thousands of bulbs light up at once."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_prado"
+                  ],
+                  "text": {
+                    "es": "Vienes del Prado: ya sabes lo de Ybarra y Bonaplata. ¿Seguimos la pista del ganado o la del farolillo?",
+                    "en": "You've come from the Prado: you know about Ybarra and Bonaplata. Shall we follow the livestock lead or the lantern lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio"
+                  ],
+                  "text": {
+                    "es": "Vienes del río: las casetas llegaron después y la feria era un negocio. ¿Seguimos la pista del ganado o la del farolillo?",
+                    "en": "You've come along the river: the marquees came later and the fair was a business. Shall we follow the livestock lead or the lantern lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se enciende a medianoche la noche del «pescaíto»?",
+              "en": "What lights up at midnight on the night of the “pescaíto”?"
+            },
+            "options": [
+              {
+                "es": "La Giralda",
+                "en": "The Giralda"
+              },
+              {
+                "es": "La portada y miles de bombillas",
+                "en": "The entrance arch and thousands of bulbs"
+              },
+              {
+                "es": "Una hoguera",
+                "en": "A bonfire"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La portada de la feria y el alumbrado de todas las calles.",
+              "en": "The fair's entrance arch and the lights on every street."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "flamenca",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El ganado o el farolillo?",
+              "en": "The livestock or the lantern?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del ganado",
+                "en": "The livestock lead"
+              },
+              "hint": {
+                "es": "Con el tratante",
+                "en": "With the dealer"
+              },
+              "targetNodeId": "f4a_ganado",
+              "setFlags": [
+                "version_ganado"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del farolillo",
+                "en": "The lantern lead"
+              },
+              "hint": {
+                "es": "Con el farolillero",
+                "en": "With the lantern maker"
+              },
+              "targetNodeId": "f4b_farolillo",
+              "setFlags": [
+                "version_farolillo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f4a_ganado",
+          "title": {
+            "es": "El ganado",
+            "en": "The livestock"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "proud",
+              "text": {
+                "es": "En agosto de 1846, Ybarra y Bonaplata pidieron al ayuntamiento una feria de ganado de tres días en abril. La aprobó la reina Isabel II.",
+                "en": "In August 1846, Ybarra and Bonaplata asked the council for a three-day livestock fair in April. Queen Isabella II approved it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tratante",
+              "expression": "happy",
+              "text": {
+                "es": "Nosotros, los ganaderos, pusimos los animales. Pero la idea fue de ellos dos.",
+                "en": "We cattlemen brought the animals. But the idea was theirs."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fab_pista_1846",
+            "text": {
+              "es": "Los forasteros · En 1846 Ybarra y Bonaplata pidieron la feria; la aprobó Isabel II.",
+              "en": "The outsiders · In 1846 Ybarra and Bonaplata requested the fair; Isabella II approved it."
+            }
+          },
+          "nextNodeId": "f5_portada",
+          "nextHint": {
+            "es": "Cruza el puente de San Telmo hacia el real. Unos 15 minutos.",
+            "en": "Cross the San Telmo bridge towards the fairground. About 15 minutes."
+          }
+        },
+        {
+          "id": "f4b_farolillo",
+          "title": {
+            "es": "El farolillo",
+            "en": "The lantern"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Cada farolillo lleva su alambre, su papel y su color. Los primeros años no había ni uno: era un mercado de ganado.",
+                "en": "Every lantern has its wire, its paper and its colour. In the first years there wasn't a single one: it was a livestock market."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "farolillero",
+              "expression": "thinking",
+              "text": {
+                "es": "Los farolillos, las casetas y las sevillanas llegaron después. La feria la trajeron dos señores de fuera; la fiesta, los sevillanos.",
+                "en": "The lanterns, the marquees and the sevillanas came later. Two gentlemen from outside brought the fair; the Sevillians brought the party."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fab_pista_fiesta",
+            "text": {
+              "es": "Las casetas · Casetas y farolillos llegaron después: la feria la trajeron dos de fuera; la fiesta, los sevillanos.",
+              "en": "The marquees · Marquees and lanterns came later: two outsiders brought the fair; the Sevillians brought the party."
+            }
+          },
+          "nextNodeId": "f5_portada",
+          "nextHint": {
+            "es": "Cruza el puente de San Telmo hacia el real. Unos 15 minutos.",
+            "en": "Cross the San Telmo bridge towards the fairground. About 15 minutes."
+          }
+        },
+        {
+          "id": "f5_portada",
+          "title": {
+            "es": "Portada de la Feria",
+            "en": "Fair entrance arch"
+          },
+          "location": {
+            "lat": 37.3745,
+            "lng": -6.0005
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_portada.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_portada.svg"
+              ],
+              "characters": [
+                {
+                  "id": "flamenca",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "tratante",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Cada año se levanta una portada distinta, de miles de bombillas, que imita un monumento. Fuera de la semana de feria, el real se usa como aparcamiento.",
+                "en": "Every year a different entrance arch is built, with thousands of bulbs, imitating a monument. Outside fair week, the fairground is used as a car park."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto: ganaderos, forasteros o casetas. ¿Quién inventó la Feria de Abril?",
+                "en": "Verdict time: cattlemen, outsiders or marquees. Who invented the April Fair?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién inventó la Feria de Abril?",
+              "en": "Who invented the April Fair?"
+            },
+            "options": [
+              {
+                "es": "Dos concejales de fuera, Ybarra y Bonaplata, con una feria de ganado en 1847",
+                "en": "Two councillors from elsewhere, Ybarra and Bonaplata, with a livestock fair in 1847"
+              },
+              {
+                "es": "Los ganaderos",
+                "en": "The cattlemen"
+              },
+              {
+                "es": "Las familias de las primeras casetas",
+                "en": "The families of the first marquees"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Los forasteros. José María Ybarra, vasco, y Narciso Bonaplata, catalán, propusieron en 1846 una feria de ganado que se celebró en 1847. Los ganaderos llenaron el mercado y las casetas la convirtieron en fiesta.",
+              "en": "The outsiders. José María Ybarra, a Basque, and Narciso Bonaplata, a Catalan, proposed a livestock fair in 1846 that was held in 1847. The cattlemen filled the market and the marquees turned it into a party."
+            }
+          },
+          "nextNodeId": "f6_final"
+        },
+        {
+          "id": "f6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_prado",
+                    "version_ganado"
+                  ],
+                  "text": {
+                    "es": "El Prado y el ganado: de la mula a la caseta. Eres tratante de honor.",
+                    "en": "The Prado and the livestock: from mule to marquee. You're an honorary dealer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_prado",
+                    "version_farolillo"
+                  ],
+                  "text": {
+                    "es": "El Prado y el farolillo: de 1847 al alumbrado. Eres farolillero del real.",
+                    "en": "The Prado and the lantern: from 1847 to the lights. You're the fairground's lantern maker."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_ganado"
+                  ],
+                  "text": {
+                    "es": "El río y el ganado: sabes que la fiesta nació como negocio. Eres concejal de feria.",
+                    "en": "The river and the livestock: you know the party was born as business. You're a fair councillor."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_rio",
+                    "version_farolillo"
+                  ],
+                  "text": {
+                    "es": "El río y el farolillo: de las cigarreras a las sevillanas. Eres flamenca de volantes.",
+                    "en": "The river and the lantern: from cigar makers to sevillanas. You're a ruffled flamenca."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "flamenca",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y ahora, a bailar por sevillanas! Que la feria la inventaron dos de fuera… pero la baila Sevilla entera.",
+                "en": "And now, let's dance sevillanas! Two outsiders invented the fair… but all of Seville dances it."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "tratante_honor",
+          "requires": [
+            "camino_prado",
+            "version_ganado"
+          ],
+          "title": {
+            "es": "Tratante de honor",
+            "en": "Honorary dealer"
+          }
+        },
+        {
+          "id": "farolillero_real",
+          "requires": [
+            "camino_prado",
+            "version_farolillo"
+          ],
+          "title": {
+            "es": "Farolillero del real",
+            "en": "The fairground's lantern maker"
+          }
+        },
+        {
+          "id": "concejal_feria",
+          "requires": [
+            "camino_rio",
+            "version_ganado"
+          ],
+          "title": {
+            "es": "Concejal de feria",
+            "en": "Fair councillor"
+          }
+        },
+        {
+          "id": "flamenca_volantes",
+          "requires": [
+            "camino_rio",
+            "version_farolillo"
+          ],
+          "title": {
+            "es": "Flamenca de volantes",
+            "en": "Ruffled flamenca"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "traje_flamenca",
+          "name": {
+            "es": "El traje de flamenca",
+            "en": "The flamenca dress"
+          },
+          "icon": "collectibles/sevilla_fiesta_traje.svg",
+          "awardedAtNodeId": "f1_triunfo"
+        },
+        {
+          "id": "herradura",
+          "name": {
+            "es": "La herradura",
+            "en": "The horseshoe"
+          },
+          "icon": "collectibles/sevilla_fiesta_herradura.svg",
+          "awardedAtNodeId": "f2_colon"
+        },
+        {
+          "id": "cartel_1847",
+          "name": {
+            "es": "El cartel de 1847",
+            "en": "The 1847 poster"
+          },
+          "icon": "collectibles/sevilla_fiesta_cartel.svg",
+          "awardedAtNodeId": "fa1_prado"
+        },
+        {
+          "id": "azulejo_provincia",
+          "name": {
+            "es": "El azulejo de la provincia",
+            "en": "The province tile"
+          },
+          "icon": "collectibles/sevilla_fiesta_azulejo.svg",
+          "awardedAtNodeId": "fa2_espana"
+        },
+        {
+          "id": "caseta",
+          "name": {
+            "es": "La caseta",
+            "en": "The marquee"
+          },
+          "icon": "collectibles/sevilla_fiesta_caseta.svg",
+          "awardedAtNodeId": "fb1_alcazar"
+        },
+        {
+          "id": "cigarrera",
+          "name": {
+            "es": "La cigarrera",
+            "en": "The cigar maker"
+          },
+          "icon": "collectibles/sevilla_fiesta_cigarrera.svg",
+          "awardedAtNodeId": "fb2_tabacos"
+        },
+        {
+          "id": "portada",
+          "name": {
+            "es": "La portada",
+            "en": "The entrance arch"
+          },
+          "icon": "collectibles/sevilla_fiesta_portada.svg",
+          "awardedAtNodeId": "f5_portada"
+        },
+        {
+          "id": "insignia_feria_abril",
+          "name": {
+            "es": "¿Quién inventó la Feria de Abril?",
+            "en": "Who Invented the April Fair?"
+          },
+          "icon": "collectibles/sevilla_fiesta_insignia.svg",
+          "awardedAtNodeId": "f6_final"
         }
       ]
     }

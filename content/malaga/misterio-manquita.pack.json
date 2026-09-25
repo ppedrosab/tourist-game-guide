@@ -1,6 +1,6 @@
 {
   "id": "malaga",
-  "version": 5,
+  "version": 6,
   "name": { "es": "Málaga", "en": "Málaga" },
   "languages": ["es", "en"],
   "center": { "lat": 36.7205, "lng": -4.4205 },
@@ -15,7 +15,10 @@
     { "id": "lucio", "name": { "es": "Lucio, actor romano", "en": "Lucio, Roman actor" }, "description": { "es": "Actor del Teatro Romano de Malaca. Exagerado y teatral hasta para pedir la hora.", "en": "An actor from the Roman Theatre of Malaca. Over the top and theatrical, even when asking the time." }, "avatar": "sprites/lucio/lucio_neutral.svg", "era": "s. I" },
     {"id": "espetero", "name": {"es": "El Espetero", "en": "The Espetero"}, "description": {"es": "Asa espetos en la playa, de pie junto a su barca de brasas. Malagueño, guasón y muy de su tierra.", "en": "He roasts espetos on the beach, standing by his boat of embers. Born in Málaga, a joker and fiercely local."}, "avatar": "sprites/espetero/espetero_neutral.svg"},
     {"id": "jabegote", "name": {"es": "El Jabegote", "en": "The Jabegote"}, "description": {"es": "Rema en la jábega, la barca tradicional de pesca de Málaga. Fuerte y de pocas palabras.", "en": "He rows the jábega, Málaga's traditional fishing boat. Strong and a man of few words."}, "avatar": "sprites/jabegote/jabegote_neutral.svg"},
-    {"id": "pasera", "name": {"es": "La Pasera", "en": "The Raisin Maker"}, "description": {"es": "Seca uva moscatel al sol en los paseros de la Axarquía. Alegre y muy trabajadora.", "en": "She dries Muscat grapes in the sun on the drying beds of the Axarquía. Cheerful and hard-working."}, "avatar": "sprites/pasera/pasera_neutral.svg"}
+    {"id": "pasera", "name": {"es": "La Pasera", "en": "The Raisin Maker"}, "description": {"es": "Seca uva moscatel al sol en los paseros de la Axarquía. Alegre y muy trabajadora.", "en": "She dries Muscat grapes in the sun on the drying beds of the Axarquía. Cheerful and hard-working."}, "avatar": "sprites/pasera/pasera_neutral.svg"},
+    {"id": "cantaora", "name": {"es": "La Cantaora", "en": "The Flamenco Singer"}, "description": {"es": "Canta malagueñas y no se pierde una feria. Apasionada y con mucho arte.", "en": "She sings malagueñas and never misses a fair. Passionate and full of flair."}, "avatar": "sprites/cantaora/cantaora_neutral.svg"},
+    {"id": "verdialero", "name": {"es": "El Verdialero", "en": "The Verdiales Player"}, "description": {"es": "Toca el violín en una panda de verdiales, con su sombrero de flores y espejos. Alegre y despistado.", "en": "He plays violin in a verdiales band, with his hat of flowers and mirrors. Cheerful and scatterbrained."}, "avatar": "sprites/verdialero/verdialero_neutral.svg"},
+    {"id": "cochero", "name": {"es": "El Cochero", "en": "The Carriage Driver"}, "description": {"es": "Lleva coche de caballos por el centro de Málaga. Presumido y buen conversador.", "en": "He drives a horse carriage through central Málaga. Dapper and a good talker."}, "avatar": "sprites/cochero/cochero_neutral.svg"}
   ],
   "routes": [
     {
@@ -1408,6 +1411,1144 @@
           },
           "icon": "collectibles/malaga_espeto_insignia.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "feria-agosto",
+      "title": {
+        "es": "¿Qué celebra la Feria de Agosto?",
+        "en": "What Does the August Fair Celebrate?"
+      },
+      "summary": {
+        "es": "Cada agosto Málaga se va de feria, pero pocos saben qué celebra. ¿La conquista de 1487, el verano o un centenario? Con una cantaora, un verdialero y un cochero.",
+        "en": "Every August Málaga goes to the fair, but few know what it celebrates. The conquest of 1487, the summer or a centenary? With a flamenco singer, a verdiales player and a carriage driver."
+      },
+      "era": "1487 - 1887",
+      "guideCharacterId": "cantaora",
+      "durationMin": 100,
+      "distanceKm": 2.9,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El mar",
+            "en": "The sea"
+          },
+          "trail": {
+            "es": "camino del mar",
+            "en": "sea trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La Alcazaba",
+            "en": "The Alcazaba"
+          },
+          "trail": {
+            "es": "camino de la Alcazaba",
+            "en": "Alcazaba trail"
+          }
+        }
+      },
+      "startNodeId": "f1_constitucion",
+      "nodes": [
+        {
+          "id": "f1_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 36.7208,
+            "lng": -4.422
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cantaora",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ay, que ya es agosto! Soy cantaora: canto malagueñas, que es el cante de esta tierra. Y en agosto, Málaga entera se va de feria.",
+                "en": "Oh, it's August already! I'm a flamenco singer: I sing malagueñas, the song of this land. And in August, all of Málaga goes to the fair."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo una pregunta que casi nadie sabe contestar: la Feria de Agosto… ¿qué celebra? Porque algo celebrará, digo yo.",
+                "en": "I've got a question almost nobody can answer: the August Fair… what does it celebrate? Because it must be celebrating something."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la conquista de 1487, el verano de toda la vida y un centenario de 1887. Apúntalo, que el veredicto es tuyo.",
+                "en": "Three suspects: the conquest of 1487, good old summer, and a centenary in 1887. Write it down, the verdict is yours."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La feria tiene dos caras: de día se celebra en el centro, entre la calle Larios y esta plaza; de noche, en el recinto del Cortijo de Torres.",
+                "en": "The fair has two sides: by day it's held in the centre, between Calle Larios and this square; by night, at the Cortijo de Torres fairground."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde se celebra la feria de noche en Málaga?",
+              "en": "Where is Málaga's night fair held?"
+            },
+            "options": [
+              {
+                "es": "En la Alcazaba",
+                "en": "In the Alcazaba"
+              },
+              {
+                "es": "En el Cortijo de Torres",
+                "en": "At the Cortijo de Torres"
+              },
+              {
+                "es": "En la playa",
+                "en": "On the beach"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En el recinto del Cortijo de Torres. De día, la fiesta está en el centro.",
+              "en": "At the Cortijo de Torres fairground. By day, the party is in the centre."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_agosto",
+            "text": {
+              "es": "El verano · La feria es en pleno agosto, cuando Málaga está llena de veraneantes.",
+              "en": "The summer · The fair is in the middle of August, when Málaga is full of summer visitors."
+            }
+          },
+          "nextNodeId": "f2_larios",
+          "nextHint": {
+            "es": "A la calle Larios. Un minuto.",
+            "en": "To Calle Larios. One minute."
+          }
+        },
+        {
+          "id": "f2_larios",
+          "title": {
+            "es": "Calle Larios",
+            "en": "Calle Larios"
+          },
+          "location": {
+            "lat": 36.7197,
+            "lng": -4.4215
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_larios.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_larios.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cantaora",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "verdialero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Verdialero, de los Montes de Málaga. ¿Ves mi sombrero? Flores, cintas y espejitos. Tocamos violín, pandero y platillos.",
+                "en": "Hello! Verdiales player, from the Montes de Málaga. See my hat? Flowers, ribbons and little mirrors. We play violin, tambourine and cymbals."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los verdiales son uno de los folclores más antiguos de Málaga. Las pandas de verdiales bajan de los montes a tocar en la feria.",
+                "en": "Verdiales are one of Málaga's oldest folk traditions. The verdiales bands come down from the hills to play at the fair."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi abuelo decía que la feria es por la Virgen, otros que por el verano… Yo, mientras haya fiesta, toco.",
+                "en": "My grandfather said the fair was for the Virgin, others say it's for summer… Me, as long as there's a party, I play."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué llevan los sombreros de los verdiales?",
+              "en": "What do verdiales hats have on them?"
+            },
+            "options": [
+              {
+                "es": "Flores, cintas y espejitos",
+                "en": "Flowers, ribbons and little mirrors"
+              },
+              {
+                "es": "Plumas de gallo",
+                "en": "Rooster feathers"
+              },
+              {
+                "es": "Campanillas de oro",
+                "en": "Gold bells"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Flores, cintas de colores y espejitos que brillan al sol.",
+              "en": "Flowers, coloured ribbons and little mirrors that flash in the sun."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_dudas",
+            "text": {
+              "es": "El verano · Ni los de la feria se ponen de acuerdo en qué se celebra.",
+              "en": "The summer · Even the fair-goers don't agree on what's being celebrated."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "cantaora",
+            "expression": "happy",
+            "text": {
+              "es": "¿Bajamos al mar, donde empieza la feria con los fuegos, o subimos a la Alcazaba, donde acabó el asedio de 1487?",
+              "en": "Shall we go down to the sea, where the fair begins with fireworks, or up to the Alcazaba, where the siege of 1487 ended?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Hacia el mar",
+                "en": "Towards the sea"
+              },
+              "hint": {
+                "es": "Muelle Uno y Malagueta",
+                "en": "Muelle Uno and Malagueta"
+              },
+              "targetNodeId": "fa1_muelle",
+              "setFlags": [
+                "camino_mar"
+              ],
+              "distanceM": 700,
+              "walkMin": 9
+            },
+            {
+              "label": {
+                "es": "Subir a la Alcazaba",
+                "en": "Climb to the Alcazaba"
+              },
+              "hint": {
+                "es": "Alcazaba y teatro romano",
+                "en": "Alcazaba and Roman theatre"
+              },
+              "targetNodeId": "fb1_alcazaba",
+              "setFlags": [
+                "camino_alcazaba"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "fa1_muelle",
+          "title": {
+            "es": "Muelle Uno",
+            "en": "Muelle Uno"
+          },
+          "location": {
+            "lat": 36.7183,
+            "lng": -4.4147
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_malaga_muelle.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_muelle.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cochero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "cantaora",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cochero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Arre, que nos vamos! Cochero de caballos. En feria llevo a la gente de punta en blanco, con el caballo enjaezado.",
+                "en": "Giddy-up, off we go! Horse-carriage driver. At the fair I carry people dressed to the nines, with the horse all decked out."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La feria arranca con un pregón y con fuegos artificiales sobre la playa de la Malagueta, la noche antes de abrir el real.",
+                "en": "The fair kicks off with an opening speech and fireworks over Malagueta beach, the night before the fairground opens."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cochero",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi padre decía que la feria de ahora nació para dar trabajo cuando Málaga estaba en crisis. Que había que atraer gente.",
+                "en": "My father said today's fair was born to create work when Málaga was in crisis. People had to be brought in."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué empieza la Feria de Málaga?",
+              "en": "How does the Málaga Fair begin?"
+            },
+            "options": [
+              {
+                "es": "Con una carrera de caballos",
+                "en": "With a horse race"
+              },
+              {
+                "es": "Con una misa en el puerto",
+                "en": "With a mass at the port"
+              },
+              {
+                "es": "Con fuegos artificiales en la Malagueta",
+                "en": "With fireworks at Malagueta"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Con el pregón y los fuegos artificiales sobre la playa.",
+              "en": "With the opening speech and fireworks over the beach."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_crisis",
+            "text": {
+              "es": "El centenario · El cochero cuenta que la feria moderna nació para atraer gente cuando Málaga estaba en crisis.",
+              "en": "The centenary · The carriage driver says the modern fair was born to draw people in when Málaga was in crisis."
+            }
+          },
+          "nextNodeId": "fa2_malagueta",
+          "nextHint": {
+            "es": "Sigue el paseo hasta la Malagueta. Unos 8 minutos.",
+            "en": "Follow the promenade to Malagueta. About 8 minutes."
+          }
+        },
+        {
+          "id": "fa2_malagueta",
+          "title": {
+            "es": "Playa de la Malagueta",
+            "en": "Malagueta Beach"
+          },
+          "location": {
+            "lat": 36.7195,
+            "lng": -4.409
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_malaga_malagueta.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_malagueta.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cochero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "verdialero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1887 Málaga vivía una crisis: cerraban fábricas y se perdían empleos. Ese año se cumplían 400 años de la conquista, y la ciudad organizó una gran feria.",
+                "en": "In 1887 Málaga was in crisis: factories were closing and jobs were being lost. That year marked 400 years since the conquest, and the city organised a great fair."
+              },
+              "year": 1887
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cochero",
+              "expression": "proud",
+              "text": {
+                "es": "Ahí lo tienes: 1887, cuarto centenario. Casetas, carreras de caballos, visitantes… ¡La feria como la conocemos!",
+                "en": "There you have it: 1887, the fourth centenary. Stalls, horse races, visitors… the fair as we know it!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Cuarto centenario? ¿Cuatrocientos años de qué?",
+                "en": "Fourth centenary? Four hundred years of what?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué aniversario se cumplía en 1887?",
+              "en": "Which anniversary fell in 1887?"
+            },
+            "options": [
+              {
+                "es": "50 años del puerto",
+                "en": "50 years of the port"
+              },
+              {
+                "es": "400 años de la conquista de Málaga",
+                "en": "400 years since the conquest of Málaga"
+              },
+              {
+                "es": "100 años de la playa",
+                "en": "100 years of the beach"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Los 400 años de la entrada de los Reyes Católicos en Málaga, en 1487.",
+              "en": "400 years since the Catholic Monarchs entered Málaga in 1487."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_1887",
+            "text": {
+              "es": "El centenario · La feria moderna se organizó en 1887, en el cuarto centenario de algo que pasó en 1487.",
+              "en": "The centenary · The modern fair was organised in 1887, the fourth centenary of something that happened in 1487."
+            }
+          },
+          "nextNodeId": "f4_merced",
+          "nextHint": {
+            "es": "Vuelve hacia la Plaza de la Merced. Unos 15 minutos.",
+            "en": "Head back to Plaza de la Merced. About 15 minutes."
+          }
+        },
+        {
+          "id": "fb1_alcazaba",
+          "title": {
+            "es": "Alcazaba",
+            "en": "Alcazaba"
+          },
+          "location": {
+            "lat": 36.721,
+            "lng": -4.4155
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_malaga_alcazaba.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_alcazaba.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cantaora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "verdialero",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1487 los Reyes Católicos sitiaron Málaga durante más de tres meses. La ciudad se rindió el 18 de agosto, y al día siguiente, el 19, entraron los reyes.",
+                "en": "In 1487 the Catholic Monarchs besieged Málaga for more than three months. The city surrendered on 18 August, and the next day, the 19th, the monarchs entered."
+              },
+              "year": 1487
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "proud",
+              "text": {
+                "es": "¡19 de agosto! Justo cuando es la feria… Eso no puede ser casualidad, ¿no?",
+                "en": "19 August! Right when the fair is… That can't be a coincidence, can it?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "thinking",
+              "text": {
+                "es": "La Alcazaba y el castillo de Gibralfaro, ahí arriba, fueron lo último en rendirse. Fue uno de los asedios más duros de aquella guerra.",
+                "en": "The Alcazaba and Gibralfaro castle, up there, were the last to surrender. It was one of the hardest sieges of that war."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué día entraron los Reyes Católicos en Málaga?",
+              "en": "On what day did the Catholic Monarchs enter Málaga?"
+            },
+            "options": [
+              {
+                "es": "El 19 de agosto de 1487",
+                "en": "19 August 1487"
+              },
+              {
+                "es": "El 2 de enero de 1492",
+                "en": "2 January 1492"
+              },
+              {
+                "es": "El 12 de octubre de 1492",
+                "en": "12 October 1492"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El 19 de agosto de 1487. El 2 de enero de 1492 es la entrega de Granada.",
+              "en": "19 August 1487. 2 January 1492 is the surrender of Granada."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_19",
+            "text": {
+              "es": "La conquista · Los Reyes Católicos entraron en Málaga el 19 de agosto de 1487, en plena fecha de feria.",
+              "en": "The conquest · The Catholic Monarchs entered Málaga on 19 August 1487, right on the fair's dates."
+            }
+          },
+          "nextNodeId": "fb2_teatro",
+          "nextHint": {
+            "es": "Baja al Teatro Romano, aquí al lado. Dos minutos.",
+            "en": "Go down to the Roman Theatre, right nearby. Two minutes."
+          }
+        },
+        {
+          "id": "fb2_teatro",
+          "title": {
+            "es": "Teatro Romano",
+            "en": "Roman Theatre"
+          },
+          "location": {
+            "lat": 36.7212,
+            "lng": -4.4167
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_teatro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_teatro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "verdialero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "cantaora",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el Archivo Municipal se guarda un acta de 1491: el ayuntamiento acordó celebrar cada año la entrada de los reyes. En agosto de 1491 hubo procesión y fiesta.",
+                "en": "The Municipal Archive keeps a record from 1491: the council agreed to celebrate the monarchs' entry every year. In August 1491 there was a procession and a festival."
+              },
+              "year": 1491
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "proud",
+              "text": {
+                "es": "¡Un acta! Eso es una prueba de las buenas. La fiesta de agosto nació para recordar la conquista.",
+                "en": "A written record! That's proper evidence. The August celebration was born to commemorate the conquest."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "thinking",
+              "text": {
+                "es": "Pues yo pensaba que era por el calor… Aunque el calor ayuda, ¿eh?",
+                "en": "And I thought it was because of the heat… Though the heat helps, eh?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año acordó el ayuntamiento celebrar la conquista cada año?",
+              "en": "In what year did the council agree to celebrate the conquest every year?"
+            },
+            "options": [
+              {
+                "es": "En 1887",
+                "en": "In 1887"
+              },
+              {
+                "es": "En 1987",
+                "en": "In 1987"
+              },
+              {
+                "es": "En 1491",
+                "en": "In 1491"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1491, según un acta del Archivo Municipal.",
+              "en": "In 1491, according to a record in the Municipal Archive."
+            }
+          },
+          "clue": {
+            "id": "fag_pista_acta",
+            "text": {
+              "es": "La conquista · Un acta de 1491 dispone celebrar cada año la entrada de los reyes.",
+              "en": "The conquest · A record from 1491 orders the monarchs' entry to be celebrated every year."
+            }
+          },
+          "nextNodeId": "f4_merced",
+          "nextHint": {
+            "es": "A la Plaza de la Merced. Tres minutos.",
+            "en": "To Plaza de la Merced. Three minutes."
+          }
+        },
+        {
+          "id": "f4_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 36.7235,
+            "lng": -4.4175
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cantaora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "cochero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la feria de día se bailan sevillanas y malagueñas en la calle, y las pandas de verdiales tocan en las plazas del centro.",
+                "en": "At the day fair, people dance sevillanas and malagueñas in the street, and verdiales bands play in the squares of the centre."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar"
+                  ],
+                  "text": {
+                    "es": "Vienes del mar: el cochero te ha contado lo de 1887. ¿Seguimos la pista de los verdiales o la de los caballos?",
+                    "en": "You've come from the sea: the carriage driver told you about 1887. Shall we follow the verdiales lead or the horses lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alcazaba"
+                  ],
+                  "text": {
+                    "es": "Vienes de la Alcazaba: ya sabes lo del 19 de agosto y el acta de 1491. ¿Seguimos la pista de los verdiales o la de los caballos?",
+                    "en": "You've come from the Alcazaba: you know about 19 August and the 1491 record. Shall we follow the verdiales lead or the horses lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se baila en la feria de día?",
+              "en": "What do people dance at the day fair?"
+            },
+            "options": [
+              {
+                "es": "Tango",
+                "en": "Tango"
+              },
+              {
+                "es": "Sevillanas y malagueñas",
+                "en": "Sevillanas and malagueñas"
+              },
+              {
+                "es": "Vals",
+                "en": "Waltz"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Sevillanas y malagueñas, en plena calle.",
+              "en": "Sevillanas and malagueñas, right in the street."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "cantaora",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Los verdiales o los caballos?",
+              "en": "The verdiales or the horses?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de los verdiales",
+                "en": "The verdiales lead"
+              },
+              "hint": {
+                "es": "Con el verdialero",
+                "en": "With the verdiales player"
+              },
+              "targetNodeId": "f4a_verdiales",
+              "setFlags": [
+                "version_verdiales"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de los caballos",
+                "en": "The horses lead"
+              },
+              "hint": {
+                "es": "Con el cochero",
+                "en": "With the carriage driver"
+              },
+              "targetNodeId": "f4b_caballos",
+              "setFlags": [
+                "version_caballos"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f4a_verdiales",
+          "title": {
+            "es": "Los verdiales",
+            "en": "The verdiales"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mira, en los montes siempre hubo fiesta en verano. Pero la de agosto en la ciudad… esa tiene fecha y papel: el 19 de agosto, la entrada de los reyes.",
+                "en": "Look, there were always summer parties in the hills. But the August one in the city… that one has a date and a document: 19 August, the monarchs' entry."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "verdialero",
+              "expression": "happy",
+              "text": {
+                "es": "El verano pone el calor y la gente; la fecha la puso la historia. ¡Y los verdiales, la música!",
+                "en": "Summer brings the heat and the crowds; history set the date. And the verdiales bring the music!"
+              }
+            }
+          ],
+          "clue": {
+            "id": "fag_pista_fecha",
+            "text": {
+              "es": "La conquista · El verano pone el ambiente, pero la fecha de la feria la marcó la entrada de los reyes.",
+              "en": "The conquest · Summer sets the mood, but the fair's date was set by the monarchs' entry."
+            }
+          },
+          "nextNodeId": "f5_manquita",
+          "nextHint": {
+            "es": "Baja a la catedral. Unos 5 minutos.",
+            "en": "Walk down to the cathedral. About 5 minutes."
+          }
+        },
+        {
+          "id": "f4b_caballos",
+          "title": {
+            "es": "Los caballos",
+            "en": "The horses"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cochero",
+              "expression": "proud",
+              "text": {
+                "es": "En 1887 la feria se hizo grande para salir de la crisis, sí. Pero se eligió ese año porque se cumplían 400 años de la conquista.",
+                "en": "In 1887 the fair was made big to get out of the crisis, yes. But that year was chosen because it was 400 years since the conquest."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cochero",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea: el centenario la relanzó, pero lo que celebraba ya venía de 1487.",
+                "en": "In other words: the centenary relaunched it, but what it celebrated went back to 1487."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fag_pista_relanzo",
+            "text": {
+              "es": "El centenario · El centenario de 1887 relanzó la feria, pero lo que celebraba venía de 1487.",
+              "en": "The centenary · The 1887 centenary relaunched the fair, but what it celebrated dated from 1487."
+            }
+          },
+          "nextNodeId": "f5_manquita",
+          "nextHint": {
+            "es": "Baja a la catedral. Unos 5 minutos.",
+            "en": "Walk down to the cathedral. About 5 minutes."
+          }
+        },
+        {
+          "id": "f5_manquita",
+          "title": {
+            "es": "La Manquita",
+            "en": "La Manquita"
+          },
+          "location": {
+            "lat": 36.7201,
+            "lng": -4.4192
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_manquita.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_manquita.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cantaora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "verdialero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Tras la conquista, la mezquita mayor de Málaga se convirtió en iglesia. Sobre ella se empezó a levantar la catedral en 1528.",
+                "en": "After the conquest, Málaga's main mosque was turned into a church. The cathedral began to be built on its site in 1528."
+              },
+              "year": 1528
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. La conquista, el verano o el centenario. ¿Qué celebra la Feria de Agosto?",
+                "en": "Verdict time. The conquest, the summer or the centenary. What does the August Fair celebrate?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué celebra la Feria de Agosto?",
+              "en": "What does the August Fair celebrate?"
+            },
+            "options": [
+              {
+                "es": "La entrada de los Reyes Católicos en Málaga, el 19 de agosto de 1487",
+                "en": "The Catholic Monarchs' entry into Málaga, 19 August 1487"
+              },
+              {
+                "es": "El centenario de 1887",
+                "en": "The 1887 centenary"
+              },
+              {
+                "es": "El verano",
+                "en": "The summer"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La conquista. La fiesta se instituyó en 1491 para recordar la entrada de los reyes; en 1887, en el cuarto centenario, se relanzó como gran feria para animar la economía. El verano solo pone el calor.",
+              "en": "The conquest. The celebration was established in 1491 to commemorate the monarchs' entry; in 1887, at the fourth centenary, it was relaunched as a great fair to boost the economy. Summer only brings the heat."
+            }
+          },
+          "nextNodeId": "f6_final"
+        },
+        {
+          "id": "f6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_verdiales"
+                  ],
+                  "text": {
+                    "es": "El mar y los verdiales: fuegos, flores y espejos. Eres fiestero de panda.",
+                    "en": "The sea and the verdiales: fireworks, flowers and mirrors. You're a band reveller."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_mar",
+                    "version_caballos"
+                  ],
+                  "text": {
+                    "es": "El mar y los caballos: del pregón al paseo. Eres cochero de feria.",
+                    "en": "The sea and the horses: from the opening speech to the carriage ride. You're a fair carriage driver."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alcazaba",
+                    "version_verdiales"
+                  ],
+                  "text": {
+                    "es": "La Alcazaba y los verdiales: historia con música. Eres cronista de la feria.",
+                    "en": "The Alcazaba and the verdiales: history with music. You're the fair's chronicler."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_alcazaba",
+                    "version_caballos"
+                  ],
+                  "text": {
+                    "es": "La Alcazaba y los caballos: de 1487 a 1887. Eres heraldo de los reyes.",
+                    "en": "The Alcazaba and the horses: from 1487 to 1887. You're the monarchs' herald."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cantaora",
+              "expression": "happy",
+              "text": {
+                "es": "Y ahora, a la feria… ¡que esto se celebra cantando! Ay, malagueña…",
+                "en": "And now, to the fair… this is celebrated with song! Ay, malagueña…"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "fiestero_panda",
+          "requires": [
+            "camino_mar",
+            "version_verdiales"
+          ],
+          "title": {
+            "es": "Fiestero de panda",
+            "en": "Band reveller"
+          }
+        },
+        {
+          "id": "cochero_feria",
+          "requires": [
+            "camino_mar",
+            "version_caballos"
+          ],
+          "title": {
+            "es": "Cochero de feria",
+            "en": "Fair carriage driver"
+          }
+        },
+        {
+          "id": "cronista_feria",
+          "requires": [
+            "camino_alcazaba",
+            "version_verdiales"
+          ],
+          "title": {
+            "es": "Cronista de la feria",
+            "en": "The fair's chronicler"
+          }
+        },
+        {
+          "id": "heraldo_reyes",
+          "requires": [
+            "camino_alcazaba",
+            "version_caballos"
+          ],
+          "title": {
+            "es": "Heraldo de los reyes",
+            "en": "The monarchs' herald"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "abanico",
+          "name": {
+            "es": "El abanico",
+            "en": "The fan"
+          },
+          "icon": "collectibles/malaga_fiesta_abanico.svg",
+          "awardedAtNodeId": "f1_constitucion"
+        },
+        {
+          "id": "sombrero_verdiales",
+          "name": {
+            "es": "El sombrero de verdiales",
+            "en": "The verdiales hat"
+          },
+          "icon": "collectibles/malaga_fiesta_sombrero.svg",
+          "awardedAtNodeId": "f2_larios"
+        },
+        {
+          "id": "coche_caballos",
+          "name": {
+            "es": "El coche de caballos",
+            "en": "The horse carriage"
+          },
+          "icon": "collectibles/malaga_fiesta_coche.svg",
+          "awardedAtNodeId": "fa1_muelle"
+        },
+        {
+          "id": "fuegos",
+          "name": {
+            "es": "Los fuegos de la Malagueta",
+            "en": "The Malagueta fireworks"
+          },
+          "icon": "collectibles/malaga_fiesta_fuegos.svg",
+          "awardedAtNodeId": "fa2_malagueta"
+        },
+        {
+          "id": "estandarte_1487",
+          "name": {
+            "es": "El estandarte de 1487",
+            "en": "The 1487 banner"
+          },
+          "icon": "collectibles/malaga_fiesta_estandarte.svg",
+          "awardedAtNodeId": "fb1_alcazaba"
+        },
+        {
+          "id": "acta_1491",
+          "name": {
+            "es": "El acta de 1491",
+            "en": "The 1491 record"
+          },
+          "icon": "collectibles/malaga_fiesta_acta.svg",
+          "awardedAtNodeId": "fb2_teatro"
+        },
+        {
+          "id": "farolillo",
+          "name": {
+            "es": "El farolillo",
+            "en": "The paper lantern"
+          },
+          "icon": "collectibles/malaga_fiesta_farolillo.svg",
+          "awardedAtNodeId": "f5_manquita"
+        },
+        {
+          "id": "insignia_feria",
+          "name": {
+            "es": "¿Qué celebra la Feria de Agosto?",
+            "en": "What Does the August Fair Celebrate?"
+          },
+          "icon": "collectibles/malaga_fiesta_insignia.svg",
+          "awardedAtNodeId": "f6_final"
         }
       ]
     }

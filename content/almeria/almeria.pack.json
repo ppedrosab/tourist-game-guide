@@ -1,6 +1,6 @@
 {
   "id": "almeria",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Almería",
     "en": "Almería"
@@ -97,6 +97,43 @@
         "en": "A fisherman from the La Chanca quarter. An early riser, a joker and an expert on red prawns."
       },
       "avatar": "sprites/pescador/pescador_neutral.svg"
+    },
+    {
+      "id": "bailaora",
+      "name": {
+        "es": "La Bailaora",
+        "en": "The Flamenco Dancer"
+      },
+      "description": {
+        "es": "Baila flamenco en la feria de día y de noche. Incansable, alegre y con mucho genio.",
+        "en": "She dances flamenco at the fair day and night. Tireless, cheerful and fiery."
+      },
+      "avatar": "sprites/bailaora/bailaora_neutral.svg"
+    },
+    {
+      "id": "torrero",
+      "name": {
+        "es": "Andrés de Jaén",
+        "en": "Andrés de Jaén"
+      },
+      "description": {
+        "es": "Guarda de la torre de Torregarcía en 1502, según la tradición. Sereno y respetuoso.",
+        "en": "Guard of the Torregarcía tower in 1502, according to tradition. Calm and respectful."
+      },
+      "avatar": "sprites/torrero/torrero_neutral.svg",
+      "era": "1502"
+    },
+    {
+      "id": "cohetero",
+      "name": {
+        "es": "El Cohetero",
+        "en": "The Fireworks Master"
+      },
+      "description": {
+        "es": "Maestro pirotécnico de la feria. Ruidoso, exagerado y con buen corazón.",
+        "en": "The fair's pyrotechnics master. Loud, over the top and big-hearted."
+      },
+      "avatar": "sprites/cohetero/cohetero_neutral.svg"
     }
   ],
   "routes": [
@@ -2368,6 +2405,1143 @@
             "en": "Who Turned the Desert into a Garden?"
           },
           "icon": "collectibles/almeria_huerta.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "feria-virgen-mar",
+      "title": {
+        "es": "¿Por qué la feria de Almería es en agosto?",
+        "en": "Why Is the Almería Fair in August?"
+      },
+      "summary": {
+        "es": "Almería se va de feria a finales de agosto. ¿Por la patrona, por el verano o por el puerto? Con una bailaora, un cohetero y el guarda de una torre de 1502.",
+        "en": "Almería goes to the fair at the end of August. Because of the patroness, the summer or the port? With a flamenco dancer, a fireworks master and the guard of a 1502 tower."
+      },
+      "era": "1502 - hoy",
+      "guideCharacterId": "bailaora",
+      "durationMin": 95,
+      "distanceKm": 2.8,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El puerto",
+            "en": "The port"
+          },
+          "trail": {
+            "es": "camino del puerto",
+            "en": "port trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La patrona",
+            "en": "The patroness"
+          },
+          "trail": {
+            "es": "camino de la patrona",
+            "en": "patroness trail"
+          }
+        }
+      },
+      "startNodeId": "g1_purchena",
+      "nodes": [
+        {
+          "id": "g1_purchena",
+          "title": {
+            "es": "Puerta de Purchena",
+            "en": "Puerta de Purchena"
+          },
+          "location": {
+            "lat": 36.8425,
+            "lng": -2.463
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_purchena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_purchena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "bailaora",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "happy",
+              "text": {
+                "es": "¡Olé! Bailaora de flamenco. En la feria de Almería bailo en la calle a mediodía y en el recinto por la noche. ¡No paro!",
+                "en": "Olé! Flamenco dancer. At the Almería fair I dance in the street at midday and at the fairground at night. I never stop!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero dime una cosa: ¿por qué la feria de aquí es a finales de agosto y no en abril, como la de Sevilla?",
+                "en": "But tell me something: why is the fair here at the end of August and not in April, like Seville's?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: la patrona, la Virgen del Mar; el verano, que llena la costa; y el puerto, que traía barcos y negocio. Apunta.",
+                "en": "Three suspects: the patroness, the Virgen del Mar; the summer, which fills the coast; and the port, which brought ships and trade. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La feria de Almería tiene dos caras: la feria de mediodía, en las calles del centro, y la de noche, en el recinto ferial.",
+                "en": "The Almería fair has two sides: the midday fair, in the streets of the centre, and the night fair, at the fairground."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde es la feria de mediodía en Almería?",
+              "en": "Where is the midday fair held in Almería?"
+            },
+            "options": [
+              {
+                "es": "En la Alcazaba",
+                "en": "In the Alcazaba"
+              },
+              {
+                "es": "En las calles del centro",
+                "en": "In the streets of the centre"
+              },
+              {
+                "es": "En el puerto",
+                "en": "At the port"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En las calles del centro. De noche, la fiesta se va al recinto ferial.",
+              "en": "In the streets of the centre. At night, the party moves to the fairground."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_agosto",
+            "text": {
+              "es": "El verano · La feria es a finales de agosto, en pleno verano.",
+              "en": "The summer · The fair is at the end of August, in the height of summer."
+            }
+          },
+          "nextNodeId": "g2_paseo",
+          "nextHint": {
+            "es": "Baja por el Paseo de Almería. Unos 4 minutos.",
+            "en": "Walk down the Paseo de Almería. About 4 minutes."
+          }
+        },
+        {
+          "id": "g2_paseo",
+          "title": {
+            "es": "Paseo de Almería",
+            "en": "Paseo de Almería"
+          },
+          "location": {
+            "lat": 36.8398,
+            "lng": -2.4631
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_refugios.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_refugios.svg"
+              ],
+              "characters": [
+                {
+                  "id": "bailaora",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "cohetero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Pum, pum, pum! Cohetero, maestro pirotécnico. La feria de Almería empieza y acaba con fuegos. Y los míos son los más ruidosos.",
+                "en": "Boom, boom, boom! Fireworks master. The Almería fair starts and ends with fireworks. And mine are the loudest."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Paseo de Almería es la calle principal del centro. En feria se llena de casetas y de gente bailando a mediodía.",
+                "en": "The Paseo de Almería is the main street in the centre. At fair time it fills with stalls and people dancing at midday."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Yo creo que la feria es en agosto por el calor: con este sol, ¿quién va a querer trabajar?",
+                "en": "I reckon the fair's in August because of the heat: with this sun, who wants to work?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuál es la calle principal del centro de Almería?",
+              "en": "What is the main street in central Almería?"
+            },
+            "options": [
+              {
+                "es": "El Paseo de Almería",
+                "en": "The Paseo de Almería"
+              },
+              {
+                "es": "La calle Larios",
+                "en": "Calle Larios"
+              },
+              {
+                "es": "La calle Sierpes",
+                "en": "Calle Sierpes"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El Paseo de Almería. Larios está en Málaga y Sierpes en Sevilla.",
+              "en": "The Paseo de Almería. Larios is in Málaga and Sierpes in Seville."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_calor",
+            "text": {
+              "es": "El verano · El cohetero cree que la feria es en agosto por el calor.",
+              "en": "The summer · The fireworks master thinks the fair is in August because of the heat."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "bailaora",
+            "expression": "happy",
+            "text": {
+              "es": "¿Bajamos al puerto, donde se tiran los fuegos, o vamos a la Plaza Vieja y al santuario de la patrona?",
+              "en": "Shall we go down to the port, where the fireworks are set off, or to the Plaza Vieja and the patroness's sanctuary?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al puerto",
+                "en": "To the port"
+              },
+              "hint": {
+                "es": "Parque Nicolás Salmerón y Cable Inglés",
+                "en": "Nicolás Salmerón Park and the English Cable"
+              },
+              "targetNodeId": "ga1_puerto",
+              "setFlags": [
+                "camino_puerto"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            },
+            {
+              "label": {
+                "es": "A la patrona",
+                "en": "To the patroness"
+              },
+              "hint": {
+                "es": "Plaza Vieja y santuario de la Virgen del Mar",
+                "en": "Plaza Vieja and the Virgen del Mar sanctuary"
+              },
+              "targetNodeId": "gb1_plazavieja",
+              "setFlags": [
+                "camino_patrona"
+              ],
+              "distanceM": 400,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "ga1_puerto",
+          "title": {
+            "es": "Parque de Nicolás Salmerón",
+            "en": "Nicolás Salmerón Park"
+          },
+          "location": {
+            "lat": 36.8366,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_puerto.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_puerto.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cohetero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "bailaora",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XIX el puerto de Almería exportaba uva de mesa y mineral a medio mundo. Por eso se llenaba de barcos y comerciantes.",
+                "en": "In the 19th century Almería's port exported table grapes and ore all over the world. That's why it was full of ships and merchants."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "proud",
+              "text": {
+                "es": "¡Y en feria, fuegos sobre el mar! Los barcos pitan, la gente aplaude… Por algo digo yo que la feria es cosa del puerto.",
+                "en": "And at fair time, fireworks over the sea! The ships sound their horns, people clap… That's why I say the fair is the port's doing."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "thinking",
+              "text": {
+                "es": "El puerto trajo dinero, eso sí. Pero la uva se embarcaba en otoño, no en agosto…",
+                "en": "The port brought money, sure. But grapes were shipped in autumn, not August…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué exportaba el puerto de Almería en el siglo XIX?",
+              "en": "What did Almería's port export in the 19th century?"
+            },
+            "options": [
+              {
+                "es": "Coches",
+                "en": "Cars"
+              },
+              {
+                "es": "Café",
+                "en": "Coffee"
+              },
+              {
+                "es": "Uva de mesa y mineral",
+                "en": "Table grapes and ore"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Uva de mesa y mineral, sobre todo.",
+              "en": "Mainly table grapes and ore."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_uva",
+            "text": {
+              "es": "El puerto · El puerto traía negocio, pero la uva se embarcaba en otoño, no en agosto.",
+              "en": "The port · The port brought trade, but the grapes were shipped in autumn, not August."
+            }
+          },
+          "nextNodeId": "ga2_cable",
+          "nextHint": {
+            "es": "Sigue la costa hasta el Cable Inglés. Unos 10 minutos.",
+            "en": "Follow the coast to the English Cable. About 10 minutes."
+          }
+        },
+        {
+          "id": "ga2_cable",
+          "title": {
+            "es": "Cable Inglés",
+            "en": "English Cable"
+          },
+          "location": {
+            "lat": 36.8305,
+            "lng": -2.4655
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_almeria_cable.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_cable.svg"
+              ],
+              "characters": [
+                {
+                  "id": "torrero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "cohetero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "torrero",
+              "expression": "neutral",
+              "text": {
+                "es": "Buenas. Me llamo Andrés de Jaén, y fui guarda de la torre de Torregarcía, en la costa, hace más de quinientos años.",
+                "en": "Good day. My name is Andrés de Jaén, and I was the guard of the Torregarcía tower, on the coast, more than five hundred years ago."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Cuenta la tradición que en diciembre de 1502 Andrés de Jaén, guarda de la torre de Torregarcía, encontró en la orilla una imagen de la Virgen traída por el mar. Por eso la llamaron Virgen del Mar.",
+                "en": "Tradition says that in December 1502 Andrés de Jaén, guard of the Torregarcía tower, found on the shore an image of the Virgin brought in by the sea. That's why she was called the Virgen del Mar."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Del mar? ¡Entonces la patrona también viene del mar, como mis fuegos!",
+                "en": "From the sea? So the patroness also comes from the sea, like my fireworks!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "Según la tradición, ¿dónde se encontró la imagen de la Virgen del Mar?",
+              "en": "According to tradition, where was the Virgen del Mar image found?"
+            },
+            "options": [
+              {
+                "es": "En un barco del puerto",
+                "en": "On a ship in the port"
+              },
+              {
+                "es": "En la orilla, junto a la torre de Torregarcía",
+                "en": "On the shore, by the Torregarcía tower"
+              },
+              {
+                "es": "En la Alcazaba",
+                "en": "In the Alcazaba"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En la orilla, junto a la torre de Torregarcía, en 1502.",
+              "en": "On the shore, by the Torregarcía tower, in 1502."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_torregarcia",
+            "text": {
+              "es": "La patrona · La patrona se llama Virgen del Mar porque, según la tradición, llegó por el mar en 1502.",
+              "en": "The patroness · The patroness is called Virgen del Mar because, by tradition, she came from the sea in 1502."
+            }
+          },
+          "nextNodeId": "g4_catedral",
+          "nextHint": {
+            "es": "Sube a la catedral. Unos 12 minutos.",
+            "en": "Walk up to the cathedral. About 12 minutes."
+          }
+        },
+        {
+          "id": "gb1_plazavieja",
+          "title": {
+            "es": "Plaza Vieja",
+            "en": "Plaza Vieja"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.466
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_plazavieja.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_plazavieja.svg"
+              ],
+              "characters": [
+                {
+                  "id": "torrero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "bailaora",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "torrero",
+              "expression": "neutral",
+              "text": {
+                "es": "Buenas. Me llamo Andrés de Jaén, y fui guarda de la torre de Torregarcía, en la costa, hace más de quinientos años.",
+                "en": "Good day. My name is Andrés de Jaén, and I was the guard of the Torregarcía tower, on the coast, more than five hundred years ago."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Cuenta la tradición que en diciembre de 1502 Andrés de Jaén encontró en la orilla, junto a su torre, una imagen de la Virgen traída por el mar. Por eso la llamaron Virgen del Mar.",
+                "en": "Tradition says that in December 1502 Andrés de Jaén found on the shore, by his tower, an image of the Virgin brought in by the sea. That's why she was called the Virgen del Mar."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea, que la historia de la patrona empieza en la playa… y en invierno. Y la feria es en verano. ¡Qué lío!",
+                "en": "So the patroness's story starts on the beach… in winter. And the fair is in summer. What a muddle!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año sitúa la tradición el hallazgo de la Virgen del Mar?",
+              "en": "In what year does tradition place the finding of the Virgen del Mar?"
+            },
+            "options": [
+              {
+                "es": "En 1502",
+                "en": "In 1502"
+              },
+              {
+                "es": "En 1806",
+                "en": "In 1806"
+              },
+              {
+                "es": "En 1904",
+                "en": "In 1904"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1502. En 1806 fue nombrada patrona; 1904 es el año del Cable Inglés.",
+              "en": "In 1502. In 1806 she was named patroness; 1904 is the year of the English Cable."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_1502",
+            "text": {
+              "es": "La patrona · La tradición de la Virgen del Mar empieza en 1502, en la playa de Torregarcía.",
+              "en": "The patroness · The Virgen del Mar tradition begins in 1502, on Torregarcía beach."
+            }
+          },
+          "nextNodeId": "gb2_santuario",
+          "nextHint": {
+            "es": "Al santuario de la Virgen del Mar. Unos 4 minutos.",
+            "en": "To the Virgen del Mar sanctuary. About 4 minutes."
+          }
+        },
+        {
+          "id": "gb2_santuario",
+          "title": {
+            "es": "Santuario de la Virgen del Mar",
+            "en": "Virgen del Mar Sanctuary"
+          },
+          "location": {
+            "lat": 36.8391,
+            "lng": -2.4649
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_almeria_santuario.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_santuario.svg"
+              ],
+              "characters": [
+                {
+                  "id": "torrero",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "bailaora",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La imagen se venera en el santuario de la Virgen del Mar, en el antiguo convento de Santo Domingo. En 1806 fue proclamada patrona de Almería.",
+                "en": "The image is venerated at the Virgen del Mar sanctuary, in the former convent of Santo Domingo. In 1806 she was proclaimed patroness of Almería."
+              },
+              "year": 1806
+            },
+            {
+              "type": "dialogue",
+              "characterId": "torrero",
+              "expression": "neutral",
+              "text": {
+                "es": "Es un sitio de respeto. Aquí se viene a ver a la patrona en silencio, y en agosto la ciudad le dedica sus fiestas.",
+                "en": "It's a place of respect. People come here to visit the patroness quietly, and in August the city dedicates its festivities to her."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Le dedica la feria? Entonces la feria es… en su honor.",
+                "en": "It dedicates the fair to her? So the fair is… in her honour."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año fue proclamada patrona de Almería la Virgen del Mar?",
+              "en": "In what year was the Virgen del Mar proclaimed patroness of Almería?"
+            },
+            "options": [
+              {
+                "es": "En 1502",
+                "en": "In 1502"
+              },
+              {
+                "es": "En 1992",
+                "en": "In 1992"
+              },
+              {
+                "es": "En 1806",
+                "en": "In 1806"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1806. El hallazgo, según la tradición, fue en 1502.",
+              "en": "In 1806. The finding, by tradition, was in 1502."
+            }
+          },
+          "clue": {
+            "id": "fvm_pista_patrona",
+            "text": {
+              "es": "La patrona · La feria de agosto se dedica a la patrona, proclamada en 1806.",
+              "en": "The patroness · The August fair is dedicated to the patroness, proclaimed in 1806."
+            }
+          },
+          "nextNodeId": "g4_catedral",
+          "nextHint": {
+            "es": "A la catedral. Unos 3 minutos.",
+            "en": "To the cathedral. About 3 minutes."
+          }
+        },
+        {
+          "id": "g4_catedral",
+          "title": {
+            "es": "Catedral de Almería",
+            "en": "Almería Cathedral"
+          },
+          "location": {
+            "lat": 36.8384,
+            "lng": -2.4666
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "bailaora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "cohetero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El nombre oficial de la feria es «Feria y Fiestas en honor a la Virgen del Mar». Se celebra en torno al último domingo de agosto, día de la patrona en verano.",
+                "en": "The fair's official name is 'Fair and Festivities in honour of the Virgen del Mar'. It is held around the last Sunday of August, the patroness's summer feast day."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto"
+                  ],
+                  "text": {
+                    "es": "Vienes del puerto: fuegos, uva y la historia de la torre. ¿Seguimos la pista de los fuegos o la del cartel?",
+                    "en": "You've come from the port: fireworks, grapes and the tower story. Shall we follow the fireworks lead or the poster lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_patrona"
+                  ],
+                  "text": {
+                    "es": "Vienes del santuario: 1502 y 1806. ¿Seguimos la pista de los fuegos o la del cartel?",
+                    "en": "You've come from the sanctuary: 1502 and 1806. Shall we follow the fireworks lead or the poster lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuál es el nombre oficial de la feria de Almería?",
+              "en": "What is the official name of the Almería fair?"
+            },
+            "options": [
+              {
+                "es": "Fiestas del Verano",
+                "en": "Summer Festival"
+              },
+              {
+                "es": "Feria y Fiestas en honor a la Virgen del Mar",
+                "en": "Fair and Festivities in honour of the Virgen del Mar"
+              },
+              {
+                "es": "Feria del Puerto",
+                "en": "Port Fair"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "«Feria y Fiestas en honor a la Virgen del Mar».",
+              "en": "'Fair and Festivities in honour of the Virgen del Mar'."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "bailaora",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Los fuegos o el cartel?",
+              "en": "The fireworks or the poster?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de los fuegos",
+                "en": "The fireworks lead"
+              },
+              "hint": {
+                "es": "Con el cohetero",
+                "en": "With the fireworks master"
+              },
+              "targetNodeId": "g4a_fuegos",
+              "setFlags": [
+                "version_fuegos"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del cartel",
+                "en": "The poster lead"
+              },
+              "hint": {
+                "es": "Con Andrés de Jaén",
+                "en": "With Andrés de Jaén"
+              },
+              "targetNodeId": "g4b_cartel",
+              "setFlags": [
+                "version_cartel"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_fuegos",
+          "title": {
+            "es": "Los fuegos",
+            "en": "The fireworks"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Vale, lo reconozco: mis fuegos son para la feria, y la feria es para la patrona. Por eso se tiran en su semana, no cuando a mí me da la gana.",
+                "en": "Fine, I admit it: my fireworks are for the fair, and the fair is for the patroness. That's why they go off in her week, not whenever I feel like it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cohetero",
+              "expression": "happy",
+              "text": {
+                "es": "El verano pone el calor y el puerto pone el escenario. ¡Pero la fecha es de ella!",
+                "en": "Summer brings the heat and the port provides the stage. But the date is hers!"
+              }
+            }
+          ],
+          "clue": {
+            "id": "fvm_pista_fecha",
+            "text": {
+              "es": "La patrona · La fecha de la feria la marca la fiesta de la patrona.",
+              "en": "The patroness · The fair's date is set by the patroness's feast."
+            }
+          },
+          "nextNodeId": "g5_alcazaba",
+          "nextHint": {
+            "es": "Sube a la Alcazaba. Unos 8 minutos.",
+            "en": "Climb to the Alcazaba. About 8 minutes."
+          }
+        },
+        {
+          "id": "g4b_cartel",
+          "title": {
+            "es": "El cartel",
+            "en": "The poster"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "torrero",
+              "expression": "neutral",
+              "text": {
+                "es": "Cada año se hace un cartel de la feria. Y en todos pone lo mismo: «en honor a la Virgen del Mar».",
+                "en": "Every year a poster is made for the fair. And every one says the same: 'in honour of the Virgen del Mar'."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "torrero",
+              "expression": "neutral",
+              "text": {
+                "es": "Yo solo guardaba una torre. Pero la ciudad lleva cinco siglos recordando aquella mañana en la playa.",
+                "en": "I only guarded a tower. But the city has spent five centuries remembering that morning on the beach."
+              }
+            }
+          ],
+          "clue": {
+            "id": "fvm_pista_cartel",
+            "text": {
+              "es": "La patrona · Todos los carteles de la feria dicen «en honor a la Virgen del Mar».",
+              "en": "The patroness · Every fair poster says 'in honour of the Virgen del Mar'."
+            }
+          },
+          "nextNodeId": "g5_alcazaba",
+          "nextHint": {
+            "es": "Sube a la Alcazaba. Unos 8 minutos.",
+            "en": "Climb to the Alcazaba. About 8 minutes."
+          }
+        },
+        {
+          "id": "g5_alcazaba",
+          "title": {
+            "es": "Alcazaba",
+            "en": "Alcazaba"
+          },
+          "location": {
+            "lat": 36.841,
+            "lng": -2.4705
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_almeria_alcazaba.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_almeria_alcazaba.svg"
+              ],
+              "characters": [
+                {
+                  "id": "bailaora",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "cohetero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Desde la Alcazaba se ve toda la bahía. En feria, desde aquí se contemplan los fuegos sobre el puerto.",
+                "en": "From the Alcazaba you can see the whole bay. At fair time, you can watch the fireworks over the port from here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, con toda Almería a los pies. La patrona, el verano o el puerto: ¿por qué la feria es a finales de agosto?",
+                "en": "Verdict time, with all of Almería at our feet. The patroness, the summer or the port: why is the fair at the end of August?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué la feria de Almería es a finales de agosto?",
+              "en": "Why is the Almería fair at the end of August?"
+            },
+            "options": [
+              {
+                "es": "Porque se celebra en honor a la patrona, la Virgen del Mar, en torno al último domingo de agosto",
+                "en": "Because it honours the patroness, the Virgen del Mar, around the last Sunday of August"
+              },
+              {
+                "es": "Solo porque es verano",
+                "en": "Just because it's summer"
+              },
+              {
+                "es": "Porque es cuando llegan más barcos",
+                "en": "Because that's when most ships arrive"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por la patrona. La feria se celebra en honor a la Virgen del Mar, en torno a su fiesta de finales de agosto. El verano y el puerto ayudan, pero la fecha es de ella.",
+              "en": "Because of the patroness. The fair honours the Virgen del Mar, around her feast at the end of August. Summer and the port help, but the date is hers."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_fuegos"
+                  ],
+                  "text": {
+                    "es": "El puerto y los fuegos: pólvora y mar. Eres maestro cohetero.",
+                    "en": "The port and the fireworks: gunpowder and sea. You're a master of fireworks."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_puerto",
+                    "version_cartel"
+                  ],
+                  "text": {
+                    "es": "El puerto y el cartel: de la torre a la feria. Eres vigía de Torregarcía.",
+                    "en": "The port and the poster: from the tower to the fair. You're the lookout of Torregarcía."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_patrona",
+                    "version_fuegos"
+                  ],
+                  "text": {
+                    "es": "La patrona y los fuegos: respeto y fiesta. Eres pregonero de la feria.",
+                    "en": "The patroness and the fireworks: respect and celebration. You're the fair's crier."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_patrona",
+                    "version_cartel"
+                  ],
+                  "text": {
+                    "es": "La patrona y el cartel: 1502 y 1806 de memoria. Eres cronista de agosto.",
+                    "en": "The patroness and the poster: 1502 and 1806 by heart. You're the chronicler of August."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "bailaora",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y ahora, a bailar, que la feria no espera! Te guardo sitio en el Paseo.",
+                "en": "And now, let's dance, the fair won't wait! I'll save you a spot on the Paseo."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "maestro_cohetero",
+          "requires": [
+            "camino_puerto",
+            "version_fuegos"
+          ],
+          "title": {
+            "es": "Maestro cohetero",
+            "en": "Master of fireworks"
+          }
+        },
+        {
+          "id": "vigia_torregarcia",
+          "requires": [
+            "camino_puerto",
+            "version_cartel"
+          ],
+          "title": {
+            "es": "Vigía de Torregarcía",
+            "en": "Lookout of Torregarcía"
+          }
+        },
+        {
+          "id": "pregonero_feria",
+          "requires": [
+            "camino_patrona",
+            "version_fuegos"
+          ],
+          "title": {
+            "es": "Pregonero de la feria",
+            "en": "The fair's crier"
+          }
+        },
+        {
+          "id": "cronista_agosto",
+          "requires": [
+            "camino_patrona",
+            "version_cartel"
+          ],
+          "title": {
+            "es": "Cronista de agosto",
+            "en": "Chronicler of August"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "castanuelas",
+          "name": {
+            "es": "Las castañuelas",
+            "en": "The castanets"
+          },
+          "icon": "collectibles/almeria_fiesta_castanuelas.svg",
+          "awardedAtNodeId": "g1_purchena"
+        },
+        {
+          "id": "cohete",
+          "name": {
+            "es": "El cohete",
+            "en": "The rocket"
+          },
+          "icon": "collectibles/almeria_fiesta_cohete.svg",
+          "awardedAtNodeId": "g2_paseo"
+        },
+        {
+          "id": "racimo",
+          "name": {
+            "es": "El racimo de uva",
+            "en": "The bunch of grapes"
+          },
+          "icon": "collectibles/almeria_fiesta_racimo.svg",
+          "awardedAtNodeId": "ga1_puerto"
+        },
+        {
+          "id": "torre_torregarcia",
+          "name": {
+            "es": "La torre de Torregarcía",
+            "en": "The Torregarcía tower"
+          },
+          "icon": "collectibles/almeria_fiesta_torre.svg",
+          "awardedAtNodeId": "ga2_cable"
+        },
+        {
+          "id": "concha",
+          "name": {
+            "es": "La concha",
+            "en": "The seashell"
+          },
+          "icon": "collectibles/almeria_fiesta_concha.svg",
+          "awardedAtNodeId": "gb1_plazavieja"
+        },
+        {
+          "id": "vela",
+          "name": {
+            "es": "La vela del santuario",
+            "en": "The sanctuary candle"
+          },
+          "icon": "collectibles/almeria_fiesta_vela.svg",
+          "awardedAtNodeId": "gb2_santuario"
+        },
+        {
+          "id": "cartel_feria",
+          "name": {
+            "es": "El cartel de la feria",
+            "en": "The fair poster"
+          },
+          "icon": "collectibles/almeria_fiesta_cartel.svg",
+          "awardedAtNodeId": "g5_alcazaba"
+        },
+        {
+          "id": "insignia_agosto",
+          "name": {
+            "es": "¿Por qué la feria de Almería es en agosto?",
+            "en": "Why Is the Almería Fair in August?"
+          },
+          "icon": "collectibles/almeria_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
       ]

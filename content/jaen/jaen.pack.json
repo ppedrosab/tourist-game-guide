@@ -1,6 +1,6 @@
 {
   "id": "jaen",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Jaén",
     "en": "Jaén"
@@ -96,6 +96,42 @@
         "en": "An oil-mill man. He knows how to turn olives into liquid gold."
       },
       "avatar": "sprites/molinero/molinero_neutral.svg"
+    },
+    {
+      "id": "melenchonera",
+      "name": {
+        "es": "La Melenchonera",
+        "en": "The Melenchón Singer"
+      },
+      "description": {
+        "es": "Canta y baila melenchones alrededor de las lumbres. Alegre, friolera y con buena voz.",
+        "en": "She sings and dances melenchones around the bonfires. Cheerful, always cold and with a fine voice."
+      },
+      "avatar": "sprites/melenchonera/melenchonera_neutral.svg"
+    },
+    {
+      "id": "podador",
+      "name": {
+        "es": "El Podador",
+        "en": "The Pruner"
+      },
+      "description": {
+        "es": "Poda olivos cada invierno con sus tijeras. Tozudo y sabio del campo.",
+        "en": "He prunes olive trees every winter with his shears. Stubborn and wise in country ways."
+      },
+      "avatar": "sprites/podador/podador_neutral.svg"
+    },
+    {
+      "id": "ganadero",
+      "name": {
+        "es": "El Ganadero",
+        "en": "The Livestock Farmer"
+      },
+      "description": {
+        "es": "Lleva cada año a bendecir a sus animales por San Antón. Bonachón y muy hablador.",
+        "en": "Every year he takes his animals to be blessed for San Antón. Good-natured and very talkative."
+      },
+      "avatar": "sprites/ganadero/ganadero_neutral.svg"
     }
   ],
   "routes": [
@@ -1139,7 +1175,7 @@
           }
         },
         {
-          "id": "cazador_leyendas",
+          "id": "cazador_lagarto",
           "requires": [
             "camino_pastor",
             "version_piel"
@@ -1355,7 +1391,7 @@
             }
           },
           "clue": {
-            "id": "pista_mar",
+            "id": "pista_mar_olivos",
             "text": {
               "es": "El siglo XIX · Jaén es la mayor productora de aceite del mundo: el olivar lo cubre casi todo.",
               "en": "The 19th century · Jaén is the world's largest oil producer: olive groves cover almost everything."
@@ -2355,6 +2391,1140 @@
             "en": "Who Planted the Sea of Olives?"
           },
           "icon": "collectibles/jaen_olivos.svg",
+          "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "lumbres",
+      "title": {
+        "es": "¿Por qué Jaén enciende lumbres por San Antón?",
+        "en": "Why Does Jaén Light Bonfires for San Antón?"
+      },
+      "summary": {
+        "es": "Cada 16 de enero Jaén se llena de hogueras. ¿Por el santo, por el frío o por el olivo? Con una melenchonera, un podador y un ganadero, entre coplas, leña y el Jaén antiguo.",
+        "en": "Every 16 January Jaén fills with bonfires. Because of the saint, the cold or the olive tree? With a melenchón singer, a pruner and a farmer, among songs, firewood and old Jaén."
+      },
+      "era": "Siglo XIX - hoy",
+      "guideCharacterId": "melenchonera",
+      "durationMin": 90,
+      "distanceKm": 2.4,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El centro",
+            "en": "The centre"
+          },
+          "trail": {
+            "es": "camino del centro",
+            "en": "centre trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El Jaén antiguo",
+            "en": "Old Jaén"
+          },
+          "trail": {
+            "es": "camino del Jaén antiguo",
+            "en": "old Jaén trail"
+          }
+        }
+      },
+      "startNodeId": "g1_sanildefonso",
+      "nodes": [
+        {
+          "id": "g1_sanildefonso",
+          "title": {
+            "es": "Basílica de San Ildefonso",
+            "en": "Basilica of San Ildefonso"
+          },
+          "location": {
+            "lat": 37.7644,
+            "lng": -3.7862
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_sanildefonso.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanildefonso.svg"
+              ],
+              "characters": [
+                {
+                  "id": "melenchonera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola! Soy melenchonera: canto melenchones, las coplas que se bailan en corro alrededor de las lumbres de San Antón.",
+                "en": "Hello! I'm a melenchón singer: I sing melenchones, the songs danced in a circle around the San Antón bonfires."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "thinking",
+              "text": {
+                "es": "Cada 16 de enero, por la noche, Jaén se llena de hogueras en plazas y barrios. Y yo me pregunto: ¿por qué fuego? ¿Y por qué ese día?",
+                "en": "Every 16 January, at night, Jaén fills with bonfires in its squares and neighbourhoods. And I wonder: why fire? And why that day?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: el santo, San Antón; el invierno, que pela; y el olivo, que en Jaén lo es todo. Apúntalo.",
+                "en": "Three suspects: the saint, San Antón; the winter, which is freezing; and the olive tree, which in Jaén is everything. Write it down."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "San Antón, o San Antonio Abad, es el patrón de los animales. Su día es el 17 de enero, y las lumbres se encienden la víspera, el 16.",
+                "en": "San Antón, or Saint Anthony the Abbot, is the patron saint of animals. His feast day is 17 January, and the bonfires are lit the night before, on the 16th."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué noche se encienden las lumbres de San Antón en Jaén?",
+              "en": "On which night are the San Antón bonfires lit in Jaén?"
+            },
+            "options": [
+              {
+                "es": "La de Nochevieja",
+                "en": "New Year's Eve"
+              },
+              {
+                "es": "La del 16 de enero",
+                "en": "The night of 16 January"
+              },
+              {
+                "es": "La de San Juan, en junio",
+                "en": "St John's Eve, in June"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La del 16 de enero, víspera del día del santo.",
+              "en": "The night of 16 January, the eve of the saint's day."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_vispera",
+            "text": {
+              "es": "El santo · Las lumbres se encienden la víspera del día de San Antón.",
+              "en": "The saint · The bonfires are lit on the eve of San Antón's day."
+            }
+          },
+          "nextNodeId": "g2_catedral",
+          "nextHint": {
+            "es": "A la Plaza de Santa María, frente a la catedral. Unos 5 minutos.",
+            "en": "To Plaza de Santa María, facing the cathedral. About 5 minutes."
+          }
+        },
+        {
+          "id": "g2_catedral",
+          "title": {
+            "es": "Plaza de Santa María",
+            "en": "Plaza de Santa María"
+          },
+          "location": {
+            "lat": 37.7654,
+            "lng": -3.7897
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "melenchonera",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "podador",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "happy",
+              "text": {
+                "es": "Podador, a su servicio. Después de la aceituna, en invierno, toca podar los olivos. Y la poda deja montañas de ramas.",
+                "en": "Pruner, at your service. After the olive harvest, in winter, it's time to prune the olive trees. And pruning leaves mountains of branches."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La provincia de Jaén es el mayor productor de aceite de oliva del mundo. La cosecha va de noviembre a enero y la poda sigue después.",
+                "en": "The province of Jaén is the world's largest producer of olive oil. The harvest runs from November to January, followed by pruning."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "thinking",
+              "text": {
+                "es": "Y con tanta rama y tanto frío… a ver qué hace uno. ¡Pues leña!",
+                "en": "And with so many branches and so much cold… what's a man to do? Firewood!"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se hace con los olivos después de la cosecha?",
+              "en": "What is done to the olive trees after the harvest?"
+            },
+            "options": [
+              {
+                "es": "Se podan",
+                "en": "They're pruned"
+              },
+              {
+                "es": "Se pintan",
+                "en": "They're painted"
+              },
+              {
+                "es": "Se riegan con vino",
+                "en": "They're watered with wine"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Se podan, y la poda deja mucha leña.",
+              "en": "They're pruned, and pruning leaves a lot of wood."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_poda",
+            "text": {
+              "es": "El olivo · La poda del olivo llega en invierno y deja montañas de ramas.",
+              "en": "The olive tree · Olive pruning comes in winter and leaves mountains of branches."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "melenchonera",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por el centro, entre plazas y mercado, o subimos al Jaén antiguo, por el arco y los baños?",
+              "en": "Shall we carry on through the centre, among squares and the market, or climb into old Jaén, by the arch and the baths?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por el centro",
+                "en": "Through the centre"
+              },
+              "hint": {
+                "es": "Mercado y Plaza de la Constitución",
+                "en": "Market and Plaza de la Constitución"
+              },
+              "targetNodeId": "ga1_mercado",
+              "setFlags": [
+                "camino_centro"
+              ],
+              "distanceM": 300,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "Al Jaén antiguo",
+                "en": "To old Jaén"
+              },
+              "hint": {
+                "es": "Arco de San Lorenzo y Baños árabes",
+                "en": "San Lorenzo Arch and Arab Baths"
+              },
+              "targetNodeId": "gb1_sanlorenzo",
+              "setFlags": [
+                "camino_antiguo"
+              ],
+              "distanceM": 350,
+              "walkMin": 5
+            }
+          ]
+        },
+        {
+          "id": "ga1_mercado",
+          "title": {
+            "es": "Mercado de San Francisco",
+            "en": "San Francisco Market"
+          },
+          "location": {
+            "lat": 37.7671,
+            "lng": -3.788
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_mercado.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_mercado.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganadero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "melenchonera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Buenas! Ganadero. El día de San Antón llevo a bendecir a mis animales: la burra, el perro, las cabras… ¡hasta el canario!",
+                "en": "Hello! Livestock farmer. On San Antón's day I take my animals to be blessed: the donkey, the dog, the goats… even the canary!"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El 17 de enero, en muchos pueblos y ciudades, se bendicen animales en honor a San Antón, patrón de los animales.",
+                "en": "On 17 January, in many towns and cities, animals are blessed in honour of San Antón, patron saint of animals."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "thinking",
+              "text": {
+                "es": "El santo pone el día, eso sí. Pero bendecir animales no es encender hogueras…",
+                "en": "The saint sets the day, that's true. But blessing animals isn't lighting bonfires…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué es patrón San Antón?",
+              "en": "What is San Antón the patron saint of?"
+            },
+            "options": [
+              {
+                "es": "De los marineros",
+                "en": "Of sailors"
+              },
+              {
+                "es": "De los músicos",
+                "en": "Of musicians"
+              },
+              {
+                "es": "De los animales",
+                "en": "Of animals"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "De los animales. Por eso se bendicen el 17 de enero.",
+              "en": "Of animals. That's why they're blessed on 17 January."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_bendicion",
+            "text": {
+              "es": "El santo · El santo marca la fecha y la bendición de animales, pero no explica el fuego.",
+              "en": "The saint · The saint sets the date and the blessing of animals, but doesn't explain the fire."
+            }
+          },
+          "nextNodeId": "ga2_constitucion",
+          "nextHint": {
+            "es": "A la Plaza de la Constitución. Dos minutos.",
+            "en": "To Plaza de la Constitución. Two minutes."
+          }
+        },
+        {
+          "id": "ga2_constitucion",
+          "title": {
+            "es": "Plaza de la Constitución",
+            "en": "Plaza de la Constitución"
+          },
+          "location": {
+            "lat": 37.7665,
+            "lng": -3.7867
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "podador",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "ganadero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La víspera de San Antón se corre en Jaén una carrera nocturna por las calles, entre las lumbres. Se celebra desde los años ochenta.",
+                "en": "On the eve of San Antón, Jaén holds a night race through its streets, among the bonfires. It has been run since the 1980s."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "proud",
+              "text": {
+                "es": "Mi abuelo guardaba las ramas de la poda para esta noche. En cada barrio se hacía una montaña y se le prendía fuego.",
+                "en": "My grandfather saved the pruning branches for this night. Every neighbourhood made a big pile and set it alight."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "surprised",
+              "text": {
+                "es": "¡Anda! ¿Así que la leña de las lumbres sale del olivo?",
+                "en": "Well! So the bonfire wood comes from the olive trees?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se corre en Jaén la víspera de San Antón?",
+              "en": "What race is run in Jaén on the eve of San Antón?"
+            },
+            "options": [
+              {
+                "es": "Una regata",
+                "en": "A regatta"
+              },
+              {
+                "es": "Una carrera nocturna por las calles",
+                "en": "A night race through the streets"
+              },
+              {
+                "es": "Una carrera de burros",
+                "en": "A donkey race"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Una carrera nocturna por las calles, entre lumbres.",
+              "en": "A night race through the streets, among the bonfires."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_lena",
+            "text": {
+              "es": "El olivo · La leña de las lumbres salía de las ramas de la poda del olivo.",
+              "en": "The olive tree · The bonfire wood came from olive pruning branches."
+            }
+          },
+          "nextNodeId": "g4_magdalena",
+          "nextHint": {
+            "es": "Sube hacia la Magdalena. Unos 12 minutos.",
+            "en": "Walk up towards La Magdalena. About 12 minutes."
+          }
+        },
+        {
+          "id": "gb1_sanlorenzo",
+          "title": {
+            "es": "Arco de San Lorenzo",
+            "en": "San Lorenzo Arch"
+          },
+          "location": {
+            "lat": 37.768,
+            "lng": -3.7908
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanlorenzo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "podador",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "melenchonera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "happy",
+              "text": {
+                "es": "¡Aquí arriba se ve bien el Jaén de antes! Calles estrechas y frío del bueno en enero.",
+                "en": "Up here you get a good look at old Jaén! Narrow streets and proper cold in January."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Las hogueras de invierno son una costumbre muy antigua en muchos pueblos de España: el fuego calentaba, alumbraba y reunía a los vecinos en las noches largas.",
+                "en": "Winter bonfires are a very old custom in many Spanish towns: fire warmed, lit up and brought neighbours together on long nights."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "thinking",
+              "text": {
+                "es": "Entonces el invierno también tiene algo que ver… Aunque frío hace todo el invierno, y lumbre solo hay una noche.",
+                "en": "So winter has something to do with it too… Although it's cold all winter, and there's only one night of bonfires."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían las hogueras en las noches de invierno?",
+              "en": "What were bonfires for on winter nights?"
+            },
+            "options": [
+              {
+                "es": "Para calentar, alumbrar y reunir a los vecinos",
+                "en": "To warm, give light and bring neighbours together"
+              },
+              {
+                "es": "Para asar castañas en verano",
+                "en": "To roast chestnuts in summer"
+              },
+              {
+                "es": "Para avisar a los barcos",
+                "en": "To signal to ships"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Calentaban, alumbraban y reunían a los vecinos.",
+              "en": "They warmed, gave light and brought neighbours together."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_frio",
+            "text": {
+              "es": "El invierno · Frío hace todo el invierno, pero la lumbre es una sola noche.",
+              "en": "The winter · It's cold all winter, but the bonfire is a single night."
+            }
+          },
+          "nextNodeId": "gb2_banos",
+          "nextHint": {
+            "es": "A los Baños árabes. Unos 4 minutos.",
+            "en": "To the Arab Baths. About 4 minutes."
+          }
+        },
+        {
+          "id": "gb2_banos",
+          "title": {
+            "es": "Baños árabes",
+            "en": "Arab Baths"
+          },
+          "location": {
+            "lat": 37.7702,
+            "lng": -3.7915
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_banos.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_banos.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ganadero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "podador",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En las lumbres se cantan y bailan melenchones, coplas en corro que se transmiten de generación en generación.",
+                "en": "Melenchones are sung and danced around the bonfires: circle songs passed down from generation to generation."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "happy",
+              "text": {
+                "es": "Y alrededor del fuego, los vecinos: melenchones, rosetas de maíz y buena conversación.",
+                "en": "And around the fire, the neighbours: melenchones, popcorn and good conversation."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero sin la leña de la poda no hay lumbre que dure. Eso te lo digo yo.",
+                "en": "But without pruning wood no bonfire lasts. Take it from me."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué son los melenchones?",
+              "en": "What are melenchones?"
+            },
+            "options": [
+              {
+                "es": "Dulces de Navidad",
+                "en": "Christmas sweets"
+              },
+              {
+                "es": "Ramas de olivo",
+                "en": "Olive branches"
+              },
+              {
+                "es": "Coplas que se bailan en corro alrededor de la lumbre",
+                "en": "Songs danced in a circle around the bonfire"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Coplas que se cantan y bailan en corro alrededor del fuego.",
+              "en": "Songs sung and danced in a circle around the fire."
+            }
+          },
+          "clue": {
+            "id": "lum_pista_melenchon",
+            "text": {
+              "es": "El olivo · El podador insiste: sin leña de poda no hay lumbre que dure.",
+              "en": "The olive tree · The pruner insists: without pruning wood no bonfire lasts."
+            }
+          },
+          "nextNodeId": "g4_magdalena",
+          "nextHint": {
+            "es": "Sube a la Magdalena. Unos 6 minutos.",
+            "en": "Walk up to La Magdalena. About 6 minutes."
+          }
+        },
+        {
+          "id": "g4_magdalena",
+          "title": {
+            "es": "Iglesia de la Magdalena",
+            "en": "Church of La Magdalena"
+          },
+          "location": {
+            "lat": 37.7729,
+            "lng": -3.7932
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_magdalena.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_magdalena.svg"
+              ],
+              "characters": [
+                {
+                  "id": "melenchonera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "ganadero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La fiesta de San Antón se celebra en Jaén desde hace siglos, y la tradición de las lumbres en los barrios se asentó sobre todo en el siglo XIX.",
+                "en": "San Antón has been celebrated in Jaén for centuries, and the tradition of neighbourhood bonfires took hold mostly in the 19th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_centro"
+                  ],
+                  "text": {
+                    "es": "Vienes del centro: el ganadero y el podador te han dado sus razones. ¿Seguimos la pista de la leña o la de la copla?",
+                    "en": "You've come from the centre: the farmer and the pruner gave you their reasons. Shall we follow the firewood lead or the song lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_antiguo"
+                  ],
+                  "text": {
+                    "es": "Vienes del Jaén antiguo: el frío y los melenchones. ¿Seguimos la pista de la leña o la de la copla?",
+                    "en": "You've come from old Jaén: the cold and the melenchones. Shall we follow the firewood lead or the song lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuándo se asentaron las lumbres en los barrios de Jaén?",
+              "en": "When did neighbourhood bonfires take hold in Jaén?"
+            },
+            "options": [
+              {
+                "es": "En tiempos de los romanos",
+                "en": "In Roman times"
+              },
+              {
+                "es": "Sobre todo en el siglo XIX",
+                "en": "Mostly in the 19th century"
+              },
+              {
+                "es": "En 2010",
+                "en": "In 2010"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Sobre todo en el siglo XIX, aunque la fiesta del santo es mucho más antigua.",
+              "en": "Mostly in the 19th century, though the saint's feast is much older."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "melenchonera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La leña o la copla?",
+              "en": "The firewood or the song?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la leña",
+                "en": "The firewood lead"
+              },
+              "hint": {
+                "es": "Con el podador",
+                "en": "With the pruner"
+              },
+              "targetNodeId": "g4a_lena",
+              "setFlags": [
+                "version_lena"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la copla",
+                "en": "The song lead"
+              },
+              "hint": {
+                "es": "Con el ganadero",
+                "en": "With the farmer"
+              },
+              "targetNodeId": "g4b_copla",
+              "setFlags": [
+                "version_copla"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g4a_lena",
+          "title": {
+            "es": "La leña",
+            "en": "The firewood"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mire: el santo pone la noche y el frío pone las ganas. Pero lo que arde es el olivo: ramas de la poda que había que quitar del campo.",
+                "en": "Look: the saint sets the night and the cold brings the mood. But what burns is the olive tree: pruning branches that had to be cleared from the fields."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "podador",
+              "expression": "happy",
+              "text": {
+                "es": "En Jaén, hasta la fiesta sale del olivo.",
+                "en": "In Jaén, even the party comes from the olive tree."
+              }
+            }
+          ],
+          "clue": {
+            "id": "lum_pista_arde",
+            "text": {
+              "es": "El olivo · Lo que arde en las lumbres es la leña de la poda del olivo.",
+              "en": "The olive tree · What burns in the bonfires is olive pruning wood."
+            }
+          },
+          "nextNodeId": "g5_lumbre",
+          "nextHint": {
+            "es": "Baja a la Plaza de San Juan. Unos 5 minutos.",
+            "en": "Walk down to Plaza de San Juan. About 5 minutes."
+          }
+        },
+        {
+          "id": "g4b_copla",
+          "title": {
+            "es": "La copla",
+            "en": "The song"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mi abuela cantaba melenchones y decía: «la lumbre es de San Antón, la leña es del olivar». Por algo lo diría.",
+                "en": "My grandmother sang melenchones and used to say: 'the fire belongs to San Antón, the wood to the olive grove.' She must have had her reasons."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ganadero",
+              "expression": "thinking",
+              "text": {
+                "es": "El santo da la fecha; el olivo, el fuego. Y el frío… el frío viene solo.",
+                "en": "The saint gives the date; the olive tree, the fire. And the cold… the cold comes by itself."
+              }
+            }
+          ],
+          "clue": {
+            "id": "lum_pista_copla",
+            "text": {
+              "es": "El santo · El santo da la fecha y el olivo da el fuego.",
+              "en": "The saint · The saint gives the date and the olive tree gives the fire."
+            }
+          },
+          "nextNodeId": "g5_lumbre",
+          "nextHint": {
+            "es": "Baja a la Plaza de San Juan. Unos 5 minutos.",
+            "en": "Walk down to Plaza de San Juan. About 5 minutes."
+          }
+        },
+        {
+          "id": "g5_lumbre",
+          "title": {
+            "es": "Plaza de San Juan",
+            "en": "Plaza de San Juan"
+          },
+          "location": {
+            "lat": 37.7697,
+            "lng": -3.792
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_lumbre.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_lumbre.svg"
+              ],
+              "characters": [
+                {
+                  "id": "melenchonera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "podador",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La lumbre principal de la ciudad se enciende en la Plaza de San Juan, en el corazón del Jaén antiguo, con música y melenchones.",
+                "en": "The city's main bonfire is lit in Plaza de San Juan, in the heart of old Jaén, with music and melenchones."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto, al calor de la lumbre. El santo, el invierno o el olivo: ¿por qué Jaén enciende lumbres por San Antón?",
+                "en": "Verdict time, by the warmth of the bonfire. The saint, the winter or the olive tree: why does Jaén light bonfires for San Antón?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué Jaén enciende lumbres por San Antón?",
+              "en": "Why does Jaén light bonfires for San Antón?"
+            },
+            "options": [
+              {
+                "es": "Porque se quemaba la leña de la poda del olivo la víspera del santo",
+                "en": "Because olive pruning wood was burned on the saint's eve"
+              },
+              {
+                "es": "Porque lo manda el santo",
+                "en": "Because the saint commands it"
+              },
+              {
+                "es": "Solo porque hace frío",
+                "en": "Just because it's cold"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por el olivo. San Antón pone la fecha y el invierno el frío, pero las lumbres se alimentaban con la leña de la poda, que llega justo en esas semanas.",
+              "en": "Because of the olive tree. San Antón sets the date and winter brings the cold, but the bonfires were fed with pruning wood, which comes in exactly those weeks."
+            }
+          },
+          "nextNodeId": "g6_final"
+        },
+        {
+          "id": "g6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_lena"
+                  ],
+                  "text": {
+                    "es": "El centro y la leña: del mercado al fuego. Eres guardián de la lumbre.",
+                    "en": "The centre and the firewood: from market to fire. You're the keeper of the bonfire."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_centro",
+                    "version_copla"
+                  ],
+                  "text": {
+                    "es": "El centro y la copla: bendición y canción. Eres cantor de San Antón.",
+                    "en": "The centre and the song: blessing and singing. You're San Antón's singer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_antiguo",
+                    "version_lena"
+                  ],
+                  "text": {
+                    "es": "El Jaén antiguo y la leña: piedra y olivo. Eres podador de honor.",
+                    "en": "Old Jaén and the firewood: stone and olive. You're an honorary pruner."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_antiguo",
+                    "version_copla"
+                  ],
+                  "text": {
+                    "es": "El Jaén antiguo y la copla: corro y melenchón. Eres melenchonero mayor.",
+                    "en": "Old Jaén and the song: circle and melenchón. You're the head melenchón singer."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "happy",
+              "text": {
+                "es": "Y ahora, al corro, que empieza el melenchón. ¡Dame la mano!",
+                "en": "And now, into the circle, the melenchón is starting. Give me your hand!"
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "guardian_lumbre",
+          "requires": [
+            "camino_centro",
+            "version_lena"
+          ],
+          "title": {
+            "es": "Guardián de la lumbre",
+            "en": "Keeper of the bonfire"
+          }
+        },
+        {
+          "id": "cantor_santon",
+          "requires": [
+            "camino_centro",
+            "version_copla"
+          ],
+          "title": {
+            "es": "Cantor de San Antón",
+            "en": "San Antón's singer"
+          }
+        },
+        {
+          "id": "podador_honor",
+          "requires": [
+            "camino_antiguo",
+            "version_lena"
+          ],
+          "title": {
+            "es": "Podador de honor",
+            "en": "Honorary pruner"
+          }
+        },
+        {
+          "id": "melenchonero_mayor",
+          "requires": [
+            "camino_antiguo",
+            "version_copla"
+          ],
+          "title": {
+            "es": "Melenchonero mayor",
+            "en": "Head melenchón singer"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "candela",
+          "name": {
+            "es": "La candela",
+            "en": "The flame"
+          },
+          "icon": "collectibles/jaen_fiesta_candela.svg",
+          "awardedAtNodeId": "g1_sanildefonso"
+        },
+        {
+          "id": "tijeras_poda",
+          "name": {
+            "es": "Las tijeras de podar",
+            "en": "The pruning shears"
+          },
+          "icon": "collectibles/jaen_fiesta_tijeras.svg",
+          "awardedAtNodeId": "g2_catedral"
+        },
+        {
+          "id": "cencerro",
+          "name": {
+            "es": "El cencerro",
+            "en": "The cowbell"
+          },
+          "icon": "collectibles/jaen_fiesta_cencerro.svg",
+          "awardedAtNodeId": "ga1_mercado"
+        },
+        {
+          "id": "dorsal",
+          "name": {
+            "es": "El dorsal de la carrera",
+            "en": "The race number"
+          },
+          "icon": "collectibles/jaen_fiesta_dorsal.svg",
+          "awardedAtNodeId": "ga2_constitucion"
+        },
+        {
+          "id": "brasero",
+          "name": {
+            "es": "El brasero",
+            "en": "The brazier"
+          },
+          "icon": "collectibles/jaen_fiesta_brasero.svg",
+          "awardedAtNodeId": "gb1_sanlorenzo"
+        },
+        {
+          "id": "rosetas",
+          "name": {
+            "es": "Las rosetas",
+            "en": "The popcorn"
+          },
+          "icon": "collectibles/jaen_fiesta_rosetas.svg",
+          "awardedAtNodeId": "gb2_banos"
+        },
+        {
+          "id": "haz_lena",
+          "name": {
+            "es": "El haz de leña",
+            "en": "The bundle of firewood"
+          },
+          "icon": "collectibles/jaen_fiesta_haz.svg",
+          "awardedAtNodeId": "g5_lumbre"
+        },
+        {
+          "id": "insignia_lumbres",
+          "name": {
+            "es": "¿Por qué Jaén enciende lumbres por San Antón?",
+            "en": "Why Does Jaén Light Bonfires for San Antón?"
+          },
+          "icon": "collectibles/jaen_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
       ]

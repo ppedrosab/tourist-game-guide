@@ -1,6 +1,6 @@
 {
   "id": "granada",
-  "version": 2,
+  "version": 3,
   "name": {
     "es": "Granada",
     "en": "Granada"
@@ -15,8 +15,8 @@
   },
   "bounds": [
     {
-      "lat": 37.173,
-      "lng": -3.601
+      "lat": 37.172,
+      "lng": -3.602
     },
     {
       "lat": 37.184,
@@ -100,6 +100,42 @@
         "en": "A cloistered nun who tends the turntable through which her convent sells sweets. Discreet, with a great sense of humour."
       },
       "avatar": "sprites/tornera/tornera_neutral.svg"
+    },
+    {
+      "id": "cabezudo",
+      "name": {
+        "es": "El Cabezudo",
+        "en": "The Cabezudo"
+      },
+      "description": {
+        "es": "Lleva una cabeza enorme de cartón en el Corpus y persigue a los niños. Bromista y juguetón.",
+        "en": "He wears an enormous papier-mâché head at Corpus and chases the children. A prankster and playful."
+      },
+      "avatar": "sprites/cabezudo/cabezudo_neutral.svg"
+    },
+    {
+      "id": "modista",
+      "name": {
+        "es": "La Modista",
+        "en": "The Dressmaker"
+      },
+      "description": {
+        "es": "Modista granadina, entendida en la muñeca de la Tarasca. Coqueta y muy observadora.",
+        "en": "A Granada dressmaker, an expert on the Tarasca's doll. Stylish and very observant."
+      },
+      "avatar": "sprites/modista/modista_neutral.svg"
+    },
+    {
+      "id": "tamborilero",
+      "name": {
+        "es": "El Tamborilero",
+        "en": "The Drummer"
+      },
+      "description": {
+        "es": "Toca el tambor en el desfile de gigantes y cabezudos. Serio con el ritmo, alegre con la gente.",
+        "en": "He plays the drum in the parade of giants and cabezudos. Serious about rhythm, cheerful with people."
+      },
+      "avatar": "sprites/tamborilero/tamborilero_neutral.svg"
     }
   ],
   "routes": [
@@ -2409,6 +2445,1142 @@
           },
           "icon": "collectibles/granada_pionono.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "tarasca",
+      "title": {
+        "es": "¿De dónde viene la Tarasca?",
+        "en": "Where Does the Tarasca Come From?"
+      },
+      "summary": {
+        "es": "En el Corpus de Granada desfila un dragón con una muñeca vestida a la moda. ¿Viene de Francia, es granadino o es cosa de modistas? Con un cabezudo, una modista y un tamborilero.",
+        "en": "In Granada's Corpus a dragon parades with a fashionably dressed doll. Does it come from France, is it from Granada, or is it the dressmakers' doing? With a cabezudo, a dressmaker and a drummer."
+      },
+      "era": "1633 - hoy",
+      "guideCharacterId": "cabezudo",
+      "durationMin": 100,
+      "distanceKm": 2.8,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La catedral",
+            "en": "The cathedral"
+          },
+          "trail": {
+            "es": "camino de la catedral",
+            "en": "cathedral trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "El Darro",
+            "en": "The Darro"
+          },
+          "trail": {
+            "es": "camino del Darro",
+            "en": "Darro trail"
+          }
+        }
+      },
+      "startNodeId": "f1_carmen",
+      "nodes": [
+        {
+          "id": "f1_carmen",
+          "title": {
+            "es": "Plaza del Carmen",
+            "en": "Plaza del Carmen"
+          },
+          "location": {
+            "lat": 37.1737,
+            "lng": -3.5985
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_carmen.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_carmen.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cabezudo",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "happy",
+              "text": {
+                "es": "¡Aquí está el cabezudo! Llevo esta cabeza enorme en el Corpus, detrás de la Tarasca y los gigantes. Los niños corren, yo persigo.",
+                "en": "Here comes the cabezudo! I wear this enormous head at Corpus, behind the Tarasca and the giants. The children run, I chase."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "thinking",
+              "text": {
+                "es": "Te traigo un misterio: la Tarasca, un dragón con una muñeca encima vestida a la última moda. ¿De dónde viene ese bicho?",
+                "en": "I've got a mystery for you: the Tarasca, a dragon with a doll on top dressed in the latest fashion. Where does that creature come from?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "proud",
+              "text": {
+                "es": "Tres sospechosos: Francia, porque hay un pueblo que se llama Tarascón; Granada, que dice que es suya de siempre; y la moda, por lo del vestido. Apunta.",
+                "en": "Three suspects: France, because there's a town called Tarascon; Granada, which says it's always been hers; and fashion, because of the dress. Take notes."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Corpus de Granada es su fiesta mayor. Empieza el miércoles con el desfile de la Tarasca, los gigantes y los cabezudos, que salen del ayuntamiento, en esta plaza.",
+                "en": "Corpus is Granada's main festival. It starts on Wednesday with the parade of the Tarasca, the giants and the cabezudos, which set out from the town hall, in this square."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué sale el miércoles del Corpus desde el ayuntamiento?",
+              "en": "What sets out from the town hall on Corpus Wednesday?"
+            },
+            "options": [
+              {
+                "es": "Una regata",
+                "en": "A regatta"
+              },
+              {
+                "es": "La Tarasca, los gigantes y los cabezudos",
+                "en": "The Tarasca, the giants and the cabezudos"
+              },
+              {
+                "es": "Una carrera de caballos",
+                "en": "A horse race"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La Tarasca con los gigantes y los cabezudos, entre tambores.",
+              "en": "The Tarasca with the giants and the cabezudos, to the beat of drums."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_nombre",
+            "text": {
+              "es": "Francia · En Francia hay un pueblo que se llama Tarascón. ¿Casualidad?",
+              "en": "France · In France there's a town called Tarascon. Coincidence?"
+            }
+          },
+          "nextNodeId": "f2_bibrambla",
+          "nextHint": {
+            "es": "A la plaza de Bib-Rambla. Unos 3 minutos.",
+            "en": "To Plaza de Bib-Rambla. About 3 minutes."
+          }
+        },
+        {
+          "id": "f2_bibrambla",
+          "title": {
+            "es": "Plaza de Bib-Rambla",
+            "en": "Plaza de Bib-Rambla"
+          },
+          "location": {
+            "lat": 37.1752,
+            "lng": -3.6003
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_bibrambla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_bibrambla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cabezudo",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "modista",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola, cielo! Soy modista. Cada año un diseñador granadino viste a la muñeca de la Tarasca, y nadie sabe cómo será hasta el miércoles.",
+                "en": "Hello, love! I'm a dressmaker. Every year a Granada designer dresses the Tarasca's doll, and nobody knows what it'll look like until Wednesday."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En Granada se dice «vas peor vestida que la Tarasca» a quien lleva un modelito atrevido. Durante siglos, su vestido anunciaba la moda del verano.",
+                "en": "In Granada they say “you're dressed worse than the Tarasca” to someone in a daring outfit. For centuries, her dress announced the summer fashion."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "thinking",
+              "text": {
+                "es": "El vestido es moda, sí. Pero el dragón… el dragón es mucho más viejo que cualquier moda.",
+                "en": "The dress is fashion, yes. But the dragon… the dragon is much older than any fashion."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué se dice en Granada de quien viste muy atrevido?",
+              "en": "What do they say in Granada about someone in a daring outfit?"
+            },
+            "options": [
+              {
+                "es": "«Vas peor vestida que la Tarasca»",
+                "en": "“You're dressed worse than the Tarasca”"
+              },
+              {
+                "es": "«Vas como un gigante»",
+                "en": "“You look like a giant”"
+              },
+              {
+                "es": "«Vas de Corpus»",
+                "en": "“You're off to Corpus”"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "«Vas peor vestida que la Tarasca», por lo llamativo de su vestido.",
+              "en": "“You're dressed worse than the Tarasca”, because her dress is so striking."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_vestido",
+            "text": {
+              "es": "La moda · El vestido de la muñeca cambia cada año, pero el dragón es mucho más antiguo.",
+              "en": "Fashion · The doll's dress changes every year, but the dragon is much older."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "cabezudo",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por la catedral y la Alcaicería, por donde pasa el Corpus, o por Plaza Nueva y el Darro?",
+              "en": "Shall we go by the cathedral and the Alcaicería, where Corpus passes, or by Plaza Nueva and the Darro?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por la catedral",
+                "en": "By the cathedral"
+              },
+              "hint": {
+                "es": "Pasiegas y Alcaicería",
+                "en": "Pasiegas and Alcaicería"
+              },
+              "targetNodeId": "fa1_catedral",
+              "setFlags": [
+                "camino_catedral"
+              ],
+              "distanceM": 250,
+              "walkMin": 3
+            },
+            {
+              "label": {
+                "es": "Por el Darro",
+                "en": "By the Darro"
+              },
+              "hint": {
+                "es": "Plaza Nueva y los Tristes",
+                "en": "Plaza Nueva and the Tristes"
+              },
+              "targetNodeId": "fb1_plazanueva",
+              "setFlags": [
+                "camino_darro"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "fa1_catedral",
+          "title": {
+            "es": "Plaza de las Pasiegas",
+            "en": "Plaza de las Pasiegas"
+          },
+          "location": {
+            "lat": 37.1765,
+            "lng": -3.5995
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tamborilero",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "cabezudo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Rataplán! Tamborilero del Corpus. Marco el paso de gigantes, cabezudos y Tarasca por toda la ciudad.",
+                "en": "Rat-a-tat! Corpus drummer. I set the pace for giants, cabezudos and Tarasca all through the city."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La primera Tarasca documentada en Granada es de 1633. Su forma actual se fijó en el siglo XIX, cuando se quiso dar nueva vida a las fiestas del Corpus.",
+                "en": "The first documented Tarasca in Granada dates from 1633. Her current form was set in the 19th century, when the city wanted to revive the Corpus festivities."
+              },
+              "year": 1633
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "thinking",
+              "text": {
+                "es": "O sea, que en Granada la Tarasca tiene casi cuatrocientos años. Pero ¿la inventaron aquí?",
+                "en": "So in Granada the Tarasca is nearly four hundred years old. But was she invented here?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué año es la primera Tarasca documentada en Granada?",
+              "en": "When was the first Tarasca documented in Granada?"
+            },
+            "options": [
+              {
+                "es": "De 1492",
+                "en": "1492"
+              },
+              {
+                "es": "De 1992",
+                "en": "1992"
+              },
+              {
+                "es": "De 1633",
+                "en": "1633"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "De 1633, aunque su forma de hoy es del siglo XIX.",
+              "en": "1633, though her present form dates from the 19th century."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_1633",
+            "text": {
+              "es": "Granada · En Granada la Tarasca está documentada desde 1633.",
+              "en": "Granada · In Granada the Tarasca is documented from 1633."
+            }
+          },
+          "nextNodeId": "fa2_alcaiceria",
+          "nextHint": {
+            "es": "Entra en la Alcaicería. Un minuto.",
+            "en": "Go into the Alcaicería. One minute."
+          }
+        },
+        {
+          "id": "fa2_alcaiceria",
+          "title": {
+            "es": "Alcaicería",
+            "en": "Alcaicería"
+          },
+          "location": {
+            "lat": 37.1757,
+            "lng": -3.5993
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_alcaiceria.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_alcaiceria.svg"
+              ],
+              "characters": [
+                {
+                  "id": "modista",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "tamborilero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En muchas ciudades de España salían tarascas en el Corpus: Toledo, Madrid, Valencia… Granada es de las que mejor ha conservado la tradición.",
+                "en": "Many Spanish cities had tarascas in their Corpus processions: Toledo, Madrid, Valencia… Granada is among those that best preserved the tradition."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "proud",
+              "text": {
+                "es": "Si hay tarascas en tantas ciudades, no puede ser un invento granadino. Tuvo que venir de algún sitio.",
+                "en": "If there are tarascas in so many cities, it can't be a Granada invention. It must have come from somewhere."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi maestro decía que el nombre viene de un dragón de Francia. De un río, de un pueblo…",
+                "en": "My teacher used to say the name comes from a dragon in France. From a river, a town…"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué fiesta sale la Tarasca?",
+              "en": "In which festival does the Tarasca appear?"
+            },
+            "options": [
+              {
+                "es": "En Carnaval",
+                "en": "At Carnival"
+              },
+              {
+                "es": "En el Corpus",
+                "en": "At Corpus"
+              },
+              {
+                "es": "En Navidad",
+                "en": "At Christmas"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En el Corpus, a finales de primavera.",
+              "en": "At Corpus, in late spring."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_ciudades",
+            "text": {
+              "es": "Francia · Hubo tarascas en muchas ciudades: no parece un invento de Granada.",
+              "en": "France · There were tarascas in many cities: it doesn't look like a Granada invention."
+            }
+          },
+          "nextNodeId": "f4_plaza",
+          "nextHint": {
+            "es": "A la plaza Isabel la Católica. Dos minutos.",
+            "en": "To Plaza Isabel la Católica. Two minutes."
+          }
+        },
+        {
+          "id": "fb1_plazanueva",
+          "title": {
+            "es": "Plaza Nueva",
+            "en": "Plaza Nueva"
+          },
+          "location": {
+            "lat": 37.1768,
+            "lng": -3.596
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_plazanueva.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plazanueva.svg"
+              ],
+              "characters": [
+                {
+                  "id": "tamborilero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "modista",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Plaza Nueva está construida sobre el río Darro, que pasa por debajo, abovedado. En ella está la Real Chancillería, del siglo XVI.",
+                "en": "Plaza Nueva is built over the river Darro, which runs underneath in a vault. The 16th-century Royal Chancery stands here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "proud",
+              "text": {
+                "es": "Yo toco el tambor, pero sé de dragones. El de la Tarasca es un dragón vencido: por eso lo sacan en procesión, domado.",
+                "en": "I play the drum, but I know about dragons. The Tarasca's dragon is a defeated one: that's why it's paraded, tamed."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "thinking",
+              "text": {
+                "es": "Un dragón domado… Eso me suena a cuento antiguo, no a moda.",
+                "en": "A tamed dragon… That sounds like an old tale, not fashion."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué río pasa por debajo de Plaza Nueva?",
+              "en": "Which river runs beneath Plaza Nueva?"
+            },
+            "options": [
+              {
+                "es": "El Darro",
+                "en": "The Darro"
+              },
+              {
+                "es": "El Genil",
+                "en": "The Genil"
+              },
+              {
+                "es": "El Guadalquivir",
+                "en": "The Guadalquivir"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El Darro, abovedado bajo la plaza.",
+              "en": "The Darro, vaulted over beneath the square."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_domado",
+            "text": {
+              "es": "Francia · La Tarasca es un dragón vencido y domado: parece venir de un cuento antiguo.",
+              "en": "France · The Tarasca is a defeated, tamed dragon: it seems to come from an old tale."
+            }
+          },
+          "nextNodeId": "fb2_tristes",
+          "nextHint": {
+            "es": "Sube por la Carrera del Darro hasta el Paseo de los Tristes. Unos 10 minutos.",
+            "en": "Walk up Carrera del Darro to the Paseo de los Tristes. About 10 minutes."
+          }
+        },
+        {
+          "id": "fb2_tristes",
+          "title": {
+            "es": "Paseo de los Tristes",
+            "en": "Paseo de los Tristes"
+          },
+          "location": {
+            "lat": 37.1792,
+            "lng": -3.5905
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_tristes.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_tristes.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cabezudo",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "tamborilero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que en Tarascón, en la Provenza francesa, un dragón aterrorizaba el río Ródano hasta que santa Marta lo amansó con sus oraciones.",
+                "en": "It's said that in Tarascon, in French Provence, a dragon terrorised the river Rhône until Saint Martha tamed it with her prayers."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "happy",
+              "text": {
+                "es": "¡Ahí está! El dragón de Tarascón: la tarasca. Un bicho de río, como el Darro que tienes al lado.",
+                "en": "There it is! The dragon of Tarascon: the tarasque. A river beast, like the Darro right beside you."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "thinking",
+              "text": {
+                "es": "Así que el nombre y el dragón son franceses… y a Granada llegó por el Corpus.",
+                "en": "So the name and the dragon are French… and it came to Granada through Corpus."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué región de Francia está Tarascón?",
+              "en": "In which region of France is Tarascon?"
+            },
+            "options": [
+              {
+                "es": "En Bretaña",
+                "en": "Brittany"
+              },
+              {
+                "es": "En Normandía",
+                "en": "Normandy"
+              },
+              {
+                "es": "En la Provenza",
+                "en": "Provence"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En la Provenza, junto al río Ródano.",
+              "en": "In Provence, beside the river Rhône."
+            }
+          },
+          "clue": {
+            "id": "tar_pista_tarascon",
+            "text": {
+              "es": "Francia · Según la leyenda, en Tarascón, en Francia, vivía un dragón que dio nombre a la tarasca.",
+              "en": "France · According to legend, a dragon that gave the tarasque its name lived in Tarascon, France."
+            }
+          },
+          "nextNodeId": "f4_plaza",
+          "nextHint": {
+            "es": "Baja hasta la plaza Isabel la Católica. Unos 12 minutos.",
+            "en": "Walk down to Plaza Isabel la Católica. About 12 minutes."
+          }
+        },
+        {
+          "id": "f4_plaza",
+          "title": {
+            "es": "Plaza Isabel la Católica",
+            "en": "Plaza Isabel la Católica"
+          },
+          "location": {
+            "lat": 37.176,
+            "lng": -3.5985
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_plaza.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plaza.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cabezudo",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "modista",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Los gigantes del Corpus de Granada representan parejas de distintos continentes, y bailan al son de la dulzaina y el tambor.",
+                "en": "Granada's Corpus giants represent couples from different continents, and they dance to the sound of the shawm and the drum."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_catedral"
+                  ],
+                  "text": {
+                    "es": "Vienes de la catedral: tarascas hubo en muchas ciudades y en Granada desde 1633. ¿La pista del vestido o la del tambor?",
+                    "en": "You've come from the cathedral: there were tarascas in many cities, and in Granada since 1633. The dress lead or the drum lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_darro"
+                  ],
+                  "text": {
+                    "es": "Vienes del Darro: ya sabes lo del dragón de Tarascón. ¿La pista del vestido o la del tambor?",
+                    "en": "You've come along the Darro: you know about the dragon of Tarascon. The dress lead or the drum lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué instrumentos bailan los gigantes?",
+              "en": "What instruments do the giants dance to?"
+            },
+            "options": [
+              {
+                "es": "Gaita escocesa",
+                "en": "Bagpipes"
+              },
+              {
+                "es": "Dulzaina y tambor",
+                "en": "Shawm and drum"
+              },
+              {
+                "es": "Piano",
+                "en": "Piano"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Dulzaina y tambor, la música de los pasacalles.",
+              "en": "Shawm and drum, the music of street parades."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "cabezudo",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El vestido o el tambor?",
+              "en": "The dress or the drum?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del vestido",
+                "en": "The dress lead"
+              },
+              "hint": {
+                "es": "Con la modista",
+                "en": "With the dressmaker"
+              },
+              "targetNodeId": "f4a_vestido",
+              "setFlags": [
+                "version_vestido"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del tambor",
+                "en": "The drum lead"
+              },
+              "hint": {
+                "es": "Con el tamborilero",
+                "en": "With the drummer"
+              },
+              "targetNodeId": "f4b_tambor",
+              "setFlags": [
+                "version_tambor"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f4a_vestido",
+          "title": {
+            "es": "El vestido",
+            "en": "The dress"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "dramatic",
+              "text": {
+                "es": "Te lo confieso: la moda es lo que hace nuestra Tarasca tan granadina. Pero el dragón no lo cosimos nosotras.",
+                "en": "I'll confess: fashion is what makes our Tarasca so Granada. But we didn't sew the dragon."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "modista",
+              "expression": "happy",
+              "text": {
+                "es": "El dragón vino con el nombre, de Francia. Aquí le pusimos encima la muñeca más elegante del año.",
+                "en": "The dragon came with the name, from France. Here we put the most elegant doll of the year on top."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tar_pista_encima",
+            "text": {
+              "es": "La moda · La moda es granadina, pero el dragón y el nombre vinieron de Francia.",
+              "en": "Fashion · The fashion is Granada's, but the dragon and the name came from France."
+            }
+          },
+          "nextNodeId": "f5_corral",
+          "nextHint": {
+            "es": "Al Corral del Carbón. Dos minutos.",
+            "en": "To the Corral del Carbón. Two minutes."
+          }
+        },
+        {
+          "id": "f4b_tambor",
+          "title": {
+            "es": "El tambor",
+            "en": "The drum"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "proud",
+              "text": {
+                "es": "Las fiestas del Corpus se llenaron de figuras de toda Europa: gigantes, dragones, cabezudos. La tarasca viajó de Francia a Castilla y de ahí a Granada.",
+                "en": "The Corpus festivities filled up with figures from all over Europe: giants, dragons, cabezudos. The tarasque travelled from France to Castile and from there to Granada."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "tamborilero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y aquí se quedó! Con su tambor, que ese sí es mío.",
+                "en": "And here she stayed! With her drum, which is definitely mine."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tar_pista_viaje",
+            "text": {
+              "es": "Francia · La tarasca viajó de Francia a Castilla y de ahí a Granada, con las fiestas del Corpus.",
+              "en": "France · The tarasque travelled from France to Castile and on to Granada, with the Corpus festivities."
+            }
+          },
+          "nextNodeId": "f5_corral",
+          "nextHint": {
+            "es": "Al Corral del Carbón. Dos minutos.",
+            "en": "To the Corral del Carbón. Two minutes."
+          }
+        },
+        {
+          "id": "f5_corral",
+          "title": {
+            "es": "Corral del Carbón",
+            "en": "Corral del Carbón"
+          },
+          "location": {
+            "lat": 37.1747,
+            "lng": -3.598
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_corral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_corral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "cabezudo",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "modista",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Durante el Corpus, Granada celebra también su feria, en el recinto de Almanjáyar, con casetas y atracciones.",
+                "en": "During Corpus, Granada also holds its fair, at the Almanjáyar fairground, with marquees and rides."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto: Francia, Granada o la moda. ¿De dónde viene la Tarasca?",
+                "en": "Verdict time: France, Granada or fashion. Where does the Tarasca come from?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De dónde viene la Tarasca?",
+              "en": "Where does the Tarasca come from?"
+            },
+            "options": [
+              {
+                "es": "De Francia: de la leyenda del dragón de Tarascón",
+                "en": "From France: the legend of the dragon of Tarascon"
+              },
+              {
+                "es": "Del mundo de la moda",
+                "en": "From the fashion world"
+              },
+              {
+                "es": "Es un invento de Granada",
+                "en": "It's a Granada invention"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "De Francia. El dragón y su nombre vienen de la leyenda de Tarascón, en la Provenza; llegó con las fiestas del Corpus. Granada la tiene desde 1633 y le añadió lo más suyo: la muñeca vestida a la moda.",
+              "en": "From France. The dragon and its name come from the legend of Tarascon, in Provence; it arrived with the Corpus festivities. Granada has had it since 1633 and added its own touch: the fashionably dressed doll."
+            }
+          },
+          "nextNodeId": "f6_final"
+        },
+        {
+          "id": "f6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_catedral",
+                    "version_vestido"
+                  ],
+                  "text": {
+                    "es": "La catedral y el vestido: sabes de dragones y de moda. Eres diseñador de la Tarasca.",
+                    "en": "The cathedral and the dress: you know about dragons and fashion. You're the Tarasca's designer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_catedral",
+                    "version_tambor"
+                  ],
+                  "text": {
+                    "es": "La catedral y el tambor: has seguido el desfile paso a paso. Eres gigante del Corpus.",
+                    "en": "The cathedral and the drum: you've followed the parade step by step. You're a Corpus giant."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_darro",
+                    "version_vestido"
+                  ],
+                  "text": {
+                    "es": "El Darro y el vestido: del río de Tarascón al de Granada. Eres domador de tarascas.",
+                    "en": "The Darro and the dress: from the Tarascon river to Granada's. You're a tarasque tamer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_darro",
+                    "version_tambor"
+                  ],
+                  "text": {
+                    "es": "El Darro y el tambor: rataplán, caso cerrado. Eres cabezudo de honor.",
+                    "en": "The Darro and the drum: rat-a-tat, case closed. You're an honorary cabezudo."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "cabezudo",
+              "expression": "happy",
+              "text": {
+                "es": "¡Y ahora, a correr, que va el cabezudo! Nos vemos el miércoles del Corpus.",
+                "en": "And now, run, here comes the cabezudo! See you on Corpus Wednesday."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "disenador_tarasca",
+          "requires": [
+            "camino_catedral",
+            "version_vestido"
+          ],
+          "title": {
+            "es": "Diseñador de la Tarasca",
+            "en": "The Tarasca's designer"
+          }
+        },
+        {
+          "id": "gigante_corpus",
+          "requires": [
+            "camino_catedral",
+            "version_tambor"
+          ],
+          "title": {
+            "es": "Gigante del Corpus",
+            "en": "Corpus giant"
+          }
+        },
+        {
+          "id": "domador_tarascas",
+          "requires": [
+            "camino_darro",
+            "version_vestido"
+          ],
+          "title": {
+            "es": "Domador de tarascas",
+            "en": "Tarasque tamer"
+          }
+        },
+        {
+          "id": "cabezudo_honor",
+          "requires": [
+            "camino_darro",
+            "version_tambor"
+          ],
+          "title": {
+            "es": "Cabezudo de honor",
+            "en": "Honorary cabezudo"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "cabezudo",
+          "name": {
+            "es": "El cabezudo",
+            "en": "The cabezudo"
+          },
+          "icon": "collectibles/granada_fiesta_cabezudo.svg",
+          "awardedAtNodeId": "f1_carmen"
+        },
+        {
+          "id": "tijeras",
+          "name": {
+            "es": "Las tijeras de la modista",
+            "en": "The dressmaker's scissors"
+          },
+          "icon": "collectibles/granada_fiesta_tijeras.svg",
+          "awardedAtNodeId": "f2_bibrambla"
+        },
+        {
+          "id": "tambor",
+          "name": {
+            "es": "El tambor",
+            "en": "The drum"
+          },
+          "icon": "collectibles/granada_fiesta_tambor.svg",
+          "awardedAtNodeId": "fa1_catedral"
+        },
+        {
+          "id": "gigantes",
+          "name": {
+            "es": "Los gigantes",
+            "en": "The giants"
+          },
+          "icon": "collectibles/granada_fiesta_gigantes.svg",
+          "awardedAtNodeId": "fa2_alcaiceria"
+        },
+        {
+          "id": "dulzaina",
+          "name": {
+            "es": "La dulzaina",
+            "en": "The shawm"
+          },
+          "icon": "collectibles/granada_fiesta_dulzaina.svg",
+          "awardedAtNodeId": "fb1_plazanueva"
+        },
+        {
+          "id": "dragon",
+          "name": {
+            "es": "El dragón de Tarascón",
+            "en": "The dragon of Tarascon"
+          },
+          "icon": "collectibles/granada_fiesta_dragon.svg",
+          "awardedAtNodeId": "fb2_tristes"
+        },
+        {
+          "id": "munequita",
+          "name": {
+            "es": "La muñeca de la Tarasca",
+            "en": "The Tarasca's doll"
+          },
+          "icon": "collectibles/granada_fiesta_muneca.svg",
+          "awardedAtNodeId": "f5_corral"
+        },
+        {
+          "id": "insignia_tarasca",
+          "name": {
+            "es": "¿De dónde viene la Tarasca?",
+            "en": "Where Does the Tarasca Come From?"
+          },
+          "icon": "collectibles/granada_fiesta_insignia.svg",
+          "awardedAtNodeId": "f6_final"
         }
       ]
     }

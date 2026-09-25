@@ -82,6 +82,27 @@ describe.each(packs)("reparto del pack %s", (_source, pack) => {
   });
 });
 
+describe("colección compartida", () => {
+  // La colección junta coleccionables, finales y pistas de todas las ciudades en una sola lista
+  // de ids: si dos rutas repiten uno, ganarlo en una lo marca también en la otra.
+  const kinds: [string, (r: Route) => string[]][] = [
+    ["coleccionables", (r) => (r.rewards ?? []).map((c) => c.id)],
+    ["finales", (r) => (r.endings ?? []).map((e) => e.id)],
+    ["pistas", (r) => r.nodes.flatMap((n) => (n.clue ? [n.clue.id] : []))],
+  ];
+  it.each(kinds)("los ids de %s no se repiten entre rutas", (_kind, idsOf) => {
+    const owner = new Map<string, string>();
+    const repeated: string[] = [];
+    for (const [, , route] of routes)
+      for (const id of idsOf(route)) {
+        const first = owner.get(id);
+        if (first && first !== route.id) repeated.push(`${id} (${first} y ${route.id})`);
+        else owner.set(id, route.id);
+      }
+    expect(repeated).toEqual([]);
+  });
+});
+
 describe.each(routes)("ruta %s", (_id, pack, route) => {
   it("todos los finales son alcanzables y toda partida acaba en uno", () => {
     const games = allPlaythroughs(pack, route);

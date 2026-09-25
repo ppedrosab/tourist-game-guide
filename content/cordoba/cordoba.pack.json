@@ -1,6 +1,6 @@
 {
   "id": "cordoba",
-  "version": 1,
+  "version": 2,
   "name": {
     "es": "Córdoba",
     "en": "Córdoba"
@@ -10,17 +10,17 @@
     "en"
   ],
   "center": {
-    "lat": 36.881,
+    "lat": 37.881,
     "lng": -4.779
   },
   "bounds": [
     {
-      "lat": 36.874,
-      "lng": -4.787
+      "lat": 37.869,
+      "lng": -4.788
     },
     {
-      "lat": 36.891,
-      "lng": -4.771
+      "lat": 37.891,
+      "lng": -4.764
     }
   ],
   "coverImage": "img/cover_cordoba.jpg",
@@ -99,6 +99,42 @@
         "en": "A labourer from the Córdoba olive groves. Simple, wise and always with his dornillo at hand."
       },
       "avatar": "sprites/jornalero/jornalero_neutral.svg"
+    },
+    {
+      "id": "crucera",
+      "name": {
+        "es": "La Crucera",
+        "en": "The Cross Maker"
+      },
+      "description": {
+        "es": "Monta cada mayo la cruz de flores de su hermandad. Orgullosa, competitiva y muy cordobesa.",
+        "en": "Every May she builds her brotherhood's cross of flowers. Proud, competitive and very Cordoban."
+      },
+      "avatar": "sprites/crucera/crucera_neutral.svg"
+    },
+    {
+      "id": "caballista",
+      "name": {
+        "es": "El Caballista",
+        "en": "The Horseman"
+      },
+      "description": {
+        "es": "Jinete de traje corto que pasea a caballo por la feria. Elegante y de pocas palabras.",
+        "en": "A rider in a short jacket who rides through the fair. Elegant and a man of few words."
+      },
+      "avatar": "sprites/caballista/caballista_neutral.svg"
+    },
+    {
+      "id": "pregonero",
+      "name": {
+        "es": "El Pregonero",
+        "en": "The Crier"
+      },
+      "description": {
+        "es": "Anuncia a voces la feria desde tiempos inmemoriales. Teatral y con memoria de elefante.",
+        "en": "He's been crying out the fair since time immemorial. Theatrical, with an elephant's memory."
+      },
+      "avatar": "sprites/pregonero/pregonero_neutral.svg"
     }
   ],
   "routes": [
@@ -150,7 +186,7 @@
             "en": "Bridge Gate"
           },
           "location": {
-            "lat": 36.8789,
+            "lat": 37.8789,
             "lng": -4.7787
           },
           "triggerRadiusM": 40,
@@ -250,7 +286,7 @@
             "en": "Courtyard of the Orange Trees"
           },
           "location": {
-            "lat": 36.8797,
+            "lat": 37.8797,
             "lng": -4.7796
           },
           "triggerRadiusM": 40,
@@ -393,7 +429,7 @@
             "en": "The Synagogue"
           },
           "location": {
-            "lat": 36.8805,
+            "lat": 37.8805,
             "lng": -4.782
           },
           "triggerRadiusM": 40,
@@ -500,7 +536,7 @@
             "en": "Almodóvar Gate"
           },
           "location": {
-            "lat": 36.8811,
+            "lat": 37.8811,
             "lng": -4.7834
           },
           "triggerRadiusM": 40,
@@ -585,7 +621,7 @@
             "en": "Albolafia Mill"
           },
           "location": {
-            "lat": 36.8776,
+            "lat": 37.8776,
             "lng": -4.7806
           },
           "triggerRadiusM": 40,
@@ -683,7 +719,7 @@
             "en": "Alcázar of the Christian Monarchs"
           },
           "location": {
-            "lat": 36.8766,
+            "lat": 37.8766,
             "lng": -4.7833
           },
           "triggerRadiusM": 40,
@@ -781,7 +817,7 @@
             "en": "Campo Santo de los Mártires"
           },
           "location": {
-            "lat": 36.8776,
+            "lat": 37.8776,
             "lng": -4.7823
           },
           "triggerRadiusM": 40,
@@ -988,7 +1024,7 @@
             "en": "Calahorra Tower"
           },
           "location": {
-            "lat": 36.8759,
+            "lat": 37.8759,
             "lng": -4.7774
           },
           "triggerRadiusM": 40,
@@ -1294,7 +1330,7 @@
             "en": "Plaza de la Corredera"
           },
           "location": {
-            "lat": 36.8826,
+            "lat": 37.8826,
             "lng": -4.7748
           },
           "triggerRadiusM": 40,
@@ -1394,7 +1430,7 @@
             "en": "Roman temple"
           },
           "location": {
-            "lat": 36.8846,
+            "lat": 37.8846,
             "lng": -4.7759
           },
           "triggerRadiusM": 40,
@@ -1527,7 +1563,7 @@
             "en": "Viana Palace"
           },
           "location": {
-            "lat": 36.8878,
+            "lat": 37.8878,
             "lng": -4.7756
           },
           "triggerRadiusM": 40,
@@ -1625,7 +1661,7 @@
             "en": "Santa Marina square"
           },
           "location": {
-            "lat": 36.8889,
+            "lat": 37.8889,
             "lng": -4.7772
           },
           "triggerRadiusM": 40,
@@ -1723,7 +1759,7 @@
             "en": "Calleja de las Flores"
           },
           "location": {
-            "lat": 36.8801,
+            "lat": 37.8801,
             "lng": -4.7801
           },
           "triggerRadiusM": 40,
@@ -1820,7 +1856,7 @@
             "en": "Almodóvar Gate"
           },
           "location": {
-            "lat": 36.8811,
+            "lat": 37.8811,
             "lng": -4.7834
           },
           "triggerRadiusM": 40,
@@ -1918,7 +1954,7 @@
             "en": "Plaza de las Tendillas"
           },
           "location": {
-            "lat": 36.8846,
+            "lat": 37.8846,
             "lng": -4.7792
           },
           "triggerRadiusM": 40,
@@ -2125,7 +2161,7 @@
             "en": "Plaza del Potro"
           },
           "location": {
-            "lat": 36.8811,
+            "lat": 37.8811,
             "lng": -4.7735
           },
           "triggerRadiusM": 40,
@@ -2386,6 +2422,1144 @@
           },
           "icon": "collectibles/cordoba_salmorejo.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ]
+    },
+    {
+      "id": "mayo-cordobes",
+      "title": {
+        "es": "¿Cuál es la fiesta más antigua de mayo?",
+        "en": "Which Is the Oldest May Festival?"
+      },
+      "summary": {
+        "es": "En mayo Córdoba encadena Cruces, Patios y Feria. ¿Cuál es la más antigua? Con una crucera, un caballista y el pregonero de la feria, entre flores, caballos y privilegios reales.",
+        "en": "In May Córdoba strings together Crosses, Courtyards and Fair. Which is the oldest? With a cross maker, a horseman and the fair crier, among flowers, horses and royal privileges."
+      },
+      "era": "1284 - hoy",
+      "guideCharacterId": "crucera",
+      "durationMin": 110,
+      "distanceKm": 3.6,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "theme": "fiestas",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Las cruces",
+            "en": "The crosses"
+          },
+          "trail": {
+            "es": "camino de las cruces",
+            "en": "crosses trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La feria antigua",
+            "en": "The old fair"
+          },
+          "trail": {
+            "es": "camino de la feria antigua",
+            "en": "old fair trail"
+          }
+        }
+      },
+      "startNodeId": "f1_corredera",
+      "nodes": [
+        {
+          "id": "f1_corredera",
+          "title": {
+            "es": "Plaza de la Corredera",
+            "en": "Plaza de la Corredera"
+          },
+          "location": {
+            "lat": 37.8826,
+            "lng": -4.7748
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_corredera.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_corredera.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "happy",
+              "text": {
+                "es": "¡Hola, vecino! Soy crucera: cada mayo monto con mi hermandad una cruz de flores en la plaza. Claveles, macetas, mantones…",
+                "en": "Hello, neighbour! I'm a cross maker: every May, with my brotherhood, I build a cross of flowers in the square. Carnations, flowerpots, shawls…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "thinking",
+              "text": {
+                "es": "En mayo Córdoba tiene tres fiestas seguidas: las Cruces, los Patios y la Feria. Y te traigo un pique: ¿cuál es la más antigua?",
+                "en": "In May Córdoba has three festivals in a row: the Crosses, the Courtyards and the Fair. And I've got a rivalry for you: which is the oldest?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "proud",
+              "text": {
+                "es": "Yo digo que las Cruces. Pero la de los patios dice que los Patios, y el de la feria… la Feria. Tú decides.",
+                "en": "I say the Crosses. But the courtyard lady says the Courtyards, and the fair man… the Fair. You decide."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El mayo cordobés empieza con las Cruces de Mayo, sigue con el Festival de los Patios y termina con la Feria de Nuestra Señora de la Salud.",
+                "en": "The Córdoba May begins with the May Crosses, continues with the Courtyards Festival and ends with the Fair of Our Lady of Health."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué orden se celebran las fiestas del mayo cordobés?",
+              "en": "In what order are the Córdoba May festivals held?"
+            },
+            "options": [
+              {
+                "es": "Patios, Feria y Cruces",
+                "en": "Courtyards, Fair and Crosses"
+              },
+              {
+                "es": "Cruces, Patios y Feria",
+                "en": "Crosses, Courtyards and Fair"
+              },
+              {
+                "es": "Feria, Patios y Cruces",
+                "en": "Fair, Courtyards and Crosses"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Primero las Cruces, luego los Patios y al final la Feria.",
+              "en": "First the Crosses, then the Courtyards and finally the Fair."
+            }
+          },
+          "clue": {
+            "id": "may_pista_orden",
+            "text": {
+              "es": "Las Cruces · Las Cruces abren el mayo cordobés, pero abrir primero no es ser la más antigua.",
+              "en": "The Crosses · The Crosses open the Córdoba May, but coming first doesn't mean being oldest."
+            }
+          },
+          "nextNodeId": "f2_tendillas",
+          "nextHint": {
+            "es": "A la plaza de las Tendillas. Unos 6 minutos.",
+            "en": "To Plaza de las Tendillas. About 6 minutes."
+          }
+        },
+        {
+          "id": "f2_tendillas",
+          "title": {
+            "es": "Plaza de las Tendillas",
+            "en": "Plaza de las Tendillas"
+          },
+          "location": {
+            "lat": 37.8846,
+            "lng": -4.7792
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_tendillas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_tendillas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "pregonero",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pregonero",
+              "expression": "happy",
+              "text": {
+                "es": "¡Oíd, oíd! Pregonero de la feria. Yo anuncio a voces la fiesta desde hace… uf, desde hace mucho.",
+                "en": "Hear ye, hear ye! Fair crier. I've been announcing the fair at the top of my voice for… oh, for a long time."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Feria de Córdoba se celebra hoy en el recinto de El Arenal, junto al río, con casetas, caballos y trajes de flamenca y de corto.",
+                "en": "The Córdoba Fair is held today at the El Arenal fairground, by the river, with marquees, horses and flamenca and riding outfits."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pregonero",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi feria es de ganado, de las de antes. Y las de ganado son muy viejas en Castilla… pero no te lo voy a decir todo tan pronto.",
+                "en": "My fair is a livestock fair, the old-fashioned kind. And livestock fairs are very old in Castile… but I'm not telling you everything so soon."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Dónde se celebra hoy la Feria de Córdoba?",
+              "en": "Where is the Córdoba Fair held today?"
+            },
+            "options": [
+              {
+                "es": "En El Arenal, junto al río",
+                "en": "At El Arenal, by the river"
+              },
+              {
+                "es": "En la Mezquita",
+                "en": "In the Mosque"
+              },
+              {
+                "es": "En la Corredera",
+                "en": "In La Corredera"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En el recinto de El Arenal.",
+              "en": "At the El Arenal fairground."
+            }
+          },
+          "clue": {
+            "id": "may_pista_ganado",
+            "text": {
+              "es": "La Feria · La Feria de Córdoba nació como feria de ganado, de las antiguas de Castilla.",
+              "en": "The Fair · The Córdoba Fair began as a livestock fair, one of Castile's old ones."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "crucera",
+            "expression": "happy",
+            "text": {
+              "es": "¿Seguimos por las cruces y los patios de Santa Marina, o por la feria de antes, junto a la Puerta de Sevilla?",
+              "en": "Shall we follow the crosses and courtyards of Santa Marina, or the old fair, by the Seville Gate?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Por las cruces",
+                "en": "By the crosses"
+              },
+              "hint": {
+                "es": "Viana y San Andrés",
+                "en": "Viana and San Andrés"
+              },
+              "targetNodeId": "fa1_viana",
+              "setFlags": [
+                "camino_cruces"
+              ],
+              "distanceM": 500,
+              "walkMin": 7
+            },
+            {
+              "label": {
+                "es": "Por la feria antigua",
+                "en": "By the old fair"
+              },
+              "hint": {
+                "es": "Puerta de Sevilla y Alcázar",
+                "en": "Seville Gate and Alcázar"
+              },
+              "targetNodeId": "fb1_puertasevilla",
+              "setFlags": [
+                "camino_feria"
+              ],
+              "distanceM": 900,
+              "walkMin": 12
+            }
+          ]
+        },
+        {
+          "id": "fa1_viana",
+          "title": {
+            "es": "Palacio de Viana",
+            "en": "Viana Palace"
+          },
+          "location": {
+            "lat": 37.8878,
+            "lng": -4.7756
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_viana.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_viana.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "caballista",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "caballista",
+              "expression": "neutral",
+              "text": {
+                "es": "Buenas. Caballista. En feria saco mi caballo y paseo por El Arenal. Pero en mayo también vengo a ver patios, que mi madre tenía uno.",
+                "en": "Hello. Horseman. At the fair I take my horse out and ride around El Arenal. But in May I also come to see courtyards; my mother had one."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El primer concurso de patios lo convocó el ayuntamiento en 1921, con solo tres participantes. No cuajó hasta 1933, cuando se hizo popular.",
+                "en": "The council held the first courtyard competition in 1921, with just three entries. It only caught on in 1933, when it became popular."
+              },
+              "year": 1921
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "proud",
+              "text": {
+                "es": "¡1921! Los Patios, como concurso, son jovencitos. Uno menos.",
+                "en": "1921! As a competition, the Courtyards are young. One down."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año se convocó el primer concurso de patios?",
+              "en": "When was the first courtyard competition held?"
+            },
+            "options": [
+              {
+                "es": "En 1284",
+                "en": "In 1284"
+              },
+              {
+                "es": "En 1665",
+                "en": "In 1665"
+              },
+              {
+                "es": "En 1921",
+                "en": "In 1921"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1921, aunque no se hizo popular hasta 1933.",
+              "en": "In 1921, though it only became popular in 1933."
+            }
+          },
+          "clue": {
+            "id": "may_pista_1921",
+            "text": {
+              "es": "Los Patios · El concurso de patios empezó en 1921 y no se hizo popular hasta 1933.",
+              "en": "The Courtyards · The courtyard competition began in 1921 and only became popular in 1933."
+            }
+          },
+          "nextNodeId": "fa2_cruz",
+          "nextHint": {
+            "es": "Baja hasta la plaza de San Andrés. Unos 5 minutos.",
+            "en": "Walk down to Plaza de San Andrés. About 5 minutes."
+          }
+        },
+        {
+          "id": "fa2_cruz",
+          "title": {
+            "es": "Cruz de mayo en San Andrés",
+            "en": "May cross in San Andrés"
+          },
+          "location": {
+            "lat": 37.8858,
+            "lng": -4.7731
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_cruz.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_cruz.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "caballista",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En las Cruces de Mayo, hermandades y asociaciones adornan cruces con flores en plazas y calles. Hay concurso municipal desde principios del siglo XX.",
+                "en": "For the May Crosses, brotherhoods and associations decorate crosses with flowers in squares and streets. There's been a council competition since the early 20th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "happy",
+              "text": {
+                "es": "Mira mi cruz: claveles rojos, mantón de Manila, cobre y macetas. La costumbre de adornar cruces en mayo es muy antigua…",
+                "en": "Look at my cross: red carnations, a Manila shawl, copper pots and flowerpots. The custom of decorating crosses in May is very old…"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "caballista",
+              "expression": "thinking",
+              "text": {
+                "es": "Antigua sí. Pero ¿más que una feria con privilegio de un rey?",
+                "en": "Old, yes. But older than a fair granted by a king?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Con qué se adornan las cruces de mayo?",
+              "en": "What are May crosses decorated with?"
+            },
+            "options": [
+              {
+                "es": "Con banderas",
+                "en": "With flags"
+              },
+              {
+                "es": "Con flores, mantones y macetas",
+                "en": "With flowers, shawls and flowerpots"
+              },
+              {
+                "es": "Con luces de Navidad",
+                "en": "With Christmas lights"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Con claveles, mantones, macetas y piezas de cobre.",
+              "en": "With carnations, shawls, flowerpots and copperware."
+            }
+          },
+          "clue": {
+            "id": "may_pista_rey",
+            "text": {
+              "es": "La Feria · El caballista habla de una feria concedida por un rey.",
+              "en": "The Fair · The horseman talks about a fair granted by a king."
+            }
+          },
+          "nextNodeId": "f4_puente",
+          "nextHint": {
+            "es": "Baja hacia el río, a la Puerta del Puente. Unos 15 minutos.",
+            "en": "Head down to the river, to the Bridge Gate. About 15 minutes."
+          }
+        },
+        {
+          "id": "fb1_puertasevilla",
+          "title": {
+            "es": "Puerta de Sevilla",
+            "en": "Seville Gate"
+          },
+          "location": {
+            "lat": 37.8755,
+            "lng": -4.7857
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_puertasevilla.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_puertasevilla.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pregonero",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "crucera",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Según la tradición, en 1665 dos labradores encontraron en un pozo junto a la Puerta de Sevilla una pequeña imagen de la Virgen. Desde entonces la feria se llama de Nuestra Señora de la Salud.",
+                "en": "According to tradition, in 1665 two farmers found a small image of the Virgin in a well by the Seville Gate. Since then the fair has been called Our Lady of Health."
+              },
+              "year": 1665
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pregonero",
+              "expression": "proud",
+              "text": {
+                "es": "¡1665! Pero ojo: entonces a la feria solo le cambiaron el nombre. La feria ya existía.",
+                "en": "1665! But mind: back then the fair only changed its name. The fair already existed."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "surprised",
+              "text": {
+                "es": "¿Que ya existía? ¿Desde cuándo?",
+                "en": "It already existed? Since when?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Desde qué año se llama la feria «de Nuestra Señora de la Salud»?",
+              "en": "Since what year has the fair been called “of Our Lady of Health”?"
+            },
+            "options": [
+              {
+                "es": "Desde 1665",
+                "en": "Since 1665"
+              },
+              {
+                "es": "Desde 1921",
+                "en": "Since 1921"
+              },
+              {
+                "es": "Desde 1994",
+                "en": "Since 1994"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Desde 1665, según la tradición del pozo junto a la Puerta de Sevilla.",
+              "en": "Since 1665, according to the tradition of the well by the Seville Gate."
+            }
+          },
+          "clue": {
+            "id": "may_pista_1665",
+            "text": {
+              "es": "La Feria · En 1665 la feria solo cambió de nombre: ya existía antes.",
+              "en": "The Fair · In 1665 the fair only changed its name: it already existed."
+            }
+          },
+          "nextNodeId": "fb2_alcazar",
+          "nextHint": {
+            "es": "Al Alcázar de los Reyes Cristianos. Unos 4 minutos.",
+            "en": "To the Alcázar of the Christian Monarchs. About 4 minutes."
+          }
+        },
+        {
+          "id": "fb2_alcazar",
+          "title": {
+            "es": "Alcázar de los Reyes Cristianos",
+            "en": "Alcázar of the Christian Monarchs"
+          },
+          "location": {
+            "lat": 37.8766,
+            "lng": -4.7833
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_alcazar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_alcazar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "caballista",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "pregonero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "caballista",
+              "expression": "proud",
+              "text": {
+                "es": "Caballista, para servirle. Los reyes de Castilla daban privilegios para hacer ferias de ganado. Y en Córdoba uno lo dio muy pronto…",
+                "en": "Horseman, at your service. The kings of Castile granted privileges to hold livestock fairs. And in Córdoba one granted it very early…"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En 1284 el rey Sancho IV concedió a Córdoba el privilegio de celebrar dos ferias de ganado al año. En 1422 la de Pentecostés pasó a hacerse a principios de mayo.",
+                "en": "In 1284 King Sancho IV granted Córdoba the privilege of holding two livestock fairs a year. In 1422 the Pentecost one moved to early May."
+              },
+              "year": 1284
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pregonero",
+              "expression": "happy",
+              "text": {
+                "es": "¡1284! Más de setecientos años. Eso lo pregono yo bien alto.",
+                "en": "1284! More than seven hundred years. I'll cry that out loud."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué rey concedió a Córdoba sus ferias de ganado en 1284?",
+              "en": "Which king granted Córdoba its livestock fairs in 1284?"
+            },
+            "options": [
+              {
+                "es": "Carlos V",
+                "en": "Charles V"
+              },
+              {
+                "es": "Felipe II",
+                "en": "Philip II"
+              },
+              {
+                "es": "Sancho IV",
+                "en": "Sancho IV"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Sancho IV, hijo de Alfonso X el Sabio.",
+              "en": "Sancho IV, son of Alfonso X the Wise."
+            }
+          },
+          "clue": {
+            "id": "may_pista_1284",
+            "text": {
+              "es": "La Feria · En 1284 Sancho IV concedió a Córdoba dos ferias de ganado al año.",
+              "en": "The Fair · In 1284 Sancho IV granted Córdoba two livestock fairs a year."
+            }
+          },
+          "nextNodeId": "f4_puente",
+          "nextHint": {
+            "es": "A la Puerta del Puente. Unos 5 minutos.",
+            "en": "To the Bridge Gate. About 5 minutes."
+          }
+        },
+        {
+          "id": "f4_puente",
+          "title": {
+            "es": "Puerta del Puente",
+            "en": "Bridge Gate"
+          },
+          "location": {
+            "lat": 37.8789,
+            "lng": -4.7787
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_puente.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_puente.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "pregonero",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la Feria de Córdoba muchas casetas son de entrada libre, y por el real pasean jinetes con traje corto y amazonas a caballo.",
+                "en": "At the Córdoba Fair many marquees are open to all, and riders in short jackets and horsewomen ride through the fairground."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_cruces"
+                  ],
+                  "text": {
+                    "es": "Vienes de las cruces: los Patios son de 1921 y el caballista habla de un rey. ¿Seguimos la pista del caballo o la del pregón?",
+                    "en": "You've come by the crosses: the Courtyards date from 1921 and the horseman talks of a king. Shall we follow the horse lead or the crier lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_feria"
+                  ],
+                  "text": {
+                    "es": "Vienes de la feria antigua: 1665, 1284… ¿Seguimos la pista del caballo o la del pregón?",
+                    "en": "You've come by the old fair: 1665, 1284… Shall we follow the horse lead or the crier lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llama el traje de los jinetes en la feria?",
+              "en": "What is the riders' outfit called at the fair?"
+            },
+            "options": [
+              {
+                "es": "Frac",
+                "en": "Tailcoat"
+              },
+              {
+                "es": "Traje corto",
+                "en": "Traje corto (short jacket)"
+              },
+              {
+                "es": "Traje de luces",
+                "en": "Suit of lights"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Traje corto, con chaquetilla y sombrero cordobés.",
+              "en": "Traje corto, with a short jacket and Córdoba hat."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "crucera",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El caballo o el pregón?",
+              "en": "The horse or the crier?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del caballo",
+                "en": "The horse lead"
+              },
+              "hint": {
+                "es": "Con el caballista",
+                "en": "With the horseman"
+              },
+              "targetNodeId": "f4a_caballo",
+              "setFlags": [
+                "version_caballo"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del pregón",
+                "en": "The crier lead"
+              },
+              "hint": {
+                "es": "Con el pregonero",
+                "en": "With the crier"
+              },
+              "targetNodeId": "f4b_pregon",
+              "setFlags": [
+                "version_pregon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f4a_caballo",
+          "title": {
+            "es": "El caballo",
+            "en": "The horse"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "caballista",
+              "expression": "dramatic",
+              "text": {
+                "es": "Las ferias de ganado eran lo más importante del año: se vendían caballos, mulas, bueyes. Sin ellas no había campo.",
+                "en": "Livestock fairs were the most important event of the year: horses, mules and oxen were sold. Without them there was no farming."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "caballista",
+              "expression": "thinking",
+              "text": {
+                "es": "Las Cruces tienen siglos de costumbre, sí, pero la Feria tiene papel del rey: 1284. Eso no lo tiene nadie más en mayo.",
+                "en": "The Crosses have centuries of custom, yes, but the Fair has a royal document: 1284. No other May festival has that."
+              }
+            }
+          ],
+          "clue": {
+            "id": "may_pista_papel",
+            "text": {
+              "es": "La Feria · La Feria es la única fiesta de mayo con un documento real: el privilegio de 1284.",
+              "en": "The Fair · The Fair is the only May festival with a royal document: the 1284 privilege."
+            }
+          },
+          "nextNodeId": "f5_arenal",
+          "nextHint": {
+            "es": "Cruza el río hacia El Arenal. Unos 15 minutos.",
+            "en": "Cross the river towards El Arenal. About 15 minutes."
+          }
+        },
+        {
+          "id": "f4b_pregon",
+          "title": {
+            "es": "El pregón",
+            "en": "The crier"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pregonero",
+              "expression": "proud",
+              "text": {
+                "es": "¡Oíd! En 1284, feria de ganado por privilegio del rey Sancho. En 1422, a principios de mayo. En 1665, de la Salud. ¡Y aquí seguimos!",
+                "en": "Hear ye! In 1284, a livestock fair by privilege of King Sancho. In 1422, moved to early May. In 1665, of Our Lady of Health. And here we still are!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "nervous",
+              "text": {
+                "es": "Vale, vale… mis cruces serán muy bonitas, pero tu feria tiene más papeles.",
+                "en": "All right, all right… my crosses may be lovely, but your fair has more paperwork."
+              }
+            }
+          ],
+          "clue": {
+            "id": "may_pista_cronologia",
+            "text": {
+              "es": "Las Cruces · La crucera reconoce que la Feria tiene documentos más antiguos que las Cruces.",
+              "en": "The Crosses · The cross maker admits the Fair has older documents than the Crosses."
+            }
+          },
+          "nextNodeId": "f5_arenal",
+          "nextHint": {
+            "es": "Cruza el río hacia El Arenal. Unos 15 minutos.",
+            "en": "Cross the river towards El Arenal. About 15 minutes."
+          }
+        },
+        {
+          "id": "f5_arenal",
+          "title": {
+            "es": "El Arenal",
+            "en": "El Arenal"
+          },
+          "location": {
+            "lat": 37.8712,
+            "lng": -4.7669
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_arenal.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_arenal.svg"
+              ],
+              "characters": [
+                {
+                  "id": "crucera",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "caballista",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Feria de Córdoba se trasladó al recinto de El Arenal en 1994. Antes se celebró durante mucho tiempo en el paseo de la Victoria.",
+                "en": "The Córdoba Fair moved to the El Arenal fairground in 1994. Before that it was held for a long time on the Paseo de la Victoria."
+              },
+              "year": 1994
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto: Cruces, Patios o Feria. ¿Cuál es la fiesta más antigua del mayo cordobés?",
+                "en": "Verdict time: Crosses, Courtyards or Fair. Which is the oldest festival of the Córdoba May?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuál es la fiesta más antigua del mayo cordobés?",
+              "en": "Which is the oldest festival of the Córdoba May?"
+            },
+            "options": [
+              {
+                "es": "La Feria, con privilegio del rey Sancho IV de 1284",
+                "en": "The Fair, with King Sancho IV's privilege of 1284"
+              },
+              {
+                "es": "Las Cruces",
+                "en": "The Crosses"
+              },
+              {
+                "es": "Los Patios",
+                "en": "The Courtyards"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "La Feria. Nació como feria de ganado por privilegio de Sancho IV en 1284, pasó a mayo en 1422 y tomó el nombre de la Salud en 1665. El concurso de patios es de 1921 y el de cruces, del siglo XX, aunque la costumbre de las cruces es antigua.",
+              "en": "The Fair. It began as a livestock fair by privilege of Sancho IV in 1284, moved to May in 1422 and took the name of Our Lady of Health in 1665. The courtyard competition dates from 1921 and the crosses competition from the 20th century, though the crosses custom is old."
+            }
+          },
+          "nextNodeId": "f6_final"
+        },
+        {
+          "id": "f6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_cruces",
+                    "version_caballo"
+                  ],
+                  "text": {
+                    "es": "Las cruces y el caballo: de las flores al real. Eres jinete de mayo.",
+                    "en": "The crosses and the horse: from flowers to fairground. You're a May rider."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_cruces",
+                    "version_pregon"
+                  ],
+                  "text": {
+                    "es": "Las cruces y el pregón: sabes contar mayo entero. Eres pregonero de patios.",
+                    "en": "The crosses and the crier: you can tell all of May. You're the courtyards' crier."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_feria",
+                    "version_caballo"
+                  ],
+                  "text": {
+                    "es": "La feria antigua y el caballo: de 1284 a El Arenal. Eres tratante del rey Sancho.",
+                    "en": "The old fair and the horse: from 1284 to El Arenal. You're King Sancho's dealer."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_feria",
+                    "version_pregon"
+                  ],
+                  "text": {
+                    "es": "La feria antigua y el pregón: siete siglos de fiesta en un paseo. Eres cronista del mayo cordobés.",
+                    "en": "The old fair and the crier: seven centuries of celebration in one walk. You're the Córdoba May's chronicler."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "crucera",
+              "expression": "happy",
+              "text": {
+                "es": "Aunque la más antigua sea la feria… ¡la cruz más bonita es la mía! Vuelve en mayo, que se nota.",
+                "en": "Even if the oldest is the fair… the prettiest cross is mine! Come back in May, you'll see."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "jinete_mayo",
+          "requires": [
+            "camino_cruces",
+            "version_caballo"
+          ],
+          "title": {
+            "es": "Jinete de mayo",
+            "en": "May rider"
+          }
+        },
+        {
+          "id": "pregonero_patios",
+          "requires": [
+            "camino_cruces",
+            "version_pregon"
+          ],
+          "title": {
+            "es": "Pregonero de patios",
+            "en": "The courtyards' crier"
+          }
+        },
+        {
+          "id": "tratante_sancho",
+          "requires": [
+            "camino_feria",
+            "version_caballo"
+          ],
+          "title": {
+            "es": "Tratante del rey Sancho",
+            "en": "King Sancho's dealer"
+          }
+        },
+        {
+          "id": "cronista_mayo",
+          "requires": [
+            "camino_feria",
+            "version_pregon"
+          ],
+          "title": {
+            "es": "Cronista del mayo cordobés",
+            "en": "The Córdoba May's chronicler"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "clavel",
+          "name": {
+            "es": "El clavel",
+            "en": "The carnation"
+          },
+          "icon": "collectibles/cordoba_fiesta_clavel.svg",
+          "awardedAtNodeId": "f1_corredera"
+        },
+        {
+          "id": "pregon_feria",
+          "name": {
+            "es": "El pregón",
+            "en": "The proclamation"
+          },
+          "icon": "collectibles/cordoba_fiesta_pregon.svg",
+          "awardedAtNodeId": "f2_tendillas"
+        },
+        {
+          "id": "reja",
+          "name": {
+            "es": "La reja florida",
+            "en": "The flowered grille"
+          },
+          "icon": "collectibles/cordoba_fiesta_reja.svg",
+          "awardedAtNodeId": "fa1_viana"
+        },
+        {
+          "id": "cruz_mayo",
+          "name": {
+            "es": "La cruz de mayo",
+            "en": "The May cross"
+          },
+          "icon": "collectibles/cordoba_fiesta_cruz.svg",
+          "awardedAtNodeId": "fa2_cruz"
+        },
+        {
+          "id": "pozo",
+          "name": {
+            "es": "El pozo de la Salud",
+            "en": "The well of Health"
+          },
+          "icon": "collectibles/cordoba_fiesta_pozo.svg",
+          "awardedAtNodeId": "fb1_puertasevilla"
+        },
+        {
+          "id": "privilegio",
+          "name": {
+            "es": "El privilegio de 1284",
+            "en": "The 1284 privilege"
+          },
+          "icon": "collectibles/cordoba_fiesta_privilegio.svg",
+          "awardedAtNodeId": "fb2_alcazar"
+        },
+        {
+          "id": "sombrero_cordobes",
+          "name": {
+            "es": "El sombrero cordobés",
+            "en": "The Córdoba hat"
+          },
+          "icon": "collectibles/cordoba_fiesta_sombrero.svg",
+          "awardedAtNodeId": "f5_arenal"
+        },
+        {
+          "id": "insignia_mayo",
+          "name": {
+            "es": "¿Cuál es la fiesta más antigua de mayo?",
+            "en": "Which Is the Oldest May Festival?"
+          },
+          "icon": "collectibles/cordoba_fiesta_insignia.svg",
+          "awardedAtNodeId": "f6_final"
         }
       ]
     }
