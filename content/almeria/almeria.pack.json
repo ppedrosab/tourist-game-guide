@@ -35,7 +35,18 @@
         "es": "Vigía andalusí de la torre del cerro. Tiene la vista de un halcón y la paciencia de una piedra.",
         "en": "An Andalusi lookout from the hilltop tower. He has a hawk's eyes and the patience of a stone."
       },
-      "avatar": "sprites/vigia/vigia_neutral.svg"
+      "avatar": "sprites/vigia/vigia_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Antes de la ciudad, en el cerro de la Alcazaba había una torre de vigía que vigilaba el golfo. De ahí viene el nombre: «al-Mariyya» significa la atalaya. El personaje representa a los vigías que avisaban de los barcos que se acercaban.",
+        "en": "Before the city existed, a watchtower on the Alcazaba hill kept an eye on the gulf. That is where the name comes from: “al-Mariyya” means the watchtower. The character stands for the lookouts who warned of approaching ships."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal",
+          "url": "https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal"
+        }
+      ]
     },
     {
       "id": "jayran",
@@ -48,7 +59,23 @@
         "en": "First king of the taifa of Almería, in the 11th century. Builder of walls and cisterns. Serious and practical."
       },
       "avatar": "sprites/jayran/jayran_neutral.svg",
-      "era": "siglo XI"
+      "era": "siglo XI",
+      "kind": "real",
+      "lived": "m. 1028",
+      "bio": {
+        "es": "Jayrán fue el primer rey de la taifa de Almería, de 1014 a 1028, cuando se deshizo el califato de Córdoba. Amplió la Alcazaba y rodeó la ciudad con la muralla que todavía lleva su nombre, y construyó aljibes para el agua.",
+        "en": "Jayrán was the first king of the taifa of Almería, from 1014 to 1028, when the Caliphate of Córdoba broke up. He enlarged the Alcazaba, surrounded the city with the wall that still bears his name and built cisterns for water."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Jairán",
+          "url": "https://es.wikipedia.org/wiki/Jair%C3%A1n"
+        },
+        {
+          "title": "Wikipedia: Taifa de Almería",
+          "url": "https://es.wikipedia.org/wiki/Taifa_de_Almer%C3%ADa"
+        }
+      ]
     },
     {
       "id": "sedera",
@@ -60,7 +87,18 @@
         "es": "Tejedora de seda de la Almería andalusí. Romántica y habladora.",
         "en": "A silk weaver of Andalusi Almería. Romantic and talkative."
       },
-      "avatar": "sprites/sedera/sedera_neutral.svg"
+      "avatar": "sprites/sedera/sedera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "En los siglos XI y XII Almería fue uno de los grandes centros de la seda del Mediterráneo. El geógrafo al-Idrisi escribió que la ciudad tenía cientos de telares. El personaje representa a las tejedoras de aquellos talleres.",
+        "en": "In the 11th and 12th centuries Almería was one of the great silk centres of the Mediterranean. The geographer al-Idrisi wrote that the city had hundreds of looms. The character stands for the weavers of those workshops."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Taifa de Almería",
+          "url": "https://es.wikipedia.org/wiki/Taifa_de_Almer%C3%ADa"
+        }
+      ]
     },
     {
       "id": "hortelana",
@@ -72,7 +110,18 @@
         "es": "Cultiva tomates y pimientos en un invernadero del Poniente. Trabajadora y muy orgullosa de su tierra.",
         "en": "She grows tomatoes and peppers in a greenhouse in the Poniente. Hard-working and very proud of her land."
       },
-      "avatar": "sprites/hortelana/hortelana_neutral.svg"
+      "avatar": "sprites/hortelana/hortelana_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Desde los años sesenta, el Poniente y el Campo de Níjar se llenaron de invernaderos, que hoy cubren más de 30.000 hectáreas. En ellos se cultivan tomates, pimientos, pepinos y calabacines que se venden en toda Europa.",
+        "en": "Since the 1960s, the Poniente and the Campo de Níjar have filled with greenhouses that now cover over 30,000 hectares. They grow tomatoes, peppers, cucumbers and courgettes sold all over Europe."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Agricultura intensiva de la provincia de Almería",
+          "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa"
+        }
+      ]
     },
     {
       "id": "barrilero",
@@ -84,7 +133,18 @@
         "es": "Hacía barriles para la uva de barco. Nostálgico y buen conversador.",
         "en": "He made barrels for the ship grapes. Nostalgic and a good talker."
       },
-      "avatar": "sprites/barrilero/barrilero_neutral.svg"
+      "avatar": "sprites/barrilero/barrilero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Desde el siglo XIX hasta mediados del XX, Almería exportó la uva de barco (de Ohanes y otros pueblos) en barriles con serrín de corcho, que la protegía durante semanas de viaje hasta Inglaterra o Estados Unidos. Los barrileros fabricaban esos barriles.",
+        "en": "From the 19th century to the mid-20th, Almería exported “ship grapes” (from Ohanes and other villages) in barrels packed with cork dust, which protected them during weeks at sea to Britain or the United States. The barrileros made those barrels."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Uva de Ohanes",
+          "url": "https://es.wikipedia.org/wiki/Uva_de_Ohanes"
+        }
+      ]
     },
     {
       "id": "carmendeburgos",
@@ -97,7 +157,19 @@
         "en": "A journalist and writer from Almería who signed as 'Colombine'; she was one of Spain's first women war correspondents. Tireless and fiery."
       },
       "avatar": "sprites/carmendeburgos/carmendeburgos_neutral.svg",
-      "era": "1867 - 1932"
+      "era": "1867 - 1932",
+      "kind": "real",
+      "lived": "1867-1932",
+      "bio": {
+        "es": "Carmen de Burgos, nacida en Almería, fue maestra, escritora y una de las primeras periodistas profesionales de España; firmaba «Colombine». En 1909 fue corresponsal en la guerra de Melilla y defendió el divorcio y el voto de la mujer.",
+        "en": "Carmen de Burgos, born in Almería, was a teacher, writer and one of Spain's first professional women journalists; she signed her work “Colombine”. In 1909 she reported from the war in Melilla, and she campaigned for divorce and women's right to vote."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Carmen de Burgos",
+          "url": "https://es.wikipedia.org/wiki/Carmen_de_Burgos"
+        }
+      ]
     },
     {
       "id": "torrero",
@@ -110,7 +182,23 @@
         "en": "Guard of the Torregarcía tower in 1502, according to tradition. Calm and respectful."
       },
       "avatar": "sprites/torrero/torrero_neutral.svg",
-      "era": "1502"
+      "era": "1502",
+      "kind": "leyenda",
+      "lived": "1502 (tradición)",
+      "bio": {
+        "es": "Según la tradición, el 21 de diciembre de 1502 Andrés de Jaén, guarda de la torre de Torregarcía, encontró en la playa una imagen de la Virgen traída por el mar. Es el origen de la devoción a la Virgen del Mar, patrona de Almería.",
+        "en": "According to tradition, on 21 December 1502 Andrés de Jaén, keeper of the Torregarcía watchtower, found on the beach an image of the Virgin brought by the sea. It is the origin of devotion to the Virgen del Mar, patroness of Almería."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Torre García",
+          "url": "https://es.wikipedia.org/wiki/Torre_Garc%C3%ADa"
+        },
+        {
+          "title": "Wikipedia: Virgen del Mar",
+          "url": "https://es.wikipedia.org/wiki/Virgen_del_Mar"
+        }
+      ]
     },
     {
       "id": "salmeron",
@@ -123,7 +211,19 @@
         "en": "A politician and philosopher from Almería, president of the First Republic in 1873; the port park bears his name. Serious, but good-humoured."
       },
       "avatar": "sprites/salmeron/salmeron_neutral.svg",
-      "era": "1838 - 1908"
+      "era": "1838 - 1908",
+      "kind": "real",
+      "lived": "1838-1908",
+      "bio": {
+        "es": "Nicolás Salmerón nació en Alhama la Seca (hoy Alhama de Almería). Filósofo y catedrático, fue presidente de la Primera República en 1873 y dimitió para no firmar penas de muerte. El parque junto al puerto de Almería lleva su nombre.",
+        "en": "Nicolás Salmerón was born in Alhama la Seca (now Alhama de Almería). A philosopher and professor, he was president of the First Republic in 1873 and resigned rather than sign death sentences. The park by Almería's harbour bears his name."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Nicolás Salmerón",
+          "url": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Salmer%C3%B3n"
+        }
+      ]
     },
     {
       "id": "santisteban",
@@ -136,7 +236,23 @@
         "en": "A teacher, archaeologist and chronicler of Almería, who gathered the Alcazaba's legends and died poor at its foot. Learned and endearing."
       },
       "avatar": "sprites/santisteban/santisteban_neutral.svg",
-      "era": "s. XIX - XX"
+      "era": "s. XIX - XX",
+      "kind": "real",
+      "lived": "1870-1959",
+      "bio": {
+        "es": "Joaquín Santisteban Delgado fue profesor, arqueólogo y cronista de Almería. Recogió las historias y leyendas de la ciudad, como la del palacio encantado que se abre la noche de San Juan bajo la Alcazaba. Murió pobre en su casa, al pie de la fortaleza; el Ayuntamiento le ha dedicado una placa.",
+        "en": "Joaquín Santisteban Delgado was a teacher, archaeologist and chronicler of Almería. He gathered the city's stories and legends, such as the enchanted palace that opens under the Alcazaba on Midsummer Night. He died poor in his house at the foot of the fortress; the city dedicated a plaque to him."
+      },
+      "sources": [
+        {
+          "title": "Noticias de Almería, homenaje a Joaquín Santisteban Delgado",
+          "url": "https://www.noticiasdealmeria.com/noticia/75861/capital/el-ayuntamiento-reconoce-la-figura-del-historiador-profesor-y-cronista-almeriense-joaquin-santisteban-delgado-con-una-placa-.html"
+        },
+        {
+          "title": "Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»",
+          "url": "https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/"
+        }
+      ]
     },
     {
       "id": "almotacin",
@@ -149,20 +265,52 @@
         "en": "King of the taifa of Almería in the 11th century, a patron of poets. Proud and generous."
       },
       "avatar": "sprites/almotacin/almotacin_neutral.svg",
-      "era": "s. XI"
+      "era": "s. XI",
+      "kind": "real",
+      "lived": "1037-1091",
+      "bio": {
+        "es": "Almotacín (al-Mutasim) fue rey de la taifa de Almería de 1052 a 1091. Su corte en la Alcazaba fue famosa por sus poetas, y él mismo escribía versos. Murió cuando los almorávides ya sitiaban la ciudad.",
+        "en": "Almotacín (al-Mu'tasim) was king of the taifa of Almería from 1052 to 1091. His court in the Alcazaba was famous for its poets, and he wrote verse himself. He died as the Almoravids were besieging the city."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Almotacín",
+          "url": "https://es.wikipedia.org/wiki/Almotac%C3%ADn"
+        }
+      ]
     },
     {
-      "id": "galiana",
+      "id": "abderraman",
       "name": {
-        "es": "Galiana",
-        "en": "Galiana"
+        "es": "Abderramán III",
+        "en": "Abd al-Rahman III"
       },
       "description": {
-        "es": "La favorita del rey Almotacín en las leyendas de la Alcazaba. Observadora y con mucha guasa.",
-        "en": "King Almotacín's favourite in the legends of the Alcazaba. Observant and full of fun."
+        "es": "Primer califa de Córdoba. En el año 955 mandó construir la Alcazaba de Almería para proteger el puerto de su flota. Majestuoso, algo solemne y muy amigo de los proyectos grandes.",
+        "en": "The first Caliph of Córdoba. In 955 he had the Alcazaba of Almería built to protect his fleet's harbour. Majestic, rather solemn and fond of big projects."
       },
-      "avatar": "sprites/galiana/galiana_neutral.svg",
-      "era": "leyenda"
+      "avatar": "sprites/abderraman/abderraman_neutral.svg",
+      "era": "891-961",
+      "kind": "real",
+      "lived": "891-961",
+      "bio": {
+        "es": "Abderramán III se proclamó califa de Córdoba en 929. En 955 mandó levantar la Alcazaba y la ciudad de Almería, que se convirtió en el gran puerto de su flota. Una leyenda que recoge el padre Tapia cuenta que se decidió a construir sus murallas por un sueño sobre una niña y un tesoro escondido.",
+        "en": "Abd al-Rahman III proclaimed himself Caliph of Córdoba in 929. In 955 he had the Alcazaba and the city of Almería built, and it became the great harbour of his fleet. A legend recorded by Father Tapia says he decided to build its walls because of a dream about a girl and a hidden treasure."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Abderramán III",
+          "url": "https://es.wikipedia.org/wiki/Abderram%C3%A1n_III"
+        },
+        {
+          "title": "Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal",
+          "url": "https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal"
+        },
+        {
+          "title": "Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»",
+          "url": "https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/"
+        }
+      ]
     },
     {
       "id": "pacopiloto",
@@ -175,7 +323,23 @@
         "en": "Francisco Fuentes, from Roquetas de Mar: shepherd, fishing-boat engineer and farmer. In 1963 he built Almería's first greenhouse. Inventive and hard-working."
       },
       "avatar": "sprites/pacopiloto/pacopiloto_neutral.svg",
-      "era": "1922 - 1973"
+      "era": "1922 - 1973",
+      "kind": "real",
+      "lived": "1922-1973",
+      "bio": {
+        "es": "Francisco Fuentes, «Paco el Piloto», de Roquetas de Mar, fue pastor, motorista de barcos de pesca y agricultor. En 1963 cubrió con plástico un parral de su finca en una prueba del Instituto Nacional de Colonización, y la cosecha se dobló. Se considera el primer invernadero de Almería. Cuando murió, en 1973, ya había unas 800 hectáreas bajo plástico.",
+        "en": "Francisco Fuentes, “Paco el Piloto”, from Roquetas de Mar, was a shepherd, a fishing-boat engineer and a farmer. In 1963 he covered a vine trellis on his land with plastic in a trial by the National Institute of Colonisation, and the harvest doubled. It is considered Almería's first greenhouse. When he died in 1973 there were already some 800 hectares under plastic."
+      },
+      "sources": [
+        {
+          "title": "Telecinco, «Paco El Piloto, el almeriense que levantó el primer invernadero de España»",
+          "url": "https://www.telecinco.es/noticias/andalucia/20230725/paco-piloto-primer-invernadero-espana-almeria-60-anos_18_010101126.html"
+        },
+        {
+          "title": "Wikipedia: Agricultura intensiva de la provincia de Almería",
+          "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1313,6 +1477,24 @@
           "icon": "collectibles/almeria_atalaya.svg",
           "awardedAtNodeId": "n6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal",
+          "url": "https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal"
+        },
+        {
+          "title": "Wikipedia: Taifa de Almería",
+          "url": "https://es.wikipedia.org/wiki/Taifa_de_Almer%C3%ADa"
+        },
+        {
+          "title": "Wikipedia: Jairán",
+          "url": "https://es.wikipedia.org/wiki/Jair%C3%A1n"
+        },
+        {
+          "title": "Wikipedia: Almería",
+          "url": "https://es.wikipedia.org/wiki/Almer%C3%ADa"
+        }
       ]
     },
     {
@@ -2448,6 +2630,23 @@
           },
           "icon": "collectibles/almeria_huerta.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Agricultura intensiva de la provincia de Almería",
+          "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa"
+        },
+        {
+          "title": "Wikipedia: Uva de Ohanes",
+          "url": "https://es.wikipedia.org/wiki/Uva_de_Ohanes"
+        },
+        {
+          "title": "Hortoinfo, «Invernaderos de Almería, de 1963 a 2025»",
+          "url": "https://hortoinfo.es/invernaderos-de-almeria-de-1963-a-2025-una-historia-exitosa-de-agricultura-familiar-basada-en-el-esfuerzo/"
+        },
+        {
+          "title": "Gazeta de Antropología, «La uva de Almería. Un cultivo comercial que construyó un paisaje agrario»"
         }
       ]
     },
@@ -3586,6 +3785,28 @@
           "icon": "collectibles/almeria_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Feria de Almería",
+          "url": "https://es.wikipedia.org/wiki/Feria_de_Almer%C3%ADa"
+        },
+        {
+          "title": "Wikipedia: Virgen del Mar",
+          "url": "https://es.wikipedia.org/wiki/Virgen_del_Mar"
+        },
+        {
+          "title": "Wikipedia: Torre García",
+          "url": "https://es.wikipedia.org/wiki/Torre_Garc%C3%ADa"
+        },
+        {
+          "title": "Wikipedia: Carmen de Burgos",
+          "url": "https://es.wikipedia.org/wiki/Carmen_de_Burgos"
+        },
+        {
+          "title": "Wikipedia: Nicolás Salmerón",
+          "url": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Salmer%C3%B3n"
+        }
       ]
     },
     {
@@ -3595,8 +3816,8 @@
         "en": "Where Is the Alcazaba's Treasure?"
       },
       "summary": {
-        "es": "Todo Almería ha oído hablar del tesoro escondido de la Alcazaba. ¿Un palacio encantado, una familia que se hizo rica o ningún tesoro? Con el cronista Joaquín Santisteban, el rey Almotacín y Galiana.",
-        "en": "All of Almería has heard of the Alcazaba's hidden treasure. An enchanted palace, a family that got rich or no treasure at all? With the chronicler Joaquín Santisteban, King Almotacín and Galiana."
+        "es": "Todo Almería ha oído hablar del tesoro escondido de la Alcazaba. ¿Un palacio encantado, una familia que se hizo rica o ningún tesoro? Con el cronista Joaquín Santisteban, el rey Almotacín y el califa Abderramán III.",
+        "en": "All of Almería has heard of the Alcazaba's hidden treasure. An enchanted palace, a family that got rich or no treasure at all? With the chronicler Joaquín Santisteban, King Almotacín and Caliph Abd al-Rahman III."
       },
       "era": "s. XI - XIX",
       "guideCharacterId": "santisteban",
@@ -3884,7 +4105,7 @@
               ],
               "characters": [
                 {
-                  "id": "galiana",
+                  "id": "abderraman",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -3897,11 +4118,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "galiana",
+              "characterId": "abderraman",
               "expression": "happy",
               "text": {
-                "es": "Soy Galiana, la favorita del rey Almotacín, según cuentan. Desde mi torre veía toda la ciudad… y oía todos sus secretos.",
-                "en": "I'm Galiana, King Almotacín's favourite, or so they say. From my tower I could see the whole city… and hear all its secrets."
+                "es": "Abderramán III, califa de Córdoba. En el año 955 mandé levantar esta alcazaba. Y se cuenta que lo hice por un sueño: una niña perdida en un bosque, perseguida por su madrastra por un tesoro escondido.",
+                "en": "Abd al-Rahman III, Caliph of Córdoba. In 955 I had this alcazaba built. And they say I did it because of a dream: a girl lost in a forest, hunted by her stepmother over a hidden treasure."
               }
             },
             {
@@ -3914,11 +4135,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "galiana",
+              "characterId": "abderraman",
               "expression": "thinking",
               "text": {
-                "es": "Palacio encantado… Yo viví en la Alcazaba y nunca vi ese pasadizo. Aunque a medianoche yo dormía, la verdad.",
-                "en": "Enchanted palace… I lived in the Alcazaba and never saw that passage. Though at midnight I was asleep, to be fair."
+                "es": "¿Un palacio encantado debajo de mi alcazaba? Yo la construí para defender el puerto, no para esconder oro. Aunque a medianoche… quién sabe lo que pasa aquí.",
+                "en": "An enchanted palace under my alcazaba? I built it to defend the harbour, not to hide gold. Although at midnight… who knows what goes on here."
               }
             }
           ],
@@ -4083,7 +4304,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "galiana",
+                  "id": "abderraman",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -4163,8 +4384,8 @@
                 "en": "The map lead"
               },
               "hint": {
-                "es": "Con Galiana",
-                "en": "With Galiana"
+                "es": "Con Abderramán III",
+                "en": "With Abd al-Rahman III"
               },
               "targetNodeId": "l4a_mapa",
               "setFlags": [
@@ -4196,16 +4417,16 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "galiana",
+              "characterId": "abderraman",
               "expression": "dramatic",
               "text": {
-                "es": "Durante generaciones hubo gente buscando con mapas viejos y cuentos de abuelas. Cavaron, cavaron… y el oro nunca salió.",
-                "en": "For generations people searched with old maps and grandmothers' tales. They dug and dug… and the gold never came out."
+                "es": "Hasta de mi sueño han sacado un tesoro. Durante generaciones hubo gente buscando con mapas viejos y cuentos de abuelas. Cavaron, cavaron… y el oro nunca salió.",
+                "en": "They have even found a treasure in my dream. For generations people searched with old maps and grandmothers' tales. They dug and dug… and the gold never came out."
               }
             },
             {
               "type": "dialogue",
-              "characterId": "galiana",
+              "characterId": "abderraman",
               "expression": "thinking",
               "text": {
                 "es": "Si en mil años nadie lo ha encontrado, quizá no es un tesoro de monedas lo que esconde la Alcazaba.",
@@ -4509,6 +4730,28 @@
           },
           "icon": "collectibles/almeria_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal",
+          "url": "https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal"
+        },
+        {
+          "title": "Wikipedia: Almotacín",
+          "url": "https://es.wikipedia.org/wiki/Almotac%C3%ADn"
+        },
+        {
+          "title": "Wikipedia: Abderramán III",
+          "url": "https://es.wikipedia.org/wiki/Abderram%C3%A1n_III"
+        },
+        {
+          "title": "Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»",
+          "url": "https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/"
+        },
+        {
+          "title": "Noticias de Almería, homenaje a Joaquín Santisteban Delgado",
+          "url": "https://www.noticiasdealmeria.com/noticia/75861/capital/el-ayuntamiento-reconoce-la-figura-del-historiador-profesor-y-cronista-almeriense-joaquin-santisteban-delgado-con-una-placa-.html"
         }
       ]
     }

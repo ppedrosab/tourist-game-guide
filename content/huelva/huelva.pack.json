@@ -35,7 +35,23 @@
         "es": "William Alexander Mackay, médico escocés de la compañía Rio Tinto, que llegó a Huelva en 1883. Educado, entusiasta y muy británico.",
         "en": "William Alexander Mackay, a Scottish doctor with the Rio Tinto Company, who arrived in Huelva in 1883. Polite, enthusiastic and very British."
       },
-      "avatar": "sprites/mackay/mackay_neutral.svg"
+      "avatar": "sprites/mackay/mackay_neutral.svg",
+      "kind": "real",
+      "lived": "1860-1927",
+      "bio": {
+        "es": "William Alexander Mackay, médico escocés, llegó en 1883 para trabajar en las minas de la compañía Rio Tinto. Promovió los deportes británicos en Huelva y el 18 de diciembre de 1889 fue uno de los fundadores del Huelva Recreation Club, el Recreativo, el club de fútbol más antiguo de España. Lo presidió de 1896 a 1924 y es hijo adoptivo de Huelva.",
+        "en": "William Alexander Mackay, a Scottish doctor, arrived in 1883 to work at the Rio Tinto company's mines. He promoted British sports in Huelva, and on 18 December 1889 he was one of the founders of the Huelva Recreation Club, the Recreativo, Spain's oldest football club. He was its president from 1896 to 1924 and is an adopted son of Huelva."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia (en): William Alexander Mackay",
+          "url": "https://en.wikipedia.org/wiki/William_Alexander_Mackay"
+        },
+        {
+          "title": "Wikipedia: Real Club Recreativo de Huelva",
+          "url": "https://es.wikipedia.org/wiki/Real_Club_Recreativo_de_Huelva"
+        }
+      ]
     },
     {
       "id": "minero",
@@ -47,7 +63,18 @@
         "es": "Minero de Riotinto. Fuerte, bromista y futbolero desde que los ingleses le dejaron jugar.",
         "en": "A miner from Riotinto. Strong, jokey and a football fan ever since the English let him play."
       },
-      "avatar": "sprites/minero/minero_neutral.svg"
+      "avatar": "sprites/minero/minero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "En 1873 una compañía británica compró las minas de Riotinto, que se explotan desde hace unos 5.000 años. Los ingleses trajeron sus costumbres, y el fútbol se jugaba en Riotinto antes de la fundación del Recreativo. El personaje representa a los mineros que aprendieron el juego con ellos.",
+        "en": "In 1873 a British company bought the Riotinto mines, which have been worked for some 5,000 years. The British brought their customs, and football was played in Riotinto before the Recreativo was founded. The character stands for the miners who learned the game from them."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Minas de Riotinto",
+          "url": "https://es.wikipedia.org/wiki/Minas_de_Riotinto"
+        }
+      ]
     },
     {
       "id": "choquera",
@@ -59,7 +86,18 @@
         "es": "Pescadera del mercado del Carmen, onubense de pura cepa. Alegre y orgullosa de su tierra.",
         "en": "A fishmonger at the Carmen market, Huelva born and bred. Cheerful and proud of her home."
       },
-      "avatar": "sprites/choquera/choquera_neutral.svg"
+      "avatar": "sprites/choquera/choquera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "A los de Huelva se les llama choqueros por el choco, la sepia de la ría y de la costa, que se come frito, con habas o en guiso. El gentilicio empezó como burla y hoy se lleva con orgullo.",
+        "en": "People from Huelva are called choqueros after the choco, the cuttlefish of the estuary and coast, eaten fried, with broad beans or stewed. The name began as a jibe and is now worn with pride."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Onubense",
+          "url": "https://es.wikipedia.org/wiki/Onubense"
+        }
+      ]
     },
     {
       "id": "fresera",
@@ -71,7 +109,22 @@
         "es": "Cultiva fresas en Palos de la Frontera. Madrugadora y muy resuelta.",
         "en": "She grows strawberries in Palos de la Frontera. An early riser and very resolute."
       },
-      "avatar": "sprites/fresera/fresera_neutral.svg"
+      "avatar": "sprites/fresera/fresera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "La provincia de Huelva produce la gran mayoría de las fresas de España, en campos de Palos, Moguer, Lepe o Cartaya. La campaña va de invierno a primavera y buena parte se exporta al resto de Europa.",
+        "en": "The province of Huelva grows the great majority of Spain's strawberries, in fields around Palos, Moguer, Lepe and Cartaya. The season runs from winter to spring, and much of the crop is exported to the rest of Europe."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Fragaria",
+          "url": "https://es.wikipedia.org/wiki/Fragaria"
+        },
+        {
+          "title": "Wikipedia: Palos de la Frontera",
+          "url": "https://es.wikipedia.org/wiki/Palos_de_la_Frontera"
+        }
+      ]
     },
     {
       "id": "cortador",
@@ -83,7 +136,18 @@
         "es": "Cortador de jamón de la sierra de Aracena. Serio con el cuchillo y cariñoso con la gente.",
         "en": "A ham carver from the Aracena hills. Serious with the knife, warm with people."
       },
-      "avatar": "sprites/cortador/cortador_neutral.svg"
+      "avatar": "sprites/cortador/cortador_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "El jamón ibérico de la sierra de Aracena tiene denominación de origen, que hoy se llama Jabugo. Cortarlo a cuchillo en lonchas finas es un oficio: el cortador sabe sacar cada parte de la pieza.",
+        "en": "Iberian ham from the Sierra de Aracena has a designation of origin, now called Jabugo. Slicing it thinly by hand is a craft: the cortador knows how to get the best out of each part of the leg."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Denominación de origen protegida Jabugo",
+          "url": "https://es.wikipedia.org/wiki/Denominaci%C3%B3n_de_origen_protegida_Jabugo"
+        }
+      ]
     },
     {
       "id": "alonsosanchez",
@@ -96,7 +160,19 @@
         "en": "A legendary Huelva pilot: it's said he reached some western islands before Columbus and passed him his notes. Curious and chatty."
       },
       "avatar": "sprites/alonsosanchez/alonsosanchez_neutral.svg",
-      "era": "s. XV (leyenda)"
+      "era": "s. XV (leyenda)",
+      "kind": "leyenda",
+      "lived": "s. XV (leyenda)",
+      "bio": {
+        "es": "Según una tradición que recogió el Inca Garcilaso de la Vega en 1609, Alonso Sánchez de Huelva era un piloto al que una tormenta llevó a tierras del oeste antes de 1492. Al volver, moribundo, habría contado la ruta a Colón. No hay documentos que lo prueben; es la leyenda del «prenauta».",
+        "en": "According to a tradition recorded by the Inca Garcilaso de la Vega in 1609, Alonso Sánchez de Huelva was a pilot blown by a storm to lands in the west before 1492. On his return, dying, he supposedly told Columbus the route. No documents prove it; it is the legend of the “pre-discoverer”."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Alonso Sánchez de Huelva",
+          "url": "https://es.wikipedia.org/wiki/Alonso_S%C3%A1nchez_de_Huelva"
+        }
+      ]
     },
     {
       "id": "pinzon",
@@ -109,7 +185,19 @@
         "en": "A sailor from Palos, captain of the Pinta in 1492. Proud and strong-willed."
       },
       "avatar": "sprites/pinzon/pinzon_neutral.svg",
-      "era": "1441 - 1493"
+      "era": "1441 - 1493",
+      "kind": "real",
+      "lived": "1441-1493",
+      "bio": {
+        "es": "Martín Alonso Pinzón, marino de Palos de la Frontera, fue capitán de la Pinta en el primer viaje de Colón en 1492. Él y sus hermanos consiguieron tripulación en Palos y Moguer. Murió poco después de volver a Palos, en 1493.",
+        "en": "Martín Alonso Pinzón, a sailor from Palos de la Frontera, captained the Pinta on Columbus's first voyage in 1492. He and his brothers found crews in Palos and Moguer. He died shortly after returning to Palos in 1493."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Martín Alonso Pinzón",
+          "url": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Alonso_Pinz%C3%B3n"
+        }
+      ]
     },
     {
       "id": "santamaria",
@@ -122,7 +210,19 @@
         "en": "A Huelva newspaper editor; in 1880 he drove the founding of the Royal Columbian Society of Huelva. Formal and very meticulous."
       },
       "avatar": "sprites/santamaria/santamaria_neutral.svg",
-      "era": "s. XIX"
+      "era": "s. XIX",
+      "kind": "real",
+      "lived": "s. XIX",
+      "bio": {
+        "es": "Braulio Santamaría dirigía el periódico El Correo de Huelva. En marzo de 1880 promovió desde sus páginas la creación de la Sociedad Colombina Onubense, que organizó las celebraciones del cuarto centenario del descubrimiento de América y de la que salen las fiestas Colombinas.",
+        "en": "Braulio Santamaría edited the newspaper El Correo de Huelva. In March 1880 he used its pages to promote the founding of the Sociedad Colombina Onubense, which organised the celebrations for the fourth centenary of the discovery of America and gave rise to the Colombinas festival."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Real Sociedad Colombina Onubense",
+          "url": "https://es.wikipedia.org/wiki/Real_Sociedad_Colombina_Onubense"
+        }
+      ]
     },
     {
       "id": "argantonio",
@@ -135,7 +235,23 @@
         "en": "King of Tartessos according to Herodotus, famous for his silver and long life. Generous and a bit absent-minded."
       },
       "avatar": "sprites/argantonio/argantonio_neutral.svg",
-      "era": "s. VI a. C. (leyenda)"
+      "era": "s. VI a. C. (leyenda)",
+      "kind": "leyenda",
+      "lived": "s. VI a. C. (leyenda)",
+      "bio": {
+        "es": "Heródoto cuenta que Argantonio reinó en Tartessos ochenta años y vivió ciento veinte, y que dio plata a los griegos de Focea para que amurallaran su ciudad. Es el primer rey de la Península Ibérica cuyo nombre conocemos, aunque su historia tiene mucho de leyenda.",
+        "en": "Herodotus says Argantonius reigned over Tartessos for eighty years and lived to be a hundred and twenty, and that he gave silver to the Greeks of Phocaea to wall their city. He is the first king in the Iberian Peninsula whose name we know, though his story is largely legend."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Argantonio",
+          "url": "https://es.wikipedia.org/wiki/Argantonio"
+        },
+        {
+          "title": "Wikipedia: Tartessos",
+          "url": "https://es.wikipedia.org/wiki/Tartessos"
+        }
+      ]
     },
     {
       "id": "colaeo",
@@ -148,7 +264,19 @@
         "en": "A Greek sailor who, according to Herodotus, reached Tartessos by storm and went home rich. Adventurous and prone to exaggeration."
       },
       "avatar": "sprites/colaeo/colaeo_neutral.svg",
-      "era": "s. VII a. C. (leyenda)"
+      "era": "s. VII a. C. (leyenda)",
+      "kind": "leyenda",
+      "lived": "s. VII a. C.",
+      "bio": {
+        "es": "Heródoto cuenta que Colaeo de Samos, un mercader griego, iba hacia Egipto cuando los vientos le llevaron más allá de las columnas de Hércules, hasta Tartessos. Volvió con una fortuna en plata y ofreció a la diosa Hera un gran caldero de bronce.",
+        "en": "Herodotus tells how Colaeus of Samos, a Greek merchant, was heading for Egypt when the winds carried him beyond the Pillars of Hercules to Tartessos. He returned with a fortune in silver and dedicated a great bronze cauldron to the goddess Hera."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Coleo de Samos",
+          "url": "https://es.wikipedia.org/wiki/Coleo_de_Samos"
+        }
+      ]
     },
     {
       "id": "habis",
@@ -161,7 +289,23 @@
         "en": "A mythical king of Tartessos who, according to legend, taught his people to plough. Simple and very practical."
       },
       "avatar": "sprites/habis/habis_neutral.svg",
-      "era": "mito"
+      "era": "mito",
+      "kind": "leyenda",
+      "lived": "mito",
+      "bio": {
+        "es": "El mito de Gárgoris y Habis, que recoge el historiador Justino, cuenta que Habis, nieto del rey Gárgoris, fue abandonado de niño y criado por animales. Sobrevivió y llegó a rey de Tartessos, y enseñó a su pueblo a arar con bueyes y a vivir con leyes.",
+        "en": "The myth of Gargoris and Habis, recorded by the historian Justin, tells how Habis, grandson of King Gargoris, was abandoned as a baby and raised by animals. He survived to become king of Tartessos and taught his people to plough with oxen and live by laws."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Gárgoris",
+          "url": "https://es.wikipedia.org/wiki/G%C3%A1rgoris"
+        },
+        {
+          "title": "Wikipedia: Habis",
+          "url": "https://es.wikipedia.org/wiki/Habis"
+        }
+      ]
     },
     {
       "id": "charlesadam",
@@ -174,7 +318,19 @@
         "en": "A Scottish engineer who ran Huelva's gasworks and was the first president of Recreativo (1889-1896). A friend to the sailors in the port."
       },
       "avatar": "sprites/charlesadam/charlesadam_neutral.svg",
-      "era": "1848 - 1924"
+      "era": "1848 - 1924",
+      "kind": "real",
+      "lived": "1848-1924",
+      "bio": {
+        "es": "Charles Wilson Adam nació en Paisley (Escocia) y llegó a Huelva en 1879 para dirigir la fábrica de gas. En sus terrenos se jugaron los primeros partidos de la ciudad, y en 1889 fue elegido primer presidente del Recreativo de Huelva, cargo que ocupó hasta 1896.",
+        "en": "Charles Wilson Adam was born in Paisley, Scotland, and came to Huelva in 1879 to run the gasworks. The city's first matches were played on its grounds, and in 1889 he was elected the first president of Recreativo de Huelva, serving until 1896."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia (en): Charles Wilson Adam",
+          "url": "https://en.wikipedia.org/wiki/Charles_Wilson_Adam"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1304,6 +1460,32 @@
           },
           "icon": "collectibles/huelva_insignia.svg",
           "awardedAtNodeId": "n6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Real Club Recreativo de Huelva",
+          "url": "https://es.wikipedia.org/wiki/Real_Club_Recreativo_de_Huelva"
+        },
+        {
+          "title": "Wikipedia (en): William Alexander Mackay",
+          "url": "https://en.wikipedia.org/wiki/William_Alexander_Mackay"
+        },
+        {
+          "title": "Wikipedia (en): Charles Wilson Adam",
+          "url": "https://en.wikipedia.org/wiki/Charles_Wilson_Adam"
+        },
+        {
+          "title": "Wikipedia: Muelle de mineral de la compañía Riotinto",
+          "url": "https://es.wikipedia.org/wiki/Muelle_de_mineral_de_la_compa%C3%B1%C3%ADa_Riotinto"
+        },
+        {
+          "title": "Wikipedia: Barrio Reina Victoria",
+          "url": "https://es.wikipedia.org/wiki/Barrio_Reina_Victoria"
+        },
+        {
+          "title": "Recreativo de Huelva, «Historia»",
+          "url": "https://www.recreativohuelva.com/historia/"
         }
       ]
     },
@@ -2447,6 +2629,27 @@
           "icon": "collectibles/huelva_choqueros.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Onubense",
+          "url": "https://es.wikipedia.org/wiki/Onubense"
+        },
+        {
+          "title": "Wikipedia: Palos de la Frontera",
+          "url": "https://es.wikipedia.org/wiki/Palos_de_la_Frontera"
+        },
+        {
+          "title": "Wikipedia: Fragaria",
+          "url": "https://es.wikipedia.org/wiki/Fragaria"
+        },
+        {
+          "title": "Wikipedia: Denominación de origen protegida Jabugo",
+          "url": "https://es.wikipedia.org/wiki/Denominaci%C3%B3n_de_origen_protegida_Jabugo"
+        },
+        {
+          "title": "Huelva24, «¿Sabes por qué a los onubenses se les conoce como choqueros?»"
+        }
       ]
     },
     {
@@ -3586,6 +3789,24 @@
           "icon": "collectibles/huelva_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Fiestas Colombinas",
+          "url": "https://es.wikipedia.org/wiki/Fiestas_Colombinas"
+        },
+        {
+          "title": "Wikipedia: Real Sociedad Colombina Onubense",
+          "url": "https://es.wikipedia.org/wiki/Real_Sociedad_Colombina_Onubense"
+        },
+        {
+          "title": "Wikipedia: Martín Alonso Pinzón",
+          "url": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Alonso_Pinz%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Alonso Sánchez de Huelva",
+          "url": "https://es.wikipedia.org/wiki/Alonso_S%C3%A1nchez_de_Huelva"
+        }
       ]
     },
     {
@@ -4509,6 +4730,32 @@
           },
           "icon": "collectibles/huelva_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Tartessos",
+          "url": "https://es.wikipedia.org/wiki/Tartessos"
+        },
+        {
+          "title": "Wikipedia: Argantonio",
+          "url": "https://es.wikipedia.org/wiki/Argantonio"
+        },
+        {
+          "title": "Wikipedia: Coleo de Samos",
+          "url": "https://es.wikipedia.org/wiki/Coleo_de_Samos"
+        },
+        {
+          "title": "Wikipedia: Gárgoris",
+          "url": "https://es.wikipedia.org/wiki/G%C3%A1rgoris"
+        },
+        {
+          "title": "Wikipedia: Habis",
+          "url": "https://es.wikipedia.org/wiki/Habis"
+        },
+        {
+          "title": "Santuario fenicio de Méndez Núñez-Plaza de las Monjas (Academia.edu)",
+          "url": "https://www.academia.edu/67834617/"
         }
       ]
     }

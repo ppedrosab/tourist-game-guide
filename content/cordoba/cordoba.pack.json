@@ -36,7 +36,23 @@
         "en": "Copyist and secretary to Caliph al-Hakam II in the 10th century. Learned, patient and in love with books."
       },
       "avatar": "sprites/lubna/lubna_neutral.svg",
-      "era": "siglo X"
+      "era": "siglo X",
+      "kind": "real",
+      "lived": "s. X (m. 984)",
+      "bio": {
+        "es": "Lubna fue secretaria del califa al-Hakam II y una de las copistas de su gran biblioteca, que según las crónicas llegó a tener unos 400.000 volúmenes. Las fuentes árabes la describen como experta en gramática, poesía y matemáticas. Es una de las mujeres sabias de la Córdoba del siglo X.",
+        "en": "Lubna was secretary to Caliph al-Hakam II and one of the copyists of his great library, which according to the chronicles held some 400,000 volumes. Arabic sources describe her as an expert in grammar, poetry and mathematics. She is one of the learned women of 10th-century Córdoba."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Lubna de Córdoba",
+          "url": "https://es.wikipedia.org/wiki/Lubna_de_C%C3%B3rdoba"
+        },
+        {
+          "title": "Wikipedia: Alhakén II",
+          "url": "https://es.wikipedia.org/wiki/Alhak%C3%A9n_II"
+        }
+      ]
     },
     {
       "id": "almanzor",
@@ -49,7 +65,19 @@
         "en": "Al-Mansur, “the Victorious”, ruled al-Andalus in the name of Hisham II. Proud and calculating."
       },
       "avatar": "sprites/almanzor/almanzor_neutral.svg",
-      "era": "c. 938-1002"
+      "era": "c. 938-1002",
+      "kind": "real",
+      "lived": "c. 938-1002",
+      "bio": {
+        "es": "Muhammad ibn Abi Amir, Almanzor («el Victorioso»), fue el hayib (primer ministro) del califa Hisham II y gobernó al-Ándalus en su nombre. Hizo más de cincuenta campañas contra los reinos cristianos y amplió la Mezquita de Córdoba. Las crónicas cuentan que mandó expurgar la biblioteca de al-Hakam II y quemar los libros que los ulemas consideraban peligrosos.",
+        "en": "Muhammad ibn Abi Amir, Almanzor (“the Victorious”), was hajib (chief minister) to Caliph Hisham II and ruled al-Andalus in his name. He led over fifty campaigns against the Christian kingdoms and enlarged the Mosque of Córdoba. The chronicles say he had al-Hakam II's library purged, burning the books the clerics considered dangerous."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Almanzor",
+          "url": "https://es.wikipedia.org/wiki/Almanzor"
+        }
+      ]
     },
     {
       "id": "librero",
@@ -61,7 +89,18 @@
         "es": "Librero del zoco de Córdoba. Simpático, nervioso y siempre con un libro que vender.",
         "en": "A bookseller from the Córdoba souk. Friendly, nervous and always with a book to sell."
       },
-      "avatar": "sprites/librero/librero_neutral.svg"
+      "avatar": "sprites/librero/librero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "En la Córdoba del califato había un gran mercado de libros, con copistas, encuadernadores y libreros, y se decía que allí se copiaban más libros que en ningún otro sitio de Occidente. El personaje representa a esos libreros del zoco; no es una persona concreta.",
+        "en": "Caliphal Córdoba had a great book market with copyists, binders and booksellers, and it was said that more books were copied there than anywhere else in the West. The character stands for those booksellers of the souk; he is not a specific person."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Alhakén II",
+          "url": "https://es.wikipedia.org/wiki/Alhak%C3%A9n_II"
+        }
+      ]
     },
     {
       "id": "patiera",
@@ -73,7 +112,18 @@
         "es": "Cuida uno de los patios de flores de Córdoba. Cariñosa, habladora y muy defensora del salmorejo de su abuela.",
         "en": "She looks after one of Córdoba's flower courtyards. Affectionate, chatty and a staunch defender of her grandmother's salmorejo."
       },
-      "avatar": "sprites/patiera/patiera_neutral.svg"
+      "avatar": "sprites/patiera/patiera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los patios cordobeses son casas de vecinos con un patio central lleno de macetas. Desde 1921 el Ayuntamiento convoca cada mayo un concurso y los vecinos abren sus patios al público. La Fiesta de los Patios es Patrimonio Cultural Inmaterial de la Humanidad desde 2012.",
+        "en": "Córdoba's patios are shared houses built around a central courtyard full of flowerpots. Since 1921 the city has held a competition every May, and the residents open their patios to the public. The Patios Festival has been on UNESCO's Intangible Cultural Heritage list since 2012."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Festival de los Patios Cordobeses",
+          "url": "https://es.wikipedia.org/wiki/Festival_de_los_Patios_Cordobeses"
+        }
+      ]
     },
     {
       "id": "ziryab",
@@ -86,7 +136,19 @@
         "en": "A musician who came from Baghdad to the court of Abd al-Rahman II in the 9th century. Elegant and a little vain."
       },
       "avatar": "sprites/ziryab/ziryab_neutral.svg",
-      "era": "siglo IX"
+      "era": "siglo IX",
+      "kind": "real",
+      "lived": "789-857",
+      "bio": {
+        "es": "Abu l-Hasan Ali ibn Nafi, Ziryab («mirlo»), fue un músico que llegó a la corte de Abderramán II en Córdoba en el año 822. Se le atribuye añadir una quinta cuerda al laúd y traer de Bagdad modas en el vestir, el peinado y la mesa, como servir los platos en un orden fijo.",
+        "en": "Abu l-Hasan Ali ibn Nafi, Ziryab (“blackbird”), was a musician who arrived at Abd al-Rahman II's court in Córdoba in 822. He is credited with adding a fifth string to the lute and bringing fashions in dress, hairstyles and dining from Baghdad, such as serving dishes in a set order."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Ziryab",
+          "url": "https://es.wikipedia.org/wiki/Ziryab"
+        }
+      ]
     },
     {
       "id": "jornalero",
@@ -98,7 +160,18 @@
         "es": "Jornalero de los olivares cordobeses. Sencillo, sabio y con el dornillo siempre a mano.",
         "en": "A labourer from the Córdoba olive groves. Simple, wise and always with his dornillo at hand."
       },
-      "avatar": "sprites/jornalero/jornalero_neutral.svg"
+      "avatar": "sprites/jornalero/jornalero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los jornaleros del campo cordobés comían en el tajo un majado de pan, aceite, ajo y sal hecho en el dornillo, un cuenco de madera. Cuando llegó el tomate de América, entró en la receta y nació el salmorejo tal y como lo conocemos.",
+        "en": "Farm labourers in the Córdoba countryside ate a mash of bread, oil, garlic and salt made in a dornillo, a wooden bowl. When tomatoes arrived from the Americas they entered the recipe, and salmorejo as we know it was born."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Salmorejo",
+          "url": "https://es.wikipedia.org/wiki/Salmorejo"
+        }
+      ]
     },
     {
       "id": "piconera",
@@ -111,7 +184,19 @@
         "en": "The girl in Romero de Torres's last painting (1930), beside her charcoal brazier. Every May she builds a cross of flowers. Proud and very Cordoban."
       },
       "avatar": "sprites/piconera/piconera_neutral.svg",
-      "era": "1930"
+      "era": "1930",
+      "kind": "tipo",
+      "lived": "1930",
+      "bio": {
+        "es": "«La chiquita piconera» es el último cuadro de Julio Romero de Torres (1930): una muchacha junto a un brasero de picón, el carbón menudo que se usaba para calentar las casas. El personaje es la joven del cuadro; hoy se puede ver en el Museo Julio Romero de Torres.",
+        "en": "“La chiquita piconera” is Julio Romero de Torres's last painting (1930): a girl beside a brazier of picón, the small charcoal used to heat homes. The character is the girl in the painting, which can be seen in the Julio Romero de Torres Museum."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: La chiquita piconera (Julio Romero de Torres)",
+          "url": "https://es.wikipedia.org/wiki/La_chiquita_piconera_(Julio_Romero_de_Torres)"
+        }
+      ]
     },
     {
       "id": "romerotorres",
@@ -124,7 +209,19 @@
         "en": "A Cordoban painter of the women of his city; his home is now his museum, by the Plaza del Potro. Elegant and a man of few words."
       },
       "avatar": "sprites/romerotorres/romerotorres_neutral.svg",
-      "era": "1874 - 1930"
+      "era": "1874 - 1930",
+      "kind": "real",
+      "lived": "1874-1930",
+      "bio": {
+        "es": "Julio Romero de Torres fue un pintor cordobés famoso por sus retratos de mujeres morenas y misteriosas, con Córdoba de fondo. Su casa, junto a la plaza del Potro, es hoy su museo. Su cara apareció en los billetes de 100 pesetas.",
+        "en": "Julio Romero de Torres was a Córdoba painter famous for his portraits of dark-haired, mysterious women with Córdoba in the background. His house by Plaza del Potro is now his museum. His face appeared on the 100-peseta note."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Julio Romero de Torres",
+          "url": "https://es.wikipedia.org/wiki/Julio_Romero_de_Torres"
+        }
+      ]
     },
     {
       "id": "gongora",
@@ -137,20 +234,44 @@
         "en": "The great poet of the Golden Age, born and died in Córdoba. Theatrical, witty and with an elephant's memory."
       },
       "avatar": "sprites/gongora/gongora_neutral.svg",
-      "era": "1561 - 1627"
+      "era": "1561 - 1627",
+      "kind": "real",
+      "lived": "1561-1627",
+      "bio": {
+        "es": "Luis de Góngora, nacido y muerto en Córdoba, fue uno de los grandes poetas del Siglo de Oro y el maestro del culteranismo, con poemas como las «Soledades». Fue racionero de la catedral de Córdoba y rival de Quevedo. Su casa está junto a la plaza de la Trinidad.",
+        "en": "Luis de Góngora, born and died in Córdoba, was one of the great poets of the Golden Age and the master of culteranismo, with poems such as the “Solitudes”. He was a prebendary of Córdoba Cathedral and a rival of Quevedo. His house stands near Plaza de la Trinidad."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Luis de Góngora",
+          "url": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
+        }
+      ]
     },
     {
       "id": "ramirezarellano",
       "name": {
-        "es": "Teodoro Ramírez de Arellano",
-        "en": "Teodoro Ramírez de Arellano"
+        "es": "Teodomiro Ramírez de Arellano",
+        "en": "Teodomiro Ramírez de Arellano"
       },
       "description": {
-        "es": "Cronista cordobés, autor de «Paseos por Córdoba». Paciente, sabio y amigo de las fechas.",
-        "en": "A Cordoban chronicler, author of “Paseos por Córdoba”. Patient, learned and fond of dates."
+        "es": "Escritor y cronista gaditano afincado en Córdoba, autor de «Paseos por Córdoba». Paciente, sabio y amigo de las fechas.",
+        "en": "A writer and chronicler from Cádiz who settled in Córdoba, author of “Paseos por Córdoba”. Patient, learned and fond of dates."
       },
       "avatar": "sprites/ramirezarellano/ramirezarellano_neutral.svg",
-      "era": "s. XIX"
+      "era": "1828-1909",
+      "kind": "real",
+      "lived": "1828-1909",
+      "bio": {
+        "es": "Teodomiro Ramírez de Arellano nació en Cádiz, pero vivió en Córdoba, donde fue escritor, periodista y dramaturgo. Su obra más conocida es «Paseos por Córdoba» (1873-1877), un recorrido calle a calle por la historia, los monumentos y las leyendas de la ciudad, que todavía se consulta.",
+        "en": "Teodomiro Ramírez de Arellano was born in Cádiz but lived in Córdoba, where he was a writer, journalist and playwright. His best-known work is “Paseos por Córdoba” (1873-1877), a street-by-street walk through the city's history, monuments and legends that is still consulted today."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Teodomiro Ramírez de Arellano",
+          "url": "https://es.wikipedia.org/wiki/Teodomiro_Ram%C3%ADrez_de_Arellano"
+        }
+      ]
     },
     {
       "id": "juandemena",
@@ -163,7 +284,19 @@
         "en": "A 15th-century Cordoban poet, author of the “Laberinto de Fortuna”. Learned and a bit of a gossip."
       },
       "avatar": "sprites/juandemena/juandemena_neutral.svg",
-      "era": "1411 - 1456"
+      "era": "1411 - 1456",
+      "kind": "real",
+      "lived": "1411-1456",
+      "bio": {
+        "es": "Juan de Mena, poeta cordobés, fue secretario de cartas latinas y cronista del rey Juan II de Castilla. Su obra más famosa es el «Laberinto de Fortuna» (1444). Vivía cuando ocurrió el crimen de los Comendadores de Córdoba, en 1448.",
+        "en": "Juan de Mena, a poet from Córdoba, was Latin secretary and chronicler to King John II of Castile. His most famous work is the “Labyrinth of Fortune” (1444). He was alive when the crime of the Commanders of Córdoba took place in 1448."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Juan de Mena",
+          "url": "https://es.wikipedia.org/wiki/Juan_de_Mena"
+        }
+      ]
     },
     {
       "id": "duquerivas",
@@ -176,7 +309,19 @@
         "en": "Ángel de Saavedra, a Romantic poet and playwright born in Córdoba, author of “Romances históricos”. Theatrical and passionate."
       },
       "avatar": "sprites/duquerivas/duquerivas_neutral.svg",
-      "era": "1791 - 1865"
+      "era": "1791 - 1865",
+      "kind": "real",
+      "lived": "1791-1865",
+      "bio": {
+        "es": "Ángel de Saavedra, duque de Rivas, nació en Córdoba. Fue militar, político y uno de los grandes autores del Romanticismo español: escribió el drama «Don Álvaro o la fuerza del sino» (1835) y los «Romances históricos» (1841), donde cuenta leyendas de la historia de España.",
+        "en": "Ángel de Saavedra, Duke of Rivas, was born in Córdoba. A soldier and politician, he was one of the great authors of Spanish Romanticism: he wrote the drama “Don Álvaro, or the Force of Fate” (1835) and the “Historical Ballads” (1841), which retell legends from Spanish history."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Duque de Rivas",
+          "url": "https://es.wikipedia.org/wiki/Duque_de_Rivas"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1320,6 +1465,23 @@
           },
           "icon": "collectibles/cordoba_insignia.svg",
           "awardedAtNodeId": "n6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Alhakén II",
+          "url": "https://es.wikipedia.org/wiki/Alhak%C3%A9n_II"
+        },
+        {
+          "title": "Wikipedia: Almanzor",
+          "url": "https://es.wikipedia.org/wiki/Almanzor"
+        },
+        {
+          "title": "Wikipedia: Lubna de Córdoba",
+          "url": "https://es.wikipedia.org/wiki/Lubna_de_C%C3%B3rdoba"
+        },
+        {
+          "title": "Biblioteca Nacional de España, «Alhaquén II, el califa bibliófilo»"
         }
       ]
     },
@@ -2465,6 +2627,20 @@
           "icon": "collectibles/cordoba_salmorejo.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Salmorejo",
+          "url": "https://es.wikipedia.org/wiki/Salmorejo"
+        },
+        {
+          "title": "Wikipedia: Ziryab",
+          "url": "https://es.wikipedia.org/wiki/Ziryab"
+        },
+        {
+          "title": "Wikipedia: Festival de los Patios Cordobeses",
+          "url": "https://es.wikipedia.org/wiki/Festival_de_los_Patios_Cordobeses"
+        }
       ]
     },
     {
@@ -3603,6 +3779,32 @@
           "icon": "collectibles/cordoba_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Festival de los Patios Cordobeses",
+          "url": "https://es.wikipedia.org/wiki/Festival_de_los_Patios_Cordobeses"
+        },
+        {
+          "title": "Wikipedia: Invención de la Santa Cruz",
+          "url": "https://es.wikipedia.org/wiki/Invenci%C3%B3n_de_la_Santa_Cruz"
+        },
+        {
+          "title": "Wikipedia: Feria de Córdoba (España)",
+          "url": "https://es.wikipedia.org/wiki/Feria_de_C%C3%B3rdoba_(Espa%C3%B1a)"
+        },
+        {
+          "title": "Wikipedia: La chiquita piconera (Julio Romero de Torres)",
+          "url": "https://es.wikipedia.org/wiki/La_chiquita_piconera_(Julio_Romero_de_Torres)"
+        },
+        {
+          "title": "Wikipedia: Julio Romero de Torres",
+          "url": "https://es.wikipedia.org/wiki/Julio_Romero_de_Torres"
+        },
+        {
+          "title": "Wikipedia: Luis de Góngora",
+          "url": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
+        }
       ]
     },
     {
@@ -3612,8 +3814,8 @@
         "en": "Why Is It Called the Malmuerta Tower?"
       },
       "summary": {
-        "es": "Una torre de la muralla lleva un nombre terrible. ¿Fue la penitencia por un crimen de 1448? Con el cronista Teodoro Ramírez de Arellano y los poetas Juan de Mena y el duque de Rivas.",
-        "en": "A tower in the city wall bears a terrible name. Was it the penance for a crime in 1448? With the chronicler Teodoro Ramírez de Arellano and the poets Juan de Mena and the Duke of Rivas."
+        "es": "Una torre de la muralla lleva un nombre terrible. ¿Fue la penitencia por un crimen de 1448? Con el cronista Teodomiro Ramírez de Arellano y los poetas Juan de Mena y el duque de Rivas.",
+        "en": "A tower in the city wall bears a terrible name. Was it the penance for a crime in 1448? With the chronicler Teodomiro Ramírez de Arellano and the poets Juan de Mena and the Duke of Rivas."
       },
       "era": "1404 - 1448",
       "guideCharacterId": "ramirezarellano",
@@ -3678,8 +3880,8 @@
               "characterId": "ramirezarellano",
               "expression": "happy",
               "text": {
-                "es": "Buenas noches. Teodoro Ramírez de Arellano, cordobés. Escribí «Paseos por Córdoba»: recorrí calle a calle la ciudad apuntando su historia y sus leyendas.",
-                "en": "Good evening. Teodoro Ramírez de Arellano, from Córdoba. I wrote “Paseos por Córdoba”: I walked the city street by street, writing down its history and legends."
+                "es": "Buenas noches. Teodomiro Ramírez de Arellano. Nací en Cádiz, pero Córdoba fue mi casa: escribí «Paseos por Córdoba»: recorrí calle a calle la ciudad apuntando su historia y sus leyendas.",
+                "en": "Good evening. Teodomiro Ramírez de Arellano. I was born in Cádiz, but Córdoba was my home: I wrote “Paseos por Córdoba”: I walked the city street by street, writing down its history and legends."
               }
             },
             {
@@ -4525,6 +4727,27 @@
           },
           "icon": "collectibles/cordoba_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Torre de la Malmuerta (Córdoba)",
+          "url": "https://es.wikipedia.org/wiki/Torre_de_la_Malmuerta_(C%C3%B3rdoba)"
+        },
+        {
+          "title": "Wikipedia: Teodomiro Ramírez de Arellano",
+          "url": "https://es.wikipedia.org/wiki/Teodomiro_Ram%C3%ADrez_de_Arellano"
+        },
+        {
+          "title": "Wikipedia: Juan de Mena",
+          "url": "https://es.wikipedia.org/wiki/Juan_de_Mena"
+        },
+        {
+          "title": "Wikipedia: Duque de Rivas",
+          "url": "https://es.wikipedia.org/wiki/Duque_de_Rivas"
+        },
+        {
+          "title": "Teodomiro Ramírez de Arellano, «Paseos por Córdoba» (1873-1877)"
         }
       ]
     }

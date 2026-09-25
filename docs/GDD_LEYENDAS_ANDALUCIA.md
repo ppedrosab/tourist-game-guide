@@ -97,7 +97,7 @@ La ventana tapiada con la frase «Esperándola del cielo».
   - ningún tesoro.
 - **Veredicto:** ningún tesoro de oro ha aparecido; lo que sale de la tierra es la historia de la ciudad.
 - **Personajes:** `santisteban` (guía, cronista que murió pobre al pie de la Alcazaba), `almotacin`
-  (rey de la taifa, s. XI) y `galiana` (figura de la leyenda).
+  (rey de la taifa, s. XI) y `abderraman` (Abderramán III, que mandó levantar la Alcazaba en 955; la leyenda del padre Tapia cuenta que lo hizo por un sueño con un tesoro).
 - **Caminos:** La muralla (Muralla de Jayrán) / La Chanca.
 
 ## Datos a verificar antes de publicar

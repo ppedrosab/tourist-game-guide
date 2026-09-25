@@ -35,7 +35,19 @@
         "es": "Dice que mató al lagarto a cambio del indulto. Fanfarrón y simpático.",
         "en": "He claims he killed the lizard in exchange for a pardon. A boastful charmer."
       },
-      "avatar": "sprites/preso/preso_neutral.svg"
+      "avatar": "sprites/preso/preso_neutral.svg",
+      "kind": "leyenda",
+      "lived": "leyenda",
+      "bio": {
+        "es": "En la versión más conocida de la leyenda del lagarto de la Malena, un preso condenado a muerte pide el indulto a cambio de matar al bicho. Le da a comer un zurrón de pólvora escondido entre panes recién hechos, y el lagarto revienta.",
+        "en": "In the best-known version of the legend of the Malena lizard, a prisoner sentenced to death asks for a pardon in exchange for killing the beast. He feeds it a bag of gunpowder hidden among freshly baked loaves, and the lizard bursts."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Lagarto de la Malena",
+          "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
+        }
+      ]
     },
     {
       "id": "pastor",
@@ -47,7 +59,19 @@
         "es": "Pastor de la Malena que asegura que al lagarto lo mató él. Tranquilo y cabezota.",
         "en": "A shepherd from La Malena who insists he killed the lizard. Calm and stubborn."
       },
-      "avatar": "sprites/pastor/pastor_neutral.svg"
+      "avatar": "sprites/pastor/pastor_neutral.svg",
+      "kind": "leyenda",
+      "lived": "leyenda",
+      "bio": {
+        "es": "En otra versión de la leyenda del lagarto de la Malena, un pastor rellena una piel de cordero con yesca encendida, y el lagarto se abrasa por dentro al tragársela. Cada barrio y cada abuelo de Jaén cuenta la suya.",
+        "en": "In another version of the legend of the Malena lizard, a shepherd stuffs a lambskin with burning tinder, and the lizard burns up inside after swallowing it. Every neighbourhood and every grandparent in Jaén has their own version."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Lagarto de la Malena",
+          "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
+        }
+      ]
     },
     {
       "id": "catadora",
@@ -59,7 +83,18 @@
         "es": "Catadora de aceite de oliva. Nariz fina, paladar de oro y mucha curiosidad.",
         "en": "An olive oil taster. A fine nose, a golden palate and plenty of curiosity."
       },
-      "avatar": "sprites/catadora/catadora_neutral.svg"
+      "avatar": "sprites/catadora/catadora_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los catadores de aceite prueban el aceite de oliva virgen en copas azules, para que el color no influya, y puntúan su frutado, su amargor y su picor. Jaén es la provincia que más aceite de oliva produce del mundo.",
+        "en": "Oil tasters try virgin olive oil in blue glasses, so the colour does not influence them, and score its fruitiness, bitterness and pungency. Jaén is the province that produces the most olive oil in the world."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Aceite de oliva",
+          "url": "https://es.wikipedia.org/wiki/Aceite_de_oliva"
+        }
+      ]
     },
     {
       "id": "vareador",
@@ -71,7 +106,18 @@
         "es": "Vareador de aceituna, de familia olivarera. Fuerte, alegre y madrugador.",
         "en": "An olive beater from a family of olive growers. Strong, cheerful and an early riser."
       },
-      "avatar": "sprites/vareador/vareador_neutral.svg"
+      "avatar": "sprites/vareador/vareador_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "El vareo consiste en golpear las ramas del olivo con una vara larga para que caiga la aceituna sobre unas mantas. La campaña de recogida va de noviembre a febrero y durante siglos ha dado trabajo a miles de familias de Jaén.",
+        "en": "Vareo means beating the olive tree's branches with a long pole so the olives fall onto nets. The harvest runs from November to February and has given work to thousands of Jaén families for centuries."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Provincia de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
+        }
+      ]
     },
     {
       "id": "molinero",
@@ -83,7 +129,18 @@
         "es": "Molinero de almazara. Sabe convertir la aceituna en oro líquido.",
         "en": "An oil-mill man. He knows how to turn olives into liquid gold."
       },
-      "avatar": "sprites/molinero/molinero_neutral.svg"
+      "avatar": "sprites/molinero/molinero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "En la almazara la aceituna se lava, se muele y se bate, y de esa pasta se separa el aceite. Antes se hacía con piedras movidas por animales y prensas; hoy se hace con centrifugadoras. Jaén tiene cientos de almazaras.",
+        "en": "At the almazara (oil mill) the olives are washed, ground and beaten, and the oil is separated from the paste. It used to be done with animal-driven stones and presses; today it is done with centrifuges. Jaén has hundreds of oil mills."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Aceite de oliva",
+          "url": "https://es.wikipedia.org/wiki/Aceite_de_oliva"
+        }
+      ]
     },
     {
       "id": "melenchonera",
@@ -95,7 +152,18 @@
         "es": "Canta y baila melenchones alrededor de las lumbres. Alegre, friolera y con buena voz.",
         "en": "She sings and dances melenchones around the bonfires. Cheerful, always cold and with a fine voice."
       },
-      "avatar": "sprites/melenchonera/melenchonera_neutral.svg"
+      "avatar": "sprites/melenchonera/melenchonera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "El melenchón es el cante y baile popular de Jaén: se baila en corro alrededor de las lumbres de San Antón, la noche del 16 de enero, mientras se cantan coplas. Las lumbres se encienden en las plazas de los barrios.",
+        "en": "The melenchón is Jaén's popular song and dance: people dance in a ring around the San Antón bonfires on the night of 16 January while singing verses. The bonfires are lit in the neighbourhood squares."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Fiestas de San Antón de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Fiestas_de_San_Ant%C3%B3n_de_Ja%C3%A9n"
+        }
+      ]
     },
     {
       "id": "podador",
@@ -107,7 +175,18 @@
         "es": "Poda olivos cada invierno con sus tijeras. Tozudo y sabio del campo.",
         "en": "He prunes olive trees every winter with his shears. Stubborn and wise in country ways."
       },
-      "avatar": "sprites/podador/podador_neutral.svg"
+      "avatar": "sprites/podador/podador_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "El olivo se poda en invierno, después de la recogida, para que dé más fruto. El podador sabe qué ramas quitar para que entre la luz en la copa. La leña de la poda se ha usado siempre para calentar las casas.",
+        "en": "Olive trees are pruned in winter, after the harvest, so they bear more fruit. The pruner knows which branches to remove to let light into the crown. Pruning wood has always been used to heat homes."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Provincia de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
+        }
+      ]
     },
     {
       "id": "iranzo",
@@ -120,7 +199,19 @@
         "en": "Miguel Lucas de Iranzo, Constable of Castile, settled in Jaén; the chronicle of his deeds tells of the festivities he held in the city. Good-natured and very talkative."
       },
       "avatar": "sprites/iranzo/iranzo_neutral.svg",
-      "era": "s. XV"
+      "era": "s. XV",
+      "kind": "real",
+      "lived": "m. 1473",
+      "bio": {
+        "es": "Miguel Lucas de Iranzo fue condestable de Castilla con Enrique IV y se instaló en Jaén, que defendió de los ataques nazaríes. La crónica «Hechos del condestable don Miguel Lucas de Iranzo» describe las fiestas, juegos y banquetes que organizaba en la ciudad. Murió asesinado en la catedral en 1473.",
+        "en": "Miguel Lucas de Iranzo was Constable of Castile under Henry IV and settled in Jaén, which he defended against Nasrid raids. The chronicle “Deeds of the Constable Don Miguel Lucas de Iranzo” describes the festivals, games and banquets he held in the city. He was murdered in the cathedral in 1473."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Miguel Lucas de Iranzo",
+          "url": "https://es.wikipedia.org/wiki/Miguel_Lucas_de_Iranzo"
+        }
+      ]
     },
     {
       "id": "mona",
@@ -133,7 +224,23 @@
         "en": "A stone figure on the front of Jaén Cathedral, said to bring bad luck. Vain, dramatic and very tired of being blamed."
       },
       "avatar": "sprites/mona/mona_neutral.svg",
-      "era": "leyenda"
+      "era": "leyenda",
+      "kind": "leyenda",
+      "lived": "leyenda",
+      "bio": {
+        "es": "«La Mona» es un pequeño relieve de piedra en un contrafuerte gótico de la catedral de Jaén, en el llamado callejón de la Mona. Representa a una figura de piernas cruzadas con turbante. La tradición dice que trae mala suerte mirarla a los ojos, y los recién casados procuraban no hacerlo.",
+        "en": "“La Mona” is a small stone relief on a Gothic buttress of Jaén Cathedral, in the lane known as the callejón de la Mona. It shows a cross-legged figure wearing a turban. Tradition says it is bad luck to look it in the eye, and newlyweds took care not to."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Leyendas de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Catedral de la Asunción (Jaén)",
+          "url": "https://es.wikipedia.org/wiki/Catedral_de_la_Asunci%C3%B3n_(Ja%C3%A9n)"
+        }
+      ]
     },
     {
       "id": "vandelvira",
@@ -146,7 +253,19 @@
         "en": "The Renaissance architect who designed Jaén Cathedral. Practical, serious and not at all superstitious."
       },
       "avatar": "sprites/vandelvira/vandelvira_neutral.svg",
-      "era": "1509 - 1575"
+      "era": "1509 - 1575",
+      "kind": "real",
+      "lived": "1509-1575",
+      "bio": {
+        "es": "Andrés de Vandelvira fue el gran arquitecto del Renacimiento andaluz. Trazó la catedral de Jaén y levantó en Úbeda y Baeza la capilla del Salvador y el Hospital de Santiago, entre otras obras. Esos conjuntos son Patrimonio de la Humanidad desde 2003.",
+        "en": "Andrés de Vandelvira was the great architect of the Andalusian Renaissance. He designed Jaén Cathedral and built the Chapel of El Salvador and the Hospital of Santiago in Úbeda and Baeza, among other works. Those towns have been World Heritage Sites since 2003."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Andrés de Vandelvira",
+          "url": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Vandelvira"
+        }
+      ]
     },
     {
       "id": "bernardolopez",
@@ -159,7 +278,19 @@
         "en": "A 19th-century Jaén poet, author of the “Ode to the Second of May”. Brave with words and fond of stories."
       },
       "avatar": "sprites/bernardolopez/bernardolopez_neutral.svg",
-      "era": "1838 - 1870"
+      "era": "1838 - 1870",
+      "kind": "real",
+      "lived": "1838-1870",
+      "bio": {
+        "es": "Bernardo López García, poeta de Jaén, es conocido sobre todo por su «Oda al Dos de Mayo», que empieza «Oigo, patria, tu aflicción». Fue un poeta romántico y liberal, y murió joven en Jaén.",
+        "en": "Bernardo López García, a poet from Jaén, is best known for his “Ode to the Second of May”, which begins “Oigo, patria, tu aflicción”. He was a Romantic and liberal poet, and died young in Jaén."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Bernardo López García",
+          "url": "https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa"
+        }
+      ]
     },
     {
       "id": "lagarto",
@@ -172,7 +303,23 @@
         "en": "The beast of Jaén's most famous legend, which now has a statue by the Raudal. Absent-minded, good-natured and full of humour."
       },
       "avatar": "sprites/lagarto/lagarto_neutral.svg",
-      "era": "leyenda"
+      "era": "leyenda",
+      "kind": "leyenda",
+      "lived": "leyenda",
+      "bio": {
+        "es": "La leyenda más famosa de Jaén cuenta que un lagarto enorme vivía en la cueva del manantial de la Magdalena y se comía a quien iba a por agua. Hay varias versiones de quién lo mató: un preso condenado a muerte, un pastor o un caballero con espejos. En la iglesia de San Ildefonso se guardaba una piel que resultó ser de caimán, y hoy tiene una estatua en el Raudal de la Magdalena.",
+        "en": "Jaén's most famous legend tells of a huge lizard that lived in the cave of the Magdalena spring and ate anyone who came for water. There are several versions of who killed it: a condemned prisoner, a shepherd or a knight with mirrors. A skin kept in the church of San Ildefonso turned out to be a caiman's, and today the lizard has a statue by the Raudal de la Magdalena."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Lagarto de la Malena",
+          "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
+        },
+        {
+          "title": "Wikipedia: Leyendas de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1299,6 +1446,23 @@
           },
           "icon": "collectibles/jaen_lagarto.svg",
           "awardedAtNodeId": "n6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Lagarto de la Malena",
+          "url": "https://es.wikipedia.org/wiki/Lagarto_de_la_Malena"
+        },
+        {
+          "title": "Wikipedia: Leyendas de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Catedral de la Asunción (Jaén)",
+          "url": "https://es.wikipedia.org/wiki/Catedral_de_la_Asunci%C3%B3n_(Ja%C3%A9n)"
+        },
+        {
+          "title": "Archivo Histórico Provincial de Jaén, «El Lagarto de la Magdalena y los dragones de la ciudad de Jaén»"
         }
       ]
     },
@@ -2434,6 +2598,19 @@
           "icon": "collectibles/jaen_olivos.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Provincia de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Aceite de oliva",
+          "url": "https://es.wikipedia.org/wiki/Aceite_de_oliva"
+        },
+        {
+          "title": "Editorial Universidad de Jaén, «El olivar en Jaén en los siglos XIX y XX: una trayectoria de éxito»"
+        }
       ]
     },
     {
@@ -3568,6 +3745,19 @@
           "icon": "collectibles/jaen_fiesta_insignia.svg",
           "awardedAtNodeId": "g6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Fiestas de San Antón de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Fiestas_de_San_Ant%C3%B3n_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Miguel Lucas de Iranzo",
+          "url": "https://es.wikipedia.org/wiki/Miguel_Lucas_de_Iranzo"
+        },
+        {
+          "title": "«Hechos del condestable don Miguel Lucas de Iranzo» (crónica del siglo XV)"
+        }
       ]
     },
     {
@@ -4492,6 +4682,24 @@
           },
           "icon": "collectibles/jaen_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Leyendas de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Catedral de la Asunción (Jaén)",
+          "url": "https://es.wikipedia.org/wiki/Catedral_de_la_Asunci%C3%B3n_(Ja%C3%A9n)"
+        },
+        {
+          "title": "Wikipedia: Andrés de Vandelvira",
+          "url": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Vandelvira"
+        },
+        {
+          "title": "Wikipedia: Bernardo López García",
+          "url": "https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa"
         }
       ]
     }

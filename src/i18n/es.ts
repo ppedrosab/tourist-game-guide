@@ -87,6 +87,8 @@ export const es = {
     noValida: "Esta ruta no existe o su contenido no es válido.",
     decision: "Decisión {n}",
     comenzar: "Comenzar ruta",
+    personajes: "Personajes",
+    fuentes: "Fuentes",
     deNuevo: "Empezar de nuevo",
   },
   jugar: {
@@ -173,6 +175,18 @@ export const es = {
     otroCamino: "{title} · otro camino",
     porDescubrir: "Pista por descubrir",
     objetos: "Objetos",
+    personajes: "Personajes",
+  },
+  personaje: {
+    noEncontrado: "Personaje no encontrado",
+    real: "Persona real",
+    leyenda: "Figura de leyenda",
+    tipo: "Figura típica",
+    simbolo: "Símbolo de la ciudad",
+    historia: "Su historia",
+    referencias: "Para saber más",
+    verFicha: "Ver la ficha de {name}",
+    abrir: "Abrir {title}",
   },
   mapa: {
     titulo: "Mapa",

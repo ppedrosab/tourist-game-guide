@@ -85,6 +85,8 @@ export const en: Strings = {
     noValida: "This route doesn't exist or its content isn't valid.",
     decision: "Decision {n}",
     comenzar: "Start route",
+    personajes: "Characters",
+    fuentes: "Sources",
     deNuevo: "Start over",
   },
   jugar: {
@@ -171,6 +173,18 @@ export const en: Strings = {
     otroCamino: "{title} · other path",
     porDescubrir: "Clue to discover",
     objetos: "Items",
+    personajes: "Characters",
+  },
+  personaje: {
+    noEncontrado: "Character not found",
+    real: "Real person",
+    leyenda: "Legendary figure",
+    tipo: "Local character",
+    simbolo: "City icon",
+    historia: "Their story",
+    referencias: "Learn more",
+    verFicha: "Open {name}'s profile",
+    abrir: "Open {title}",
   },
   mapa: {
     titulo: "Map",

@@ -102,6 +102,11 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   "camera"` = cámara en directo solo si el jugador la enciende (no se captura nada); sin cámara, la
   ilustración actual de la escena. En web la cámara es `getUserMedia` propio (`LiveCamera.tsx`):
   el módulo web de expo-camera descarga un lector QR de un CDN al importarse.
+- Fichas de personaje: cada personaje del pack lleva `kind` (real · leyenda · tipo · símbolo), `lived`,
+  `bio` (su historia) y `sources` (referencias con enlace), y cada ruta sus `sources`. El detalle de
+  ruta enseña el reparto (`routeCast`) y las fuentes; `/personaje` es la ficha (modal, también desde
+  el Cuaderno con los personajes ya conocidos). `allPacks.test.ts` exige ficha a todos y referencias a
+  los reales y de leyenda. Enlaces a Wikipedia comprobados y codificados (%C3%A1…).
 - Prueba de campo: `src/field` (registro y análisis por parada: coordenada y radio sugeridos),
   pantalla `/campo` y guía `docs/PRUEBAS_CALLE.md`.
 
@@ -163,7 +168,7 @@ ciudad, más cortas (6 paradas) y pensadas para el atardecer; diseño y datos a 
 - Cádiz, la sangre del drago: Adolfo de Castro, Hércules, Gerión.
 - Huelva, Tartessos: Argantonio, Colaeo de Samos, Habis.
 - Jaén, el fantasma de San Bartolomé: la Mona, Vandelvira, Bernardo López García.
-- Almería, el tesoro de la Alcazaba: Santisteban, Almotacín, Galiana.
+- Almería, el tesoro de la Alcazaba: Santisteban, Almotacín, Abderramán III.
 
 La leyenda va como «se cuenta» (`legend: true`) y el veredicto separa lo que dicen los documentos.
 Arte en `scripts/art/leyendas_andalucia_*.py`.
@@ -210,7 +215,8 @@ app/                      rutas (expo-router)
   ruta/[id]/index.tsx     detalle de ruta
   ruta/[id]/jugar.tsx     MODO RUTA: escena + HUD + caja de diálogo (sin pestañas)
   pausa.tsx               modal transparente, vuelve al mismo punto
-  cuaderno.tsx            modal: pistas, mapa, objetos
+  cuaderno.tsx            modal: pistas, personajes, mapa, objetos
+  personaje.tsx           modal: ficha del personaje (historia y referencias)
   mapa.tsx                modal: mapa de la ruta en curso
   campo.tsx               informe de la prueba de campo (desde Perfil)
 src/theme/                tokens (colores, radios, sombras, tipografía)
@@ -328,6 +334,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Los personajes tienen que ser propios de la ciudad: personas reales históricas o figuras
   características de ese lugar (la Tarasca, la Chiquita Piconera, el biznaguero, el verdialero…).
   Nada de oficios o tipos genéricos que valdrían para cualquier sitio.
+- Personaje o ruta nuevos sin ficha ni fuentes: escribir su historia y citar de dónde sale (y comprobar
+  fechas y nombres; p. ej. el cronista de Córdoba es Teodomiro, no Teodoro, Ramírez de Arellano).
 - No meter contenido de ciudad en el código: todo sale del pack.
 - No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts` y `en.ts`.
 - No usar colores o tamaños sueltos: usar `src/theme`.

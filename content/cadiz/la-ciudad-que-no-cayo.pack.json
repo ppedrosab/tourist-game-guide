@@ -36,7 +36,19 @@
         "en": "A 19th-century Cádiz puppet. A gossipy grandmother with more wit than anyone and a “pisha” in every sentence."
       },
       "avatar": "sprites/norica/norica_neutral.svg",
-      "era": "s. XIX-hoy"
+      "era": "s. XIX-hoy",
+      "kind": "simbolo",
+      "lived": "s. XIX-hoy",
+      "bio": {
+        "es": "La Tía Norica es la marioneta más famosa del teatro de títeres de Cádiz, que se representa desde el siglo XIX con el «Auto del Nacimiento» y sainetes llenos de humor gaditano. La compañía sigue en activo y los títeres antiguos se conservan. El teatro de la Tía Norica está hoy sobre el yacimiento fenicio de Gadir.",
+        "en": "The Tía Norica is the most famous puppet of Cádiz's puppet theatre, performed since the 19th century with a Nativity play and farces full of Cádiz humour. The company is still active and the old puppets are preserved. The Tía Norica theatre today stands over the Phoenician site of Gadir."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Tía Norica",
+          "url": "https://es.wikipedia.org/wiki/T%C3%ADa_Norica"
+        }
+      ]
     },
     {
       "id": "la_pepa",
@@ -49,7 +61,19 @@
         "en": "The Constitution of 1812 in person. Idealistic, solemn and very proud to have been born in Cádiz."
       },
       "avatar": "sprites/pepa/pepa_neutral.svg",
-      "era": "1812"
+      "era": "1812",
+      "kind": "simbolo",
+      "lived": "1812",
+      "bio": {
+        "es": "«La Pepa» es el apodo de la Constitución de 1812, la primera de España, aprobada en Cádiz el 19 de marzo de 1812, día de San José, mientras los franceses sitiaban la ciudad. Declaró que la soberanía reside en la nación y dividió los poderes. Se proclamó en la plaza de San Antonio.",
+        "en": "“La Pepa” is the nickname of the Constitution of 1812, Spain's first, passed in Cádiz on 19 March 1812, Saint Joseph's day, while the French besieged the city. It declared that sovereignty lies with the nation and separated the powers. It was proclaimed in Plaza de San Antonio."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Constitución española de 1812",
+          "url": "https://es.wikipedia.org/wiki/Constituci%C3%B3n_espa%C3%B1ola_de_1812"
+        }
+      ]
     },
     {
       "id": "magon",
@@ -62,7 +86,19 @@
         "en": "A merchant from Gadir. He knows everything about ships, tuna and haggling, and boasts of being the oldest gaditano of all."
       },
       "avatar": "sprites/magon/magon_neutral.svg",
-      "era": "s. VIII a. C."
+      "era": "s. VIII a. C.",
+      "kind": "tipo",
+      "lived": "s. VIII a. C.",
+      "bio": {
+        "es": "Magón representa a los mercaderes fenicios de Tiro que fundaron Gadir, la ciudad más antigua de Occidente según la tradición. Comerciaban con metales, púrpura, salazones de atún y vino. Magón era un nombre corriente entre fenicios y cartagineses; el personaje no es una persona concreta.",
+        "en": "Magón stands for the Phoenician merchants from Tyre who founded Gadir, by tradition the oldest city in the West. They traded in metals, purple dye, salted tuna and wine. Magón was a common Phoenician and Carthaginian name; the character is not a specific person."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Historia de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Historia_de_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "pescaera",
@@ -75,7 +111,18 @@
         "en": "A fish seller at the Central Market. Witty, bossy and a die-hard champion of recipes from the sea."
       },
       "avatar": "sprites/pescaera/pescaera_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "Las pescaderas del Mercado Central de Cádiz, abierto en 1837 y uno de los más antiguos de España, venden el pescado de la bahía: urta, dorada, acedías, cazón… y saben cómo guisar cada uno. El mercado se reformó y su puesto de pescado sigue siendo el corazón del barrio.",
+        "en": "The fishmongers of Cádiz's Central Market, opened in 1837 and one of the oldest in Spain, sell fish from the bay: urta, gilthead bream, wedge sole, dogfish… and know how to cook each one. The market has been renovated and its fish hall is still the heart of the neighbourhood."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Plaza de abastos (Cádiz)",
+          "url": "https://es.wikipedia.org/wiki/Plaza_de_abastos_(C%C3%A1diz)"
+        }
+      ]
     },
     {
       "id": "chicharronero",
@@ -88,7 +135,18 @@
         "en": "A lifelong master of chicharrones. Good-natured, a joker and a champion of recipes from the land."
       },
       "avatar": "sprites/chicharronero/chicharronero_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los chicharrones de Cádiz son panceta de cerdo cocinada lentamente en manteca con especias y cortada en lonchas finas. Se venden en las chacinerías y en los puestos del mercado y tienen indicación geográfica protegida.",
+        "en": "Chicharrones de Cádiz are pork belly slow-cooked in lard with spices and cut into thin slices. They are sold in charcuteries and market stalls and hold a protected geographical indication."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Chicharrón",
+          "url": "https://es.wikipedia.org/wiki/Chicharr%C3%B3n"
+        }
+      ]
     },
     {
       "id": "chirigotero",
@@ -101,7 +159,18 @@
         "en": "A chirigota singer from La Viña. He turns everything into a song, even things he shouldn't."
       },
       "avatar": "sprites/chirigotero/chirigotero_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "La chirigota es la agrupación de humor del Carnaval de Cádiz: canta coplas, pasodobles y cuplés llenos de guasa sobre la actualidad. El barrio de La Viña es su cuna. Compiten en el Concurso del Gran Teatro Falla y luego cantan por las calles.",
+        "en": "The chirigota is the comic group of the Cádiz Carnival: it sings satirical songs, pasodobles and cuplés about current affairs. The La Viña district is its cradle. The groups compete at the Gran Teatro Falla and then sing in the streets."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Chirigota",
+          "url": "https://es.wikipedia.org/wiki/Chirigota"
+        }
+      ]
     },
     {
       "id": "garumero",
@@ -114,7 +183,19 @@
         "en": "A Roman from Gades who makes garum, the most famous fermented fish sauce in the Empire. Curious, smooth-talking and never without his wax tablet."
       },
       "avatar": "sprites/garumero/garumero_neutral.svg",
-      "era": "s. I"
+      "era": "s. I",
+      "kind": "tipo",
+      "lived": "s. I",
+      "bio": {
+        "es": "El garum era una salsa de pescado fermentado con sal que los romanos usaban como condimento. Gades era famosa por sus fábricas de salazones y garum, y en la calle Sacramento se conserva una factoría romana. El personaje representa a los que trabajaban en ellas.",
+        "en": "Garum was a sauce of fish fermented with salt that the Romans used as a seasoning. Gades was famous for its salting and garum works, and a Roman factory survives on Calle Sacramento. The character stands for the people who worked there."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Garo (salsa)",
+          "url": "https://es.wikipedia.org/wiki/Garo_(salsa)"
+        }
+      ]
     },
     {
       "id": "romancero",
@@ -127,7 +208,18 @@
         "en": "A Carnival street reciter: he tells everything in rhyming verse, pointing at the pictures on his board with a stick."
       },
       "avatar": "sprites/romancero/romancero_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "El romancero es una modalidad callejera del Carnaval de Cádiz: una persona sola recita una historia en romance, con versos octosílabos, señalando con un puntero las viñetas de un cartelón. No compite en el Falla; su escenario es la calle.",
+        "en": "The romancero is a street form of the Cádiz Carnival: one person recites a story in ballad metre (eight-syllable lines), pointing with a stick at the pictures on a large painted board. It does not compete at the Falla theatre; its stage is the street."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Carnaval de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "comparsista",
@@ -140,7 +232,18 @@
         "en": "A comparsa member: a poet, serious and a little dramatic. For him, Carnival is all about feeling."
       },
       "avatar": "sprites/comparsista/comparsista_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "La comparsa es la agrupación más poética del Carnaval de Cádiz: canta pasodobles a varias voces con guitarras, bombo y caja, y suele tratar temas serios, de amor a Cádiz o de crítica social.",
+        "en": "The comparsa is the most poetic group of the Cádiz Carnival: it sings pasodobles in several voices with guitars, bass drum and snare, often about serious themes, love for Cádiz or social criticism."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Comparsa",
+          "url": "https://es.wikipedia.org/wiki/Comparsa"
+        }
+      ]
     },
     {
       "id": "corista",
@@ -153,7 +256,18 @@
         "en": "He sings in a choir with his bandurria, aboard the float."
       },
       "avatar": "sprites/corista/corista_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los coros son las agrupaciones más numerosas del Carnaval de Cádiz. Cantan tangos con bandurrias, guitarras y laúdes, y el domingo de Carnaval recorren el centro subidos en bateas, unos carruajes adornados.",
+        "en": "The coros are the largest groups of the Cádiz Carnival. They sing tangos with bandurrias, guitars and lutes, and on Carnival Sunday they tour the centre on bateas, decorated carts."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Carnaval de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "cuartetero",
@@ -166,7 +280,18 @@
         "en": "A quartet member: with two sticks and a chair he can put on a parody."
       },
       "avatar": "sprites/cuartetero/cuartetero_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "El cuarteto es la modalidad más teatral del Carnaval de Cádiz: tres o cuatro componentes, sin más música que el pito de caña y las claves, hacen una parodia hablada y cantada que se basa en el ingenio.",
+        "en": "The cuarteto is the most theatrical form of the Cádiz Carnival: three or four members, with no music but a reed whistle and claves, perform a spoken and sung parody that relies on wit."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Carnaval de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "cargador",
@@ -179,7 +304,18 @@
         "en": "He carries the floats on his shoulders in Cádiz Holy Week. Warm, proud of his neighbourhood and his task."
       },
       "avatar": "sprites/cargador/cargador_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "En Cádiz a los costaleros se les llama cargadores. Llevan los pasos de Semana Santa a hombros, bajo las trabajaderas, y siguen las órdenes del capataz. La forma de cargar gaditana, con el paso más alto y un andar propio, es una seña de la ciudad.",
+        "en": "In Cádiz the bearers who carry the Holy Week floats are called cargadores. They carry them on their shoulders under the wooden beams, following the foreman's orders. The Cádiz way of carrying, with the float higher and a distinct gait, is one of the city's hallmarks."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Semana Santa en Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "maniguetero",
@@ -192,7 +328,18 @@
         "en": "He walks beside the float and marks the rhythm with his forked staff. He wears the penitent's robe, his face covered by the hood: only his eyes show. Serious and a man of few words."
       },
       "avatar": "sprites/maniguetero/maniguetero_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "Los manigueteros son los nazarenos que van junto a las esquinas del paso, en las maniguetas (los tiradores de la parihuela). Llevan túnica, capirote y antifaz, así que no se les ve la cara. El personaje es anónimo, como lo son los penitentes.",
+        "en": "The manigueteros are the Nazarenes who walk at the corners of the float, by the maniguetas (the handles of the frame). They wear a robe, a tall hood and a mask, so their faces are hidden. The character is anonymous, as penitents are."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Semana Santa en Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%A1diz"
+        }
+      ]
     },
     {
       "id": "saetera",
@@ -205,7 +352,18 @@
         "en": "She sings saetas from her balcony when the float stops in front of it."
       },
       "avatar": "sprites/saetera/saetera_neutral.svg",
-      "era": "hoy"
+      "era": "hoy",
+      "kind": "tipo",
+      "bio": {
+        "es": "La saeta es un cante flamenco que se canta a capela, desde un balcón o desde la calle, cuando el paso se detiene. Es una oración cantada. En Cádiz hay saeteros y saeteras de barrio que cantan cada año en los mismos sitios.",
+        "en": "The saeta is a flamenco song sung unaccompanied from a balcony or the street when the float stops. It is a sung prayer. In Cádiz there are neighbourhood saeta singers who sing in the same places every year."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Saeta (música)",
+          "url": "https://es.wikipedia.org/wiki/Saeta_(m%C3%BAsica)"
+        }
+      ]
     },
     {
       "id": "adolfocastro",
@@ -218,7 +376,19 @@
         "en": "A Cádiz scholar, author of a history of Cádiz; he also invented a “Cervantes” text that fooled many. Learned and roguish."
       },
       "avatar": "sprites/adolfocastro/adolfocastro_neutral.svg",
-      "era": "1823 - 1898"
+      "era": "1823 - 1898",
+      "kind": "real",
+      "lived": "1823-1898",
+      "bio": {
+        "es": "Adolfo de Castro fue un erudito y político gaditano que escribió una «Historia de Cádiz y su provincia» (1858) y muchos estudios de literatura. En 1848 publicó «El Buscapié», un texto que presentó como de Cervantes y que en realidad había escrito él. El engaño tardó años en descubrirse.",
+        "en": "Adolfo de Castro was a scholar and politician from Cádiz who wrote a “History of Cádiz and its Province” (1858) and many literary studies. In 1848 he published “El Buscapié”, a text he presented as Cervantes's but had written himself. The hoax took years to uncover."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Adolfo de Castro",
+          "url": "https://es.wikipedia.org/wiki/Adolfo_de_Castro"
+        }
+      ]
     },
     {
       "id": "hercules",
@@ -231,7 +401,23 @@
         "en": "The hero on the Cádiz coat of arms, founder of the city according to myth. Boastful and good-natured."
       },
       "avatar": "sprites/hercules/hercules_neutral.svg",
-      "era": "mito"
+      "era": "mito",
+      "kind": "leyenda",
+      "lived": "mito",
+      "bio": {
+        "es": "Hércules es el héroe griego de los doce trabajos. Uno de ellos le llevó a Eritea, junto a Gades, a robar los bueyes del gigante Gerión, y allí puso las columnas del fin del mundo. En Cádiz el mito se unió al culto fenicio a Melqart, que tenía un gran templo en Sancti Petri. Hércules y sus columnas están en el escudo de Cádiz.",
+        "en": "Hercules is the Greek hero of the twelve labours. One of them took him to Erytheia, by Gades, to steal the cattle of the giant Geryon, and there he set the pillars at the end of the world. In Cádiz the myth merged with the Phoenician cult of Melqart, whose great temple stood at Sancti Petri. Hercules and his pillars are on the arms of Cádiz."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Hércules",
+          "url": "https://es.wikipedia.org/wiki/H%C3%A9rcules"
+        },
+        {
+          "title": "Wikipedia: Gerión",
+          "url": "https://es.wikipedia.org/wiki/Geri%C3%B3n"
+        }
+      ]
     },
     {
       "id": "gerion",
@@ -244,7 +430,23 @@
         "en": "The three-bodied giant of myth, king of the island of Erytheia. Dramatic and a bit vain."
       },
       "avatar": "sprites/gerion/gerion_neutral.svg",
-      "era": "mito"
+      "era": "mito",
+      "kind": "leyenda",
+      "lived": "mito",
+      "bio": {
+        "es": "En la mitología griega, Gerión es un gigante de tres cuerpos que vivía en la isla de Eritea, en el extremo occidental del mundo, con sus bueyes rojos. Hércules lo mató para llevárselos. Una leyenda antigua que recoge Filóstrato cuenta que de su tumba nacieron árboles que sangraban, que se han identificado con el drago.",
+        "en": "In Greek myth, Geryon is a three-bodied giant who lived with his red cattle on the island of Erytheia, at the western edge of the world. Hercules killed him to take them. An ancient legend recorded by Philostratus says trees that bled grew from his tomb, and they have been identified with the dragon tree."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Gerión",
+          "url": "https://es.wikipedia.org/wiki/Geri%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Drago",
+          "url": "https://es.wikipedia.org/wiki/Drago"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1352,6 +1554,28 @@
           },
           "icon": "collectibles/cadiz_insignia.svg",
           "awardedAtNodeId": "n7_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Sitio de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Sitio_de_C%C3%A1diz"
+        },
+        {
+          "title": "Wikipedia: Constitución española de 1812",
+          "url": "https://es.wikipedia.org/wiki/Constituci%C3%B3n_espa%C3%B1ola_de_1812"
+        },
+        {
+          "title": "Wikipedia: Historia de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Historia_de_C%C3%A1diz"
+        },
+        {
+          "title": "Wikipedia: Tía Norica",
+          "url": "https://es.wikipedia.org/wiki/T%C3%ADa_Norica"
+        },
+        {
+          "title": "Wikipedia: Oratorio de San Felipe Neri (Cádiz)",
+          "url": "https://es.wikipedia.org/wiki/Oratorio_de_San_Felipe_Neri_(C%C3%A1diz)"
         }
       ]
     },
@@ -2706,6 +2930,24 @@
           "icon": "collectibles/cadiz_g_recetario.svg",
           "awardedAtNodeId": "g7_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Plaza de abastos (Cádiz)",
+          "url": "https://es.wikipedia.org/wiki/Plaza_de_abastos_(C%C3%A1diz)"
+        },
+        {
+          "title": "Wikipedia: Garo (salsa)",
+          "url": "https://es.wikipedia.org/wiki/Garo_(salsa)"
+        },
+        {
+          "title": "Wikipedia: Chicharrón",
+          "url": "https://es.wikipedia.org/wiki/Chicharr%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Gastronomía de la provincia de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_la_provincia_de_C%C3%A1diz"
+        }
       ]
     },
     {
@@ -3953,6 +4195,24 @@
           "icon": "collectibles/carnaval_cartelon.svg",
           "awardedAtNodeId": "c7_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Carnaval de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Carnaval_de_C%C3%A1diz"
+        },
+        {
+          "title": "Wikipedia: Chirigota",
+          "url": "https://es.wikipedia.org/wiki/Chirigota"
+        },
+        {
+          "title": "Wikipedia: Comparsa",
+          "url": "https://es.wikipedia.org/wiki/Comparsa"
+        },
+        {
+          "title": "Wikipedia: Gran Teatro Falla",
+          "url": "https://es.wikipedia.org/wiki/Gran_Teatro_Falla"
+        }
       ]
     },
     {
@@ -5103,6 +5363,24 @@
           "icon": "collectibles/ssanta_palio.svg",
           "awardedAtNodeId": "s6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Semana Santa en Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Semana_Santa_en_C%C3%A1diz"
+        },
+        {
+          "title": "Wikipedia: Saeta (música)",
+          "url": "https://es.wikipedia.org/wiki/Saeta_(m%C3%BAsica)"
+        },
+        {
+          "title": "Hermandad del Nazareno de Santa María",
+          "url": "https://nazarenodesantamaria.com"
+        },
+        {
+          "title": "Cofradía de la Buena Muerte",
+          "url": "https://cofradiabuenamuerte.es"
+        }
       ]
     },
     {
@@ -6024,6 +6302,32 @@
           },
           "icon": "collectibles/cadiz_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Gerión",
+          "url": "https://es.wikipedia.org/wiki/Geri%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Hércules",
+          "url": "https://es.wikipedia.org/wiki/H%C3%A9rcules"
+        },
+        {
+          "title": "Wikipedia: Drago",
+          "url": "https://es.wikipedia.org/wiki/Drago"
+        },
+        {
+          "title": "Wikipedia: Historia de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Historia_de_C%C3%A1diz"
+        },
+        {
+          "title": "Wikipedia: Adolfo de Castro",
+          "url": "https://es.wikipedia.org/wiki/Adolfo_de_Castro"
+        },
+        {
+          "title": "Cuaderno de Cádiz, «La sangre del drago»",
+          "url": "http://cuadernodecadiz.blogspot.com/2010/12/4-el-taller-del-mito-la-sangre-de.html"
         }
       ]
     }

@@ -88,6 +88,8 @@ const storyNode = z.object({
   isEnding: z.boolean().optional(),
 });
 
+const source = z.object({ title: z.string().min(1), url: z.string().url().optional() });
+
 const route = z.object({
   id: z.string().min(1),
   title: i18nText,
@@ -107,6 +109,7 @@ const route = z.object({
   rewards: z
     .array(z.object({ id: z.string().min(1), name: i18nText, icon: assetRef, awardedAtNodeId: z.string() }))
     .optional(),
+  sources: z.array(source).optional(),
 });
 
 export const cityPackSchema = z.object({
@@ -118,7 +121,17 @@ export const cityPackSchema = z.object({
   bounds: z.tuple([latLng, latLng]),
   coverImage: assetRef,
   characters: z.array(
-    z.object({ id: z.string().min(1), name: i18nText, description: i18nText, avatar: assetRef, era: z.string().optional() }),
+    z.object({
+      id: z.string().min(1),
+      name: i18nText,
+      description: i18nText,
+      avatar: assetRef,
+      era: z.string().optional(),
+      kind: z.enum(["real", "leyenda", "tipo", "simbolo"]).optional(),
+      lived: z.string().optional(),
+      bio: i18nText.optional(),
+      sources: z.array(source).optional(),
+    }),
   ),
   routes: z.array(route).min(1),
 });

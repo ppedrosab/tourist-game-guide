@@ -36,7 +36,19 @@
         "en": "A New York writer who lived in the Alhambra in 1829 and collected its legends. Curious, elegant and a little too fond of a good story."
       },
       "avatar": "sprites/irving/irving_neutral.svg",
-      "era": "1783-1859"
+      "era": "1783-1859",
+      "kind": "real",
+      "lived": "1783-1859",
+      "bio": {
+        "es": "Washington Irving, escritor de Nueva York, vivió en la Alhambra en 1829, cuando el palacio estaba medio abandonado. Allí recogió las historias de sus vecinos, que publicó en «Cuentos de la Alhambra» (1832). El libro hizo famosa la Alhambra en todo el mundo, y en el palacio se puede ver la sala donde se alojó.",
+        "en": "Washington Irving, a New York writer, lived in the Alhambra in 1829, when the palace was half abandoned. There he gathered his neighbours' stories and published them as “Tales of the Alhambra” (1832). The book made the Alhambra famous worldwide, and the rooms where he stayed can be seen in the palace."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Washington Irving",
+          "url": "https://es.wikipedia.org/wiki/Washington_Irving"
+        }
+      ]
     },
     {
       "id": "leon",
@@ -49,7 +61,19 @@
         "en": "One of the twelve stone lions of the fountain in the Court of the Lions. It has spent centuries spouting water and overhearing secrets."
       },
       "avatar": "sprites/leon/leon_neutral.svg",
-      "era": "s. XIV-hoy"
+      "era": "s. XIV-hoy",
+      "kind": "simbolo",
+      "lived": "s. XIV-hoy",
+      "bio": {
+        "es": "Es uno de los doce leones de mármol de la fuente del Patio de los Leones, en el palacio que mandó construir Muhammad V en el siglo XIV. El agua sale por sus bocas. Los doce se restauraron entre 2002 y 2012 y volvieron a su sitio.",
+        "en": "He is one of the twelve marble lions of the fountain in the Court of the Lions, in the palace built by Muhammad V in the 14th century. Water flows from their mouths. All twelve were restored between 2002 and 2012 and returned to their places."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Patio de los Leones",
+          "url": "https://es.wikipedia.org/wiki/Patio_de_los_Leones"
+        }
+      ]
     },
     {
       "id": "boabdil",
@@ -62,7 +86,19 @@
         "en": "Muhammad XII, the last Nasrid sultan of Granada. Proud and melancholy."
       },
       "avatar": "sprites/boabdil/boabdil_neutral.svg",
-      "era": "s. XV"
+      "era": "s. XV",
+      "kind": "real",
+      "lived": "c. 1459-1533",
+      "bio": {
+        "es": "Muhammad XII, al que los castellanos llamaron Boabdil, fue el último sultán nazarí de Granada. En enero de 1492 entregó la ciudad a los Reyes Católicos. La tradición dice que al marcharse lloró mirando Granada desde el lugar que hoy se llama el Suspiro del Moro. Murió en el exilio, en Fez.",
+        "en": "Muhammad XII, whom the Castilians called Boabdil, was the last Nasrid sultan of Granada. In January 1492 he surrendered the city to the Catholic Monarchs. Tradition says he wept as he looked back at Granada from the spot now called the Moor's Sigh. He died in exile in Fez."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Boabdil",
+          "url": "https://es.wikipedia.org/wiki/Boabdil"
+        }
+      ]
     },
     {
       "id": "ceferino",
@@ -75,7 +111,19 @@
         "en": "The Santa Fe pastry cook who created the pionono in 1897. Devout, meticulous and very proud of his workshop."
       },
       "avatar": "sprites/ceferino/ceferino_neutral.svg",
-      "era": "1897"
+      "era": "1897",
+      "kind": "real",
+      "lived": "s. XIX-XX",
+      "bio": {
+        "es": "Ceferino Isla era un pastelero de Santa Fe, en la Vega de Granada. En 1897 creó un pastelito de bizcocho enrollado, bañado en almíbar y coronado con crema tostada, y lo llamó pionono en honor al papa Pío IX (Pío Nono). La pastelería Casa Isla sigue haciéndolos.",
+        "en": "Ceferino Isla was a pastry cook from Santa Fe, in the Vega of Granada. In 1897 he created a small rolled sponge cake soaked in syrup and topped with toasted cream, and named it pionono after Pope Pius IX (Pío Nono). The Casa Isla pastry shop still makes them."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Pionono",
+          "url": "https://es.wikipedia.org/wiki/Pionono"
+        }
+      ]
     },
     {
       "id": "tornera",
@@ -87,7 +135,18 @@
         "es": "Monja de clausura que atiende el torno por el que su convento vende dulces. Discreta y con mucho sentido del humor.",
         "en": "A cloistered nun who tends the turntable through which her convent sells sweets. Discreet, with a great sense of humour."
       },
-      "avatar": "sprites/tornera/tornera_neutral.svg"
+      "avatar": "sprites/tornera/tornera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Las monjas de clausura no pueden salir ni ser vistas, así que venden sus dulces por el torno: una ventanita giratoria donde el cliente deja el dinero y recibe la caja sin verse las caras. La hermana tornera es la monja que atiende el torno. En Granada lo hacen varios conventos, como el de San Bernardo o el de las Comendadoras de Santiago.",
+        "en": "Enclosed nuns may not go out or be seen, so they sell their sweets through the torno: a small revolving window where customers leave their money and receive the box without seeing each other's faces. The hermana tornera is the nun who tends it. Several convents in Granada do this, such as San Bernardo and the Comendadoras de Santiago."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Pionono",
+          "url": "https://es.wikipedia.org/wiki/Pionono"
+        }
+      ]
     },
     {
       "id": "tarasca",
@@ -100,7 +159,22 @@
         "en": "The dragon of Granada's Corpus, with a doll on top that wears a new dress every year. Vain and curious."
       },
       "avatar": "sprites/tarasca/tarasca_neutral.svg",
-      "era": "1633 - hoy"
+      "era": "1633 - hoy",
+      "kind": "simbolo",
+      "bio": {
+        "es": "La Tarasca es un dragón de cartón que abre la procesión del Corpus de Granada, con una muñeca encima. Cada año la muñeca estrena vestido, y su ropa marca la moda del verano; el diseño es un secreto hasta que sale. La Tarasca sale en el Corpus de Granada desde hace siglos.",
+        "en": "The Tarasca is a papier-mâché dragon that leads Granada's Corpus Christi procession, with a doll riding on its back. Every year the doll wears a new outfit that sets the summer's fashion, and the design is kept secret until she comes out. Granada's Tarasca has come out at Corpus for centuries."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Tarasca",
+          "url": "https://es.wikipedia.org/wiki/Tarasca"
+        },
+        {
+          "title": "Wikipedia: Corpus Christi de Granada",
+          "url": "https://es.wikipedia.org/wiki/Corpus_Christi_de_Granada"
+        }
+      ]
     },
     {
       "id": "marianapineda",
@@ -113,7 +187,19 @@
         "en": "A liberal heroine from Granada; she embroidered, and an embroidered flag brought her to trial. Brave and very observant."
       },
       "avatar": "sprites/marianapineda/marianapineda_neutral.svg",
-      "era": "1804 - 1831"
+      "era": "1804 - 1831",
+      "kind": "real",
+      "lived": "1804-1831",
+      "bio": {
+        "es": "Mariana Pineda era una granadina de ideas liberales en tiempos del absolutismo de Fernando VII. En su casa encontraron una bandera con el lema «Ley, Libertad, Igualdad», que según la acusación bordaba ella. Se negó a delatar a nadie y fue ejecutada en Granada en 1831. Lorca le dedicó una obra de teatro.",
+        "en": "Mariana Pineda was a liberal woman from Granada in the absolutist times of Ferdinand VII. A flag bearing “Law, Liberty, Equality” was found in her house, which the prosecution said she had embroidered. She refused to betray anyone and was executed in Granada in 1831. Lorca wrote a play about her."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Mariana Pineda",
+          "url": "https://es.wikipedia.org/wiki/Mariana_Pineda"
+        }
+      ]
     },
     {
       "id": "falla",
@@ -126,7 +212,19 @@
         "en": "A composer who lived in Granada from 1920 to 1939, at the foot of the Alhambra. Serious about rhythm, kind to people."
       },
       "avatar": "sprites/falla/falla_neutral.svg",
-      "era": "1876 - 1946"
+      "era": "1876 - 1946",
+      "kind": "real",
+      "lived": "1876-1946",
+      "bio": {
+        "es": "Manuel de Falla, compositor gaditano, vivió en Granada de 1920 a 1939, en un carmen a los pies de la Alhambra que hoy es su casa-museo. Allí organizó con Lorca el Concurso de Cante Jondo de 1922. Es autor de «El amor brujo» y «Noches en los jardines de España». Murió en el exilio, en Argentina.",
+        "en": "Manuel de Falla, a composer from Cádiz, lived in Granada from 1920 to 1939, in a carmen below the Alhambra that is now his house-museum. There, with Lorca, he organised the 1922 Cante Jondo Competition. He wrote “El amor brujo” and “Nights in the Gardens of Spain”. He died in exile in Argentina."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Manuel de Falla",
+          "url": "https://es.wikipedia.org/wiki/Manuel_de_Falla"
+        }
+      ]
     },
     {
       "id": "ganivet",
@@ -139,7 +237,19 @@
         "en": "A Granada writer, author of “Granada la bella” (1896). Thoughtful, ironic and in love with his city."
       },
       "avatar": "sprites/ganivet/ganivet_neutral.svg",
-      "era": "1865 - 1898"
+      "era": "1865 - 1898",
+      "kind": "real",
+      "lived": "1865-1898",
+      "bio": {
+        "es": "Ángel Ganivet, escritor y diplomático granadino, es uno de los precursores de la Generación del 98. En «Granada la bella» (1896) defendió la ciudad antigua frente a las reformas que la estaban cambiando. Murió en Riga, donde era cónsul.",
+        "en": "Ángel Ganivet, a writer and diplomat from Granada, was a forerunner of the Generation of '98. In “Granada la bella” (1896) he defended the old city against the reforms that were changing it. He died in Riga, where he was consul."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Ángel Ganivet",
+          "url": "https://es.wikipedia.org/wiki/%C3%81ngel_Ganivet"
+        }
+      ]
     },
     {
       "id": "zafra",
@@ -152,7 +262,23 @@
         "en": "Secretary to the Catholic Monarchs; after the conquest he received houses and palaces in Granada. Serious and fond of documents."
       },
       "avatar": "sprites/zafra/zafra_neutral.svg",
-      "era": "c. 1444 - 1507"
+      "era": "c. 1444 - 1507",
+      "kind": "real",
+      "lived": "c. 1444-1507",
+      "bio": {
+        "es": "Hernando de Zafra fue secretario de los Reyes Católicos y uno de los que negociaron la entrega de Granada en 1491. Tras la conquista recibió casas y tierras en la ciudad, entre ellas el palacio de Dar al-Horra. La Casa de Castril, de 1539, la levantaron sus herederos, cuando él ya había muerto.",
+        "en": "Hernando de Zafra was secretary to the Catholic Monarchs and one of the negotiators of Granada's surrender in 1491. After the conquest he received houses and lands in the city, including the palace of Dar al-Horra. The Casa de Castril, from 1539, was built by his heirs after his death."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Hernando de Zafra",
+          "url": "https://es.wikipedia.org/wiki/Hernando_de_Zafra"
+        },
+        {
+          "title": "Wikipedia: Casa de Castril",
+          "url": "https://es.wikipedia.org/wiki/Casa_de_Castril"
+        }
+      ]
     },
     {
       "id": "elvira",
@@ -165,7 +291,23 @@
         "en": "The daughter in the legend of the Casa de Castril. Dreamy, and cleverer than the story told about her."
       },
       "avatar": "sprites/elvira/elvira_neutral.svg",
-      "era": "leyenda"
+      "era": "leyenda",
+      "kind": "leyenda",
+      "lived": "leyenda",
+      "bio": {
+        "es": "Es la joven de la leyenda de la Casa de Castril. Se cuenta que su padre descubrió al paje Luisillo en su ventana, lo mandó ahorcar y tapió la ventana. Encima quedó la frase «Esperándola del cielo». La casa es de 1539 y la frase acompaña a un fénix, así que es probable que la leyenda naciera después, para explicar la ventana.",
+        "en": "She is the young woman of the legend of the Casa de Castril. It is said that her father caught the page Luisillo at her window, had him hanged and bricked up the window. Above it remained the words “Awaiting her from heaven”. The house dates from 1539 and the phrase goes with a phoenix, so the legend was probably invented later to explain the window."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Casa de Castril",
+          "url": "https://es.wikipedia.org/wiki/Casa_de_Castril"
+        },
+        {
+          "title": "Inmsol, «La leyenda de la Casa de Castril»",
+          "url": "https://www.inmsol.com/es/blog-escuela/leyendas-granada/la-leyenda-de-la-casa-de-castril/"
+        }
+      ]
     },
     {
       "id": "lorca",
@@ -178,7 +320,19 @@
         "en": "Poet and playwright from the Vega of Granada, born in Fuente Vaqueros, a stone's throw from Santa Fe. Cheerful, sweet-toothed and a great talker."
       },
       "avatar": "sprites/lorca/lorca_neutral.svg",
-      "era": "1898 - 1936"
+      "era": "1898 - 1936",
+      "kind": "real",
+      "lived": "1898-1936",
+      "bio": {
+        "es": "Federico García Lorca nació en Fuente Vaqueros, en la Vega de Granada, cerca de Santa Fe. Poeta y dramaturgo, escribió el «Romancero gitano», «Bodas de sangre» y «La casa de Bernarda Alba». Fue asesinado en agosto de 1936, al comienzo de la Guerra Civil. En Granada se visitan su Huerta de San Vicente y su casa natal.",
+        "en": "Federico García Lorca was born in Fuente Vaqueros, in the Vega of Granada, near Santa Fe. A poet and playwright, he wrote the “Gypsy Ballads”, “Blood Wedding” and “The House of Bernarda Alba”. He was murdered in August 1936, at the start of the Civil War. His Huerta de San Vicente and birthplace can be visited."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Federico García Lorca",
+          "url": "https://es.wikipedia.org/wiki/Federico_Garc%C3%ADa_Lorca"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1353,6 +1507,31 @@
           "icon": "collectibles/granada_insignia.svg",
           "awardedAtNodeId": "n7_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Palacios nazaríes",
+          "url": "https://es.wikipedia.org/wiki/Palacios_nazar%C3%ADes"
+        },
+        {
+          "title": "Wikipedia: Patio de los Leones",
+          "url": "https://es.wikipedia.org/wiki/Patio_de_los_Leones"
+        },
+        {
+          "title": "Wikipedia: Boabdil",
+          "url": "https://es.wikipedia.org/wiki/Boabdil"
+        },
+        {
+          "title": "Wikipedia: Washington Irving",
+          "url": "https://es.wikipedia.org/wiki/Washington_Irving"
+        },
+        {
+          "title": "Wikipedia: Ginés Pérez de Hita",
+          "url": "https://es.wikipedia.org/wiki/Gin%C3%A9s_P%C3%A9rez_de_Hita"
+        },
+        {
+          "title": "Washington Irving, «Cuentos de la Alhambra» (1832)"
+        }
       ]
     },
     {
@@ -2488,6 +2667,23 @@
           },
           "icon": "collectibles/granada_pionono.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Pionono",
+          "url": "https://es.wikipedia.org/wiki/Pionono"
+        },
+        {
+          "title": "Wikipedia: Federico García Lorca",
+          "url": "https://es.wikipedia.org/wiki/Federico_Garc%C3%ADa_Lorca"
+        },
+        {
+          "title": "Wikipedia: Santa Fe (Granada)",
+          "url": "https://es.wikipedia.org/wiki/Santa_Fe_(Granada)"
+        },
+        {
+          "title": "Turismo de Santa Fe, «Origen del pionono»"
         }
       ]
     },
@@ -3625,6 +3821,24 @@
           "icon": "collectibles/granada_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Tarasca",
+          "url": "https://es.wikipedia.org/wiki/Tarasca"
+        },
+        {
+          "title": "Wikipedia: Corpus Christi de Granada",
+          "url": "https://es.wikipedia.org/wiki/Corpus_Christi_de_Granada"
+        },
+        {
+          "title": "Wikipedia: Mariana Pineda",
+          "url": "https://es.wikipedia.org/wiki/Mariana_Pineda"
+        },
+        {
+          "title": "Wikipedia: Manuel de Falla",
+          "url": "https://es.wikipedia.org/wiki/Manuel_de_Falla"
+        }
       ]
     },
     {
@@ -4547,6 +4761,24 @@
           },
           "icon": "collectibles/granada_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Casa de Castril",
+          "url": "https://es.wikipedia.org/wiki/Casa_de_Castril"
+        },
+        {
+          "title": "Wikipedia: Hernando de Zafra",
+          "url": "https://es.wikipedia.org/wiki/Hernando_de_Zafra"
+        },
+        {
+          "title": "Wikipedia: Ángel Ganivet",
+          "url": "https://es.wikipedia.org/wiki/%C3%81ngel_Ganivet"
+        },
+        {
+          "title": "Inmsol, «La leyenda de la Casa de Castril»",
+          "url": "https://www.inmsol.com/es/blog-escuela/leyendas-granada/la-leyenda-de-la-casa-de-castril/"
         }
       ]
     }

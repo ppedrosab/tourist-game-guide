@@ -2,8 +2,10 @@ import { router, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { Button3D, Chip, Panel, ThemeBadge } from "@/components/ui";
+import { CastList } from "@/components/game/CastList";
+import { SourceList } from "@/components/game/SourceList";
 import { findRoute } from "@/engine/catalog";
-import { routeFacts, routeOutline } from "@/engine/outline";
+import { routeCast, routeFacts, routeOutline } from "@/engine/outline";
 import { useI18n } from "@/i18n";
 import { routeMapData } from "@/map/geometry";
 import { OfflineMapCard } from "@/map/OfflineMapCard";
@@ -87,6 +89,16 @@ export default function DetalleRuta() {
         </View>
       </View>
       {active ? <Button3D label={t("ruta.deNuevo")} variant="ghost" onPress={startFresh} /> : null}
+      <Panel>
+        <Text style={type.overline}>{t("ruta.personajes")}</Text>
+        <CastList route={route} cast={routeCast(pack, route)} />
+      </Panel>
+      {route.sources?.length ? (
+        <Panel>
+          <Text style={type.overline}>{t("ruta.fuentes")}</Text>
+          <SourceList sources={route.sources} />
+        </Panel>
+      ) : null}
     </Screen>
   );
 }

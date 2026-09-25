@@ -1,7 +1,9 @@
 import { router } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Screen, TopBar } from "@/components/layout/Screen";
+import { CastList } from "@/components/game/CastList";
 import { CollectibleArt } from "@/components/game/CollectibleArt";
+import { routeCast } from "@/engine/outline";
 import { Button3D, Icon } from "@/components/ui";
 import { useI18n } from "@/i18n";
 import { useCurrentRun } from "@/hooks/useCurrentRun";
@@ -22,7 +24,7 @@ export default function Cuaderno() {
     );
   }
 
-  const { route, run } = current;
+  const { pack, route, run } = current;
   const clueNodes = route.nodes.filter((n) => n.clue);
   const objects = (route.rewards ?? []).filter((r) => run.collectibleIds.includes(r.id));
   const chosenBranch = run.visitedNodeIds.map((id) => route.nodes.find((n) => n.id === id)?.branch).find(Boolean);
@@ -71,6 +73,8 @@ export default function Cuaderno() {
           </View>
         </>
       ) : null}
+      <Text style={type.overline}>{t("cuaderno.personajes")}</Text>
+      <CastList route={route} cast={routeCast(pack, route, [...run.visitedNodeIds, run.currentNodeId])} />
       <Button3D label={t("pausa.verMapa")} icon="map" variant="secondary" onPress={() => router.replace("/mapa")} />
       <Button3D label={t("comun.volver")} onPress={close} />
     </Screen>

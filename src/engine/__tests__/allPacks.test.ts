@@ -130,3 +130,23 @@ describe.each(routes)("ruta %s", (_id, pack, route) => {
     expect(route.branches?.poder).toBeDefined();
   });
 });
+
+describe("fichas y fuentes", () => {
+  const characters = packs.flatMap(([, pack]) => pack.characters.map((c) => [`${pack.id}/${c.id}`, c] as const));
+
+  it.each(characters)("%s tiene ficha: qué es y su historia", (_, c) => {
+    expect(c.kind).toBeDefined();
+    expect(c.bio?.es.length).toBeGreaterThan(80);
+  });
+
+  it.each(characters.filter(([, c]) => c.kind === "real" || c.kind === "leyenda"))(
+    "%s cita al menos una referencia",
+    (_, c) => {
+      expect(c.sources?.length).toBeGreaterThan(0);
+    },
+  );
+
+  it.each(routes)("%s cita sus fuentes", (_, __, route) => {
+    expect(route.sources?.length).toBeGreaterThan(0);
+  });
+});

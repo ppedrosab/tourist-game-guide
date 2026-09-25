@@ -37,12 +37,27 @@ export interface CityPack {
   routes: Route[];
 }
 
+/** Qué es un personaje: persona real, figura de una leyenda, figura típica de la ciudad o un símbolo suyo que habla (un monumento, una marioneta…). */
+export type CharacterKind = "real" | "leyenda" | "tipo" | "simbolo";
+
+/** Referencia para saber más: la cita tal cual (no se traduce) y, si hay, un enlace. */
+export interface Source {
+  title: string;
+  url?: string;
+}
+
 export interface Character {
   id: string;
   name: I18nText;
   description: I18nText;
   avatar: AssetRef;
   era?: string;
+  kind?: CharacterKind;
+  /** Años de vida ("1860-1935") o época ("s. XI") de una persona real. */
+  lived?: string;
+  /** Su historia, para la ficha del personaje. */
+  bio?: I18nText;
+  sources?: Source[];
 }
 
 export interface Route {
@@ -64,6 +79,8 @@ export interface Route {
   nodes: StoryNode[];
   endings?: Ending[];
   rewards?: Collectible[];
+  /** Fuentes de la ruta: de dónde salen la historia y los datos. */
+  sources?: Source[];
 }
 
 export interface StoryNode {

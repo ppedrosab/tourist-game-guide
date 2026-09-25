@@ -172,8 +172,9 @@ CHARACTERS = {
                         left="book", right="pick"),
     "almotacin": dict(skin="morena", hair=("short", "#1E1A1A"), beard_=("full", "#1E1A1A"), hat_=("turban", PAPER, GOLD), outfit="toga",
                       main="#2F6F73", accent=GOLD, second="#E8C872", left="scroll", right="lute"),
-    "galiana": dict(skin="media", hair=("long", "#1E1A1A"), hat_=("veil", "#C0476A"), outfit="dress", main="#E8C872", accent="#C0476A",
-                    second="#C0476A", left="flower", raise_right=True),
+    # Abderramán III, primer califa: mandó construir la Alcazaba de Almería en 955
+    "abderraman": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#7A4A2A"), beard_=("full", "#7A4A2A"), hat_=("turban", PAPER, "#2F7A4A"),
+                       outfit="toga", main=PAPER, accent=GOLD, second="#2F7A4A", right="sword", raise_right=True),
     # --- Personajes reales o propios que sustituyen a los genéricos ------------------
     "lagarto": dict(skin="#7FA35A", eyes="#2B2A33", hair=None, hat_=None, outfit="tunic", main="#5E8A45", accent="#C9A05E",
                     extra_back='<path d="M120 230Q180 236 188 200Q192 176 172 170Q184 196 160 212Q140 222 120 214Z" fill="#6E9A4E" stroke="#1B2A3A" stroke-width="2.4"/>',

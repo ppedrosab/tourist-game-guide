@@ -36,7 +36,19 @@
         "en": "The water seller from Velázquez's painting. He sells fresh water from his jug and knows every piece of gossip in Seville."
       },
       "avatar": "sprites/aguador/aguador_neutral.svg",
-      "era": "s. XVII"
+      "era": "s. XVII",
+      "kind": "tipo",
+      "lived": "s. XVII",
+      "bio": {
+        "es": "Es el protagonista de «El aguador de Sevilla», que Velázquez pintó en Sevilla hacia 1620. Los aguadores vendían por las calles agua fresca de sus cántaros, a veces perfumada con higos. Velázquez regaló después el cuadro a su protector, y hoy está en Apsley House, en Londres.",
+        "en": "He is the subject of “The Waterseller of Seville”, painted by Velázquez in Seville around 1620. Water-sellers sold cool water from their jars in the streets, sometimes flavoured with figs. The painting is now at Apsley House in London."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: El aguador de Sevilla",
+          "url": "https://es.wikipedia.org/wiki/El_aguador_de_Sevilla"
+        }
+      ]
     },
     {
       "id": "giraldillo",
@@ -49,7 +61,19 @@
         "en": "The bronze weathervane on top of La Giralda. It has been spinning for centuries and has seen everything from above."
       },
       "avatar": "sprites/giraldillo/giraldillo_neutral.svg",
-      "era": "1568-hoy"
+      "era": "1568-hoy",
+      "kind": "simbolo",
+      "lived": "1568-hoy",
+      "bio": {
+        "es": "El Giraldillo es la veleta de bronce que corona la Giralda desde 1568: una figura de mujer, la Fe victoriosa, que gira con el viento aunque pesa más de una tonelada. Por él la torre se llama Giralda. En 2005 se restauró y en la puerta del Príncipe de la catedral hay una copia a tamaño real.",
+        "en": "The Giraldillo is the bronze weathervane that has crowned the Giralda since 1568: a female figure, Victorious Faith, that turns with the wind although it weighs over a tonne. The tower is named Giralda after it. It was restored in 2005, and a full-size copy stands by the cathedral's Puerta del Príncipe."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Giraldillo",
+          "url": "https://es.wikipedia.org/wiki/Giraldillo"
+        }
+      ]
     },
     {
       "id": "hernando",
@@ -62,7 +86,19 @@
         "en": "Son of Christopher Columbus. An obsessive book collector, he gathered one of the largest libraries of his time."
       },
       "avatar": "sprites/hernando/hernando_neutral.svg",
-      "era": "1488-1539"
+      "era": "1488-1539",
+      "kind": "real",
+      "lived": "1488-1539",
+      "bio": {
+        "es": "Hernando Colón, hijo de Cristóbal Colón y de Beatriz Enríquez, acompañó a su padre en el cuarto viaje y escribió su biografía. Reunió en Sevilla una biblioteca de unos 15.000 volúmenes, una de las mayores de Europa. Lo que queda de ella es la Biblioteca Colombina, en la catedral, donde está enterrado.",
+        "en": "Hernando Colón, son of Christopher Columbus and Beatriz Enríquez, sailed with his father on the fourth voyage and wrote his biography. In Seville he built up a library of some 15,000 volumes, one of the largest in Europe. What remains is the Biblioteca Colombina in the cathedral, where he is buried."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Hernando Colón",
+          "url": "https://es.wikipedia.org/wiki/Hernando_Col%C3%B3n"
+        }
+      ]
     },
     {
       "id": "naranjera",
@@ -74,7 +110,18 @@
         "es": "Recoge las naranjas amargas de las calles de Sevilla. Cariñosa, exagerada y enamorada del azahar.",
         "en": "She picks the bitter oranges from Seville's streets. Affectionate, prone to exaggeration and in love with orange blossom."
       },
-      "avatar": "sprites/naranjera/naranjera_neutral.svg"
+      "avatar": "sprites/naranjera/naranjera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Sevilla tiene decenas de miles de naranjos amargos en sus calles, que en primavera llenan la ciudad de azahar. La naranja es tan amarga que casi no se come en la ciudad: se recoge en invierno y gran parte se exporta, sobre todo al Reino Unido, para hacer mermelada.",
+        "en": "Seville has tens of thousands of bitter orange trees in its streets, which fill the city with orange blossom in spring. The fruit is so bitter that it is hardly eaten locally: it is picked in winter and much of it is exported, especially to the United Kingdom, to make marmalade."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Citrus × aurantium",
+          "url": "https://es.wikipedia.org/wiki/Citrus_%C3%97_aurantium"
+        }
+      ]
     },
     {
       "id": "aceitunero",
@@ -86,7 +133,18 @@
         "es": "Aliña aceitunas manzanillas y gordales. Presumido y generoso.",
         "en": "He seasons manzanilla and gordal olives. Proud and generous."
       },
-      "avatar": "sprites/aceitunero/aceitunero_neutral.svg"
+      "avatar": "sprites/aceitunero/aceitunero_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "La provincia de Sevilla es la gran productora de aceituna de mesa, sobre todo manzanilla y gordal. Los aceituneros la aliñan en casa con ajo, tomillo, hinojo y naranja amarga, cada uno con su receta. La gordal sevillana es de las aceitunas más grandes del mundo.",
+        "en": "The province of Seville is the great producer of table olives, especially manzanilla and gordal. Aceituneros dress them at home with garlic, thyme, fennel and bitter orange, each with their own recipe. Seville's gordal is one of the largest olives in the world."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Aceitunas aliñadas",
+          "url": "https://es.wikipedia.org/wiki/Aceitunas_ali%C3%B1adas"
+        }
+      ]
     },
     {
       "id": "cigarrera",
@@ -98,7 +156,18 @@
         "es": "Trabaja en la Fábrica de Tabacos, como las cigarreras que hicieron famosa a Sevilla, y no se pierde una feria. Salerosa y muy resuelta.",
         "en": "She works at the Tobacco Factory, like the cigar makers who made Seville famous, and never misses a fair. Witty and very determined."
       },
-      "avatar": "sprites/cigarrera/cigarrera_neutral.svg"
+      "avatar": "sprites/cigarrera/cigarrera_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "Las cigarreras hacían los puros a mano en la Real Fábrica de Tabacos, que se terminó en el siglo XVIII y hoy es la Universidad de Sevilla. Llegaron a ser miles, tenían fama de independientes y valientes, e inspiraron la «Carmen» de Mérimée y la ópera de Bizet.",
+        "en": "The cigarreras rolled cigars by hand in the Royal Tobacco Factory, completed in the 18th century and now the University of Seville. There were thousands of them, known for their independence and spirit, and they inspired Mérimée's “Carmen” and Bizet's opera."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Real Fábrica de Tabacos de Sevilla",
+          "url": "https://es.wikipedia.org/wiki/Real_F%C3%A1brica_de_Tabacos_de_Sevilla"
+        }
+      ]
     },
     {
       "id": "ybarra",
@@ -111,7 +180,19 @@
         "en": "A Basque merchant settled in Seville and a councillor; in 1846 he proposed the fair with Bonaplata. Formal and a sharp negotiator."
       },
       "avatar": "sprites/ybarra/ybarra_neutral.svg",
-      "era": "s. XIX"
+      "era": "s. XIX",
+      "kind": "real",
+      "lived": "1816-1878",
+      "bio": {
+        "es": "José María de Ybarra nació en Bilbao y se hizo en Sevilla comerciante de aceite y empresario. Siendo concejal, presentó en 1846 junto a Narciso Bonaplata la propuesta de una feria de ganado en abril. El Ayuntamiento la aprobó y la primera Feria se abrió el 18 de abril de 1847 en el Prado de San Sebastián. Fue alcalde de Sevilla.",
+        "en": "José María de Ybarra was born in Bilbao and became an olive-oil merchant and businessman in Seville. As a councillor, in 1846 he and Narciso Bonaplata proposed a livestock fair in April. The council approved it, and the first Fair opened on 18 April 1847 on the Prado de San Sebastián. He was later mayor of Seville."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Feria de Abril",
+          "url": "https://es.wikipedia.org/wiki/Feria_de_Abril"
+        }
+      ]
     },
     {
       "id": "bonaplata",
@@ -124,7 +205,23 @@
         "en": "A Catalan businessman settled in Seville and a councillor; he signed the fair proposal with Ybarra. Meticulous and a bit of a grumbler."
       },
       "avatar": "sprites/bonaplata/bonaplata_neutral.svg",
-      "era": "s. XIX"
+      "era": "s. XIX",
+      "kind": "real",
+      "lived": "1807-1869",
+      "bio": {
+        "es": "Narciso Bonaplata nació en Barcelona y montó en Sevilla una gran fundición de hierro. Como concejal firmó con José María de Ybarra, en agosto de 1846, la propuesta de una feria anual de ganado, que acabaría siendo la Feria de Abril.",
+        "en": "Narciso Bonaplata was born in Barcelona and set up a large iron foundry in Seville. As a councillor, in August 1846 he signed with José María de Ybarra the proposal for an annual livestock fair, which would become the April Fair."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Narciso Bonaplata",
+          "url": "https://es.wikipedia.org/wiki/Narciso_Bonaplata"
+        },
+        {
+          "title": "Wikipedia: Feria de Abril",
+          "url": "https://es.wikipedia.org/wiki/Feria_de_Abril"
+        }
+      ]
     },
     {
       "id": "becquer",
@@ -137,7 +234,19 @@
         "en": "Sevillian poet of the “Rhymes” and the “Legends”. Romantic, dreamy and fond of the night."
       },
       "avatar": "sprites/becquer/becquer_neutral.svg",
-      "era": "1836 - 1870"
+      "era": "1836 - 1870",
+      "kind": "real",
+      "lived": "1836-1870",
+      "bio": {
+        "es": "Gustavo Adolfo Bécquer nació en Sevilla y es el gran poeta del Romanticismo español, autor de las «Rimas» y de las «Leyendas». Muchas de sus leyendas pasan de noche, en iglesias, calles y conventos. Murió en Madrid a los 34 años; sus restos están en el Panteón de Sevillanos Ilustres.",
+        "en": "Gustavo Adolfo Bécquer was born in Seville and is the great poet of Spanish Romanticism, author of the “Rhymes” and the “Legends”. Many of his legends take place at night in churches, streets and convents. He died in Madrid aged 34; his remains lie in the Pantheon of Illustrious Sevillians."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Gustavo Adolfo Bécquer",
+          "url": "https://es.wikipedia.org/wiki/Gustavo_Adolfo_B%C3%A9cquer"
+        }
+      ]
     },
     {
       "id": "viejacandil",
@@ -150,7 +259,19 @@
         "en": "The witness in the legend of Calle Candilejo. Nosy, clever and braver than she looks."
       },
       "avatar": "sprites/viejacandil/viejacandil_neutral.svg",
-      "era": "s. XIV (leyenda)"
+      "era": "s. XIV (leyenda)",
+      "kind": "leyenda",
+      "lived": "s. XIV (leyenda)",
+      "bio": {
+        "es": "Es la testigo de la leyenda de la calle Candilejo: de noche, al oír una pelea, se asomó con un candil y vio al asesino, al que reconoció porque sus rodillas crujían al andar, como las del rey. Según algunas versiones, al ser interrogada le puso un espejo delante al rey para no tener que acusarle.",
+        "en": "She is the witness in the legend of Calle Candilejo: one night, hearing a fight, she looked out with an oil lamp and saw the killer, whom she recognised because his knees creaked as he walked, like the king's. In some versions, when questioned she held up a mirror to the king rather than accuse him."
+      },
+      "sources": [
+        {
+          "title": "Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»",
+          "url": "https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/"
+        }
+      ]
     },
     {
       "id": "reypedro",
@@ -163,7 +284,19 @@
         "en": "Peter I of Castile, who lived in the Alcázar of Seville. The Cruel or the Just, depending on whom you ask."
       },
       "avatar": "sprites/reypedro/reypedro_neutral.svg",
-      "era": "1334 - 1369"
+      "era": "1334 - 1369",
+      "kind": "real",
+      "lived": "1334-1369",
+      "bio": {
+        "es": "Pedro I fue rey de Castilla desde 1350. Mandó construir el Palacio Mudéjar del Alcázar de Sevilla, donde vivió con María de Padilla. Sus enemigos le llamaron «el Cruel» y sus partidarios «el Justiciero». Murió en Montiel a manos de su hermanastro Enrique de Trastámara.",
+        "en": "Peter I was king of Castile from 1350. He built the Mudéjar Palace of the Alcázar of Seville, where he lived with María de Padilla. His enemies called him “the Cruel” and his supporters “the Just”. He died at Montiel at the hands of his half-brother Henry of Trastámara."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Pedro I de Castilla",
+          "url": "https://es.wikipedia.org/wiki/Pedro_I_de_Castilla"
+        }
+      ]
     },
     {
       "id": "keiller",
@@ -176,7 +309,19 @@
         "en": "A Scotswoman from Dundee whom tradition credits with the first commercial Seville bitter-orange marmalade (1797). Practical and very sweet-toothed."
       },
       "avatar": "sprites/keiller/keiller_neutral.svg",
-      "era": "1737 - 1813"
+      "era": "1737 - 1813",
+      "kind": "real",
+      "lived": "1737-1813",
+      "bio": {
+        "es": "Janet Keiller vivía en Dundee (Escocia). Según la tradición familiar, en torno a 1797 su hijo James compró barato un cargamento de naranjas amargas de Sevilla y ella las convirtió en mermelada. La empresa Keiller vendió esa mermelada de naranja por todo el mundo. La receta con naranja amarga ya existía antes, pero ellos la hicieron famosa.",
+        "en": "Janet Keiller lived in Dundee, Scotland. According to family tradition, around 1797 her son James bought a cheap cargo of bitter Seville oranges, and she turned them into marmalade. The Keiller firm sold that orange marmalade around the world. Recipes with bitter oranges already existed, but they made it famous."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia (en): Keiller's marmalade",
+          "url": "https://en.wikipedia.org/wiki/Keiller%27s_marmalade"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1396,6 +1541,32 @@
           "icon": "collectibles/sevilla_insignia.svg",
           "awardedAtNodeId": "n7_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Tumba de Cristóbal Colón",
+          "url": "https://es.wikipedia.org/wiki/Tumba_de_Crist%C3%B3bal_Col%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Hernando Colón",
+          "url": "https://es.wikipedia.org/wiki/Hernando_Col%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Institución Colombina",
+          "url": "https://es.wikipedia.org/wiki/Instituci%C3%B3n_Colombina"
+        },
+        {
+          "title": "Wikipedia: Giralda",
+          "url": "https://es.wikipedia.org/wiki/Giralda"
+        },
+        {
+          "title": "Wikipedia: Faro a Colón",
+          "url": "https://es.wikipedia.org/wiki/Faro_a_Col%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: El aguador de Sevilla",
+          "url": "https://es.wikipedia.org/wiki/El_aguador_de_Sevilla"
+        }
       ]
     },
     {
@@ -2531,6 +2702,27 @@
           },
           "icon": "collectibles/sevilla_azahar.svg",
           "awardedAtNodeId": "g6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Citrus × aurantium",
+          "url": "https://es.wikipedia.org/wiki/Citrus_%C3%97_aurantium"
+        },
+        {
+          "title": "Wikipedia (en): Marmalade",
+          "url": "https://en.wikipedia.org/wiki/Marmalade"
+        },
+        {
+          "title": "Wikipedia (en): Keiller's marmalade",
+          "url": "https://en.wikipedia.org/wiki/Keiller%27s_marmalade"
+        },
+        {
+          "title": "Wikipedia: Aceitunas aliñadas",
+          "url": "https://es.wikipedia.org/wiki/Aceitunas_ali%C3%B1adas"
+        },
+        {
+          "title": "El Blog de la Tabla, «Naranjas amargas de Sevilla»"
         }
       ]
     },
@@ -3669,6 +3861,24 @@
           "icon": "collectibles/sevilla_fiesta_insignia.svg",
           "awardedAtNodeId": "f6_final"
         }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Feria de Abril",
+          "url": "https://es.wikipedia.org/wiki/Feria_de_Abril"
+        },
+        {
+          "title": "Wikipedia: Narciso Bonaplata",
+          "url": "https://es.wikipedia.org/wiki/Narciso_Bonaplata"
+        },
+        {
+          "title": "Wikipedia: Real Fábrica de Tabacos de Sevilla",
+          "url": "https://es.wikipedia.org/wiki/Real_F%C3%A1brica_de_Tabacos_de_Sevilla"
+        },
+        {
+          "title": "Ayuntamiento de Sevilla",
+          "url": "https://www.sevilla.org"
+        }
       ]
     },
     {
@@ -4591,6 +4801,20 @@
           },
           "icon": "collectibles/sevilla_leyenda_insignia.svg",
           "awardedAtNodeId": "l6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Pedro I de Castilla",
+          "url": "https://es.wikipedia.org/wiki/Pedro_I_de_Castilla"
+        },
+        {
+          "title": "Wikipedia: Gustavo Adolfo Bécquer",
+          "url": "https://es.wikipedia.org/wiki/Gustavo_Adolfo_B%C3%A9cquer"
+        },
+        {
+          "title": "Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»",
+          "url": "https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/"
         }
       ]
     }
