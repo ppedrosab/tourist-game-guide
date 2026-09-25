@@ -19,6 +19,8 @@ export const colors = {
   clayTint: "#F6E3D6",
   /** Morado del Carnaval de Cádiz: seña de las rutas de fiestas. */
   violet: "#6E2C5E",
+  /** Añil de noche: seña de las rutas de leyendas. */
+  night: "#34406E",
 } as const;
 
 /** Color de cada camino de la historia: se repite en mapa, decisiones, pistas y HUD. */

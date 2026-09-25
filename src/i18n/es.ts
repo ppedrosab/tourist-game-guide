@@ -15,6 +15,7 @@ export const es = {
     gratis: "Gratis",
     gastronomia: "Gastronomía",
     fiestas: "Fiestas",
+    leyendas: "Leyendas",
     paradaDe: "Parada {n} de {total}",
     caminoDe: "camino del {branch}",
     dinero: "dinero",

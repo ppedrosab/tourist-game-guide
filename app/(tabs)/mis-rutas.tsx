@@ -30,7 +30,7 @@ export default function MisRutas() {
           <ChoiceCard
             key={route.id}
             title={L(route.title)}
-            hint={`${L(pack.name)}${route.theme === "gastronomia" ? ` · ${t("comun.gastronomia")}` : route.theme === "fiestas" ? ` · ${t("comun.fiestas")}` : ""} · ${run.completedAt ? t("misRutas.terminada") : t("misRutas.enCurso")}`}
+            hint={`${L(pack.name)}${route.theme && route.theme !== "historia" ? ` · ${t(`comun.${route.theme}`)}` : ""} · ${run.completedAt ? t("misRutas.terminada") : t("misRutas.enCurso")}`}
             meta={
               run.completedAt
                 ? t("misRutas.final", { title: ending ? L(ending.title) : "?" })

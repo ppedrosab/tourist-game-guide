@@ -77,8 +77,8 @@ describe("loadPack", () => {
 });
 
 describe("tipo de ruta", () => {
-  it("acepta rutas gastronómicas y de fiestas y rechaza tipos desconocidos", () => {
-    for (const theme of ["gastronomia", "fiestas"]) {
+  it("acepta rutas gastronómicas, de fiestas y de leyendas y rechaza tipos desconocidos", () => {
+    for (const theme of ["gastronomia", "fiestas", "leyendas"]) {
       const ok = clonePack();
       ok.routes[0].theme = theme;
       expect(loadPack(ok).ok).toBe(true);

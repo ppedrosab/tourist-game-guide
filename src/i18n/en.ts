@@ -13,6 +13,7 @@ export const en: Strings = {
     gratis: "Free",
     gastronomia: "Food & drink",
     fiestas: "Festivals",
+    leyendas: "Legends",
     paradaDe: "Stop {n} of {total}",
     caminoDe: "{branch} trail",
     dinero: "money",
