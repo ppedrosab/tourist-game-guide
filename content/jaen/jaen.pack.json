@@ -98,6 +98,29 @@
       ]
     },
     {
+      "id": "vareador",
+      "name": {
+        "es": "El Vareador",
+        "en": "The Olive Beater"
+      },
+      "description": {
+        "es": "Vareador de aceituna, de familia olivarera. Fuerte, alegre y madrugador.",
+        "en": "An olive beater from a family of olive growers. Strong, cheerful and an early riser."
+      },
+      "avatar": "sprites/vareador/vareador_neutral.svg",
+      "kind": "tipo",
+      "bio": {
+        "es": "El vareo consiste en golpear las ramas del olivo con una vara larga para que caiga la aceituna sobre unas mantas. La campaña de recogida va de noviembre a febrero y durante siglos ha dado trabajo a miles de familias de Jaén.",
+        "en": "Vareo means beating the olive tree's branches with a long pole so the olives fall onto nets. The harvest runs from November to February and has given work to thousands of Jaén families for centuries."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Provincia de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Provincia_de_Ja%C3%A9n"
+        }
+      ]
+    },
+    {
       "id": "molinero",
       "name": {
         "es": "El Molinero",
@@ -296,35 +319,6 @@
         {
           "title": "Wikipedia: Leyendas de Jaén",
           "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
-        }
-      ]
-    },
-    {
-      "id": "miguelhernandez",
-      "name": {
-        "es": "Miguel Hernández",
-        "en": "Miguel Hernández"
-      },
-      "description": {
-        "es": "Poeta de Orihuela que en 1937 escribió en Jaén «Aceituneros», hoy himno de la provincia. Sencillo, apasionado y amigo de la gente del campo.",
-        "en": "A poet from Orihuela who wrote “Aceituneros” in Jaén in 1937, now the province's anthem. Down-to-earth, passionate and a friend of country people."
-      },
-      "avatar": "sprites/miguelhernandez/miguelhernandez_neutral.svg",
-      "era": "1910-1942",
-      "kind": "real",
-      "lived": "1910-1942",
-      "bio": {
-        "es": "Miguel Hernández nació en Orihuela (Alicante) y fue pastor antes que poeta. Durante la Guerra Civil estuvo en Jaén entre marzo y junio de 1937, donde escribió «Aceituneros», publicado en «Viento del pueblo». Desde 2012 es el himno oficial de la provincia de Jaén, que ya popularizó Paco Ibáñez en 1967. Allí se casó con Josefina Manresa, de Quesada. Murió en la cárcel de Alicante en 1942.",
-        "en": "Miguel Hernández was born in Orihuela (Alicante) and was a shepherd before he was a poet. During the Civil War he was in Jaén from March to June 1937, where he wrote “Aceituneros”, published in “Viento del pueblo”. Since 2012 it has been the official anthem of the province of Jaén; Paco Ibáñez had already made it famous in 1967. He married Josefina Manresa, from Quesada. He died in Alicante prison in 1942."
-      },
-      "sources": [
-        {
-          "title": "Wikipedia: Miguel Hernández",
-          "url": "https://es.wikipedia.org/wiki/Miguel_Hern%C3%A1ndez"
-        },
-        {
-          "title": "Wikipedia: Himno oficial de la provincia de Jaén",
-          "url": "https://es.wikipedia.org/wiki/Himno_oficial_de_la_provincia_de_Ja%C3%A9n"
         }
       ]
     }
@@ -1490,8 +1484,8 @@
         "en": "Who Planted the Sea of Olives?"
       },
       "summary": {
-        "es": "Jaén es la mayor productora de aceite del mundo: olivos hasta el horizonte. ¿Los plantaron los romanos, los andalusíes o alguien más reciente? Con una catadora, un molinero y el poeta Miguel Hernández.",
-        "en": "Jaén is the world's largest olive oil producer: olive trees to the horizon. Did the Romans plant them, the Andalusis or someone more recent? With an oil taster, a mill man and the poet Miguel Hernández."
+        "es": "Jaén es la mayor productora de aceite del mundo: olivos hasta el horizonte. ¿Los plantaron los romanos, los andalusíes o alguien más reciente? Con una catadora, un vareador y un molinero.",
+        "en": "Jaén is the world's largest olive oil producer: olive trees to the horizon. Did the Romans plant them, the Andalusis or someone more recent? With an oil taster, an olive beater and a mill man."
       },
       "era": "De la Bética al siglo XX",
       "guideCharacterId": "catadora",
@@ -1650,7 +1644,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "miguelhernandez",
+                  "id": "vareador",
                   "expression": "happy",
                   "position": "right"
                 }
@@ -1658,11 +1652,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "miguelhernandez",
+              "characterId": "vareador",
               "expression": "happy",
               "text": {
-                "es": "Buenas. Miguel Hernández, poeta. En 1937 pasé por Jaén y escribí «Aceituneros»: «Andaluces de Jaén, aceituneros altivos, decidme en el alma: ¿quién, quién levantó los olivos?». Hoy es el himno de la provincia.",
-                "en": "Hello. Miguel Hernández, poet. In 1937 I spent time in Jaén and wrote “Aceituneros”: “Andalusians of Jaén, proud olive pickers, tell me in your soul: who, who raised the olive trees?”. Today it is the province's anthem."
+                "es": "¡Buenas! Vareador. En invierno, con la vara, sacudo las ramas y las aceitunas caen sobre los mantos. Mi familia lleva así generaciones.",
+                "en": "Hello! Olive beater. In winter I shake the branches with my pole and the olives fall onto the nets. My family has done this for generations."
               }
             },
             {
@@ -1784,7 +1778,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "miguelhernandez",
+                  "id": "vareador",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -1799,11 +1793,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "miguelhernandez",
+              "characterId": "vareador",
               "expression": "neutral",
               "text": {
-                "es": "Con los aceituneros comí en el tajo, a mediodía: un pan con aceite y una pipirrana. Eso les daba fuerza para la vara.",
-                "en": "I ate with the olive pickers in the fields at midday: bread with oil and a pipirrana salad. That gave them strength for the pole."
+                "es": "En el tajo, a mediodía, un pan con aceite y una pipirrana. Eso es lo que nos da fuerza para la vara.",
+                "en": "Out in the grove at midday, bread with oil and a pipirrana. That's what gives us the strength for the pole."
               }
             },
             {
@@ -1876,7 +1870,7 @@
               ],
               "characters": [
                 {
-                  "id": "miguelhernandez",
+                  "id": "vareador",
                   "expression": "happy",
                   "position": "left"
                 },
@@ -1896,11 +1890,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "miguelhernandez",
+              "characterId": "vareador",
               "expression": "happy",
               "text": {
-                "es": "Un viejo aceitunero me contó que su bisabuelo vio arrancar trigales para plantar olivos. «Olivos, olivos y más olivos», decía.",
-                "en": "An old olive picker told me his great-grandfather saw wheat fields torn up to plant olives. “Olives, olives and more olives”, he used to say."
+                "es": "Mi abuelo contaba que su abuelo vio arrancar trigales para plantar olivos. «Olivos, olivos y más olivos», decía.",
+                "en": "My grandfather used to say his grandfather saw wheat fields torn up to plant olive trees. “Olives, olives and more olives”, he'd say."
               }
             },
             {
@@ -1942,8 +1936,8 @@
           "clue": {
             "id": "pista_trigales",
             "text": {
-              "es": "El siglo XIX · Un aceitunero le contó a Miguel Hernández que su bisabuelo vio arrancar trigales para plantar olivos.",
-              "en": "The 19th century · An olive picker told Miguel Hernández that his great-grandfather saw wheat fields torn up to plant olives."
+              "es": "El siglo XIX · El bisabuelo del vareador vio arrancar trigales para plantar olivos.",
+              "en": "The 19th century · The olive beater's great-grandfather saw wheat fields torn up to plant olives."
             }
           },
           "nextNodeId": "g4_magdalena",
@@ -2171,7 +2165,7 @@
                   "position": "left"
                 },
                 {
-                  "id": "miguelhernandez",
+                  "id": "vareador",
                   "expression": "neutral",
                   "position": "right"
                 }
@@ -2194,8 +2188,8 @@
                     "camino_plaza"
                   ],
                   "text": {
-                    "es": "Vienes de la plaza: Miguel Hernández te ha hablado de trigales arrancados para plantar olivos. ¿Qué pista seguimos?",
-                    "en": "You've come from the square: Miguel Hernández told you about wheat fields torn up for olive trees. Which lead shall we follow?"
+                    "es": "Vienes de la plaza: el vareador te ha hablado de trigales arrancados para plantar olivos. ¿Qué pista seguimos?",
+                    "en": "You've come from the square: the olive beater told you about wheat fields torn up for olive trees. Which lead shall we follow?"
                   }
                 },
                 {
@@ -2240,8 +2234,8 @@
             "characterId": "catadora",
             "expression": "thinking",
             "text": {
-              "es": "¿Vamos al molino con el molinero, o al olivar con Miguel Hernández?",
-              "en": "Shall we go to the mill with the mill man, or to the grove with Miguel Hernández?"
+              "es": "¿Vamos al molino con el molinero, o al olivar con el vareador?",
+              "en": "Shall we go to the mill with the mill man, or to the grove with the olive beater?"
             }
           },
           "choices": [
@@ -2265,8 +2259,8 @@
                 "en": "To the grove"
               },
               "hint": {
-                "es": "Con Miguel Hernández",
-                "en": "With Miguel Hernández"
+                "es": "Con el vareador",
+                "en": "With the olive beater"
               },
               "targetNodeId": "g4b_olivar",
               "setFlags": [
@@ -2323,7 +2317,7 @@
           "content": [
             {
               "type": "dialogue",
-              "characterId": "miguelhernandez",
+              "characterId": "vareador",
               "expression": "dramatic",
               "text": {
                 "es": "Entre 1830 y 1880 el olivar creció y creció. Donde había trigo, olivo. Donde había monte, olivo.",
@@ -2332,11 +2326,11 @@
             },
             {
               "type": "dialogue",
-              "characterId": "miguelhernandez",
+              "characterId": "vareador",
               "expression": "thinking",
               "text": {
-                "es": "Y en el siglo XX siguió. Ya lo dije en mi poema: «No los levantó la nada, ni el dinero, ni el señor, sino la tierra callada, el trabajo y el sudor». Lo plantaron miles de familias, olivo a olivo.",
-                "en": "And it went on in the 20th century. I said it in my poem: “Not nothingness raised them, nor money, nor the lord, but the silent earth, work and sweat.” Thousands of families planted it, tree by tree."
+                "es": "Y en el siglo XX siguió. Así nació el mar. No lo plantó un rey ni un califa: lo plantaron miles de familias, olivo a olivo.",
+                "en": "And in the 20th century it carried on. That's how the sea was born. No king or caliph planted it: thousands of families did, tree by tree."
               }
             }
           ],
