@@ -420,7 +420,6 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Andrés de Vandelvira | persona real | 1509-1575 | [Wikipedia: Andrés de Vandelvira](https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Vandelvira) |
 | Bernardo López García | persona real | 1838-1870 | [Wikipedia: Bernardo López García](https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa) |
 | El Lagarto de la Malena | figura de leyenda | leyenda | [Wikipedia: Lagarto de la Malena](https://es.wikipedia.org/wiki/Lagarto_de_la_Malena) · [Wikipedia: Leyendas de Jaén](https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n) |
-| Miguel Hernández | persona real | 1910-1942 | [Wikipedia: Miguel Hernández](https://es.wikipedia.org/wiki/Miguel_Hern%C3%A1ndez) · [Wikipedia: Himno oficial de la provincia de Jaén](https://es.wikipedia.org/wiki/Himno_oficial_de_la_provincia_de_Ja%C3%A9n) |
 
 ### «¿Quién mató al lagarto de la Malena?»: lo que afirma la ruta
 
@@ -547,7 +546,6 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | La vieja del candil | figura de leyenda | s. XIV (leyenda) | [Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»](https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/) |
 | El rey don Pedro | persona real | 1334-1369 | [Wikipedia: Pedro I de Castilla](https://es.wikipedia.org/wiki/Pedro_I_de_Castilla) |
 | Janet Keiller | persona real | 1737-1813 | [Wikipedia (en): Keiller's marmalade](https://en.wikipedia.org/wiki/Keiller%27s_marmalade) |
-| Ibn al-Awwam | persona real | s. XII - XIII | [Wikipedia: Ibn al-ʿAwwām](https://es.wikipedia.org/wiki/Ibn_al-%CA%BFAww%C4%81m) |
 
 ### «¿Dónde está Colón?»: lo que afirma la ruta
 

@@ -341,6 +341,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Los personajes tienen que ser propios de la ciudad: personas reales históricas o figuras
   características de ese lugar (la Tarasca, la Chiquita Piconera, el biznaguero, el verdialero…).
   Nada de oficios o tipos genéricos que valdrían para cualquier sitio.
+  Los tipos que ya hay (cigarrera, espetero, catadora…) se quedan: solo se cambian por una persona real
+  si esa persona fue de verdad eso mismo (un vareador famoso, un carpintero famoso…).
 - Personaje o ruta nuevos sin ficha ni fuentes: escribir su historia y citar de dónde sale (y comprobar
   fechas y nombres; p. ej. el cronista de Córdoba es Teodomiro, no Teodoro, Ramírez de Arellano).
 - No meter contenido de ciudad en el código: todo sale del pack.
