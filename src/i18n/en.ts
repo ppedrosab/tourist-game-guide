@@ -176,6 +176,9 @@ export const en: Strings = {
     volverExplorar: "Back to Explore",
     estrellas: "{n} of 3 stars",
     retos: "{ok} of {total} challenges right",
+    compartir: "Share my ending",
+    compartirError: "Couldn't share from this device.",
+    tarjetaPie: "{app} · Play the city",
   },
   pausa: {
     titulo: "Pause",

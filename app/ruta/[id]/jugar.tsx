@@ -38,7 +38,7 @@ export default function Jugar() {
   const hydrated = useProgress((s) => s.hydrated);
   const run = useProgress((s) => s.runs[id]);
   const start = useProgress((s) => s.start);
-  const { t } = useI18n();
+  const { t, L } = useI18n();
 
   // Sin partida guardada: se empieza desde el nodo inicial.
   useEffect(() => {
@@ -59,6 +59,7 @@ export default function Jugar() {
       <CaseClosed
         route={found.route}
         run={run}
+        city={L(found.pack.name)}
         onReplay={() => start(found.pack.id, found.route)}
         onExit={() => router.dismissTo("/")}
       />

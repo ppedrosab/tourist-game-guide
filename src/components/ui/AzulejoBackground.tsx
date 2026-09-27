@@ -2,12 +2,21 @@ import { StyleSheet, View } from "react-native";
 import Svg, { Circle, Defs, Path, Pattern, Rect } from "react-native-svg";
 import { colors } from "@/theme";
 
-/** Fondo con el motivo de azulejo malagueño (detrás de escenas y modales). */
-export function AzulejoBackground({ variant = "ink" }: { variant?: "ink" | "clay" }) {
+/**
+ * Fondo con el motivo de azulejo malagueño (detrás de escenas y modales). `size` fija el tamaño del
+ * dibujo cuando hace falta (al capturarlo como imagen en web, un SVG sin tamaño sale a 300×150).
+ */
+export function AzulejoBackground({
+  variant = "ink",
+  size,
+}: {
+  variant?: "ink" | "clay";
+  size?: { width: number; height: number };
+}) {
   const base = variant === "ink" ? colors.ink : colors.clay;
   return (
     <View style={StyleSheet.absoluteFill} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-      <Svg style={StyleSheet.absoluteFill}>
+      <Svg style={StyleSheet.absoluteFill} {...size}>
         <Defs>
           <Pattern id={`az-${variant}`} width={36} height={36} patternUnits="userSpaceOnUse">
             <Rect width={36} height={36} fill={base} />

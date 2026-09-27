@@ -1,7 +1,9 @@
+import { useRef, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import type { PlayerProgress, Route } from "@/content/types";
 import { starsFor } from "@/engine/runner";
 import { useI18n } from "@/i18n";
+import { shareImage } from "@/share/shareImage";
 import { useProgress } from "@/store/progress";
 import { border, colors, radius, type } from "@/theme";
 import { Screen } from "../layout/Screen";
@@ -10,12 +12,13 @@ import { Icon } from "../ui/Icon";
 import { Panel } from "../ui/Panel";
 import { ThemeBadge } from "../ui/ThemeBadge";
 import { CollectibleArt } from "./CollectibleArt";
+import { ShareCard } from "./ShareCard";
 import { Stars } from "./Stars";
 
-type Props = { route: Route; run: PlayerProgress; onReplay: () => void; onExit: () => void };
+type Props = { route: Route; run: PlayerProgress; city: string; onReplay: () => void; onExit: () => void };
 
 /** Pantalla "Caso cerrado": final conseguido, coleccionables y otro camino. */
-export function CaseClosed({ route, run, onReplay, onExit }: Props) {
+export function CaseClosed({ route, run, city, onReplay, onExit }: Props) {
   const { t, L } = useI18n();
   const endingIds = useProgress((s) => s.collection.endingIds);
   const ending = route.endings?.find((e) => e.id === run.endingId);
@@ -23,6 +26,20 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
   const found = route.endings?.filter((e) => endingIds.includes(e.id)).length ?? 0;
   const rewards = (route.rewards ?? []).filter((r) => run.collectibleIds.includes(r.id));
   const score = starsFor(route, run);
+  const card = useRef<View>(null);
+  const [sharing, setSharing] = useState(false);
+  const [shareFailed, setShareFailed] = useState(false);
+  const share = async () => {
+    setSharing(true);
+    setShareFailed(false);
+    try {
+      setShareFailed(!(await shareImage(card, t("final.compartir"))));
+    } catch {
+      setShareFailed(true);
+    } finally {
+      setSharing(false);
+    }
+  };
 
   return (
     <Screen>
@@ -54,9 +71,22 @@ export function CaseClosed({ route, run, onReplay, onExit }: Props) {
           </View>
         </Panel>
       ) : null}
+      <Button3D label={t("final.compartir")} icon="share" variant="sea" disabled={sharing} onPress={share} />
+      {shareFailed ? <Text style={type.caption}>{t("final.compartirError")}</Text> : null}
       {found < total ? <Text style={type.body}>{t("final.otrasCalles")}</Text> : null}
       <Button3D label={t("final.otroCamino")} icon="split" onPress={onReplay} />
       <Button3D label={t("final.volverExplorar")} variant="secondary" icon="compass" onPress={onExit} />
+      {/* Tarjeta para compartir: fuera de la pantalla, solo para capturarla. */}
+      <View style={styles.offscreen} pointerEvents="none" accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+        <ShareCard
+          ref={card}
+          route={route}
+          city={city}
+          ending={ending ? L(ending.title) : t("final.misterioso")}
+          stars={score.stars}
+          rewards={rewards}
+        />
+      </View>
     </Screen>
   );
 }
@@ -75,4 +105,5 @@ const styles = StyleSheet.create({
   },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 10, justifyContent: "center" },
   reward: { width: 92, alignItems: "center", gap: 4 },
+  offscreen: { position: "absolute", left: -10000, top: 0 },
 });

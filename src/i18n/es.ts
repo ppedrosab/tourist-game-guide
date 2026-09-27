@@ -178,6 +178,9 @@ export const es = {
     volverExplorar: "Volver a Explorar",
     estrellas: "{n} de 3 estrellas",
     retos: "{ok} de {total} retos acertados",
+    compartir: "Compartir mi final",
+    compartirError: "No se ha podido compartir desde este dispositivo.",
+    tarjetaPie: "{app} · Juega la ciudad",
   },
   pausa: {
     titulo: "Pausa",
