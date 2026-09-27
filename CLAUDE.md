@@ -334,7 +334,8 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 ## Pendientes fuera del código
 
 - Verificar sobre el terreno coordenadas, radios y tiempos a pie (son estimaciones). `npm run check:stops` las compara
-  con OpenStreetMap, o con Google Maps si existe la variable `GOOGLE_MAPS_API_KEY` (Places API New).
+  con OpenStreetMap (o Google Maps si existe `GOOGLE_MAPS_API_KEY`) y con Wikidata, y separa «probable error»
+  (las dos fuentes coinciden y el pack queda lejos) de «revisar a mano» (barrios, playas, calles…).
 - Pedir permiso a la Antigua Casa de Guardia (el reto implica entrar al local).
 - Revisión de un historiador local antes de grabar audios.
 - Voces: de momento síntesis del móvil (decidido). Si se graban, basta con dejar los audios en assets/audio.

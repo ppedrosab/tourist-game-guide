@@ -4,13 +4,17 @@ Revisión de coordenadas (npm run check:stops): busca cada parada física en Ope
 «{título}, {ciudad}») y compara con la coordenada del pack. Escribe docs/COORDENADAS.md con las
 paradas que se alejan más de 80 m de lo que encuentra OSM, para revisarlas antes de salir a la calle.
 
+Segunda opinión independiente de OSM: Wikidata (una consulta SPARQL por ciudad con todo lo que tiene
+coordenadas dentro de sus límites; el nombre se empareja aquí). Si OSM y Wikidata coinciden entre sí y
+el pack queda lejos, la parada sale como «probable error» con la coordenada propuesta.
+
 Con la variable de entorno GOOGLE_MAPS_API_KEY (clave de Google Maps Platform con «Places API (New)»
 activada) busca en Google Maps en vez de en OSM: Text Search limitado al rectángulo de la ciudad.
 
 No cambia los packs: un título genérico («Cierre», «La Catedral») puede dar un resultado equivocado,
 así que cada aviso se revisa a mano. Respuestas en caché (scripts/.cache/geocode*.json); 1 petición/s.
 """
-import glob, json, math, os, time, urllib.error, urllib.parse, urllib.request
+import difflib, glob, json, math, os, re, time, unicodedata, urllib.error, urllib.parse, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GOOGLE_KEY = os.environ.get("GOOGLE_MAPS_API_KEY")
@@ -23,6 +27,65 @@ LIMIT_M = 80
 def meters(a, b):
     k = math.cos(math.radians((a[0] + b[0]) / 2))
     return math.hypot((a[1] - b[1]) * k, a[0] - b[0]) * 111_320
+
+
+UA = "tourist-game-guide/1.0 (https://github.com/ppedrosab/tourist-game-guide)"
+STOP = {"de", "del", "la", "las", "el", "los", "y", "e", "a", "en"}
+
+
+def words(text):
+    text = unicodedata.normalize("NFKD", text.lower()).encode("ascii", "ignore").decode()
+    return [w for w in re.findall(r"[a-z0-9]+", text) if w not in STOP]
+
+
+def wikidata_places(city_id, box):
+    """Todo lo que Wikidata sitúa dentro del rectángulo de la ciudad: [(etiqueta, lat, lng)]."""
+    path = os.path.join(ROOT, "scripts", ".cache", f"wikidata_{city_id}.json")
+    try:
+        return json.load(open(path))
+    except (OSError, ValueError):
+        pass
+    (s, w), (n, e) = box
+    q = f"""SELECT ?label ?coord WHERE {{
+      SERVICE wikibase:box {{ ?item wdt:P625 ?coord .
+        bd:serviceParam wikibase:cornerSouthWest "Point({w - 0.01} {s - 0.01})"^^geo:wktLiteral .
+        bd:serviceParam wikibase:cornerNorthEast "Point({e + 0.01} {n + 0.01})"^^geo:wktLiteral . }}
+      ?item rdfs:label ?label . FILTER(lang(?label) = "es") }}"""
+    req = urllib.request.Request("https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(q), headers={"User-Agent": UA})
+    rows = json.load(urllib.request.urlopen(req, timeout=120))["results"]["bindings"]
+    out = []
+    for r in rows:
+        m = re.match(r"Point\(([-\d.]+) ([-\d.]+)\)", r["coord"]["value"])
+        if m:
+            out.append([r["label"]["value"], float(m.group(2)), float(m.group(1))])
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    json.dump(out, open(path, "w"), ensure_ascii=False)
+    time.sleep(2)
+    return out
+
+
+def wikidata_match(places, title, near=None):
+    """Mejor lugar de Wikidata para el título de la parada (todas sus palabras en la etiqueta, o casi igual)."""
+    variants = {title, re.sub(r"\s*\(.*?\)", "", title)}
+    best, best_score = [], 0.0
+    for label, lat, lng in places:
+        lw = words(label)
+        for v in variants:
+            tw = words(v)
+            if not tw or not lw:
+                continue
+            ratio = difflib.SequenceMatcher(None, " ".join(tw), " ".join(lw)).ratio()
+            contained = all(t in lw for t in tw) and len(lw) <= len(tw) + 3
+            score = max(ratio if ratio >= 0.85 else 0, 0.9 - 0.02 * (len(lw) - len(tw)) if contained else 0)
+            if score > best_score + 1e-9:
+                best, best_score = [(label, lat, lng)], score
+            elif score and abs(score - best_score) < 1e-9:
+                best.append((label, lat, lng))
+    if not best:
+        return None
+    if near and len(best) > 1:
+        best.sort(key=lambda b: meters(near, (b[1], b[2])))
+    return best[0]
 
 
 def geocode_google(cache, query, box):
@@ -71,13 +134,14 @@ def main():
         cache = json.load(open(CACHE))
     except (OSError, ValueError):
         cache = {}
-    rows, seen, checked = [], set(), 0
+    move, check, ok, seen = [], [], 0, set()
     for f in sorted(glob.glob(os.path.join(ROOT, "content", "*", "*.pack.json"))):
         pack = json.load(open(f))
         city = pack["name"]["es"]
         box = [(b["lat"], b["lng"]) for b in pack["bounds"]]
         (s, w), (n, e) = box
         viewbox = f"{w - 0.01},{n + 0.01},{e + 0.01},{s - 0.01}"
+        places = wikidata_places(pack["city"] if isinstance(pack.get("city"), str) else os.path.basename(os.path.dirname(f)), box)
         for r in pack["routes"]:
             for node in r["nodes"]:
                 if "location" not in node:
@@ -88,34 +152,59 @@ def main():
                 if key in seen:
                     continue
                 seen.add(key)
-                checked += 1
                 query = f"{title}, {city}"
                 hits = geocode_google(cache, query, box) if GOOGLE_KEY else geocode(cache, query, viewbox)
-                if not hits:
-                    rows.append((city, title, r["id"], here, None, None, f"{SOURCE} no lo encuentra con ese nombre"))
+                geo = (hits[0][0], hits[0][1], hits[0][2].split(",")[0]) if hits else None
+                wd = wikidata_match(places, title, near=geo[:2] if geo else None)
+                srcs = [(SOURCE, geo), ("Wikidata", (wd[1], wd[2], wd[0]) if wd else None)]
+                found = [(name, g) for name, g in srcs if g]
+                if any(meters(here, g[:2]) <= LIMIT_M for _, g in found):
+                    ok += 1
                     continue
-                lat, lng, name = hits[0]
-                d = meters(here, (lat, lng))
-                if d > LIMIT_M:
-                    rows.append((city, title, r["id"], here, (lat, lng), round(d), name.split(",")[0]))
+                row = (city, title, r["id"], here, srcs)
+                if len(found) == 2 and meters(found[0][1][:2], found[1][1][:2]) <= LIMIT_M:
+                    move.append(row)
+                else:
+                    check.append(row)
+
+    def cell(here, g):
+        return f"{g[0]:.5f}, {g[1]:.5f} ({round(meters(here, g[:2]))} m) · {g[2]}" if g else "—"
+
+    def table(rows, proposal):
+        head = f"| Ciudad | Parada | Ruta | Pack (lat, lng) | {SOURCE} | Wikidata |" + (" Propuesta |" if proposal else "")
+        out = [head, "|---" * (head.count("|") - 1) + "|"]
+        for city, title, rid, here, srcs in sorted(rows, key=lambda x: (x[0], x[1])):
+            line = f"| {city} | {title} | `{rid}` | {here[0]:.5f}, {here[1]:.5f} | {cell(here, srcs[0][1])} | {cell(here, srcs[1][1])} |"
+            if proposal:
+                a, b = srcs[0][1], srcs[1][1]
+                line += f" {(a[0] + b[0]) / 2:.5f}, {(a[1] + b[1]) / 2:.5f} |"
+            out.append(line)
+        return out
+
+    total = ok + len(move) + len(check)
     lines = [
         "# Revisión de coordenadas de las paradas",
         "",
-        f"Generado con `npm run check:stops` ({'Google Maps, Places API' if GOOGLE_KEY else 'OpenStreetMap/Nominatim'}). Paradas cuya coordenada se aleja",
-        f"más de {LIMIT_M} m de lo que {SOURCE} encuentra con «título, ciudad». No todo aviso es un error: {SOURCE}",
-        "puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la",
-        "plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).",
+        f"Generado con `npm run check:stops`: cada parada se busca por «título, ciudad» en {SOURCE} y en",
+        "Wikidata (fuentes independientes). Entre paréntesis, la distancia a la coordenada del pack.",
         "",
-        f"Paradas revisadas: {checked}. Con aviso: {len(rows)}.",
+        f"- **Bien** ({ok} de {total}): al menos una fuente la sitúa a menos de {LIMIT_M} m.",
+        f"- **Probable error** ({len(move)}): las dos fuentes coinciden entre sí y el pack queda lejos.",
+        f"- **Revisar a mano** ({len(check)}): no se encuentra o las fuentes no coinciden. Muchas son paradas",
+        "  con nombre genérico o puntos elegidos a propósito (una esquina, un mirador): no son errores seguros.",
         "",
-        f"| Ciudad | Parada | Ruta | Pack (lat, lng) | {SOURCE} (lat, lng) | Distancia | Qué encontró {SOURCE} |",
-        "|---|---|---|---|---|---|---|",
+        "Al mover una parada, regenerar los trazados (`npm run gen:paths`).",
+        "",
+        "## Probable error",
+        "",
+        *table(move, True),
+        "",
+        "## Revisar a mano",
+        "",
+        *table(check, False),
     ]
-    for city, title, rid, here, osm, d, name in sorted(rows, key=lambda x: (x[0], -(x[5] or 0))):
-        o = f"{osm[0]:.5f}, {osm[1]:.5f}" if osm else "—"
-        lines.append(f"| {city} | {title} | `{rid}` | {here[0]:.5f}, {here[1]:.5f} | {o} | {f'{d} m' if d else '—'} | {name} |")
     open(OUT, "w").write("\n".join(lines) + "\n")
-    print(f"{checked} paradas, {len(rows)} avisos → {os.path.relpath(OUT, ROOT)}")
+    print(f"{total} paradas: {ok} bien, {len(move)} probable error, {len(check)} revisar → {os.path.relpath(OUT, ROOT)}")
 
 
 if __name__ == "__main__":
