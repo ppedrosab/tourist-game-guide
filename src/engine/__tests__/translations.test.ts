@@ -8,7 +8,7 @@ if (!result.ok) throw new Error(result.errors.join("\n"));
 const pack: CityPack = result.pack;
 
 it("el pack de Málaga está completo en todos sus idiomas", () => {
-  expect(pack.languages).toEqual(["es", "en"]);
+  expect(pack.languages).toEqual(["es", "en", "fr", "de", "it"]);
   expect(missingTranslations(pack)).toEqual([]);
 });
 
