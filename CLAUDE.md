@@ -217,7 +217,8 @@ volvió a Málaga?» (Picasso, su padre José Ruiz Blasco y su madre María Pica
 teatro romano de Gades?» (Balbo el Menor, la bailarina Telethusa y Columela) y Córdoba «¿Por qué se fueron
 los sabios de Córdoba?» (Séneca, Averroes y Maimónides) y Sevilla «¿Existió Don Juan?» (Miguel Mañara,
 Murillo y Valdés Leal) y Granada «¿Quién escribió los libros de plomo?» (el arzobispo Pedro de Castro y los
-traductores moriscos Alonso del Castillo y Miguel de Luna). Arte en
+traductores moriscos Alonso del Castillo y Miguel de Luna) y Jaén «¿Quién ganó el castillo de Santa Catalina?»
+(Alhamar, Fernando III e Ibn Malik). Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
 ## Arquitectura

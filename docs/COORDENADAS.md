@@ -5,7 +5,7 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 168. Con aviso: 101.
+Paradas revisadas: 174. Con aviso: 102.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
@@ -92,6 +92,7 @@ Paradas revisadas: 168. Con aviso: 101.
 | Jaén | Plaza de Santa María | `mar-de-olivos` | 37.76540, -3.78970 | 37.76485, -3.79063 | 102 m | Plaza de Santa María |
 | Jaén | Basílica de San Ildefonso | `lagarto-malena` | 37.76440, -3.78620 | — | — | OSM no lo encuentra con ese nombre |
 | Jaén | Fuente del Lagarto | `lagarto-malena` | 37.77240, -3.79380 | — | — | OSM no lo encuentra con ese nombre |
+| Jaén | Monasterio de Santa Clara | `castillo-santa-catalina` | 37.77013, -3.79166 | — | — | OSM no lo encuentra con ese nombre |
 | Málaga | Playa de la Malagueta | `espeto` | 36.71950, -4.40900 | 36.71644, -4.41094 | 382 m | Playa de La Malagueta |
 | Málaga | Muelle Uno | `espeto` | 36.71830, -4.41470 | 36.71599, -4.41380 | 269 m | Muelle Uno |
 | Málaga | La estatua del Cenachero | `misterio-manquita` | 36.71880, -4.41960 | — | — | OSM no lo encuentra con ese nombre |

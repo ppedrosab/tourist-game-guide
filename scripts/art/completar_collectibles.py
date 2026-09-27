@@ -152,6 +152,32 @@ gra = {
     "insignia": BG + lead_disc(60, 70, 30) + f'<text x="60" y="80" font-family="Georgia, serif" font-weight="700" font-size="30" text-anchor="middle" fill="{GOLD}" stroke="{INK}" stroke-width="1">?</text>' + sparkle(94, 30, 5, GOLD),
 }
 
+jae = {
+    "dama": BG + (f'<path d="M36 104Q34 70 60 66Q86 70 84 104Z" fill="#C9B284" stroke="{INK}" stroke-width="2.2"/>'
+                  f'<ellipse cx="60" cy="50" rx="14" ry="17" fill="#D9C39A" stroke="{INK}" stroke-width="2"/>'
+                  f'<path d="M42 44Q44 26 60 24Q76 26 78 44Q72 34 60 34Q48 34 42 44Z" fill="#B09868" stroke="{INK}" stroke-width="1.8"/>'
+                  + "".join(f'<circle cx="{x}" cy="56" r="6" fill="none" stroke="{INK}" stroke-width="1.8"/>' for x in (40, 80))
+                  + f'<path d="M54 50H58M62 50H66M56 60Q60 62 64 60" stroke="{INK}" stroke-width="1.6"/>'
+                  + "".join(f'<path d="M42 {78 + k * 8}Q60 {82 + k * 8} 78 {78 + k * 8}" fill="none" stroke="#9C8458" stroke-width="1.6"/>' for k in range(3))),
+    "corona": BG + (f'<path d="M26 86L30 44L46 62L60 34L74 62L90 44L94 86Z" fill="{GOLD}" stroke="{INK}" stroke-width="2.4"/>'
+                    f'<path d="M26 86H94V98H26Z" fill="{GOLDD}" stroke="{INK}" stroke-width="2.2"/>'
+                    + "".join(f'<circle cx="{x}" cy="92" r="3.6" fill="{c}" stroke="{INK}" stroke-width="1"/>' for x, c in [(40, RED), (60, SEA), (80, RED)])
+                    + sparkle(96, 30, 5, GOLD)),
+    "alfiyya": BG + book(60, 68, SEA, 56, 62) + "".join(f'<path d="M44 {58 + k * 9}Q52 {54 + k * 9} 58 {58 + k * 9}T74 {58 + k * 9}" fill="none" stroke="{PAPER}" stroke-width="1.8"/>' for k in range(4)),
+    "llave": BG + (f'<circle cx="40" cy="50" r="16" fill="none" stroke="{INK}" stroke-width="9"/><circle cx="40" cy="50" r="16" fill="none" stroke="{SILVER}" stroke-width="5"/>'
+                   f'<path d="M52 62L92 102" stroke="{INK}" stroke-width="10"/><path d="M52 62L92 102" stroke="{SILVER}" stroke-width="6"/>'
+                   f'<path d="M80 90L90 80M88 98L98 88" stroke="{INK}" stroke-width="7"/><path d="M80 90L90 80M88 98L98 88" stroke="{SILVER}" stroke-width="3.4"/>'),
+    "sardina": SKY + (f'<path d="M18 70Q40 52 76 62L96 50L92 70L96 90L76 78Q40 88 18 70Z" fill="{SILVER}" stroke="{INK}" stroke-width="2.2"/>'
+                      f'<path d="M26 66Q50 60 76 66" fill="none" stroke="#3A5A7A" stroke-width="3"/><circle cx="30" cy="66" r="2.6" fill="{INK}"/>'
+                      f'<path d="M10 96L108 44" stroke="{WOOD}" stroke-width="3"/>'
+                      + "".join(f'<path d="M{x} 106Q{x + 4} 98 {x} 92Q{x + 8} 98 {x + 6} 106Z" fill="{CLAY}" stroke="{INK}" stroke-width="1"/>' for x in (40, 56, 72))),
+    "insignia": BG + (f'<path d="M30 100V58H90V100Z" fill="#E6D2A8" stroke="{INK}" stroke-width="2.2"/>'
+                      + "".join(f'<path d="M{x} 58V50H{x + 8}V58" fill="#E6D2A8" stroke="{INK}" stroke-width="1.6"/>' for x in (32, 48, 64, 80))
+                      + f'<path d="M48 58V26H72V58Z" fill="#F3E4C2" stroke="{INK}" stroke-width="2"/>'
+                      + "".join(f'<path d="M{x} 26V20H{x + 6}V26" fill="#F3E4C2" stroke="{INK}" stroke-width="1.4"/>' for x in (49, 57, 65))
+                      + f'<path d="M52 100V82Q60 72 68 82V100Z" fill="#5E4232" stroke="{INK}" stroke-width="1.6"/>' + sparkle(98, 34, 5, GOLD)),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
@@ -163,6 +189,8 @@ ORDER = {
                               ("galeon", "El galeón de Indias"), ("azulejo", "El azulejo de la Caridad"), ("insignia", "¿Existió Don Juan?")]),
     "granada_plomos": (gra, [("pergamino", "El pergamino de la Torre Turpiana"), ("sello", "El sello de la Chancillería"), ("letras", "Las letras salomónicas"),
                              ("alminar", "El alminar de San Juan"), ("lamina", "La lámina de plomo"), ("insignia", "¿Quién escribió los libros de plomo?")]),
+    "jaen_catalina": (jae, [("dama", "La dama íbera"), ("corona", "La corona de Fernando III"), ("alfiyya", "La «Alfiyya» de Ibn Malik"),
+                            ("llave", "La llave de la ciudad"), ("sardina", "La sardina de Santa Catalina"), ("insignia", "¿Quién ganó el castillo de Santa Catalina?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

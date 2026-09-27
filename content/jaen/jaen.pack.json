@@ -1,6 +1,6 @@
 {
   "id": "jaen",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Jaén",
     "en": "Jaén"
@@ -352,6 +352,94 @@
         {
           "title": "Wikipedia: Leyendas de Jaén",
           "url": "https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "alhamar",
+      "name": {
+        "es": "Alhamar",
+        "en": "Alhamar"
+      },
+      "description": {
+        "es": "Muhammad I, nacido en Arjona, fundador del reino nazarí de Granada. Barba rojiza, astuto y muy realista.",
+        "en": "Muhammad I, born in Arjona, founder of the Nasrid kingdom of Granada. Reddish beard, shrewd and very realistic."
+      },
+      "avatar": "sprites/alhamar/alhamar_neutral.svg",
+      "era": "s. XIII",
+      "kind": "real",
+      "lived": "1195-1273",
+      "bio": {
+        "es": "Muhammad ibn Yusuf ibn Nasr, llamado Alhamar («el Rojo»), nació en Arjona (Jaén) hacia 1195. Se proclamó sultán en su ciudad en 1232 y en 1238 entró en Granada, donde fundó la dinastía nazarí. En 1246, tras ocho meses de asedio castellano, entregó Jaén a Fernando III y se declaró su vasallo con el Pacto de Jaén, que aseguró la paz para su reino. Empezó las obras de la Alhambra y murió en Granada en 1273.",
+        "en": "Muhammad ibn Yusuf ibn Nasr, called Alhamar (“the Red”), was born in Arjona (Jaén) around 1195. He proclaimed himself sultan in his town in 1232 and in 1238 entered Granada, where he founded the Nasrid dynasty. In 1246, after an eight-month Castilian siege, he handed Jaén to Fernando III and became his vassal under the Pact of Jaén, which secured peace for his kingdom. He began building the Alhambra and died in Granada in 1273."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Muhammad ibn Nasr",
+          "url": "https://es.wikipedia.org/wiki/Muhammad_ibn_Nasr"
+        },
+        {
+          "title": "Wikipedia: Pacto de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Pacto_de_Ja%C3%A9n"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "fernandoiii",
+      "name": {
+        "es": "Fernando III",
+        "en": "Fernando III"
+      },
+      "description": {
+        "es": "Rey de Castilla y de León que ganó Jaén en 1246. Solemne, paciente y buen estratega.",
+        "en": "King of Castile and León who won Jaén in 1246. Solemn, patient and a good strategist."
+      },
+      "avatar": "sprites/fernandoiii/fernandoiii_neutral.svg",
+      "era": "s. XIII",
+      "kind": "real",
+      "lived": "1199/1201-1252",
+      "bio": {
+        "es": "Fernando III nació hacia 1199-1201 y fue rey de Castilla desde 1217 y de León desde 1230. Tomó Córdoba (1236), Jaén (1246) y Sevilla (1248). Tras dos intentos fallidos contra Jaén, en 1245-1246 la cercó durante ocho meses hasta que Alhamar se la entregó por un pacto. Fundó en Jaén el monasterio de Santa Clara. Murió en Sevilla en 1252.",
+        "en": "Fernando III was born around 1199-1201 and was King of Castile from 1217 and of León from 1230. He took Córdoba (1236), Jaén (1246) and Seville (1248). After two failed attempts on Jaén, in 1245-1246 he besieged it for eight months until Alhamar handed it over under a pact. He founded the Santa Clara convent in Jaén. He died in Seville in 1252."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Fernando III de Castilla",
+          "url": "https://es.wikipedia.org/wiki/Fernando_III_de_Castilla"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "ibnmalik",
+      "name": {
+        "es": "Ibn Malik",
+        "en": "Ibn Malik"
+      },
+      "description": {
+        "es": "Gramático nacido en Jaén, autor de la «Alfiyya», un poema de mil versos para aprender gramática árabe. Sabio, paciente y un poco nostálgico.",
+        "en": "Grammarian born in Jaén, author of the “Alfiyya”, a thousand-line poem for learning Arabic grammar. Learned, patient and a little homesick."
+      },
+      "avatar": "sprites/ibnmalik/ibnmalik_neutral.svg",
+      "era": "s. XIII",
+      "kind": "real",
+      "lived": "1203-1274",
+      "bio": {
+        "es": "Muhammad ibn Abd Allah ibn Malik al-Tai al-Yayyani nació en Jaén en 1203. Tras el asedio castellano de 1230 emigró a Oriente: vivió en Alepo, Hama, El Cairo y Damasco, donde dirigió la madrasa al-Adiliyya y murió en 1274. Su «Alfiyya», mil versos que resumen la gramática árabe, sigue siendo uno de los textos más estudiados del mundo árabe.",
+        "en": "Muhammad ibn Abd Allah ibn Malik al-Tai al-Jayyani was born in Jaén in 1203. After the Castilian siege of 1230 he migrated east: he lived in Aleppo, Hama, Cairo and Damascus, where he headed the al-Adiliyya madrasa and died in 1274. His “Alfiyya”, a thousand verses summing up Arabic grammar, remains one of the most studied texts in the Arab world."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia (en): Ibn Malik",
+          "url": "https://en.wikipedia.org/wiki/Ibn_Malik"
         }
       ],
       "voice": {
@@ -4779,6 +4867,944 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "castillo-santa-catalina",
+      "title": {
+        "es": "¿Quién ganó el castillo de Santa Catalina?",
+        "en": "Who Won Santa Catalina Castle?"
+      },
+      "summary": {
+        "es": "En lo alto de Jaén, el castillo de Santa Catalina cambió de manos en 1246. ¿Lo ganó una batalla, el hambre o un pacto? Con Alhamar, el rey Fernando III y el gramático Ibn Malik, del paseo de la Estación hasta el cerro.",
+        "en": "High above Jaén, Santa Catalina castle changed hands in 1246. Was it won by battle, hunger or a pact? With Alhamar, King Fernando III and the grammarian Ibn Malik, from the paseo de la Estación up to the hill."
+      },
+      "era": "1225-1246",
+      "guideCharacterId": "alhamar",
+      "durationMin": 110,
+      "distanceKm": 4.2,
+      "difficulty": "hard",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Al-Ándalus",
+            "en": "Al-Andalus"
+          },
+          "trail": {
+            "es": "camino de Al-Ándalus",
+            "en": "Al-Andalus trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Castilla",
+            "en": "Castile"
+          },
+          "trail": {
+            "es": "camino de Castilla",
+            "en": "Castile trail"
+          }
+        }
+      },
+      "startNodeId": "k1_museo",
+      "nodes": [
+        {
+          "id": "k1_museo",
+          "title": {
+            "es": "Museo de Jaén",
+            "en": "Jaén Museum"
+          },
+          "location": {
+            "lat": 37.77415,
+            "lng": -3.78932
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_museo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_museo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "alhamar",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "proud",
+              "text": {
+                "es": "La paz sea contigo. Muhammad ibn Nasr; los cristianos me llamaban Alhamar, «el Rojo», por mi barba. Nací en Arjona, aquí al lado, y fundé el reino nazarí de Granada.",
+                "en": "Peace be upon you. Muhammad ibn Nasr; the Christians called me Alhamar, “the Red”, for my beard. I was born in Arjona, close by, and I founded the Nasrid kingdom of Granada."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "thinking",
+              "text": {
+                "es": "Ese cerro de ahí arriba, el de Santa Catalina, ha cambiado muchas veces de dueño. En 1246 dejó de ser mío. ¿Quién ganó el castillo? Averígualo.",
+                "en": "That hill up there, Santa Catalina, has changed hands many times. In 1246 it stopped being mine. Who won the castle? Find out."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el cerro de Santa Catalina hubo ya un poblado fortificado de los íberos. El Museo de Jaén y el Museo Íbero, aquí en el paseo de la Estación, guardan esculturas íberas famosas en todo el mundo.",
+                "en": "The Iberians already had a fortified settlement on Santa Catalina hill. The Jaén Museum and the Iberian Museum, here on the paseo de la Estación, hold world-famous Iberian sculptures."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué llamaban «Alhamar» a Muhammad ibn Nasr?",
+              "en": "Why was Muhammad ibn Nasr called “Alhamar”?"
+            },
+            "options": [
+              {
+                "es": "Por un río",
+                "en": "After a river"
+              },
+              {
+                "es": "Por su barba rojiza",
+                "en": "For his reddish beard"
+              },
+              {
+                "es": "Por su castillo",
+                "en": "For his castle"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "«Al-Ahmar» quiere decir «el Rojo», por el color de su barba.",
+              "en": "“Al-Ahmar” means “the Red”, for the colour of his beard."
+            }
+          },
+          "clue": {
+            "id": "cat_pista_iberos",
+            "text": {
+              "es": "El cerro · El cerro ya estaba fortificado en tiempos de los íberos: ha tenido muchos dueños.",
+              "en": "The hill · The hill was already fortified in Iberian times: it has had many owners."
+            }
+          },
+          "nextNodeId": "k2_santaclara",
+          "nextHint": {
+            "es": "Baja hacia el casco antiguo, al monasterio de Santa Clara. Unos 7 minutos.",
+            "en": "Head down into the old town, to the Santa Clara convent. About 7 minutes."
+          }
+        },
+        {
+          "id": "k2_santaclara",
+          "title": {
+            "es": "Monasterio de Santa Clara",
+            "en": "Santa Clara convent"
+          },
+          "location": {
+            "lat": 37.77013,
+            "lng": -3.79166
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_santaclara.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_santaclara.svg"
+              ],
+              "characters": [
+                {
+                  "id": "fernandoiii",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "alhamar",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fernandoiii",
+              "expression": "proud",
+              "text": {
+                "es": "Fernando, rey de Castilla y de León. Este monasterio lo fundé yo después de entrar en Jaén; es el más antiguo de la ciudad.",
+                "en": "Fernando, King of Castile and León. I founded this convent after entering Jaén; it is the oldest in the city."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Fernando III intentó tomar Jaén en 1225 y en 1230, sin conseguirlo. La ciudad, con su castillo en lo alto, parecía imposible de asaltar.",
+                "en": "Fernando III tried to take Jaén in 1225 and in 1230, without success. The city, with its castle up high, seemed impossible to storm."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "thinking",
+              "text": {
+                "es": "Dos veces vino y dos veces se fue. La tercera fue distinta.",
+                "en": "Twice he came and twice he left. The third time was different."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuántas veces intentó Fernando III tomar Jaén antes de 1245?",
+              "en": "How many times did Fernando III try to take Jaén before 1245?"
+            },
+            "options": [
+              {
+                "es": "Dos",
+                "en": "Twice"
+              },
+              {
+                "es": "Ninguna",
+                "en": "Never"
+              },
+              {
+                "es": "Diez",
+                "en": "Ten times"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Dos: en 1225 y en 1230. Las dos fracasó.",
+              "en": "Twice: in 1225 and in 1230. Both times he failed."
+            }
+          },
+          "clue": {
+            "id": "cat_pista_intentos",
+            "text": {
+              "es": "Castilla · Fernando III fracasó en 1225 y en 1230: el castillo no se tomaba al asalto.",
+              "en": "Castile · Fernando III failed in 1225 and 1230: the castle couldn't be taken by storm."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "alhamar",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Miramos la ciudad desde Al-Ándalus o desde Castilla?",
+              "en": "Shall we look at the city from Al-Andalus or from Castile?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Al-Ándalus",
+                "en": "Al-Andalus"
+              },
+              "hint": {
+                "es": "San Andrés y la Judería",
+                "en": "San Andrés and the Jewish quarter"
+              },
+              "targetNodeId": "ka_sanandres",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 260,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "Castilla",
+                "en": "Castile"
+              },
+              "hint": {
+                "es": "La catedral",
+                "en": "The cathedral"
+              },
+              "targetNodeId": "kb_catedral",
+              "setFlags": [
+                "camino_poder"
+              ],
+              "distanceM": 600,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "ka_sanandres",
+          "title": {
+            "es": "San Andrés",
+            "en": "San Andrés"
+          },
+          "location": {
+            "lat": 37.77126,
+            "lng": -3.79298
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_jaen_sanandres.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanandres.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ibnmalik",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "alhamar",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ibnmalik",
+              "expression": "happy",
+              "text": {
+                "es": "Ibn Malik, gramático, nacido en Yayyán, que así se llamaba Jaén en árabe, en 1203. Mi poema para aprender gramática, la «Alfiyya», se estudia todavía de Marruecos a Indonesia.",
+                "en": "Ibn Malik, grammarian, born in Yayyan, as Jaén was called in Arabic, in 1203. My poem for learning grammar, the “Alfiyya”, is still studied from Morocco to Indonesia."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ibnmalik",
+              "expression": "thinking",
+              "text": {
+                "es": "Después del asedio de 1230 me fui a Oriente: Alepo, El Cairo, Damasco. Allí morí en 1274. Muchos sabios se fueron cuando la guerra llegó a las murallas.",
+                "en": "After the siege of 1230 I left for the East: Aleppo, Cairo, Damascus. I died there in 1274. Many scholars left when war reached the walls."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En este barrio de San Andrés estuvo la judería de Jaén. La Santa Capilla de San Andrés, del siglo XVI, tiene una reja dorada que se cuenta entre las mejores de España.",
+                "en": "The Jewish quarter of Jaén was in this San Andrés neighbourhood. The 16th-century Holy Chapel of San Andrés has a gilded screen counted among the finest in Spain."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo se llamaba Jaén en árabe?",
+              "en": "What was Jaén called in Arabic?"
+            },
+            "options": [
+              {
+                "es": "Ishbiliya",
+                "en": "Ishbiliya"
+              },
+              {
+                "es": "Qurtuba",
+                "en": "Qurtuba"
+              },
+              {
+                "es": "Yayyán",
+                "en": "Yayyan"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Yayyán. Ishbiliya era Sevilla y Qurtuba, Córdoba.",
+              "en": "Yayyan. Ishbiliya was Seville and Qurtuba was Córdoba."
+            }
+          },
+          "clue": {
+            "id": "cat_pista_yayyan",
+            "text": {
+              "es": "Al-Ándalus · Muchos andalusíes se fueron de Jaén con los asedios, como el gramático Ibn Malik.",
+              "en": "Al-Andalus · Many Andalusis left Jaén during the sieges, like the grammarian Ibn Malik."
+            }
+          },
+          "nextNodeId": "k4_sanlorenzo",
+          "nextHint": {
+            "es": "Sube hacia el arco de San Lorenzo. Unos 8 minutos.",
+            "en": "Walk up to the San Lorenzo arch. About 8 minutes."
+          }
+        },
+        {
+          "id": "kb_catedral",
+          "title": {
+            "es": "Catedral",
+            "en": "Cathedral"
+          },
+          "location": {
+            "lat": 37.7654,
+            "lng": -3.7897
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_jaen_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "fernandoiii",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "alhamar",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La catedral se levanta donde estuvo la mezquita mayor de Yayyán. Tras la entrada de Fernando III se consagró como iglesia; la catedral de hoy es obra de Andrés de Vandelvira, del siglo XVI.",
+                "en": "The cathedral stands where the great mosque of Yayyan once was. After Fernando III entered, it was consecrated as a church; today's cathedral is by Andrés de Vandelvira, from the 16th century."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fernandoiii",
+              "expression": "proud",
+              "text": {
+                "es": "Tras ganar Jaén, la hice capital de la frontera. Por eso a esta tierra la llamaron el Santo Reino.",
+                "en": "After winning Jaén, I made it the capital of the frontier. That's why this land was called the Holy Kingdom."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué había donde hoy está la catedral de Jaén?",
+              "en": "What stood where Jaén cathedral is today?"
+            },
+            "options": [
+              {
+                "es": "Un mercado",
+                "en": "A market"
+              },
+              {
+                "es": "La mezquita mayor",
+                "en": "The great mosque"
+              },
+              {
+                "es": "Un teatro romano",
+                "en": "A Roman theatre"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "La mezquita mayor de Yayyán, que se consagró como iglesia en 1246.",
+              "en": "The great mosque of Yayyan, consecrated as a church in 1246."
+            }
+          },
+          "clue": {
+            "id": "cat_pista_frontera",
+            "text": {
+              "es": "Castilla · Jaén se convirtió en la capital de la frontera castellana frente a Granada.",
+              "en": "Castile · Jaén became the capital of the Castilian frontier facing Granada."
+            }
+          },
+          "nextNodeId": "k4_sanlorenzo",
+          "nextHint": {
+            "es": "Sube al arco de San Lorenzo. Unos 4 minutos.",
+            "en": "Walk up to the San Lorenzo arch. About 4 minutes."
+          }
+        },
+        {
+          "id": "k4_sanlorenzo",
+          "title": {
+            "es": "Arco de San Lorenzo",
+            "en": "San Lorenzo arch"
+          },
+          "location": {
+            "lat": 37.76654,
+            "lng": -3.79235
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_sanlorenzo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_sanlorenzo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "alhamar",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "fernandoiii",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En agosto de 1245 Fernando III volvió a cercar Jaén. Esta vez no asaltó: rodeó la ciudad, taló los campos y esperó.",
+                "en": "In August 1245 Fernando III besieged Jaén again. This time he didn't storm it: he surrounded the city, cut down the fields and waited."
+              },
+              "year": 1245
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes de Al-Ándalus: la guerra vaciaba la ciudad de sabios. ¿Seguimos la pista del hambre o la del pacto?",
+                    "en": "You've come from Al-Andalus: war was emptying the city of scholars. Shall we follow hunger or the pact?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder"
+                  ],
+                  "text": {
+                    "es": "Vienes de Castilla: Jaén iba a ser la frontera. ¿Seguimos la pista del hambre o la del pacto?",
+                    "en": "You've come from Castile: Jaén was to be the frontier. Shall we follow hunger or the pact?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hizo Fernando III en el asedio de 1245?",
+              "en": "What did Fernando III do in the siege of 1245?"
+            },
+            "options": [
+              {
+                "es": "Rodear la ciudad y esperar",
+                "en": "Surround the city and wait"
+              },
+              {
+                "es": "Asaltar las murallas el primer día",
+                "en": "Storm the walls on the first day"
+              },
+              {
+                "es": "Irse a Sevilla",
+                "en": "Leave for Seville"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Rodeó la ciudad, taló los campos y esperó a que se acabaran las provisiones.",
+              "en": "He surrounded the city, cut down the fields and waited for supplies to run out."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "alhamar",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El hambre o el pacto?",
+              "en": "Hunger or the pact?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del hambre",
+                "en": "The hunger lead"
+              },
+              "hint": {
+                "es": "Con Ibn Malik",
+                "en": "With Ibn Malik"
+              },
+              "targetNodeId": "k4a_asedio",
+              "setFlags": [
+                "version_asedio"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del pacto",
+                "en": "The pact lead"
+              },
+              "hint": {
+                "es": "Con Alhamar",
+                "en": "With Alhamar"
+              },
+              "targetNodeId": "k4b_pacto",
+              "setFlags": [
+                "version_pacto"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "k4a_asedio",
+          "title": {
+            "es": "El hambre",
+            "en": "Hunger"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ibnmalik",
+              "expression": "thinking",
+              "text": {
+                "es": "Me contaron las cartas que llegaban a Oriente: ocho meses de cerco. Sin cosecha, sin ayuda de fuera. Al final, en la ciudad no quedaba qué comer.",
+                "en": "The letters that reached the East told me: eight months of siege. No harvest, no help from outside. In the end there was nothing left to eat in the city."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "dramatic",
+              "text": {
+                "es": "Yo no podía salvar Jaén. Podía salvar Granada.",
+                "en": "I couldn't save Jaén. I could save Granada."
+              }
+            }
+          ],
+          "clue": {
+            "id": "cat_pista_hambre",
+            "text": {
+              "es": "Al-Ándalus · Tras ocho meses de cerco, Jaén no podía resistir más.",
+              "en": "Al-Andalus · After eight months of siege, Jaén could hold out no longer."
+            }
+          },
+          "nextNodeId": "k5_castillo",
+          "nextHint": {
+            "es": "Sube por el sendero hasta el castillo de Santa Catalina: 2 km cuesta arriba, unos 35 minutos (también se puede subir en taxi).",
+            "en": "Climb the path to Santa Catalina castle: 2 km uphill, about 35 minutes (you can also take a taxi)."
+          }
+        },
+        {
+          "id": "k4b_pacto",
+          "title": {
+            "es": "El pacto",
+            "en": "The pact"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "neutral",
+              "text": {
+                "es": "Fui al campamento de Fernando y me declaré su vasallo. Le entregué Jaén y le prometí ciento cincuenta mil maravedíes al año.",
+                "en": "I went to Fernando's camp and declared myself his vassal. I handed him Jaén and promised him a hundred and fifty thousand maravedís a year."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fernandoiii",
+              "expression": "neutral",
+              "text": {
+                "es": "A cambio, le dejé en paz su reino de Granada. Ese pacto le dio a Granada tiempo para durar dos siglos y medio más.",
+                "en": "In return, I left his kingdom of Granada in peace. That pact gave Granada the time to last another two and a half centuries."
+              }
+            }
+          ],
+          "clue": {
+            "id": "cat_pista_pacto",
+            "text": {
+              "es": "Castilla · Alhamar entregó Jaén por un pacto: vasallaje y 150 000 maravedíes al año a cambio de paz.",
+              "en": "Castile · Alhamar handed over Jaén in a pact: vassalage and 150,000 maravedís a year in exchange for peace."
+            }
+          },
+          "nextNodeId": "k5_castillo",
+          "nextHint": {
+            "es": "Sube por el sendero hasta el castillo de Santa Catalina: 2 km cuesta arriba, unos 35 minutos (también se puede subir en taxi).",
+            "en": "Climb the path to Santa Catalina castle: 2 km uphill, about 35 minutes (you can also take a taxi)."
+          }
+        },
+        {
+          "id": "k5_castillo",
+          "title": {
+            "es": "Castillo de Santa Catalina",
+            "en": "Santa Catalina castle"
+          },
+          "location": {
+            "lat": 37.76748,
+            "lng": -3.79929
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_jaen_castillo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_jaen_castillo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "alhamar",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "fernandoiii",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El castillo de Santa Catalina, o Alcázar Nuevo, lo levantaron los castellanos después de 1246 junto a la vieja alcazaba. En 1965 se construyó a su lado un Parador.",
+                "en": "Santa Catalina castle, or the New Alcázar, was built by the Castilians after 1246 beside the old citadel. In 1965 a Parador was built next to it."
+              },
+              "year": 1965
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Cada 25 de noviembre, día de Santa Catalina, muchos jienenses suben a pie hasta el castillo y asan sardinas en el cerro.",
+                "en": "Every 25 November, Saint Catherine's day, many people from Jaén walk up to the castle and grill sardines on the hill."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "fernandoiii",
+              "expression": "proud",
+              "text": {
+                "es": "Hora del veredicto. ¿Quién ganó el castillo de Santa Catalina?",
+                "en": "Verdict time. Who won Santa Catalina castle?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién ganó el castillo de Santa Catalina?",
+              "en": "Who won Santa Catalina castle?"
+            },
+            "options": [
+              {
+                "es": "Fernando III, al asalto",
+                "en": "Fernando III, by storming it"
+              },
+              {
+                "es": "Los íberos",
+                "en": "The Iberians"
+              },
+              {
+                "es": "Nadie luchando: Alhamar lo entregó por un pacto, tras ocho meses de cerco",
+                "en": "Nobody by fighting: Alhamar handed it over in a pact, after an eight-month siege"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1246, tras ocho meses de asedio, Alhamar entregó Jaén a Fernando III con el Pacto de Jaén: se hizo su vasallo a cambio de paz para Granada. Nadie tomó el castillo al asalto.",
+              "en": "In 1246, after an eight-month siege, Alhamar handed Jaén to Fernando III under the Pact of Jaén: he became his vassal in exchange for peace for Granada. Nobody took the castle by storm."
+            }
+          },
+          "nextNodeId": "k6_final"
+        },
+        {
+          "id": "k6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_asedio"
+                  ],
+                  "text": {
+                    "es": "Al-Ándalus y el hambre: cuentas lo que pasó dentro de las murallas. Eres cronista de Yayyán.",
+                    "en": "Al-Andalus and hunger: you tell what happened inside the walls. You're a chronicler of Yayyan."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_pacto"
+                  ],
+                  "text": {
+                    "es": "Al-Ándalus y el pacto: salvar lo que se puede. Eres embajador nazarí.",
+                    "en": "Al-Andalus and the pact: saving what can be saved. You're a Nasrid ambassador."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_asedio"
+                  ],
+                  "text": {
+                    "es": "Castilla y el hambre: paciencia de piedra. Eres alcaide del castillo.",
+                    "en": "Castile and hunger: the patience of stone. You're the castle's governor."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_pacto"
+                  ],
+                  "text": {
+                    "es": "Castilla y el pacto: la paz también se firma. Eres notario del Pacto de Jaén.",
+                    "en": "Castile and the pact: peace is signed too. You're the notary of the Pact of Jaén."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ibnmalik",
+              "expression": "happy",
+              "text": {
+                "es": "Mira abajo: olivos hasta donde alcanza la vista. Esos no los ganó nadie; los plantaron todos.",
+                "en": "Look down: olive trees as far as the eye can see. Nobody won those; everyone planted them."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "cronista_yayyan",
+          "requires": [
+            "camino_dinero",
+            "version_asedio"
+          ],
+          "title": {
+            "es": "Cronista de Yayyán",
+            "en": "Chronicler of Yayyan"
+          }
+        },
+        {
+          "id": "embajador_nazari",
+          "requires": [
+            "camino_dinero",
+            "version_pacto"
+          ],
+          "title": {
+            "es": "Embajador nazarí",
+            "en": "Nasrid ambassador"
+          }
+        },
+        {
+          "id": "alcaide_castillo",
+          "requires": [
+            "camino_poder",
+            "version_asedio"
+          ],
+          "title": {
+            "es": "Alcaide del castillo",
+            "en": "Castle governor"
+          }
+        },
+        {
+          "id": "notario_pacto",
+          "requires": [
+            "camino_poder",
+            "version_pacto"
+          ],
+          "title": {
+            "es": "Notario del Pacto de Jaén",
+            "en": "Notary of the Pact of Jaén"
+          }
+        }
+      ],
+      "paths": {
+        "k1_museo->k2_santaclara": [[-3.78909,37.77417],[-3.78897,37.7731],[-3.78891,37.77301],[-3.789,37.77285],[-3.78972,37.7729],[-3.79008,37.7728],[-3.79061,37.77254],[-3.79042,37.77231],[-3.79176,37.77162],[-3.79181,37.77167],[-3.79187,37.77163],[-3.79176,37.77152],[-3.7918,37.77124],[-3.79166,37.77107],[-3.79176,37.77104],[-3.79171,37.77033],[-3.79176,37.77012],[-3.79166,37.77013]],
+        "k2_santaclara->ka_sanandres": [[-3.79166,37.77013],[-3.79176,37.77012],[-3.79171,37.77033],[-3.79176,37.77104],[-3.79205,37.77129],[-3.792,37.77139],[-3.79234,37.7715],[-3.79267,37.77152],[-3.79298,37.77126]],
+        "k2_santaclara->kb_catedral": [[-3.79166,37.77013],[-3.79096,37.77023],[-3.79075,37.76959],[-3.79089,37.76954],[-3.79068,37.76937],[-3.79084,37.76898],[-3.79078,37.76745],[-3.79069,37.76746],[-3.79062,37.76689],[-3.79011,37.76606],[-3.79016,37.76602],[-3.78958,37.76572],[-3.78962,37.76563],[-3.78979,37.76557]],
+        "ka_sanandres->k4_sanlorenzo": [[-3.79298,37.77126],[-3.79337,37.77096],[-3.79373,37.77045],[-3.7934,37.77007],[-3.79313,37.76932],[-3.79334,37.76924],[-3.7934,37.76905],[-3.79261,37.76758],[-3.79238,37.76655]],
+        "kb_catedral->k4_sanlorenzo": [[-3.78979,37.76557],[-3.78997,37.76551],[-3.79014,37.76575],[-3.79067,37.76618],[-3.79125,37.76598],[-3.79129,37.76605],[-3.79149,37.76598],[-3.7917,37.76632],[-3.79177,37.7663],[-3.79207,37.76651],[-3.79238,37.76659],[-3.79238,37.76655]],
+        "k4_sanlorenzo->k5_castillo": [[-3.79238,37.76655],[-3.79242,37.76676],[-3.79287,37.76678],[-3.79328,37.7671],[-3.79471,37.7685],[-3.79496,37.76841],[-3.79501,37.76847],[-3.79508,37.76845],[-3.79535,37.76882],[-3.79653,37.76882],[-3.79692,37.76911],[-3.79733,37.76925],[-3.7978,37.76957],[-3.79812,37.77],[-3.79841,37.77015],[-3.79889,37.77054],[-3.79922,37.77073],[-3.79986,37.77084],[-3.80021,37.77096],[-3.79963,37.77022],[-3.79965,37.77015],[-3.79978,37.7699],[-3.80069,37.76898],[-3.80078,37.76872],[-3.80068,37.76861],[-3.80125,37.76864],[-3.80133,37.76858],[-3.8009,37.76835],[-3.80017,37.76822],[-3.79984,37.76822],[-3.79977,37.76817],[-3.7998,37.76811],[-3.80109,37.76814],[-3.80226,37.7683],[-3.80243,37.76824],[-3.80226,37.76814],[-3.80059,37.76773],[-3.79996,37.7677],[-3.79983,37.76785],[-3.79972,37.76782],[-3.79975,37.76774],[-3.79964,37.76767],[-3.79927,37.7675]]
+      },
+      "rewards": [
+        {
+          "id": "catalina_dama",
+          "name": {
+            "es": "La dama íbera",
+            "en": "The Iberian lady"
+          },
+          "icon": "collectibles/jaen_catalina_dama.svg",
+          "awardedAtNodeId": "k1_museo"
+        },
+        {
+          "id": "catalina_corona",
+          "name": {
+            "es": "La corona de Fernando III",
+            "en": "Fernando III's crown"
+          },
+          "icon": "collectibles/jaen_catalina_corona.svg",
+          "awardedAtNodeId": "k2_santaclara"
+        },
+        {
+          "id": "catalina_alfiyya",
+          "name": {
+            "es": "La «Alfiyya» de Ibn Malik",
+            "en": "Ibn Malik's “Alfiyya”"
+          },
+          "icon": "collectibles/jaen_catalina_alfiyya.svg",
+          "awardedAtNodeId": "ka_sanandres"
+        },
+        {
+          "id": "catalina_llave",
+          "name": {
+            "es": "La llave de la ciudad",
+            "en": "The city key"
+          },
+          "icon": "collectibles/jaen_catalina_llave.svg",
+          "awardedAtNodeId": "kb_catedral"
+        },
+        {
+          "id": "catalina_sardina",
+          "name": {
+            "es": "La sardina de Santa Catalina",
+            "en": "The Santa Catalina sardine"
+          },
+          "icon": "collectibles/jaen_catalina_sardina.svg",
+          "awardedAtNodeId": "k5_castillo"
+        },
+        {
+          "id": "insignia_catalina",
+          "name": {
+            "es": "¿Quién ganó el castillo de Santa Catalina?",
+            "en": "Who Won Santa Catalina Castle?"
+          },
+          "icon": "collectibles/jaen_catalina_insignia.svg",
+          "awardedAtNodeId": "k6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Pacto de Jaén",
+          "url": "https://es.wikipedia.org/wiki/Pacto_de_Ja%C3%A9n"
+        },
+        {
+          "title": "Wikipedia: Castillo de Santa Catalina (Jaén)",
+          "url": "https://es.wikipedia.org/wiki/Castillo_de_Santa_Catalina_(Ja%C3%A9n)"
+        },
+        {
+          "title": "Wikipedia: Muhammad ibn Nasr",
+          "url": "https://es.wikipedia.org/wiki/Muhammad_ibn_Nasr"
+        },
+        {
+          "title": "Wikipedia: Real Monasterio de Santa Clara (Jaén)",
+          "url": "https://es.wikipedia.org/wiki/Real_Monasterio_de_Santa_Clara_(Ja%C3%A9n)"
+        }
+      ]
     }
   ]
 }

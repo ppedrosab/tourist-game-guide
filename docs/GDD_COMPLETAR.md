@@ -89,3 +89,20 @@ personajes en `andalucia_sprites.py`.
 - El horario de visita de la abadía, y si conviene subir en autobús (línea C2).
 
 **Fuentes:** [Libros plúmbeos](https://es.wikipedia.org/wiki/Libros_pl%C3%BAmbeos), [Torre Turpiana](https://es.wikipedia.org/wiki/Torre_Turpiana), [Abadía del Sacromonte](https://es.wikipedia.org/wiki/Abad%C3%ADa_del_Sacromonte), [Alonso del Castillo](https://es.wikipedia.org/wiki/Alonso_del_Castillo_(morisco)), [Miguel de Luna](https://es.wikipedia.org/wiki/Miguel_de_Luna), [Pedro de Castro](https://es.wikipedia.org/wiki/Pedro_de_Castro_y_Qui%C3%B1ones).
+
+## Jaén · «¿Quién ganó el castillo de Santa Catalina?» (`castillo-santa-catalina`)
+
+- **Personajes:** `alhamar` (guía, Muhammad I de Granada, nacido en Arjona, 1195-1273), `fernandoiii` (1199/1201-1252) e `ibnmalik` (gramático nacido en Jaén, 1203-1274).
+- **Sospechosos:** un asalto de Fernando III, el hambre del asedio o un pacto.
+- **Veredicto:** nadie lo tomó al asalto. En 1246, tras ocho meses de cerco, Alhamar entregó Jaén con el Pacto de Jaén: vasallaje y 150 000 maravedíes al año a cambio de paz para Granada.
+- **Caminos:** Al-Ándalus (San Andrés, la antigua judería; Ibn Malik) / Castilla (catedral, sobre la mezquita mayor).
+- **Paradas:** Museo de Jaén → monasterio de Santa Clara → San Andrés o catedral → arco de San Lorenzo → castillo de Santa Catalina (2 km de subida; dificultad alta, con opción de taxi).
+
+**Datos a verificar**
+- Los intentos de 1225 y 1230 contra Jaén.
+- Que el monasterio de Santa Clara lo fundara Fernando III.
+- La fecha del Alcázar Nuevo.
+- La costumbre del 25 de noviembre (subir al castillo y asar sardinas).
+- El sendero a pie desde San Lorenzo y si conviene cortarlo en la Cruz.
+
+**Fuentes:** [Pacto de Jaén](https://es.wikipedia.org/wiki/Pacto_de_Ja%C3%A9n), [Castillo de Santa Catalina](https://es.wikipedia.org/wiki/Castillo_de_Santa_Catalina_(Ja%C3%A9n)), [Muhammad ibn Nasr](https://es.wikipedia.org/wiki/Muhammad_ibn_Nasr), [Ibn Malik](https://en.wikipedia.org/wiki/Ibn_Malik), [Real Monasterio de Santa Clara](https://es.wikipedia.org/wiki/Real_Monasterio_de_Santa_Clara_(Ja%C3%A9n)).

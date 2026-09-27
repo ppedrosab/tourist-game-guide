@@ -458,6 +458,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Andrés de Vandelvira | persona real | 1509-1575 | [Wikipedia: Andrés de Vandelvira](https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Vandelvira) |
 | Bernardo López García | persona real | 1838-1870 | [Wikipedia: Bernardo López García](https://es.wikipedia.org/wiki/Bernardo_L%C3%B3pez_Garc%C3%ADa) |
 | El Lagarto de la Malena | figura de leyenda | leyenda | [Wikipedia: Lagarto de la Malena](https://es.wikipedia.org/wiki/Lagarto_de_la_Malena) · [Wikipedia: Leyendas de Jaén](https://es.wikipedia.org/wiki/Leyendas_de_Ja%C3%A9n) |
+| Alhamar | persona real | 1195-1273 | [Wikipedia: Muhammad ibn Nasr](https://es.wikipedia.org/wiki/Muhammad_ibn_Nasr) · [Wikipedia: Pacto de Jaén](https://es.wikipedia.org/wiki/Pacto_de_Ja%C3%A9n) |
+| Fernando III | persona real | 1199/1201-1252 | [Wikipedia: Fernando III de Castilla](https://es.wikipedia.org/wiki/Fernando_III_de_Castilla) |
+| Ibn Malik | persona real | 1203-1274 | [Wikipedia (en): Ibn Malik](https://en.wikipedia.org/wiki/Ibn_Malik) |
 
 ### «¿Quién mató al lagarto de la Malena?»: lo que afirma la ruta
 
@@ -500,6 +503,16 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Baños árabes**: Los baños árabes de Jaén, del siglo XI, están bajo el Palacio de Villardompardo. Son de los más grandes que se conservan en España.
 - [ ] **Arco de San Lorenzo**: El Arco de San Lorenzo es lo que queda de una iglesia medieval. En él se guarda una capilla con decoración mudéjar.
 - [ ] **Plaza de San Bartolomé**: La plaza toma su nombre de la iglesia de San Bartolomé, de origen medieval. La casa del fantasma se levantó aquí en el siglo XIX.
+
+### «¿Quién ganó el castillo de Santa Catalina?»: lo que afirma la ruta
+
+- [ ] **Museo de Jaén**: En el cerro de Santa Catalina hubo ya un poblado fortificado de los íberos. El Museo de Jaén y el Museo Íbero, aquí en el paseo de la Estación, guardan esculturas íberas famosas en todo el mundo.
+- [ ] **Monasterio de Santa Clara**: Fernando III intentó tomar Jaén en 1225 y en 1230, sin conseguirlo. La ciudad, con su castillo en lo alto, parecía imposible de asaltar.
+- [ ] **San Andrés**: En este barrio de San Andrés estuvo la judería de Jaén. La Santa Capilla de San Andrés, del siglo XVI, tiene una reja dorada que se cuenta entre las mejores de España.
+- [ ] **Catedral**: La catedral se levanta donde estuvo la mezquita mayor de Yayyán. Tras la entrada de Fernando III se consagró como iglesia; la catedral de hoy es obra de Andrés de Vandelvira, del siglo XVI.
+- [ ] **Arco de San Lorenzo** (1245): En agosto de 1245 Fernando III volvió a cercar Jaén. Esta vez no asaltó: rodeó la ciudad, taló los campos y esperó.
+- [ ] **Castillo de Santa Catalina** (1965): El castillo de Santa Catalina, o Alcázar Nuevo, lo levantaron los castellanos después de 1246 junto a la vieja alcazaba. En 1965 se construyó a su lado un Parador.
+- [ ] **Castillo de Santa Catalina**: Cada 25 de noviembre, día de Santa Catalina, muchos jienenses suben a pie hasta el castillo y asan sardinas en el cerro.
 
 ## Málaga
 

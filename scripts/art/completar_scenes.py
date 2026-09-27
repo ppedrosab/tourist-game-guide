@@ -6,6 +6,7 @@ Cádiz: arco del Pópulo, teatro romano, Casa del Almirante, Casa de las Cuatro 
 Córdoba: plaza de Tiberíades (Maimónides), muralla de la calle Cairuán (Averroes), Museo Arqueológico.
 Sevilla: palacio de Mañara, plaza de los Refinadores (Don Juan), la Maestranza, Hospital de la Caridad.
 Granada: Carrera del Darro, San Juan de los Reyes (alminar), cuevas y abadía del Sacromonte.
+Jaén: Museo de Jaén, monasterio de Santa Clara, San Andrés (Judería), castillo de Santa Catalina.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -16,6 +17,7 @@ from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, MINT
 from sevilla_scenes import ALMAGRA, BRICK, ALBERO, giralda, river
 from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, LIME, OCHRE, POTBLUE
 from granada_scenes import horseshoe, cypress, alhambra_hill, sierra, albaicin_houses, CAL, ROJA, TEJA
+from jaen_scenes import far_jaen, olive_hills, JSTONE, ochre_house
 from sevilla_scenes import orange_tree
 
 RED = "#D8412F"
@@ -409,13 +411,87 @@ def granada_abadia():
     return doc(p, "Abadía del Sacromonte", [sky(p, sun, [(90, 70, .8)], [(200, 60), (218, 52, .8)]), far, mid, near, fx(p, sun, 420)])
 
 
+def jaen_museo():
+    p = "jmu"; sun = (90, 110)
+    far = far_jaen(290, 300)
+    c, cd, cl = JSTONE
+    # edificio regionalista con la portada renacentista del antiguo Pósito
+    front = (f'<path d="M10 390V200H380V390Z" fill="#F1E6D0" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M4 200H386V186H4Z" fill="{cd}" stroke="{INK}" stroke-width="1.6"/>'
+             + "".join(f'<path d="M{x} 200V178H{x + 12}V200" fill="{c}" stroke="{INK}" stroke-width="1.2"/>' for x in range(20, 380, 40))
+             + f'<path d="M140 390V224H250V390Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
+             + "".join(f'<path d="M{x} 390V240" stroke="{cl}" stroke-width="9"/><path d="M{x - 4} 390V240M{x + 4} 390V240" stroke="{INK}" stroke-width=".9"/>' for x in (152, 238))
+             + f'<path d="M136 240H254V228H136Z" fill="{cd}" stroke="{INK}" stroke-width="1.2"/><path d="M160 228L195 206L230 228Z" fill="{cd}" stroke="{INK}" stroke-width="1.4"/>'
+             f'<path d="M170 390V306Q195 280 220 306V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+             + "".join(window(x, 230, 20, 36, shutters=False, balcony=True, sw=1.1) for x in (40, 90, 280, 330))
+             + "".join(window(x, 310, 20, 36, shutters=False, sw=1.1) for x in (40, 90, 280, 330)))
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + tree(30, 500, 34) + tree(360, 500, 32)
+            + person(110, 452, 1, "#9C2A22") + person(280, 456, .95, SEA, dress=True) + "</g>")
+    return doc(p, "Museo de Jaén", [sky(p, sun, [(300, 70, .8)], [(220, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
+def jaen_santaclara():
+    p = "jsc"; sun = (300, 110)
+    far = far_jaen(290, 110)
+    wall = (lime_wall(-20, 220, 250, 180)
+            + f'<path d="M110 220V150H170V220Z" fill="{LIME[0]}" stroke="{INK}" stroke-width="1.8"/><path d="M104 152L140 128L176 152Z" fill="{TEJA}" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<path d="M{x} 206V180Q{x + 8} 170 {x + 16} 180V206Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.2"/>' for x in (118, 144))
+            + f'<path d="M40 400V320Q64 300 88 320V400Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<path d="M{x} 260H{x + 14}V280H{x}Z" fill="#3A2E28" stroke="{INK}" stroke-width="1"/>' for x in (150, 190))
+            + ochre_house(230, 210, 170, 190, floors=2, cols=2))
+    mid = f'<g id="mid">{wall}{ground(398, "#D9C7A8")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D9C7A8", line="#C1AB85")}' + orange_tree(340, 490, 30)
+            + person(150, 452, 1, "#B03A2E") + person(200, 456, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Monasterio de Santa Clara", [sky(p, sun, [(80, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420, .25)])
+
+
+def jaen_sanandres():
+    p = "jsa"; sun = (200, 90)
+    far = far_jaen(280, 200)
+    left = lime_wall(-20, 170, 150, 230) + flowerpots(0, 120, 200, 2) + window(40, 300, 22, 40, shutters=False)
+    right = lime_wall(260, 160, 150, 240) + flowerpots(270, 390, 190, 2, seed=1)
+    c, cd, cl = JSTONE
+    # portada plateresca de la Santa Capilla al fondo de la calleja, sin imágenes
+    chapel = (f'<path d="M130 400V230H260V400Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
+              f'<path d="M126 230H264V220H126Z" fill="{cd}" stroke="{INK}" stroke-width="1.4"/>'
+              f'<path d="M176 400V330Q195 312 214 330V400Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+              + "".join(f'<path d="M{x} 400V300" stroke="{cl}" stroke-width="7"/><path d="M{x - 3} 400V300M{x + 3} 400V300" stroke="{INK}" stroke-width=".8"/>' for x in (164, 226))
+              + f'<path d="M160 300H230V292H160Z" fill="{cd}" stroke="{INK}" stroke-width="1.2"/><circle cx="195" cy="266" r="12" fill="{cl}" stroke="{INK}" stroke-width="1.4"/>')
+    mid = f'<g id="mid">{chapel}{left}{right}{ground(400, "#D8C6A6")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D5C29E", line="#C1AB85")}'
+            + person(170, 446, .9, "#2F6F73") + person(226, 450, .95, "#9C2A22") + "</g>")
+    return doc(p, "San Andrés", [sky(p, sun, [(300, 70, .8)], [(90, 60)]), far, mid, near, fx(p, sun, 420, .25)])
+
+
+def jaen_castillo():
+    p = "jca"; sun = (320, 120)
+    far = f'<g id="far">{sierra(220, snow=False)}{olive_hills(330)}</g>'
+    c, cd, cl = JSTONE
+    castle = (f'<path d="M-10 400V300Q120 280 260 300L400 310V400Z" fill="#A89880" stroke="{INK}" stroke-width="1.6"/>'
+              f'<path d="M20 330V200H300V330Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>' + battlements(20, 300, 200, c)
+              + "".join(f'<path d="M20 {y}H300" stroke="{cd}" stroke-width="1" opacity=".6"/>' for y in range(216, 330, 14))
+              + f'<path d="M120 330V120H200V330Z" fill="{cl}" stroke="{INK}" stroke-width="1.8"/>' + battlements(120, 200, 120, cl)
+              + f'<path d="M176 122H200V330H176Z" fill="{cd}" opacity=".55"/>'
+              + f'<path d="M150 180H170V210H150Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.2"/>'
+              + "".join(f'<path d="M{x} 330V160H{x + 40}V330Z" fill="{c}" stroke="{INK}" stroke-width="1.6"/>' + battlements(x, x + 40, 160, c) for x in (10, 270))
+              + horseshoe(226, 270, 40, 60, "#5E4232", 1.6))
+    mid = f'<g id="mid">{castle}</g>'
+    near = (f'<g id="near"><rect x="-10" y="400" width="{W + 20}" height="170" fill="#C9B89A"/>'
+            f'<path d="M-10 400L400 400L400 412L-10 412Z" fill="#B3A283" stroke="{INK}" stroke-width="1.4"/>'
+            + "".join(f'<circle cx="{x}" cy="{y}" r="3" fill="#A89878"/>' for x in range(10, 390, 26) for y in (450, 500))
+            + cypress(360, 480, 150, 14) + person(90, 452, .95, "#9C2A22") + person(140, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Castillo de Santa Catalina", [sky(p, sun, [(90, 70, .8)], [(200, 50), (218, 42, .8)]), far, mid, near, fx(p, sun, 400, .25)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
           "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
           "cordoba_tiberiades": cordoba_tiberiades, "cordoba_averroes": cordoba_averroes, "cordoba_arqueologico": cordoba_arqueologico,
           "sevilla_manara": sevilla_manara, "sevilla_refinadores": sevilla_refinadores, "sevilla_maestranza": sevilla_maestranza,
           "sevilla_caridad": sevilla_caridad, "granada_darro": granada_darro, "granada_sanjuan": granada_sanjuan,
-          "granada_cuevas": granada_cuevas, "granada_abadia": granada_abadia}
+          "granada_cuevas": granada_cuevas, "granada_abadia": granada_abadia, "jaen_museo": jaen_museo,
+          "jaen_santaclara": jaen_santaclara, "jaen_sanandres": jaen_sanandres, "jaen_castillo": jaen_castillo}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

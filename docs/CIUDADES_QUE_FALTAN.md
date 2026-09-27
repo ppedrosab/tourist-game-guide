@@ -8,7 +8,7 @@ finales. Los personajes son personas reales de la ciudad o figuras propias de el
 | Ciudad | Paradas que ya hay | Lo que falta (imprescindible) | Ruta nueva |
 |---|---|---|---|
 | Málaga | 12 | Casa natal de Picasso, iglesia de Santiago, Museo Picasso, plaza de toros de La Malagueta, Museo de Málaga (La Aduana) | «¿Por qué Picasso no volvió a Málaga?» · hecha |
-| Jaén | 13 | Castillo de Santa Catalina, Museo de Jaén, iglesia de San Andrés, Real Monasterio de Santa Clara | «¿Quién ganó el castillo de Santa Catalina?» |
+| Jaén | 13 | Castillo de Santa Catalina, Museo de Jaén, iglesia de San Andrés, Real Monasterio de Santa Clara | «¿Quién ganó el castillo de Santa Catalina?» (Alhamar, Fernando III, Ibn Malik) · hecha |
 | Huelva | 13 | Santuario de la Cinta y el Conquero, Parque Moret, Barrio Reina Victoria, monumento a Colón | «¿Qué se ve desde el Conquero?» |
 | Almería | 14 | Cerro de San Cristóbal, Hospital Real, Casa del Cine (Lennon, 1966), estación de tren, templo de San Juan (mezquita) | «¿Por qué el cine se enamoró de Almería?» |
 | Granada | 17 | Sacromonte y sus cuevas, abadía del Sacromonte, Carrera del Darro, Realejo | «¿Quién escribió los libros de plomo?» (Pedro de Castro, Castillo, Luna) · hecha |
