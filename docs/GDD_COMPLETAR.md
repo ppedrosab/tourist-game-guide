@@ -72,3 +72,20 @@ personajes en `andalucia_sprites.py`.
 - Las fechas de la Maestranza: fundación en 1670 y obras de la plaza de 1749 a 1881.
 
 **Fuentes:** [Miguel Mañara](https://es.wikipedia.org/wiki/Miguel_Ma%C3%B1ara), [Iglesia y Hospital de la Caridad](https://es.wikipedia.org/wiki/Iglesia_y_Hospital_de_la_Caridad_(Sevilla)), [Don Juan Tenorio](https://es.wikipedia.org/wiki/Don_Juan_Tenorio), [Casa de Murillo](https://es.wikipedia.org/wiki/Casa_de_Murillo), [Juan de Valdés Leal](https://es.wikipedia.org/wiki/Juan_de_Vald%C3%A9s_Leal).
+
+## Granada · «¿Quién escribió los libros de plomo?» (`libros-plomo`)
+
+- **Personajes:** `pedrodecastro` (guía, de «usted», arzobispo, 1534-1623), `alonsocastillo` (traductor morisco, c. 1520-c. 1610) y `miguelluna` (médico e intérprete morisco, c. 1550-1615).
+- **Sospechosos:** discípulos de un apóstol en el siglo I, el propio arzobispo, o los traductores moriscos.
+- **Veredicto:** muy probablemente moriscos granadinos, seguramente Luna y Castillo. Buscaban acercar la cultura árabe a la fe cristiana en tiempos de persecución. No está probado del todo. Roma declaró falsos los libros en 1682, y volvieron a Granada en el año 2000.
+- **Caminos:** Los moriscos (Carrera del Darro, puente de Cabrera) / La torre (alminar de San Juan de los Reyes).
+- **Paradas:** catedral (sitio de la Torre Turpiana) → Real Chancillería → Darro o San Juan de los Reyes → cuevas del Sacromonte → abadía del Sacromonte.
+- **Tono:** se cuenta como historia de una falsificación, con respeto. Las reliquias no se nombran ni se dibujan. De la abadía solo se ve la fachada. Hay cuestas fuertes (dificultad media).
+
+**Datos a verificar**
+- Cuántos libros hubo (se suele decir 22) y los años de los hallazgos (1595-1599).
+- Que la abadía muestre o no los plomos al público.
+- Si la presidencia de la Chancillería de Castro fue anterior a su nombramiento de arzobispo.
+- El horario de visita de la abadía, y si conviene subir en autobús (línea C2).
+
+**Fuentes:** [Libros plúmbeos](https://es.wikipedia.org/wiki/Libros_pl%C3%BAmbeos), [Torre Turpiana](https://es.wikipedia.org/wiki/Torre_Turpiana), [Abadía del Sacromonte](https://es.wikipedia.org/wiki/Abad%C3%ADa_del_Sacromonte), [Alonso del Castillo](https://es.wikipedia.org/wiki/Alonso_del_Castillo_(morisco)), [Miguel de Luna](https://es.wikipedia.org/wiki/Miguel_de_Luna), [Pedro de Castro](https://es.wikipedia.org/wiki/Pedro_de_Castro_y_Qui%C3%B1ones).

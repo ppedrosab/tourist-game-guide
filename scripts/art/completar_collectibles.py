@@ -128,6 +128,30 @@ sev = {
                       + sparkle(28, 32, 5, GOLD)),
 }
 
+LEAD = "#8E969C"; LEADD = "#6B7379"
+
+
+def lead_disc(x, y, r=26):
+    return (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{LEAD}" stroke="{INK}" stroke-width="2.4"/><circle cx="{x}" cy="{y}" r="{r - 5}" fill="none" stroke="{LEADD}" stroke-width="1.4"/>'
+            + "".join(f'<path d="M{x - r + 10} {y - 8 + k * 8}Q{x - 6} {y - 12 + k * 8} {x} {y - 8 + k * 8}T{x + r - 10} {y - 8 + k * 8}" fill="none" stroke="{INK}" stroke-width="1.4"/>' for k in range(3)))
+
+
+gra = {
+    "pergamino": BG + (f'<path d="M30 30H86Q94 30 94 38V92H38Q30 92 30 84Z" fill="#F0DDB0" stroke="{INK}" stroke-width="2.2"/>'
+                       f'<path d="M86 30Q78 30 78 38V92" fill="none" stroke="{INK}" stroke-width="1.6"/>'
+                       + "".join(f'<path d="M38 {44 + k * 10}H{72 - (k % 2) * 8}" stroke="{c}" stroke-width="2"/>' for k, c in enumerate([INK, CLAY, INK, SEA, INK]))
+                       + f'<path d="M40 96H100V104H40Z" fill="{LEAD}" stroke="{INK}" stroke-width="1.6"/>'),
+    "sello": BG + (f'<circle cx="60" cy="62" r="28" fill="#C0392B" stroke="{INK}" stroke-width="2.4"/><circle cx="60" cy="62" r="20" fill="none" stroke="#8E2A1F" stroke-width="2"/>'
+                   f'<path d="M50 70V56L60 48L70 56V70Z" fill="#E8A09A" stroke="#8E2A1F" stroke-width="1.6"/>'
+                   f'<path d="M48 88L40 106M72 88L80 106" stroke="{GOLD}" stroke-width="5"/>'),
+    "letras": BG + lead_disc(60, 66, 34),
+    "alminar": SKY + (f'<path d="M46 104V36H74V104Z" fill="#D7A27A" stroke="{INK}" stroke-width="2.2"/>'
+                      + "".join(f'<path d="M52 {50 + k * 18}L60 {42 + k * 18}L68 {50 + k * 18}L60 {58 + k * 18}Z" fill="none" stroke="#B98260" stroke-width="1.8"/>' for k in range(3))
+                      + f'<path d="M42 36H78V30H42Z" fill="#E8C3A2" stroke="{INK}" stroke-width="1.6"/><path d="M52 30V18H68V30" fill="#D7A27A" stroke="{INK}" stroke-width="1.6"/>'),
+    "lamina": BG + lead_disc(46, 60, 22) + lead_disc(74, 76, 22),
+    "insignia": BG + lead_disc(60, 70, 30) + f'<text x="60" y="80" font-family="Georgia, serif" font-weight="700" font-size="30" text-anchor="middle" fill="{GOLD}" stroke="{INK}" stroke-width="1">?</text>' + sparkle(94, 30, 5, GOLD),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
@@ -137,6 +161,8 @@ ORDER = {
                              ("lucerna", "La lucerna romana"), ("astrolabio", "El astrolabio andalusí"), ("insignia", "¿Por qué se fueron los sabios de Córdoba?")]),
     "sevilla_donjuan": (sev, [("escudo", "El escudo de los Mañara"), ("pincel", "El pincel de Murillo"), ("capa", "La capa de Don Juan"),
                               ("galeon", "El galeón de Indias"), ("azulejo", "El azulejo de la Caridad"), ("insignia", "¿Existió Don Juan?")]),
+    "granada_plomos": (gra, [("pergamino", "El pergamino de la Torre Turpiana"), ("sello", "El sello de la Chancillería"), ("letras", "Las letras salomónicas"),
+                             ("alminar", "El alminar de San Juan"), ("lamina", "La lámina de plomo"), ("insignia", "¿Quién escribió los libros de plomo?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

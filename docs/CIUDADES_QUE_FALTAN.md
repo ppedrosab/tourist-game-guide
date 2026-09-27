@@ -11,7 +11,7 @@ finales. Los personajes son personas reales de la ciudad o figuras propias de el
 | Jaén | 13 | Castillo de Santa Catalina, Museo de Jaén, iglesia de San Andrés, Real Monasterio de Santa Clara | «¿Quién ganó el castillo de Santa Catalina?» |
 | Huelva | 13 | Santuario de la Cinta y el Conquero, Parque Moret, Barrio Reina Victoria, monumento a Colón | «¿Qué se ve desde el Conquero?» |
 | Almería | 14 | Cerro de San Cristóbal, Hospital Real, Casa del Cine (Lennon, 1966), estación de tren, templo de San Juan (mezquita) | «¿Por qué el cine se enamoró de Almería?» |
-| Granada | 17 | Sacromonte y sus cuevas, abadía del Sacromonte, Carrera del Darro, Realejo | «¿Quién escribió los libros de plomo?» |
+| Granada | 17 | Sacromonte y sus cuevas, abadía del Sacromonte, Carrera del Darro, Realejo | «¿Quién escribió los libros de plomo?» (Pedro de Castro, Castillo, Luna) · hecha |
 | Sevilla | 20 | Hospital de la Caridad, plaza de toros de la Maestranza, Museo de Bellas Artes, casa de Murillo, Setas | «¿Existió Don Juan?» (Mañara, Murillo, Valdés Leal) · hecha |
 | Córdoba | 21 | Estatuas de Averroes y Maimónides, Museo Arqueológico (teatro romano), Cristo de los Faroles, mausoleo romano | «¿Por qué se fueron los sabios de Córdoba?» (Séneca, Averroes, Maimónides) · hecha |
 | Cádiz | 29 | Teatro romano y barrio del Pópulo, castillo de Santa Catalina, Casa de las Cuatro Torres, Alameda Apodaca | «¿Quién pagó el teatro romano de Gades?» (Balbo, Telethusa, Columela) · hecha |

@@ -5,6 +5,7 @@ Málaga: iglesia de Santiago, plaza de toros de La Malagueta, Palacio de Buenavi
 Cádiz: arco del Pópulo, teatro romano, Casa del Almirante, Casa de las Cuatro Torres, castillo de Santa Catalina.
 Córdoba: plaza de Tiberíades (Maimónides), muralla de la calle Cairuán (Averroes), Museo Arqueológico.
 Sevilla: palacio de Mañara, plaza de los Refinadores (Don Juan), la Maestranza, Hospital de la Caridad.
+Granada: Carrera del Darro, San Juan de los Reyes (alminar), cuevas y abadía del Sacromonte.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -12,9 +13,9 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, MINT, STONE, OUT, W,
                           f, sky, window, house, mirador, palm, lamp, person, floor, bench, tree, far_city, fx, doc)
-from sevilla_scenes import ALMAGRA, BRICK, ALBERO, giralda
+from sevilla_scenes import ALMAGRA, BRICK, ALBERO, giralda, river
 from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, LIME, OCHRE, POTBLUE
-from granada_scenes import horseshoe, cypress
+from granada_scenes import horseshoe, cypress, alhambra_hill, sierra, albaicin_houses, CAL, ROJA, TEJA
 from sevilla_scenes import orange_tree
 
 RED = "#D8412F"
@@ -329,12 +330,92 @@ def sevilla_caridad():
     return doc(p, "Hospital de la Caridad", [sky(p, sun, [(300, 70, .8)], [(230, 56)]), far, mid, near, fx(p, sun, 420)])
 
 
+def chumbera(x, base, s=1.0):
+    """Chumbera de las cuestas del Sacromonte."""
+    out = ""
+    for dx, dy, r in [(0, -18, 14), (-14, -38, 11), (12, -42, 12), (-2, -60, 10), (22, -64, 9)]:
+        out += f'<ellipse cx="{f(x + dx * s)}" cy="{f(base + dy * s)}" rx="{f(r * .8 * s)}" ry="{f(r * s)}" fill="#6E9F5A" stroke="{INK}" stroke-width="1.2"/>'
+    return out + "".join(f'<circle cx="{f(x + dx * s)}" cy="{f(base + dy * s)}" r="{f(2.6 * s)}" fill="{CLAY}"/>' for dx, dy in [(-6, -72), (18, -76), (-20, -48)])
+
+
+def granada_darro():
+    p = "gdr"; sun = (100, 110)
+    far = f'<g id="far">{sierra(170)}{alhambra_hill(190)}</g>'
+    houses = (house(-30, 200, 120, 150, CAL, floors=2, cols=2) + house(90, 220, 90, 130, YELLOW, floors=2, cols=1)
+              + f'<path d="M-10 350H200V360H-10Z" fill="#C9B28A" stroke="{INK}" stroke-width="1.2"/>')
+    sea = (f'<g id="sea">{river(p, 360, 410)}'
+           # puente de Cabrera, de piedra, de un ojo
+           + f'<path d="M200 410V376Q246 336 292 376V410H312V350H180V410Z" fill="#C9B28A" stroke="{INK}" stroke-width="1.6"/>'
+           + f'<path d="M176 350H316V342H176Z" fill="#DCC7A0" stroke="{INK}" stroke-width="1.4"/>'
+           + tree(360, 350, 30, "#4F7F5A", "#3D6647") + "</g>")
+    mid = f'<g id="mid">{houses}</g>'
+    near = (f'<g id="near"><rect x="-10" y="406" width="{W + 20}" height="170" fill="#D9C7A8"/>'
+            f'<path d="M-10 406L400 406L400 418L-10 418Z" fill="#C9B28A" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<circle cx="{x}" cy="{y}" r="3" fill="#BFAE8E"/>' for x in range(10, 390, 24) for y in (450, 490, 530))
+            + person(120, 452, .95, "#2E5E3E") + person(270, 456, .9, CLAY, dress=True) + lamp(40, 540, 170) + "</g>")
+    return doc(p, "Carrera del Darro", [sky(p, sun, [(290, 60, .8)], [(220, 50)]), far, mid, sea, near, fx(p, sun, 406, .25)])
+
+
+def granada_sanjuan():
+    p = "gsj"; sun = (300, 100)
+    far = f'<g id="far">{albaicin_houses(250, seed=3, soft=True)}</g>'
+    minaret = brick_tower(210, 150, 64, 190, ("#D7A27A", "#B98260", "#E8C3A2"))
+    church = (f'<path d="M20 390V240H214V390Z" fill="{CAL[0]}" stroke="{INK}" stroke-width="1.8"/>'
+              f'<path d="M14 242L117 206L220 242Z" fill="{TEJA}" stroke="{INK}" stroke-width="1.8"/>'
+              f'<path d="M92 390V310Q117 286 142 310V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+              + window(46, 268, 16, 30, shutters=False, arch=True) + window(172, 268, 16, 30, shutters=False, arch=True)
+              + house(274, 230, 130, 160, CAL, floors=2, cols=2))
+    mid = f'<g id="mid">{church}{minaret}{ground(386, "#DCCBAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D9C7A8", line="#C1AB85")}' + cypress(360, 480, 170, 14)
+            + person(110, 450, .95, "#22222A") + person(160, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "San Juan de los Reyes", [sky(p, sun, [(80, 70, .8)], [(150, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
+def granada_cuevas():
+    p = "gcv"; sun = (90, 110)
+    far = f'<g id="far">{sierra(180)}{alhambra_hill(230, soft=True)}</g>'
+    # ladera con cuevas encaladas: fachadas blancas con chimeneas asomando del monte
+    hill = f'<path d="M-10 200Q120 170 250 210Q330 230 400 220V400H-10Z" fill="#C9A77A" stroke="{INK}" stroke-width="1.6"/>'
+    caves = ""
+    for x, y in [(20, 250), (130, 236), (250, 256), (60, 320), (190, 320), (310, 314)]:
+        caves += (f'<path d="M{x} {y + 60}V{y + 10}Q{x + 40} {y - 6} {x + 80} {y + 10}V{y + 60}Z" fill="{CAL[0]}" stroke="{INK}" stroke-width="1.6"/>'
+                  f'<path d="M{x + 28} {y + 60}V{y + 32}Q{x + 40} {y + 22} {x + 52} {y + 32}V{y + 60}Z" fill="#2F6F9E" stroke="{INK}" stroke-width="1.4"/>'
+                  f'<path d="M{x + 60} {y + 2}V{y - 14}H{x + 68}V{y + 4}" fill="{CAL[0]}" stroke="{INK}" stroke-width="1.2"/>'
+                  + "".join(f'<path d="M{x + dx - 5} {y + 30}h10l-2 8h-6Z" fill="{CLAY}" stroke="{INK}" stroke-width=".8"/><circle cx="{x + dx}" cy="{y + 27}" r="3.4" fill="#4F8B5A"/>' for dx in (12, 70)))
+    mid = f'<g id="mid">{hill}{caves}{ground(390, "#D9C3A0")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D9C3A0", line="#C1AB85")}' + chumbera(40, 500, 1.4) + chumbera(350, 496, 1.2)
+            + person(170, 450, .95, "#3A3A48") + person(220, 454, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Cuevas del Sacromonte", [sky(p, sun, [(300, 70, .8)], [(220, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
+def granada_abadia():
+    p = "gab"; sun = (300, 110)
+    far = f'<g id="far">{sierra(190)}</g>'
+    c, dk, lt = STONE
+    abbey = (f'<path d="M-10 260Q200 230 400 250V400H-10Z" fill="#8FA86E"/>'
+             + f'<path d="M20 390V220H370V390Z" fill="{CAL[0]}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M14 222L195 190L376 222Z" fill="{TEJA}" stroke="{INK}" stroke-width="1.8"/>'
+             # patio de arcos de ladrillo y portada de piedra sin imágenes
+             + "".join(f'<path d="M{x} 390V330Q{x + 16} 312 {x + 32} 330V390Z" fill="#B98260" stroke="{INK}" stroke-width="1.2"/>' for x in (34, 78, 280, 324))
+             + f'<path d="M150 390V250H240V390Z" fill="{lt}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M172 390V316Q195 294 218 316V390Z" fill="#4A3A30" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M146 266H244V256H146Z" fill="{c}" stroke="{INK}" stroke-width="1.2"/>'
+             + "".join(window(x, 250, 18, 30, shutters=False, sw=1.1) for x in (44, 96, 286, 332))
+             + f'<path d="M270 220V150H320V220Z" fill="{CAL[0]}" stroke="{INK}" stroke-width="1.8"/><path d="M264 152L295 128L326 152Z" fill="{TEJA}" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M286 196V170Q295 160 304 170V196Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.2"/>')
+    mid = f'<g id="mid">{abbey}{ground(386, "#D9C3A0")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D9C3A0", line="#C1AB85")}' + cypress(30, 480, 190, 16) + cypress(366, 476, 180, 15)
+            + chumbera(90, 500, 1.1) + person(200, 450, .95, "#5A2E4E") + person(260, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Abadía del Sacromonte", [sky(p, sun, [(90, 70, .8)], [(200, 60), (218, 52, .8)]), far, mid, near, fx(p, sun, 420)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
           "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
           "cordoba_tiberiades": cordoba_tiberiades, "cordoba_averroes": cordoba_averroes, "cordoba_arqueologico": cordoba_arqueologico,
           "sevilla_manara": sevilla_manara, "sevilla_refinadores": sevilla_refinadores, "sevilla_maestranza": sevilla_maestranza,
-          "sevilla_caridad": sevilla_caridad}
+          "sevilla_caridad": sevilla_caridad, "granada_darro": granada_darro, "granada_sanjuan": granada_sanjuan,
+          "granada_cuevas": granada_cuevas, "granada_abadia": granada_abadia}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

@@ -1,6 +1,6 @@
 {
   "id": "granada",
-  "version": 4,
+  "version": 5,
   "name": {
     "es": "Granada",
     "en": "Granada"
@@ -365,6 +365,90 @@
         {
           "title": "Wikipedia: Federico García Lorca",
           "url": "https://es.wikipedia.org/wiki/Federico_Garc%C3%ADa_Lorca"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "pedrodecastro",
+      "name": {
+        "es": "Pedro de Castro",
+        "en": "Pedro de Castro"
+      },
+      "description": {
+        "es": "Arzobispo de Granada, jurista y gran defensor de los libros de plomo. Trata al jugador de «usted». Solemne, tenaz y convencido.",
+        "en": "Archbishop of Granada, jurist and great champion of the lead books. Addresses the player formally. Solemn, stubborn and convinced."
+      },
+      "avatar": "sprites/pedrodecastro/pedrodecastro_neutral.svg",
+      "era": "s. XVI-XVII",
+      "kind": "real",
+      "lived": "1534-1623",
+      "bio": {
+        "es": "Pedro Vaca de Castro y Quiñones nació en Roa (Burgos) en 1534. Jurista, presidió la Real Chancillería de Granada y fue arzobispo de Granada desde 1589 y de Sevilla desde 1610 hasta su muerte, en 1623. Defendió con pasión la autenticidad del pergamino de la Torre Turpiana y de los libros de plomo, y fundó sobre las cuevas del hallazgo la abadía del Sacromonte.",
+        "en": "Pedro Vaca de Castro y Quiñones was born in Roa (Burgos) in 1534. A jurist, he presided over the Royal Chancery of Granada and was Archbishop of Granada from 1589 and of Seville from 1610 until his death in 1623. He passionately defended the authenticity of the Turpiana parchment and the lead books, and founded the Sacromonte abbey above the caves where they were found."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Pedro de Castro y Quiñones",
+          "url": "https://es.wikipedia.org/wiki/Pedro_de_Castro_y_Qui%C3%B1ones"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "alonsocastillo",
+      "name": {
+        "es": "Alonso del Castillo",
+        "en": "Alonso del Castillo"
+      },
+      "description": {
+        "es": "Médico morisco y traductor de árabe de la ciudad y del rey. Prudente, sabio y con más secretos de los que cuenta.",
+        "en": "Morisco doctor and Arabic translator for the city and the king. Cautious, learned and with more secrets than he lets on."
+      },
+      "avatar": "sprites/alonsocastillo/alonsocastillo_neutral.svg",
+      "era": "s. XVI",
+      "kind": "real",
+      "lived": "c. 1520-c. 1610",
+      "bio": {
+        "es": "Alonso del Castillo, morisco granadino, estudió medicina hacia 1540 y fue «romanceador de letras arábigas»: tradujo entre 1555 y 1564 las inscripciones de la Alhambra para el municipio y, más tarde, cartas del sultán de Marruecos a Felipe II. Durante la rebelión de las Alpujarras sirvió a la Corona. Fue uno de los traductores principales de los libros de plomo y, según muchos historiadores, uno de sus probables autores. Murió en Granada hacia 1607-1610.",
+        "en": "Alonso del Castillo, a Granada Morisco, studied medicine around 1540 and became a “translator of Arabic letters”: between 1555 and 1564 he translated the Alhambra inscriptions for the city and later letters from the Sultan of Morocco to Philip II. During the Alpujarras revolt he served the Crown. He was one of the main translators of the lead books and, according to many historians, one of their likely authors. He died in Granada around 1607-1610."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Alonso del Castillo (morisco)",
+          "url": "https://es.wikipedia.org/wiki/Alonso_del_Castillo_(morisco)"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "miguelluna",
+      "name": {
+        "es": "Miguel de Luna",
+        "en": "Miguel de Luna"
+      },
+      "description": {
+        "es": "Médico morisco, intérprete de árabe de dos reyes y autor de una «historia verdadera» muy imaginativa. Simpático, ingenioso y algo pillo.",
+        "en": "Morisco doctor, Arabic interpreter to two kings and author of a very imaginative “true history”. Charming, witty and a bit of a rogue."
+      },
+      "avatar": "sprites/miguelluna/miguelluna_neutral.svg",
+      "era": "s. XVI-XVII",
+      "kind": "real",
+      "lived": "c. 1550-1615",
+      "bio": {
+        "es": "Miguel de Luna, morisco granadino, se licenció en Medicina en la Universidad de Granada y fue intérprete de árabe de Felipe II y Felipe III. En 1592 publicó «La verdadera historia del rey don Rodrigo», que presentó como traducción de un cronista árabe, Abulcacim Tarif, y en 1600 una segunda parte. Fue uno de los traductores de los libros de plomo, y muchos historiadores lo consideran uno de sus probables autores. Murió en 1615.",
+        "en": "Miguel de Luna, a Granada Morisco, graduated in medicine from the University of Granada and was Arabic interpreter to Philip II and Philip III. In 1592 he published “The True History of King Roderick”, which he presented as a translation of an Arab chronicler, Abulcacim Tarif, followed by a second part in 1600. He was one of the translators of the lead books, and many historians consider him one of their likely authors. He died in 1615."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Miguel de Luna",
+          "url": "https://es.wikipedia.org/wiki/Miguel_de_Luna"
         }
       ],
       "voice": {
@@ -4858,6 +4942,966 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "libros-plomo",
+      "title": {
+        "es": "¿Quién escribió los libros de plomo?",
+        "en": "Who Wrote the Lead Books?"
+      },
+      "summary": {
+        "es": "En 1588 apareció un pergamino en una torre, y después veintidós libros de plomo en las cuevas del Sacromonte. ¿Eran del siglo I o una falsificación? Con el arzobispo Pedro de Castro y los traductores Alonso del Castillo y Miguel de Luna.",
+        "en": "In 1588 a parchment turned up in a tower, and then twenty-two lead books in the Sacromonte caves. Were they from the 1st century, or a forgery? With Archbishop Pedro de Castro and the translators Alonso del Castillo and Miguel de Luna."
+      },
+      "era": "1588-1682",
+      "guideCharacterId": "pedrodecastro",
+      "durationMin": 75,
+      "distanceKm": 2.6,
+      "difficulty": "medium",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "Los moriscos",
+            "en": "The Moriscos"
+          },
+          "trail": {
+            "es": "camino de los moriscos",
+            "en": "Morisco trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La torre",
+            "en": "The tower"
+          },
+          "trail": {
+            "es": "camino de la torre",
+            "en": "tower trail"
+          }
+        }
+      },
+      "startNodeId": "p1_turpiana",
+      "nodes": [
+        {
+          "id": "p1_turpiana",
+          "title": {
+            "es": "Torre Turpiana (catedral)",
+            "en": "Turpiana Tower (cathedral)"
+          },
+          "location": {
+            "lat": 37.1765,
+            "lng": -3.5995
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pedrodecastro",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "proud",
+              "text": {
+                "es": "Buenos días. Pedro de Castro, arzobispo de Granada desde 1589. Permítame que le cuente el mayor hallazgo de mi vida… o eso creí yo.",
+                "en": "Good morning. Pedro de Castro, Archbishop of Granada from 1589. Allow me to tell you about the greatest discovery of my life… or so I believed."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Junto a la catedral estaba la Torre Turpiana, el antiguo alminar de la mezquita mayor. Al derribarla, el 18 de marzo de 1588, apareció una caja de plomo con un pergamino escrito en árabe, latín y castellano.",
+                "en": "Beside the cathedral stood the Turpiana Tower, the old minaret of the great mosque. When it was pulled down, on 18 March 1588, a lead box turned up with a parchment written in Arabic, Latin and Castilian."
+              },
+              "year": 1588
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Luego, en el monte de Valparaíso, salieron veintidós libros de plomo en un árabe extrañísimo. Decían ser del siglo I. ¿Quién los escribió? Averígüelo usted.",
+                "en": "Then, on the hill of Valparaíso, twenty-two lead books came out, in the strangest Arabic. They claimed to be from the 1st century. Who wrote them? Find out for yourself."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué era la Torre Turpiana?",
+              "en": "What was the Turpiana Tower?"
+            },
+            "options": [
+              {
+                "es": "Un faro",
+                "en": "A lighthouse"
+              },
+              {
+                "es": "El antiguo alminar de la mezquita mayor",
+                "en": "The old minaret of the great mosque"
+              },
+              {
+                "es": "Una torre de la Alhambra",
+                "en": "A tower of the Alhambra"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El alminar de la mezquita mayor, que se usaba de campanario hasta que lo derribaron en 1588.",
+              "en": "The minaret of the great mosque, used as a bell tower until it was pulled down in 1588."
+            }
+          },
+          "clue": {
+            "id": "plo_pista_1588",
+            "text": {
+              "es": "Documentos · En 1588, al derribar la Torre Turpiana, apareció un pergamino en árabe, latín y castellano.",
+              "en": "Records · In 1588, when the Turpiana Tower came down, a parchment in Arabic, Latin and Castilian turned up."
+            }
+          },
+          "nextNodeId": "p2_plazanueva",
+          "nextHint": {
+            "es": "Sube a la plaza Nueva, a la Real Chancillería. Cuatro minutos.",
+            "en": "Walk up to Plaza Nueva, to the Royal Chancery. Four minutes."
+          }
+        },
+        {
+          "id": "p2_plazanueva",
+          "title": {
+            "es": "Real Chancillería",
+            "en": "Royal Chancery"
+          },
+          "location": {
+            "lat": 37.1768,
+            "lng": -3.596
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_plazanueva.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_plazanueva.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pedrodecastro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "alonsocastillo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Antes de arzobispo, Pedro de Castro presidió la Real Chancillería, el gran tribunal del sur de Castilla, en este palacio de la plaza Nueva.",
+                "en": "Before becoming archbishop, Pedro de Castro presided over the Royal Chancery, the great court of southern Castile, in this palace on Plaza Nueva."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "neutral",
+              "text": {
+                "es": "Alonso del Castillo, médico y «romanceador de letras arábigas». Traduje las inscripciones de la Alhambra para la ciudad, y las cartas del sultán de Marruecos para el rey Felipe II.",
+                "en": "Alonso del Castillo, doctor and “translator of Arabic letters”. I translated the Alhambra inscriptions for the city, and the Sultan of Morocco's letters for King Philip II."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "thinking",
+              "text": {
+                "es": "El arzobispo me encargó traducir el pergamino y los plomos. A mí y a Miguel de Luna, otro morisco como yo.",
+                "en": "The archbishop asked me to translate the parchment and the lead books. Me and Miguel de Luna, another Morisco like me."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién tradujo los libros de plomo?",
+              "en": "Who translated the lead books?"
+            },
+            "options": [
+              {
+                "es": "Dos médicos moriscos, Alonso del Castillo y Miguel de Luna",
+                "en": "Two Morisco doctors, Alonso del Castillo and Miguel de Luna"
+              },
+              {
+                "es": "El propio arzobispo",
+                "en": "The archbishop himself"
+              },
+              {
+                "es": "Un monje de Roma",
+                "en": "A monk from Rome"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Alonso del Castillo y Miguel de Luna, moriscos granadinos que sabían árabe.",
+              "en": "Alonso del Castillo and Miguel de Luna, Granada Moriscos who knew Arabic."
+            }
+          },
+          "clue": {
+            "id": "plo_pista_traductores",
+            "text": {
+              "es": "Los moriscos · Los traductores de los plomos eran dos moriscos: Castillo y Luna.",
+              "en": "The Moriscos · The translators of the lead books were two Moriscos: Castillo and Luna."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "pedrodecastro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos a los moriscos por la Carrera del Darro, o buscamos otra torre como la Turpiana?",
+              "en": "Shall we follow the Moriscos along the Carrera del Darro, or look for another tower like the Turpiana?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Los moriscos",
+                "en": "The Moriscos"
+              },
+              "hint": {
+                "es": "La Carrera del Darro",
+                "en": "The Carrera del Darro"
+              },
+              "targetNodeId": "pa_darro",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 250,
+              "walkMin": 4
+            },
+            {
+              "label": {
+                "es": "La torre",
+                "en": "The tower"
+              },
+              "hint": {
+                "es": "San Juan de los Reyes",
+                "en": "San Juan de los Reyes"
+              },
+              "targetNodeId": "pb_sanjuan",
+              "setFlags": [
+                "camino_poder"
+              ],
+              "distanceM": 550,
+              "walkMin": 8
+            }
+          ]
+        },
+        {
+          "id": "pa_darro",
+          "title": {
+            "es": "Carrera del Darro",
+            "en": "Carrera del Darro"
+          },
+          "location": {
+            "lat": 37.17795,
+            "lng": -3.5937
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_granada_darro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_darro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "miguelluna",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "alonsocastillo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "miguelluna",
+              "expression": "happy",
+              "text": {
+                "es": "Miguel de Luna, médico e intérprete de árabe de Felipe II y Felipe III. En 1592 publiqué «La verdadera historia del rey don Rodrigo»… traducida, dije, de un viejo libro árabe.",
+                "en": "Miguel de Luna, doctor and Arabic interpreter to Philip II and Philip III. In 1592 I published “The True History of King Roderick”… translated, I said, from an old Arabic book."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "thinking",
+              "text": {
+                "es": "Un libro árabe que nadie más ha visto, Miguel.",
+                "en": "An Arabic book nobody else has ever seen, Miguel."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Tras la rebelión de las Alpujarras (1568-1571), a los moriscos se les prohibió su lengua, su ropa y sus costumbres. En 1609 empezó su expulsión de España.",
+                "en": "After the Alpujarras revolt (1568-1571), the Moriscos were banned from using their language, clothing and customs. In 1609 their expulsion from Spain began."
+              },
+              "year": 1609
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué libro publicó Miguel de Luna en 1592?",
+              "en": "What book did Miguel de Luna publish in 1592?"
+            },
+            "options": [
+              {
+                "es": "«El Quijote»",
+                "en": "“Don Quixote”"
+              },
+              {
+                "es": "Un libro de cocina",
+                "en": "A cookbook"
+              },
+              {
+                "es": "«La verdadera historia del rey don Rodrigo»",
+                "en": "“The True History of King Roderick”"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "«La verdadera historia del rey don Rodrigo», que presentó como traducción de un libro árabe antiguo.",
+              "en": "“The True History of King Roderick”, which he presented as a translation of an old Arabic book."
+            }
+          },
+          "clue": {
+            "id": "plo_pista_rodrigo",
+            "text": {
+              "es": "Los moriscos · Luna ya había presentado como traducción un libro árabe que nadie ha visto.",
+              "en": "The Moriscos · Luna had already passed off a book as a translation of an Arabic original nobody has seen."
+            }
+          },
+          "nextNodeId": "p4_cuevas",
+          "nextHint": {
+            "es": "Sigue el río hasta el camino del Sacromonte. Unos 12 minutos, cuesta arriba.",
+            "en": "Follow the river to the Sacromonte road. About 12 minutes, uphill."
+          }
+        },
+        {
+          "id": "pb_sanjuan",
+          "title": {
+            "es": "San Juan de los Reyes",
+            "en": "San Juan de los Reyes"
+          },
+          "location": {
+            "lat": 37.17993,
+            "lng": -3.59182
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_granada_sanjuan.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_sanjuan.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pedrodecastro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "miguelluna",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia de San Juan de los Reyes conserva el alminar de una mezquita del siglo XIII, con paños de rombos de ladrillo parecidos a los de la Giralda. Así debía de ser la Torre Turpiana.",
+                "en": "The church of San Juan de los Reyes keeps the minaret of a 13th-century mosque, with brick lozenge panels like the Giralda's. The Turpiana Tower must have looked like this."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Una caja escondida en un alminar, con un texto que decía ser antiguo… Quien la puso allí sabía muy bien que la torre se iba a derribar.",
+                "en": "A box hidden in a minaret, with a text claiming to be ancient… Whoever put it there knew very well the tower was going to be pulled down."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "miguelluna",
+              "expression": "thinking",
+              "text": {
+                "es": "Hmm. Los traductores también lo sabíamos, señor arzobispo.",
+                "en": "Hmm. We translators knew it too, Your Grace."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿A qué torre famosa se parece el alminar de San Juan de los Reyes?",
+              "en": "Which famous tower does the minaret of San Juan de los Reyes resemble?"
+            },
+            "options": [
+              {
+                "es": "A la torre de Pisa",
+                "en": "The Leaning Tower of Pisa"
+              },
+              {
+                "es": "A la Giralda de Sevilla",
+                "en": "Seville's Giralda"
+              },
+              {
+                "es": "A la torre Eiffel",
+                "en": "The Eiffel Tower"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "A la Giralda: los dos tienen paños de rombos de ladrillo.",
+              "en": "The Giralda: both have brick lozenge panels."
+            }
+          },
+          "clue": {
+            "id": "plo_pista_alminar",
+            "text": {
+              "es": "La torre · Quien escondió la caja sabía que la Torre Turpiana se iba a derribar.",
+              "en": "The tower · Whoever hid the box knew the Turpiana Tower was going to be pulled down."
+            }
+          },
+          "nextNodeId": "p4_cuevas",
+          "nextHint": {
+            "es": "Sube por la calle San Juan de los Reyes hasta el Sacromonte. Unos 9 minutos.",
+            "en": "Climb along calle San Juan de los Reyes to the Sacromonte. About 9 minutes."
+          }
+        },
+        {
+          "id": "p4_cuevas",
+          "title": {
+            "es": "Cuevas del Sacromonte",
+            "en": "Sacromonte caves"
+          },
+          "location": {
+            "lat": 37.18158,
+            "lng": -3.58511
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_cuevas.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_cuevas.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pedrodecastro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "alonsocastillo",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Entre 1595 y 1599 aparecieron en las cuevas de este monte láminas y libros de plomo, con textos en latín y en unas letras árabes raras que llamaron «salomónicas».",
+                "en": "Between 1595 and 1599 lead plates and books turned up in the caves of this hill, with texts in Latin and in strange Arabic letters that people called “Solomonic”."
+              },
+              "year": 1595
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "thinking",
+              "text": {
+                "es": "Los plomos contaban un cristianismo muy antiguo… escrito en árabe. Como si ser árabe y ser cristiano pudieran ir juntos. Justo lo que un morisco querría leer.",
+                "en": "The lead books told of a very ancient Christianity… written in Arabic. As if being Arab and being Christian could go together. Just what a Morisco would want to read."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes con los moriscos: un traductor con fama de inventar libros. ¿Seguimos la pista de las letras o la de Roma?",
+                    "en": "You come with the Moriscos: a translator known for inventing books. Shall we follow the letters or Rome?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder"
+                  ],
+                  "text": {
+                    "es": "Vienes de la torre: alguien sabía que se iba a derribar. ¿Seguimos la pista de las letras o la de Roma?",
+                    "en": "You come from the tower: someone knew it would be pulled down. Shall we follow the letters or Rome?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo llamaron a las letras raras de los plomos?",
+              "en": "What were the strange letters on the lead books called?"
+            },
+            "options": [
+              {
+                "es": "«Salomónicas»",
+                "en": "“Solomonic”"
+              },
+              {
+                "es": "«Góticas»",
+                "en": "“Gothic”"
+              },
+              {
+                "es": "«Rúnicas»",
+                "en": "“Runic”"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "«Salomónicas»: un árabe disfrazado que costaba mucho leer.",
+              "en": "“Solomonic”: a disguised Arabic that was very hard to read."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "pedrodecastro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Las letras o Roma?",
+              "en": "The letters or Rome?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de las letras",
+                "en": "The letters lead"
+              },
+              "hint": {
+                "es": "Con Castillo",
+                "en": "With Castillo"
+              },
+              "targetNodeId": "p4a_letras",
+              "setFlags": [
+                "version_letras"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de Roma",
+                "en": "The Rome lead"
+              },
+              "hint": {
+                "es": "Con Pedro de Castro",
+                "en": "With Pedro de Castro"
+              },
+              "targetNodeId": "p4b_roma",
+              "setFlags": [
+                "version_roma"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p4a_letras",
+          "title": {
+            "es": "Las letras",
+            "en": "The letters"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "thinking",
+              "text": {
+                "es": "Para escribir eso hacía falta saber árabe clásico, latín, teología… y conocer bien Granada. En toda la ciudad había muy pocos que supieran tanto.",
+                "en": "To write that you needed classical Arabic, Latin, theology… and a good knowledge of Granada. In the whole city very few people knew that much."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "miguelluna",
+              "expression": "happy",
+              "text": {
+                "es": "¿Pocos? Yo diría que dos. Y los dos estamos aquí.",
+                "en": "Very few? I'd say two. And both of us are here."
+              }
+            }
+          ],
+          "clue": {
+            "id": "plo_pista_letras",
+            "text": {
+              "es": "Los moriscos · Los plomos exigían árabe, latín y teología: casi nadie en Granada sabía tanto como sus traductores.",
+              "en": "The Moriscos · The lead books required Arabic, Latin and theology: hardly anyone in Granada knew as much as their translators."
+            }
+          },
+          "nextNodeId": "p5_abadia",
+          "nextHint": {
+            "es": "Sube hasta la abadía del Sacromonte. Unos 12 minutos, cuesta arriba.",
+            "en": "Climb to the Sacromonte abbey. About 12 minutes, uphill."
+          }
+        },
+        {
+          "id": "p4b_roma",
+          "title": {
+            "es": "Roma",
+            "en": "Rome"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "dramatic",
+              "text": {
+                "es": "Yo los defendí toda mi vida. Pero en 1642 se llevaron los plomos a Roma, y en 1682 el papa Inocencio XI los declaró falsos.",
+                "en": "I defended them all my life. But in 1642 the lead books were taken to Rome, and in 1682 Pope Innocent XI declared them forgeries."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Estuvieron en Roma hasta el año 2000, cuando volvieron a Granada. Hoy los guarda la abadía.",
+                "en": "They stayed in Rome until the year 2000, when they came back to Granada. Today the abbey keeps them."
+              }
+            }
+          ],
+          "clue": {
+            "id": "plo_pista_roma",
+            "text": {
+              "es": "La torre · En 1682 el papa declaró falsos los plomos; volvieron a Granada en el año 2000.",
+              "en": "The tower · In 1682 the Pope declared the lead books forgeries; they returned to Granada in 2000."
+            }
+          },
+          "nextNodeId": "p5_abadia",
+          "nextHint": {
+            "es": "Sube hasta la abadía del Sacromonte. Unos 12 minutos, cuesta arriba.",
+            "en": "Climb to the Sacromonte abbey. About 12 minutes, uphill."
+          }
+        },
+        {
+          "id": "p5_abadia",
+          "title": {
+            "es": "Abadía del Sacromonte",
+            "en": "Sacromonte abbey"
+          },
+          "location": {
+            "lat": 37.18317,
+            "lng": -3.5771
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_granada_abadia.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_granada_abadia.svg"
+              ],
+              "characters": [
+                {
+                  "id": "pedrodecastro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "miguelluna",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Pedro de Castro fundó la abadía del Sacromonte en 1610, sobre las cuevas del hallazgo. Ese mismo año, los moriscos de Granada ya estaban siendo expulsados.",
+                "en": "Pedro de Castro founded the Sacromonte abbey in 1610, above the caves of the discovery. That same year, Granada's Moriscos were already being expelled."
+              },
+              "year": 1610
+            },
+            {
+              "type": "dialogue",
+              "characterId": "miguelluna",
+              "expression": "thinking",
+              "text": {
+                "es": "Si alguien quiso demostrar que lo árabe también era de aquí, no le salió bien: nos echaron igual. Pero la abadía sigue ahí.",
+                "en": "If someone wanted to prove that Arabic things belonged here too, it didn't work out: they threw us out anyway. But the abbey is still there."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. ¿Quién escribió los libros de plomo?",
+                "en": "Verdict time. Who wrote the lead books?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién escribió los libros de plomo?",
+              "en": "Who wrote the lead books?"
+            },
+            "options": [
+              {
+                "es": "Discípulos de un apóstol, en el siglo I",
+                "en": "Disciples of an apostle, in the 1st century"
+              },
+              {
+                "es": "El arzobispo Pedro de Castro",
+                "en": "Archbishop Pedro de Castro"
+              },
+              {
+                "es": "Muy probablemente moriscos granadinos, como Luna y Castillo",
+                "en": "Most probably Granada Moriscos, such as Luna and Castillo"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Casi todos los historiadores creen que los escribieron moriscos granadinos, seguramente Miguel de Luna y Alonso del Castillo, para acercar su cultura árabe a la fe cristiana cuando se les perseguía. No se ha podido probar del todo.",
+              "en": "Almost all historians believe they were written by Granada Moriscos, most likely Miguel de Luna and Alonso del Castillo, to bring their Arab culture closer to the Christian faith at a time of persecution. It has never been fully proven."
+            }
+          },
+          "nextNodeId": "p6_final"
+        },
+        {
+          "id": "p6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_letras"
+                  ],
+                  "text": {
+                    "es": "Los moriscos y las letras: sabes leer entre líneas. Eres traductor de arábigo.",
+                    "en": "The Moriscos and the letters: you can read between the lines. You're a translator of Arabic."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_roma"
+                  ],
+                  "text": {
+                    "es": "Los moriscos y Roma: la historia de los que se fueron. Eres cronista del Albaicín.",
+                    "en": "The Moriscos and Rome: the story of those who left. You're a chronicler of the Albaicín."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_letras"
+                  ],
+                  "text": {
+                    "es": "La torre y las letras: nada se te escapa. Eres descifrador de plomos.",
+                    "en": "The tower and the letters: nothing gets past you. You're a decipherer of lead books."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_roma"
+                  ],
+                  "text": {
+                    "es": "La torre y Roma: juicio sereno. Eres legado en Roma.",
+                    "en": "The tower and Rome: a calm judgement. You're an envoy to Rome."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "alonsocastillo",
+              "expression": "neutral",
+              "text": {
+                "es": "Mire Granada desde aquí arriba: árabe y cristiana a la vez. Eso es lo que decían los plomos, aunque fueran falsos.",
+                "en": "Look at Granada from up here: Arab and Christian at once. That's what the lead books said, even if they were fake."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "traductor_arabigo",
+          "requires": [
+            "camino_dinero",
+            "version_letras"
+          ],
+          "title": {
+            "es": "Traductor de arábigo",
+            "en": "Translator of Arabic"
+          }
+        },
+        {
+          "id": "cronista_albaicin",
+          "requires": [
+            "camino_dinero",
+            "version_roma"
+          ],
+          "title": {
+            "es": "Cronista del Albaicín",
+            "en": "Chronicler of the Albaicín"
+          }
+        },
+        {
+          "id": "descifrador_plomos",
+          "requires": [
+            "camino_poder",
+            "version_letras"
+          ],
+          "title": {
+            "es": "Descifrador de plomos",
+            "en": "Decipherer of lead books"
+          }
+        },
+        {
+          "id": "legado_roma",
+          "requires": [
+            "camino_poder",
+            "version_roma"
+          ],
+          "title": {
+            "es": "Legado en Roma",
+            "en": "Envoy to Rome"
+          }
+        }
+      ],
+      "paths": {
+        "p1_turpiana->p2_plazanueva": [[-3.59966,37.17665],[-3.59853,37.17741],[-3.59845,37.17726],[-3.59828,37.17732],[-3.59815,37.17708],[-3.59728,37.17738],[-3.59702,37.1772],[-3.59681,37.17693],[-3.5963,37.17703],[-3.59619,37.17692],[-3.59611,37.17696],[-3.59599,37.17681]],
+        "p2_plazanueva->pa_darro": [[-3.59599,37.17681],[-3.59584,37.17685],[-3.59584,37.1771],[-3.59537,37.17724],[-3.59502,37.17743],[-3.59478,37.17721],[-3.59421,37.1776],[-3.59368,37.1778],[-3.5937,37.17795]],
+        "p2_plazanueva->pb_sanjuan": [[-3.59599,37.17681],[-3.59584,37.17685],[-3.59584,37.1771],[-3.59537,37.17724],[-3.5955,37.1775],[-3.59463,37.17794],[-3.59467,37.17822],[-3.59455,37.17835],[-3.59404,37.17872],[-3.59328,37.17912],[-3.59255,37.17961],[-3.59199,37.17984],[-3.59181,37.17985]],
+        "pa_darro->p4_cuevas": [[-3.5937,37.17795],[-3.59392,37.17855],[-3.59314,37.17882],[-3.59336,37.17909],[-3.59255,37.17961],[-3.59201,37.17981],[-3.59205,37.18009],[-3.59186,37.18024],[-3.59131,37.18038],[-3.59116,37.18033],[-3.59032,37.18065],[-3.59014,37.18086],[-3.58969,37.18106],[-3.58912,37.18111],[-3.58868,37.18124],[-3.58821,37.18119],[-3.58776,37.18106],[-3.5873,37.18108],[-3.58624,37.18092],[-3.58599,37.18101],[-3.58511,37.18158]],
+        "pb_sanjuan->p4_cuevas": [[-3.59181,37.17985],[-3.59103,37.17987],[-3.59116,37.18033],[-3.59032,37.18065],[-3.59014,37.18086],[-3.58969,37.18106],[-3.58912,37.18111],[-3.58868,37.18124],[-3.58821,37.18119],[-3.58776,37.18106],[-3.5873,37.18108],[-3.58624,37.18092],[-3.58599,37.18101],[-3.58511,37.18158]],
+        "p4_cuevas->p5_abadia": [[-3.58511,37.18158],[-3.58477,37.18183],[-3.58425,37.18169],[-3.58413,37.18182],[-3.58395,37.18186],[-3.5838,37.18181],[-3.58367,37.18159],[-3.58344,37.18147],[-3.58282,37.18128],[-3.58258,37.18128],[-3.58185,37.18145],[-3.58146,37.18141],[-3.58091,37.18149],[-3.57984,37.18139],[-3.57968,37.18142],[-3.57931,37.18163],[-3.57897,37.18154],[-3.57809,37.18156],[-3.57749,37.18165],[-3.57691,37.18164],[-3.57691,37.18176],[-3.57681,37.1817],[-3.57649,37.18169],[-3.5759,37.1819],[-3.57576,37.18207],[-3.57574,37.18226],[-3.57578,37.18229],[-3.57592,37.18214],[-3.57606,37.18218],[-3.57589,37.18231],[-3.57594,37.18253],[-3.57619,37.18268],[-3.57645,37.18275],[-3.57736,37.18265],[-3.5774,37.18286]]
+      },
+      "rewards": [
+        {
+          "id": "plomos_pergamino",
+          "name": {
+            "es": "El pergamino de la Torre Turpiana",
+            "en": "The Turpiana parchment"
+          },
+          "icon": "collectibles/granada_plomos_pergamino.svg",
+          "awardedAtNodeId": "p1_turpiana"
+        },
+        {
+          "id": "plomos_sello",
+          "name": {
+            "es": "El sello de la Chancillería",
+            "en": "The Chancery seal"
+          },
+          "icon": "collectibles/granada_plomos_sello.svg",
+          "awardedAtNodeId": "p2_plazanueva"
+        },
+        {
+          "id": "plomos_letras",
+          "name": {
+            "es": "Las letras salomónicas",
+            "en": "The Solomonic letters"
+          },
+          "icon": "collectibles/granada_plomos_letras.svg",
+          "awardedAtNodeId": "pa_darro"
+        },
+        {
+          "id": "plomos_alminar",
+          "name": {
+            "es": "El alminar de San Juan",
+            "en": "The minaret of San Juan"
+          },
+          "icon": "collectibles/granada_plomos_alminar.svg",
+          "awardedAtNodeId": "pb_sanjuan"
+        },
+        {
+          "id": "plomos_lamina",
+          "name": {
+            "es": "La lámina de plomo",
+            "en": "The lead plate"
+          },
+          "icon": "collectibles/granada_plomos_lamina.svg",
+          "awardedAtNodeId": "p5_abadia"
+        },
+        {
+          "id": "insignia_plomos",
+          "name": {
+            "es": "¿Quién escribió los libros de plomo?",
+            "en": "Who Wrote the Lead Books?"
+          },
+          "icon": "collectibles/granada_plomos_insignia.svg",
+          "awardedAtNodeId": "p6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Libros plúmbeos",
+          "url": "https://es.wikipedia.org/wiki/Libros_pl%C3%BAmbeos"
+        },
+        {
+          "title": "Wikipedia: Torre Turpiana",
+          "url": "https://es.wikipedia.org/wiki/Torre_Turpiana"
+        },
+        {
+          "title": "Wikipedia: Abadía del Sacromonte",
+          "url": "https://es.wikipedia.org/wiki/Abad%C3%ADa_del_Sacromonte"
+        },
+        {
+          "title": "Wikipedia: Iglesia de San Juan de los Reyes",
+          "url": "https://es.wikipedia.org/wiki/Iglesia_de_San_Juan_de_los_Reyes"
+        }
+      ]
     }
   ]
 }

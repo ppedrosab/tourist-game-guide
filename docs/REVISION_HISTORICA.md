@@ -310,6 +310,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Hernando de Zafra | persona real | c. 1444-1507 | [Wikipedia: Hernando de Zafra](https://es.wikipedia.org/wiki/Hernando_de_Zafra) · [Wikipedia: Casa de Castril](https://es.wikipedia.org/wiki/Casa_de_Castril) |
 | Elvira | figura de leyenda | leyenda | [Wikipedia: Casa de Castril](https://es.wikipedia.org/wiki/Casa_de_Castril) · [Inmsol, «La leyenda de la Casa de Castril»](https://www.inmsol.com/es/blog-escuela/leyendas-granada/la-leyenda-de-la-casa-de-castril/) |
 | Federico García Lorca | persona real | 1898-1936 | [Wikipedia: Federico García Lorca](https://es.wikipedia.org/wiki/Federico_Garc%C3%ADa_Lorca) |
+| Pedro de Castro | persona real | 1534-1623 | [Wikipedia: Pedro de Castro y Quiñones](https://es.wikipedia.org/wiki/Pedro_de_Castro_y_Qui%C3%B1ones) |
+| Alonso del Castillo | persona real | c. 1520-c. 1610 | [Wikipedia: Alonso del Castillo (morisco)](https://es.wikipedia.org/wiki/Alonso_del_Castillo_(morisco)) |
+| Miguel de Luna | persona real | c. 1550-1615 | [Wikipedia: Miguel de Luna](https://es.wikipedia.org/wiki/Miguel_de_Luna) |
 
 ### «¿Quién mató a los Abencerrajes?»: lo que afirma la ruta
 
@@ -356,6 +359,15 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Palacio de Dar al-Horra**: Dar al-Horra, «la casa de la señora», fue la residencia de Aixa, la madre de Boabdil. Es un palacio nazarí del siglo XV.
 - [ ] **Arco de las Pesas**: El Arco de las Pesas era una puerta de la muralla del Albaicín, del siglo XI. Allí se colgaban las pesas falsas requisadas en el mercado.
 - [ ] **Casa de Castril** (1539): La Casa de Castril es un palacio renacentista de 1539. Desde 1917 alberga el Museo Arqueológico de Granada. En su fachada está la ventana tapiada con la frase «Esperándola del cielo».
+
+### «¿Quién escribió los libros de plomo?»: lo que afirma la ruta
+
+- [ ] **Torre Turpiana (catedral)** (1588): Junto a la catedral estaba la Torre Turpiana, el antiguo alminar de la mezquita mayor. Al derribarla, el 18 de marzo de 1588, apareció una caja de plomo con un pergamino escrito en árabe, latín y castellano.
+- [ ] **Real Chancillería**: Antes de arzobispo, Pedro de Castro presidió la Real Chancillería, el gran tribunal del sur de Castilla, en este palacio de la plaza Nueva.
+- [ ] **Carrera del Darro** (1609): Tras la rebelión de las Alpujarras (1568-1571), a los moriscos se les prohibió su lengua, su ropa y sus costumbres. En 1609 empezó su expulsión de España.
+- [ ] **San Juan de los Reyes**: La iglesia de San Juan de los Reyes conserva el alminar de una mezquita del siglo XIII, con paños de rombos de ladrillo parecidos a los de la Giralda. Así debía de ser la Torre Turpiana.
+- [ ] **Cuevas del Sacromonte** (1595): Entre 1595 y 1599 aparecieron en las cuevas de este monte láminas y libros de plomo, con textos en latín y en unas letras árabes raras que llamaron «salomónicas».
+- [ ] **Abadía del Sacromonte** (1610): Pedro de Castro fundó la abadía del Sacromonte en 1610, sobre las cuevas del hallazgo. Ese mismo año, los moriscos de Granada ya estaban siendo expulsados.
 
 ## Huelva
 

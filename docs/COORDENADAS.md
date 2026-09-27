@@ -5,7 +5,7 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 162. Con aviso: 96.
+Paradas revisadas: 168. Con aviso: 101.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
@@ -57,6 +57,9 @@ Paradas revisadas: 162. Con aviso: 96.
 | Córdoba | Plaza de Santa Marina | `tomate-salmorejo` | 37.88890, -4.77720 | — | — | OSM no lo encuentra con ese nombre |
 | Córdoba | Cruz de mayo en San Andrés | `mayo-cordobes` | 37.88580, -4.77310 | — | — | OSM no lo encuentra con ese nombre |
 | Córdoba | Plaza de San Andrés | `malmuerta` | 37.88580, -4.77310 | — | — | OSM no lo encuentra con ese nombre |
+| Granada | Cuevas del Sacromonte | `libros-plomo` | 37.18158, -3.58511 | 37.18121, -3.58819 | 276 m | Cuevas Los Tarantos |
+| Granada | San Juan de los Reyes | `libros-plomo` | 37.17993, -3.59182 | 37.17848, -3.59432 | 275 m | Calle San Juan de los Reyes |
+| Granada | Carrera del Darro | `libros-plomo` | 37.17795, -3.59370 | 37.17858, -3.59199 | 167 m | Calle Carrera del Darro |
 | Granada | Arco de las Pesas | `abencerrajes` | 37.18260, -3.59200 | 37.18247, -3.59377 | 158 m | Arco de Las Pesas |
 | Granada | Plaza Isabel la Católica | `abencerrajes` | 37.17600, -3.59850 | 37.17552, -3.59740 | 111 m | Plaza de Isabel la Católica |
 | Granada | El Bañuelo | `abencerrajes` | 37.17780, -3.59220 | 37.17845, -3.59299 | 100 m | El Bañuelo |
@@ -65,6 +68,8 @@ Paradas revisadas: 162. Con aviso: 96.
 | Granada | Paseo de los Tristes | `abencerrajes` | 37.17920, -3.59050 | — | — | OSM no lo encuentra con ese nombre |
 | Granada | Plaza de Bib-Rambla | `pionono` | 37.17520, -3.60030 | — | — | OSM no lo encuentra con ese nombre |
 | Granada | Casa de Castril | `ventana-castril` | 37.17870, -3.59170 | — | — | OSM no lo encuentra con ese nombre |
+| Granada | Torre Turpiana (catedral) | `libros-plomo` | 37.17650, -3.59950 | — | — | OSM no lo encuentra con ese nombre |
+| Granada | Real Chancillería | `libros-plomo` | 37.17680, -3.59600 | — | — | OSM no lo encuentra con ese nombre |
 | Huelva | Museo de Huelva | `decano` | 37.26160, -6.94420 | 37.25499, -6.94359 | 737 m | Museo Provincial de Huelva |
 | Huelva | Plaza del Punto | `choqueros` | 37.25950, -6.95190 | 37.25470, -6.94692 | 693 m | Plaza del Punto |
 | Huelva | Plaza de la Merced | `decano` | 37.26380, -6.94780 | 37.26242, -6.95238 | 434 m | Plaza de la Merced |

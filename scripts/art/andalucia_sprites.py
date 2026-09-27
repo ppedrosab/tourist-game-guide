@@ -219,6 +219,12 @@ CHARACTERS = {
                     second="#3A2A1E", neck=PAPER, left="palette", right="brush", raise_right=True),
     "valdesleal": dict(skin="media", hair=("short", "#1E1A1A"), beard_=("full", "#1E1A1A"), outfit="jacket", main="#7A2E3A", accent=GOLD,
                        second="#2B2A33", neck=PAPER, left="lantern", right="brush"),
+    "pedrodecastro": dict(skin="clara", hair=("bald", GREY), beard_=("short", GREY), outfit="habit", main="#5A2E4E", accent=PAPER,
+                          second="#3A1E34", neck=PAPER, left="book"),
+    "alonsocastillo": dict(skin="media", hair=("short", GREY), beard_=("full", GREY), outfit="jacket", main="#2E5E3E", accent=GOLD,
+                           second="#2B2A33", neck=PAPER, left="bag", right="scroll"),
+    "miguelluna": dict(skin="morena", hair=("short", "#1E1A1A"), beard_=("short", "#1E1A1A"), outfit="jacket", main="#2F4F6E", accent=GOLD,
+                       second="#2B2A33", neck=PAPER, left="book", right="quill", raise_right=True),
 }
 
 if __name__ == "__main__":
