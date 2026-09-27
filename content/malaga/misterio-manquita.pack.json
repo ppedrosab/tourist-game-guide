@@ -1,6 +1,6 @@
 {
   "id": "malaga",
-  "version": 7,
+  "version": 8,
   "name": { "es": "Málaga", "en": "Málaga" },
   "languages": ["es", "en"],
   "center": { "lat": 36.7205, "lng": -4.4205 },
@@ -22,7 +22,10 @@
     {"id": "biznaguero", "name": {"es": "El Biznaguero", "en": "The Biznaga Seller"}, "description": {"es": "Vende biznagas de jazmín por las calles de Málaga, como el de la estatua del parque. Presumido y buen conversador.", "en": "He sells jasmine biznagas in the streets of Málaga, like the one in the statue in the park. Dapper and a good talker."}, "avatar": "sprites/biznaguero/biznaguero_neutral.svg", "kind": "tipo", "bio": {"es": "La biznaga es un ramillete de jazmines pinchados uno a uno en un cardo seco, y es un símbolo de Málaga. El biznaguero las vende de noche por las calles y paseos. En el Parque de Málaga hay una estatua de un biznaguero, obra de Jaime Pimentel (1990).", "en": "A biznaga is a posy of jasmine flowers pinned one by one onto a dried thistle, and it is a symbol of Málaga. The biznaguero sells them at night on the streets and promenades. There is a statue of a biznaguero in the Parque de Málaga, by Jaime Pimentel (1990)."}, "sources": [{"title": "Wikipedia: Biznaga", "url": "https://es.wikipedia.org/wiki/Biznaga"}], "voice": {"gender": "m"}},
     {"id": "diazescovar", "name": {"es": "Narciso Díaz de Escovar", "en": "Narciso Díaz de Escovar"}, "description": {"es": "Escritor malagueño que recogió las tradiciones de su ciudad en «Curiosidades malagueñas» (1899). Curioso y muy conversador.", "en": "A Málaga writer who gathered his city's traditions in “Curiosidades malagueñas” (1899). Curious and very talkative."}, "avatar": "sprites/diazescovar/diazescovar_neutral.svg", "era": "1860 - 1935", "kind": "real", "lived": "1860-1935", "bio": {"es": "Narciso Díaz de Escovar fue escritor, periodista e historiador del teatro. Recogió la historia menuda de su ciudad en libros como «Curiosidades malagueñas» (1899), donde cuenta tradiciones como la de la casa de las Siete Cabezas. Fue cronista de Málaga y su archivo es hoy una fuente básica para conocer la ciudad del XIX.", "en": "Narciso Díaz de Escovar was a writer, journalist and theatre historian. He gathered the small history of his city in books such as “Curiosidades malagueñas” (1899), where he tells traditions like that of the House of the Seven Heads. He was Málaga's chronicler, and his archive is a key source on the 19th-century city."}, "sources": [{"title": "Wikipedia: Narciso Díaz de Escovar", "url": "https://es.wikipedia.org/wiki/Narciso_D%C3%ADaz_de_Escovar"}, {"title": "Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)", "url": "https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/"}], "voice": {"gender": "m"}},
     {"id": "sanchalara", "name": {"es": "Doña Sancha de Lara", "en": "Doña Sancha de Lara"}, "description": {"es": "Dama de la tradición de las Siete Cabezas, tía de don Álvaro. Orgullosa e implacable.", "en": "The lady of the Seven Heads tradition, Don Álvaro's aunt. Proud and relentless."}, "avatar": "sprites/sanchalara/sanchalara_neutral.svg", "era": "1639 (tradición)", "kind": "leyenda", "lived": "1639 (tradición)", "bio": {"es": "Según la tradición que recogió Díaz de Escovar, doña Sancha de Lara era la tía de don Álvaro Torres, ahorcado en 1639 por orden del corregidor. Fue a la corte de Felipe IV a pedir justicia, y cuando los culpables fueron ajusticiados mandó labrar sus cabezas en la fachada de su casa. No se conservan documentos que lo confirmen.", "en": "According to the tradition recorded by Díaz de Escovar, Doña Sancha de Lara was the aunt of Don Álvaro Torres, hanged in 1639 on the magistrate's orders. She went to the court of Philip IV to demand justice, and when the culprits were executed she had their heads carved on the front of her house. No documents survive to confirm it."}, "sources": [{"title": "Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)", "url": "https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/"}, {"title": "MálagaTurismo, «La casa de las Siete Cabezas»", "url": "https://www.malagaturismo.es/post/la-casa-de-las-siete-cabezas-leyendas-de-malaga"}], "voice": {"gender": "f"}},
-    {"id": "olavarria", "name": {"es": "El corregidor Olavarría", "en": "Magistrate Olavarría"}, "description": {"es": "Don Pedro de Olavarría, el corregidor duro de la tradición de las Siete Cabezas. Soberbio y, al final, arrepentido.", "en": "Don Pedro de Olavarría, the harsh magistrate of the Seven Heads tradition. Arrogant and, in the end, remorseful."}, "avatar": "sprites/olavarria/olavarria_neutral.svg", "era": "1639 (tradición)", "kind": "leyenda", "lived": "1639 (tradición)", "bio": {"es": "En la tradición de las Siete Cabezas, don Pedro de Olavarría es el corregidor de Málaga que manda ahorcar a don Álvaro Torres por no quitarse el sombrero ante él. El rey le castiga y su cabeza acaba en la fachada con las demás. Es un personaje de la tradición: su historia no está documentada.", "en": "In the tradition of the Seven Heads, Don Pedro de Olavarría is the magistrate of Málaga who has Don Álvaro Torres hanged for not taking off his hat to him. The king punishes him, and his head ends up on the façade with the others. He is a figure of tradition: his story is not documented."}, "sources": [{"title": "Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)", "url": "https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/"}], "voice": {"gender": "m"}}
+    {"id": "olavarria", "name": {"es": "El corregidor Olavarría", "en": "Magistrate Olavarría"}, "description": {"es": "Don Pedro de Olavarría, el corregidor duro de la tradición de las Siete Cabezas. Soberbio y, al final, arrepentido.", "en": "Don Pedro de Olavarría, the harsh magistrate of the Seven Heads tradition. Arrogant and, in the end, remorseful."}, "avatar": "sprites/olavarria/olavarria_neutral.svg", "era": "1639 (tradición)", "kind": "leyenda", "lived": "1639 (tradición)", "bio": {"es": "En la tradición de las Siete Cabezas, don Pedro de Olavarría es el corregidor de Málaga que manda ahorcar a don Álvaro Torres por no quitarse el sombrero ante él. El rey le castiga y su cabeza acaba en la fachada con las demás. Es un personaje de la tradición: su historia no está documentada.", "en": "In the tradition of the Seven Heads, Don Pedro de Olavarría is the magistrate of Málaga who has Don Álvaro Torres hanged for not taking off his hat to him. The king punishes him, and his head ends up on the façade with the others. He is a figure of tradition: his story is not documented."}, "sources": [{"title": "Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)", "url": "https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/"}], "voice": {"gender": "m"}},
+    {"id": "picasso", "name": {"es": "Pablo Picasso", "en": "Pablo Picasso"}, "description": {"es": "El pintor más famoso del siglo XX, nacido en la plaza de la Merced. Curioso, bromista y con la mirada más intensa de Málaga.", "en": "The most famous painter of the 20th century, born on Plaza de la Merced. Curious, playful and with the most intense gaze in Málaga."}, "avatar": "sprites/picasso/picasso_neutral.svg", "era": "1881-1973", "kind": "real", "lived": "1881-1973", "bio": {"es": "Pablo Ruiz Picasso nació en Málaga en 1881 y vivió aquí hasta los diez años. Estudió en La Coruña, Barcelona y Madrid, y desde 1904 vivió en Francia. Creó el cubismo con Georges Braque y pintó «Guernica» (1937). Tras la Guerra Civil no quiso volver a España mientras gobernara Franco, y murió en Mougins (Francia) en 1973. Su ciudad natal le dedica la Casa Natal y el Museo Picasso Málaga.", "en": "Pablo Ruiz Picasso was born in Málaga in 1881 and lived here until he was ten. He studied in A Coruña, Barcelona and Madrid, and from 1904 lived in France. He created Cubism with Georges Braque and painted “Guernica” (1937). After the Civil War he refused to return to Spain while Franco ruled, and died in Mougins (France) in 1973. His home town has the Birthplace Museum and the Picasso Museum Málaga."}, "sources": [{"title": "Wikipedia: Pablo Picasso", "url": "https://es.wikipedia.org/wiki/Pablo_Picasso"}, {"title": "Wikipedia: Relación entre Picasso y Málaga", "url": "https://es.wikipedia.org/wiki/Relaci%C3%B3n_entre_Picasso_y_M%C3%A1laga"}], "voice": {"gender": "m"}},
+    {"id": "ruizblasco", "name": {"es": "José Ruiz Blasco", "en": "José Ruiz Blasco"}, "description": {"es": "Padre de Picasso, pintor de palomas y profesor de dibujo en San Telmo. Pelirrojo, serio y muy exigente con los pinceles.", "en": "Picasso's father, a painter of pigeons and drawing teacher at San Telmo. Red-haired, serious and very demanding with the brush."}, "avatar": "sprites/ruizblasco/ruizblasco_neutral.svg", "era": "1838-1913", "kind": "real", "lived": "1838-1913", "bio": {"es": "José Ruiz Blasco fue pintor de bodegones y, sobre todo, de palomas. Fue profesor de dibujo en la Escuela de Bellas Artes de San Telmo de Málaga y conservador del museo municipal. En 1891 se trasladó con la familia a La Coruña y después a Barcelona. Fue el primer maestro de su hijo.", "en": "José Ruiz Blasco painted still lifes and, above all, pigeons. He taught drawing at Málaga's San Telmo School of Fine Arts and was curator of the municipal museum. In 1891 he moved the family to A Coruña and later to Barcelona. He was his son's first teacher."}, "sources": [{"title": "Wikipedia (en): José Ruiz y Blasco", "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Ruiz_y_Blasco"}, {"title": "Museo Casa Natal Picasso, «La familia de Picasso»", "url": "https://museocasanatalpicasso.malaga.eu/museo-casa-natal/la-familia-de-picasso/"}], "voice": {"gender": "m"}},
+    {"id": "mariapicasso", "name": {"es": "María Picasso López", "en": "María Picasso López"}, "description": {"es": "Madre de Picasso, malagueña. Cariñosa, orgullosa de su hijo y con muy buena memoria para las anécdotas.", "en": "Picasso's mother, from Málaga. Loving, proud of her son and with a great memory for anecdotes."}, "avatar": "sprites/mariapicasso/mariapicasso_neutral.svg", "era": "1855-1939", "kind": "real", "lived": "1855-1939", "bio": {"es": "María Picasso López era malagueña y se casó con José Ruiz Blasco en 1880. Fue la madre de Pablo y de sus hermanas Lola y Conchita. Su hijo acabó firmando con su apellido, Picasso. Murió en Barcelona en 1939.", "en": "María Picasso López was from Málaga and married José Ruiz Blasco in 1880. She was the mother of Pablo and his sisters Lola and Conchita. Her son ended up signing with her surname, Picasso. She died in Barcelona in 1939."}, "sources": [{"title": "Museo Casa Natal Picasso, «La familia de Picasso»", "url": "https://museocasanatalpicasso.malaga.eu/museo-casa-natal/la-familia-de-picasso/"}], "voice": {"gender": "f"}}
   ],
   "routes": [
     {
@@ -3541,6 +3544,969 @@
         {"title": "Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)", "url": "https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/"},
         {"title": "MálagaTurismo, «La casa de las Siete Cabezas»", "url": "https://www.malagaturismo.es/post/la-casa-de-las-siete-cabezas-leyendas-de-malaga"},
         {"title": "Wikipedia: Narciso Díaz de Escovar", "url": "https://es.wikipedia.org/wiki/Narciso_D%C3%ADaz_de_Escovar"}
+      ]
+    },
+    {
+      "id": "picasso",
+      "title": {
+        "es": "¿Por qué Picasso no volvió a Málaga?",
+        "en": "Why Didn't Picasso Come Back to Málaga?"
+      },
+      "summary": {
+        "es": "El pintor más famoso del siglo XX nació en la plaza de la Merced y nunca regresó. ¿Fue la familia, París o una guerra? Con Pablo Picasso, su padre José Ruiz Blasco y su madre María Picasso.",
+        "en": "The most famous painter of the 20th century was born on Plaza de la Merced and never returned. Was it his family, Paris or a war? With Pablo Picasso, his father José Ruiz Blasco and his mother María Picasso."
+      },
+      "era": "1881 - 1973",
+      "guideCharacterId": "picasso",
+      "durationMin": 60,
+      "distanceKm": 2.3,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El padre",
+            "en": "The father"
+          },
+          "trail": {
+            "es": "camino del padre",
+            "en": "father's trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los toros",
+            "en": "The bullring"
+          },
+          "trail": {
+            "es": "camino de los toros",
+            "en": "bullring trail"
+          }
+        }
+      },
+      "startNodeId": "p1_merced",
+      "nodes": [
+        {
+          "id": "p1_merced",
+          "title": {
+            "es": "Casa natal de Picasso",
+            "en": "Picasso's birthplace"
+          },
+          "location": {
+            "lat": 36.72407,
+            "lng": -4.41756
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "picasso",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "mariapicasso",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "happy",
+              "text": {
+                "es": "Hola. Pablo Ruiz Picasso. Nací aquí, en la plaza de la Merced, el 25 de octubre de 1881. Luego fui el pintor más famoso del siglo XX… y nunca volví a Málaga.",
+                "en": "Hello. Pablo Ruiz Picasso. I was born here, on Plaza de la Merced, on 25 October 1881. Later I became the most famous painter of the 20th century… and I never came back to Málaga."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mariapicasso",
+              "expression": "proud",
+              "text": {
+                "es": "María Picasso López, su madre. Se cuenta que su primera palabra fue «piz, piz»: quería un lápiz. Dibujaba antes de hablar.",
+                "en": "María Picasso López, his mother. They say his first word was “piz, piz”: he wanted a pencil (lápiz). He drew before he could talk."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "thinking",
+              "text": {
+                "es": "¿Por qué no volví? Tres sospechosos: que mi familia se fue, que París me atrapó o que una guerra me cerró la puerta. Averígualo.",
+                "en": "Why didn't I come back? Three suspects: my family left, Paris caught me, or a war shut the door. Find out."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La casa donde nació Picasso es hoy el Museo Casa Natal, con recuerdos de la familia y obra del pintor.",
+                "en": "The house where Picasso was born is now the Birthplace Museum, with family keepsakes and works by the painter."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año nació Picasso en esta plaza?",
+              "en": "In what year was Picasso born on this square?"
+            },
+            "options": [
+              {
+                "es": "En 1937",
+                "en": "In 1937"
+              },
+              {
+                "es": "En 1881",
+                "en": "In 1881"
+              },
+              {
+                "es": "En 1901",
+                "en": "In 1901"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "En 1881, el 25 de octubre.",
+              "en": "In 1881, on 25 October."
+            }
+          },
+          "clue": {
+            "id": "pic_pista_casa",
+            "text": {
+              "es": "La familia · Picasso nació en 1881 en la plaza de la Merced y aquí pasó sus primeros diez años.",
+              "en": "The family · Picasso was born in 1881 on Plaza de la Merced and spent his first ten years here."
+            }
+          },
+          "nextNodeId": "p2_santiago",
+          "nextHint": {
+            "es": "A la iglesia de Santiago, en la calle Granada. Un par de minutos.",
+            "en": "To the church of Santiago, on Calle Granada. A couple of minutes."
+          }
+        },
+        {
+          "id": "p2_santiago",
+          "title": {
+            "es": "Iglesia de Santiago",
+            "en": "Church of Santiago"
+          },
+          "location": {
+            "lat": 36.72234,
+            "lng": -4.41751
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_malaga_santiago.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_santiago.svg"
+              ],
+              "characters": [
+                {
+                  "id": "picasso",
+                  "expression": "surprised",
+                  "position": "left"
+                },
+                {
+                  "id": "mariapicasso",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En esta iglesia bautizaron a Picasso el 10 de noviembre de 1881. Su torre mudéjar es de las más antiguas de Málaga.",
+                "en": "Picasso was baptised in this church on 10 November 1881. Its Mudéjar tower is one of the oldest in Málaga."
+              },
+              "year": 1881
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mariapicasso",
+              "expression": "happy",
+              "text": {
+                "es": "Le pusimos un nombre larguísimo: Pablo, Diego, José, Francisco de Paula, Juan Nepomuceno… y unos cuantos más. Él se quedó con Picasso, mi apellido.",
+                "en": "We gave him a very long name: Pablo, Diego, José, Francisco de Paula, Juan Nepomuceno… and a few more. He kept Picasso, my surname."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "proud",
+              "text": {
+                "es": "Firmaba «P. Ruiz Picasso». Al final solo «Picasso»: se recuerda mejor, ¿no?",
+                "en": "I signed “P. Ruiz Picasso”. In the end just “Picasso”: easier to remember, don't you think?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué apellido eligió Picasso para firmar?",
+              "en": "Which surname did Picasso choose to sign with?"
+            },
+            "options": [
+              {
+                "es": "El de su madre",
+                "en": "His mother's"
+              },
+              {
+                "es": "El de su padre",
+                "en": "His father's"
+              },
+              {
+                "es": "Uno inventado",
+                "en": "An invented one"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "El de su madre, María Picasso López.",
+              "en": "His mother's, María Picasso López."
+            }
+          },
+          "clue": {
+            "id": "pic_pista_nombre",
+            "text": {
+              "es": "La familia · Lo bautizaron en Santiago en 1881 y acabó firmando con el apellido de su madre.",
+              "en": "The family · He was baptised at Santiago in 1881 and ended up signing with his mother's surname."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "picasso",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Buscamos a mi padre, que me enseñó a pintar, o vamos a los toros, donde pinté mi primer cuadro?",
+              "en": "Shall we look for my father, who taught me to paint, or go to the bullring, where I painted my first picture?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "Tras el padre",
+                "en": "After his father"
+              },
+              "hint": {
+                "es": "El Ateneo, antigua escuela de San Telmo",
+                "en": "The Ateneo, the old San Telmo school"
+              },
+              "targetNodeId": "pa_ateneo",
+              "setFlags": [
+                "camino_padre"
+              ],
+              "distanceM": 500,
+              "walkMin": 7
+            },
+            {
+              "label": {
+                "es": "A los toros",
+                "en": "To the bullring"
+              },
+              "hint": {
+                "es": "Plaza de toros de La Malagueta",
+                "en": "La Malagueta bullring"
+              },
+              "targetNodeId": "pb_malagueta",
+              "setFlags": [
+                "camino_toros"
+              ],
+              "distanceM": 700,
+              "walkMin": 10
+            }
+          ]
+        },
+        {
+          "id": "pa_ateneo",
+          "title": {
+            "es": "Ateneo de Málaga",
+            "en": "Málaga Ateneo"
+          },
+          "location": {
+            "lat": 36.72139,
+            "lng": -4.42245
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_constitucion.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_constitucion.svg"
+              ],
+              "characters": [
+                {
+                  "id": "ruizblasco",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "picasso",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ruizblasco",
+              "expression": "proud",
+              "text": {
+                "es": "José Ruiz Blasco, pintor y profesor de dibujo. Enseñaba aquí, en la Escuela de Bellas Artes de San Telmo, y cuidaba el museo municipal. Mi especialidad: las palomas.",
+                "en": "José Ruiz Blasco, painter and drawing teacher. I taught here, at the San Telmo School of Fine Arts, and looked after the municipal museum. My speciality: pigeons."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Escuela de Bellas Artes de San Telmo estaba en este edificio, junto a la plaza de la Constitución, donde hoy está el Ateneo.",
+                "en": "The San Telmo School of Fine Arts was in this building, next to Plaza de la Constitución, where the Ateneo is today."
+              }
+            },
+            {
+              "type": "anecdote",
+              "text": {
+                "es": "Se cuenta que un día el padre dejó al niño terminar las patas de sus palomas y, al ver el resultado, le regaló sus pinceles. Pasó ya en La Coruña, hacia 1894.",
+                "en": "It's said that one day his father let the boy finish the feet of his pigeons and, seeing the result, gave him his brushes. It happened later, in A Coruña, around 1894."
+              },
+              "legend": true
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ruizblasco",
+              "expression": "nervous",
+              "text": {
+                "es": "En 1891 me ofrecieron plaza de profesor en La Coruña. Málaga no daba para más. Hicimos las maletas.",
+                "en": "In 1891 I was offered a teaching post in A Coruña. Málaga couldn't offer more. We packed our bags."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pintaba sobre todo el padre de Picasso?",
+              "en": "What did Picasso's father mostly paint?"
+            },
+            "options": [
+              {
+                "es": "Barcos",
+                "en": "Ships"
+              },
+              {
+                "es": "Retratos de reyes",
+                "en": "Portraits of kings"
+              },
+              {
+                "es": "Palomas",
+                "en": "Pigeons"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Palomas, y bodegones. Picasso las pintaría toda la vida: su paloma de la paz es de 1949.",
+              "en": "Pigeons, and still lifes. Picasso would paint them all his life: his dove of peace is from 1949."
+            }
+          },
+          "clue": {
+            "id": "pic_pista_coruna",
+            "text": {
+              "es": "La familia · En 1891 el padre aceptó una plaza en La Coruña y la familia se fue de Málaga.",
+              "en": "The family · In 1891 his father took a post in A Coruña and the family left Málaga."
+            }
+          },
+          "nextNodeId": "p4_museo",
+          "nextHint": {
+            "es": "Al Museo Picasso, en la calle San Agustín. Unos 7 minutos.",
+            "en": "To the Picasso Museum, on Calle San Agustín. About 7 minutes."
+          }
+        },
+        {
+          "id": "pb_malagueta",
+          "title": {
+            "es": "Plaza de toros de La Malagueta",
+            "en": "La Malagueta bullring"
+          },
+          "location": {
+            "lat": 36.72035,
+            "lng": -4.41078
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_malaga_toros.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_toros.svg"
+              ],
+              "characters": [
+                {
+                  "id": "picasso",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "ruizblasco",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La plaza de toros de La Malagueta se inauguró en 1876. Picasso venía de niño con su padre.",
+                "en": "La Malagueta bullring opened in 1876. Picasso came here as a child with his father."
+              },
+              "year": 1876
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "happy",
+              "text": {
+                "es": "Con ocho años pinté mi primer óleo: un picador a caballo, en amarillo. «El pequeño picador amarillo». No me separé de él en toda la vida.",
+                "en": "At eight I painted my first oil: a picador on horseback, in yellow. “The Little Yellow Picador”. I kept it with me all my life."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "ruizblasco",
+              "expression": "thinking",
+              "text": {
+                "es": "Lo que vio en esta plaza le acompañó siempre: toros, caballos, picadores… hasta en «Guernica» hay un toro.",
+                "en": "What he saw in this ring stayed with him forever: bulls, horses, picadors… there's even a bull in “Guernica”."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pintó Picasso en su primer óleo, con ocho años?",
+              "en": "What did Picasso paint in his first oil, aged eight?"
+            },
+            "options": [
+              {
+                "es": "La catedral",
+                "en": "The cathedral"
+              },
+              {
+                "es": "Un picador",
+                "en": "A picador"
+              },
+              {
+                "es": "Una paloma",
+                "en": "A pigeon"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Un picador a caballo: «El pequeño picador amarillo», hacia 1889-1890.",
+              "en": "A picador on horseback: “The Little Yellow Picador”, around 1889-1890."
+            }
+          },
+          "clue": {
+            "id": "pic_pista_toros",
+            "text": {
+              "es": "París · Los toros de Málaga le acompañaron toda la vida, también en París: hasta en «Guernica» hay un toro.",
+              "en": "Paris · Málaga's bullfights stayed with him all his life, in Paris too: there's even a bull in “Guernica”."
+            }
+          },
+          "nextNodeId": "p4_museo",
+          "nextHint": {
+            "es": "Al Museo Picasso, en la calle San Agustín. Unos 10 minutos.",
+            "en": "To the Picasso Museum, on Calle San Agustín. About 10 minutes."
+          }
+        },
+        {
+          "id": "p4_museo",
+          "title": {
+            "es": "Museo Picasso Málaga",
+            "en": "Picasso Museum Málaga"
+          },
+          "location": {
+            "lat": 36.72155,
+            "lng": -4.41828
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_malaga_buenavista.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_malaga_buenavista.svg"
+              ],
+              "characters": [
+                {
+                  "id": "picasso",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "mariapicasso",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Museo Picasso Málaga ocupa el Palacio de Buenavista, del siglo XVI. Abrió en 2003 con obras donadas por la familia del pintor.",
+                "en": "The Picasso Museum Málaga is in the 16th-century Buenavista Palace. It opened in 2003 with works donated by the painter's family."
+              },
+              "year": 2003
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_padre"
+                  ],
+                  "text": {
+                    "es": "Vienes de la escuela de mi padre: la familia se fue a La Coruña en 1891. ¿Seguimos la pista de la familia o la de la guerra?",
+                    "en": "You've come from my father's school: the family left for A Coruña in 1891. Shall we follow the family lead or the war lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_toros"
+                  ],
+                  "text": {
+                    "es": "Vienes de los toros: Málaga se vino conmigo a París. ¿Seguimos la pista de la familia o la de la guerra?",
+                    "en": "You've come from the bullring: Málaga came with me to Paris. Shall we follow the family lead or the war lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué edificio está el Museo Picasso Málaga?",
+              "en": "Which building houses the Picasso Museum Málaga?"
+            },
+            "options": [
+              {
+                "es": "En el Palacio de Buenavista",
+                "en": "In the Buenavista Palace"
+              },
+              {
+                "es": "En la catedral",
+                "en": "In the cathedral"
+              },
+              {
+                "es": "En la Alcazaba",
+                "en": "In the Alcazaba"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En el Palacio de Buenavista, del siglo XVI.",
+              "en": "In the 16th-century Buenavista Palace."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "picasso",
+            "expression": "thinking",
+            "text": {
+              "es": "¿La familia o la guerra?",
+              "en": "The family or the war?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de la familia",
+                "en": "The family lead"
+              },
+              "hint": {
+                "es": "Con mi madre",
+                "en": "With my mother"
+              },
+              "targetNodeId": "p4a_familia",
+              "setFlags": [
+                "version_familia"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la guerra",
+                "en": "The war lead"
+              },
+              "hint": {
+                "es": "Conmigo",
+                "en": "With me"
+              },
+              "targetNodeId": "p4b_guerra",
+              "setFlags": [
+                "version_guerra"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p4a_familia",
+          "title": {
+            "es": "La familia",
+            "en": "The family"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mariapicasso",
+              "expression": "thinking",
+              "text": {
+                "es": "Nos fuimos en 1891, pero volvíamos en verano. La última vez que él estuvo en Málaga fue entre diciembre de 1900 y enero de 1901, con su amigo Casagemas.",
+                "en": "We left in 1891, but came back in summer. The last time he was in Málaga was between December 1900 and January 1901, with his friend Casagemas."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "mariapicasso",
+              "expression": "dramatic",
+              "text": {
+                "es": "Después, Barcelona y París. En 1904 se quedó en París. Y luego… luego vino lo que ninguno esperábamos.",
+                "en": "Then Barcelona and Paris. In 1904 he settled in Paris. And then… then came what none of us expected."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pic_pista_1901",
+            "text": {
+              "es": "París · Su última visita a Málaga fue en el invierno de 1900-1901; en 1904 se instaló en París.",
+              "en": "Paris · His last visit to Málaga was in the winter of 1900-1901; in 1904 he settled in Paris."
+            }
+          },
+          "nextNodeId": "p5_monumento",
+          "nextHint": {
+            "es": "Vuelve a la plaza de la Merced, al banco de Picasso. Un par de minutos.",
+            "en": "Go back to Plaza de la Merced, to Picasso's bench. A couple of minutes."
+          }
+        },
+        {
+          "id": "p4b_guerra",
+          "title": {
+            "es": "La guerra",
+            "en": "The war"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "dramatic",
+              "text": {
+                "es": "En 1937 pinté «Guernica» por el bombardeo de esa villa. Después de la guerra, dije que no pisaría España mientras gobernara Franco.",
+                "en": "In 1937 I painted “Guernica” after the bombing of that town. After the war, I said I wouldn't set foot in Spain while Franco was in power."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "thinking",
+              "text": {
+                "es": "Y cumplí. Morí en Francia en 1973. Franco murió en 1975. No llegué a tiempo.",
+                "en": "And I kept my word. I died in France in 1973. Franco died in 1975. I didn't make it in time."
+              }
+            }
+          ],
+          "clue": {
+            "id": "pic_pista_franco",
+            "text": {
+              "es": "La guerra · Tras la Guerra Civil decidió no volver a España mientras gobernara Franco; murió antes que él, en 1973.",
+              "en": "The war · After the Civil War he decided not to return to Spain while Franco ruled; he died before him, in 1973."
+            }
+          },
+          "nextNodeId": "p5_monumento",
+          "nextHint": {
+            "es": "Vuelve a la plaza de la Merced, al banco de Picasso. Un par de minutos.",
+            "en": "Go back to Plaza de la Merced, to Picasso's bench. A couple of minutes."
+          }
+        },
+        {
+          "id": "p5_monumento",
+          "title": {
+            "es": "El banco de Picasso",
+            "en": "Picasso's bench"
+          },
+          "location": {
+            "lat": 36.72361,
+            "lng": -4.41764
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "picasso",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "ruizblasco",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la plaza de la Merced hay una escultura de bronce de Picasso sentado en un banco, obra de Francisco López Hernández (2008).",
+                "en": "On Plaza de la Merced there is a bronze sculpture of Picasso sitting on a bench, by Francisco López Hernández (2008)."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. La familia, París o la guerra: ¿por qué no volví a Málaga?",
+                "en": "Verdict time. The family, Paris or the war: why didn't I come back to Málaga?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué Picasso no volvió a Málaga?",
+              "en": "Why didn't Picasso come back to Málaga?"
+            },
+            "options": [
+              {
+                "es": "Porque se perdió",
+                "en": "Because he got lost"
+              },
+              {
+                "es": "Porque no le gustaba Málaga",
+                "en": "Because he didn't like Málaga"
+              },
+              {
+                "es": "Por todo a la vez: la familia se fue, él se quedó en París y después no quiso volver a la España de Franco",
+                "en": "All at once: the family left, he stayed in Paris and later refused to return to Franco's Spain"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Las tres pistas eran ciertas. La familia se fue en 1891, él vivió en París desde 1904 y, tras la Guerra Civil, no quiso volver a España mientras gobernara Franco. Su última visita fue en 1901. Málaga lo recuperó con su museo, abierto en 2003.",
+              "en": "All three leads were true. The family left in 1891, he lived in Paris from 1904 and, after the Civil War, he refused to return to Spain while Franco ruled. His last visit was in 1901. Málaga got him back with his museum, opened in 2003."
+            }
+          },
+          "nextNodeId": "p6_final"
+        },
+        {
+          "id": "p6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_padre",
+                    "version_familia"
+                  ],
+                  "text": {
+                    "es": "El padre y la familia: pinceles y maletas. Eres aprendiz de San Telmo.",
+                    "en": "Father and family: brushes and suitcases. You're a San Telmo apprentice."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_padre",
+                    "version_guerra"
+                  ],
+                  "text": {
+                    "es": "El padre y la guerra: de las palomas a la paloma de la paz. Eres pintor de palomas.",
+                    "en": "Father and war: from pigeons to the dove of peace. You're a painter of doves."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_toros",
+                    "version_familia"
+                  ],
+                  "text": {
+                    "es": "Los toros y la familia: un niño con un picador amarillo. Eres el picador amarillo.",
+                    "en": "Bullring and family: a boy with a yellow picador. You're the yellow picador."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_toros",
+                    "version_guerra"
+                  ],
+                  "text": {
+                    "es": "Los toros y la guerra: el toro que acabó en «Guernica». Eres pintor en el exilio.",
+                    "en": "Bullring and war: the bull that ended up in “Guernica”. You're a painter in exile."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "happy",
+              "text": {
+                "es": "No volví, pero me traje Málaga en los ojos: la luz, las palomas, los toros. Siéntate un rato en mi banco antes de irte.",
+                "en": "I didn't come back, but I took Málaga with me in my eyes: the light, the pigeons, the bulls. Sit a while on my bench before you go."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "aprendiz_santelmo",
+          "requires": [
+            "camino_padre",
+            "version_familia"
+          ],
+          "title": {
+            "es": "Aprendiz de San Telmo",
+            "en": "San Telmo apprentice"
+          }
+        },
+        {
+          "id": "pintor_palomas",
+          "requires": [
+            "camino_padre",
+            "version_guerra"
+          ],
+          "title": {
+            "es": "Pintor de palomas",
+            "en": "Painter of doves"
+          }
+        },
+        {
+          "id": "picador_amarillo",
+          "requires": [
+            "camino_toros",
+            "version_familia"
+          ],
+          "title": {
+            "es": "El picador amarillo",
+            "en": "The yellow picador"
+          }
+        },
+        {
+          "id": "pintor_exilio",
+          "requires": [
+            "camino_toros",
+            "version_guerra"
+          ],
+          "title": {
+            "es": "Pintor en el exilio",
+            "en": "Painter in exile"
+          }
+        }
+      ],
+      "paths": {
+        "p1_merced->p2_santiago": [[-4.41765,36.72413],[-4.41777,36.724],[-4.41765,36.72387],[-4.41708,36.72352],[-4.41754,36.72296],[-4.41746,36.7229],[-4.41771,36.72241]],
+        "p2_santiago->pa_ateneo": [[-4.41771,36.72241],[-4.41791,36.72203],[-4.41809,36.72195],[-4.4191,36.72209],[-4.42015,36.72165],[-4.42091,36.72183],[-4.42124,36.72163],[-4.42165,36.72126],[-4.42246,36.7213]],
+        "p2_santiago->pb_malagueta": [[-4.41771,36.72241],[-4.4175,36.72285],[-4.41705,36.72264],[-4.41706,36.72253],[-4.41666,36.72234],[-4.41657,36.72237],[-4.41629,36.72225],[-4.41622,36.72216],[-4.41348,36.72126],[-4.41345,36.72104],[-4.41323,36.72109],[-4.41286,36.72105],[-4.41274,36.72095],[-4.41259,36.72099],[-4.41231,36.72092],[-4.41127,36.72091],[-4.41134,36.72041]],
+        "pa_ateneo->p4_museo": [[-4.42246,36.7213],[-4.42158,36.72126],[-4.42012,36.7208],[-4.42011,36.72069],[-4.41922,36.72074],[-4.41822,36.72056],[-4.4181,36.72099],[-4.4181,36.72128],[-4.41801,36.72147]],
+        "pb_malagueta->p4_museo": [[-4.41134,36.72041],[-4.41127,36.72091],[-4.41231,36.72092],[-4.41259,36.72099],[-4.41274,36.72095],[-4.41286,36.72105],[-4.41323,36.72109],[-4.41345,36.72104],[-4.41349,36.72112],[-4.4159,36.72045],[-4.4162,36.72033],[-4.41658,36.72004],[-4.41715,36.72043],[-4.41733,36.72045],[-4.41728,36.721],[-4.41808,36.72122],[-4.41801,36.72147]],
+        "p4_museo->p5_monumento": [[-4.41801,36.72147],[-4.41723,36.72136],[-4.41716,36.72174],[-4.41705,36.72264],[-4.41715,36.72269],[-4.41711,36.72275],[-4.41779,36.72307],[-4.41763,36.72325],[-4.41772,36.7233],[-4.41766,36.72337],[-4.41781,36.72345],[-4.41766,36.72362]]
+      },
+      "rewards": [
+        {
+          "id": "lapiz_piz",
+          "name": {
+            "es": "El lápiz del «piz, piz»",
+            "en": "The “piz, piz” pencil"
+          },
+          "icon": "collectibles/malaga_picasso_lapiz.svg",
+          "awardedAtNodeId": "p1_merced"
+        },
+        {
+          "id": "nombre_largo",
+          "name": {
+            "es": "El nombre larguísimo",
+            "en": "The very long name"
+          },
+          "icon": "collectibles/malaga_picasso_nombre.svg",
+          "awardedAtNodeId": "p2_santiago"
+        },
+        {
+          "id": "paloma_padre",
+          "name": {
+            "es": "La paloma de papá",
+            "en": "Father's pigeon"
+          },
+          "icon": "collectibles/malaga_picasso_paloma.svg",
+          "awardedAtNodeId": "pa_ateneo"
+        },
+        {
+          "id": "picador_oleo",
+          "name": {
+            "es": "El pequeño picador amarillo",
+            "en": "The little yellow picador"
+          },
+          "icon": "collectibles/malaga_picasso_picador.svg",
+          "awardedAtNodeId": "pb_malagueta"
+        },
+        {
+          "id": "paleta_picasso",
+          "name": {
+            "es": "La paleta de Picasso",
+            "en": "Picasso's palette"
+          },
+          "icon": "collectibles/malaga_picasso_paleta.svg",
+          "awardedAtNodeId": "p5_monumento"
+        },
+        {
+          "id": "insignia_picasso",
+          "name": {
+            "es": "¿Por qué Picasso no volvió a Málaga?",
+            "en": "Why Didn't Picasso Come Back to Málaga?"
+          },
+          "icon": "collectibles/malaga_picasso_insignia.svg",
+          "awardedAtNodeId": "p6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Relación entre Picasso y Málaga",
+          "url": "https://es.wikipedia.org/wiki/Relaci%C3%B3n_entre_Picasso_y_M%C3%A1laga"
+        },
+        {
+          "title": "Museo Casa Natal Picasso, «La familia de Picasso»",
+          "url": "https://museocasanatalpicasso.malaga.eu/museo-casa-natal/la-familia-de-picasso/"
+        },
+        {
+          "title": "Museo Picasso Málaga",
+          "url": "https://www.museopicassomalaga.org/"
+        },
+        {
+          "title": "Wikipedia: Pablo Picasso",
+          "url": "https://es.wikipedia.org/wiki/Pablo_Picasso"
+        }
       ]
     }
   ]

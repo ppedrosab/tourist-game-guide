@@ -191,6 +191,15 @@ CHARACTERS = {
     "lorca": dict(skin="media", hair=("slick", "#1E1A1A"), outfit="jacket", main="#3A3A48", accent="#D8412F", second="#2B2A33",
                   left="book", right="quill", raise_right=True,
                   extra='<path d="M74 58Q84 52 92 56M108 56Q116 52 126 58" fill="none" stroke="#1E1A1A" stroke-width="4"/>'),
+    # --- Rutas para completar las ciudades -------------------------------------------
+    # Málaga · Picasso: camiseta marinera; su padre, pelirrojo y con paleta; su madre, con moño
+    "picasso": dict(skin="media", eyes="#1E1A1A", hair=("short", "#1E1A1A"), outfit="shirt", main=PAPER, accent="#26344A", second="#3A3A48",
+                    left="palette", right="quill", raise_right=True,
+                    extra="".join(f'<path d="M72 {y}Q100 {y + 3} 128 {y}" fill="none" stroke="#26344A" stroke-width="4"/>' for y in (130, 142, 154, 166))),
+    "ruizblasco": dict(skin="clara", eyes="#3A5A7A", hair=("short", "#B5562B"), beard_=("full", "#B5562B"), outfit="jacket", main="#5A4632",
+                       accent="#2B2A33", second="#3A3A48", left="palette"),
+    "mariapicasso": dict(skin="media", hair=("bun", "#1E1A1A"), outfit="dress", main="#4A2E45", accent=GOLD, second="#2B2A33", neck=PAPER,
+                         left="fan"),
 }
 
 if __name__ == "__main__":

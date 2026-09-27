@@ -56,10 +56,10 @@ describe("loadPack", () => {
 
   it("detecta personajes inexistentes", () => {
     const pack = clonePack();
-    pack.routes[0].nodes[0].content[1].characterId = "picasso";
+    pack.routes[0].nodes[0].content[1].characterId = "velazquez";
     pack.routes[0].guideCharacterId = "nadie";
     const errors = errorsOf(pack).join("\n");
-    expect(errors).toContain('el personaje "picasso" no existe');
+    expect(errors).toContain('el personaje "velazquez" no existe');
     expect(errors).toContain('el personaje "nadie" no existe');
   });
 

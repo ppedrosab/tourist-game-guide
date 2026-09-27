@@ -211,6 +211,11 @@ Janet Keiller, aceitunero) y «¿Quién inventó el pionono?» (Lorca, Ceferino 
 Reutilizan los fondos de historia; los nuevos en `scripts/art/gastro_andalucia_scenes.py`. El pack de
 Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin reformatear el archivo.
 
+**Rutas que completan las ciudades** (historia, formato corto de 6 paradas; ver `docs/CIUDADES_QUE_FALTAN.md` y
+`docs/GDD_COMPLETAR.md`): lo imprescindible que aún no era parada. Hecha: Málaga «¿Por qué Picasso no
+volvió a Málaga?» (Picasso, su padre José Ruiz Blasco y su madre María Picasso). Arte en
+`scripts/art/completar_scenes.py` y `completar_collectibles.py`.
+
 ## Arquitectura
 
 ```
