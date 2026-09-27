@@ -8,7 +8,12 @@ import { ChallengePanel } from "@/components/game/ChallengePanel";
 import { ThenNowPanel } from "@/components/game/ThenNowPanel";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
-import type { CityPack, I18nText, PlayerProgress, Route } from "@/content/types";
+import type {
+  CityPack,
+  I18nText,
+  PlayerProgress,
+  Route,
+} from "@/content/types";
 import { findRoute } from "@/engine/catalog";
 import { useArrivalWatcher } from "@/hooks/useArrivalWatcher";
 import { useVoice, Voice } from "@/hooks/useVoice";
@@ -60,19 +65,38 @@ export default function Jugar() {
     );
   }
   // `key`: al cambiar de nodo la escena empieza desde su primer paso.
-  return <NodePlayer key={run.currentNodeId} pack={found.pack} route={found.route} run={run} />;
+  return (
+    <NodePlayer
+      key={run.currentNodeId}
+      pack={found.pack}
+      route={found.route}
+      run={run}
+    />
+  );
 }
 
-function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: PlayerProgress }) {
+function NodePlayer({
+  pack,
+  route,
+  run,
+}: {
+  pack: CityPack;
+  route: Route;
+  run: PlayerProgress;
+}) {
   const insets = useSafeAreaInsets();
   const window = useWindowDimensions();
   const { L, lang } = useI18n();
   // Escenario con la proporción de las ilustraciones; en pantallas bajas se recorta ("cover").
-  const stageHeight = Math.min(window.width / SCENE_ASPECT, window.height * 0.8);
+  const stageHeight = Math.min(
+    window.width / SCENE_ASPECT,
+    window.height * 0.8,
+  );
   const advance = useProgress((s) => s.advance);
   const demoMode = useProgress((s) => s.demoMode);
   const markArrived = useProgress((s) => s.markArrived);
   const recordChallenge = useProgress((s) => s.recordChallenge);
+  const recordHint = useProgress((s) => s.recordHint);
   const node = getNode(route, run.currentNodeId);
   // Nodo con ubicación: la escena espera a la llegada (guardada en el progreso). Los narrativos empiezan ya.
   const arrived = hasArrived(route, run);
@@ -101,11 +125,15 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   );
   const watchRef = useRef(watch);
   watchRef.current = watch;
-  const steps = useMemo(() => buildSteps(route, node, run.flags), [route, node, run.flags]);
+  const steps = useMemo(
+    () => buildSteps(route, node, run.flags),
+    [route, node, run.flags],
+  );
   const [index, setIndex] = useState(0);
   const step = steps[Math.min(index, steps.length - 1)];
   // Al acabar los pasos de un nodo sin salida explícita, el siguiente nodo narrativo se lanza solo.
-  const next = () => (index + 1 < steps.length ? setIndex(index + 1) : advance(route));
+  const next = () =>
+    index + 1 < steps.length ? setIndex(index + 1) : advance(route);
   const { stops, current } = routeStops(route, run);
   const sceneKey = sceneKeyFor(route, run);
   // Sombra de los personajes con el sol real de esta parada, a esta hora.
@@ -117,7 +145,9 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   const focused = useIsFocused();
   const voicesOn = useProgress((s) => s.voices);
   const subtitles = useProgress((s) => s.subtitles);
-  const line = arrived ? spokenLine(step, `${node.id}:${index}`, L, pack) : undefined;
+  const line = arrived
+    ? spokenLine(step, `${node.id}:${index}`, L, pack)
+    : undefined;
   const voice = useVoice(line, { enabled: voicesOn, active: focused, lang });
   // Mientras se espera la llegada, en escena solo está el guía.
   const cast = useMemo(
@@ -126,7 +156,11 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
   );
 
   const characterName = (characterId?: string) =>
-    L(pack.characters.find((c) => c.id === (characterId ?? route.guideCharacterId))?.name ?? { es: "" });
+    L(
+      pack.characters.find(
+        (c) => c.id === (characterId ?? route.guideCharacterId),
+      )?.name ?? { es: "" },
+    );
 
   return (
     <View style={styles.root}>
@@ -173,6 +207,7 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
             onChoose={(choice) => advance(route, choice)}
             onContinue={() => advance(route)}
             onChallenge={(correct) => recordChallenge(route, correct)}
+            onHint={() => recordHint(route)}
             sceneKey={sceneKey}
           />
         )}
@@ -182,16 +217,33 @@ function NodePlayer({ pack, route, run }: { pack: CityPack; route: Route; run: P
 }
 
 /** Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. */
-function spokenLine(step: SceneStep, key: string, L: (text: I18nText) => string, pack: CityPack) {
-  const voiceOf = (id?: string) => pack.characters.find((c) => c.id === id)?.voice;
+function spokenLine(
+  step: SceneStep,
+  key: string,
+  L: (text: I18nText) => string,
+  pack: CityPack,
+) {
+  const voiceOf = (id?: string) =>
+    pack.characters.find((c) => c.id === id)?.voice;
   switch (step.kind) {
     case "text":
       return step.source === "dialogue" || step.source === "narration"
-        ? { key, text: L(step.text), audio: step.audio, speaker: step.characterId, voice: voiceOf(step.characterId) }
+        ? {
+            key,
+            text: L(step.text),
+            audio: step.audio,
+            speaker: step.characterId,
+            voice: voiceOf(step.characterId),
+          }
         : undefined;
     case "decision":
       return step.intro
-        ? { key, text: L(step.intro.text), speaker: step.intro.characterId, voice: voiceOf(step.intro.characterId) }
+        ? {
+            key,
+            text: L(step.intro.text),
+            speaker: step.intro.characterId,
+            voice: voiceOf(step.intro.characterId),
+          }
         : undefined;
     case "continue":
       return step.hint ? { key, text: L(step.hint) } : undefined;
@@ -208,9 +260,12 @@ type StepViewProps = {
   route: Route;
   characterName: (id?: string) => string;
   onNext: () => void;
-  onChoose: (choice: Extract<SceneStep, { kind: "decision" }>["choices"][number]) => void;
+  onChoose: (
+    choice: Extract<SceneStep, { kind: "decision" }>["choices"][number],
+  ) => void;
   onContinue: () => void;
   onChallenge: (correct: boolean) => void;
+  onHint: () => void;
   sceneKey?: string;
 };
 
@@ -224,6 +279,7 @@ function StepView({
   onChoose,
   onContinue,
   onChallenge,
+  onHint,
   sceneKey,
 }: StepViewProps) {
   const { t, L } = useI18n();
@@ -231,17 +287,37 @@ function StepView({
   const shown = (text: string) => (showText ? text : "…");
   switch (step.kind) {
     case "text": {
-      const { speaker, color } = textSpeaker(step, characterName, t, route.theme);
-      return <DialogBox speaker={speaker} speakerColor={color} text={shown(L(step.text))} onNext={onNext} {...audio} />;
+      const { speaker, color } = textSpeaker(
+        step,
+        characterName,
+        t,
+        route.theme,
+      );
+      return (
+        <DialogBox
+          speaker={speaker}
+          speakerColor={color}
+          text={shown(L(step.text))}
+          onNext={onNext}
+          {...audio}
+        />
+      );
     }
     case "then_now":
       return (
-        <ThenNowPanel then={step.then} now={step.now} caption={step.caption} sceneKey={sceneKey} onNext={onNext} />
+        <ThenNowPanel
+          then={step.then}
+          now={step.now}
+          caption={step.caption}
+          sceneKey={sceneKey}
+          onNext={onNext}
+        />
       );
     case "challenge":
       return (
         <ChallengePanel
           challenge={step.challenge}
+          onHint={onHint}
           onDone={(correct) => {
             if (correct !== undefined) onChallenge(correct);
             onNext();
@@ -289,7 +365,11 @@ function StepView({
       return (
         <DialogBox
           speaker={characterName()}
-          text={step.hint ? shown(L(step.hint)) : t("jugar.siguienteParada", { title: L(step.nextTitle) })}
+          text={
+            step.hint
+              ? shown(L(step.hint))
+              : t("jugar.siguienteParada", { title: L(step.nextTitle) })
+          }
           nextLabel={t("jugar.seguir")}
           onNext={onContinue}
           {...audio}
@@ -318,11 +398,21 @@ function textSpeaker(
       return { speaker: characterName(step.characterId), color: colors.clay };
     case "historical_fact":
       // En las rutas gastronómicas y de fiestas los datos no son de historia.
-      if (theme === "gastronomia") return { speaker: t("jugar.datoGastronomico"), color: colors.sea };
-      if (theme === "fiestas") return { speaker: t("jugar.tradicion"), color: colors.sea };
-      return { speaker: step.year ? t("jugar.datoAnio", { year: step.year }) : t("jugar.dato"), color: colors.sea };
+      if (theme === "gastronomia")
+        return { speaker: t("jugar.datoGastronomico"), color: colors.sea };
+      if (theme === "fiestas")
+        return { speaker: t("jugar.tradicion"), color: colors.sea };
+      return {
+        speaker: step.year
+          ? t("jugar.datoAnio", { year: step.year })
+          : t("jugar.dato"),
+        color: colors.sea,
+      };
     case "anecdote":
-      return { speaker: step.legend ? t("jugar.seCuenta") : t("jugar.anecdota"), color: colors.ink };
+      return {
+        speaker: step.legend ? t("jugar.seCuenta") : t("jugar.anecdota"),
+        color: colors.ink,
+      };
     case "image":
     case "narration":
       return { speaker: t("jugar.narrador"), color: colors.ink };
@@ -341,5 +431,10 @@ const styles = StyleSheet.create({
   },
   stageText: { fontFamily: fonts.bold, color: colors.muted },
   hud: { position: "absolute", left: 14, right: 14 },
-  dialog: { position: "absolute", left: 12, right: 12, borderRadius: radius.xl },
+  dialog: {
+    position: "absolute",
+    left: 12,
+    right: 12,
+    borderRadius: radius.xl,
+  },
 });

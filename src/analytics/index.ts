@@ -12,6 +12,7 @@ export type AnalyticsEvent =
   | { name: "stop_arrived"; routeId: string; nodeId: string; method: ArrivalMethod }
   | { name: "decision_made"; routeId: string; nodeId: string; targetNodeId: string }
   | { name: "challenge_answered"; routeId: string; nodeId: string; correct: boolean }
+  | { name: "hint_used"; routeId: string; nodeId: string; n: number }
   | { name: "route_completed"; routeId: string; endingId?: string; stars: number; minutes: number }
   | { name: "map_opened"; routeId?: string }
   | { name: "offline_map"; cityId: string; action: "download" | "complete" | "delete" | "error" }

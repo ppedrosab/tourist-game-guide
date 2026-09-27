@@ -9,6 +9,7 @@ import {
   advance as advanceRun,
   markArrived as markArrivedRun,
   recordChallenge as recordChallengeRun,
+  recordHint as recordHintRun,
   starsFor,
   startRoute,
 } from "@/engine/runner";
@@ -61,24 +62,36 @@ type ProgressStore = {
   markArrived: (route: Route, method: ArrivalMethod) => void;
   /** Apunta si se acertó el reto del nodo actual (solo cuenta el primer intento). */
   recordChallenge: (route: Route, correct: boolean) => void;
+  /** Apunta una pista pedida en el reto del nodo actual. */
+  recordHint: (route: Route) => void;
   /** Borra la partida de una ruta sin tocar la colección. */
   discard: (routeId: string) => void;
 };
 
-const merge = (a: string[], b: readonly string[]) => [...a, ...b.filter((x) => !a.includes(x))];
+const merge = (a: string[], b: readonly string[]) => [
+  ...a,
+  ...b.filter((x) => !a.includes(x)),
+];
 
-function collect(collection: Collection, run: PlayerProgress, route?: Route): Collection {
+function collect(
+  collection: Collection,
+  run: PlayerProgress,
+  route?: Route,
+): Collection {
   let bestStars = collection.bestStars;
   if (route && run.completedAt) {
     const { stars } = starsFor(route, run);
-    if (stars > (bestStars?.[run.routeId] ?? 0)) bestStars = { ...bestStars, [run.routeId]: stars };
+    if (stars > (bestStars?.[run.routeId] ?? 0))
+      bestStars = { ...bestStars, [run.routeId]: stars };
   }
   const found = findRoute(run.routeId);
   const met = found ? metCharacters(found.pack, found.route, run) : [];
   return {
     characterIds: merge(collection.characterIds ?? [], met),
     collectibleIds: merge(collection.collectibleIds, run.collectibleIds),
-    endingIds: run.endingId ? merge(collection.endingIds, [run.endingId]) : collection.endingIds,
+    endingIds: run.endingId
+      ? merge(collection.endingIds, [run.endingId])
+      : collection.endingIds,
     clueIds: merge(collection.clueIds, run.clueIds),
     bestStars,
   };
@@ -129,12 +142,26 @@ export const useProgress = create<ProgressStore>()(
           if (!run) throw new Error(`No hay partida empezada en "${route.id}"`);
           const next = save(advanceRun(route, run, choice), route);
           if (choice) {
-            emit({ name: "decision_made", routeId: route.id, nodeId: run.currentNodeId, targetNodeId: choice.targetNodeId });
+            emit({
+              name: "decision_made",
+              routeId: route.id,
+              nodeId: run.currentNodeId,
+              targetNodeId: choice.targetNodeId,
+            });
           }
           if (next.completedAt && !run.completedAt) {
-            const minutes = Math.round((Date.parse(next.completedAt) - Date.parse(next.startedAt)) / 60000);
+            const minutes = Math.round(
+              (Date.parse(next.completedAt) - Date.parse(next.startedAt)) /
+                60000,
+            );
             const { stars } = starsFor(route, next);
-            emit({ name: "route_completed", routeId: route.id, endingId: next.endingId, stars, minutes });
+            emit({
+              name: "route_completed",
+              routeId: route.id,
+              endingId: next.endingId,
+              stars,
+              minutes,
+            });
           }
           return next;
         },
@@ -144,7 +171,25 @@ export const useProgress = create<ProgressStore>()(
           const next = recordChallengeRun(route, run, correct);
           if (next === run) return;
           save(next);
-          emit({ name: "challenge_answered", routeId: route.id, nodeId: run.currentNodeId, correct });
+          emit({
+            name: "challenge_answered",
+            routeId: route.id,
+            nodeId: run.currentNodeId,
+            correct,
+          });
+        },
+        recordHint: (route) => {
+          const run = get().runs[route.id];
+          if (!run) return;
+          const next = recordHintRun(route, run);
+          if (next === run) return;
+          save(next);
+          emit({
+            name: "hint_used",
+            routeId: route.id,
+            nodeId: run.currentNodeId,
+            n: next.hintsUsed?.[run.currentNodeId] ?? 1,
+          });
         },
         markArrived: (route, method) => {
           const run = get().runs[route.id];
@@ -152,12 +197,21 @@ export const useProgress = create<ProgressStore>()(
           const next = markArrivedRun(route, run);
           if (next === run) return;
           save(next);
-          emit({ name: "stop_arrived", routeId: route.id, nodeId: run.currentNodeId, method });
+          emit({
+            name: "stop_arrived",
+            routeId: route.id,
+            nodeId: run.currentNodeId,
+            method,
+          });
         },
         discard: (routeId) =>
           set((s) => {
             const { [routeId]: _, ...runs } = s.runs;
-            return { runs, lastRouteId: s.lastRouteId === routeId ? undefined : s.lastRouteId };
+            return {
+              runs,
+              lastRouteId:
+                s.lastRouteId === routeId ? undefined : s.lastRouteId,
+            };
           }),
       };
     },
@@ -165,7 +219,16 @@ export const useProgress = create<ProgressStore>()(
       name: "progreso",
       version: 1,
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ runs, collection, lastRouteId, demoMode, voices, subtitles, language, analytics }) => ({
+      partialize: ({
+        runs,
+        collection,
+        lastRouteId,
+        demoMode,
+        voices,
+        subtitles,
+        language,
+        analytics,
+      }) => ({
         analytics,
         language,
         runs,
@@ -179,14 +242,19 @@ export const useProgress = create<ProgressStore>()(
         // Las partidas guardadas antes del álbum de personajes también cuentan.
         useProgress.setState((s) => ({
           hydrated: true,
-          collection: Object.values(s.runs).reduce((c, run) => collect(c, run), s.collection),
+          collection: Object.values(s.runs).reduce(
+            (c, run) => collect(c, run),
+            s.collection,
+          ),
         })),
     },
   ),
 );
 
 /** Partida en curso (sin terminar) de una ruta, si la hay. */
-export function useActiveRun(routeId: string | undefined): PlayerProgress | undefined {
+export function useActiveRun(
+  routeId: string | undefined,
+): PlayerProgress | undefined {
   return useProgress((s) => {
     const run = routeId ? s.runs[routeId] : undefined;
     return run && !run.completedAt ? run : undefined;

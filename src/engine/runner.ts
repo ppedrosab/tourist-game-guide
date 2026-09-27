@@ -1,4 +1,5 @@
 import type {
+  Challenge,
   BranchId,
   Choice,
   ContentBlock,
@@ -21,15 +22,22 @@ export class RunnerError extends Error {
 }
 
 const now = () => new Date().toISOString();
-const addUnique = (list: string[], items: readonly string[]) => [...list, ...items.filter((i) => !list.includes(i))];
+const addUnique = (list: string[], items: readonly string[]) => [
+  ...list,
+  ...items.filter((i) => !list.includes(i)),
+];
 
-export function hasAllFlags(requires: readonly string[] | undefined, flags: readonly string[]): boolean {
+export function hasAllFlags(
+  requires: readonly string[] | undefined,
+  flags: readonly string[],
+): boolean {
   return (requires ?? []).every((f) => flags.includes(f));
 }
 
 export function getNode(route: Route, nodeId: string): StoryNode {
   const node = route.nodes.find((n) => n.id === nodeId);
-  if (!node) throw new RunnerError(`La ruta "${route.id}" no tiene el nodo "${nodeId}"`);
+  if (!node)
+    throw new RunnerError(`La ruta "${route.id}" no tiene el nodo "${nodeId}"`);
   return node;
 }
 
@@ -43,10 +51,17 @@ export function localize(text: I18nText, lang: LangCode = "es"): string {
  * gana la primera variante cuyos `requires` estén todos en los flags; si
  * ninguna encaja, se usa `text`. Devuelve null si el bloque no tiene texto.
  */
-export function resolveText(block: ContentBlock, flags: readonly string[]): I18nText | null {
+export function resolveText(
+  block: ContentBlock,
+  flags: readonly string[],
+): I18nText | null {
   switch (block.type) {
     case "dialogue":
-      return block.variants?.find((v) => hasAllFlags(v.requires, flags))?.text ?? block.text ?? null;
+      return (
+        block.variants?.find((v) => hasAllFlags(v.requires, flags))?.text ??
+        block.text ??
+        null
+      );
     case "narration":
     case "historical_fact":
     case "anecdote":
@@ -59,12 +74,18 @@ export function resolveText(block: ContentBlock, flags: readonly string[]): I18n
   }
 }
 
-export function availableChoices(node: StoryNode, flags: readonly string[]): Choice[] {
+export function availableChoices(
+  node: StoryNode,
+  flags: readonly string[],
+): Choice[] {
   return (node.choices ?? []).filter((c) => hasAllFlags(c.requires, flags));
 }
 
 /** Primer final cuyos `requires` cumple el jugador. */
-export function resolveEnding(route: Route, flags: readonly string[]): Ending | undefined {
+export function resolveEnding(
+  route: Route,
+  flags: readonly string[],
+): Ending | undefined {
   return route.endings?.find((e) => hasAllFlags(e.requires, flags));
 }
 
@@ -79,7 +100,10 @@ export function isFinished(state: PlayerProgress): boolean {
 
 /** La escena del nodo actual puede empezar: es narrativo o el jugador ya ha llegado. */
 export function hasArrived(route: Route, state: PlayerProgress): boolean {
-  return !needsArrival(getNode(route, state.currentNodeId)) || state.arrivedAt !== undefined;
+  return (
+    !needsArrival(getNode(route, state.currentNodeId)) ||
+    state.arrivedAt !== undefined
+  );
 }
 
 /** Retos que puntúan: los de foto no tienen respuesta correcta. */
@@ -88,10 +112,41 @@ export function isGraded(node: StoryNode): boolean {
 }
 
 /** Apunta el resultado del reto del nodo actual. Cuenta el primer intento: repetir no mejora la nota. */
-export function recordChallenge(route: Route, state: PlayerProgress, correct: boolean): PlayerProgress {
+export function recordChallenge(
+  route: Route,
+  state: PlayerProgress,
+  correct: boolean,
+): PlayerProgress {
   const node = getNode(route, state.currentNodeId);
-  if (!isGraded(node) || state.challengeResults?.[node.id] !== undefined) return state;
-  return { ...state, challengeResults: { ...state.challengeResults, [node.id]: correct } };
+  if (!isGraded(node) || state.challengeResults?.[node.id] !== undefined)
+    return state;
+  return {
+    ...state,
+    challengeResults: { ...state.challengeResults, [node.id]: correct },
+  };
+}
+
+/** Apunta una pista más pedida en el reto del nodo actual (no cambia el acierto). */
+export function recordHint(
+  route: Route,
+  state: PlayerProgress,
+): PlayerProgress {
+  const node = getNode(route, state.currentNodeId);
+  if (!node.challenge) return state;
+  const used = state.hintsUsed?.[node.id] ?? 0;
+  return { ...state, hintsUsed: { ...state.hintsUsed, [node.id]: used + 1 } };
+}
+
+/** Cuántas pistas tiene un reto: las escritas o, en un quiz sin ellas, quitar opciones hasta dejar dos. */
+export function hintCount(challenge: Challenge): number {
+  if (challenge.type === "photo") return 0;
+  if (challenge.hints?.length) return challenge.hints.length;
+  if (challenge.type === "quiz")
+    return Math.max(0, challenge.options.length - 2);
+  // Ordenar sin pistas escritas: cada pista coloca el siguiente elemento (hasta dejar dos).
+  return challenge.type === "order"
+    ? Math.max(0, challenge.items.length - 2)
+    : 0;
 }
 
 /**
@@ -99,45 +154,74 @@ export function recordChallenge(route: Route, state: PlayerProgress, correct: bo
  * que ha recorrido el jugador: todo acertado = 3, al menos el 60 % = 2, el
  * resto = 1 (terminar el caso ya vale una). Sin retos, 3.
  */
-export function starsFor(route: Route, state: PlayerProgress): { stars: number; correct: number; total: number } {
-  const graded = state.visitedNodeIds.map((id) => getNode(route, id)).filter(isGraded);
-  const correct = graded.filter((n) => state.challengeResults?.[n.id] === true).length;
+export function starsFor(
+  route: Route,
+  state: PlayerProgress,
+): { stars: number; correct: number; total: number } {
+  const graded = state.visitedNodeIds
+    .map((id) => getNode(route, id))
+    .filter(isGraded);
+  const correct = graded.filter(
+    (n) => state.challengeResults?.[n.id] === true,
+  ).length;
   const total = graded.length;
   const ratio = total === 0 ? 1 : correct / total;
   return { stars: ratio === 1 ? 3 : ratio >= 0.6 ? 2 : 1, correct, total };
 }
 
 /** Marca la llegada al nodo actual (geofence, GPS, "Ya estoy aquí" o modo demo). Idempotente. */
-export function markArrived(route: Route, state: PlayerProgress, at: string = now()): PlayerProgress {
+export function markArrived(
+  route: Route,
+  state: PlayerProgress,
+  at: string = now(),
+): PlayerProgress {
   if (isFinished(state) || hasArrived(route, state)) return state;
   return { ...state, arrivedAt: at };
 }
 
 /** Entrar en un nodo: pasa a ser el actual, queda visitado y, si es el último, fija el final. */
-function enterNode(route: Route, state: PlayerProgress, nodeId: string): PlayerProgress {
+function enterNode(
+  route: Route,
+  state: PlayerProgress,
+  nodeId: string,
+): PlayerProgress {
   const node = getNode(route, nodeId);
   return {
     ...state,
     currentNodeId: node.id,
     visitedNodeIds: addUnique(state.visitedNodeIds, [node.id]),
     arrivedAt: undefined,
-    endingId: node.isEnding ? resolveEnding(route, state.flags)?.id : state.endingId,
+    endingId: node.isEnding
+      ? resolveEnding(route, state.flags)?.id
+      : state.endingId,
   };
 }
 
 /** Completar un nodo (salir de él): se gana su pista y sus coleccionables. */
-function completeNode(route: Route, state: PlayerProgress, node: StoryNode): PlayerProgress {
-  const rewards = (route.rewards ?? []).filter((r) => r.awardedAtNodeId === node.id).map((r) => r.id);
+function completeNode(
+  route: Route,
+  state: PlayerProgress,
+  node: StoryNode,
+): PlayerProgress {
+  const rewards = (route.rewards ?? [])
+    .filter((r) => r.awardedAtNodeId === node.id)
+    .map((r) => r.id);
   if (node.reward) rewards.push(node.reward);
   return {
     ...state,
-    clueIds: node.clue ? addUnique(state.clueIds, [node.clue.id]) : state.clueIds,
+    clueIds: node.clue
+      ? addUnique(state.clueIds, [node.clue.id])
+      : state.clueIds,
     collectibleIds: addUnique(state.collectibleIds, rewards),
   };
 }
 
 /** Empieza una partida nueva en el nodo inicial de la ruta. */
-export function startRoute(cityId: string, route: Route, startedAt: string = now()): PlayerProgress {
+export function startRoute(
+  cityId: string,
+  route: Route,
+  startedAt: string = now(),
+): PlayerProgress {
   const empty: PlayerProgress = {
     cityId,
     routeId: route.id,
@@ -157,20 +241,36 @@ export function startRoute(cityId: string, route: Route, startedAt: string = now
  * se ganan su pista y sus coleccionables. Avanzar desde el nodo final cierra
  * la partida (`completedAt`).
  */
-export function advance(route: Route, state: PlayerProgress, choice?: Choice, at: string = now()): PlayerProgress {
+export function advance(
+  route: Route,
+  state: PlayerProgress,
+  choice?: Choice,
+  at: string = now(),
+): PlayerProgress {
   if (isFinished(state)) throw new RunnerError("La partida ya ha terminado");
   const node = getNode(route, state.currentNodeId);
   const done = completeNode(route, state, node);
 
   if (node.choices) {
-    if (!choice) throw new RunnerError(`El nodo "${node.id}" necesita una decisión`);
-    const picked = availableChoices(node, done.flags).find((c) => c.targetNodeId === choice.targetNodeId);
-    if (!picked) throw new RunnerError(`La decisión hacia "${choice.targetNodeId}" no está disponible en "${node.id}"`);
-    return enterNode(route, { ...done, flags: addUnique(done.flags, picked.setFlags ?? []) }, picked.targetNodeId);
+    if (!choice)
+      throw new RunnerError(`El nodo "${node.id}" necesita una decisión`);
+    const picked = availableChoices(node, done.flags).find(
+      (c) => c.targetNodeId === choice.targetNodeId,
+    );
+    if (!picked)
+      throw new RunnerError(
+        `La decisión hacia "${choice.targetNodeId}" no está disponible en "${node.id}"`,
+      );
+    return enterNode(
+      route,
+      { ...done, flags: addUnique(done.flags, picked.setFlags ?? []) },
+      picked.targetNodeId,
+    );
   }
   if (choice) throw new RunnerError(`El nodo "${node.id}" no tiene decisiones`);
   if (node.isEnding) return { ...done, completedAt: at };
-  if (!node.nextNodeId) throw new RunnerError(`El nodo "${node.id}" no tiene salida`);
+  if (!node.nextNodeId)
+    throw new RunnerError(`El nodo "${node.id}" no tiene salida`);
   return enterNode(route, done, node.nextNodeId);
 }
 
@@ -191,7 +291,10 @@ function distances(route: Route, fromId: string): Map<string, number> {
   const queue = [fromId];
   while (queue.length > 0) {
     const node = getNode(route, queue.shift()!);
-    const next = [...(node.choices ?? []).map((c) => c.targetNodeId), ...(node.nextNodeId ? [node.nextNodeId] : [])];
+    const next = [
+      ...(node.choices ?? []).map((c) => c.targetNodeId),
+      ...(node.nextNodeId ? [node.nextNodeId] : []),
+    ];
     for (const id of next) {
       if (!dist.has(id)) {
         dist.set(id, dist.get(node.id)! + 1);
@@ -203,8 +306,13 @@ function distances(route: Route, fromId: string): Map<string, number> {
 }
 
 /** Nodo "cuello de botella" donde se reúnen las ramas de una decisión (el más cercano). */
-export function findBottleneck(route: Route, node: StoryNode): string | undefined {
-  const maps = (node.choices ?? []).map((c) => distances(route, c.targetNodeId));
+export function findBottleneck(
+  route: Route,
+  node: StoryNode,
+): string | undefined {
+  const maps = (node.choices ?? []).map((c) =>
+    distances(route, c.targetNodeId),
+  );
   if (maps.length === 0) return undefined;
   let best: string | undefined;
   let bestCost = Infinity;
@@ -220,7 +328,11 @@ export function findBottleneck(route: Route, node: StoryNode): string | undefine
 }
 
 /** Nodos de una rama, desde su primer nodo hasta (sin incluir) el cuello de botella. */
-function branchNodes(route: Route, fromId: string, untilId: string | undefined): StoryNode[] {
+function branchNodes(
+  route: Route,
+  fromId: string,
+  untilId: string | undefined,
+): StoryNode[] {
   const out: StoryNode[] = [];
   let id: string | undefined = fromId;
   while (id && id !== untilId && out.length < route.nodes.length) {
@@ -236,26 +348,42 @@ function branchNodes(route: Route, fromId: string, untilId: string | undefined):
  * ya elegidas aparecen con sus paradas reales y su color; una rama pendiente
  * se muestra como una sola parada sin color.
  */
-export function routeStops(route: Route, state: PlayerProgress): { stops: Stop[]; current: number } {
+export function routeStops(
+  route: Route,
+  state: PlayerProgress,
+): { stops: Stop[]; current: number } {
   const stops: Stop[] = [];
   let current = 0;
   const visit = (node: StoryNode, stop?: Stop) => {
     if (stop) stops.push(stop);
-    if (node.id === state.currentNodeId) current = Math.max(0, stops.length - 1);
+    if (node.id === state.currentNodeId)
+      current = Math.max(0, stops.length - 1);
   };
 
   let node: StoryNode | undefined = getNode(route, route.startNodeId);
   for (let guard = 0; node && guard < route.nodes.length; guard++) {
-    visit(node, needsArrival(node) ? { id: node.id, nodeId: node.id, branch: node.branch } : undefined);
+    visit(
+      node,
+      needsArrival(node)
+        ? { id: node.id, nodeId: node.id, branch: node.branch }
+        : undefined,
+    );
     if (!node.choices) {
       node = node.nextNodeId ? getNode(route, node.nextNodeId) : undefined;
       continue;
     }
     const bottleneck = findBottleneck(route, node);
-    const chosen = node.choices.find((c) => state.visitedNodeIds.includes(c.targetNodeId));
+    const chosen = node.choices.find((c) =>
+      state.visitedNodeIds.includes(c.targetNodeId),
+    );
     if (chosen) {
       for (const n of branchNodes(route, chosen.targetNodeId, bottleneck)) {
-        visit(n, needsArrival(n) ? { id: n.id, nodeId: n.id, branch: n.branch } : undefined);
+        visit(
+          n,
+          needsArrival(n)
+            ? { id: n.id, nodeId: n.id, branch: n.branch }
+            : undefined,
+        );
       }
     } else {
       const anyPhysical = node.choices.some((c) =>

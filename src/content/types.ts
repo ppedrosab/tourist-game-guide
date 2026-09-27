@@ -137,9 +137,19 @@ export type ContentBlock =
   | { type: "anecdote"; text: I18nText; legend?: boolean; source?: string }
   | { type: "image"; src: AssetRef; caption?: I18nText };
 
+/**
+ * Retos de una parada. `hints`: pistas escalonadas (de suave a clara) que el jugador pide una a una;
+ * no quitan la estrella, «Ver respuesta» sí. En el quiz, sin pistas escritas, la pista quita una
+ * opción incorrecta.
+ * - `observe`: mirar algo del lugar (una placa, una fecha) y escribirlo.
+ * - `riddle`: acertijo con respuesta escrita.
+ * - `lock`: candado final del caso; la respuesta sale de las pistas del cuaderno.
+ * - `order`: poner `items` en orden (vienen en el orden correcto; la pantalla los baraja).
+ */
 export type Challenge =
-  | { type: "quiz"; question: I18nText; options: I18nText[]; correctIndex: number; explanation?: I18nText }
-  | { type: "observe"; prompt: I18nText; answer: string[] }
+  | { type: "quiz"; question: I18nText; options: I18nText[]; correctIndex: number; explanation?: I18nText; hints?: I18nText[] }
+  | { type: "observe" | "riddle" | "lock"; prompt: I18nText; answer: string[]; explanation?: I18nText; hints?: I18nText[] }
+  | { type: "order"; prompt: I18nText; items: I18nText[]; explanation?: I18nText; hints?: I18nText[] }
   | { type: "photo"; prompt: I18nText };
 
 export interface Choice {
@@ -178,6 +188,8 @@ export interface PlayerProgress {
   arrivedAt?: string;
   /** Resultado de cada reto puntuable (quiz, observación): acertado a la primera o no. */
   challengeResults?: Record<string, boolean>;
+  /** Pistas pedidas en cada reto (por id de nodo). */
+  hintsUsed?: Record<string, number>;
   completedAt?: string;
   endingId?: string;
 }

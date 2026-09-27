@@ -51,12 +51,28 @@ const challenge = z.discriminatedUnion("type", [
       options: z.array(i18nText).min(2),
       correctIndex: z.number().int().min(0),
       explanation: i18nText.optional(),
+      hints: z.array(i18nText).optional(),
     })
     .refine((c) => c.correctIndex < c.options.length, {
       message: "`correctIndex` apunta fuera de `options`",
       path: ["correctIndex"],
     }),
-  z.object({ type: z.literal("observe"), prompt: i18nText, answer: z.array(z.string().min(1)).min(1) }),
+  ...(["observe", "riddle", "lock"] as const).map((t) =>
+    z.object({
+      type: z.literal(t),
+      prompt: i18nText,
+      answer: z.array(z.string().min(1)).min(1),
+      explanation: i18nText.optional(),
+      hints: z.array(i18nText).optional(),
+    }),
+  ),
+  z.object({
+    type: z.literal("order"),
+    prompt: i18nText,
+    items: z.array(i18nText).min(3).max(6),
+    explanation: i18nText.optional(),
+    hints: z.array(i18nText).optional(),
+  }),
   z.object({ type: z.literal("photo"), prompt: i18nText }),
 ]);
 

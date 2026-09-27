@@ -17,6 +17,7 @@ export const colors = {
   white: "#FFFFFF",
   seaTint: "#DCEBE6",
   clayTint: "#F6E3D6",
+  goldTint: "#FBEBC2",
   /** Morado del Carnaval de Cádiz: seña de las rutas de fiestas. */
   violet: "#6E2C5E",
   /** Añil de noche: seña de las rutas de leyendas. */
