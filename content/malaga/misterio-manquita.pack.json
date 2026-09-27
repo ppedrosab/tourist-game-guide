@@ -186,6 +186,31 @@
             { "type": "historical_fact", "text": { "es": "España sí apoyó la independencia de Estados Unidos. Bernardo de Gálvez, nacido en 1746 en Macharaviaya (Málaga), tomó Pensacola a los británicos. La ciudad de Galveston, en Texas, lleva su nombre.", "en": "Spain did support American independence. Bernardo de Gálvez, born in 1746 in Macharaviaya (Málaga), took Pensacola from the British. The city of Galveston, Texas, is named after him." }, "year": 1781 },
             { "type": "dialogue", "characterId": "cenachero", "expression": "surprised", "text": { "es": "¿Un malagueño echando a los ingleses de Florida? ¡Eso me lo creo! Pero que mis cuartos acabaran en América… que me manden una postal.", "en": "A man from Málaga kicking the British out of Florida? That I believe! But my money ending up in America… they can send me a postcard." }, "audio": { "es": "audio/es/n4a_b.mp3" } }
           ],
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Empiezan las obras de la catedral",
+                "en": "Work on the cathedral begins"
+              },
+              {
+                "es": "Se paran las obras: falta dinero",
+                "en": "Work stops: the money runs out"
+              },
+              {
+                "es": "La riada que levantó el suelo de Larios",
+                "en": "The flood that lifted the paving of Larios"
+              },
+              {
+                "es": "Se pone la estatua del Cenachero",
+                "en": "The Cenachero statue is put up"
+              }
+            ]
+          },
           "nextNodeId": "n5_teatro",
           "nextHint": { "es": "Rumbo al Teatro Romano, al pie de la Alcazaba. Unos 5 minutos.", "en": "Off to the Roman Theatre, at the foot of the Alcazaba. About 5 minutes." }
         },
@@ -199,6 +224,31 @@
               { "requires": ["camino_poder"], "text": { "es": "Así que Madrid cerró el grifo… pa' abrir otro en el camino. ¡Qué poco glamur, Manquita!", "en": "So Madrid turned off one tap… to open another on the road. Not very glamorous, Manquita!" } }
             ] }
           ],
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Empiezan las obras de la catedral",
+                "en": "Work on the cathedral begins"
+              },
+              {
+                "es": "Se paran las obras: falta dinero",
+                "en": "Work stops: the money runs out"
+              },
+              {
+                "es": "La riada que levantó el suelo de Larios",
+                "en": "The flood that lifted the paving of Larios"
+              },
+              {
+                "es": "Se pone la estatua del Cenachero",
+                "en": "The Cenachero statue is put up"
+              }
+            ]
+          },
           "nextNodeId": "n5_teatro",
           "nextHint": { "es": "Rumbo al Teatro Romano, al pie de la Alcazaba. Unos 5 minutos.", "en": "Off to the Roman Theatre, at the foot of the Alcazaba. About 5 minutes." }
         },
@@ -1171,6 +1221,27 @@
               "en": "El Migué · Around 1882, in El Palo, Migué was the first to skewer sardines on a cane beside the fire."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy de caña, llevo sardinas ensartadas y me asan junto a una barca llena de brasas. ¿Qué soy?",
+              "en": "I'm made of cane, I carry skewered sardines and I'm roasted by a boat full of embers. What am I?"
+            },
+            "answer": [
+              "espeto",
+              "espetos"
+            ],
+            "hints": [
+              {
+                "es": "Es el título de la ruta.",
+                "en": "It's in the route's title."
+              },
+              {
+                "es": "Esp…",
+                "en": "Esp…"
+              }
+            ]
+          },
           "nextNodeId": "g5_merced",
           "nextHint": {
             "es": "Sube a la Plaza de la Merced. Unos 6 minutos.",
@@ -1208,6 +1279,27 @@
               "es": "El Migué · Se cuenta que hasta el rey Alfonso XII fue a probar el espeto del Migué.",
               "en": "El Migué · It's said that even King Alfonso XII went to try Migué's espeto."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy de caña, llevo sardinas ensartadas y me asan junto a una barca llena de brasas. ¿Qué soy?",
+              "en": "I'm made of cane, I carry skewered sardines and I'm roasted by a boat full of embers. What am I?"
+            },
+            "answer": [
+              "espeto",
+              "espetos"
+            ],
+            "hints": [
+              {
+                "es": "Es el título de la ruta.",
+                "en": "It's in the route's title."
+              },
+              {
+                "es": "Esp…",
+                "en": "Esp…"
+              }
+            ]
           },
           "nextNodeId": "g5_merced",
           "nextHint": {
@@ -2363,6 +2455,27 @@
               "en": "The conquest · Summer sets the mood, but the fair's date was set by the monarchs' entry."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Los Reyes Católicos conquistan Málaga",
+                "en": "The Catholic Monarchs conquer Málaga"
+              },
+              {
+                "es": "Se empieza la catedral",
+                "en": "The cathedral is begun"
+              },
+              {
+                "es": "El cuarto centenario y la gran feria",
+                "en": "The fourth centenary and the great fair"
+              }
+            ]
+          },
           "nextNodeId": "f5_manquita",
           "nextHint": {
             "es": "Baja a la catedral. Unos 5 minutos.",
@@ -2401,6 +2514,27 @@
               "es": "El centenario · El centenario de 1887 relanzó la feria, pero lo que celebraba venía de 1487.",
               "en": "The centenary · The 1887 centenary relaunched the fair, but what it celebrated dated from 1487."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Los Reyes Católicos conquistan Málaga",
+                "en": "The Catholic Monarchs conquer Málaga"
+              },
+              {
+                "es": "Se empieza la catedral",
+                "en": "The cathedral is begun"
+              },
+              {
+                "es": "El cuarto centenario y la gran feria",
+                "en": "The fourth centenary and the great fair"
+              }
+            ]
           },
           "nextNodeId": "f5_manquita",
           "nextHint": {
@@ -3364,6 +3498,27 @@
               "en": "Justice · According to tradition, six culprits died by the king's order, and Doña Sancha carved their heads and her nephew's."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "La historia de las siete cabezas",
+                "en": "The story of the seven heads"
+              },
+              {
+                "es": "Se abre la calle Larios",
+                "en": "Calle Larios opens"
+              },
+              {
+                "es": "Díaz de Escovar publica su libro de historias",
+                "en": "Díaz de Escovar publishes his book of stories"
+              }
+            ]
+          },
           "nextNodeId": "l5_obispo",
           "nextHint": {
             "es": "Baja a la Plaza del Obispo, frente a la catedral. Unos 6 minutos.",
@@ -3402,6 +3557,27 @@
               "es": "La justicia · El corregidor reconoce que las caras de piedra eran las de los que firmaron la sentencia.",
               "en": "Justice · The magistrate admits the stone faces belonged to those who signed the sentence."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "La historia de las siete cabezas",
+                "en": "The story of the seven heads"
+              },
+              {
+                "es": "Se abre la calle Larios",
+                "en": "Calle Larios opens"
+              },
+              {
+                "es": "Díaz de Escovar publica su libro de historias",
+                "en": "Díaz de Escovar publishes his book of stories"
+              }
+            ]
           },
           "nextNodeId": "l5_obispo",
           "nextHint": {
@@ -4353,6 +4529,27 @@
               "en": "Paris · His last visit to Málaga was in the winter of 1900-1901; in 1904 he settled in Paris."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Nace Picasso en la plaza de la Merced",
+                "en": "Picasso is born in the plaza de la Merced"
+              },
+              {
+                "es": "Abre el Museo Picasso Málaga",
+                "en": "The Museo Picasso Málaga opens"
+              },
+              {
+                "es": "Se pone la escultura de Picasso en el banco",
+                "en": "The sculpture of Picasso on the bench is put up"
+              }
+            ]
+          },
           "nextNodeId": "p5_monumento",
           "nextHint": {
             "es": "Vuelve a la plaza de la Merced, al banco de Picasso. Un par de minutos.",
@@ -4391,6 +4588,27 @@
               "es": "La guerra · Tras la Guerra Civil decidió no volver a España mientras gobernara Franco; murió antes que él, en 1973.",
               "en": "The war · After the Civil War he decided not to return to Spain while Franco ruled; he died before him, in 1973."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Nace Picasso en la plaza de la Merced",
+                "en": "Picasso is born in the plaza de la Merced"
+              },
+              {
+                "es": "Abre el Museo Picasso Málaga",
+                "en": "The Museo Picasso Málaga opens"
+              },
+              {
+                "es": "Se pone la escultura de Picasso en el banco",
+                "en": "The sculpture of Picasso on the bench is put up"
+              }
+            ]
           },
           "nextNodeId": "p5_monumento",
           "nextHint": {

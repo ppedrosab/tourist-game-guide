@@ -1218,6 +1218,31 @@
               "en": "Nobody · The massacre in the hall appears in a novel from 1595, more than a century later."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Boabdil entrega Granada",
+                "en": "Boabdil hands over Granada"
+              },
+              {
+                "es": "Se construye la Capilla Real",
+                "en": "The Royal Chapel is built"
+              },
+              {
+                "es": "Irving vive en la Alhambra",
+                "en": "Irving lives in the Alhambra"
+              },
+              {
+                "es": "Benlliure hace el monumento de la plaza",
+                "en": "Benlliure makes the monument in the square"
+              }
+            ]
+          },
           "nextNodeId": "n5_banuelo",
           "nextHint": {
             "es": "Baje por la Carrera del Darro hasta el Bañuelo. Unos 4 minutos.",
@@ -1279,6 +1304,31 @@
               "es": "Nadie · Las manchas rojizas de la fuente se atribuyen al óxido de hierro del agua.",
               "en": "Nobody · The reddish stains on the fountain are attributed to iron oxide in the water."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Boabdil entrega Granada",
+                "en": "Boabdil hands over Granada"
+              },
+              {
+                "es": "Se construye la Capilla Real",
+                "en": "The Royal Chapel is built"
+              },
+              {
+                "es": "Irving vive en la Alhambra",
+                "en": "Irving lives in the Alhambra"
+              },
+              {
+                "es": "Benlliure hace el monumento de la plaza",
+                "en": "Benlliure makes the monument in the square"
+              }
+            ]
           },
           "nextNodeId": "n5_banuelo",
           "nextHint": {
@@ -2531,6 +2581,28 @@
               "en": "Ceferino · In 1897, in Santa Fe, Ceferino Isla created the pionono and named it in honour of Pío Nono."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy pequeño, enrollado y bañado en almíbar, y llevo el nombre de un papa. ¿Quién soy?",
+              "en": "I'm small, rolled up and soaked in syrup, and I'm named after a pope. Who am I?"
+            },
+            "answer": [
+              "pionono",
+              "pio nono",
+              "piononos"
+            ],
+            "hints": [
+              {
+                "es": "Nací en Santa Fe.",
+                "en": "I was born in Santa Fe."
+              },
+              {
+                "es": "Pío Nono, todo junto.",
+                "en": "Pío Nono, written as one word."
+              }
+            ]
+          },
           "nextNodeId": "g5_capilla",
           "nextHint": {
             "es": "A la Capilla Real, aquí al lado. Un minuto.",
@@ -2569,6 +2641,28 @@
               "es": "Las monjas · La tornera confirma que el pionono es un dulce de pastelería de Santa Fe, no de convento.",
               "en": "The nuns · The turn sister confirms the pionono is a Santa Fe pastry-shop sweet, not a convent one."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy pequeño, enrollado y bañado en almíbar, y llevo el nombre de un papa. ¿Quién soy?",
+              "en": "I'm small, rolled up and soaked in syrup, and I'm named after a pope. Who am I?"
+            },
+            "answer": [
+              "pionono",
+              "pio nono",
+              "piononos"
+            ],
+            "hints": [
+              {
+                "es": "Nací en Santa Fe.",
+                "en": "I was born in Santa Fe."
+              },
+              {
+                "es": "Pío Nono, todo junto.",
+                "en": "Pío Nono, written as one word."
+              }
+            ]
           },
           "nextNodeId": "g5_capilla",
           "nextHint": {
@@ -3735,6 +3829,27 @@
               "en": "Fashion · The fashion is Granada's, but the dragon and the name came from France."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy un dragón, llevo encima una muñeca vestida a la moda y salgo el miércoles del Corpus. ¿Quién soy?",
+              "en": "I'm a dragon, I carry a fashionably dressed doll and I come out on the Wednesday of Corpus. Who am I?"
+            },
+            "answer": [
+              "tarasca",
+              "la tarasca"
+            ],
+            "hints": [
+              {
+                "es": "Soy la guía de esta ruta.",
+                "en": "I'm this route's guide."
+              },
+              {
+                "es": "Mi nombre viene de Tarascón.",
+                "en": "My name comes from Tarascon."
+              }
+            ]
+          },
           "nextNodeId": "f5_corral",
           "nextHint": {
             "es": "Al Corral del Carbón. Dos minutos.",
@@ -3773,6 +3888,27 @@
               "es": "Francia · La tarasca viajó de Francia a Castilla y de ahí a Granada, con las fiestas del Corpus.",
               "en": "France · The tarasque travelled from France to Castile and on to Granada, with the Corpus festivities."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy un dragón, llevo encima una muñeca vestida a la moda y salgo el miércoles del Corpus. ¿Quién soy?",
+              "en": "I'm a dragon, I carry a fashionably dressed doll and I come out on the Wednesday of Corpus. Who am I?"
+            },
+            "answer": [
+              "tarasca",
+              "la tarasca"
+            ],
+            "hints": [
+              {
+                "es": "Soy la guía de esta ruta.",
+                "en": "I'm this route's guide."
+              },
+              {
+                "es": "Mi nombre viene de Tarascón.",
+                "en": "My name comes from Tarascon."
+              }
+            ]
           },
           "nextNodeId": "f5_corral",
           "nextHint": {
@@ -4742,6 +4878,27 @@
               "en": "The symbol · Zafra died in 1507 and the house was built in 1539: the legend doesn't add up."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se construyen los baños del Bañuelo",
+                "en": "The Bañuelo baths are built"
+              },
+              {
+                "es": "Se levanta la Casa de Castril",
+                "en": "The Casa de Castril is built"
+              },
+              {
+                "es": "La casa se convierte en museo",
+                "en": "The house becomes a museum"
+              }
+            ]
+          },
           "nextNodeId": "l5_castril",
           "nextHint": {
             "es": "Baja a la Carrera del Darro, a la Casa de Castril. Unos 12 minutos.",
@@ -4780,6 +4937,27 @@
               "es": "El símbolo · Junto a la frase hay un fénix, símbolo de resurrección.",
               "en": "The symbol · Beside the phrase there's a phoenix, a symbol of resurrection."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se construyen los baños del Bañuelo",
+                "en": "The Bañuelo baths are built"
+              },
+              {
+                "es": "Se levanta la Casa de Castril",
+                "en": "The Casa de Castril is built"
+              },
+              {
+                "es": "La casa se convierte en museo",
+                "en": "The house becomes a museum"
+              }
+            ]
           },
           "nextNodeId": "l5_castril",
           "nextHint": {
@@ -5733,6 +5911,27 @@
               "en": "The Moriscos · The lead books required Arabic, Latin and theology: hardly anyone in Granada knew as much as their translators."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se derriba la Torre Turpiana",
+                "en": "The Turpiana Tower is pulled down"
+              },
+              {
+                "es": "Aparecen los libros de plomo en el Sacromonte",
+                "en": "The lead books turn up on the Sacromonte"
+              },
+              {
+                "es": "Se funda la abadía del Sacromonte",
+                "en": "The Sacromonte abbey is founded"
+              }
+            ]
+          },
           "nextNodeId": "p5_abadia",
           "nextHint": {
             "es": "Sube hasta la abadía del Sacromonte. Unos 12 minutos, cuesta arriba.",
@@ -5771,6 +5970,27 @@
               "es": "La torre · En 1682 el papa declaró falsos los plomos; volvieron a Granada en el año 2000.",
               "en": "The tower · In 1682 the Pope declared the lead books forgeries; they returned to Granada in 2000."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se derriba la Torre Turpiana",
+                "en": "The Turpiana Tower is pulled down"
+              },
+              {
+                "es": "Aparecen los libros de plomo en el Sacromonte",
+                "en": "The lead books turn up on the Sacromonte"
+              },
+              {
+                "es": "Se funda la abadía del Sacromonte",
+                "en": "The Sacromonte abbey is founded"
+              }
+            ]
           },
           "nextNodeId": "p5_abadia",
           "nextHint": {

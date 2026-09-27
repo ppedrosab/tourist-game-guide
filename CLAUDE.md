@@ -223,6 +223,15 @@ Colón y la escultora Gertrude Whitney) y Almería «¿Por qué el cine se enamo
 Sergio Leone y John Lennon). Con ellas las ocho ciudades quedan completas. Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
+**Retos y pistas**: además del quiz y la observación, hay `riddle` (acertijo), `lock` (candado final) y
+`order` (ordenar hechos). Cada reto puede traer `hints` escalonadas; en el quiz sin pistas escritas la pista
+quita una opción, y en ordenar coloca el siguiente. Una pista no quita la estrella, «Ver respuesta» sí. Las
+pistas se piden a `src/ads/hints.ts` (gratis por defecto; la build con anuncios enchufa su anuncio con
+recompensa). Todas las rutas terminan con «El expediente»: un candado cuya clave se cuenta en paradas
+comunes a todos los caminos, y cada paso de rama lleva una línea del tiempo o un acertijo con hechos de la
+propia ruta (lo exige `allPacks.test.ts`). Pendiente: retos de observación (placas, fechas en fachadas) al
+hacer la prueba en la calle.
+
 ## Arquitectura
 
 ```

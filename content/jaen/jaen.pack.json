@@ -1264,6 +1264,28 @@
               "en": "The shepherd · Nobody in La Malena ever saw the lizard, even though everyone knew where its cave was."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Salía de una cueva junto a un raudal y se comía a quien se acercaba; hoy soy de bronce. ¿Quién soy?",
+              "en": "I came out of a cave by a spring and ate whoever came near; today I'm made of bronze. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "lagarto",
+              "el lagarto",
+              "lizard"
+            ],
+            "hints": [
+              {
+                "es": "Soy el guía de esta ruta.",
+                "en": "I'm this route's guide."
+              },
+              {
+                "es": "El de la Malena.",
+                "en": "The one from the Malena."
+              }
+            ]
+          },
           "nextNodeId": "n5_raudal",
           "nextHint": {
             "es": "Baja al raudal de la Magdalena, junto a la fuente. Un minuto.",
@@ -1302,6 +1324,28 @@
               "es": "La piel · La piel de San Ildefonso era probablemente de un caimán traído de lejos.",
               "en": "The skin · The skin in San Ildefonso probably came from a caiman brought from far away."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Salía de una cueva junto a un raudal y se comía a quien se acercaba; hoy soy de bronce. ¿Quién soy?",
+              "en": "I came out of a cave by a spring and ate whoever came near; today I'm made of bronze. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "lagarto",
+              "el lagarto",
+              "lizard"
+            ],
+            "hints": [
+              {
+                "es": "Soy el guía de esta ruta.",
+                "en": "I'm this route's guide."
+              },
+              {
+                "es": "El de la Malena.",
+                "en": "The one from the Malena."
+              }
+            ]
           },
           "nextNodeId": "n5_raudal",
           "nextHint": {
@@ -2466,6 +2510,28 @@
               "en": "The 19th century · In the 19th century Church lands were sold off and the new owners planted olive trees."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Me varean en invierno y de mí sale el oro verde de Jaén. ¿Quién soy?",
+              "en": "They beat me down in winter and from me comes Jaén's green gold. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "aceituna",
+              "oliva",
+              "olive"
+            ],
+            "hints": [
+              {
+                "es": "Crezco en el olivo.",
+                "en": "I grow on the olive tree."
+              },
+              {
+                "es": "Ac…",
+                "en": "Ol…"
+              }
+            ]
+          },
           "nextNodeId": "g5_raudal",
           "nextHint": {
             "es": "Baja al raudal de la Magdalena. Un minuto.",
@@ -2504,6 +2570,28 @@
               "es": "El siglo XIX · Entre 1830 y 1880 el olivar de Jaén se extendió como nunca, y siguió creciendo en el siglo XX.",
               "en": "The 19th century · Between 1830 and 1880 Jaén's olive groves spread as never before, and kept growing in the 20th century."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Me varean en invierno y de mí sale el oro verde de Jaén. ¿Quién soy?",
+              "en": "They beat me down in winter and from me comes Jaén's green gold. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "aceituna",
+              "oliva",
+              "olive"
+            ],
+            "hints": [
+              {
+                "es": "Crezco en el olivo.",
+                "en": "I grow on the olive tree."
+              },
+              {
+                "es": "Ac…",
+                "en": "Ol…"
+              }
+            ]
           },
           "nextNodeId": "g5_raudal",
           "nextHint": {
@@ -3665,6 +3753,29 @@
               "en": "The olive tree · What burns in the bonfires is olive pruning wood."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Ardo la víspera de un santo de enero y me hacen con la leña de la poda. ¿Qué soy?",
+              "en": "I burn on the eve of a January saint's day and I'm made from the pruned olive wood. What am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "lumbre",
+              "lumbres",
+              "hoguera",
+              "bonfire"
+            ],
+            "hints": [
+              {
+                "es": "El santo es San Antón.",
+                "en": "The saint is Saint Anthony."
+              },
+              {
+                "es": "Lum…",
+                "en": "Bon…"
+              }
+            ]
+          },
           "nextNodeId": "g5_lumbre",
           "nextHint": {
             "es": "Baja a la Plaza de San Juan. Unos 5 minutos.",
@@ -3703,6 +3814,29 @@
               "es": "El santo · El santo da la fecha y el olivo da el fuego.",
               "en": "The saint · The saint gives the date and the olive tree gives the fire."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Ardo la víspera de un santo de enero y me hacen con la leña de la poda. ¿Qué soy?",
+              "en": "I burn on the eve of a January saint's day and I'm made from the pruned olive wood. What am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "lumbre",
+              "lumbres",
+              "hoguera",
+              "bonfire"
+            ],
+            "hints": [
+              {
+                "es": "El santo es San Antón.",
+                "en": "The saint is Saint Anthony."
+              },
+              {
+                "es": "Lum…",
+                "en": "Bon…"
+              }
+            ]
           },
           "nextNodeId": "g5_lumbre",
           "nextHint": {
@@ -4673,6 +4807,28 @@
               "en": "Someone alive · Under the sheet was a gentleman who went in disguise to see his sweetheart."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Iba de blanco por la noche junto a San Bartolomé y asustaba a los vecinos… pero era de carne y hueso. ¿Quién era?",
+              "en": "I walked in white at night by San Bartolomé scaring the neighbours… but I was flesh and blood. Who was I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "fantasma",
+              "el fantasma",
+              "ghost"
+            ],
+            "hints": [
+              {
+                "es": "Es el título de la ruta.",
+                "en": "It's in the route's title."
+              },
+              {
+                "es": "F…",
+                "en": "G…"
+              }
+            ]
+          },
           "nextNodeId": "l5_sanbartolome",
           "nextHint": {
             "es": "A la plaza de San Bartolomé, aquí al lado. Un minuto.",
@@ -4711,6 +4867,28 @@
               "es": "Un vivo · Un fantasma con horario fijo y ruido de cadenas tiene pies.",
               "en": "Someone alive · A ghost with a fixed schedule and rattling chains has feet."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Iba de blanco por la noche junto a San Bartolomé y asustaba a los vecinos… pero era de carne y hueso. ¿Quién era?",
+              "en": "I walked in white at night by San Bartolomé scaring the neighbours… but I was flesh and blood. Who was I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "fantasma",
+              "el fantasma",
+              "ghost"
+            ],
+            "hints": [
+              {
+                "es": "Es el título de la ruta.",
+                "en": "It's in the route's title."
+              },
+              {
+                "es": "F…",
+                "en": "G…"
+              }
+            ]
           },
           "nextNodeId": "l5_sanbartolome",
           "nextHint": {
@@ -5644,6 +5822,31 @@
               "en": "Al-Andalus · After eight months of siege, Jaén could hold out no longer."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Primer intento de Fernando III contra Jaén",
+                "en": "Fernando III's first attempt on Jaén"
+              },
+              {
+                "es": "Empieza el cerco de ocho meses",
+                "en": "The eight-month siege begins"
+              },
+              {
+                "es": "El Pacto de Jaén",
+                "en": "The Pact of Jaén"
+              },
+              {
+                "es": "Se abre el Parador junto al castillo",
+                "en": "The Parador opens beside the castle"
+              }
+            ]
+          },
           "nextNodeId": "k5_castillo",
           "nextHint": {
             "es": "Sube por el sendero hasta el castillo de Santa Catalina: 2 km cuesta arriba, unos 35 minutos (también se puede subir en taxi).",
@@ -5682,6 +5885,31 @@
               "es": "Castilla · Alhamar entregó Jaén por un pacto: vasallaje y 150 000 maravedíes al año a cambio de paz.",
               "en": "Castile · Alhamar handed over Jaén in a pact: vassalage and 150,000 maravedís a year in exchange for peace."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Primer intento de Fernando III contra Jaén",
+                "en": "Fernando III's first attempt on Jaén"
+              },
+              {
+                "es": "Empieza el cerco de ocho meses",
+                "en": "The eight-month siege begins"
+              },
+              {
+                "es": "El Pacto de Jaén",
+                "en": "The Pact of Jaén"
+              },
+              {
+                "es": "Se abre el Parador junto al castillo",
+                "en": "The Parador opens beside the castle"
+              }
+            ]
           },
           "nextNodeId": "k5_castillo",
           "nextHint": {

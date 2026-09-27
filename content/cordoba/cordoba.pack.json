@@ -1280,6 +1280,27 @@
               "en": "Almanzor · Almanzor only burned a part: most of the books were still there after the bonfire."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se empieza la Mezquita",
+                "en": "The Mosque is begun"
+              },
+              {
+                "es": "Almanzor manda quemar libros",
+                "en": "Almanzor has books burned"
+              },
+              {
+                "es": "Empieza la fitna, la guerra civil del califato",
+                "en": "The fitna, the caliphate's civil war, begins"
+              }
+            ]
+          },
           "nextNodeId": "n5_calahorra",
           "nextHint": {
             "es": "Cruza el puente romano hasta la Torre de la Calahorra. Unos 8 minutos.",
@@ -1318,6 +1339,27 @@
               "es": "Los libreros · Los libros vendidos en el asedio acabaron repartidos por los reinos de taifas.",
               "en": "The booksellers · The books sold during the siege ended up scattered across the taifa kingdoms."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se empieza la Mezquita",
+                "en": "The Mosque is begun"
+              },
+              {
+                "es": "Almanzor manda quemar libros",
+                "en": "Almanzor has books burned"
+              },
+              {
+                "es": "Empieza la fitna, la guerra civil del califato",
+                "en": "The fitna, the caliphate's civil war, begins"
+              }
+            ]
           },
           "nextNodeId": "n5_calahorra",
           "nextHint": {
@@ -2483,6 +2525,27 @@
               "en": "The labourers · The labourers put tomato in the dornillo once it was cheap: that's how thick red salmorejo was born."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "El aceite de la Bética viaja a Roma en ánforas",
+                "en": "Baetica's oil travels to Rome in amphorae"
+              },
+              {
+                "es": "El tomate llega de América",
+                "en": "The tomato arrives from America"
+              },
+              {
+                "es": "Los jornaleros le echan tomate al salmorejo",
+                "en": "Farmhands put tomato in salmorejo"
+              }
+            ]
+          },
           "nextNodeId": "g5_potro",
           "nextHint": {
             "es": "Baja hasta la Plaza del Potro. Unos 10 minutos.",
@@ -2521,6 +2584,27 @@
               "es": "Los andalusíes · Los andalusíes tomaban sopas frías de pan y almendra, pero el rojo del tomate vino mucho después.",
               "en": "The Andalusis · The Andalusis ate cold soups of bread and almonds, but the red of the tomato came much later."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "El aceite de la Bética viaja a Roma en ánforas",
+                "en": "Baetica's oil travels to Rome in amphorae"
+              },
+              {
+                "es": "El tomate llega de América",
+                "en": "The tomato arrives from America"
+              },
+              {
+                "es": "Los jornaleros le echan tomate al salmorejo",
+                "en": "Farmhands put tomato in salmorejo"
+              }
+            ]
           },
           "nextNodeId": "g5_potro",
           "nextHint": {
@@ -3690,6 +3774,27 @@
               "en": "The Fair · The Fair is the only May festival with a royal document: the 1284 privilege."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Hay cruces, hay patios y hay feria: ¿en qué mes florece Córdoba?",
+              "en": "There are crosses, patios and a fair: in which month does Córdoba bloom? (answer in Spanish or English)"
+            },
+            "answer": [
+              "mayo",
+              "may"
+            ],
+            "hints": [
+              {
+                "es": "Es el mes de las flores.",
+                "en": "It's the month of flowers."
+              },
+              {
+                "es": "Cuatro letras: M…",
+                "en": "Three letters in English: M…"
+              }
+            ]
+          },
           "nextNodeId": "f5_arenal",
           "nextHint": {
             "es": "Cruza el río hacia El Arenal. Unos 15 minutos.",
@@ -3728,6 +3833,27 @@
               "es": "Las Cruces · La Chiquita Piconera reconoce que la Feria tiene documentos más antiguos que las Cruces.",
               "en": "The Crosses · The Chiquita Piconera admits the Fair has older documents than the Crosses."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Hay cruces, hay patios y hay feria: ¿en qué mes florece Córdoba?",
+              "en": "There are crosses, patios and a fair: in which month does Córdoba bloom? (answer in Spanish or English)"
+            },
+            "answer": [
+              "mayo",
+              "may"
+            ],
+            "hints": [
+              {
+                "es": "Es el mes de las flores.",
+                "en": "It's the month of flowers."
+              },
+              {
+                "es": "Cuatro letras: M…",
+                "en": "Three letters in English: M…"
+              }
+            ]
           },
           "nextNodeId": "f5_arenal",
           "nextHint": {
@@ -4706,6 +4832,27 @@
               "en": "The inscription · The tower was built between 1404 and 1408: forty years before the crime."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "La conquista cristiana de Córdoba",
+                "en": "The Christian conquest of Córdoba"
+              },
+              {
+                "es": "Se levanta la torre de la Malmuerta",
+                "en": "The Malmuerta tower is built"
+              },
+              {
+                "es": "El crimen que cuenta la leyenda",
+                "en": "The crime the legend tells of"
+              }
+            ]
+          },
           "nextNodeId": "l5_malmuerta",
           "nextHint": {
             "es": "Cruza hasta la torre, al final de la plaza. Dos minutos.",
@@ -4744,6 +4891,27 @@
               "es": "Los poetas · Los poetas unieron la torre y el crimen, pero la piedra tiene su propia fecha.",
               "en": "The poets · The poets joined the tower and the crime, but the stone has its own date."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "La conquista cristiana de Córdoba",
+                "en": "The Christian conquest of Córdoba"
+              },
+              {
+                "es": "Se levanta la torre de la Malmuerta",
+                "en": "The Malmuerta tower is built"
+              },
+              {
+                "es": "El crimen que cuenta la leyenda",
+                "en": "The crime the legend tells of"
+              }
+            ]
           },
           "nextNodeId": "l5_malmuerta",
           "nextHint": {
@@ -5690,6 +5858,31 @@
               "en": "Reason · Averroes was banished and his books burned, but copies travelled across Europe."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Séneca es maestro de Nerón",
+                "en": "Seneca tutors Nero"
+              },
+              {
+                "es": "Nace Maimónides",
+                "en": "Maimonides is born"
+              },
+              {
+                "es": "Los almohades toman Córdoba",
+                "en": "The Almohads take Córdoba"
+              },
+              {
+                "es": "Se pone la estatua de Maimónides",
+                "en": "The statue of Maimonides is put up"
+              }
+            ]
+          },
           "nextNodeId": "s5_calahorra",
           "nextHint": {
             "es": "Cruza el puente romano hasta la torre de la Calahorra. Unos 6 minutos.",
@@ -5728,6 +5921,31 @@
               "es": "El poder · Nerón, su antiguo alumno, obligó a Séneca a quitarse la vida en el año 65.",
               "en": "Power · Nero, his former pupil, forced Seneca to take his own life in AD 65."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Séneca es maestro de Nerón",
+                "en": "Seneca tutors Nero"
+              },
+              {
+                "es": "Nace Maimónides",
+                "en": "Maimonides is born"
+              },
+              {
+                "es": "Los almohades toman Córdoba",
+                "en": "The Almohads take Córdoba"
+              },
+              {
+                "es": "Se pone la estatua de Maimónides",
+                "en": "The statue of Maimonides is put up"
+              }
+            ]
           },
           "nextNodeId": "s5_calahorra",
           "nextHint": {

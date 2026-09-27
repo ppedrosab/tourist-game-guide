@@ -1,4 +1,4 @@
-import type { CityPack, PlayerProgress, Route } from "@/content/types";
+import type { Challenge, CityPack, PlayerProgress, Route } from "@/content/types";
 import { COLLECTIBLE_ART, SCENE_LAYERS, SPRITES, THEN_NOW_ART } from "@/scene/assets.generated";
 import { spriteKeyOf } from "@/scene/cast";
 import { sceneKeyOf } from "@/scene/sceneFor";
@@ -177,6 +177,23 @@ describe("mapa por calles", () => {
         length += distanceM({ lng: path![i - 1][0], lat: path![i - 1][1] }, { lng: path![i][0], lat: path![i][1] });
       }
       expect([s.id, length < 4 * distanceM(at[s.from], at[s.to]) + 1000]).toEqual([s.id, true]);
+    }
+  });
+});
+
+describe("retos", () => {
+  it.each(routes)("%s: candado final con pistas y un reto en cada paso de rama", (_, __, route) => {
+    const locks = route.nodes.filter((n) => n.challenge?.type === "lock");
+    expect(locks).toHaveLength(1);
+    const lock = locks[0].challenge as Extract<Challenge, { type: "observe" | "riddle" | "lock" }>;
+    expect(lock.hints?.length ?? 0).toBeGreaterThanOrEqual(2);
+    const ending = route.nodes.find((n) => n.isEnding);
+    expect(locks[0].nextNodeId).toBe(ending?.id);
+    // Los pasos narrativos a los que lleva una decisión tienen reto (ordenar o acertijo).
+    const targets = new Set(route.nodes.flatMap((n) => (n.choices ?? []).map((c) => c.targetNodeId)));
+    for (const n of route.nodes.filter((x) => targets.has(x.id) && !x.location)) {
+      expect([n.id, n.challenge?.type]).toEqual([n.id, expect.stringMatching(/^(order|riddle)$/)]);
+      if (n.challenge?.type === "riddle") expect((n.challenge as { hints?: unknown[] }).hints?.length ?? 0).toBeGreaterThanOrEqual(2);
     }
   });
 });

@@ -1264,6 +1264,31 @@
               "en": "Santo Domingo · In 1877 a lead box with Columbus's name turned up in Santo Domingo. Those bones have never been tested."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Muere Colón en Valladolid",
+                "en": "Columbus dies in Valladolid"
+              },
+              {
+                "es": "Sus restos llegan a la Cartuja de Sevilla",
+                "en": "His remains reach the Cartuja in Seville"
+              },
+              {
+                "es": "La Giralda estrena su campanario",
+                "en": "The Giralda gets its bell tower"
+              },
+              {
+                "es": "Se inaugura el monumento de los Jardines de Murillo",
+                "en": "The monument in the Murillo Gardens is unveiled"
+              }
+            ]
+          },
           "nextNodeId": "n5_agua",
           "nextHint": {
             "es": "Al barrio de Santa Cruz, por el Callejón del Agua. Unos 6 minutos.",
@@ -1326,6 +1351,31 @@
               "es": "Las dos · El ADN confirma que en Sevilla hay restos de Colón… pero solo una pequeña parte del esqueleto.",
               "en": "Both · DNA confirms there are remains of Columbus in Seville… but only a small part of the skeleton."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Muere Colón en Valladolid",
+                "en": "Columbus dies in Valladolid"
+              },
+              {
+                "es": "Sus restos llegan a la Cartuja de Sevilla",
+                "en": "His remains reach the Cartuja in Seville"
+              },
+              {
+                "es": "La Giralda estrena su campanario",
+                "en": "The Giralda gets its bell tower"
+              },
+              {
+                "es": "Se inaugura el monumento de los Jardines de Murillo",
+                "en": "The monument in the Murillo Gardens is unveiled"
+              }
+            ]
           },
           "nextNodeId": "n5_agua",
           "nextHint": {
@@ -2571,6 +2621,29 @@
               "en": "The Scots · The Scots make use of oranges already there; the trees would remain even if they stopped buying."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy amarga y en Sevilla nadie me come, pero en Escocia me hacen mermelada. ¿Quién soy?",
+              "en": "I'm bitter and nobody in Seville eats me, but in Scotland they make me into marmalade. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "naranja",
+              "naranja amarga",
+              "orange",
+              "bitter orange"
+            ],
+            "hints": [
+              {
+                "es": "Mi flor es el azahar.",
+                "en": "My blossom is azahar."
+              },
+              {
+                "es": "Nar…",
+                "en": "Or…"
+              }
+            ]
+          },
           "nextNodeId": "g5_agua",
           "nextHint": {
             "es": "Entra en el barrio de Santa Cruz, al callejón del Agua. Unos 5 minutos.",
@@ -2609,6 +2682,29 @@
               "es": "Los jardineros · Los jardineros siguen plantando naranjos, pero continúan una costumbre mucho más antigua.",
               "en": "The gardeners · The gardeners keep planting orange trees, but they're continuing a much older custom."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy amarga y en Sevilla nadie me come, pero en Escocia me hacen mermelada. ¿Quién soy?",
+              "en": "I'm bitter and nobody in Seville eats me, but in Scotland they make me into marmalade. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "naranja",
+              "naranja amarga",
+              "orange",
+              "bitter orange"
+            ],
+            "hints": [
+              {
+                "es": "Mi flor es el azahar.",
+                "en": "My blossom is azahar."
+              },
+              {
+                "es": "Nar…",
+                "en": "Or…"
+              }
+            ]
           },
           "nextNodeId": "g5_agua",
           "nextHint": {
@@ -3778,6 +3874,29 @@
               "en": "The outsiders · In 1846 Ybarra and Bonaplata requested the fair; Isabella II approved it."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy de papel, redondo y de colores, y cuelgo a miles en el real. ¿Quién soy?",
+              "en": "I'm made of paper, round and colourful, and I hang by the thousand over the fairground. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "farolillo",
+              "farolillos",
+              "lantern",
+              "paper lantern"
+            ],
+            "hints": [
+              {
+                "es": "De noche me encienden.",
+                "en": "At night they light me up."
+              },
+              {
+                "es": "Faro…",
+                "en": "Paper l…"
+              }
+            ]
+          },
           "nextNodeId": "f5_portada",
           "nextHint": {
             "es": "Cruza el puente de San Telmo hacia el real. Unos 15 minutos.",
@@ -3816,6 +3935,29 @@
               "es": "Las casetas · Casetas y farolillos llegaron después: la feria la trajeron dos de fuera; la fiesta, los sevillanos.",
               "en": "The marquees · Marquees and lanterns came later: two outsiders brought the fair; the Sevillians brought the party."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy de papel, redondo y de colores, y cuelgo a miles en el real. ¿Quién soy?",
+              "en": "I'm made of paper, round and colourful, and I hang by the thousand over the fairground. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "farolillo",
+              "farolillos",
+              "lantern",
+              "paper lantern"
+            ],
+            "hints": [
+              {
+                "es": "De noche me encienden.",
+                "en": "At night they light me up."
+              },
+              {
+                "es": "Faro…",
+                "en": "Paper l…"
+              }
+            ]
           },
           "nextNodeId": "f5_portada",
           "nextHint": {
@@ -4787,6 +4929,29 @@
               "en": "The king · The old woman held a mirror up to the king: the killer's face was his own."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Alumbraba la noche en la mano de una vieja y fui testigo de un crimen. ¿Qué soy?",
+              "en": "I lit up the night in an old woman's hand and I witnessed a crime. What am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "candil",
+              "el candil",
+              "oil lamp",
+              "lamp"
+            ],
+            "hints": [
+              {
+                "es": "La calle se llama Candilejo por mí.",
+                "en": "The street is called Candilejo after me."
+              },
+              {
+                "es": "Cand…",
+                "en": "Oil l…"
+              }
+            ]
+          },
           "nextNodeId": "l5_cabezarey",
           "nextHint": {
             "es": "Vuelve hacia la Alfalfa, a la calle Cabeza del Rey Don Pedro. Unos 10 minutos.",
@@ -4825,6 +4990,29 @@
               "es": "El rey · El rey cumplió su juramento poniendo en la esquina una cabeza de piedra: la suya.",
               "en": "The king · The king kept his oath by placing a stone head on the corner: his own."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Alumbraba la noche en la mano de una vieja y fui testigo de un crimen. ¿Qué soy?",
+              "en": "I lit up the night in an old woman's hand and I witnessed a crime. What am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "candil",
+              "el candil",
+              "oil lamp",
+              "lamp"
+            ],
+            "hints": [
+              {
+                "es": "La calle se llama Candilejo por mí.",
+                "en": "The street is called Candilejo after me."
+              },
+              {
+                "es": "Cand…",
+                "en": "Oil l…"
+              }
+            ]
           },
           "nextNodeId": "l5_cabezarey",
           "nextHint": {
@@ -5768,6 +5956,27 @@
               "en": "The legend · The French Romantics (Mérimée, 1834; Dumas, 1836) mixed Mañara up with Don Juan."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Nace Miguel Mañara",
+                "en": "Miguel Mañara is born"
+              },
+              {
+                "es": "Se funda la Real Maestranza",
+                "en": "The Real Maestranza is founded"
+              },
+              {
+                "es": "Se inaugura la iglesia de la Caridad",
+                "en": "The Caridad church opens"
+              }
+            ]
+          },
           "nextNodeId": "d5_caridad",
           "nextHint": {
             "es": "Al Hospital de la Caridad, a la vuelta de la esquina. Tres minutos.",
@@ -5806,6 +6015,27 @@
               "es": "Las Indias · Tras morir su mujer en 1661, Mañara gastó su fortuna en el hospital de la Caridad.",
               "en": "The Indies · After his wife died in 1661, Mañara spent his fortune on the Hospital de la Caridad."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Nace Miguel Mañara",
+                "en": "Miguel Mañara is born"
+              },
+              {
+                "es": "Se funda la Real Maestranza",
+                "en": "The Real Maestranza is founded"
+              },
+              {
+                "es": "Se inaugura la iglesia de la Caridad",
+                "en": "The Caridad church opens"
+              }
+            ]
           },
           "nextNodeId": "d5_caridad",
           "nextHint": {

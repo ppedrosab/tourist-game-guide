@@ -1282,6 +1282,31 @@
               "en": "The miners · The Huelva club was founded by Britons from the mining company, who were already playing at the mines."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se construye el Muelle del Tinto",
+                "en": "The Tinto pier is built"
+              },
+              {
+                "es": "Se inaugura la estación de Sevilla",
+                "en": "The Seville station opens"
+              },
+              {
+                "es": "Se funda el Recreativo en la Casa Colón",
+                "en": "The Recreativo is founded at the Casa Colón"
+              },
+              {
+                "es": "La Merced pasa a ser catedral",
+                "en": "La Merced becomes the cathedral"
+              }
+            ]
+          },
           "nextNodeId": "n5_merced",
           "nextHint": {
             "es": "Sube hasta la Catedral de la Merced. Unos 6 minutos.",
@@ -1320,6 +1345,31 @@
               "es": "Los mineros · Hacia 1874 los británicos de la compañía ya jugaban al fútbol en Riotinto.",
               "en": "The miners · Around 1874 the company's Britons were already playing football at Riotinto."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se construye el Muelle del Tinto",
+                "en": "The Tinto pier is built"
+              },
+              {
+                "es": "Se inaugura la estación de Sevilla",
+                "en": "The Seville station opens"
+              },
+              {
+                "es": "Se funda el Recreativo en la Casa Colón",
+                "en": "The Recreativo is founded at the Casa Colón"
+              },
+              {
+                "es": "La Merced pasa a ser catedral",
+                "en": "La Merced becomes the cathedral"
+              }
+            ]
           },
           "nextNodeId": "n5_merced",
           "nextHint": {
@@ -2492,6 +2542,28 @@
               "en": "The kitchen · Fried cuttlefish only became famous later: first it was cheap food because the estuary gave plenty."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Tengo tinta y no escribo; en Huelva me guisan con habas. ¿Quién soy?",
+              "en": "I have ink but never write; in Huelva they stew me with broad beans. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "choco",
+              "sepia",
+              "cuttlefish"
+            ],
+            "hints": [
+              {
+                "es": "Vivo en la ría y en el mar.",
+                "en": "I live in the estuary and the sea."
+              },
+              {
+                "es": "Por mí llaman choqueros a los de Huelva.",
+                "en": "I'm why people from Huelva are called choqueros."
+              }
+            ]
+          },
           "nextNodeId": "g5_colon",
           "nextHint": {
             "es": "Sigue hasta los jardines de la Casa Colón. Unos 8 minutos.",
@@ -2530,6 +2602,28 @@
               "es": "Los vecinos · El mote pudo empezar con retintín, pero nació de lo que la ría daba y Huelva lo hizo suyo.",
               "en": "The neighbours · The nickname may have started as a sneer, but it came from what the estuary provided, and Huelva made it its own."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Tengo tinta y no escribo; en Huelva me guisan con habas. ¿Quién soy?",
+              "en": "I have ink but never write; in Huelva they stew me with broad beans. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "choco",
+              "sepia",
+              "cuttlefish"
+            ],
+            "hints": [
+              {
+                "es": "Vivo en la ría y en el mar.",
+                "en": "I live in the estuary and the sea."
+              },
+              {
+                "es": "Por mí llaman choqueros a los de Huelva.",
+                "en": "I'm why people from Huelva are called choqueros."
+              }
+            ]
           },
           "nextNodeId": "g5_colon",
           "nextHint": {
@@ -3710,6 +3804,27 @@
               "en": "The Pinzóns · Columbus and the Pinzóns made the voyage, but didn't invent any festival."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Las carabelas zarpan de Palos",
+                "en": "The caravels sail from Palos"
+              },
+              {
+                "es": "Se levanta el Gran Hotel Colón",
+                "en": "The Gran Hotel Colón is built"
+              },
+              {
+                "es": "El cuarto centenario del viaje",
+                "en": "The fourth centenary of the voyage"
+              }
+            ]
+          },
           "nextNodeId": "g5_ria",
           "nextHint": {
             "es": "Baja al Paseo de la Ría. Unos 15 minutos.",
@@ -3748,6 +3863,27 @@
               "es": "La Sociedad Colombina · La idea de celebrar cada 3 de agosto salió de la Sociedad Colombina.",
               "en": "The Columbian Society · The idea of celebrating every 3 August came from the Columbian Society."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Las carabelas zarpan de Palos",
+                "en": "The caravels sail from Palos"
+              },
+              {
+                "es": "Se levanta el Gran Hotel Colón",
+                "en": "The Gran Hotel Colón is built"
+              },
+              {
+                "es": "El cuarto centenario del viaje",
+                "en": "The fourth centenary of the voyage"
+              }
+            ]
           },
           "nextNodeId": "g5_ria",
           "nextHint": {
@@ -4719,6 +4855,28 @@
               "en": "Under the sea · The idea of a sunken Tartessos is a tale; real kingdoms leave remains."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Fui un reino rico en metales junto a la ría; los griegos me buscaron y aún se discute dónde estuve. ¿Quién soy?",
+              "en": "I was a kingdom rich in metals by the estuary; the Greeks sought me and people still argue about where I was. Who am I?"
+            },
+            "answer": [
+              "tartessos",
+              "tarteso",
+              "tartesos"
+            ],
+            "hints": [
+              {
+                "es": "Mi rey fue Argantonio.",
+                "en": "My king was Arganthonios."
+              },
+              {
+                "es": "Tart…",
+                "en": "Tart…"
+              }
+            ]
+          },
           "nextNodeId": "l5_ria",
           "nextHint": {
             "es": "Baja hasta el Paseo de la Ría. Unos 15 minutos.",
@@ -4757,6 +4915,28 @@
               "es": "Huelva · Huelva fue uno de los grandes puertos de la cultura tartésica.",
               "en": "Huelva · Huelva was one of the great ports of the Tartessian culture."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Fui un reino rico en metales junto a la ría; los griegos me buscaron y aún se discute dónde estuve. ¿Quién soy?",
+              "en": "I was a kingdom rich in metals by the estuary; the Greeks sought me and people still argue about where I was. Who am I?"
+            },
+            "answer": [
+              "tartessos",
+              "tarteso",
+              "tartesos"
+            ],
+            "hints": [
+              {
+                "es": "Mi rey fue Argantonio.",
+                "en": "My king was Arganthonios."
+              },
+              {
+                "es": "Tart…",
+                "en": "Tart…"
+              }
+            ]
           },
           "nextNodeId": "l5_ria",
           "nextHint": {
@@ -5709,6 +5889,31 @@
               "en": "The estuary · The log records the vow of 3 March 1493, but ends before he could keep it."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Las carabelas zarpan de Palos",
+                "en": "The caravels sail from Palos"
+              },
+              {
+                "es": "Colón hace su promesa en la tormenta",
+                "en": "Columbus makes his vow in the storm"
+              },
+              {
+                "es": "Zuloaga hace los azulejos de la Cinta",
+                "en": "Zuloaga makes the Cinta tiles"
+              },
+              {
+                "es": "Se inaugura el monumento a Colón",
+                "en": "The Columbus monument is unveiled"
+              }
+            ]
+          },
           "nextNodeId": "h5_cinta",
           "nextHint": {
             "es": "Al santuario, siguiendo el cabezo. Unos 7 minutos.",
@@ -5747,6 +5952,31 @@
               "es": "Los cabezos · La tradición dice que Colón encendió una vela en la Cinta; no hay documento de esa visita.",
               "en": "The hills · Tradition says Columbus lit a candle at the Cinta; there is no document of that visit."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Las carabelas zarpan de Palos",
+                "en": "The caravels sail from Palos"
+              },
+              {
+                "es": "Colón hace su promesa en la tormenta",
+                "en": "Columbus makes his vow in the storm"
+              },
+              {
+                "es": "Zuloaga hace los azulejos de la Cinta",
+                "en": "Zuloaga makes the Cinta tiles"
+              },
+              {
+                "es": "Se inaugura el monumento a Colón",
+                "en": "The Columbus monument is unveiled"
+              }
+            ]
           },
           "nextNodeId": "h5_cinta",
           "nextHint": {

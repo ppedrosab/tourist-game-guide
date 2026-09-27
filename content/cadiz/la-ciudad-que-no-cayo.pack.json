@@ -1258,6 +1258,31 @@
               "en": "The people of Cádiz · The bombs didn't scare anyone much: people made up songs about them."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Los fenicios fundan Gadir",
+                "en": "The Phoenicians found Gadir"
+              },
+              {
+                "es": "Se empieza el castillo de Santa Catalina",
+                "en": "Santa Catalina castle is begun"
+              },
+              {
+                "es": "La Casa de Contratación se muda a Cádiz",
+                "en": "The Casa de Contratación moves to Cádiz"
+              },
+              {
+                "es": "Empieza el asedio francés",
+                "en": "The French siege begins"
+              }
+            ]
+          },
           "nextNodeId": "n5_museo",
           "nextHint": {
             "es": "A la Plaza de Mina, al Museo de Cádiz. Unos 5 minutos.",
@@ -1319,6 +1344,31 @@
               "es": "La isla · Cádiz era casi una isla y las flotas mantenían abierta la bahía.",
               "en": "The island · Cádiz was almost an island and the fleets kept the bay open."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Los fenicios fundan Gadir",
+                "en": "The Phoenicians found Gadir"
+              },
+              {
+                "es": "Se empieza el castillo de Santa Catalina",
+                "en": "Santa Catalina castle is begun"
+              },
+              {
+                "es": "La Casa de Contratación se muda a Cádiz",
+                "en": "The Casa de Contratación moves to Cádiz"
+              },
+              {
+                "es": "Empieza el asedio francés",
+                "en": "The French siege begins"
+              }
+            ]
           },
           "nextNodeId": "n5_museo",
           "nextHint": {
@@ -2702,6 +2752,28 @@
               "en": "The Garumero · He has a new recipe for “garum Cádiz-style” on his tablet."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Vengo de la almadraba, en el mercado me «ronquean» y de mí se aprovecha todo. ¿Quién soy?",
+              "en": "I come from the almadraba, at the market they “ronquear” me and every bit of me gets used. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "atun",
+              "tuna",
+              "atun rojo"
+            ],
+            "hints": [
+              {
+                "es": "Soy un pez muy grande.",
+                "en": "I'm a very big fish."
+              },
+              {
+                "es": "Rojo, de almadraba: el a…",
+                "en": "Red, from the almadraba: tu…"
+              }
+            ]
+          },
           "nextNodeId": "g5_ancha",
           "nextHint": {
             "es": "Y ahora, el postre: a la calle Ancha. Unos 3 minutos.",
@@ -2756,6 +2828,28 @@
               "es": "La Pescaera · Al hablar de la manzanilla, la Pescaera no para de tocarse el mandil.",
               "en": "The Fishwife · When manzanilla comes up, the Fishwife can't stop patting her apron."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Vengo de la almadraba, en el mercado me «ronquean» y de mí se aprovecha todo. ¿Quién soy?",
+              "en": "I come from the almadraba, at the market they “ronquear” me and every bit of me gets used. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "atun",
+              "tuna",
+              "atun rojo"
+            ],
+            "hints": [
+              {
+                "es": "Soy un pez muy grande.",
+                "en": "I'm a very big fish."
+              },
+              {
+                "es": "Rojo, de almadraba: el a…",
+                "en": "Red, from the almadraba: tu…"
+              }
+            ]
           },
           "nextNodeId": "g5_ancha",
           "nextHint": {
@@ -4097,6 +4191,27 @@
               "en": "The levante wind · During the pasodoble, the wind blew again from the Land Gate."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se inaugura el Gran Teatro Falla",
+                "en": "The Gran Teatro Falla opens"
+              },
+              {
+                "es": "Muere María la Hierbabuena",
+                "en": "María la Hierbabuena dies"
+              },
+              {
+                "es": "Su tramo de calle lleva su nombre",
+                "en": "Her stretch of street is named after her"
+              }
+            ]
+          },
           "nextNodeId": "c5_puertas",
           "nextHint": {
             "es": "A Puertas de Tierra, de donde viene el viento. Unos 10 minutos.",
@@ -4144,6 +4259,27 @@
               "es": "El Chirigotero · Ya tenía un cuplé sobre el romancero que pierde su cartelón… ¿cómo lo sabía?",
               "en": "The Chirigotero · He already had a cuplé about the romancero losing his board… how did he know?"
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se inaugura el Gran Teatro Falla",
+                "en": "The Gran Teatro Falla opens"
+              },
+              {
+                "es": "Muere María la Hierbabuena",
+                "en": "María la Hierbabuena dies"
+              },
+              {
+                "es": "Su tramo de calle lleva su nombre",
+                "en": "Her stretch of street is named after her"
+              }
+            ]
           },
           "nextNodeId": "c5_puertas",
           "nextHint": {
@@ -5340,6 +5476,27 @@
               "en": "The neighbourhood · The neighbourhood stops with the float to hear the saeta: its faith sets the pace."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Llevo el paso sobre los hombros por calles estrechas, y en Cádiz no me llaman costalero. ¿Quién soy?",
+              "en": "I carry the float on my shoulders through narrow streets, and in Cádiz they don't call me a costalero. Who am I? (answer in Spanish)"
+            },
+            "answer": [
+              "cargador",
+              "cargadores"
+            ],
+            "hints": [
+              {
+                "es": "Es el nombre del guía de esta ruta.",
+                "en": "It's the name of this route's guide."
+              },
+              {
+                "es": "Carg…",
+                "en": "Carg…"
+              }
+            ]
+          },
           "nextNodeId": "s5_palillero",
           "nextHint": {
             "es": "Al Palillero, donde termina la Carrera Oficial. Un par de minutos.",
@@ -5378,6 +5535,27 @@
               "es": "Las calles · En silencio se oye cómo el paso avanza a golpe de horquilla por calles estrechas.",
               "en": "The streets · In the silence you can hear the float move to the knock of the staff through narrow streets."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Llevo el paso sobre los hombros por calles estrechas, y en Cádiz no me llaman costalero. ¿Quién soy?",
+              "en": "I carry the float on my shoulders through narrow streets, and in Cádiz they don't call me a costalero. Who am I? (answer in Spanish)"
+            },
+            "answer": [
+              "cargador",
+              "cargadores"
+            ],
+            "hints": [
+              {
+                "es": "Es el nombre del guía de esta ruta.",
+                "en": "It's the name of this route's guide."
+              },
+              {
+                "es": "Carg…",
+                "en": "Carg…"
+              }
+            ]
           },
           "nextNodeId": "s5_palillero",
           "nextHint": {
@@ -6348,6 +6526,27 @@
               "en": "The sap · “Dragon's blood” is the tree's own red resin."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Hércules mata a Gerión (según el mito)",
+                "en": "Hercules kills Geryon (according to myth)"
+              },
+              {
+                "es": "Aparece el sarcófago fenicio del hombre",
+                "en": "The male Phoenician sarcophagus is found"
+              },
+              {
+                "es": "Aparece el sarcófago fenicio de la mujer",
+                "en": "The female Phoenician sarcophagus is found"
+              }
+            ]
+          },
           "nextNodeId": "l5_genoves",
           "nextHint": {
             "es": "Al Parque Genovés. Unos 8 minutos.",
@@ -6386,6 +6585,27 @@
               "es": "Gerión · El cuento dice que el drago nació de la sangre de Gerión, pero ni él está seguro.",
               "en": "Geryon · The tale says the dragon tree was born from Geryon's blood, but not even he is sure."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Hércules mata a Gerión (según el mito)",
+                "en": "Hercules kills Geryon (according to myth)"
+              },
+              {
+                "es": "Aparece el sarcófago fenicio del hombre",
+                "en": "The male Phoenician sarcophagus is found"
+              },
+              {
+                "es": "Aparece el sarcófago fenicio de la mujer",
+                "en": "The female Phoenician sarcophagus is found"
+              }
+            ]
           },
           "nextNodeId": "l5_genoves",
           "nextHint": {
@@ -7335,6 +7555,27 @@
               "en": "The money · Gades' wealth came from the sea: tuna, salted fish and trade."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Balbo manda construir el teatro",
+                "en": "Balbus has the theatre built"
+              },
+              {
+                "es": "Se empieza el castillo de Santa Catalina",
+                "en": "Santa Catalina castle is begun"
+              },
+              {
+                "es": "Aparece el teatro bajo el Pópulo",
+                "en": "The theatre turns up beneath El Pópulo"
+              }
+            ]
+          },
           "nextNodeId": "t5_santacatalina",
           "nextHint": {
             "es": "Al castillo de Santa Catalina, junto a La Caleta. Unos 20 minutos.",
@@ -7373,6 +7614,27 @@
               "es": "Roma · Balbo gastó su fortuna en la ciudad para que brillara ante Roma.",
               "en": "Rome · Balbus spent his fortune on the city so it would shine before Rome."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Balbo manda construir el teatro",
+                "en": "Balbus has the theatre built"
+              },
+              {
+                "es": "Se empieza el castillo de Santa Catalina",
+                "en": "Santa Catalina castle is begun"
+              },
+              {
+                "es": "Aparece el teatro bajo el Pópulo",
+                "en": "The theatre turns up beneath El Pópulo"
+              }
+            ]
           },
           "nextNodeId": "t5_santacatalina",
           "nextHint": {

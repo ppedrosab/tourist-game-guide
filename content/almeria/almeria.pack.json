@@ -1298,6 +1298,27 @@
               "en": "The watchtower · The coins minted in the city read al-Mariyya: the watchtower."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Almería, gran puerto del califato de Córdoba",
+                "en": "Almería, great port of the Caliphate of Córdoba"
+              },
+              {
+                "es": "Se levanta la catedral-fortaleza",
+                "en": "The fortress cathedral is built"
+              },
+              {
+                "es": "Se excavan los refugios de la Guerra Civil",
+                "en": "The Civil War shelters are dug"
+              }
+            ]
+          },
           "nextNodeId": "n5_refugios",
           "nextHint": {
             "es": "Baja por el Paseo de Almería hasta la entrada de los refugios. Unos 5 minutos.",
@@ -1336,6 +1357,27 @@
               "es": "El espejo · Lo del «espejo del mar» se empezó a decir en el siglo XIX por un parecido de palabras.",
               "en": "The mirror · The “mirror of the sea” idea began in the 19th century because two words sound alike."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Almería, gran puerto del califato de Córdoba",
+                "en": "Almería, great port of the Caliphate of Córdoba"
+              },
+              {
+                "es": "Se levanta la catedral-fortaleza",
+                "en": "The fortress cathedral is built"
+              },
+              {
+                "es": "Se excavan los refugios de la Guerra Civil",
+                "en": "The Civil War shelters are dug"
+              }
+            ]
           },
           "nextNodeId": "n5_refugios",
           "nextHint": {
@@ -2502,6 +2544,27 @@
               "en": "The plastic · Sand alone wasn't enough: the change came when a plastic roof was put over it."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Almería exporta la uva de barco",
+                "en": "Almería ships its “boat grapes” abroad"
+              },
+              {
+                "es": "Primer invernadero de plástico sobre arena",
+                "en": "First plastic-on-sand greenhouse"
+              },
+              {
+                "es": "Almería, Capital Española de la Gastronomía",
+                "en": "Almería, Spanish Capital of Gastronomy"
+              }
+            ]
+          },
           "nextNodeId": "g5_alcazaba",
           "nextHint": {
             "es": "Sube hacia la Alcazaba. Unos 8 minutos.",
@@ -2540,6 +2603,27 @@
               "es": "El plástico · En 1963 se levantó en el Campo de Dalías el primer invernadero: plástico sobre enarenado.",
               "en": "The plastic · In 1963 the first greenhouse went up in the Campo de Dalías: plastic over enarenado."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Almería exporta la uva de barco",
+                "en": "Almería ships its “boat grapes” abroad"
+              },
+              {
+                "es": "Primer invernadero de plástico sobre arena",
+                "en": "First plastic-on-sand greenhouse"
+              },
+              {
+                "es": "Almería, Capital Española de la Gastronomía",
+                "en": "Almería, Spanish Capital of Gastronomy"
+              }
+            ]
           },
           "nextNodeId": "g5_alcazaba",
           "nextHint": {
@@ -3705,6 +3789,27 @@
               "en": "The patroness · The fair's date is set by the patroness's feast."
             }
           },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy el mes más caluroso y, en mis últimos días, Almería se va de feria. ¿Quién soy?",
+              "en": "I'm the hottest month and, in my last days, Almería goes to the fair. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "agosto",
+              "august"
+            ],
+            "hints": [
+              {
+                "es": "Es un mes de verano.",
+                "en": "It's a summer month."
+              },
+              {
+                "es": "Empieza por A y tiene seis letras.",
+                "en": "Starts with A."
+              }
+            ]
+          },
           "nextNodeId": "g5_alcazaba",
           "nextHint": {
             "es": "Sube a la Alcazaba. Unos 8 minutos.",
@@ -3743,6 +3848,27 @@
               "es": "La patrona · Todos los carteles de la feria dicen «en honor a la Virgen del Mar».",
               "en": "The patroness · Every fair poster says 'in honour of the Virgen del Mar'."
             }
+          },
+          "challenge": {
+            "type": "riddle",
+            "prompt": {
+              "es": "Soy el mes más caluroso y, en mis últimos días, Almería se va de feria. ¿Quién soy?",
+              "en": "I'm the hottest month and, in my last days, Almería goes to the fair. Who am I? (answer in Spanish or English)"
+            },
+            "answer": [
+              "agosto",
+              "august"
+            ],
+            "hints": [
+              {
+                "es": "Es un mes de verano.",
+                "en": "It's a summer month."
+              },
+              {
+                "es": "Empieza por A y tiene seis letras.",
+                "en": "Starts with A."
+              }
+            ]
           },
           "nextNodeId": "g5_alcazaba",
           "nextHint": {
@@ -4719,6 +4845,27 @@
               "en": "No treasure · Generations searched with maps and the gold never appeared."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se funda la Alcazaba",
+                "en": "The Alcazaba is founded"
+              },
+              {
+                "es": "La corte del rey Almotacín, famosa por su seda",
+                "en": "King Almotacín's court, famous for its silk"
+              },
+              {
+                "es": "La catedral se construye como una fortaleza",
+                "en": "The cathedral is built like a fortress"
+              }
+            ]
+          },
           "nextNodeId": "l5_alcazaba",
           "nextHint": {
             "es": "Sube a la Alcazaba. Unos 10 minutos.",
@@ -4757,6 +4904,27 @@
               "es": "Ningún tesoro · Lo que aparece en la Alcazaba son restos de su historia, no monedas de oro.",
               "en": "No treasure · What turns up in the Alcazaba is the remains of its history, not gold coins."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena de más antiguo a más reciente.",
+              "en": "Put them in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "Se funda la Alcazaba",
+                "en": "The Alcazaba is founded"
+              },
+              {
+                "es": "La corte del rey Almotacín, famosa por su seda",
+                "en": "King Almotacín's court, famous for its silk"
+              },
+              {
+                "es": "La catedral se construye como una fortaleza",
+                "en": "The cathedral is built like a fortress"
+              }
+            ]
           },
           "nextNodeId": "l5_alcazaba",
           "nextHint": {
@@ -5705,6 +5873,31 @@
               "en": "The light · Sun almost all year and the Tabernas desert, one of the few in Europe."
             }
           },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena los rodajes de más antiguo a más reciente.",
+              "en": "Put the shoots in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "«Cleopatra»",
+                "en": "“Cleopatra”"
+              },
+              {
+                "es": "«El reportero»",
+                "en": "“The Passenger”"
+              },
+              {
+                "es": "«Juego de tronos» en la Alcazaba",
+                "en": "“Game of Thrones” at the Alcazaba"
+              },
+              {
+                "es": "«Wonder Woman 1984»",
+                "en": "“Wonder Woman 1984”"
+              }
+            ]
+          },
           "nextNodeId": "c5_cable",
           "nextHint": {
             "es": "Sigue la orilla hasta el Cable Inglés. Unos 5 minutos.",
@@ -5743,6 +5936,31 @@
               "es": "Los Beatles · Cientos de almerienses trabajaron en los rodajes: extras, jinetes, carpinteros.",
               "en": "The Beatles · Hundreds of Almerians worked on the shoots: extras, riders, carpenters."
             }
+          },
+          "challenge": {
+            "type": "order",
+            "prompt": {
+              "es": "Ordena los rodajes de más antiguo a más reciente.",
+              "en": "Put the shoots in order, oldest first."
+            },
+            "items": [
+              {
+                "es": "«Cleopatra»",
+                "en": "“Cleopatra”"
+              },
+              {
+                "es": "«El reportero»",
+                "en": "“The Passenger”"
+              },
+              {
+                "es": "«Juego de tronos» en la Alcazaba",
+                "en": "“Game of Thrones” at the Alcazaba"
+              },
+              {
+                "es": "«Wonder Woman 1984»",
+                "en": "“Wonder Woman 1984”"
+              }
+            ]
           },
           "nextNodeId": "c5_cable",
           "nextHint": {
