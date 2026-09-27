@@ -43,10 +43,29 @@
           "microphonePermission": false,
           "recordAudioAndroid": false
         }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "userTrackingUsageDescription": "Solo para que los anuncios que dan pistas te interesen más. Puedes decir que no y seguirás teniendo pistas."
+        }
+      ],
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "Solo para que los anuncios que dan pistas te interesen más. Puedes decir que no y seguirás teniendo pistas."
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "admob": {
+        "rewardedUnitId": ""
+      }
     }
   }
 }

@@ -226,8 +226,10 @@ Sergio Leone y John Lennon). Con ellas las ocho ciudades quedan completas. Arte 
 **Retos y pistas**: además del quiz y la observación, hay `riddle` (acertijo), `lock` (candado final) y
 `order` (ordenar hechos). Cada reto puede traer `hints` escalonadas; en el quiz sin pistas escritas la pista
 quita una opción, y en ordenar coloca el siguiente. Una pista no quita la estrella, «Ver respuesta» sí. Las
-pistas se piden a `src/ads/hints.ts` (gratis por defecto; la build con anuncios enchufa su anuncio con
-recompensa). Todas las rutas terminan con «El expediente»: un candado cuya clave se cuenta en paradas
+pistas se piden a `src/ads/hints.ts` (gratis por defecto). En builds nativas, `src/ads/rewarded.native.ts`
+(AdMob, `react-native-google-mobile-ads` 17.0 —la 17.1 pide RN 0.86—) pide el consentimiento (UMP y, en iOS,
+el aviso de seguimiento) y cambia la puerta a «anuncio con recompensa»; si el anuncio no carga (sin conexión),
+la pista llega igual tras 20 s. Ahora usa los identificadores de prueba de Google. Todas las rutas terminan con «El expediente»: un candado cuya clave se cuenta en paradas
 comunes a todos los caminos, y cada paso de rama lleva una línea del tiempo o un acertijo con hechos de la
 propia ruta (lo exige `allPacks.test.ts`). Pendiente: retos de observación (placas, fechas en fachadas) al
 hacer la prueba en la calle.
@@ -350,6 +352,9 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Voces: de momento síntesis del móvil (decidido). Si se graban, basta con dejar los audios en assets/audio.
 - Revisión de la traducción inglesa por un nativo.
 - Elegir proveedor de analítica (y texto de privacidad) y de teselas para el mapa offline.
+- Anuncios: crear la cuenta de AdMob y cambiar en `app.json` los identificadores de prueba (`androidAppId`,
+  `iosAppId` del plugin y `extra.admob.rewardedUnitId`); configurar el mensaje de consentimiento (UMP) en la
+  consola de AdMob y mencionar los anuncios en la política de privacidad y en las fichas de las tiendas.
 - Revisar con un historiador la ilustración de calle Larios en 1891 (`assets/then_now`).
 - Cádiz: coordenadas y radios en la calle, revisión histórica de los datos de `docs/GDD_CADIZ.md`,
   decidir si la ruta es gratuita (`isFree: true` provisional) y un posible "antes y ahora".

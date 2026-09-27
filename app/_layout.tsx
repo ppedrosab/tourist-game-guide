@@ -7,6 +7,7 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 // Define la tarea de geofences al arrancar (obligatorio para TaskManager).
 import { GeofenceSync } from "@/geo/GeofenceSync";
+import { setupRewardedHints } from "@/ads/rewarded";
 import { colors } from "@/theme";
 
 SplashScreen.preventAutoHideAsync();
@@ -22,6 +23,11 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) SplashScreen.hideAsync();
   }, [loaded]);
+
+  // Pistas con anuncio con recompensa (solo en builds con AdMob; en Expo Go y web, gratis).
+  useEffect(() => {
+    setupRewardedHints();
+  }, []);
 
   if (!loaded) return null;
 

@@ -163,6 +163,7 @@ export const en: Strings = {
     pistaN: "Hint {n}",
     pedirPista: "Hint ({n} of {total})",
     pistaAnuncio: "Hint with an ad ({n} of {total})",
+    cargandoPista: "Loading the hint… (offline, it arrives in a few seconds)",
   },
   final: {
     casoCerrado: "Case closed!",

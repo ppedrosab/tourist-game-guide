@@ -100,6 +100,7 @@ function HintBar({
           <Text style={[type.body, { flex: 1 }]}>{L(h)}</Text>
         </View>
       ))}
+      {state.asking ? <Text style={type.caption}>{t("reto.cargandoPista")}</Text> : null}
       {!done && state.shown < state.total ? (
         <Button3D
           label={

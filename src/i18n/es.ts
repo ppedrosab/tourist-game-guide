@@ -165,6 +165,7 @@ export const es = {
     pistaN: "Pista {n}",
     pedirPista: "Pista ({n} de {total})",
     pistaAnuncio: "Pista con anuncio ({n} de {total})",
+    cargandoPista: "Cargando la pista… (sin conexión llega en unos segundos)",
   },
   final: {
     casoCerrado: "¡Caso cerrado!",
