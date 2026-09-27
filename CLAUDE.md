@@ -214,7 +214,8 @@ Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin re
 **Rutas que completan las ciudades** (historia, formato corto de 6 paradas; ver `docs/CIUDADES_QUE_FALTAN.md` y
 `docs/GDD_COMPLETAR.md`): lo imprescindible que aún no era parada. Hecha: Málaga «¿Por qué Picasso no
 volvió a Málaga?» (Picasso, su padre José Ruiz Blasco y su madre María Picasso) y Cádiz «¿Quién pagó el
-teatro romano de Gades?» (Balbo el Menor, la bailarina Telethusa y Columela). Arte en
+teatro romano de Gades?» (Balbo el Menor, la bailarina Telethusa y Columela) y Córdoba «¿Por qué se fueron
+los sabios de Córdoba?» (Séneca, Averroes y Maimónides). Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
 ## Arquitectura

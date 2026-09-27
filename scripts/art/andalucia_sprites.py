@@ -207,6 +207,12 @@ CHARACTERS = {
                       second="#9C2A22", left="castanets", right="castanets", raise_right=True),
     "columela": dict(skin="morena", hair=("short", GREY), beard_=("short", GREY), outfit="tunic", main="#C9A05E", accent="#6B4A2E",
                      second="#6B4A2E", left="book", right="olive"),
+    "seneca": dict(skin="media", hair=("bald", "#3A2A1E"), beard_=("short", "#3A2A1E"), outfit="toga", main=PAPER, accent="#2F4F6E",
+                   second="#2F4F6E", left="scroll", right="quill"),
+    "averroes": dict(skin="morena", hair=("short", "#1E1A1A"), beard_=("full", "#1E1A1A"), hat_=("turban", PAPER, SEA),
+                     outfit="tunic", main=SEA, accent=GOLD, second="#1F4F52", left="book", right="quill"),
+    "maimonides": dict(skin="media", hair=("short", GREY), beard_=("full", GREY), hat_=("turban", "#3A4A7A", GOLD),
+                       outfit="tunic", main="#5A3E6E", accent=PAPER, second="#3A2A4E", left="bag", right="book"),
 }
 
 if __name__ == "__main__":

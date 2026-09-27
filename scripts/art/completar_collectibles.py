@@ -76,11 +76,39 @@ cad = {
                       + f'<path d="M44 96H76" stroke="{INK}" stroke-width="3"/>' + mask(60, 58, 0.55, GOLD) + sparkle(96, 30, 5, GOLD)),
 }
 
+def book(x, y, c, w=44, h=54):
+    return (f'<path d="M{x - w / 2} {y - h / 2}H{x + w / 2}V{y + h / 2}H{x - w / 2}Z" fill="{c}" stroke="{INK}" stroke-width="2.2"/>'
+            f'<path d="M{x - w / 2 + 6} {y - h / 2}V{y + h / 2}" stroke="{INK}" stroke-width="1.6"/>'
+            f'<path d="M{x - w / 2 + 12} {y - h / 2 + 10}H{x + w / 2 - 6}M{x - w / 2 + 12} {y - h / 2 + 16}H{x + w / 2 - 10}" stroke="{GOLD}" stroke-width="2"/>')
+
+
+def quill(x, y, s=1.0):
+    return (f'<path d="M{x} {y}Q{x + 10 * s} {y - 30 * s} {x + 34 * s} {y - 50 * s}Q{x + 26 * s} {y - 20 * s} {x} {y}Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
+            f'<path d="M{x} {y}L{x + 28 * s} {y - 42 * s}" stroke="{INK}" stroke-width="1.2"/>')
+
+
+cor = {
+    "tablilla": BG + (f'<path d="M26 34H94V94H26Z" fill="{WOOD}" stroke="{INK}" stroke-width="2.2"/><path d="M32 40H88V88H32Z" fill="#E0B84E" stroke="{INK}" stroke-width="1.6"/>'
+                      + "".join(f'<path d="M38 {50 + k * 9}H{82 - (k % 2) * 12}" stroke="{WOOD}" stroke-width="1.8"/>' for k in range(4))
+                      + f'<path d="M78 98L102 60" stroke="{INK}" stroke-width="4"/><path d="M78 98L102 60" stroke="{SILVER}" stroke-width="2"/>'),
+    "guia": BG + book(56, 66, "#5A3E6E") + f'<text x="56" y="92" font-family="Georgia, serif" font-weight="700" font-size="9" text-anchor="middle" fill="{GOLD}">GUÍA</text>' + sparkle(92, 32, 5, GOLD),
+    "comentario": BG + book(48, 70, SEA) + quill(70, 92, 1.1) + sparkle(28, 30, 5, GOLD),
+    "lucerna": BG + '<g transform="translate(12 14) scale(.8)">' + (f'<path d="M28 74Q30 56 56 56Q78 56 86 66L102 62Q104 72 92 78Q80 90 56 90Q30 90 28 74Z" fill="{CLAY}" stroke="{INK}" stroke-width="2.2"/>'
+                     f'<circle cx="54" cy="70" r="8" fill="#7A2E1A" stroke="{INK}" stroke-width="1.6"/><path d="M28 70Q20 64 24 56" fill="none" stroke="{INK}" stroke-width="3"/>'
+                     f'<path d="M100 58Q94 44 100 32Q108 44 100 58Z" fill="{GOLD}" stroke="{INK}" stroke-width="1.6"/></g>'),
+    "astrolabio": BG + (f'<circle cx="60" cy="68" r="32" fill="{GOLD}" stroke="{INK}" stroke-width="2.4"/><circle cx="60" cy="68" r="24" fill="#E8C872" stroke="{INK}" stroke-width="1.4"/>'
+                        f'<path d="M60 44V92M36 68H84" stroke="{INK}" stroke-width="1.2"/><path d="M44 52L78 86" stroke="{INK}" stroke-width="2.4"/>'
+                        f'<circle cx="60" cy="68" r="3" fill="{INK}"/><path d="M52 36H68V28H52Z" fill="{GOLD}" stroke="{INK}" stroke-width="1.8"/><circle cx="60" cy="24" r="5" fill="none" stroke="{INK}" stroke-width="2"/>'),
+    "insignia": BG + quill(32, 94, .9) + quill(48, 96, 1.1) + quill(64, 94, .9) + sparkle(96, 34, 6, GOLD) + sparkle(98, 80, 4, GOLD),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
     "cadiz_teatro": (cad, [("mascara", "La máscara del teatro"), ("crotalos", "Los crótalos de Telethusa"), ("anillo", "El anillo de caballero"),
                            ("versos", "Los versos de Marcial"), ("atun", "El atún de Gades"), ("insignia", "¿Quién pagó el teatro romano de Gades?")]),
+    "cordoba_sabios": (cor, [("tablilla", "La tablilla de Séneca"), ("guia", "La «Guía de perplejos»"), ("comentario", "El comentario de Averroes"),
+                             ("lucerna", "La lucerna romana"), ("astrolabio", "El astrolabio andalusí"), ("insignia", "¿Por qué se fueron los sabios de Córdoba?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

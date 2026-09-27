@@ -1,6 +1,6 @@
 {
   "id": "cordoba",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Córdoba",
     "en": "Córdoba"
@@ -354,6 +354,90 @@
         {
           "title": "Wikipedia: Duque de Rivas",
           "url": "https://es.wikipedia.org/wiki/Duque_de_Rivas"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "seneca",
+      "name": {
+        "es": "Séneca",
+        "en": "Seneca"
+      },
+      "description": {
+        "es": "Lucio Anneo Séneca, filósofo estoico nacido en Córdoba, maestro de Nerón. Sereno, irónico y siempre con una frase a mano.",
+        "en": "Lucius Annaeus Seneca, Stoic philosopher born in Córdoba, Nero's tutor. Calm, wry and always ready with a saying."
+      },
+      "avatar": "sprites/seneca/seneca_neutral.svg",
+      "era": "s. I",
+      "kind": "real",
+      "lived": "c. 4 a. C.-65",
+      "bio": {
+        "es": "Séneca nació en Corduba hacia el año 4 a. C., hijo de Séneca el Viejo, maestro de retórica. Se educó en Roma, fue senador y cuestor, sobrevivió a un destierro en Córcega y fue preceptor y consejero de Nerón. Escribió tratados y las «Cartas a Lucilio», base del estoicismo que se leyó durante siglos. En el año 65, acusado de participar en la conjura de Pisón, Nerón le ordenó quitarse la vida.",
+        "en": "Seneca was born in Corduba around 4 BC, son of Seneca the Elder, a teacher of rhetoric. He was educated in Rome, became a senator and quaestor, survived exile in Corsica and was Nero's tutor and adviser. He wrote treatises and the “Letters to Lucilius”, a cornerstone of Stoicism read for centuries. In AD 65, accused of taking part in the Pisonian conspiracy, he was ordered by Nero to take his own life."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Séneca",
+          "url": "https://es.wikipedia.org/wiki/S%C3%A9neca"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "averroes",
+      "name": {
+        "es": "Averroes",
+        "en": "Averroes"
+      },
+      "description": {
+        "es": "Ibn Rushd, cadí, médico y filósofo cordobés, «el Comentador» de Aristóteles. Tranquilo, muy lógico y con muchos libros bajo el brazo.",
+        "en": "Ibn Rushd, qadi, doctor and philosopher from Córdoba, “the Commentator” on Aristotle. Calm, very logical and with plenty of books under his arm."
+      },
+      "avatar": "sprites/averroes/averroes_neutral.svg",
+      "era": "s. XII",
+      "kind": "real",
+      "lived": "1126-1198",
+      "bio": {
+        "es": "Abu al-Walid Muhammad ibn Rushd nació en Córdoba en 1126 en una familia de juristas. Fue cadí de Sevilla y de Córdoba y médico de la corte almohade. Sus comentarios a Aristóteles, traducidos al latín y al hebreo, marcaron las universidades europeas, que lo llamaron «el Comentador». En 1195 el califa al-Mansur lo desterró a Lucena y mandó quemar sus obras; perdonado poco después, murió en Marrakech en 1198.",
+        "en": "Abu al-Walid Muhammad ibn Rushd was born in Córdoba in 1126 into a family of jurists. He was qadi of Seville and Córdoba and physician at the Almohad court. His commentaries on Aristotle, translated into Latin and Hebrew, shaped Europe's universities, which called him “the Commentator”. In 1195 the caliph al-Mansur banished him to Lucena and had his works burned; pardoned soon after, he died in Marrakesh in 1198."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Averroes",
+          "url": "https://es.wikipedia.org/wiki/Averroes"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "maimonides",
+      "name": {
+        "es": "Maimónides",
+        "en": "Maimonides"
+      },
+      "description": {
+        "es": "Moisés ben Maimón, rabino, filósofo y médico nacido en la Judería de Córdoba. Amable, curioso y con su maletín de médico.",
+        "en": "Moses ben Maimon, rabbi, philosopher and doctor born in Córdoba's Jewish quarter. Kind, curious and with his doctor's bag."
+      },
+      "avatar": "sprites/maimonides/maimonides_neutral.svg",
+      "era": "s. XII",
+      "kind": "real",
+      "lived": "1138-1204",
+      "bio": {
+        "es": "Moisés ben Maimón nació en Córdoba en 1138. Tras la conquista almohade de 1148 su familia dejó la ciudad y, tras años de viaje, se asentó en Fez y después en Egipto. En Fustat (El Cairo) fue jefe de la comunidad judía y médico de la corte de Saladino. Escribió la «Mishné Torá» y la «Guía de perplejos», que busca conciliar la fe con la filosofía de Aristóteles. Murió en 1204 y, según la tradición, está enterrado en Tiberíades.",
+        "en": "Moses ben Maimon was born in Córdoba in 1138. After the Almohad conquest of 1148 his family left the city and, after years of travelling, settled in Fez and then in Egypt. In Fustat (Cairo) he led the Jewish community and was a physician at Saladin's court. He wrote the “Mishneh Torah” and the “Guide for the Perplexed”, which seeks to reconcile faith with Aristotle's philosophy. He died in 1204 and, by tradition, is buried in Tiberias."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Maimónides",
+          "url": "https://es.wikipedia.org/wiki/Maim%C3%B3nides"
         }
       ],
       "voice": {
@@ -4826,6 +4910,955 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "sabios-cordoba",
+      "title": {
+        "es": "¿Por qué se fueron los sabios de Córdoba?",
+        "en": "Why Did the Sages Leave Córdoba?"
+      },
+      "summary": {
+        "es": "Séneca, Averroes y Maimónides nacieron en Córdoba y los tres murieron lejos. ¿Los echó la ciudad, el poder o sus propias ideas? Un paseo por sus estatuas, de la muralla a la Calahorra.",
+        "en": "Seneca, Averroes and Maimonides were born in Córdoba and all three died far away. Did the city drive them out, or power, or their own ideas? A walk past their statues, from the city wall to the Calahorra."
+      },
+      "era": "s. I - s. XII",
+      "guideCharacterId": "seneca",
+      "durationMin": 55,
+      "distanceKm": 1.6,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La razón",
+            "en": "Reason"
+          },
+          "trail": {
+            "es": "camino de la razón",
+            "en": "reason trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Roma",
+            "en": "Rome"
+          },
+          "trail": {
+            "es": "camino de Roma",
+            "en": "Rome trail"
+          }
+        }
+      },
+      "startNodeId": "s1_seneca",
+      "nodes": [
+        {
+          "id": "s1_seneca",
+          "title": {
+            "es": "Puerta de Almodóvar",
+            "en": "Almodóvar Gate"
+          },
+          "location": {
+            "lat": 37.88067,
+            "lng": -4.78422
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_almodovar.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_almodovar.svg"
+              ],
+              "characters": [
+                {
+                  "id": "seneca",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "proud",
+              "text": {
+                "es": "Salve. Lucio Anneo Séneca, cordobés. Esa estatua sentada junto a la puerta soy yo, aunque me han puesto más serio de lo que era.",
+                "en": "Salve. Lucius Annaeus Seneca, from Corduba. That seated statue by the gate is me, though they've made me look sterner than I was."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "text": {
+                "es": "Córdoba ha dado tres sabios famosos en el mundo entero: yo, Averroes y Maimónides. Y los tres acabamos lejos de aquí. ¿Por qué se fueron los sabios de Córdoba?",
+                "en": "Córdoba gave the world three famous sages: me, Averroes and Maimonides. And all three of us ended up far from here. Why did the sages leave Córdoba?"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Séneca nació en Córdoba hacia el año 4 a. C. De niño lo llevaron a Roma, donde fue filósofo, escritor, senador y maestro del emperador Nerón.",
+                "en": "Seneca was born in Córdoba around 4 BC. As a child he was taken to Rome, where he became a philosopher, writer, senator and tutor to the emperor Nero."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿De qué emperador fue maestro Séneca?",
+              "en": "Which emperor did Seneca tutor?"
+            },
+            "options": [
+              {
+                "es": "De Trajano",
+                "en": "Trajan"
+              },
+              {
+                "es": "De Nerón",
+                "en": "Nero"
+              },
+              {
+                "es": "De Augusto",
+                "en": "Augustus"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "De Nerón. Le enseñó de niño y le aconsejó cuando ya era emperador.",
+              "en": "Nero. He taught him as a boy and advised him once he was emperor."
+            }
+          },
+          "clue": {
+            "id": "sab_pista_nero",
+            "text": {
+              "es": "El poder · Séneca fue maestro y consejero de Nerón: vivió muy cerca del poder.",
+              "en": "Power · Seneca was Nero's tutor and adviser: he lived very close to power."
+            }
+          },
+          "nextNodeId": "s2_maimonides",
+          "nextHint": {
+            "es": "Entra en la Judería hasta la plaza de Tiberíades. Tres minutos.",
+            "en": "Walk into the Jewish quarter to the plaza de Tiberíades. Three minutes."
+          }
+        },
+        {
+          "id": "s2_maimonides",
+          "title": {
+            "es": "Plaza de Tiberíades",
+            "en": "Plaza de Tiberíades"
+          },
+          "location": {
+            "lat": 37.87944,
+            "lng": -4.78316
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_tiberiades.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_tiberiades.svg"
+              ],
+              "characters": [
+                {
+                  "id": "seneca",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "maimonides",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maimonides",
+              "expression": "happy",
+              "text": {
+                "es": "Shalom. Moisés ben Maimón, Maimónides para los amigos. Nací en esta Judería en 1138. Fui rabino, filósofo… y sobre todo médico.",
+                "en": "Shalom. Moses ben Maimon, Maimonides to my friends. I was born in this Jewish quarter in 1138. I was a rabbi, a philosopher… and above all a doctor."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La plaza se llama Tiberíades por la ciudad de Galilea donde, según la tradición, está enterrado Maimónides. Su estatua sentada es de 1964.",
+                "en": "The square is named after Tiberias, the town in Galilee where, by tradition, Maimonides is buried. His seated statue dates from 1964."
+              },
+              "year": 1964
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maimonides",
+              "expression": "thinking",
+              "text": {
+                "es": "Tenía diez años cuando los almohades tomaron Córdoba, en 1148. Mi familia tuvo que irse. Nunca volví.",
+                "en": "I was ten when the Almohads took Córdoba, in 1148. My family had to leave. I never came back."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué se llama así la plaza de Tiberíades?",
+              "en": "Why is it called the plaza de Tiberíades?"
+            },
+            "options": [
+              {
+                "es": "Por la ciudad de Galilea donde está enterrado Maimónides",
+                "en": "After the town in Galilee where Maimonides is buried"
+              },
+              {
+                "es": "Por un río",
+                "en": "After a river"
+              },
+              {
+                "es": "Por un emperador romano",
+                "en": "After a Roman emperor"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Por Tiberíades, en Galilea, donde según la tradición reposa Maimónides.",
+              "en": "After Tiberias, in Galilee, where by tradition Maimonides lies."
+            }
+          },
+          "clue": {
+            "id": "sab_pista_almohades",
+            "text": {
+              "es": "El poder · Maimónides se fue de niño, cuando los almohades tomaron Córdoba en 1148.",
+              "en": "Power · Maimonides left as a boy, when the Almohads took Córdoba in 1148."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "seneca",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Buscamos al otro sabio junto a la muralla, o bajamos a la Córdoba romana?",
+              "en": "Shall we look for the other sage by the city wall, or go down to Roman Córdoba?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La razón",
+                "en": "Reason"
+              },
+              "hint": {
+                "es": "La estatua de Averroes",
+                "en": "The statue of Averroes"
+              },
+              "targetNodeId": "sa_averroes",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 110,
+              "walkMin": 2
+            },
+            {
+              "label": {
+                "es": "Roma",
+                "en": "Rome"
+              },
+              "hint": {
+                "es": "El Museo Arqueológico",
+                "en": "The Archaeological Museum"
+              },
+              "targetNodeId": "sb_arqueologico",
+              "setFlags": [
+                "camino_poder"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            }
+          ]
+        },
+        {
+          "id": "sa_averroes",
+          "title": {
+            "es": "Monumento a Averroes",
+            "en": "Averroes monument"
+          },
+          "location": {
+            "lat": 37.87862,
+            "lng": -4.78313
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cordoba_averroes.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_averroes.svg"
+              ],
+              "characters": [
+                {
+                  "id": "averroes",
+                  "expression": "proud",
+                  "position": "left"
+                },
+                {
+                  "id": "maimonides",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "averroes",
+              "expression": "proud",
+              "text": {
+                "es": "La paz sea contigo. Abu al-Walid ibn Rushd; los cristianos me llamaron Averroes. Nací en Córdoba en 1126 y fui cadí, juez, como mi abuelo.",
+                "en": "Peace be upon you. Abu al-Walid ibn Rushd; the Christians called me Averroes. I was born in Córdoba in 1126 and I was a qadi, a judge, like my grandfather."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Averroes explicó a Aristóteles con tanto acierto que en las universidades de Europa lo llamaban «el Comentador». Dante lo puso entre los grandes sabios de la Antigüedad.",
+                "en": "Averroes explained Aristotle so well that Europe's universities called him “the Commentator”. Dante placed him among the great sages of antiquity."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "averroes",
+              "expression": "thinking",
+              "text": {
+                "es": "Yo decía que la razón y la fe no se pelean. A algunos no les gustó nada.",
+                "en": "I said that reason and faith don't fight each other. Some people didn't like that at all."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cómo llamaban a Averroes en las universidades de Europa?",
+              "en": "What did Europe's universities call Averroes?"
+            },
+            "options": [
+              {
+                "es": "El Viajero",
+                "en": "The Traveller"
+              },
+              {
+                "es": "El Califa",
+                "en": "The Caliph"
+              },
+              {
+                "es": "El Comentador",
+                "en": "The Commentator"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "«El Comentador», por sus comentarios a Aristóteles.",
+              "en": "“The Commentator”, for his commentaries on Aristotle."
+            }
+          },
+          "clue": {
+            "id": "sab_pista_razon",
+            "text": {
+              "es": "La razón · Averroes defendía que razón y fe no se pelean; a algunos no les gustó.",
+              "en": "Reason · Averroes held that reason and faith don't fight; some didn't like it."
+            }
+          },
+          "nextNodeId": "s4_mezquita",
+          "nextHint": {
+            "es": "Sigue la muralla y entra hacia la Mezquita-Catedral. Unos 6 minutos.",
+            "en": "Follow the wall and head in to the Mosque-Cathedral. About 6 minutes."
+          }
+        },
+        {
+          "id": "sb_arqueologico",
+          "title": {
+            "es": "Museo Arqueológico",
+            "en": "Archaeological Museum"
+          },
+          "location": {
+            "lat": 37.88196,
+            "lng": -4.77813
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cordoba_arqueologico.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_arqueologico.svg"
+              ],
+              "characters": [
+                {
+                  "id": "seneca",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "maimonides",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El museo ocupa el palacio renacentista de los Páez de Castillejo. En sus sótanos se ven los restos del teatro romano de Córdoba, encontrados en el año 2000: uno de los más grandes de Hispania.",
+                "en": "The museum is in the Renaissance palace of the Páez de Castillejo. In its basement you can see the remains of Córdoba's Roman theatre, found in 2000: one of the largest in Hispania."
+              },
+              "year": 2000
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "happy",
+              "text": {
+                "es": "Corduba era la capital de la Bética. Mi padre, Séneca el Viejo, era maestro de oratoria; mi sobrino Lucano, poeta. ¡Una familia de charlatanes!",
+                "en": "Corduba was the capital of Baetica. My father, Seneca the Elder, taught public speaking; my nephew Lucan was a poet. A family of chatterboxes!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero para triunfar había que ir a Roma. Allí estaba el poder… y el peligro.",
+                "en": "But to succeed you had to go to Rome. That's where the power was… and the danger."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hay en los sótanos del Museo Arqueológico?",
+              "en": "What is in the basement of the Archaeological Museum?"
+            },
+            "options": [
+              {
+                "es": "Un pozo de nieve",
+                "en": "A snow well"
+              },
+              {
+                "es": "Restos del teatro romano",
+                "en": "Remains of the Roman theatre"
+              },
+              {
+                "es": "Una mezquita",
+                "en": "A mosque"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Restos del teatro romano de Corduba, encontrados en el año 2000.",
+              "en": "Remains of Corduba's Roman theatre, found in 2000."
+            }
+          },
+          "clue": {
+            "id": "sab_pista_roma",
+            "text": {
+              "es": "Roma · Para triunfar, los cordobeses de Roma tenían que irse a la capital.",
+              "en": "Rome · To succeed, Córdoba's Romans had to move to the capital."
+            }
+          },
+          "nextNodeId": "s4_mezquita",
+          "nextHint": {
+            "es": "Baja por las callejas hasta la Mezquita-Catedral. Unos 5 minutos.",
+            "en": "Walk down the lanes to the Mosque-Cathedral. About 5 minutes."
+          }
+        },
+        {
+          "id": "s4_mezquita",
+          "title": {
+            "es": "Mezquita-Catedral",
+            "en": "Mosque-Cathedral"
+          },
+          "location": {
+            "lat": 37.8797,
+            "lng": -4.7796
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_mezquita.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_mezquita.svg"
+              ],
+              "characters": [
+                {
+                  "id": "averroes",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "seneca",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En el siglo XII, Córdoba era una de las ciudades más cultas de Europa. Averroes y Maimónides nacieron con doce años de diferencia y a pocas calles; no consta que se conocieran.",
+                "en": "In the 12th century Córdoba was one of the most learned cities in Europe. Averroes and Maimonides were born twelve years apart and a few streets from each other; there's no record they ever met."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes de la razón: a Averroes lo metió en líos pensar libre. ¿Seguimos la pista de los libros o la del poder?",
+                    "en": "You've come from reason: thinking freely got Averroes into trouble. Shall we follow the books or the power?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder"
+                  ],
+                  "text": {
+                    "es": "Vienes de Roma: allí estaba el poder y el peligro. ¿Seguimos la pista de los libros o la del poder?",
+                    "en": "You've come from Rome: that's where power and danger were. Shall we follow the books or the power?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Se conocieron Averroes y Maimónides?",
+              "en": "Did Averroes and Maimonides ever meet?"
+            },
+            "options": [
+              {
+                "es": "No consta que se conocieran",
+                "en": "There's no record they met"
+              },
+              {
+                "es": "Sí, eran socios",
+                "en": "Yes, they were partners"
+              },
+              {
+                "es": "Sí, eran hermanos",
+                "en": "Yes, they were brothers"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "No consta: Maimónides se fue de niño, aunque más tarde leyó y admiró a Averroes.",
+              "en": "There's no record: Maimonides left as a boy, though he later read and admired Averroes."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "seneca",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Los libros o el poder?",
+              "en": "The books or the power?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista de los libros",
+                "en": "The books lead"
+              },
+              "hint": {
+                "es": "Con Averroes",
+                "en": "With Averroes"
+              },
+              "targetNodeId": "s4a_libros",
+              "setFlags": [
+                "version_libros"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista del poder",
+                "en": "The power lead"
+              },
+              "hint": {
+                "es": "Con Séneca",
+                "en": "With Seneca"
+              },
+              "targetNodeId": "s4b_poder",
+              "setFlags": [
+                "version_poder"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s4a_libros",
+          "title": {
+            "es": "Los libros",
+            "en": "The books"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "averroes",
+              "expression": "dramatic",
+              "text": {
+                "es": "En 1195 el califa almohade me acusó de ideas peligrosas. Me desterró a Lucena y mandó quemar mis libros. Me perdonó al cabo de un tiempo, pero morí en Marrakech, en 1198.",
+                "en": "In 1195 the Almohad caliph accused me of dangerous ideas. He banished me to Lucena and had my books burned. He pardoned me after a while, but I died in Marrakesh, in 1198."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "averroes",
+              "expression": "happy",
+              "text": {
+                "es": "Lo gracioso es que las copias ya viajaban: en hebreo y en latín me leyeron en París, en Bolonia… Quemaron papel, no ideas.",
+                "en": "The funny thing is that copies were already travelling: in Hebrew and Latin I was read in Paris, in Bologna… They burned paper, not ideas."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sab_pista_libros",
+            "text": {
+              "es": "La razón · A Averroes lo desterraron y quemaron sus libros, pero sus copias viajaron por Europa.",
+              "en": "Reason · Averroes was banished and his books burned, but copies travelled across Europe."
+            }
+          },
+          "nextNodeId": "s5_calahorra",
+          "nextHint": {
+            "es": "Cruza el puente romano hasta la torre de la Calahorra. Unos 6 minutos.",
+            "en": "Cross the Roman bridge to the Calahorra tower. About 6 minutes."
+          }
+        },
+        {
+          "id": "s4b_poder",
+          "title": {
+            "es": "El poder",
+            "en": "Power"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "dramatic",
+              "text": {
+                "es": "Nerón fue mi alumno. Cuando creció, dejó de escucharme. En el año 65 me acusaron de conspirar contra él y me ordenó quitarme la vida.",
+                "en": "Nero was my pupil. When he grew up, he stopped listening to me. In AD 65 I was accused of plotting against him and he ordered me to take my own life."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "text": {
+                "es": "Escribí que el sabio debe ser libre por dentro aunque le falte todo lo demás. Me tocó comprobarlo.",
+                "en": "I wrote that a wise man must be free inside even if he lacks everything else. I had to put it to the test."
+              }
+            }
+          ],
+          "clue": {
+            "id": "sab_pista_neron",
+            "text": {
+              "es": "El poder · Nerón, su antiguo alumno, obligó a Séneca a quitarse la vida en el año 65.",
+              "en": "Power · Nero, his former pupil, forced Seneca to take his own life in AD 65."
+            }
+          },
+          "nextNodeId": "s5_calahorra",
+          "nextHint": {
+            "es": "Cruza el puente romano hasta la torre de la Calahorra. Unos 6 minutos.",
+            "en": "Cross the Roman bridge to the Calahorra tower. About 6 minutes."
+          }
+        },
+        {
+          "id": "s5_calahorra",
+          "title": {
+            "es": "Torre de la Calahorra",
+            "en": "Calahorra tower"
+          },
+          "location": {
+            "lat": 37.8759,
+            "lng": -4.7774
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cordoba_calahorra.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cordoba_calahorra.svg"
+              ],
+              "characters": [
+                {
+                  "id": "seneca",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "maimonides",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La torre de la Calahorra guardaba la entrada del puente romano. Hoy es un museo sobre la convivencia de las culturas de al-Ándalus.",
+                "en": "The Calahorra tower guarded the entrance to the Roman bridge. Today it is a museum about how the cultures of al-Andalus lived together."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maimonides",
+              "expression": "happy",
+              "text": {
+                "es": "Yo acabé en Egipto, de médico en la corte de Saladino. Allí escribí la «Guía de perplejos», para quien duda entre la fe y la razón.",
+                "en": "I ended up in Egypt, as a doctor at Saladin's court. There I wrote the “Guide for the Perplexed”, for anyone torn between faith and reason."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. ¿Por qué se fueron los sabios de Córdoba?",
+                "en": "Verdict time. Why did the sages leave Córdoba?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué se fueron los sabios de Córdoba?",
+              "en": "Why did the sages leave Córdoba?"
+            },
+            "options": [
+              {
+                "es": "Por dinero",
+                "en": "For money"
+              },
+              {
+                "es": "Porque no les gustaba la ciudad",
+                "en": "Because they didn't like the city"
+              },
+              {
+                "es": "Por el poder: un emperador, un califa y una conquista los apartaron",
+                "en": "Because of power: an emperor, a caliph and a conquest pushed them away"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Séneca fue a Roma de niño y Nerón lo condenó; Maimónides huyó de los almohades; Averroes fue desterrado por su califa. Córdoba los perdió, pero el mundo los sigue leyendo.",
+              "en": "Seneca went to Rome as a child and Nero condemned him; Maimonides fled the Almohads; Averroes was banished by his caliph. Córdoba lost them, but the world still reads them."
+            }
+          },
+          "nextNodeId": "s6_final"
+        },
+        {
+          "id": "s6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_libros"
+                  ],
+                  "text": {
+                    "es": "La razón y los libros: lo que no pudieron quemar. Eres comentador de Córdoba.",
+                    "en": "Reason and books: what they couldn't burn. You're a Commentator of Córdoba."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_poder"
+                  ],
+                  "text": {
+                    "es": "La razón y el poder: juzgar con justicia. Eres cadí de Córdoba.",
+                    "en": "Reason and power: judging fairly. You're a qadi of Córdoba."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_libros"
+                  ],
+                  "text": {
+                    "es": "Roma y los libros: libre por dentro. Eres filósofo estoico.",
+                    "en": "Rome and books: free inside. You're a Stoic philosopher."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_poder"
+                  ],
+                  "text": {
+                    "es": "Roma y el poder: decir la verdad al que manda. Eres consejero del emperador.",
+                    "en": "Rome and power: telling the truth to whoever rules. You're the emperor's adviser."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "maimonides",
+              "expression": "happy",
+              "text": {
+                "es": "Nos fuimos los tres, pero Córdoba nos guardó en sus plazas. Siéntate un rato junto a cualquiera de nosotros: somos buenos escuchando.",
+                "en": "All three of us left, but Córdoba kept us in its squares. Sit for a while next to any of us: we're good listeners."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "comentador",
+          "requires": [
+            "camino_dinero",
+            "version_libros"
+          ],
+          "title": {
+            "es": "Comentador de Córdoba",
+            "en": "Commentator of Córdoba"
+          }
+        },
+        {
+          "id": "cadi_cordoba",
+          "requires": [
+            "camino_dinero",
+            "version_poder"
+          ],
+          "title": {
+            "es": "Cadí de Córdoba",
+            "en": "Qadi of Córdoba"
+          }
+        },
+        {
+          "id": "filosofo_estoico",
+          "requires": [
+            "camino_poder",
+            "version_libros"
+          ],
+          "title": {
+            "es": "Filósofo estoico",
+            "en": "Stoic philosopher"
+          }
+        },
+        {
+          "id": "consejero_emperador",
+          "requires": [
+            "camino_poder",
+            "version_poder"
+          ],
+          "title": {
+            "es": "Consejero del emperador",
+            "en": "The emperor's adviser"
+          }
+        }
+      ],
+      "paths": {
+        "s1_seneca->s2_maimonides": [[-4.78424,37.8807],[-4.78414,37.88073],[-4.78409,37.88064],[-4.78392,37.88071],[-4.78336,37.87989],[-4.7833,37.87969],[-4.7831,37.87945],[-4.78315,37.87943]],
+        "s2_maimonides->sa_averroes": [[-4.78315,37.87943],[-4.78257,37.87925],[-4.78236,37.87894],[-4.78269,37.87882],[-4.78266,37.87877],[-4.78285,37.87869],[-4.7828,37.87848],[-4.78302,37.87841],[-4.78312,37.87862]],
+        "s2_maimonides->sb_arqueologico": [[-4.78315,37.87943],[-4.78289,37.87933],[-4.78278,37.87941],[-4.78269,37.8794],[-4.78214,37.8797],[-4.78176,37.88],[-4.78115,37.87972],[-4.78105,37.88037],[-4.78084,37.88039],[-4.78036,37.88089],[-4.78038,37.88111],[-4.78027,37.88143],[-4.78006,37.88196],[-4.77982,37.8823],[-4.77887,37.8822],[-4.77853,37.88228],[-4.77833,37.88203],[-4.77851,37.88186],[-4.77851,37.88177],[-4.77836,37.88169],[-4.77819,37.88184],[-4.77823,37.88188],[-4.77811,37.88194]],
+        "sa_averroes->s4_mezquita": [[-4.78312,37.87862],[-4.78302,37.87841],[-4.7828,37.87848],[-4.78285,37.87869],[-4.78266,37.87877],[-4.78269,37.87882],[-4.78236,37.87894],[-4.78269,37.8794],[-4.78214,37.8797],[-4.78176,37.88],[-4.78115,37.87972],[-4.78111,37.88009],[-4.78071,37.88008],[-4.78072,37.88021],[-4.78023,37.88041],[-4.77989,37.87982],[-4.7803,37.87965],[-4.78022,37.87953],[-4.77965,37.87976]],
+        "sb_arqueologico->s4_mezquita": [[-4.77811,37.88194],[-4.77837,37.88171],[-4.77798,37.88146],[-4.778,37.88141],[-4.77848,37.8809],[-4.77874,37.88106],[-4.77937,37.88005],[-4.77907,37.87963],[-4.77925,37.87955],[-4.77946,37.87985],[-4.77965,37.87976]],
+        "s4_mezquita->s5_calahorra": [[-4.77965,37.87976],[-4.78048,37.87939],[-4.78026,37.87909],[-4.78041,37.87902],[-4.77975,37.878],[-4.77947,37.87812],[-4.77869,37.87727],[-4.77719,37.87606]]
+      },
+      "rewards": [
+        {
+          "id": "sabios_tablilla",
+          "name": {
+            "es": "La tablilla de Séneca",
+            "en": "Seneca's writing tablet"
+          },
+          "icon": "collectibles/cordoba_sabios_tablilla.svg",
+          "awardedAtNodeId": "s1_seneca"
+        },
+        {
+          "id": "sabios_guia",
+          "name": {
+            "es": "La «Guía de perplejos»",
+            "en": "The “Guide for the Perplexed”"
+          },
+          "icon": "collectibles/cordoba_sabios_guia.svg",
+          "awardedAtNodeId": "s2_maimonides"
+        },
+        {
+          "id": "sabios_comentario",
+          "name": {
+            "es": "El comentario de Averroes",
+            "en": "Averroes's commentary"
+          },
+          "icon": "collectibles/cordoba_sabios_comentario.svg",
+          "awardedAtNodeId": "sa_averroes"
+        },
+        {
+          "id": "sabios_lucerna",
+          "name": {
+            "es": "La lucerna romana",
+            "en": "The Roman oil lamp"
+          },
+          "icon": "collectibles/cordoba_sabios_lucerna.svg",
+          "awardedAtNodeId": "sb_arqueologico"
+        },
+        {
+          "id": "sabios_astrolabio",
+          "name": {
+            "es": "El astrolabio andalusí",
+            "en": "The Andalusi astrolabe"
+          },
+          "icon": "collectibles/cordoba_sabios_astrolabio.svg",
+          "awardedAtNodeId": "s5_calahorra"
+        },
+        {
+          "id": "insignia_sabios",
+          "name": {
+            "es": "¿Por qué se fueron los sabios de Córdoba?",
+            "en": "Why Did the Sages Leave Córdoba?"
+          },
+          "icon": "collectibles/cordoba_sabios_insignia.svg",
+          "awardedAtNodeId": "s6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Séneca",
+          "url": "https://es.wikipedia.org/wiki/S%C3%A9neca"
+        },
+        {
+          "title": "Wikipedia: Averroes",
+          "url": "https://es.wikipedia.org/wiki/Averroes"
+        },
+        {
+          "title": "Wikipedia: Maimónides",
+          "url": "https://es.wikipedia.org/wiki/Maim%C3%B3nides"
+        },
+        {
+          "title": "Wikipedia: Museo Arqueológico y Etnológico de Córdoba",
+          "url": "https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_y_Etnol%C3%B3gico_de_C%C3%B3rdoba"
+        }
+      ]
     }
   ]
 }

@@ -13,7 +13,7 @@ finales. Los personajes son personas reales de la ciudad o figuras propias de el
 | Almería | 14 | Cerro de San Cristóbal, Hospital Real, Casa del Cine (Lennon, 1966), estación de tren, templo de San Juan (mezquita) | «¿Por qué el cine se enamoró de Almería?» |
 | Granada | 17 | Sacromonte y sus cuevas, abadía del Sacromonte, Carrera del Darro, Realejo | «¿Quién escribió los libros de plomo?» |
 | Sevilla | 20 | Hospital de la Caridad, plaza de toros de la Maestranza, Museo de Bellas Artes, casa de Murillo, Setas | «¿Existió Don Juan?» (Miguel de Mañara y Murillo) |
-| Córdoba | 21 | Estatuas de Averroes y Maimónides, Museo Arqueológico (teatro romano), Cristo de los Faroles, mausoleo romano | «Los tres sabios de Córdoba» (Séneca, Averroes, Maimónides) |
+| Córdoba | 21 | Estatuas de Averroes y Maimónides, Museo Arqueológico (teatro romano), Cristo de los Faroles, mausoleo romano | «¿Por qué se fueron los sabios de Córdoba?» (Séneca, Averroes, Maimónides) · hecha |
 | Cádiz | 29 | Teatro romano y barrio del Pópulo, castillo de Santa Catalina, Casa de las Cuatro Torres, Alameda Apodaca | «¿Quién pagó el teatro romano de Gades?» (Balbo, Telethusa, Columela) · hecha |
 
 Fuera del centro y difíciles a pie (se citan, no son parada): la Alhambra por dentro (entrada con

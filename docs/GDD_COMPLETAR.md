@@ -38,3 +38,19 @@ personajes en `andalucia_sprites.py`.
 - Horario del centro de interpretación del teatro (el reto no exige entrar).
 
 **Fuentes:** [Teatro romano de Cádiz](https://es.wikipedia.org/wiki/Teatro_romano_de_C%C3%A1diz), [Turismo de Cádiz, teatro romano](https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/teatro-romano), [Puellae gaditanae](https://en.wikipedia.org/wiki/Puellae_gaditanae), [Columela](https://es.wikipedia.org/wiki/Columela).
+
+## Córdoba · «¿Por qué se fueron los sabios de Córdoba?» (`sabios-cordoba`)
+
+- **Personajes:** `seneca` (guía, c. 4 a. C.-65), `averroes` (1126-1198) y `maimonides` (1138-1204).
+- **Sospechosos:** la ciudad, el poder o el dinero.
+- **Veredicto:** el poder. Séneca se fue a Roma de niño y Nerón lo condenó en el año 65. Maimónides salió con su familia tras la conquista almohade de 1148. Averroes fue desterrado a Lucena en 1195 y murió en Marrakech. Córdoba los perdió, pero se les sigue leyendo.
+- **Caminos:** La razón (monumento a Averroes, junto a la muralla) / Roma (Museo Arqueológico, restos del teatro romano).
+- **Paradas:** Puerta de Almodóvar (Séneca) → plaza de Tiberíades (Maimónides) → Averroes o Museo Arqueológico → Mezquita-Catedral → torre de la Calahorra.
+
+**Datos a verificar**
+- El año de la estatua de Maimónides (1964) y que la plaza se llame así por su tumba en Tiberíades.
+- Que Maimónides leyera y admirara a Averroes (carta a Samuel ibn Tibón).
+- El hallazgo del teatro romano bajo el museo (2000) y su tamaño.
+- Que el museo de la Calahorra siga abierto con ese tema.
+
+**Fuentes:** [Séneca](https://es.wikipedia.org/wiki/S%C3%A9neca), [Averroes](https://es.wikipedia.org/wiki/Averroes), [Maimónides](https://es.wikipedia.org/wiki/Maim%C3%B3nides), [Museo Arqueológico y Etnológico de Córdoba](https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_y_Etnol%C3%B3gico_de_C%C3%B3rdoba).

@@ -3,6 +3,7 @@
 Fondos de las rutas que completan las ciudades (ver docs/CIUDADES_QUE_FALTAN.md).
 Málaga: iglesia de Santiago, plaza de toros de La Malagueta, Palacio de Buenavista (Museo Picasso).
 Cádiz: arco del Pópulo, teatro romano, Casa del Almirante, Casa de las Cuatro Torres, castillo de Santa Catalina.
+Córdoba: plaza de Tiberíades (Maimónides), muralla de la calle Cairuán (Averroes), Museo Arqueológico.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -11,7 +12,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, MINT, STONE, OUT, W,
                           f, sky, window, house, mirador, palm, lamp, person, floor, bench, tree, far_city, fx, doc)
 from sevilla_scenes import ALMAGRA, BRICK
-from cordoba_scenes import ground
+from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, LIME, OCHRE, POTBLUE
+from granada_scenes import horseshoe, cypress
+from sevilla_scenes import orange_tree
 
 RED = "#D8412F"
 
@@ -184,9 +187,67 @@ def cadiz_santacatalina():
     return doc(p, "Castillo de Santa Catalina", [sky(p, sun, [(80, 90, .9)], [(160, 90), (300, 110, .8)]), far, sea, mid, near, fx(p, sun, 412, .25)])
 
 
+def cordoba_tiberiades():
+    p = "ktb"; sun = (300, 100)
+    far = f'<g id="far">{far_city(250, 97, towers=2)}</g>'
+    back = (lime_wall(-20, 180, 150, 220) + flowerpots(0, 120, 210, 3)
+            + lime_wall(250, 170, 160, 230) + flowerpots(262, 392, 200, 3, seed=2)
+            + lime_wall(120, 220, 140, 180)
+            + f'<path d="M176 400V336Q190 320 204 336V400Z" fill="#6E4C33" stroke="{INK}" stroke-width="1.6"/>'
+            + window(140, 260, 18, 34, shutters=False, arch=True) + window(226, 260, 18, 34, shutters=False, arch=True))
+    mid = f'<g id="mid">{back}{ground(398, "#D8C6A6")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#D5C29E", line="#C1AB85")}'
+            + statue(195, 470, 1.15, seated=True) + orange_tree(40, 486, 30) + orange_tree(352, 486, 28)
+            + person(120, 452, .95, "#5A3E6E") + person(270, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Plaza de Tiberíades", [sky(p, sun, [(90, 70, .8)], [(220, 56)]), far, mid, near, fx(p, sun, 420, .25)])
+
+
+def cordoba_averroes():
+    p = "kav"; sun = (100, 110)
+    far = f'<g id="far">{far_city(250, 53, towers=3)}</g>'
+    c, cd, cl = OCHRE
+    wall = (f'<path d="M150 380V200H410V380Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>' + battlements(150, 410, 200, c)
+            + "".join(f'<path d="M150 {y}H410" stroke="{cd}" stroke-width="1" opacity=".6"/>' for y in range(216, 380, 14))
+            + f'<path d="M250 380V160H320V380Z" fill="{cl}" stroke="{INK}" stroke-width="1.8"/>' + battlements(250, 320, 160, cl)
+            + horseshoe(262, 300, 46, 80, "#5E4232", 1.6)
+            + f'<path d="M-20 380V250L150 230V380Z" fill="{cd}" stroke="{INK}" stroke-width="1.6"/>' + battlements(-20, 150, 250, cd))
+    water = (f'<rect x="-10" y="380" width="{W + 20}" height="22" fill="#8FB9B4" stroke="{INK}" stroke-width="1.2"/>'
+             + "".join(f'<path d="M{x} 390h22" stroke="#E6F2EF" stroke-width="1.4" opacity=".8"/>' for x in (30, 150, 280)))
+    mid = f'<g id="mid">{wall}{water}{ground(402, "#D9C39E")}</g>'
+    near = (f'<g id="near">{floor(p, 420)}' + cypress(360, 480, 190, 16)
+            + statue(90, 476, 1.2, seated=True) + person(200, 450, .95, SEA) + person(246, 454, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Monumento a Averroes", [sky(p, sun, [(290, 70, .8)], [(200, 50), (218, 42, .8)]), far, mid, near, fx(p, sun, 420)])
+
+
+def cordoba_arqueologico():
+    p = "kaq"; sun = (310, 110)
+    far = f'<g id="far">{far_city(250, 211, towers=3)}</g>'
+    c, dk, lt = STONE
+    # palacio renacentista de los Páez de Castillejo: portada con columnas y frontón
+    front = (f'<path d="M20 390V180H370V390Z" fill="{LIME[0]}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M14 180H376V166H14Z" fill="{LIME[1]}" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M130 390V190H260V390Z" fill="{lt}" stroke="{INK}" stroke-width="1.8"/>'
+             + "".join(f'<path d="M{x} 390V214" stroke="{c}" stroke-width="10"/><path d="M{x - 5} 390V214M{x + 5} 390V214" stroke="{INK}" stroke-width="1"/>' for x in (146, 244))
+             + f'<path d="M166 390V300Q195 270 224 300V390Z" fill="#4A3A30" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M126 214H264V202H126Z" fill="{c}" stroke="{INK}" stroke-width="1.4"/>'
+             f'<path d="M150 250H240V282H150Z" fill="{c}" stroke="{INK}" stroke-width="1.2"/>'
+             f'<path d="M160 202L195 176L230 202Z" fill="{c}" stroke="{INK}" stroke-width="1.4"/>'
+             + "".join(window(x, 220, 20, 36, shutters=False, balcony=True, sw=1.1) for x in (44, 84, 290, 330))
+             + "".join(window(x, 300, 20, 36, shutters=False, sw=1.1) for x in (44, 84, 290, 330)))
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    # vitrina en el suelo con restos del teatro romano
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}'
+            + f'<path d="M120 476H270L284 500H106Z" fill="#9FC3C4" stroke="{INK}" stroke-width="1.6" opacity=".9"/>'
+            + "".join(f'<path d="M{130 + k * 10} {482 + k * 5}Q195 {476 + k * 5} {260 - k * 10} {482 + k * 5}" fill="none" stroke="{dk}" stroke-width="2"/>' for k in range(3))
+            + orange_tree(40, 490, 28) + orange_tree(350, 490, 30)
+            + person(90, 452, .95, CLAY) + person(300, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Museo Arqueológico de Córdoba", [sky(p, sun, [(90, 80, .8)], [(180, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
-          "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina}
+          "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
+          "cordoba_tiberiades": cordoba_tiberiades, "cordoba_averroes": cordoba_averroes, "cordoba_arqueologico": cordoba_arqueologico}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

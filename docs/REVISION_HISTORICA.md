@@ -221,6 +221,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Teodomiro Ramírez de Arellano | persona real | 1828-1909 | [Wikipedia: Teodomiro Ramírez de Arellano](https://es.wikipedia.org/wiki/Teodomiro_Ram%C3%ADrez_de_Arellano) |
 | Juan de Mena | persona real | 1411-1456 | [Wikipedia: Juan de Mena](https://es.wikipedia.org/wiki/Juan_de_Mena) |
 | El duque de Rivas | persona real | 1791-1865 | [Wikipedia: Duque de Rivas](https://es.wikipedia.org/wiki/Duque_de_Rivas) |
+| Séneca | persona real | c. 4 a. C.-65 | [Wikipedia: Séneca](https://es.wikipedia.org/wiki/S%C3%A9neca) |
+| Averroes | persona real | 1126-1198 | [Wikipedia: Averroes](https://es.wikipedia.org/wiki/Averroes) |
+| Maimónides | persona real | 1138-1204 | [Wikipedia: Maimónides](https://es.wikipedia.org/wiki/Maim%C3%B3nides) |
 
 ### «La biblioteca del califa»: lo que afirma la ruta
 
@@ -265,6 +268,15 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Plaza de San Andrés**: La muralla de la Axerquía, el barrio oriental de Córdoba, tenía torres y puertas. A principios del siglo XV se reforzó con nuevas torres albarranas.
 - [ ] **Plaza de Colón**: En la plaza de Colón está el Palacio de la Merced, antiguo convento y hoy sede de la Diputación de Córdoba, con su fachada barroca roja y blanca.
 - [ ] **Torre de la Malmuerta** (1408): La torre de la Malmuerta es octogonal y está unida a la antigua muralla por un arco. Se construyó entre 1404 y 1408, por orden de Enrique III.
+
+### «¿Por qué se fueron los sabios de Córdoba?»: lo que afirma la ruta
+
+- [ ] **Puerta de Almodóvar**: Séneca nació en Córdoba hacia el año 4 a. C. De niño lo llevaron a Roma, donde fue filósofo, escritor, senador y maestro del emperador Nerón.
+- [ ] **Plaza de Tiberíades** (1964): La plaza se llama Tiberíades por la ciudad de Galilea donde, según la tradición, está enterrado Maimónides. Su estatua sentada es de 1964.
+- [ ] **Monumento a Averroes**: Averroes explicó a Aristóteles con tanto acierto que en las universidades de Europa lo llamaban «el Comentador». Dante lo puso entre los grandes sabios de la Antigüedad.
+- [ ] **Museo Arqueológico** (2000): El museo ocupa el palacio renacentista de los Páez de Castillejo. En sus sótanos se ven los restos del teatro romano de Córdoba, encontrados en el año 2000: uno de los más grandes de Hispania.
+- [ ] **Mezquita-Catedral**: En el siglo XII, Córdoba era una de las ciudades más cultas de Europa. Averroes y Maimónides nacieron con doce años de diferencia y a pocas calles; no consta que se conocieran.
+- [ ] **Torre de la Calahorra**: La torre de la Calahorra guardaba la entrada del puente romano. Hoy es un museo sobre la convivencia de las culturas de al-Ándalus.
 
 ## Granada
 
