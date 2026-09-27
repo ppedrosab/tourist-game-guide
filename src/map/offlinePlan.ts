@@ -1,3 +1,4 @@
+import { localeOf } from "@/i18n/locales";
 import type { CityPack, LatLng } from "@/content/types";
 import { OFFLINE_ZOOM } from "./config";
 
@@ -67,8 +68,8 @@ export function offlinePlan(pack: CityPack): OfflinePlan {
   };
 }
 
-export function formatBytes(bytes: number, lang: "es" | "en" = "es"): string {
+export function formatBytes(bytes: number, lang: string = "es"): string {
   if (bytes < 1_000_000) return `${Math.max(1, Math.round(bytes / 1000))} KB`;
-  const locale = lang === "es" ? "es-ES" : "en-GB";
+  const locale = localeOf(lang);
   return `${(bytes / 1_000_000).toLocaleString(locale, { maximumFractionDigits: 1 })} MB`;
 }

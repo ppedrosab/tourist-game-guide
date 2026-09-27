@@ -43,7 +43,8 @@ export function getNode(route: Route, nodeId: string): StoryNode {
 
 /** Texto en el idioma pedido, con el español como respaldo. */
 export function localize(text: I18nText, lang: LangCode = "es"): string {
-  return text[lang] ?? text.es;
+  // Sin traducción a ese idioma: mejor inglés que español para un turista extranjero.
+  return text[lang] ?? (lang === "es" ? undefined : text.en) ?? text.es;
 }
 
 /**

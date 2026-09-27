@@ -2,20 +2,24 @@ import { useCallback, useMemo } from "react";
 import type { BranchId, I18nText, Route } from "@/content/types";
 import { localize } from "@/engine/runner";
 import { useProgress } from "@/store/progress";
+import { de } from "./de";
 import { en } from "./en";
 import { es, Strings } from "./es";
+import { fr } from "./fr";
+import { it } from "./it";
+import { localeOf, UI_LANGS, type UiLang } from "./locales";
 
 /** Idiomas de la interfaz. El contenido de cada pack declara los suyos en `languages`. */
-export type UiLang = "es" | "en";
+export { LOCALES, localeOf, UI_LANGS, type UiLang } from "./locales";
 export type LangSetting = UiLang | "auto";
 
-const DICTS: Record<UiLang, Strings> = { es, en };
+const DICTS: Record<UiLang, Strings> = { es, en, fr, de, it };
 
-/** Idioma del móvil: español si lo usa; si no, inglés (turistas). */
+/** Idioma del móvil si la app lo tiene; si no, inglés (turistas). */
 export function deviceLang(): UiLang {
   try {
-    const locale = Intl.DateTimeFormat().resolvedOptions().locale ?? "es";
-    return locale.toLowerCase().startsWith("es") ? "es" : "en";
+    const locale = (Intl.DateTimeFormat().resolvedOptions().locale ?? "es").toLowerCase();
+    return UI_LANGS.find((l) => locale.startsWith(l)) ?? "en";
   } catch {
     return "es";
   }
@@ -48,7 +52,7 @@ export function useI18n() {
   const t = useCallback((key: StringKey, params?: Params) => translate(lang, key, params), [lang]);
   const L = useCallback((text: I18nText) => localize(text, lang), [lang]);
   const number = useCallback(
-    (n: number, digits = 0) => n.toLocaleString(lang === "es" ? "es-ES" : "en-GB", { maximumFractionDigits: digits }),
+    (n: number, digits = 0) => n.toLocaleString(localeOf(lang), { maximumFractionDigits: digits }),
     [lang],
   );
   /** "560 m" / "1,2 km" (a pie no tiene sentido más precisión). */

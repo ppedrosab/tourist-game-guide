@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Icon } from "@/components/ui";
 import type { CityPack, Route } from "@/content/types";
-import { useI18n } from "@/i18n";
+import { localeOf, useI18n } from "@/i18n";
 import { isDark, nextDusk } from "@/scene/sun";
 import { border, colors, radius, type } from "@/theme";
 
@@ -12,7 +12,7 @@ export function NightHint({ pack, route, now = new Date() }: { pack: CityPack; r
   const { lat, lng } = pack.center;
   const dark = isDark(now, lat, lng);
   const dusk = dark ? undefined : nextDusk(now, lat, lng);
-  const hour = dusk?.toLocaleTimeString(lang === "es" ? "es-ES" : "en-GB", {
+  const hour = dusk?.toLocaleTimeString(localeOf(lang), {
     hour: "2-digit",
     minute: "2-digit",
     timeZone: pack.timeZone,

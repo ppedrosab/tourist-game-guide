@@ -11,6 +11,9 @@ import { border, colors, fonts, radius, type } from "@/theme";
 const LANGS: { value: Exclude<LangSetting, "auto">; label: string }[] = [
   { value: "es", label: "Español" },
   { value: "en", label: "English" },
+  { value: "fr", label: "Français" },
+  { value: "de", label: "Deutsch" },
+  { value: "it", label: "Italiano" },
 ];
 
 export default function Perfil() {
@@ -109,9 +112,10 @@ export default function Perfil() {
 
 const styles = StyleSheet.create({
   row: { flexDirection: "row", alignItems: "center", gap: 12 },
-  segmented: { flexDirection: "row", gap: 6 },
+  segmented: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
   segment: {
-    flex: 1,
+    flexGrow: 1,
+    flexBasis: "30%",
     minHeight: 44,
     alignItems: "center",
     justifyContent: "center",

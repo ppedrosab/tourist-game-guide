@@ -2,6 +2,7 @@ import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import * as Speech from "expo-speech";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { AssetRef, CharacterVoice, LangCode } from "@/content/types";
+import { LOCALES, type UiLang } from "@/i18n/locales";
 import { AUDIO } from "@/scene/assets.generated";
 import { estimateSpeechMs, pickVoice, speakerPitch, SystemVoice } from "@/scene/voice";
 
@@ -29,7 +30,6 @@ Speech.getAvailableVoicesAsync()
   .then((v) => (systemVoices = v))
   .catch(() => undefined);
 
-const SPEECH_LANG: Record<string, string> = { es: "es-ES", en: "en-GB" };
 
 /**
  * Voz de la línea actual. Con audio grabado (assets/audio, ver gen:assets) lo
@@ -50,7 +50,7 @@ export function useVoice(line: Line, { enabled, active, lang = "es" }: { enabled
     if (!line) return;
     Speech.stop();
     setTts("idle");
-    const locale = SPEECH_LANG[lang] ?? lang;
+    const locale = LOCALES[lang as UiLang] ?? lang;
     const system = line.voice ? pickVoice(systemVoices, locale, line.voice.gender) : undefined;
     Speech.speak(line.text, {
       language: system?.language ?? locale,

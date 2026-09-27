@@ -45,8 +45,8 @@ type ProgressStore = {
   subtitles: boolean;
   setVoices: (on: boolean) => void;
   /** Idioma de la interfaz y del contenido ("auto" = el del móvil). */
-  language: "auto" | "es" | "en";
-  setLanguage: (language: "auto" | "es" | "en") => void;
+  language: "auto" | "es" | "en" | "fr" | "de" | "it";
+  setLanguage: (language: "auto" | "es" | "en" | "fr" | "de" | "it") => void;
   setSubtitles: (on: boolean) => void;
   /**
    * Manos libres (para ir con auriculares y el móvil en el bolsillo): las líneas avanzan solas al
