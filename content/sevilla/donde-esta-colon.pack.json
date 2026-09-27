@@ -1487,6 +1487,45 @@
               "en": "DNA says there are remains of Columbus in Seville, though not many. Santo Domingo has its 1877 box, but its bones have not been tested. Most likely he is split between the two."
             }
           },
+          "nextNodeId": "n7_candado"
+        },
+        {
+          "id": "n7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "aguador",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que murió Colón en Valladolid.",
+              "en": "Four digits: the year Columbus died in Valladolid."
+            },
+            "answer": [
+              "1506"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en la catedral, junto a su tumba.",
+                "en": "It was told in the cathedral, by his tomb."
+              },
+              {
+                "es": "Principios del siglo XVI: 150…",
+                "en": "Early 16th century: 150…"
+              }
+            ]
+          },
           "nextNodeId": "n7_final"
         },
         {
@@ -2650,6 +2689,45 @@
               "es": "Por los andalusíes. Trajeron el naranjo amargo por su flor, su sombra y su perfume; los escoceses aprovecharon la fruta mucho después y los jardineros de hoy mantienen la costumbre.",
               "en": "Because of the Andalusis. They brought the bitter orange for its blossom, shade and scent; the Scots made use of the fruit much later, and today's gardeners keep up the custom."
             }
+          },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "naranjera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del puente de Triana.",
+              "en": "Four digits: the year of the Triana bridge."
+            },
+            "answer": [
+              "1852"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en Triana.",
+                "en": "We asked in Triana."
+              },
+              {
+                "es": "El puente de hierro más antiguo de España: 185…",
+                "en": "Spain's oldest iron bridge: 185…"
+              }
+            ]
           },
           "nextNodeId": "g6_final"
         },
@@ -3819,6 +3897,46 @@
               "en": "The outsiders. José María Ybarra, a Basque, and Narciso Bonaplata, a Catalan, proposed a livestock fair in 1846 that was held in 1847. The cattlemen filled the market and the marquees turned it into a party."
             }
           },
+          "nextNodeId": "f6_candado"
+        },
+        {
+          "id": "f6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cigarrera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Un apellido: el concejal catalán que ideó la feria con Ybarra.",
+              "en": "A surname: the Catalan councillor who came up with the fair with Ybarra."
+            },
+            "answer": [
+              "bonaplata",
+              "narciso bonaplata"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Narciso B…",
+                "en": "Narciso B…"
+              }
+            ]
+          },
           "nextNodeId": "f6_final"
         },
         {
@@ -4788,6 +4906,45 @@
               "en": "The king. According to the legend, Peter I killed the knight in a night-time fight; the old woman recognised him by his creaking knees, and the king kept his promise by placing his own head, in stone, on the corner."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "becquer",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: los Cuatro… ¿qué? El nombre del cruce de calles cercano.",
+              "en": "One word: the Four… what? The name of the nearby crossroads (in Spanish)."
+            },
+            "answer": [
+              "cantillos"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la Alfalfa.",
+                "en": "We asked at the Alfalfa."
+              },
+              {
+                "es": "Cant…",
+                "en": "Cant…"
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5739,6 +5896,45 @@
               "es": "Don Juan nació en el teatro («El burlador de Sevilla», 1630), cuando Mañara tenía tres años. Dos siglos después, los románticos lo mezclaron con la vida de Mañara, que de joven vivió alegre y luego dedicó su fortuna a los pobres.",
               "en": "Don Juan was born on stage (“The Trickster of Seville”, 1630), when Mañara was three. Two centuries later the Romantics mixed him up with the life of Mañara, who lived merrily as a young man and then gave his fortune to the poor."
             }
+          },
+          "nextNodeId": "d6_candado"
+        },
+        {
+          "id": "d6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que nació Miguel Mañara.",
+              "en": "Four digits: the year Miguel Mañara was born."
+            },
+            "answer": [
+              "1627"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "Tres años antes de «El burlador de Sevilla»: 162…",
+                "en": "Three years before “The Trickster of Seville”: 162…"
+              }
+            ]
           },
           "nextNodeId": "d6_final"
         },

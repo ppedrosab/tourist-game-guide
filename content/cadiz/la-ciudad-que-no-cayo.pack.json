@@ -1521,6 +1521,45 @@
               "en": "There was no single culprit. The island could only be attacked along a narrow isthmus, the fleets kept the sea open to bring in food and troops, and the people of Cádiz never gave in, neither in the Cortes nor in their songs. In August 1812 the French lifted the siege."
             }
           },
+          "nextNodeId": "n7_candado"
+        },
+        {
+          "id": "n7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tia_norica",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el nombre que los fenicios le pusieron a Cádiz.",
+              "en": "One word: the name the Phoenicians gave Cádiz."
+            },
+            "answer": [
+              "gadir"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en el museo, junto a los sarcófagos.",
+                "en": "We asked at the museum, by the sarcophagi."
+              },
+              {
+                "es": "Cinco letras: G _ _ _ R.",
+                "en": "Five letters: G _ _ _ R."
+              }
+            ]
+          },
           "nextNodeId": "n7_final"
         },
         {
@@ -2872,6 +2911,45 @@
               "en": "The cat only stole fish and chicharrones, and the Garumero only took notes on his tablet. The recipe book was in the apron pocket the whole time."
             }
           },
+          "nextNodeId": "g7_candado"
+        },
+        {
+          "id": "g7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pescaera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el nombre del ritual de despiezar el atún.",
+              "en": "One word: the name of the tuna-butchering ritual."
+            },
+            "answer": [
+              "ronqueo"
+            ],
+            "hints": [
+              {
+                "es": "Lo vimos en el mercado.",
+                "en": "We saw it at the market."
+              },
+              {
+                "es": "Suena como el ruido del cuchillo en el espinazo: ron…",
+                "en": "It sounds like the knife on the spine: ron…"
+              }
+            ]
+          },
           "nextNodeId": "g7_final"
         },
         {
@@ -4173,6 +4251,45 @@
               "en": "The Chirigotero just picked one up off the ground and the Cuartetero was only rehearsing his parody. It was the levante: it blows from the east and dropped the pictures all the way from the Land Gate to the Falla."
             }
           },
+          "nextNodeId": "c7_candado"
+        },
+        {
+          "id": "c7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "romancero",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso,\nel expediente se cierra:\nun candado con su clave\nque en tu cuaderno se encierra.",
+                "en": "Before the case can be closed,\nthe case file needs its key:\na lock whose secret word\nis in your notes, you'll see."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que se inauguró el Gran Teatro Falla.",
+              "en": "Four digits: the year the Gran Teatro Falla opened."
+            },
+            "answer": [
+              "1905"
+            ],
+            "hints": [
+              {
+                "es": "Se dijo en la primera parada, delante del teatro.",
+                "en": "It was said at the first stop, in front of the theatre."
+              },
+              {
+                "es": "Principios del siglo XX: 190…",
+                "en": "Early 20th century: 190…"
+              }
+            ]
+          },
           "nextNodeId": "c7_final"
         },
         {
@@ -5342,6 +5459,46 @@
               "en": "The custom of carrying on the shoulders, which tradition links to the dock workers; narrow streets that call for tall, narrow floats and a slow pace; and neighbourhoods that inherit their devotion. All three together."
             }
           },
+          "nextNodeId": "s6_candado"
+        },
+        {
+          "id": "s6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cargador",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: la plaza donde termina la Carrera Oficial.",
+              "en": "One word: the square where the Carrera Oficial ends."
+            },
+            "answer": [
+              "palillero",
+              "plaza del palillero"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la Candelaria.",
+                "en": "We asked at the Candelaria."
+              },
+              {
+                "es": "Es la última parada de la ruta: el Pa…",
+                "en": "It's the route's last stop: the Pa…"
+              }
+            ]
+          },
           "nextNodeId": "s6_final"
         },
         {
@@ -6310,6 +6467,45 @@
               "en": "The sap. The dragon tree produces a red resin, “dragon's blood”. The Geryon myth explained it in its own way: ancient writers already told of trees bleeding over his tomb."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "adolfocastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el héroe que sale en el escudo de Cádiz, entre dos leones.",
+              "en": "One word: the hero on the coat of arms of Cádiz, between two lions."
+            },
+            "answer": [
+              "hercules"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "El que mató a Gerión.",
+                "en": "The one who killed Geryon."
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -7258,6 +7454,45 @@
               "es": "Lo mandó construir Balbo el Menor, que quiso engrandecer su ciudad ante Roma. Gades podía permitírselo: el mar, las salazones y el comercio la habían hecho de las más ricas del Imperio. Las bailarinas le dieron fama; el dinero lo puso el mar.",
               "en": "Balbus the Younger had it built, wanting to make his city great before Rome. Gades could afford it: the sea, salted fish and trade had made it one of the richest in the Empire. The dancers gave it fame; the sea paid the bill."
             }
+          },
+          "nextNodeId": "t6_candado"
+        },
+        {
+          "id": "t6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que apareció el teatro bajo las casas del Pópulo.",
+              "en": "Four digits: the year the theatre turned up beneath the houses of El Pópulo."
+            },
+            "answer": [
+              "1980"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en el teatro.",
+                "en": "It was told at the theatre."
+              },
+              {
+                "es": "Buscaban el castillo medieval… en 198…",
+                "en": "They were looking for the medieval castle… in 198…"
+              }
+            ]
           },
           "nextNodeId": "t6_final"
         },

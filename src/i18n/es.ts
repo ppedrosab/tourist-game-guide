@@ -155,7 +155,7 @@ export const es = {
     verRespuesta: "Ver respuesta",
     acertijo: "Acertijo",
     candado: "Candado del caso",
-    candadoAyuda: "La respuesta está en las pistas de tu cuaderno.",
+    candadoAyuda: "La clave está en lo que has visto y oído por el camino.",
     abierto: "¡Candado abierto!",
     ordena: "Ordena",
     ordenCorrecto: "Este es el orden correcto.",

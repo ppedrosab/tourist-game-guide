@@ -254,6 +254,48 @@
             "correctIndex": 1,
             "explanation": { "es": "En 1782 se pararon las obras por falta de fondos. La leyenda dice que el dinero ayudó a la independencia de Estados Unidos; los documentos apuntan al camino de Antequera. Lo seguro es que nunca volvió a la torre.", "en": "In 1782 work stopped for lack of funds. Legend says the money helped American independence; the documents point to the road to Antequera. What's certain is that it never came back to the tower." }
           },
+          "nextNodeId": "n7_candado"
+        },
+        {
+          "id": "n7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "cenachero",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: cómo son las esquinas de los edificios de calle Larios.",
+              "en": "One word: what the corners of the buildings on calle Larios are like."
+            },
+            "answer": [
+              "curvas",
+              "curva",
+              "curved",
+              "round"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en calle Larios.",
+                "en": "We asked on calle Larios."
+              },
+              {
+                "es": "Ni rectas ni en pico…",
+                "en": "Neither square nor pointed…"
+              }
+            ]
+          },
           "nextNodeId": "n7_final"
         },
         {
@@ -1246,6 +1288,45 @@
               "es": "El Migué. Los pescadores ya asaban sardinas en la playa, pero fue él quien, hacia 1882 en el Palo, las clavó en una caña junto a la lumbre y lo convirtió en costumbre. Los fenicios salaban; el rey solo fue a probarlo.",
               "en": "Migué. Fishermen already roasted sardines on the beach, but around 1882 in El Palo he was the one who stuck them on a cane by the fire and turned it into a custom. The Phoenicians salted fish; the king only came to taste it."
             }
+          },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "espetero",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que el Migué ensartó la sardina en la caña.",
+              "en": "Four digits: the year Migué skewered the sardine on the cane."
+            },
+            "answer": [
+              "1882"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Siglo XIX: 188…",
+                "en": "19th century: 188…"
+              }
+            ]
           },
           "nextNodeId": "g6_final"
         },
@@ -2402,6 +2483,47 @@
               "en": "The conquest. The celebration was established in 1491 to commemorate the monarchs' entry; in 1887, at the fourth centenary, it was relaunched as a great fair to boost the economy. Summer only brings the heat."
             }
           },
+          "nextNodeId": "f6_candado"
+        },
+        {
+          "id": "f6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "latrini",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Un número: el día de agosto en que entraron los Reyes Católicos en Málaga.",
+              "en": "A number: the August day the Catholic Monarchs entered Málaga."
+            },
+            "answer": [
+              "19",
+              "diecinueve",
+              "nineteen"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Entre el 15 y el 20.",
+                "en": "Between the 15th and the 20th."
+              }
+            ]
+          },
           "nextNodeId": "f6_final"
         },
         {
@@ -3361,6 +3483,45 @@
               "en": "According to the tradition collected by Díaz de Escovar, Doña Sancha had the heads of the six culprits and of her nephew Don Álvaro carved. It is a tradition: the house no longer exists and no records of the case survive."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "diazescovar",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que pasa esta historia.",
+              "en": "Four digits: the year this story takes place."
+            },
+            "answer": [
+              "1639"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en calle Larios.",
+                "en": "It was told on calle Larios."
+              },
+              {
+                "es": "Siglo XVII: 163…",
+                "en": "17th century: 163…"
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -4310,6 +4471,45 @@
               "es": "Las tres pistas eran ciertas. La familia se fue en 1891, él vivió en París desde 1904 y, tras la Guerra Civil, no quiso volver a España mientras gobernara Franco. Su última visita fue en 1901. Málaga lo recuperó con su museo, abierto en 2003.",
               "en": "All three leads were true. The family left in 1891, he lived in Paris from 1904 and, after the Civil War, he refused to return to Spain while Franco ruled. His last visit was in 1901. Málaga got him back with his museum, opened in 2003."
             }
+          },
+          "nextNodeId": "p6_candado"
+        },
+        {
+          "id": "p6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "picasso",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que nació Picasso en la plaza de la Merced.",
+              "en": "Four digits: the year Picasso was born in the plaza de la Merced."
+            },
+            "answer": [
+              "1881"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "Lo bautizaron en noviembre de ese mismo año: 188…",
+                "en": "He was baptised that November: 188…"
+              }
+            ]
           },
           "nextNodeId": "p6_final"
         },

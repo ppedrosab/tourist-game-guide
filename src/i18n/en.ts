@@ -153,7 +153,7 @@ export const en: Strings = {
     verRespuesta: "Show answer",
     acertijo: "Riddle",
     candado: "Case lock",
-    candadoAyuda: "The answer is in the clues in your notebook.",
+    candadoAyuda: "The key is in what you've seen and heard along the way.",
     abierto: "Lock opened!",
     ordena: "Put in order",
     ordenCorrecto: "This is the right order.",

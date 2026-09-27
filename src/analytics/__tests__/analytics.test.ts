@@ -41,7 +41,7 @@ it("con consentimiento registra el recorrido sin datos personales", () => {
   expect(names[0]).toBe("route_started");
   expect(names.filter((n) => n === "decision_made")).toHaveLength(2);
   expect(names.filter((n) => n === "stop_arrived")).toHaveLength(6);
-  expect(names.filter((n) => n === "challenge_answered")).toHaveLength(5);
+  expect(names.filter((n) => n === "challenge_answered")).toHaveLength(6); // 5 paradas + candado final
   expect(names[names.length - 1]).toBe("route_completed");
   expect(events[events.length - 1]).toMatchObject({ endingId: "cuentacuentos", stars: 3 });
   expect(events.find((e) => e.name === "stop_arrived")).toMatchObject({ method: "demo", nodeId: "n1_cenachero" });

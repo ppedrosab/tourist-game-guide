@@ -37,11 +37,11 @@ it("cuenta el primer intento y solo en nodos con reto puntuable", () => {
 });
 
 it("3 estrellas acertando todo, 2 con al menos el 60 %, 1 con menos", () => {
-  // Camino dinero + documentos: Larios, Atarazanas, Casa de Guardia, Manquita, Teatro, Resolver = 6 retos.
-  expect(starsFor(route, play(() => true))).toEqual({ stars: 3, correct: 6, total: 6 });
+  // Camino dinero + documentos: Larios, Atarazanas, Casa de Guardia, Manquita, Teatro, Resolver y el candado final = 7 retos.
+  expect(starsFor(route, play(() => true))).toEqual({ stars: 3, correct: 7, total: 7 });
   const fallos = new Set(["n2_larios", "a1_atarazanas"]);
-  expect(starsFor(route, play((id) => !fallos.has(id)))).toEqual({ stars: 2, correct: 4, total: 6 });
-  expect(starsFor(route, play(() => false))).toEqual({ stars: 1, correct: 0, total: 6 });
+  expect(starsFor(route, play((id) => !fallos.has(id)))).toEqual({ stars: 2, correct: 5, total: 7 });
+  expect(starsFor(route, play(() => false))).toEqual({ stars: 1, correct: 0, total: 7 });
 });
 
 it("solo cuentan los retos del camino recorrido", () => {

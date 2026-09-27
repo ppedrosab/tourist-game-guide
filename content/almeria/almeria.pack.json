@@ -1418,6 +1418,45 @@
               "en": "The watchtower. Al-Mariyya was Pechina's lookout tower, which over time grew into the city. The “mirror of the sea” is a pretty 19th-century explanation, but it isn't true."
             }
           },
+          "nextNodeId": "n6_candado"
+        },
+        {
+          "id": "n6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "vigia",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año de la catedral que parece una fortaleza.",
+              "en": "Four digits: the year of the cathedral that looks like a fortress."
+            },
+            "answer": [
+              "1524"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en la catedral, cuando hablamos de los piratas.",
+                "en": "It came up at the cathedral, when we talked about pirates."
+              },
+              {
+                "es": "Es del siglo XVI y empieza por 15…",
+                "en": "It's 16th-century and starts with 15…"
+              }
+            ]
+          },
           "nextNodeId": "n6_final"
         },
         {
@@ -2581,6 +2620,45 @@
               "es": "El plástico, puesto sobre el enarenado. La uva enriqueció la provincia y la arena ayudaba, pero fue el invernadero de 1963, copiado por miles de familias, el que cambió el paisaje.",
               "en": "The plastic, laid over the enarenado. The grapes made the province rich and the sand helped, but it was the 1963 greenhouse, copied by thousands of families, that changed the landscape."
             }
+          },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "hortelana",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del primer invernadero de plástico sobre arena, el que lo cambió todo.",
+              "en": "Four digits: the year of the first plastic-on-sand greenhouse, the one that changed everything."
+            },
+            "answer": [
+              "1963"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Años sesenta: 196…",
+                "en": "The sixties: 196…"
+              }
+            ]
           },
           "nextNodeId": "g6_final"
         },
@@ -3746,6 +3824,47 @@
               "en": "Because of the patroness. The fair honours the Virgen del Mar, around her feast at the end of August. Summer and the port help, but the date is hers."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "carmendeburgos",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: la Virgen del… ¿qué? La patrona en cuyo honor es la feria.",
+              "en": "One word: the Virgin of the… what? The patron saint the fair honours."
+            },
+            "answer": [
+              "mar",
+              "del mar",
+              "virgen del mar"
+            ],
+            "hints": [
+              {
+                "es": "Es el nombre oficial de la feria.",
+                "en": "It's in the fair's official name."
+              },
+              {
+                "es": "Tiene tres letras y lo ves desde el Paseo.",
+                "en": "Three letters, and you can see it from the Paseo."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -4720,6 +4839,46 @@
               "en": "No gold treasure has ever appeared. The enchanted palace is a legend and the Scheidnagel story a rumour. What archaeologists do bring out is the remains of a thousand years of history."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "santisteban",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el tejido que hizo famosa a la Almería del siglo XI.",
+              "en": "One word: the fabric that made 11th-century Almería famous."
+            },
+            "answer": [
+              "seda",
+              "silk"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la Plaza Vieja.",
+                "en": "We asked about it in the Plaza Vieja."
+              },
+              {
+                "es": "Lo hacen los gusanos…",
+                "en": "Worms make it…"
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5664,6 +5823,45 @@
               "es": "Por la luz de casi todo el año, por paisajes que valían por medio mundo a poca distancia, y por la gente que trabajó en los rodajes. Que fuera barato ayudó, pero no lo explica todo.",
               "en": "For its light nearly all year, for landscapes that could stand in for half the world within a short drive, and for the people who worked on the shoots. Being cheap helped, but it doesn't explain it all."
             }
+          },
+          "nextNodeId": "c6_candado"
+        },
+        {
+          "id": "c6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "extra",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el reino de «Juego de tronos» que fue la Alcazaba.",
+              "en": "One word: the “Game of Thrones” kingdom the Alcazaba played."
+            },
+            "answer": [
+              "dorne"
+            ],
+            "hints": [
+              {
+                "es": "Lo contó Leone en la Alcazaba.",
+                "en": "Leone told you at the Alcazaba."
+              },
+              {
+                "es": "Cinco letras, empieza por D.",
+                "en": "Five letters, starts with D."
+              }
+            ]
           },
           "nextNodeId": "c6_final"
         },

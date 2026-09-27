@@ -1449,6 +1449,45 @@
               "en": "The Abencerrajes existed, the lineages fought each other and some chronicles blame Muley Hacén for several deaths. But the massacre in that hall comes from the 1595 novel, and the stains are attributed to rust."
             }
           },
+          "nextNodeId": "n7_candado"
+        },
+        {
+          "id": "n7_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "irving",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que Boabdil entregó Granada.",
+              "en": "Four digits: the year Boabdil handed over Granada."
+            },
+            "answer": [
+              "1492"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la Capilla Real.",
+                "en": "We asked at the Royal Chapel."
+              },
+              {
+                "es": "El mismo año que el primer viaje de Colón.",
+                "en": "The same year as Columbus's first voyage."
+              }
+            ]
+          },
           "nextNodeId": "n7_final"
         },
         {
@@ -2611,6 +2650,46 @@
               "es": "Ceferino Isla, en 1897, en Santa Fe. Lo llamó pionono en honor al papa Pío IX, «Pío Nono», y le dio forma que recordara al papa: de blanco y con el solideo de crema tostada.",
               "en": "Ceferino Isla, in 1897, in Santa Fe. He named it after Pope Pius IX, “Pío Nono”, and shaped it to recall the pope: in white, with a toasted-cream skullcap."
             }
+          },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "lorca",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Dos palabras: la ciudad campamento donde nació el pionono.",
+              "en": "Two words: the camp town where the pionono was born."
+            },
+            "answer": [
+              "santa fe",
+              "santafe"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en la Capilla Real.",
+                "en": "It was told at the Royal Chapel."
+              },
+              {
+                "es": "Santa…",
+                "en": "Santa…"
+              }
+            ]
           },
           "nextNodeId": "g6_final"
         },
@@ -3775,6 +3854,45 @@
               "en": "From France. The dragon and its name come from the legend of Tarascon, in Provence; it arrived with the Corpus festivities. Granada has had it since 1633 and added its own touch: the fashionably dressed doll."
             }
           },
+          "nextNodeId": "f6_candado"
+        },
+        {
+          "id": "f6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "tarasca",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: la ciudad francesa de la leyenda del dragón.",
+              "en": "One word: the French town of the dragon legend."
+            },
+            "answer": [
+              "tarascon"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Se parece mucho a «Tarasca».",
+                "en": "It looks a lot like “Tarasca”."
+              }
+            ]
+          },
           "nextNodeId": "f6_final"
         },
         {
@@ -4744,6 +4862,45 @@
               "en": "The symbol. The phrase goes with a phoenix, a symbol of resurrection: the owner hoped for eternal life from heaven. The legend of the page is romantic, but it doesn't add up: Hernando de Zafra died in 1507 and the house dates from 1539."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ganivet",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del palacio de la Casa de Castril.",
+              "en": "Four digits: the year of the Casa de Castril palace."
+            },
+            "answer": [
+              "1539"
+            ],
+            "hints": [
+              {
+                "es": "Se contó delante de la casa, en la última parada.",
+                "en": "It was told in front of the house, at the last stop."
+              },
+              {
+                "es": "Siglo XVI: 153…",
+                "en": "16th century: 153…"
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5704,6 +5861,47 @@
               "es": "Casi todos los historiadores creen que los escribieron moriscos granadinos, seguramente Miguel de Luna y Alonso del Castillo, para acercar su cultura árabe a la fe cristiana cuando se les perseguía. No se ha podido probar del todo.",
               "en": "Almost all historians believe they were written by Granada Moriscos, most likely Miguel de Luna and Alonso del Castillo, to bring their Arab culture closer to the Christian faith at a time of persecution. It has never been fully proven."
             }
+          },
+          "nextNodeId": "p6_candado"
+        },
+        {
+          "id": "p6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "pedrodecastro",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: cómo llamaron a las letras raras de los plomos.",
+              "en": "One word: what the strange letters on the lead books were called (in Spanish)."
+            },
+            "answer": [
+              "salomonicas",
+              "salomonica",
+              "solomonic"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en las cuevas del Sacromonte.",
+                "en": "We asked at the Sacromonte caves."
+              },
+              {
+                "es": "Como el rey sabio de la Biblia: Salom…",
+                "en": "Like the wise king of the Bible: Salom…"
+              }
+            ]
           },
           "nextNodeId": "p6_final"
         },

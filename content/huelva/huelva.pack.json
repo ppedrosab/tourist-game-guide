@@ -1402,6 +1402,45 @@
               "en": "The miners. The Rio Tinto Company's Britons played at the mines from the 1870s and in 1889 founded in Huelva the oldest club in Spain. Sailors and students helped spread it later."
             }
           },
+          "nextNodeId": "n6_candado"
+        },
+        {
+          "id": "n6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mackay",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que se fundó el club en la Casa Colón.",
+              "en": "Four digits: the year the club was founded at the Casa Colón."
+            },
+            "answer": [
+              "1889"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en la Casa Colón.",
+                "en": "It was told at the Casa Colón."
+              },
+              {
+                "es": "Un 23 de diciembre de 188…",
+                "en": "A 23 December, 188…"
+              }
+            ]
+          },
           "nextNodeId": "n6_final"
         },
         {
@@ -2580,6 +2619,46 @@
               "en": "Because of the estuary. Cuttlefish were plentiful and Huelva's everyday food; the neighbours used it as a nickname, and Huelva turned it into a source of pride."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "choquera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el animal que en Huelva llaman «choco».",
+              "en": "One word: the animal they call “choco” in Huelva."
+            },
+            "answer": [
+              "sepia",
+              "cuttlefish"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en el Mercado del Carmen.",
+                "en": "We asked at the Mercado del Carmen."
+              },
+              {
+                "es": "Cinco letras, parecido al calamar.",
+                "en": "Like a squid (in Spanish, five letters)."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -3750,6 +3829,45 @@
               "en": "The Columbian Society. Columbus and the Pinzóns made the 1492 voyage, but the festival was created by the Society in 1880 to remember it every 3 August; the 1892 centenary made it big."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "alonsosanchez",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que nació la Real Sociedad Colombina Onubense.",
+              "en": "Four digits: the year the Real Sociedad Colombina Onubense was founded."
+            },
+            "answer": [
+              "1880"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Doce años antes del cuarto centenario de 1892.",
+                "en": "Twelve years before the 1892 fourth centenary."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -4720,6 +4838,45 @@
               "en": "Huelva. Tartessos was a culture of the south-west, not a single city; but the sanctuaries, pottery and estuary bronzes make Huelva one of its great centres and ports. Atlantis is a tale, and nothing turned up in Doñana."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "argantonio",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que la ría devolvió más de 400 objetos de bronce.",
+              "en": "Four digits: the year the estuary gave up more than 400 bronze objects."
+            },
+            "answer": [
+              "1923"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en el museo.",
+                "en": "It was told at the museum."
+              },
+              {
+                "es": "Al dragar la ría, en 192…",
+                "en": "Dredging the estuary, in 192…"
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5671,6 +5828,45 @@
               "es": "El diario recoge que el 3 de marzo de 1493 la suerte cayó en Colón para peregrinar a la Cinta. Que subiera y encendiera una vela no está escrito: lo cuenta la tradición de Huelva, y el santuario lo recuerda.",
               "en": "The log records that on 3 March 1493 the lot fell to Columbus to make a pilgrimage to the Cinta. That he climbed up and lit a candle isn't written down: Huelva tradition tells it, and the sanctuary remembers it."
             }
+          },
+          "nextNodeId": "h6_candado"
+        },
+        {
+          "id": "h6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del gran monumento a Colón de la Punta del Sebo.",
+              "en": "Four digits: the year of the great Columbus monument on the Punta del Sebo."
+            },
+            "answer": [
+              "1929"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en el mirador de la Cinta.",
+                "en": "We asked at the Cinta viewpoint."
+              },
+              {
+                "es": "Lo hizo Gertrude Whitney en 192…",
+                "en": "Gertrude Whitney made it in 192…"
+              }
+            ]
           },
           "nextNodeId": "h6_final"
         },

@@ -1399,6 +1399,45 @@
               "en": "The war. Almanzor burned a part and the booksellers bought what others sold, but it was the fitna that emptied the library: it was sold to pay for the defence and the rest was lost in the looting. Some books survived in the taifas."
             }
           },
+          "nextNodeId": "n6_candado"
+        },
+        {
+          "id": "n6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "lubna",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que empezó la guerra civil del califato, la fitna.",
+              "en": "Four digits: the year the caliphate's civil war, the fitna, began."
+            },
+            "answer": [
+              "1009"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en el Campo Santo de los Mártires.",
+                "en": "We asked at the Campo Santo de los Mártires."
+              },
+              {
+                "es": "Justo después del año mil: 100…",
+                "en": "Just after the year 1000: 100…"
+              }
+            ]
+          },
           "nextNodeId": "n6_final"
         },
         {
@@ -2570,6 +2609,45 @@
               "en": "The labourers. Romans and Andalusis already mashed bread with oil, garlic and vinegar, but the tomato came from America and only became common in the dornillo in the 19th century."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "patiera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el instrumento con que da las horas el reloj de las Tendillas.",
+              "en": "One word: the instrument the Tendillas clock strikes the hours with."
+            },
+            "answer": [
+              "guitarra"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en las Tendillas.",
+                "en": "We asked at Las Tendillas."
+              },
+              {
+                "es": "Flamenca, de seis cuerdas.",
+                "en": "Flamenco, with six strings."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -3732,6 +3810,45 @@
               "en": "The Fair. It began as a livestock fair by privilege of Sancho IV in 1284, moved to May in 1422 and took the name of Our Lady of Health in 1665. The courtyard competition dates from 1921 and the crosses competition from the 20th century, though the crosses custom is old."
             }
           },
+          "nextNodeId": "f6_candado"
+        },
+        {
+          "id": "f6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "piconera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del privilegio de Sancho IV que dio origen a la Feria.",
+              "en": "Four digits: the year of Sancho IV's charter that gave rise to the Fair."
+            },
+            "answer": [
+              "1284"
+            ],
+            "hints": [
+              {
+                "es": "Está en la respuesta del veredicto.",
+                "en": "It's in the answer to the verdict."
+              },
+              {
+                "es": "Siglo XIII: 128…",
+                "en": "13th century: 128…"
+              }
+            ]
+          },
           "nextNodeId": "f6_final"
         },
         {
@@ -4709,6 +4826,45 @@
               "en": "The inscription and the records. The tower dates from 1404-1408, forty years before the 1448 crime; the penance legend attached itself later, with help from the poets. The origin of the name is still unclear."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "ramirezarellano",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año en que empezó a construirse la torre, según los documentos.",
+              "en": "Four digits: the year the tower was begun, according to the records."
+            },
+            "answer": [
+              "1404"
+            ],
+            "hints": [
+              {
+                "es": "Se contó en la torre, en la última parada.",
+                "en": "It was told at the tower, at the last stop."
+              },
+              {
+                "es": "Empieza por 140… y la terminaron en 1408.",
+                "en": "Starts with 140… and was finished in 1408."
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5661,6 +5817,46 @@
               "es": "Séneca fue a Roma de niño y Nerón lo condenó; Maimónides huyó de los almohades; Averroes fue desterrado por su califa. Córdoba los perdió, pero el mundo los sigue leyendo.",
               "en": "Seneca went to Rome as a child and Nero condemned him; Maimonides fled the Almohads; Averroes was banished by his caliph. Córdoba lost them, but the world still reads them."
             }
+          },
+          "nextNodeId": "s6_candado"
+        },
+        {
+          "id": "s6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "seneca",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: el emperador del que fue maestro Séneca.",
+              "en": "One word: the emperor Seneca tutored."
+            },
+            "answer": [
+              "neron",
+              "nero"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la Puerta de Almodóvar.",
+                "en": "We asked at the Almodóvar Gate."
+              },
+              {
+                "es": "Cinco letras: N _ _ _ N.",
+                "en": "Five letters: N _ _ _ N (Spanish spelling)."
+              }
+            ]
           },
           "nextNodeId": "s6_final"
         },

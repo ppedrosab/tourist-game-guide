@@ -143,7 +143,7 @@ export type ContentBlock =
  * opción incorrecta.
  * - `observe`: mirar algo del lugar (una placa, una fecha) y escribirlo.
  * - `riddle`: acertijo con respuesta escrita.
- * - `lock`: candado final del caso; la respuesta sale de las pistas del cuaderno.
+ * - `lock`: candado final del caso; la clave sale de lo contado en paradas por las que pasan todos los caminos.
  * - `order`: poner `items` en orden (vienen en el orden correcto; la pantalla los baraja).
  */
 export type Challenge =

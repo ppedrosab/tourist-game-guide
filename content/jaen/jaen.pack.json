@@ -1384,6 +1384,46 @@
               "en": "Nobody. There is no evidence of any giant lizard: the versions change, nobody saw it and the skin in San Ildefonso was probably a caiman's. What is real is the legend, which Jaén holds dear."
             }
           },
+          "nextNodeId": "n6_candado"
+        },
+        {
+          "id": "n6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "lagarto",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Un apellido: el arquitecto que trazó la catedral de Jaén.",
+              "en": "A surname: the architect who designed Jaén cathedral."
+            },
+            "answer": [
+              "vandelvira",
+              "andres de vandelvira"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "Andrés de V…",
+                "en": "Andrés de V…"
+              }
+            ]
+          },
           "nextNodeId": "n6_final"
         },
         {
@@ -2545,6 +2585,48 @@
               "en": "The 19th and 20th centuries. Romans and Andalusis grew olives, but the monoculture was born when oil sold worldwide and the lands sold off by the State filled up with olive trees."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "catadora",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra o un número: cuántos años puede llegar a vivir un olivo (más de…).",
+              "en": "A word or a number: how many years an olive tree can live (more than…)."
+            },
+            "answer": [
+              "mil",
+              "1000",
+              "1 000",
+              "thousand"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos junto a la Magdalena.",
+                "en": "We asked by the Magdalena."
+              },
+              {
+                "es": "Más de un milenio.",
+                "en": "More than a millennium."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -3702,6 +3784,47 @@
               "en": "Because of the olive tree. San Antón sets the date and winter brings the cold, but the bonfires were fed with pruning wood, which comes in exactly those weeks."
             }
           },
+          "nextNodeId": "g6_candado"
+        },
+        {
+          "id": "g6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "melenchonera",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Un número: el día de enero en que, por la noche, se encienden las lumbres.",
+              "en": "A number: the January day on whose night the bonfires are lit."
+            },
+            "answer": [
+              "16",
+              "dieciseis",
+              "sixteen"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "La víspera de San Antón, que es el 17.",
+                "en": "The eve of Saint Anthony's day, the 17th."
+              }
+            ]
+          },
           "nextNodeId": "g6_final"
         },
         {
@@ -4669,6 +4792,46 @@
               "en": "Someone alive. According to the legend, a brave young man unmasked the ghost and found a gentleman in a sheet visiting his sweetheart unrecognised. The Mona is innocent… of this, at least."
             }
           },
+          "nextNodeId": "l6_candado"
+        },
+        {
+          "id": "l6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "mona",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Una palabra: la figura de la catedral que, dicen, trae mala suerte a los recién casados.",
+              "en": "One word: the cathedral figure said to bring newlyweds bad luck."
+            },
+            "answer": [
+              "mona",
+              "la mona"
+            ],
+            "hints": [
+              {
+                "es": "Lo preguntamos en la primera parada.",
+                "en": "We asked at the first stop."
+              },
+              {
+                "es": "Cuatro letras, como un animal.",
+                "en": "Four letters, like an animal (in Spanish)."
+              }
+            ]
+          },
           "nextNodeId": "l6_final"
         },
         {
@@ -5607,6 +5770,45 @@
               "es": "En 1246, tras ocho meses de asedio, Alhamar entregó Jaén a Fernando III con el Pacto de Jaén: se hizo su vasallo a cambio de paz para Granada. Nadie tomó el castillo al asalto.",
               "en": "In 1246, after an eight-month siege, Alhamar handed Jaén to Fernando III under the Pact of Jaén: he became his vassal in exchange for peace for Granada. Nobody took the castle by storm."
             }
+          },
+          "nextNodeId": "k6_candado"
+        },
+        {
+          "id": "k6_candado",
+          "title": {
+            "es": "El expediente",
+            "en": "The case file"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "alhamar",
+              "expression": "thinking",
+              "text": {
+                "es": "Antes de cerrar el caso, el expediente tiene un candado. La clave está en lo que hemos visto por el camino.",
+                "en": "Before we close the case, the case file has a lock. The key is in what we've seen along the way."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "lock",
+            "prompt": {
+              "es": "Cuatro cifras: el año del Pacto de Jaén.",
+              "en": "Four digits: the year of the Pact of Jaén."
+            },
+            "answer": [
+              "1246"
+            ],
+            "hints": [
+              {
+                "es": "Se dijo en el castillo, en la última parada.",
+                "en": "It was said at the castle, at the last stop."
+              },
+              {
+                "es": "Después de ocho meses de cerco que empezó en 1245…",
+                "en": "After an eight-month siege that began in 1245…"
+              }
+            ]
           },
           "nextNodeId": "k6_final"
         },
