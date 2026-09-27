@@ -8,6 +8,7 @@ import { useEffect } from "react";
 // Define la tarea de geofences al arrancar (obligatorio para TaskManager).
 import { GeofenceSync } from "@/geo/GeofenceSync";
 import { setupRewardedHints } from "@/ads/rewarded";
+import { useHandsFreeAudio } from "@/hooks/useHandsFreeAudio";
 import { colors } from "@/theme";
 
 SplashScreen.preventAutoHideAsync();
@@ -28,6 +29,7 @@ export default function RootLayout() {
   useEffect(() => {
     setupRewardedHints();
   }, []);
+  useHandsFreeAudio();
 
   if (!loaded) return null;
 

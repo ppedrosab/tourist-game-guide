@@ -1,4 +1,5 @@
 import { router, useLocalSearchParams } from "expo-router";
+import * as Haptics from "expo-haptics";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -87,7 +88,7 @@ function NodePlayer({
 }) {
   const insets = useSafeAreaInsets();
   const window = useWindowDimensions();
-  const { L, lang } = useI18n();
+  const { t, L, lang } = useI18n();
   // Escenario con la proporción de las ilustraciones; en pantallas bajas se recorta ("cover").
   const stageHeight = Math.min(
     window.width / SCENE_ASPECT,
@@ -146,10 +147,30 @@ function NodePlayer({
   const focused = useIsFocused();
   const voicesOn = useProgress((s) => s.voices);
   const subtitles = useProgress((s) => s.subtitles);
+  const handsFree = useProgress((s) => s.handsFree);
   const line = arrived
-    ? spokenLine(step, `${node.id}:${index}`, L, pack)
-    : undefined;
+    ? spokenLine(step, `${node.id}:${index}`, L, pack, handsFree ? t : undefined)
+    : handsFree && node.location
+      ? { key: `${node.id}:camino`, text: t("jugar.manosLibresCamina", { title: L(node.title) }) }
+      : undefined;
   const voice = useVoice(line, { enabled: voicesOn, active: focused, lang });
+  // Manos libres: al llegar vibra (la escena empieza a hablar sola) y las líneas avanzan al acabar la voz.
+  const wasArrived = useRef(arrived);
+  useEffect(() => {
+    if (handsFree && arrived && !wasArrived.current) {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => undefined);
+    }
+    wasArrived.current = arrived;
+  }, [arrived, handsFree]);
+  useEffect(() => {
+    if (!handsFree || !arrived || !focused || !voice.finished) return;
+    if (step.kind !== "text" && step.kind !== "clue" && step.kind !== "continue") return;
+    const timer = setTimeout(
+      () => (step.kind === "continue" ? advance(route) : next()),
+      HANDS_FREE_PAUSE_MS,
+    );
+    return () => clearTimeout(timer);
+  }, [handsFree, arrived, focused, voice.finished, index]);
   // Mientras se espera la llegada, en escena solo está el guía.
   const cast = useMemo(
     () => stageCast(pack, route, node, arrived ? step : undefined),
@@ -220,18 +241,29 @@ function NodePlayer({
   );
 }
 
-/** Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. */
+/** Pausa entre líneas en manos libres (ms). */
+const HANDS_FREE_PAUSE_MS = 900;
+
+type Translate = ReturnType<typeof useI18n>["t"];
+
+/**
+ * Texto hablado del paso (lo que dice alguien), para la voz y el lip-sync. Con `handsFree` (su `t`)
+ * se lee todo lo que haría falta mirar: datos, pistas, la siguiente parada y las opciones.
+ */
 function spokenLine(
   step: SceneStep,
   key: string,
   L: (text: I18nText) => string,
   pack: CityPack,
+  handsFree?: Translate,
 ) {
   const voiceOf = (id?: string) =>
     pack.characters.find((c) => c.id === id)?.voice;
+  const list = (items: string[]) =>
+    items.map((item, i) => `${i + 1}. ${item}`).join(" ");
   switch (step.kind) {
     case "text":
-      return step.source === "dialogue" || step.source === "narration"
+      return step.source === "dialogue" || step.source === "narration" || handsFree
         ? {
             key,
             text: L(step.text),
@@ -240,17 +272,41 @@ function spokenLine(
             voice: voiceOf(step.characterId),
           }
         : undefined;
-    case "decision":
-      return step.intro
+    case "decision": {
+      const intro = step.intro ? L(step.intro.text) : handsFree?.("jugar.queCamino");
+      const text = handsFree
+        ? `${intro ?? ""} ${list(step.choices.map((c) => L(c.label)))}`.trim()
+        : intro;
+      return text
         ? {
             key,
-            text: L(step.intro.text),
-            speaker: step.intro.characterId,
-            voice: voiceOf(step.intro.characterId),
+            text,
+            speaker: step.intro?.characterId,
+            voice: voiceOf(step.intro?.characterId),
           }
         : undefined;
+    }
     case "continue":
-      return step.hint ? { key, text: L(step.hint) } : undefined;
+      return step.hint
+        ? { key, text: L(step.hint) }
+        : handsFree
+          ? { key, text: handsFree("jugar.siguienteParada", { title: L(step.nextTitle) }) }
+          : undefined;
+    case "clue":
+      return handsFree
+        ? { key, text: `${handsFree("jugar.pistaNueva")} ${L(step.text)}` }
+        : undefined;
+    case "challenge": {
+      if (!handsFree) return undefined;
+      const c = step.challenge;
+      const text =
+        c.type === "quiz"
+          ? `${L(c.question)} ${list(c.options.map(L))}`
+          : L(c.prompt);
+      return { key, text };
+    }
+    case "ending":
+      return handsFree ? { key, text: handsFree("jugar.casoResuelto") } : undefined;
     default:
       return undefined;
   }

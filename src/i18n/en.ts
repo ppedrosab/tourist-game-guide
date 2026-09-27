@@ -127,6 +127,7 @@ export const en: Strings = {
   },
   jugar: {
     proximaParada: "Next stop",
+    manosLibresCamina: "Walk to the next stop: {title}. I'll let you know when you get there.",
     caminaHasta: "Walk here: the scene will start when you arrive.",
     gpsBuscando: "Finding your location…",
     gpsSinPermiso: "I don't have permission to see your location. You can turn it on in your phone settings.",
@@ -216,6 +217,8 @@ export const en: Strings = {
     vocesTexto: "Recorded or your phone's voice",
     subtitulos: "Subtitles",
     subtitulosTexto: "Dialogue text",
+    manosLibres: "Hands-free",
+    manosLibresTexto: "With headphones and your phone in your pocket: everything is read aloud, moves on by itself and vibrates when you arrive. Decisions and challenges wait for your tap.",
     salir: "Save and exit",
     salirTexto: "Pick up where you left off",
   },

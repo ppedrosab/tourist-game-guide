@@ -48,6 +48,13 @@ type ProgressStore = {
   language: "auto" | "es" | "en";
   setLanguage: (language: "auto" | "es" | "en") => void;
   setSubtitles: (on: boolean) => void;
+  /**
+   * Manos libres (para ir con auriculares y el móvil en el bolsillo): las líneas avanzan solas al
+   * terminar la voz, se leen también datos, retos y la siguiente parada, y la llegada se avisa con
+   * vibración y voz. Decisiones y retos siguen esperando al jugador.
+   */
+  handsFree: boolean;
+  setHandsFree: (on: boolean) => void;
   /** Consentimiento para estadísticas anónimas de uso (desactivado por defecto). */
   analytics: boolean;
   setAnalytics: (on: boolean) => void;
@@ -131,6 +138,8 @@ export const useProgress = create<ProgressStore>()(
           emit({ name: "language_changed", language });
         },
         setSubtitles: (subtitles) => set({ subtitles }),
+        handsFree: false,
+        setHandsFree: (handsFree) => set({ handsFree }),
         start: (cityId, route) => {
           const replay = get().runs[route.id] !== undefined;
           const run = save(startRoute(cityId, route));
@@ -226,9 +235,11 @@ export const useProgress = create<ProgressStore>()(
         demoMode,
         voices,
         subtitles,
+        handsFree,
         language,
         analytics,
       }) => ({
+        handsFree,
         analytics,
         language,
         runs,

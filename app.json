@@ -9,7 +9,12 @@
     "backgroundColor": "#1B2A3A",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.tuempresa.cenachero"
+      "bundleIdentifier": "com.tuempresa.cenachero",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
     },
     "android": {
       "package": "com.tuempresa.cenachero"

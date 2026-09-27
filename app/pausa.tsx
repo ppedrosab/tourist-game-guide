@@ -47,6 +47,8 @@ export default function Pausa() {
   const setVoces = useProgress((s) => s.setVoices);
   const subtitulos = useProgress((s) => s.subtitles);
   const setSubtitulos = useProgress((s) => s.setSubtitles);
+  const manosLibres = useProgress((s) => s.handsFree);
+  const setManosLibres = useProgress((s) => s.setHandsFree);
   const current = useCurrentRun();
   const where = (() => {
     if (!current) return "";
@@ -73,13 +75,19 @@ export default function Pausa() {
           icon="volume"
           title={t("pausa.voces")}
           sub={t("pausa.vocesTexto")}
-          right={<Switch value={voces} onValueChange={setVoces} trackColor={{ true: colors.sea }} />}
+          right={<Switch value={voces} onValueChange={setVoces} trackColor={{ true: colors.sea }} accessibilityLabel={t("pausa.voces")} />}
         />
         <Row
           icon="subtitles"
           title={t("pausa.subtitulos")}
           sub={t("pausa.subtitulosTexto")}
-          right={<Switch value={subtitulos} onValueChange={setSubtitulos} trackColor={{ true: colors.sea }} />}
+          right={<Switch value={subtitulos} onValueChange={setSubtitulos} trackColor={{ true: colors.sea }} accessibilityLabel={t("pausa.subtitulos")} />}
+        />
+        <Row
+          icon="headphones"
+          title={t("pausa.manosLibres")}
+          sub={t("pausa.manosLibresTexto")}
+          right={<Switch value={manosLibres} onValueChange={setManosLibres} trackColor={{ true: colors.sea }} accessibilityLabel={t("pausa.manosLibres")} />}
         />
         <Row icon="exit" title={t("pausa.salir")} sub={t("pausa.salirTexto")} onPress={() => router.dismissTo("/")} />
       </Panel>

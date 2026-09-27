@@ -39,6 +39,8 @@ const PATHS = {
   /** Luna creciente: rutas de leyendas. */
   moon: "M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z",
   exit: "M14 4h5v16h-5M10 16l-4-4 4-4M6 12h10",
+  /** Auriculares: modo manos libres. */
+  headphones: "M4 15v-3a8 8 0 0 1 16 0v3M4 15h3v6H5a1 1 0 0 1-1-1zM20 15h-3v6h2a1 1 0 0 0 1-1z",
   /** Gota: fuente de agua potable. */
   water: "M12 3c-3 4.5-6 7.6-6 11a6 6 0 0 0 12 0c0-3.4-3-6.5-6-11z",
   /** Aseos. */

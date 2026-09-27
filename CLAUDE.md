@@ -243,6 +243,13 @@ cuestas, escaleras, si vale para silla de ruedas, agua y aviso de calor con la m
 con el centro de la ciudad) y la espera de llegada, chips por parada (`StopInfo`). Son estimaciones: revisar en
 la prueba de calle. En Overpass se usa primero el espejo de mail.ru (overpass-api.de falla desde el proxy).
 
+**Manos libres** (`handsFree`, en Pausa y Perfil): para ir con auriculares y el móvil en el bolsillo. Se lee
+todo en voz alta (datos, pistas, siguiente parada, pregunta y opciones de los retos y decisiones), las líneas
+avanzan solas al terminar la voz (`useVoice().finished`), la espera de llegada dice adónde ir y la llegada vibra
+(expo-haptics). Decisiones, retos y «antes y ahora» esperan al jugador. `useHandsFreeAudio` pone la sesión de
+audio en segundo plano (iOS: `UIBackgroundModes: audio` en app.json, junto a `location`). Pendiente de
+dispositivo: comprobar que la voz sintética sigue con la pantalla bloqueada.
+
 ## Arquitectura
 
 ```

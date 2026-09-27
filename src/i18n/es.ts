@@ -129,6 +129,7 @@ export const es = {
   },
   jugar: {
     proximaParada: "Próxima parada",
+    manosLibresCamina: "Camina hasta la siguiente parada: {title}. Te aviso al llegar.",
     caminaHasta: "Camina hasta aquí: la escena empezará cuando llegues.",
     gpsBuscando: "Buscando tu ubicación…",
     gpsSinPermiso: "No tengo permiso para ver tu ubicación. Puedes activarlo en los ajustes del móvil.",
@@ -218,6 +219,8 @@ export const es = {
     vocesTexto: "Grabadas o con la voz del móvil",
     subtitulos: "Subtítulos",
     subtitulosTexto: "Texto de los diálogos",
+    manosLibres: "Manos libres",
+    manosLibresTexto: "Con auriculares y el móvil en el bolsillo: todo se lee en voz alta, avanza solo y vibra al llegar. Decisiones y retos esperan a que los toques.",
     salir: "Salir y guardar",
     salirTexto: "Retoma donde lo dejaste",
   },

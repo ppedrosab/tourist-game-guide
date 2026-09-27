@@ -23,6 +23,8 @@ export default function Perfil() {
   const fieldTest = useFieldTest((s) => s.enabled);
   const setFieldTest = useFieldTest((s) => s.setEnabled);
   const setLanguage = useProgress((s) => s.setLanguage);
+  const handsFree = useProgress((s) => s.handsFree);
+  const setHandsFree = useProgress((s) => s.setHandsFree);
   const options: { value: LangSetting; label: string }[] = [{ value: "auto", label: t("perfil.idiomaAuto") }, ...LANGS];
 
   return (
@@ -56,6 +58,18 @@ export default function Perfil() {
             onValueChange={setDemoMode}
             trackColor={{ true: colors.sea }}
             accessibilityLabel={t("perfil.modoDemo")}
+          />
+        </View>
+        <View style={styles.row}>
+          <View style={{ flex: 1 }}>
+            <Text style={type.label}>{t("pausa.manosLibres")}</Text>
+            <Text style={type.caption}>{t("pausa.manosLibresTexto")}</Text>
+          </View>
+          <Switch
+            value={handsFree}
+            onValueChange={setHandsFree}
+            trackColor={{ true: colors.sea }}
+            accessibilityLabel={t("pausa.manosLibres")}
           />
         </View>
         <View style={styles.row}>

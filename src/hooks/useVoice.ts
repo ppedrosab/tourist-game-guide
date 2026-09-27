@@ -14,6 +14,8 @@ export type Voice = {
   hasAudio: boolean;
   /** Se oye algo: audio grabado o la voz sintética del móvil. */
   audible: boolean;
+  /** La línea ha terminado (de sonar o, sin voz, de su tiempo de lectura): manos libres avanza. */
+  finished: boolean;
   replay: () => void;
 };
 
@@ -72,6 +74,7 @@ export function useVoice(line: Line, { enabled, active, lang = "es" }: { enabled
 
   // Nueva línea: arrancar desde el principio.
   useEffect(() => {
+    setTts("idle");
     setElapsed(0);
     lastTick.current = null;
     if (hasAudio) {
@@ -133,13 +136,22 @@ export function useVoice(line: Line, { enabled, active, lang = "es" }: { enabled
 
   if (hasAudio) {
     const progress = status.duration > 0 ? Math.min(status.currentTime / status.duration, 1) : 0;
-    return { speaking: status.playing, progress, hasAudio, audible: true, replay };
+    const finished = status.didJustFinish || (!status.playing && status.duration > 0 && progress >= 0.99);
+    return { speaking: status.playing, progress, hasAudio, audible: true, finished, replay };
   }
   const simulated = duration > 0 ? elapsed / duration : 0;
   if (synthetic && tts !== "idle") {
     // Manda la voz del sistema: la boca se mueve mientras habla y la barra no acaba antes que ella.
     const speaking = tts === "speaking";
-    return { speaking, progress: speaking ? Math.min(simulated, 0.95) : 1, hasAudio, audible: true, replay };
+    return {
+      speaking,
+      progress: speaking ? Math.min(simulated, 0.95) : 1,
+      hasAudio,
+      audible: true,
+      finished: tts === "done",
+      replay,
+    };
   }
-  return { speaking: simulating, progress: simulated, hasAudio, audible: false, replay };
+  const finished = !!line && duration > 0 && elapsed >= duration;
+  return { speaking: simulating, progress: simulated, hasAudio, audible: false, finished, replay };
 }
