@@ -5,12 +5,14 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 180. Con aviso: 106.
+Paradas revisadas: 184. Con aviso: 109.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
-| Almería | Cable Inglés | `desierto-huerta` | 36.83050, -2.46550 | 36.83381, -2.45825 | 744 m | Cable Inglés |
+| Almería | Puerto | `cine-almeria` | 36.83490, -2.46400 | 36.83153, -2.47663 | 1186 m | Puerto de Almería |
 | Almería | Mercado Central | `desierto-huerta` | 36.84400, -2.46110 | 36.84030, -2.46263 | 433 m | Mercado Central |
+| Almería | Cable Inglés | `desierto-huerta` | 36.83310, -2.46280 | 36.83381, -2.45825 | 413 m | Cable Inglés |
+| Almería | Cerro de San Cristóbal | `cine-almeria` | 36.84272, -2.46828 | 36.84091, -2.47135 | 339 m | Conjunto Monumental la Alcazaba de Almería |
 | Almería | Refugios de la Guerra Civil | `atalaya` | 36.83980, -2.46310 | 36.84167, -2.46451 | 243 m | Refugios de la Guerra Civil Española de Almería |
 | Almería | Barrio de la Chanca | `desierto-huerta` | 36.83880, -2.47480 | 36.84001, -2.47582 | 162 m | Biblioteca Pública Municipal del Barrio de La Chanca |
 | Almería | Muralla de Jayrán | `atalaya` | 36.84300, -2.46920 | 36.84228, -2.47031 | 127 m | Muralla de Jayrán |
@@ -21,6 +23,7 @@ Paradas revisadas: 180. Con aviso: 106.
 | Almería | Paseo de Almería | `feria-virgen-mar` | 36.83980, -2.46310 | — | — | OSM no lo encuentra con ese nombre |
 | Almería | Santuario de la Virgen del Mar | `feria-virgen-mar` | 36.83910, -2.46490 | — | — | OSM no lo encuentra con ese nombre |
 | Almería | Barrio de La Chanca | `tesoro-alcazaba` | 36.83880, -2.47480 | — | — | OSM no lo encuentra con ese nombre |
+| Almería | Estación de ferrocarril | `cine-almeria` | 36.83464, -2.45614 | — | — | OSM no lo encuentra con ese nombre |
 | Cádiz | Oratorio de San Felipe Neri | `la-ciudad-que-no-cayo` | 36.53520, -6.29770 | 36.53286, -6.29980 | 321 m | Oratorio de San Felipe Neri |
 | Cádiz | Calle Ancha | `el-recetario-perdido` | 36.53520, -6.29480 | 36.53377, -6.29788 | 318 m | Calle Ancha |
 | Cádiz | Plaza de la Merced | `sobre-los-hombros` | 36.52690, -6.28800 | 36.52840, -6.29102 | 318 m | Plaza de la Merced |

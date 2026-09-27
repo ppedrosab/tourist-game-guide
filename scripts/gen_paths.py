@@ -79,6 +79,11 @@ def walk(cache, a, b):
         json.dump(cache, open(CACHE, "w"))
         time.sleep(1)  # uso respetuoso del servicio público
     hit = cache[key]
+    straight = meters([a["lng"], a["lat"]], [b["lng"], b["lat"]])
+    if hit["distance"] > 4 * straight + 1000:
+        # el enrutador a pie a veces se sube a un ferry o da un rodeo absurdo: mejor mover la parada
+        raise RuntimeError(f"camino absurdo ({hit['distance']:.0f} m para {straight:.0f} m en línea recta) en {key}: "
+                           "mueve la parada a una calle cercana")
     return hit["distance"], hit["coords"]
 
 
@@ -158,11 +163,13 @@ def patch_text(text, route_id, paths, choices):
     body = body[:i] + paths_block(paths, 6) + body[i:]
     for (_, target), (m, mins) in choices.items():
         for mt in re.finditer(rf'"targetNodeId": "{re.escape(target)}"', body):
+            # la decisión entera: de su "label" al cierre del objeto (distanceM puede ir antes o después)
             lab = body.rfind('"label"', 0, mt.start())
-            win = body[lab:mt.end()]
+            close = body.index("}", mt.end())
+            win = body[lab:close]
             new = re.sub(r'"distanceM": \d+', f'"distanceM": {m}', win)
             new = re.sub(r'"walkMin": \d+', f'"walkMin": {mins}', new)
-            body = body[:lab] + new + body[mt.end():]
+            body = body[:lab] + new + body[close:]
     return text[:start] + body + text[end:]
 
 

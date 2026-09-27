@@ -709,7 +709,7 @@
               "setFlags": [
                 "camino_juderia"
               ],
-              "distanceM": 350,
+              "distanceM": 410,
               "walkMin": 5
             },
             {
@@ -725,7 +725,7 @@
               "setFlags": [
                 "camino_rio"
               ],
-              "distanceM": 300,
+              "distanceM": 360,
               "walkMin": 5
             }
           ]
@@ -1870,8 +1870,8 @@
               "setFlags": [
                 "camino_marina"
               ],
-              "distanceM": 450,
-              "walkMin": 6
+              "distanceM": 410,
+              "walkMin": 5
             },
             {
               "label": {
@@ -1886,8 +1886,8 @@
               "setFlags": [
                 "camino_juderia"
               ],
-              "distanceM": 900,
-              "walkMin": 12
+              "distanceM": 760,
+              "walkMin": 10
             }
           ]
         },
@@ -3038,8 +3038,8 @@
               "setFlags": [
                 "camino_cruces"
               ],
-              "distanceM": 500,
-              "walkMin": 7
+              "distanceM": 660,
+              "walkMin": 9
             },
             {
               "label": {
@@ -3054,8 +3054,8 @@
               "setFlags": [
                 "camino_feria"
               ],
-              "distanceM": 900,
-              "walkMin": 12
+              "distanceM": 1420,
+              "walkMin": 19
             }
           ]
         },
@@ -4228,8 +4228,8 @@
               "setFlags": [
                 "camino_piedras"
               ],
-              "distanceM": 400,
-              "walkMin": 6
+              "distanceM": 720,
+              "walkMin": 10
             }
           ]
         },
@@ -5156,8 +5156,8 @@
               "setFlags": [
                 "camino_dinero"
               ],
-              "distanceM": 110,
-              "walkMin": 2
+              "distanceM": 230,
+              "walkMin": 3
             },
             {
               "label": {
@@ -5172,8 +5172,8 @@
               "setFlags": [
                 "camino_poder"
               ],
-              "distanceM": 450,
-              "walkMin": 6
+              "distanceM": 790,
+              "walkMin": 11
             }
           ]
         },

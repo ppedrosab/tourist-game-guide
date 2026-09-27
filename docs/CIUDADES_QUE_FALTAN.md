@@ -10,7 +10,7 @@ finales. Los personajes son personas reales de la ciudad o figuras propias de el
 | Málaga | 12 | Casa natal de Picasso, iglesia de Santiago, Museo Picasso, plaza de toros de La Malagueta, Museo de Málaga (La Aduana) | «¿Por qué Picasso no volvió a Málaga?» · hecha |
 | Jaén | 13 | Castillo de Santa Catalina, Museo de Jaén, iglesia de San Andrés, Real Monasterio de Santa Clara | «¿Quién ganó el castillo de Santa Catalina?» (Alhamar, Fernando III, Ibn Malik) · hecha |
 | Huelva | 13 | Santuario de la Cinta y el Conquero, Parque Moret, Barrio Reina Victoria, monumento a Colón | «¿Cumplió Colón su promesa?» (Díaz Hierro, Colón, Whitney) · hecha |
-| Almería | 14 | Cerro de San Cristóbal, Hospital Real, Casa del Cine (Lennon, 1966), estación de tren, templo de San Juan (mezquita) | «¿Por qué el cine se enamoró de Almería?» |
+| Almería | 14 | Cerro de San Cristóbal, Hospital Real, Casa del Cine (Lennon, 1966), estación de tren, templo de San Juan (mezquita) | «¿Por qué el cine se enamoró de Almería?» (una extra, Leone, Lennon) · hecha |
 | Granada | 17 | Sacromonte y sus cuevas, abadía del Sacromonte, Carrera del Darro, Realejo | «¿Quién escribió los libros de plomo?» (Pedro de Castro, Castillo, Luna) · hecha |
 | Sevilla | 20 | Hospital de la Caridad, plaza de toros de la Maestranza, Museo de Bellas Artes, casa de Murillo, Setas | «¿Existió Don Juan?» (Mañara, Murillo, Valdés Leal) · hecha |
 | Córdoba | 21 | Estatuas de Averroes y Maimónides, Museo Arqueológico (teatro romano), Cristo de los Faroles, mausoleo romano | «¿Por qué se fueron los sabios de Córdoba?» (Séneca, Averroes, Maimónides) · hecha |

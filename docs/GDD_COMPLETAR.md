@@ -124,3 +124,26 @@ personajes en `andalucia_sprites.py`.
 - La coordenada de la Merced: la del pack de historia (37.2638, −6.9478) no coincide con la de Nominatim (37.2624, −6.9524).
 
 **Fuentes:** [Santuario de la Cinta](https://es.wikipedia.org/wiki/Santuario_de_Nuestra_Se%C3%B1ora_de_la_Cinta), [Parque Moret](https://es.wikipedia.org/wiki/Parque_Moret), [Monumento a Colón (Huelva)](https://es.wikipedia.org/wiki/Monumento_a_Col%C3%B3n_(Huelva)), [Primer viaje de Colón](https://es.wikipedia.org/wiki/Primer_viaje_de_Col%C3%B3n), [Diego Díaz Hierro](https://es.wikipedia.org/wiki/Diego_D%C3%ADaz_Hierro).
+
+## Almería · «¿Por qué el cine se enamoró de Almería?» (`cine-almeria`)
+
+- **Personajes:**
+  - `extra` (guía): una extra de cine almeriense. Es un tipo característico de la ciudad: los extras, jinetes y especialistas de los rodajes de los años sesenta.
+  - `leone`: Sergio Leone, 1929-1989.
+  - `lennon`: John Lennon, 1940-1980. En 1966 rodó en Almería «Cómo gané la guerra».
+- **Sospechosos:** el precio, la luz y los paisajes, o la gente.
+- **Veredicto:** la luz de casi todo el año, paisajes que valen por medio mundo a poca distancia (el desierto de Tabernas) y la gente que trabajó en los rodajes. Que fuera barato ayudó, pero no lo explica todo.
+- **Caminos:** El Oeste (estación de 1895, la Mesa Verde de «¡Agáchate, maldito!») / Los Beatles (Círculo Mercantil y Teatro Cervantes).
+- **Paradas:** cerro de San Cristóbal → Alcazaba → estación o Teatro Cervantes → puerto (parque Nicolás Salmerón) → Cable Inglés.
+- **Arreglo de paso:** el Cable Inglés estaba mal situado, en el agua del puerto. El enrutador llegaba en ferry (2977 km). Ahora está en su arranque en tierra (36.8331, −2.4628), también en las rutas gastronómica y de fiestas.
+
+**Datos a verificar**
+- Derechos de imagen: consultar si se puede dibujar a Lennon y a Leone en una app comercial. Si no, dejarlos solo en los datos y cambiar el reparto.
+- Qué escenas de «Cómo gané la guerra» se rodaron en el Círculo Mercantil.
+- La anécdota del profesor de inglés y las letras impresas.
+- Que la Casa del Cine sea la finca donde se alojó Lennon.
+- El año de la lluvia en el rodaje de «Juego de tronos» (sexta temporada, rodada en 2015).
+- La escena de «El reportero» en el puerto.
+- No se dibuja la estatua del Sagrado Corazón del cerro.
+
+**Fuentes:** [Escenarios almerienses de cine (Wikiviajes)](https://es.wikivoyage.org/wiki/Escenarios_almerienses_de_cine), [Películas rodadas en Almería](https://es.wikipedia.org/wiki/Anexo:Pel%C3%ADculas_rodadas_en_Almer%C3%ADa), [Strawberry Fields Forever](https://es.wikipedia.org/wiki/Strawberry_Fields_Forever), [Estación de Almería](https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Almer%C3%ADa).

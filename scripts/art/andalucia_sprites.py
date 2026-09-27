@@ -237,6 +237,15 @@ CHARACTERS = {
                   accent=GOLD, second="#4A1E24", right="compass"),
     "whitney": dict(skin="clara", hair=("bun", "#8A5A3A"), outfit="dress", main="#2F6F73", accent=PAPER, second="#1F4F52",
                     apron=PAPER, right="hammer"),
+    "extra": dict(skin="morena", hair=("braid", "#2A1E1A"), hat_=("straw", "#C9A05E"), outfit="dress", main=CLAY, accent=GOLD,
+                  second="#7A2E1A", apron=PAPER, left="scroll", raise_right=True),
+    "leone": dict(skin="clara", hair=("short", "#8A8A8A"), beard_=("full", "#8A8A8A"), outfit="jacket", main="#3A3A48", accent=PAPER,
+                  second="#2B2A33", neck=PAPER, left="book"),
+    "lennon": dict(skin="clara", eyes="#6A5A3A", hair=("short", "#7A5A3A"), outfit="jacket", main="#4F6B3A", accent=GOLD,
+                   second="#3A3A48", neck=PAPER, right="quill",
+                   extra=('<circle cx="84" cy="80" r="11" fill="none" stroke="#1B2A3A" stroke-width="2.4"/>'
+                          '<circle cx="116" cy="80" r="11" fill="none" stroke="#1B2A3A" stroke-width="2.4"/>'
+                          '<path d="M95 79Q100 75 105 79" fill="none" stroke="#1B2A3A" stroke-width="2.2"/>')),
 }
 
 if __name__ == "__main__":

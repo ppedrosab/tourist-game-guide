@@ -718,8 +718,8 @@
               "setFlags": [
                 "camino_puerto"
               ],
-              "distanceM": 450,
-              "walkMin": 6
+              "distanceM": 620,
+              "walkMin": 8
             },
             {
               "label": {
@@ -734,8 +734,8 @@
               "setFlags": [
                 "camino_barrio"
               ],
-              "distanceM": 700,
-              "walkMin": 9
+              "distanceM": 1100,
+              "walkMin": 15
             }
           ]
         },
@@ -1882,8 +1882,8 @@
               "setFlags": [
                 "camino_ria"
               ],
-              "distanceM": 800,
-              "walkMin": 10
+              "distanceM": 1370,
+              "walkMin": 18
             },
             {
               "label": {
@@ -1898,8 +1898,8 @@
               "setFlags": [
                 "camino_centro"
               ],
-              "distanceM": 700,
-              "walkMin": 9
+              "distanceM": 1110,
+              "walkMin": 15
             }
           ]
         },
@@ -3057,8 +3057,8 @@
               "setFlags": [
                 "camino_ria"
               ],
-              "distanceM": 900,
-              "walkMin": 12
+              "distanceM": 1320,
+              "walkMin": 18
             },
             {
               "label": {
@@ -3073,8 +3073,8 @@
               "setFlags": [
                 "camino_ciudad"
               ],
-              "distanceM": 150,
-              "walkMin": 2
+              "distanceM": 330,
+              "walkMin": 4
             }
           ]
         },
@@ -4223,8 +4223,8 @@
               "setFlags": [
                 "camino_ria"
               ],
-              "distanceM": 1200,
-              "walkMin": 15
+              "distanceM": 1790,
+              "walkMin": 24
             },
             {
               "label": {
@@ -4239,8 +4239,8 @@
               "setFlags": [
                 "camino_cabezos"
               ],
-              "distanceM": 700,
-              "walkMin": 10
+              "distanceM": 1100,
+              "walkMin": 15
             }
           ]
         },
@@ -5172,8 +5172,8 @@
               "setFlags": [
                 "camino_dinero"
               ],
-              "distanceM": 540,
-              "walkMin": 8
+              "distanceM": 550,
+              "walkMin": 7
             },
             {
               "label": {
@@ -5188,8 +5188,8 @@
               "setFlags": [
                 "camino_poder"
               ],
-              "distanceM": 1000,
-              "walkMin": 14
+              "distanceM": 1110,
+              "walkMin": 15
             }
           ]
         },

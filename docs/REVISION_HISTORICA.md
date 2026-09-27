@@ -34,6 +34,8 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Almotacín | persona real | 1037-1091 | [Wikipedia: Almotacín](https://es.wikipedia.org/wiki/Almotac%C3%ADn) |
 | Abderramán III | persona real | 891-961 | [Wikipedia: Abderramán III](https://es.wikipedia.org/wiki/Abderram%C3%A1n_III) · [Wikipedia: Alcazaba y Murallas del Cerro de San Cristóbal](https://es.wikipedia.org/wiki/Alcazaba_y_Murallas_del_Cerro_de_San_Crist%C3%B3bal) · [Alberto Cerezuela, «Leyendas de la Alcazaba de Almería»](https://www.albertocerezuela.com/leyendas-de-la-alcazaba-de-almeria/) |
 | Paco el Piloto | persona real | 1922-1973 | [Telecinco, «Paco El Piloto, el almeriense que levantó el primer invernadero de España»](https://www.telecinco.es/noticias/andalucia/20230725/paco-piloto-primer-invernadero-espana-almeria-60-anos_18_010101126.html) · [Wikipedia: Agricultura intensiva de la provincia de Almería](https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa) |
+| Sergio Leone | persona real | 1929-1989 | [Wikipedia: Sergio Leone](https://es.wikipedia.org/wiki/Sergio_Leone) |
+| John Lennon | persona real | 1940-1980 | [Wikipedia: John Lennon](https://es.wikipedia.org/wiki/John_Lennon) · [Wikipedia: Strawberry Fields Forever](https://es.wikipedia.org/wiki/Strawberry_Fields_Forever) |
 
 ### «¿Qué significa Almería?»: lo que afirma la ruta
 
@@ -76,6 +78,15 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Barrio de La Chanca**: La Chanca es un barrio de casas de colores y cuevas, a los pies de la Alcazaba. Su nombre viene de las chancas, los lugares donde se salaba el pescado.
 - [ ] **Catedral de Almería**: La catedral de Almería, del siglo XVI, parece una fortaleza: tiene torres y almenas porque la costa sufría ataques de piratas.
 - [ ] **Alcazaba** (955): La Alcazaba de Almería, fundada en el siglo X, es una de las mayores fortalezas andalusíes que se conservan. Tiene tres recintos a lo largo del cerro.
+
+### «¿Por qué el cine se enamoró de Almería?»: lo que afirma la ruta
+
+- [ ] **Cerro de San Cristóbal**: En este cerro, con los restos de la muralla, se rodaron escenas de «Cleopatra» (1963), «Patton» (1970), «Conan el Bárbaro» (1982) y «Wonder Woman 1984» (2020).
+- [ ] **Alcazaba**: La Alcazaba ha salido en «Cleopatra», «El viento y el león» o «Conan». En 2015 fue el reino de Dorne en «Juego de tronos»: el día del rodaje llovió y tuvieron que secar el cielo en el ordenador.
+- [ ] **Estación de ferrocarril** (1895): La estación de Almería, de hierro, cristal y ladrillo, se inauguró el 25 de julio de 1895. Leone la convirtió en la ciudad mexicana de Mesa Verde en «¡Agáchate, maldito!» (1971).
+- [ ] **Teatro Cervantes** (1966): En este edificio del Círculo Mercantil y el Teatro Cervantes se rodaron escenas de «Cómo gané la guerra». En Almería, Lennon empezó a escribir «Strawberry Fields Forever».
+- [ ] **Puerto**: Por el puerto y el paseo de Almería corrió Jack Nicholson en una persecución de «El reportero» (1975), de Michelangelo Antonioni.
+- [ ] **Cable Inglés**: Desde los años sesenta se han rodado en la provincia de Almería cientos de películas, series y anuncios. La ciudad lo recuerda en la Casa del Cine, en la finca donde se alojó Lennon.
 
 ## Cádiz
 

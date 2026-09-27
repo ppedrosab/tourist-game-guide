@@ -219,7 +219,8 @@ los sabios de Córdoba?» (Séneca, Averroes y Maimónides) y Sevilla «¿Existi
 Murillo y Valdés Leal) y Granada «¿Quién escribió los libros de plomo?» (el arzobispo Pedro de Castro y los
 traductores moriscos Alonso del Castillo y Miguel de Luna) y Jaén «¿Quién ganó el castillo de Santa Catalina?»
 (Alhamar, Fernando III e Ibn Malik) y Huelva «¿Cumplió Colón su promesa?» (el cronista Diego Díaz Hierro,
-Colón y la escultora Gertrude Whitney). Arte en
+Colón y la escultora Gertrude Whitney) y Almería «¿Por qué el cine se enamoró de Almería?» (una extra de cine,
+Sergio Leone y John Lennon). Con ellas las ocho ciudades quedan completas. Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
 ## Arquitectura
@@ -318,7 +319,8 @@ Tareas de la fase 2:
 - **4 · Geolocalización** (hecha, ver arriba). Pendiente: probar en la calle con build de desarrollo.
 - **5 · Mapa** (hecha, ver arriba). Los tramos van por las calles: `npm run gen:paths`
   (`scripts/gen_paths.py`, enrutador a pie de OpenStreetMap, caché en `scripts/.cache/`) guarda
-  `route.paths["desde->hasta"]` y corrige `distanceM`/`walkMin` de las decisiones. Regenerar al mover
+  `route.paths["desde->hasta"]` y corrige `distanceM`/`walkMin` de las decisiones. Si da un rodeo absurdo (p. ej. un
+  ferry), falla: mover la parada a tierra, a una calle cercana. Regenerar al mover
   una parada o añadir una ruta; el test exige trazado en cada tramo.
 - **6 · Pulido** (hecha, ver arriba). Siguiente: salir a la calle con `docs/PRUEBAS_CALLE.md`.
 

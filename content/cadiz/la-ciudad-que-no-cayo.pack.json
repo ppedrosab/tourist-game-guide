@@ -5815,8 +5815,8 @@
               "setFlags": [
                 "camino_mito"
               ],
-              "distanceM": 600,
-              "walkMin": 8
+              "distanceM": 710,
+              "walkMin": 10
             },
             {
               "label": {
@@ -5831,8 +5831,8 @@
               "setFlags": [
                 "camino_tierra"
               ],
-              "distanceM": 350,
-              "walkMin": 5
+              "distanceM": 500,
+              "walkMin": 7
             }
           ]
         },
@@ -6760,8 +6760,8 @@
               "setFlags": [
                 "camino_dinero"
               ],
-              "distanceM": 150,
-              "walkMin": 2
+              "distanceM": 260,
+              "walkMin": 3
             },
             {
               "label": {
@@ -6776,8 +6776,8 @@
               "setFlags": [
                 "camino_fiesta"
               ],
-              "distanceM": 150,
-              "walkMin": 2
+              "distanceM": 190,
+              "walkMin": 3
             }
           ]
         },

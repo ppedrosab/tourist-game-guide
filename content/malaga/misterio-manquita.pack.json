@@ -556,8 +556,8 @@
               "setFlags": [
                 "camino_mar"
               ],
-              "distanceM": 700,
-              "walkMin": 9
+              "distanceM": 840,
+              "walkMin": 11
             },
             {
               "label": {
@@ -572,7 +572,7 @@
               "setFlags": [
                 "camino_centro"
               ],
-              "distanceM": 150,
+              "distanceM": 160,
               "walkMin": 2
             }
           ]
@@ -1708,8 +1708,8 @@
               "setFlags": [
                 "camino_mar"
               ],
-              "distanceM": 700,
-              "walkMin": 9
+              "distanceM": 840,
+              "walkMin": 11
             },
             {
               "label": {
@@ -1724,8 +1724,8 @@
               "setFlags": [
                 "camino_alcazaba"
               ],
-              "distanceM": 600,
-              "walkMin": 8
+              "distanceM": 760,
+              "walkMin": 10
             }
           ]
         },
@@ -2864,7 +2864,7 @@
               "setFlags": [
                 "camino_corregidor"
               ],
-              "distanceM": 300,
+              "distanceM": 330,
               "walkMin": 4
             },
             {
@@ -2880,8 +2880,8 @@
               "setFlags": [
                 "camino_sancha"
               ],
-              "distanceM": 600,
-              "walkMin": 8
+              "distanceM": 540,
+              "walkMin": 7
             }
           ]
         },
@@ -3821,7 +3821,7 @@
               "setFlags": [
                 "camino_toros"
               ],
-              "distanceM": 700,
+              "distanceM": 760,
               "walkMin": 10
             }
           ]

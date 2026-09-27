@@ -203,6 +203,44 @@ hue = {
                       f'<text x="60" y="94" font-family="Georgia, serif" font-weight="700" font-size="24" text-anchor="middle" fill="{GOLD}" stroke="{INK}" stroke-width="1">?</text>'),
 }
 
+import math
+
+
+def film_strip():
+    return (f'<path d="M20 50L86 30L92 48L26 68Z" fill="{INK}"/>'
+            + "".join(f'<path d="M{f(30 + k * 12)} {f(62 - k * 3.6)}L{f(38 + k * 12)} {f(60 - k * 3.6)}L{f(35 + k * 12)} {f(50 - k * 3.6)}L{f(27 + k * 12)} {f(52 - k * 3.6)}Z" fill="{GOLD}"/>' for k in range(5)))
+
+
+def f(v):
+    return f"{v:.1f}".rstrip("0").rstrip(".")
+
+alm = {
+    "claqueta": BG + (f'<path d="M26 56H94V100H26Z" fill="{INK}" stroke="{INK}" stroke-width="2"/>'
+                      f'<path d="M26 40L90 26L94 40L30 54Z" fill="{PAPER}" stroke="{INK}" stroke-width="2"/>'
+                      + "".join(f'<path d="M{34 + k * 14} {52 - k * 3}L{42 + k * 14} {36 - k * 3}" stroke="{INK}" stroke-width="5"/>' for k in range(4))
+                      + "".join(f'<path d="M32 {68 + k * 12}H88" stroke="{PAPER}" stroke-width="1.6"/>' for k in range(3))
+                      + f'<text x="60" y="80" font-family="Georgia, serif" font-weight="700" font-size="9" text-anchor="middle" fill="{GOLD}">ALMERÍA</text>'),
+    "sombrero": SKY + (f'<path d="M14 80Q60 96 106 80Q96 72 84 74Q80 44 60 44Q40 44 36 74Q24 72 14 80Z" fill="#B8864E" stroke="{INK}" stroke-width="2.4"/>'
+                       f'<path d="M37 70Q60 78 83 70" fill="none" stroke="{INK}" stroke-width="5"/>'
+                       f'<path d="M50 50Q60 58 70 50" fill="none" stroke="#8A6243" stroke-width="2"/>'),
+    "locomotora": SKY + (f'<path d="M24 60H70V88H24Z" fill="#3A3A48" stroke="{INK}" stroke-width="2.2"/><path d="M70 50H96V88H70Z" fill="#7A2E1A" stroke="{INK}" stroke-width="2.2"/>'
+                         f'<path d="M76 56H90V68H76Z" fill="#F2D48F" stroke="{INK}" stroke-width="1.4"/><path d="M30 60V40H42V60Z" fill="#3A3A48" stroke="{INK}" stroke-width="2"/>'
+                         f'<path d="M26 40H46" stroke="{INK}" stroke-width="4"/><path d="M18 88L24 76" stroke="{INK}" stroke-width="3"/>'
+                         + "".join(f'<circle cx="{x}" cy="92" r="8" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>' for x in (36, 60, 84))
+                         + f'<path d="M36 36Q30 26 40 20Q52 16 50 8" fill="none" stroke="#DDE3E8" stroke-width="6"/>'),
+    "gafas": BG + (f'<circle cx="40" cy="64" r="17" fill="#CFE3E8" fill-opacity=".6" stroke="{INK}" stroke-width="4"/>'
+                   f'<circle cx="80" cy="64" r="17" fill="#CFE3E8" fill-opacity=".6" stroke="{INK}" stroke-width="4"/>'
+                   f'<path d="M57 62Q60 56 63 62" fill="none" stroke="{INK}" stroke-width="3.4"/><path d="M23 60L12 54M97 60L108 54" stroke="{INK}" stroke-width="3"/>'
+                   f'<path d="M32 56Q36 52 42 54" fill="none" stroke="{WHITE}" stroke-width="2.4"/><path d="M72 56Q76 52 82 54" fill="none" stroke="{WHITE}" stroke-width="2.4"/>'
+                   + "".join(f'<circle cx="{x}" cy="{y}" r="4" fill="{RED}"/><path d="M{x} {y - 4}V{y - 8}" stroke="{LEAF}" stroke-width="2"/>' for x, y in [(44, 96), (60, 100), (76, 96)])),
+    "bobina": BG + (f'<circle cx="60" cy="64" r="34" fill="#5E6B78" stroke="{INK}" stroke-width="2.4"/><circle cx="60" cy="64" r="8" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
+                    + "".join(f'<circle cx="{f(60 + 20 * math.cos(math.radians(a)))}" cy="{f(64 + 20 * math.sin(math.radians(a)))}" r="8" fill="{PAPER}" stroke="{INK}" stroke-width="1.6"/>' for a in range(-90, 270, 72))
+                    + f'<path d="M92 76Q104 90 96 104H70" fill="none" stroke="{INK}" stroke-width="6"/>'),
+    "insignia": SKY + (f'<path d="M-10 84Q30 70 60 80T130 80V130H-10Z" fill="#E1B97A"/>'
+                       f'<path d="M84 84V58M84 58Q76 54 72 60M84 58Q92 54 96 60M84 66H76V60M84 70H92V64" fill="none" stroke="#5E7A4E" stroke-width="4"/>'
+                       + film_strip() + sparkle(28, 30, 5, GOLD)),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
@@ -218,6 +256,8 @@ ORDER = {
                             ("llave", "La llave de la ciudad"), ("sardina", "La sardina de Santa Catalina"), ("insignia", "¿Quién ganó el castillo de Santa Catalina?")]),
     "huelva_cinta": (hue, [("cronica", "La crónica de Díaz Hierro"), ("carabela", "La carabela de vuelta"), ("espatula", "La espátula de la marisma"),
                            ("tumulo", "La vasija del túmulo"), ("vela", "La vela de la promesa"), ("insignia", "¿Cumplió Colón su promesa?")]),
+    "almeria_cine": (alm, [("claqueta", "La claqueta"), ("sombrero", "El sombrero de vaquero"), ("locomotora", "La locomotora de Mesa Verde"),
+                           ("gafas", "Las gafas redondas"), ("bobina", "La bobina de película"), ("insignia", "¿Por qué el cine se enamoró de Almería?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

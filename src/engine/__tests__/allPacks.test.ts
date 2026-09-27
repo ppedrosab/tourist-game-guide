@@ -171,6 +171,12 @@ describe("mapa por calles", () => {
       // el enrutador engancha la parada a la calle más cercana
       expect(distanceM(first, at[s.from])).toBeLessThan(120);
       expect(distanceM(last, at[s.to])).toBeLessThan(120);
+      // sin rodeos absurdos (el enrutador a pie a veces se sube a un ferry)
+      let length = 0;
+      for (let i = 1; i < path!.length; i++) {
+        length += distanceM({ lng: path![i - 1][0], lat: path![i - 1][1] }, { lng: path![i][0], lat: path![i][1] });
+      }
+      expect([s.id, length < 4 * distanceM(at[s.from], at[s.to]) + 1000]).toEqual([s.id, true]);
     }
   });
 });

@@ -1920,7 +1920,7 @@
               "setFlags": [
                 "camino_zoco"
               ],
-              "distanceM": 150,
+              "distanceM": 140,
               "walkMin": 2
             },
             {
@@ -1936,8 +1936,8 @@
               "setFlags": [
                 "camino_albaicin"
               ],
-              "distanceM": 900,
-              "walkMin": 13
+              "distanceM": 830,
+              "walkMin": 11
             }
           ]
         },
@@ -3083,7 +3083,7 @@
               "setFlags": [
                 "camino_catedral"
               ],
-              "distanceM": 250,
+              "distanceM": 230,
               "walkMin": 3
             },
             {
@@ -3099,8 +3099,8 @@
               "setFlags": [
                 "camino_darro"
               ],
-              "distanceM": 600,
-              "walkMin": 8
+              "distanceM": 500,
+              "walkMin": 7
             }
           ]
         },
@@ -4246,7 +4246,7 @@
               "setFlags": [
                 "camino_rio"
               ],
-              "distanceM": 350,
+              "distanceM": 370,
               "walkMin": 5
             },
             {
@@ -4262,8 +4262,8 @@
               "setFlags": [
                 "camino_albaicin"
               ],
-              "distanceM": 600,
-              "walkMin": 12
+              "distanceM": 800,
+              "walkMin": 11
             }
           ]
         },
@@ -5188,7 +5188,7 @@
               "setFlags": [
                 "camino_dinero"
               ],
-              "distanceM": 250,
+              "distanceM": 300,
               "walkMin": 4
             },
             {
@@ -5204,7 +5204,7 @@
               "setFlags": [
                 "camino_poder"
               ],
-              "distanceM": 550,
+              "distanceM": 580,
               "walkMin": 8
             }
           ]

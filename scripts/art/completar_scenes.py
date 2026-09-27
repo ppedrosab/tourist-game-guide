@@ -8,6 +8,7 @@ Sevilla: palacio de Mañara, plaza de los Refinadores (Don Juan), la Maestranza,
 Granada: Carrera del Darro, San Juan de los Reyes (alminar), cuevas y abadía del Sacromonte.
 Jaén: Museo de Jaén, monasterio de Santa Clara, San Andrés (Judería), castillo de Santa Catalina.
 Huelva: instituto La Rábida, miradores del Conquero, parque Moret, santuario de la Cinta.
+Almería: cerro de San Cristóbal, estación de ferrocarril, Círculo Mercantil y Teatro Cervantes.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -20,6 +21,7 @@ from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, L
 from granada_scenes import horseshoe, cypress, alhambra_hill, sierra, albaicin_houses, CAL, ROJA, TEJA
 from jaen_scenes import far_jaen, olive_hills, JSTONE, ochre_house
 from huelva_scenes import marsh, boat, IRON, IROND, BRICKS
+from almeria_scenes import alcazaba_hill, dry_hills, cube_houses, OCHRE as AOCHRE, HILL
 from sevilla_scenes import orange_tree
 
 RED = "#D8412F"
@@ -579,6 +581,74 @@ def huelva_cinta():
     return doc(p, "Santuario de la Cinta", [sky(p, sun, [(90, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420)])
 
 
+def film_camera(x, base, s=1.0):
+    """Cámara de cine de los años sesenta sobre trípode, con dos bobinas."""
+    k = lambda v: f(v * s)
+    return (f'<path d="M{x} {f(base - 60 * s)}L{f(x - 26 * s)} {base}M{x} {f(base - 60 * s)}L{f(x + 26 * s)} {base}M{x} {f(base - 60 * s)}V{base}" stroke="{INK}" stroke-width="{k(3)}"/>'
+            f'<path d="M{f(x - 24 * s)} {f(base - 60 * s)}H{f(x + 20 * s)}V{f(base - 86 * s)}H{f(x - 24 * s)}Z" fill="#3A3A48" stroke="{INK}" stroke-width="1.6"/>'
+            f'<path d="M{f(x + 20 * s)} {f(base - 80 * s)}L{f(x + 34 * s)} {f(base - 84 * s)}V{f(base - 62 * s)}L{f(x + 20 * s)} {f(base - 66 * s)}Z" fill="#5E6B78" stroke="{INK}" stroke-width="1.4"/>'
+            + "".join(f'<circle cx="{f(x + dx * s)}" cy="{f(base - 100 * s)}" r="{k(13)}" fill="#3A3A48" stroke="{INK}" stroke-width="1.6"/><circle cx="{f(x + dx * s)}" cy="{f(base - 100 * s)}" r="{k(4)}" fill="{GOLD}"/>' for dx in (-14, 12)))
+
+
+def almeria_sancristobal():
+    p = "asc"; sun = (300, 120)
+    far = (f'<g id="far">{dry_hills(250)}<rect x="-10" y="250" width="{W + 20}" height="60" fill="#8FB9C4"/>'
+           + alcazaba_hill(330, 120, soft=True, s=.8) + "</g>")
+    c, cd, cl = AOCHRE
+    # cerro con los restos de torres de la muralla, y la ciudad blanca abajo
+    hill = (f'<path d="M-10 420V330Q100 290 210 300Q300 310 400 350V420Z" fill="{HILL}" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<path d="M{x} {y}V{y - h}H{x + 30}V{y}Z" fill="{cl}" stroke="{INK}" stroke-width="1.6"/>' + battlements(x, x + 30, y - h, cl, 8)
+                      for x, y, h in [(30, 330, 60), (150, 306, 80), (300, 330, 54)])
+            + f'<path d="M60 316L150 300M180 300L300 320" stroke="{INK}" stroke-width="12"/><path d="M60 316L150 300M180 300L300 320" stroke="{c}" stroke-width="8"/>'
+            + cube_houses(410, seed=2, n=8))
+    mid = f'<g id="mid">{hill}</g>'
+    near = (f'<g id="near"><rect x="-10" y="420" width="{W + 20}" height="150" fill="#D9C39E"/>'
+            f'<path d="M-10 420H400V430H-10Z" fill="#C5AF88" stroke="{INK}" stroke-width="1.4"/>'
+            + film_camera(300, 520, 1.2) + person(120, 470, 1, "#3A3A48") + person(170, 474, .95, CLAY, dress=True) + "</g>")
+    return doc(p, "Cerro de San Cristóbal", [sky(p, sun, [(80, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420, .25)])
+
+
+def almeria_estacion():
+    p = "aes"; sun = (80, 110)
+    far = f'<g id="far">{dry_hills(270)}</g>'
+    c, cd, cl = BRICKS
+    # estación de 1895: pabellón central de hierro y cristal entre dos cuerpos de ladrillo
+    front = ("".join(f'<path d="M{x} 390V230H{x + 110}V390Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
+                     + f'<path d="M{x - 4} 230H{x + 114}V220H{x - 4}Z" fill="{cl}" stroke="{INK}" stroke-width="1.4"/>'
+                     + "".join(window(x + 16 + k * 44, 260, 22, 50, shutters=False, arch=True, sw=1.1) for k in range(2))
+                     + "".join(f'<path d="M{x} {y}H{x + 110}" stroke="#E8C88A" stroke-width="3"/>' for y in (250, 330))
+                     for x in (-10, 290))
+             + f'<path d="M100 390V200Q195 130 290 200V390Z" fill="#9FC3C4" stroke="{INK}" stroke-width="2"/>'
+             + "".join(f'<path d="M{x} 390V{f(200 - 35 * (1 - ((x - 195) / 95) ** 2))}" stroke="{IRON}" stroke-width="3"/>' for x in range(112, 290, 22))
+             + "".join(f'<path d="M100 {y}H290" stroke="{IRON}" stroke-width="2"/>' for y in (240, 290, 340))
+             + f'<path d="M100 200Q195 130 290 200" fill="none" stroke="{IROND}" stroke-width="8"/>'
+             + f'<circle cx="195" cy="178" r="16" fill="{PAPER}" stroke="{INK}" stroke-width="2"/><path d="M195 178V168M195 178H203" stroke="{INK}" stroke-width="2"/>'
+             + f'<path d="M168 390V330Q195 306 222 330V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>')
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + palm(40, 520, 200, 6) + palm(356, 520, 200, -6)
+            + person(140, 452, 1, "#7A5A3A") + person(250, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Estación de Almería", [sky(p, sun, [(300, 70, .8)], [(220, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
+def almeria_cervantes():
+    p = "acv"; sun = (300, 110)
+    far = f'<g id="far">{far_city(250, 71, towers=2)}</g>'
+    # Círculo Mercantil y Teatro Cervantes (1921): fachada ecléctica con torreón y balcones
+    front = (f'<path d="M10 390V180H380V390Z" fill="#F0DDC0" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M4 180H386V166H4Z" fill="#E3C49A" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M150 180V120H240V180Z" fill="#F0DDC0" stroke="{INK}" stroke-width="1.8"/><path d="M144 122Q195 90 246 122Z" fill="#9FC3C4" stroke="{INK}" stroke-width="1.6"/>'
+             + window(180, 134, 30, 36, shutters=False, arch=True, sw=1.1)
+             + "".join(window(x, 200, 22, 44, shutters=False, balcony=True, sw=1.1) for x in (30, 80, 130, 238, 288, 338))
+             + "".join(window(x, 270, 22, 44, shutters=False, balcony=True, sw=1.1) for x in (30, 80, 130, 238, 288, 338))
+             + f'<path d="M170 390V330Q195 306 220 330V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M150 322H240V310H150Z" fill="{CLAY}" stroke="{INK}" stroke-width="1.2"/>'
+             f'<text x="195" y="320" font-family="Georgia, serif" font-weight="700" font-size="9" text-anchor="middle" fill="{PAPER}">TEATRO</text>')
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + tree(30, 500, 34) + film_camera(330, 520, 1.1)
+            + person(140, 452, 1, "#4F6B3A") + person(200, 456, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Teatro Cervantes", [sky(p, sun, [(90, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
           "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
@@ -588,7 +658,8 @@ SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "mal
           "granada_cuevas": granada_cuevas, "granada_abadia": granada_abadia, "jaen_museo": jaen_museo,
           "jaen_santaclara": jaen_santaclara, "jaen_sanandres": jaen_sanandres, "jaen_castillo": jaen_castillo,
           "huelva_rabida": huelva_rabida, "huelva_conquero": huelva_conquero, "huelva_miradorcinta": huelva_miradorcinta,
-          "huelva_moret": huelva_moret, "huelva_cinta": huelva_cinta}
+          "huelva_moret": huelva_moret, "huelva_cinta": huelva_cinta, "almeria_sancristobal": almeria_sancristobal,
+          "almeria_estacion": almeria_estacion, "almeria_cervantes": almeria_cervantes}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:
