@@ -7,6 +7,7 @@ Córdoba: plaza de Tiberíades (Maimónides), muralla de la calle Cairuán (Aver
 Sevilla: palacio de Mañara, plaza de los Refinadores (Don Juan), la Maestranza, Hospital de la Caridad.
 Granada: Carrera del Darro, San Juan de los Reyes (alminar), cuevas y abadía del Sacromonte.
 Jaén: Museo de Jaén, monasterio de Santa Clara, San Andrés (Judería), castillo de Santa Catalina.
+Huelva: instituto La Rábida, miradores del Conquero, parque Moret, santuario de la Cinta.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -18,6 +19,7 @@ from sevilla_scenes import ALMAGRA, BRICK, ALBERO, giralda, river
 from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, LIME, OCHRE, POTBLUE
 from granada_scenes import horseshoe, cypress, alhambra_hill, sierra, albaicin_houses, CAL, ROJA, TEJA
 from jaen_scenes import far_jaen, olive_hills, JSTONE, ochre_house
+from huelva_scenes import marsh, boat, IRON, IROND, BRICKS
 from sevilla_scenes import orange_tree
 
 RED = "#D8412F"
@@ -484,6 +486,99 @@ def jaen_castillo():
     return doc(p, "Castillo de Santa Catalina", [sky(p, sun, [(90, 70, .8)], [(200, 50), (218, 42, .8)]), far, mid, near, fx(p, sun, 400, .25)])
 
 
+def pine(x, base, s=1.0):
+    """Pino piñonero de los cabezos."""
+    return (f'<path d="M{f(x - 3 * s)} {f(base)}L{f(x - 2 * s)} {f(base - 70 * s)}H{f(x + 2 * s)}L{f(x + 3 * s)} {f(base)}Z" fill="#6E4C33" stroke="{INK}" stroke-width="1.2"/>'
+            f'<ellipse cx="{f(x)}" cy="{f(base - 80 * s)}" rx="{f(44 * s)}" ry="{f(20 * s)}" fill="#3F6B45" stroke="{INK}" stroke-width="1.4"/>'
+            f'<ellipse cx="{f(x - 10 * s)}" cy="{f(base - 88 * s)}" rx="{f(26 * s)}" ry="{f(10 * s)}" fill="#4F7F55"/>')
+
+
+def fe_descubridora(x, base, s=1.0):
+    """Monumento a Colón de la Punta del Sebo, lejano: figura con túnica apoyada en una cruz en tau, en silueta."""
+    c = "#B9B2A6"
+    return (f'<path d="M{f(x - 10 * s)} {f(base)}V{f(base - 20 * s)}H{f(x + 10 * s)}V{f(base)}Z" fill="{c}"/>'
+            f'<path d="M{f(x - 7 * s)} {f(base - 20 * s)}L{f(x - 5 * s)} {f(base - 64 * s)}H{f(x + 5 * s)}L{f(x + 7 * s)} {f(base - 20 * s)}Z" fill="{c}"/>'
+            f'<circle cx="{f(x)}" cy="{f(base - 68 * s)}" r="{f(4 * s)}" fill="{c}"/>')
+
+
+def conquero_view(p, title, sun, monument):
+    far = f'<g id="far">{marsh(300)}</g>'
+    sea = (f'<g id="sea">{river(p, 316, 380)}{marsh(372)}' + boat(120, 340, .5, SEA) + boat(260, 350, .6, CLAY)
+           + (fe_descubridora(330, 316, .7) if monument else "") + "</g>")
+    # barandilla del mirador sobre el cabezo
+    mid = (f'<g id="mid"><path d="M-10 400Q200 386 400 396V430H-10Z" fill="#C98E5A" stroke="{INK}" stroke-width="1.6"/>'
+           + lattice_rail(-10, 400, 392, 412) + "</g>")
+    near = (f'<g id="near"><rect x="-10" y="420" width="{W + 20}" height="150" fill="#D9C3A0"/>'
+            f'<path d="M-10 420H400V430H-10Z" fill="#C9B28A" stroke="{INK}" stroke-width="1.4"/>'
+            + pine(40, 520, 1.4) + person(200, 470, 1, SEA) + person(250, 474, .95, CLAY, dress=True) + "</g>")
+    return doc(p, title, [sky(p, sun, [(80, 70, .8)], [(200, 60), (218, 52, .8)]), far, sea, mid, near, fx(p, sun, 420, .25)])
+
+
+def lattice_rail(x0, x1, y0, y1, step=16):
+    s = f'<path d="M{x0} {y0}H{x1}" stroke="{INK}" stroke-width="3.4"/><path d="M{x0} {y0}H{x1}" stroke="{IRON}" stroke-width="2"/>'
+    return s + "".join(f'<path d="M{x} {y0}V{y1}" stroke="{IROND}" stroke-width="2"/>' for x in range(int(x0), int(x1), step))
+
+
+def huelva_conquero():
+    return conquero_view("hcq", "Mirador del Conquero", (300, 150), False)
+
+
+def huelva_miradorcinta():
+    return conquero_view("hmc", "Mirador de la Cinta", (90, 140), True)
+
+
+def huelva_rabida():
+    p = "hrb"; sun = (300, 110)
+    far = f'<g id="far">{far_city(250, 111, towers=2)}</g>'
+    c, cd, cl = BRICKS
+    # instituto de estilo regionalista: ladrillo visto, torre central y arcos
+    front = (f'<path d="M10 390V210H380V390Z" fill="#F1E6D0" stroke="{INK}" stroke-width="1.8"/>'
+             + "".join(f'<path d="M{x} 390V210" stroke="{c}" stroke-width="10"/><path d="M{x - 5} 390V210M{x + 5} 390V210" stroke="{INK}" stroke-width=".8"/>' for x in (14, 376))
+             + f'<path d="M4 210H386V198H4Z" fill="{c}" stroke="{INK}" stroke-width="1.6"/>'
+             + f'<path d="M160 390V150H230V390Z" fill="#F1E6D0" stroke="{INK}" stroke-width="1.8"/><path d="M154 152L195 122L236 152Z" fill="{c}" stroke="{INK}" stroke-width="1.6"/>'
+             + f'<path d="M176 390V320Q195 298 214 320V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+             + window(182, 180, 26, 40, shutters=False, arch=True, sw=1.1)
+             + "".join(f'<path d="M{x} 300V262Q{x + 12} 250 {x + 24} 262V300Z" fill="{cl}" stroke="{INK}" stroke-width="1.2"/>' for x in (30, 70, 110, 256, 296, 336))
+             + "".join(window(x, 320, 20, 36, shutters=False, sw=1.1) for x in (32, 72, 112, 258, 298, 338)))
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + statue(300, 476, 1.0) + palm(40, 520, 200, 6)
+            + person(140, 452, 1, "#3A3A48") + person(190, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Instituto La Rábida", [sky(p, sun, [(90, 70, .8)], [(220, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
+def huelva_moret():
+    p = "hmo"; sun = (90, 110)
+    far = f'<g id="far"><path d="M-10 300Q80 220 170 250Q260 200 400 260V330H-10Z" fill="#A9B98A"/></g>'
+    hills = (f'<path d="M-10 390Q60 300 150 320Q240 280 320 320Q370 300 400 320V390Z" fill="#C98E5A" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M-10 390Q60 330 150 346Q240 316 320 346Q370 330 400 346V390Z" fill="#8FA86E"/>'
+             # túmulo de la Edad del Bronce: montículo con piedras
+             + f'<path d="M230 390Q270 340 310 390Z" fill="#B8A07A" stroke="{INK}" stroke-width="1.4"/>'
+             + "".join(f'<circle cx="{x}" cy="{y}" r="4" fill="#9C8866" stroke="{INK}" stroke-width=".8"/>' for x, y in [(250, 378), (266, 368), (282, 372), (296, 382)])
+             + pine(60, 360, 1.1) + pine(170, 340, .9) + pine(350, 356, 1.0))
+    water = f'<ellipse cx="120" cy="404" rx="110" ry="14" fill="#8FB9B4" stroke="{INK}" stroke-width="1.4"/>'
+    mid = f'<g id="mid">{hills}{ground(392, "#D9C3A0")}{water}</g>'
+    near = (f'<g id="near">{floor(p, 424, color="#D9C3A0", line="#C1AB85")}' + pine(360, 540, 1.5) + bench(250, 480)
+            + person(160, 460, 1, "#3A3A48") + person(210, 464, .95, SEA, dress=True) + "</g>")
+    return doc(p, "Parque Moret", [sky(p, sun, [(300, 70, .8)], [(220, 50)]), far, mid, near, fx(p, sun, 424)])
+
+
+def huelva_cinta():
+    p = "hci"; sun = (300, 120)
+    far = f'<g id="far">{marsh(300)}</g>'
+    # santuario blanco con espadaña y patio de entrada, sin imágenes
+    front = (f'<path d="M40 390V230H350V390Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M34 232L195 206L356 232Z" fill="{TEJA}" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M150 232V150H240V232Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/><path d="M146 150Q195 118 244 150Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.6"/>'
+             + "".join(f'<path d="M{x} 206V176Q{x + 11} 164 {x + 22} 176V206Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.2"/>' for x in (164, 204))
+             + f'<path d="M172 390V310Q195 288 218 310V390Z" fill="#5B3A26" stroke="{INK}" stroke-width="1.6"/>'
+             + azulejo_panel(60, 300, 60, 40) + azulejo_panel(270, 300, 60, 40)
+             + f'<path d="M20 390V330H40M350 330H370V390" fill="none" stroke="{INK}" stroke-width="1.6"/>')
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + palm(40, 520, 220, 6) + palm(356, 520, 210, -6)
+            + person(140, 452, 1, "#3A3A48") + person(250, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Santuario de la Cinta", [sky(p, sun, [(90, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
           "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
@@ -491,7 +586,9 @@ SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "mal
           "sevilla_manara": sevilla_manara, "sevilla_refinadores": sevilla_refinadores, "sevilla_maestranza": sevilla_maestranza,
           "sevilla_caridad": sevilla_caridad, "granada_darro": granada_darro, "granada_sanjuan": granada_sanjuan,
           "granada_cuevas": granada_cuevas, "granada_abadia": granada_abadia, "jaen_museo": jaen_museo,
-          "jaen_santaclara": jaen_santaclara, "jaen_sanandres": jaen_sanandres, "jaen_castillo": jaen_castillo}
+          "jaen_santaclara": jaen_santaclara, "jaen_sanandres": jaen_sanandres, "jaen_castillo": jaen_castillo,
+          "huelva_rabida": huelva_rabida, "huelva_conquero": huelva_conquero, "huelva_miradorcinta": huelva_miradorcinta,
+          "huelva_moret": huelva_moret, "huelva_cinta": huelva_cinta}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

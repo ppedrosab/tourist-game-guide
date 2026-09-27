@@ -178,6 +178,31 @@ jae = {
                       + f'<path d="M52 100V82Q60 72 68 82V100Z" fill="#5E4232" stroke="{INK}" stroke-width="1.6"/>' + sparkle(98, 34, 5, GOLD)),
 }
 
+hue = {
+    "cronica": BG + book(56, 66, "#5E6B78", 50, 60) + quill(74, 96, 1.0),
+    "carabela": SKY + (f'<path d="M22 76H98L88 94H32Z" fill="{WOOD}" stroke="{INK}" stroke-width="2.2"/>'
+                       f'<path d="M58 76V24" stroke="{INK}" stroke-width="2.4"/><path d="M36 76V40" stroke="{INK}" stroke-width="2"/>'
+                       f'<path d="M58 28L86 70H58Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/><path d="M36 42L52 70H36Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.6"/>'
+                       f'<path d="M58 24L70 28L58 32Z" fill="{RED}" stroke="{INK}" stroke-width="1.2"/>'
+                       f'<path d="M12 100Q30 92 48 100T84 100T112 100" fill="none" stroke="{SEA}" stroke-width="3"/>'),
+    "espatula": SKY + '<g transform="translate(-10 4)">' + (f'<ellipse cx="58" cy="64" rx="24" ry="14" fill="{WHITE}" stroke="{INK}" stroke-width="2"/>'
+                       f'<path d="M76 58Q86 40 84 30" fill="none" stroke="{INK}" stroke-width="5"/><path d="M76 58Q86 40 84 30" fill="none" stroke="{WHITE}" stroke-width="3"/>'
+                       f'<circle cx="84" cy="30" r="6" fill="{WHITE}" stroke="{INK}" stroke-width="1.8"/><circle cx="86" cy="29" r="1.4" fill="{INK}"/>'
+                       f'<path d="M89 30H104Q108 30 106 36Q100 36 98 32H89Z" fill="{INK}"/>'
+                       f'<path d="M52 76L50 100M62 76L64 100" stroke="{INK}" stroke-width="2.4"/>'
+                       f'<path d="M20 102Q40 96 60 102T100 102" fill="none" stroke="{SEA}" stroke-width="3"/></g>'),
+    "tumulo": BG + (f'<path d="M40 50Q34 54 36 64Q30 92 60 100Q90 92 84 64Q86 54 80 50Z" fill="#B8703F" stroke="{INK}" stroke-width="2.4"/>'
+                    f'<path d="M40 50H80V42H40Z" fill="#A55E32" stroke="{INK}" stroke-width="2"/>'
+                    + "".join(f'<path d="M{38 + k * 4} {66 + k * 6}H{82 - k * 4}" stroke="{INK}" stroke-width="1.4"/>' for k in range(3))
+                    + "".join(f'<path d="M{x} 66L{x + 6} 72L{x + 12} 66" fill="none" stroke="{INK}" stroke-width="1.2"/>' for x in (44, 56, 68))),
+    "vela": BG + (f'<path d="M50 50H70V100H50Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.2"/>'
+                  f'<path d="M60 50V42" stroke="{INK}" stroke-width="1.6"/><path d="M60 42Q52 30 60 18Q68 30 60 42Z" fill="{GOLD}" stroke="{INK}" stroke-width="1.6"/>'
+                  f'<path d="M40 100H80V106H40Z" fill="{GOLDD}" stroke="{INK}" stroke-width="1.6"/>' + sparkle(90, 34, 5, GOLD) + sparkle(30, 40, 4, GOLD)),
+    "insignia": BG + (f'<path d="M26 52Q60 30 94 52L86 66Q60 50 34 66Z" fill="#2F5F9E" stroke="{INK}" stroke-width="2"/>'
+                      f'<path d="M40 64L30 100L44 92L50 104L56 70M80 64L90 100L76 92L70 104L64 70" fill="#2F5F9E" stroke="{INK}" stroke-width="1.8"/>'
+                      f'<text x="60" y="94" font-family="Georgia, serif" font-weight="700" font-size="24" text-anchor="middle" fill="{GOLD}" stroke="{INK}" stroke-width="1">?</text>'),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
@@ -191,6 +216,8 @@ ORDER = {
                              ("alminar", "El alminar de San Juan"), ("lamina", "La lámina de plomo"), ("insignia", "¿Quién escribió los libros de plomo?")]),
     "jaen_catalina": (jae, [("dama", "La dama íbera"), ("corona", "La corona de Fernando III"), ("alfiyya", "La «Alfiyya» de Ibn Malik"),
                             ("llave", "La llave de la ciudad"), ("sardina", "La sardina de Santa Catalina"), ("insignia", "¿Quién ganó el castillo de Santa Catalina?")]),
+    "huelva_cinta": (hue, [("cronica", "La crónica de Díaz Hierro"), ("carabela", "La carabela de vuelta"), ("espatula", "La espátula de la marisma"),
+                           ("tumulo", "La vasija del túmulo"), ("vela", "La vela de la promesa"), ("insignia", "¿Cumplió Colón su promesa?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

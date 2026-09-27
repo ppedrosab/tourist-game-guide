@@ -392,6 +392,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Colaeo de Samos | figura de leyenda | s. VII a. C. | [Wikipedia: Coleo de Samos](https://es.wikipedia.org/wiki/Coleo_de_Samos) |
 | Habis | figura de leyenda | mito | [Wikipedia: Gárgoris](https://es.wikipedia.org/wiki/G%C3%A1rgoris) · [Wikipedia: Habis](https://es.wikipedia.org/wiki/Habis) |
 | Charles Adam | persona real | 1848-1924 | [Wikipedia (en): Charles Wilson Adam](https://en.wikipedia.org/wiki/Charles_Wilson_Adam) |
+| Diego Díaz Hierro | persona real | 1912-1979 | [Wikipedia: Diego Díaz Hierro](https://es.wikipedia.org/wiki/Diego_D%C3%ADaz_Hierro) |
+| Cristóbal Colón | persona real | c. 1451-1506 | [Wikipedia: Cristóbal Colón](https://es.wikipedia.org/wiki/Crist%C3%B3bal_Col%C3%B3n) · [Wikipedia: Primer viaje de Colón](https://es.wikipedia.org/wiki/Primer_viaje_de_Col%C3%B3n) |
+| Gertrude Whitney | persona real | 1875-1942 | [Wikipedia: Gertrude Vanderbilt Whitney](https://es.wikipedia.org/wiki/Gertrude_Vanderbilt_Whitney) · [Wikipedia: Monumento a Colón (Huelva)](https://es.wikipedia.org/wiki/Monumento_a_Col%C3%B3n_(Huelva)) |
 
 ### «¿Quién trajo el fútbol a España?»: lo que afirma la ruta
 
@@ -435,6 +438,14 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Cabezo de San Pedro**: Huelva está rodeada de cabezos, colinas de arena y arcilla. En el de San Pedro los arqueólogos encontraron restos de poblado de la época tartésica.
 - [ ] **Plaza del Punto**: Los griegos llamaban Tartessos a un reino rico del suroeste de la península. Hoy los arqueólogos hablan de una cultura tartésica, entre los ríos Guadiana y Guadalquivir.
 - [ ] **Paseo de la Ría**: Huelva está entre las desembocaduras del Tinto y el Odiel. Hace 3.000 años, el mar entraba mucho más y la ciudad era casi una península.
+
+### «¿Cumplió Colón su promesa?»: lo que afirma la ruta
+
+- [ ] **Plaza de la Merced**: Díaz Hierro nació en Huelva en 1912 y murió en 1979. Fue profesor, poeta y, desde 1976, cronista oficial de la ciudad.
+- [ ] **Instituto La Rábida** (2000): Díaz Hierro dio clase en este instituto. Desde el año 2000 tiene aquí delante un monumento.
+- [ ] **Mirador del Conquero**: Desde el Conquero se ven las marismas del Odiel, un paraje protegido lleno de aves. Más allá se juntan los ríos Tinto y Odiel, y al fondo está Palos.
+- [ ] **Parque Moret** (1910): El parque Moret se creó en 1910 junto al camino de la Cinta. Con unas 72 hectáreas, es el parque urbano más grande de Andalucía, y guarda túmulos de la Edad del Bronce.
+- [ ] **Santuario de la Cinta** (1920): El santuario de la Cinta está en lo alto del cabezo del Conquero, mirando a la ría. Sus azulejos de los muros los hizo el ceramista Daniel Zuloaga en 1920.
 
 ## Jaén
 

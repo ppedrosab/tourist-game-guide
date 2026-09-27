@@ -5,7 +5,7 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 174. Con aviso: 102.
+Paradas revisadas: 180. Con aviso: 106.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
@@ -73,6 +73,7 @@ Paradas revisadas: 174. Con aviso: 102.
 | Huelva | Museo de Huelva | `decano` | 37.26160, -6.94420 | 37.25499, -6.94359 | 737 m | Museo Provincial de Huelva |
 | Huelva | Plaza del Punto | `choqueros` | 37.25950, -6.95190 | 37.25470, -6.94692 | 693 m | Plaza del Punto |
 | Huelva | Plaza de la Merced | `decano` | 37.26380, -6.94780 | 37.26242, -6.95238 | 434 m | Plaza de la Merced |
+| Huelva | Parque Moret | `promesa-cinta` | 37.27000, -6.94040 | 37.27345, -6.93964 | 389 m | Parque Moret |
 | Huelva | Mercado del Carmen | `decano` | 37.25480, -6.95350 | 37.25481, -6.95574 | 199 m | Mercado del Carmen |
 | Huelva | Plaza de las Monjas | `decano` | 37.25830, -6.95020 | 37.25717, -6.95148 | 169 m | Plaza de las Monjas |
 | Huelva | Muelle del Tinto | `decano` | 37.25230, -6.95690 | — | — | OSM no lo encuentra con ese nombre |
@@ -82,6 +83,9 @@ Paradas revisadas: 174. Con aviso: 102.
 | Huelva | Muelle de Levante | `choqueros` | 37.25300, -6.94420 | — | — | OSM no lo encuentra con ese nombre |
 | Huelva | Iglesia de San Pedro | `choqueros` | 37.26060, -6.95140 | — | — | OSM no lo encuentra con ese nombre |
 | Huelva | Paseo de la Ría | `colombinas` | 37.25000, -6.95850 | — | — | OSM no lo encuentra con ese nombre |
+| Huelva | Mirador del Conquero | `promesa-cinta` | 37.26742, -6.94847 | — | — | OSM no lo encuentra con ese nombre |
+| Huelva | Mirador de la Cinta | `promesa-cinta` | 37.27558, -6.94403 | — | — | OSM no lo encuentra con ese nombre |
+| Huelva | Santuario de la Cinta | `promesa-cinta` | 37.27798, -6.94437 | — | — | OSM no lo encuentra con ese nombre |
 | Jaén | Iglesia de la Magdalena | `lagarto-malena` | 37.77290, -3.79320 | 37.77198, -3.79664 | 320 m | Iglesia de la Magdalena |
 | Jaén | Raudal de la Magdalena | `mar-de-olivos` | 37.77240, -3.79380 | 37.77174, -3.79663 | 260 m | Raudal de la Magdalena |
 | Jaén | Baños árabes | `lagarto-malena` | 37.77020, -3.79150 | 37.77102, -3.79397 | 236 m | Baños Árabes |

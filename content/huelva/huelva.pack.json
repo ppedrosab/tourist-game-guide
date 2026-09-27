@@ -1,6 +1,6 @@
 {
   "id": "huelva",
-  "version": 3,
+  "version": 4,
   "name": {
     "es": "Huelva",
     "en": "Huelva"
@@ -367,6 +367,98 @@
       ],
       "voice": {
         "gender": "m"
+      }
+    },
+    {
+      "id": "diazhierro",
+      "name": {
+        "es": "Diego Díaz Hierro",
+        "en": "Diego Díaz Hierro"
+      },
+      "description": {
+        "es": "Cronista oficial de Huelva, profesor y poeta, enamorado de su ciudad. Minucioso, cordial y siempre con un legajo a mano.",
+        "en": "Official chronicler of Huelva, teacher and poet, in love with his city. Meticulous, warm and always with an old document to hand."
+      },
+      "avatar": "sprites/diazhierro/diazhierro_neutral.svg",
+      "era": "s. XX",
+      "kind": "real",
+      "lived": "1912-1979",
+      "bio": {
+        "es": "Diego Díaz Hierro nació en Huelva en 1912 y murió en la misma ciudad en 1979. Estudió Filosofía y Letras, fue profesor en Madrid y Sevilla y después en el instituto La Rábida de Huelva. Investigó la historia de la ciudad: escribió sobre el culto a la Virgen de la Cinta, sobre la Merced y sobre el parque Moret. En 1976 el ayuntamiento lo nombró cronista oficial de Huelva. Desde el año 2000 tiene un monumento frente al instituto.",
+        "en": "Diego Díaz Hierro was born in Huelva in 1912 and died there in 1979. He studied Arts, taught in Madrid and Seville and then at the La Rábida school in Huelva. He researched the city's history: he wrote about the devotion to the Virgin of the Cinta, about La Merced and about Parque Moret. In 1976 the council named him Huelva's official chronicler. Since 2000 there has been a monument to him in front of the school."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Diego Díaz Hierro",
+          "url": "https://es.wikipedia.org/wiki/Diego_D%C3%ADaz_Hierro"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "colon",
+      "name": {
+        "es": "Cristóbal Colón",
+        "en": "Christopher Columbus"
+      },
+      "description": {
+        "es": "El almirante que salió de Palos en 1492 y volvió en 1493. Soñador, testarudo y buen contador de historias.",
+        "en": "The admiral who sailed from Palos in 1492 and returned in 1493. A dreamer, stubborn and a good storyteller."
+      },
+      "avatar": "sprites/colon/colon_neutral.svg",
+      "era": "s. XV",
+      "kind": "real",
+      "lived": "c. 1451-1506",
+      "bio": {
+        "es": "Cristóbal Colón, navegante nacido probablemente en Génova hacia 1451, salió del puerto de Palos, en la ría de Huelva, el 3 de agosto de 1492 y llegó a América en octubre. En el viaje de vuelta, en febrero y marzo de 1493, dos tormentas estuvieron a punto de hundir sus naves; según su diario, se echaron a suertes promesas de peregrinación, una de ellas al santuario de la Cinta. Volvió a Palos el 15 de marzo de 1493. Murió en Valladolid en 1506.",
+        "en": "Christopher Columbus, a navigator probably born in Genoa around 1451, sailed from the port of Palos, on the Huelva estuary, on 3 August 1492 and reached America in October. On the way back, in February and March 1493, two storms almost sank his ships; according to his log, pilgrimage vows were drawn by lot, one of them to the Cinta sanctuary. He returned to Palos on 15 March 1493. He died in Valladolid in 1506."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Cristóbal Colón",
+          "url": "https://es.wikipedia.org/wiki/Crist%C3%B3bal_Col%C3%B3n"
+        },
+        {
+          "title": "Wikipedia: Primer viaje de Colón",
+          "url": "https://es.wikipedia.org/wiki/Primer_viaje_de_Col%C3%B3n"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "whitney",
+      "name": {
+        "es": "Gertrude Whitney",
+        "en": "Gertrude Whitney"
+      },
+      "description": {
+        "es": "Escultora neoyorquina que regaló a Huelva el gran monumento a Colón. Decidida, elegante y con el martillo de esculpir siempre cerca.",
+        "en": "New York sculptor who gave Huelva its great Columbus monument. Determined, elegant and never far from her sculptor's hammer."
+      },
+      "avatar": "sprites/whitney/whitney_neutral.svg",
+      "era": "s. XX",
+      "kind": "real",
+      "lived": "1875-1942",
+      "bio": {
+        "es": "Gertrude Vanderbilt Whitney nació en Nueva York en 1875, en la familia Vanderbilt. Fue escultora y mecenas: en 1931 fundó el Museo Whitney de Arte Americano. Hizo el monumento a Colón de la Punta del Sebo, en Huelva, de 37 metros, inaugurado el 21 de abril de 1929. Murió en Nueva York en 1942.",
+        "en": "Gertrude Vanderbilt Whitney was born in New York in 1875, into the Vanderbilt family. She was a sculptor and patron: in 1931 she founded the Whitney Museum of American Art. She made the Columbus monument on the Punta del Sebo in Huelva, 37 metres tall, unveiled on 21 April 1929. She died in New York in 1942."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Gertrude Vanderbilt Whitney",
+          "url": "https://es.wikipedia.org/wiki/Gertrude_Vanderbilt_Whitney"
+        },
+        {
+          "title": "Wikipedia: Monumento a Colón (Huelva)",
+          "url": "https://es.wikipedia.org/wiki/Monumento_a_Col%C3%B3n_(Huelva)"
+        }
+      ],
+      "voice": {
+        "gender": "f"
       }
     }
   ],
@@ -4834,6 +4926,949 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "promesa-cinta",
+      "title": {
+        "es": "¿Cumplió Colón su promesa?",
+        "en": "Did Columbus Keep His Promise?"
+      },
+      "summary": {
+        "es": "En 1493, en plena tormenta, a Colón le tocó por sorteo peregrinar al santuario de la Cinta. ¿Lo hizo? Con el cronista Diego Díaz Hierro, el propio Colón y la escultora Gertrude Whitney, por los cabezos y miradores del Conquero.",
+        "en": "In 1493, in the middle of a storm, Columbus drew the lot to make a pilgrimage to the Cinta sanctuary. Did he? With the chronicler Diego Díaz Hierro, Columbus himself and the sculptor Gertrude Whitney, across the hills and viewpoints of the Conquero."
+      },
+      "era": "1493-1929",
+      "guideCharacterId": "diazhierro",
+      "durationMin": 80,
+      "distanceKm": 3.2,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La ría",
+            "en": "The estuary"
+          },
+          "trail": {
+            "es": "camino de la ría",
+            "en": "estuary trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Los cabezos",
+            "en": "The hills"
+          },
+          "trail": {
+            "es": "camino de los cabezos",
+            "en": "hills trail"
+          }
+        }
+      },
+      "startNodeId": "h1_merced",
+      "nodes": [
+        {
+          "id": "h1_merced",
+          "title": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+          },
+          "location": {
+            "lat": 37.26242,
+            "lng": -6.95238
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_merced.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_merced.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazhierro",
+                  "expression": "happy",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "happy",
+              "text": {
+                "es": "Buenos días. Diego Díaz Hierro, cronista oficial de Huelva. Me pasé la vida entre legajos; escribí la historia de esta iglesia de la Merced y la del santuario de la Cinta.",
+                "en": "Good morning. Diego Díaz Hierro, official chronicler of Huelva. I spent my life among old papers; I wrote the history of this church of La Merced and that of the Cinta sanctuary."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "thinking",
+              "text": {
+                "es": "Le propongo un caso: en 1493, en plena tormenta, Cristóbal Colón prometió ir en romería al santuario de la Cinta, aquí en Huelva. ¿Cumplió su promesa?",
+                "en": "Here's a case for you: in 1493, in the middle of a storm, Christopher Columbus vowed to go on pilgrimage to the Cinta sanctuary, here in Huelva. Did he keep his promise?"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Díaz Hierro nació en Huelva en 1912 y murió en 1979. Fue profesor, poeta y, desde 1976, cronista oficial de la ciudad.",
+                "en": "Díaz Hierro was born in Huelva in 1912 and died in 1979. He was a teacher, a poet and, from 1976, the city's official chronicler."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es un cronista oficial?",
+              "en": "What is an official chronicler?"
+            },
+            "options": [
+              {
+                "es": "Un capitán de barco",
+                "en": "A ship's captain"
+              },
+              {
+                "es": "Quien escribe la historia de la ciudad por encargo del ayuntamiento",
+                "en": "Someone appointed by the council to write the city's history"
+              },
+              {
+                "es": "Un juez",
+                "en": "A judge"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Quien investiga y escribe la historia de la ciudad por encargo de su ayuntamiento.",
+              "en": "Someone who researches and writes the city's history on behalf of its council."
+            }
+          },
+          "clue": {
+            "id": "cin_pista_cronista",
+            "text": {
+              "es": "Documentos · Díaz Hierro escribió la historia del santuario de la Cinta.",
+              "en": "Records · Díaz Hierro wrote the history of the Cinta sanctuary."
+            }
+          },
+          "nextNodeId": "h2_rabida",
+          "nextHint": {
+            "es": "Sube por la avenida de Manuel Siurot hasta el instituto La Rábida. Unos 6 minutos.",
+            "en": "Walk up the avenida de Manuel Siurot to the La Rábida school. About 6 minutes."
+          }
+        },
+        {
+          "id": "h2_rabida",
+          "title": {
+            "es": "Instituto La Rábida",
+            "en": "La Rábida school"
+          },
+          "location": {
+            "lat": 37.26419,
+            "lng": -6.94835
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_rabida.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_rabida.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazhierro",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "colon",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Díaz Hierro dio clase en este instituto. Desde el año 2000 tiene aquí delante un monumento.",
+                "en": "Díaz Hierro taught at this school. Since 2000 there has been a monument to him in front of it."
+              },
+              "year": 2000
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "proud",
+              "text": {
+                "es": "Cristóbal Colón, almirante de la mar Océana. Salí de Palos, al otro lado de la ría, el 3 de agosto de 1492. Y volví en marzo de 1493… de milagro.",
+                "en": "Christopher Columbus, Admiral of the Ocean Sea. I sailed from Palos, across the estuary, on 3 August 1492. And I came back in March 1493… by a miracle."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "thinking",
+              "text": {
+                "es": "En el viaje de vuelta nos cogieron dos tormentas terribles. En cada una echamos a suertes promesas de peregrinación. Una de ellas me tocó a mí.",
+                "en": "On the way back two terrible storms caught us. In each one we drew lots for pilgrimage vows. One of them fell to me."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Desde qué puerto salió Colón en 1492?",
+              "en": "From which port did Columbus sail in 1492?"
+            },
+            "options": [
+              {
+                "es": "Desde Palos",
+                "en": "From Palos"
+              },
+              {
+                "es": "Desde Barcelona",
+                "en": "From Barcelona"
+              },
+              {
+                "es": "Desde Lisboa",
+                "en": "From Lisbon"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Desde Palos de la Frontera, el 3 de agosto de 1492.",
+              "en": "From Palos de la Frontera, on 3 August 1492."
+            }
+          },
+          "clue": {
+            "id": "cin_pista_suertes",
+            "text": {
+              "es": "Documentos · En las tormentas de la vuelta se echaron a suertes promesas de peregrinación.",
+              "en": "Records · During the storms on the way back, pilgrimage vows were drawn by lot."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "diazhierro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Miramos hacia la ría por la que volvió, o subimos a los cabezos de Huelva?",
+              "en": "Shall we look out over the estuary he came back along, or climb Huelva's hills?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La ría",
+                "en": "The estuary"
+              },
+              "hint": {
+                "es": "El mirador del Conquero",
+                "en": "The Conquero viewpoint"
+              },
+              "targetNodeId": "ha_conquero",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 540,
+              "walkMin": 8
+            },
+            {
+              "label": {
+                "es": "Los cabezos",
+                "en": "The hills"
+              },
+              "hint": {
+                "es": "El parque Moret",
+                "en": "Parque Moret"
+              },
+              "targetNodeId": "hb_moret",
+              "setFlags": [
+                "camino_poder"
+              ],
+              "distanceM": 1000,
+              "walkMin": 14
+            }
+          ]
+        },
+        {
+          "id": "ha_conquero",
+          "title": {
+            "es": "Mirador del Conquero",
+            "en": "Conquero viewpoint"
+          },
+          "location": {
+            "lat": 37.26742,
+            "lng": -6.94847
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_huelva_conquero.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_conquero.svg"
+              ],
+              "characters": [
+                {
+                  "id": "colon",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "whitney",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Desde el Conquero se ven las marismas del Odiel, un paraje protegido lleno de aves. Más allá se juntan los ríos Tinto y Odiel, y al fondo está Palos.",
+                "en": "From the Conquero you can see the Odiel marshes, a protected area full of birds. Beyond, the Tinto and Odiel rivers meet, and in the distance lies Palos."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "whitney",
+              "expression": "neutral",
+              "text": {
+                "es": "Gertrude Vanderbilt Whitney, escultora, de Nueva York. Allá abajo, en la Punta del Sebo, está mi monumento a Colón: treinta y siete metros de piedra, de 1929.",
+                "en": "Gertrude Vanderbilt Whitney, sculptor, from New York. Down there, on the Punta del Sebo, is my monument to Columbus: thirty-seven metres of stone, from 1929."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "happy",
+              "text": {
+                "es": "Por esa ría entraron la Niña y la Pinta el 15 de marzo de 1493. Desde aquí arriba, el santuario de la Cinta quedaba a un paseo.",
+                "en": "The Niña and the Pinta came in along that estuary on 15 March 1493. From up here, the Cinta sanctuary was just a stroll away."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué dos ríos se juntan frente a Huelva?",
+              "en": "Which two rivers meet in front of Huelva?"
+            },
+            "options": [
+              {
+                "es": "El Guadalquivir y el Genil",
+                "en": "The Guadalquivir and the Genil"
+              },
+              {
+                "es": "El Tajo y el Duero",
+                "en": "The Tagus and the Douro"
+              },
+              {
+                "es": "El Tinto y el Odiel",
+                "en": "The Tinto and the Odiel"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El Tinto y el Odiel, que forman la ría de Huelva.",
+              "en": "The Tinto and the Odiel, which form the Huelva estuary."
+            }
+          },
+          "clue": {
+            "id": "cin_pista_vuelta",
+            "text": {
+              "es": "La ría · Colón volvió a Palos por la ría el 15 de marzo de 1493, muy cerca de la Cinta.",
+              "en": "The estuary · Columbus returned to Palos along the estuary on 15 March 1493, very close to the Cinta."
+            }
+          },
+          "nextNodeId": "h4_mirador",
+          "nextHint": {
+            "es": "Sigue por lo alto del Conquero hasta el mirador de la Cinta. Unos 15 minutos.",
+            "en": "Follow the top of the Conquero to the Cinta viewpoint. About 14 minutes."
+          }
+        },
+        {
+          "id": "hb_moret",
+          "title": {
+            "es": "Parque Moret",
+            "en": "Parque Moret"
+          },
+          "location": {
+            "lat": 37.27,
+            "lng": -6.9404
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_huelva_moret.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_moret.svg"
+              ],
+              "characters": [
+                {
+                  "id": "diazhierro",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "colon",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El parque Moret se creó en 1910 junto al camino de la Cinta. Con unas 72 hectáreas, es el parque urbano más grande de Andalucía, y guarda túmulos de la Edad del Bronce.",
+                "en": "Parque Moret was created in 1910 beside the road to the Cinta. At about 72 hectares, it is the largest urban park in Andalusia, and it holds Bronze Age burial mounds."
+              },
+              "year": 1910
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "happy",
+              "text": {
+                "es": "Los cabezos son las colinas de Huelva. Aquí ya vivía gente hace tres mil años, cuando Huelva era un puerto de Tartessos.",
+                "en": "The cabezos are Huelva's hills. People already lived here three thousand years ago, when Huelva was a port of Tartessos."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "neutral",
+              "text": {
+                "es": "Y en lo alto del cabezo del Conquero, el santuario. Para cumplir la promesa bastaba con subir andando.",
+                "en": "And at the top of the Conquero hill, the sanctuary. To keep the promise, you just had to walk up."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué hay en el parque Moret de hace unos tres mil años?",
+              "en": "What is there in Parque Moret from about three thousand years ago?"
+            },
+            "options": [
+              {
+                "es": "Un castillo árabe",
+                "en": "A Moorish castle"
+              },
+              {
+                "es": "Túmulos de la Edad del Bronce",
+                "en": "Bronze Age burial mounds"
+              },
+              {
+                "es": "Una muralla romana",
+                "en": "A Roman wall"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Túmulos funerarios de finales de la Edad del Bronce.",
+              "en": "Late Bronze Age burial mounds."
+            }
+          },
+          "clue": {
+            "id": "cin_pista_camino",
+            "text": {
+              "es": "Los cabezos · El santuario está en lo alto del Conquero: para cumplir la promesa bastaba con subir andando.",
+              "en": "The hills · The sanctuary sits atop the Conquero: to keep the promise you only had to walk up."
+            }
+          },
+          "nextNodeId": "h4_mirador",
+          "nextHint": {
+            "es": "Cruza el parque hacia el norte, hasta el mirador de la Cinta. Unos 10 minutos.",
+            "en": "Cross the park northwards to the Cinta viewpoint. About 10 minutes."
+          }
+        },
+        {
+          "id": "h4_mirador",
+          "title": {
+            "es": "Mirador de la Cinta",
+            "en": "Cinta viewpoint"
+          },
+          "location": {
+            "lat": 37.27558,
+            "lng": -6.94403
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_miradorcinta.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_miradorcinta.svg"
+              ],
+              "characters": [
+                {
+                  "id": "whitney",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "diazhierro",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "whitney",
+              "expression": "neutral",
+              "text": {
+                "es": "Cuando vine a Huelva, en 1929, todos me hablaban de Colón y de la Cinta. ¿Es verdad la historia de la promesa?",
+                "en": "When I came to Huelva, in 1929, everyone told me about Columbus and the Cinta. Is the story of the promise true?"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes de la ría: volvió por ahí, a un paso de la Cinta. ¿Seguimos la pista del diario o la de la tradición?",
+                    "en": "You've come from the estuary: he sailed back past here, a step from the Cinta. Shall we follow the log or the tradition?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder"
+                  ],
+                  "text": {
+                    "es": "Vienes de los cabezos: bastaba con subir andando. ¿Seguimos la pista del diario o la de la tradición?",
+                    "en": "You've come from the hills: he only had to walk up. Shall we follow the log or the tradition?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año se inauguró el monumento a Colón de la Punta del Sebo?",
+              "en": "In what year was the Columbus monument on the Punta del Sebo unveiled?"
+            },
+            "options": [
+              {
+                "es": "En 1929",
+                "en": "In 1929"
+              },
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              },
+              {
+                "es": "En 1992",
+                "en": "In 1992"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1929. Lo hizo la escultora Gertrude Vanderbilt Whitney.",
+              "en": "In 1929. It was made by the sculptor Gertrude Vanderbilt Whitney."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "diazhierro",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El diario o la tradición?",
+              "en": "The log or the tradition?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del diario",
+                "en": "The log lead"
+              },
+              "hint": {
+                "es": "Con Colón",
+                "en": "With Columbus"
+              },
+              "targetNodeId": "h4a_diario",
+              "setFlags": [
+                "version_diario"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la tradición",
+                "en": "The tradition lead"
+              },
+              "hint": {
+                "es": "Con Díaz Hierro",
+                "en": "With Díaz Hierro"
+              },
+              "targetNodeId": "h4b_tradicion",
+              "setFlags": [
+                "version_tradicion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "h4a_diario",
+          "title": {
+            "es": "El diario",
+            "en": "The log"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "thinking",
+              "text": {
+                "es": "Mi diario, tal como lo copió fray Bartolomé de las Casas, lo cuenta: el 3 de marzo de 1493 echamos suertes para enviar un peregrino a Santa María de la Cinta, en Huelva… y la suerte cayó en mí.",
+                "en": "My log, as Friar Bartolomé de las Casas copied it, tells it: on 3 March 1493 we drew lots to send a pilgrim to Santa María de la Cinta, in Huelva… and the lot fell to me."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "neutral",
+              "text": {
+                "es": "Lo que el diario no cuenta es si fui. Termina cuando llego a Palos, el 15 de marzo.",
+                "en": "What the log doesn't say is whether I went. It ends when I reach Palos, on 15 March."
+              }
+            }
+          ],
+          "clue": {
+            "id": "cin_pista_diario",
+            "text": {
+              "es": "La ría · El diario recoge la promesa del 3 de marzo de 1493, pero termina antes de que la cumpliera.",
+              "en": "The estuary · The log records the vow of 3 March 1493, but ends before he could keep it."
+            }
+          },
+          "nextNodeId": "h5_cinta",
+          "nextHint": {
+            "es": "Al santuario, siguiendo el cabezo. Unos 7 minutos.",
+            "en": "To the sanctuary, along the hill. About 7 minutes."
+          }
+        },
+        {
+          "id": "h4b_tradicion",
+          "title": {
+            "es": "La tradición",
+            "en": "The tradition"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "thinking",
+              "text": {
+                "es": "La tradición de Huelva dice que sí: que Colón subió al santuario y encendió una vela, como había prometido. La hermandad de la Cinta lo ha contado siempre.",
+                "en": "Huelva tradition says yes: that Columbus climbed to the sanctuary and lit a candle, as he had promised. The Cinta brotherhood has always told it that way."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "happy",
+              "text": {
+                "es": "Yo busqué el papel que lo probara. Encontré muchos sobre la Cinta… pero ninguno de esa visita.",
+                "en": "I looked for the document that would prove it. I found many about the Cinta… but none about that visit."
+              }
+            }
+          ],
+          "clue": {
+            "id": "cin_pista_tradicion",
+            "text": {
+              "es": "Los cabezos · La tradición dice que Colón encendió una vela en la Cinta; no hay documento de esa visita.",
+              "en": "The hills · Tradition says Columbus lit a candle at the Cinta; there is no document of that visit."
+            }
+          },
+          "nextNodeId": "h5_cinta",
+          "nextHint": {
+            "es": "Al santuario, siguiendo el cabezo. Unos 7 minutos.",
+            "en": "To the sanctuary, along the hill. About 7 minutes."
+          }
+        },
+        {
+          "id": "h5_cinta",
+          "title": {
+            "es": "Santuario de la Cinta",
+            "en": "Cinta sanctuary"
+          },
+          "location": {
+            "lat": 37.27798,
+            "lng": -6.94437
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_huelva_cinta.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_huelva_cinta.svg"
+              ],
+              "characters": [
+                {
+                  "id": "colon",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "diazhierro",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El santuario de la Cinta está en lo alto del cabezo del Conquero, mirando a la ría. Sus azulejos de los muros los hizo el ceramista Daniel Zuloaga en 1920.",
+                "en": "The Cinta sanctuary stands atop the Conquero hill, overlooking the estuary. The tiles on its walls were made by the ceramicist Daniel Zuloaga in 1920."
+              },
+              "year": 1920
+            },
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. ¿Cumplió Colón su promesa?",
+                "en": "Verdict time. Did Columbus keep his promise?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cumplió Colón su promesa de la Cinta?",
+              "en": "Did Columbus keep his Cinta promise?"
+            },
+            "options": [
+              {
+                "es": "Sí: lo dice su diario",
+                "en": "Yes: his log says so"
+              },
+              {
+                "es": "No: nunca volvió a Huelva",
+                "en": "No: he never came back to Huelva"
+              },
+              {
+                "es": "La promesa está en su diario; que la cumpliera lo cuenta la tradición",
+                "en": "The vow is in his log; that he kept it is what tradition says"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "El diario recoge que el 3 de marzo de 1493 la suerte cayó en Colón para peregrinar a la Cinta. Que subiera y encendiera una vela no está escrito: lo cuenta la tradición de Huelva, y el santuario lo recuerda.",
+              "en": "The log records that on 3 March 1493 the lot fell to Columbus to make a pilgrimage to the Cinta. That he climbed up and lit a candle isn't written down: Huelva tradition tells it, and the sanctuary remembers it."
+            }
+          },
+          "nextNodeId": "h6_final"
+        },
+        {
+          "id": "h6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "diazhierro",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_diario"
+                  ],
+                  "text": {
+                    "es": "La ría y el diario: sabes leer un cuaderno de bitácora. Eres piloto de la ría.",
+                    "en": "Estuary and log: you can read a ship's log. You're an estuary pilot."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_tradicion"
+                  ],
+                  "text": {
+                    "es": "La ría y la tradición: escuchas lo que cuenta la gente. Eres cronista de Huelva.",
+                    "en": "Estuary and tradition: you listen to what people tell. You're a chronicler of Huelva."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_diario"
+                  ],
+                  "text": {
+                    "es": "Los cabezos y el diario: pies en la tierra, ojos en el papel. Eres escribano de a bordo.",
+                    "en": "Hills and log: feet on the ground, eyes on the page. You're the ship's clerk."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_tradicion"
+                  ],
+                  "text": {
+                    "es": "Los cabezos y la tradición: conoces cada colina. Eres vecino del Conquero.",
+                    "en": "Hills and tradition: you know every hill. You're a neighbour of the Conquero."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "colon",
+              "expression": "happy",
+              "text": {
+                "es": "Mire la ría desde aquí. Si yo hubiera tenido que cumplir una promesa, habría subido solo por estas vistas.",
+                "en": "Look at the estuary from here. If I'd had a promise to keep, I'd have climbed up just for this view."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "piloto_ria",
+          "requires": [
+            "camino_dinero",
+            "version_diario"
+          ],
+          "title": {
+            "es": "Piloto de la ría",
+            "en": "Estuary pilot"
+          }
+        },
+        {
+          "id": "cronista_huelva",
+          "requires": [
+            "camino_dinero",
+            "version_tradicion"
+          ],
+          "title": {
+            "es": "Cronista de Huelva",
+            "en": "Chronicler of Huelva"
+          }
+        },
+        {
+          "id": "escribano_bordo",
+          "requires": [
+            "camino_poder",
+            "version_diario"
+          ],
+          "title": {
+            "es": "Escribano de a bordo",
+            "en": "Ship's clerk"
+          }
+        },
+        {
+          "id": "vecino_conquero",
+          "requires": [
+            "camino_poder",
+            "version_tradicion"
+          ],
+          "title": {
+            "es": "Vecino del Conquero",
+            "en": "Neighbour of the Conquero"
+          }
+        }
+      ],
+      "paths": {
+        "h1_merced->h2_rabida": [[-6.95209,37.26235],[-6.95198,37.26263],[-6.95153,37.26257],[-6.95163,37.26268],[-6.95132,37.26262],[-6.95017,37.2619],[-6.94922,37.26219],[-6.94924,37.26225],[-6.94857,37.26328],[-6.94797,37.26399]],
+        "h2_rabida->ha_conquero": [[-6.94797,37.26399],[-6.9477,37.26425],[-6.9467,37.26488],[-6.94651,37.26512],[-6.94654,37.26525],[-6.94733,37.26594],[-6.94726,37.26598],[-6.94799,37.26669],[-6.94814,37.267],[-6.94833,37.26701],[-6.94866,37.26734],[-6.94871,37.26748],[-6.94856,37.26755]],
+        "h2_rabida->hb_moret": [[-6.94797,37.26399],[-6.9477,37.26425],[-6.9467,37.26488],[-6.94656,37.26501],[-6.94652,37.26517],[-6.94634,37.26528],[-6.94329,37.2667],[-6.94327,37.26695],[-6.94294,37.26697],[-6.94214,37.26828],[-6.94083,37.26926],[-6.93989,37.27012],[-6.94006,37.27022],[-6.94027,37.27014],[-6.94036,37.27016]],
+        "ha_conquero->h4_mirador": [[-6.94856,37.26755],[-6.94827,37.26767],[-6.94813,37.26798],[-6.94806,37.26855],[-6.94797,37.26876],[-6.94764,37.26912],[-6.94741,37.2696],[-6.94721,37.27013],[-6.94713,37.27085],[-6.94698,37.27098],[-6.94672,37.27089],[-6.9466,37.27047],[-6.94641,37.27079],[-6.94616,37.27207],[-6.94604,37.27205],[-6.9459,37.27235],[-6.94562,37.27339],[-6.9451,37.27413],[-6.94429,37.27461],[-6.94396,37.27558]],
+        "hb_moret->h4_mirador": [[-6.94036,37.27016],[-6.94095,37.2706],[-6.94154,37.27083],[-6.94158,37.27092],[-6.94108,37.27258],[-6.94089,37.27289],[-6.94097,37.27298],[-6.94153,37.27324],[-6.94156,37.27336],[-6.94196,37.27372],[-6.94242,37.27445],[-6.94253,37.27444],[-6.94264,37.27459],[-6.94251,37.27479],[-6.94261,37.27484],[-6.9426,37.27493],[-6.94291,37.27513],[-6.94313,37.27545],[-6.94342,37.27559],[-6.94397,37.27552],[-6.94396,37.27558]],
+        "h4_mirador->h5_cinta": [[-6.94396,37.27558],[-6.94417,37.27497],[-6.94412,37.27605],[-6.94349,37.2764],[-6.94326,37.27703],[-6.94312,37.27721],[-6.94337,37.27733],[-6.94328,37.27745],[-6.94332,37.27758],[-6.94358,37.27788],[-6.94426,37.27817]]
+      },
+      "rewards": [
+        {
+          "id": "cinta_cronica",
+          "name": {
+            "es": "La crónica de Díaz Hierro",
+            "en": "Díaz Hierro's chronicle"
+          },
+          "icon": "collectibles/huelva_cinta_cronica.svg",
+          "awardedAtNodeId": "h1_merced"
+        },
+        {
+          "id": "cinta_carabela",
+          "name": {
+            "es": "La carabela de vuelta",
+            "en": "The returning caravel"
+          },
+          "icon": "collectibles/huelva_cinta_carabela.svg",
+          "awardedAtNodeId": "h2_rabida"
+        },
+        {
+          "id": "cinta_espatula",
+          "name": {
+            "es": "La espátula de la marisma",
+            "en": "The marsh spoonbill"
+          },
+          "icon": "collectibles/huelva_cinta_espatula.svg",
+          "awardedAtNodeId": "ha_conquero"
+        },
+        {
+          "id": "cinta_tumulo",
+          "name": {
+            "es": "La vasija del túmulo",
+            "en": "The burial-mound vessel"
+          },
+          "icon": "collectibles/huelva_cinta_tumulo.svg",
+          "awardedAtNodeId": "hb_moret"
+        },
+        {
+          "id": "cinta_vela",
+          "name": {
+            "es": "La vela de la promesa",
+            "en": "The promised candle"
+          },
+          "icon": "collectibles/huelva_cinta_vela.svg",
+          "awardedAtNodeId": "h5_cinta"
+        },
+        {
+          "id": "insignia_cinta",
+          "name": {
+            "es": "¿Cumplió Colón su promesa?",
+            "en": "Did Columbus Keep His Promise?"
+          },
+          "icon": "collectibles/huelva_cinta_insignia.svg",
+          "awardedAtNodeId": "h6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Santuario de Nuestra Señora de la Cinta",
+          "url": "https://es.wikipedia.org/wiki/Santuario_de_Nuestra_Se%C3%B1ora_de_la_Cinta"
+        },
+        {
+          "title": "Wikipedia: Parque Moret",
+          "url": "https://es.wikipedia.org/wiki/Parque_Moret"
+        },
+        {
+          "title": "Wikipedia: Monumento a Colón (Huelva)",
+          "url": "https://es.wikipedia.org/wiki/Monumento_a_Col%C3%B3n_(Huelva)"
+        },
+        {
+          "title": "Wikipedia: Primer viaje de Colón",
+          "url": "https://es.wikipedia.org/wiki/Primer_viaje_de_Col%C3%B3n"
+        }
+      ]
     }
   ]
 }

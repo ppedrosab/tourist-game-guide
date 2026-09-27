@@ -231,6 +231,12 @@ CHARACTERS = {
                         main="#5A2E6E", accent=GOLD, second="#3A1E4E", right="sword", raise_right=True),
     "ibnmalik": dict(skin="media", hair=("short", GREY), beard_=("full", GREY), hat_=("turban", PAPER, SEA), outfit="toga",
                      main="#E9DCC0", accent=SEA, second="#2F6F73", left="book", right="quill"),
+    "diazhierro": dict(skin="clara", hair=("short", "#3A3A3A"), outfit="jacket", main="#5E6B78", accent=PAPER, second="#3A3A48",
+                       neck=PAPER, left="book", right="quill"),
+    "colon": dict(skin="clara", eyes="#3A5A7A", hair=("long", "#E9E4DA"), hat_=("beret", "#7A2E3A"), outfit="tunic", main="#7A2E3A",
+                  accent=GOLD, second="#4A1E24", right="compass"),
+    "whitney": dict(skin="clara", hair=("bun", "#8A5A3A"), outfit="dress", main="#2F6F73", accent=PAPER, second="#1F4F52",
+                    apron=PAPER, right="hammer"),
 }
 
 if __name__ == "__main__":

@@ -218,7 +218,8 @@ teatro romano de Gades?» (Balbo el Menor, la bailarina Telethusa y Columela) y 
 los sabios de Córdoba?» (Séneca, Averroes y Maimónides) y Sevilla «¿Existió Don Juan?» (Miguel Mañara,
 Murillo y Valdés Leal) y Granada «¿Quién escribió los libros de plomo?» (el arzobispo Pedro de Castro y los
 traductores moriscos Alonso del Castillo y Miguel de Luna) y Jaén «¿Quién ganó el castillo de Santa Catalina?»
-(Alhamar, Fernando III e Ibn Malik). Arte en
+(Alhamar, Fernando III e Ibn Malik) y Huelva «¿Cumplió Colón su promesa?» (el cronista Diego Díaz Hierro,
+Colón y la escultora Gertrude Whitney). Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
 ## Arquitectura

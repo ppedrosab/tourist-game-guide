@@ -106,3 +106,21 @@ personajes en `andalucia_sprites.py`.
 - El sendero a pie desde San Lorenzo y si conviene cortarlo en la Cruz.
 
 **Fuentes:** [Pacto de Jaén](https://es.wikipedia.org/wiki/Pacto_de_Ja%C3%A9n), [Castillo de Santa Catalina](https://es.wikipedia.org/wiki/Castillo_de_Santa_Catalina_(Ja%C3%A9n)), [Muhammad ibn Nasr](https://es.wikipedia.org/wiki/Muhammad_ibn_Nasr), [Ibn Malik](https://en.wikipedia.org/wiki/Ibn_Malik), [Real Monasterio de Santa Clara](https://es.wikipedia.org/wiki/Real_Monasterio_de_Santa_Clara_(Ja%C3%A9n)).
+
+## Huelva · «¿Cumplió Colón su promesa?» (`promesa-cinta`)
+
+- **Personajes:** `diazhierro` (guía, Diego Díaz Hierro, cronista oficial de Huelva, 1912-1979), `colon` (Cristóbal Colón, c. 1451-1506) y `whitney` (Gertrude Vanderbilt Whitney, escultora del monumento de la Punta del Sebo, 1875-1942).
+- **Caso:** el 3 de marzo de 1493, en una tormenta del viaje de vuelta, a Colón le tocó por sorteo peregrinar a Santa María de la Cinta. ¿Lo hizo?
+- **Veredicto:** la promesa está en su diario. Que subiera y encendiera una vela lo cuenta la tradición de Huelva; no hay documento de la visita.
+- **Caminos:** La ría (mirador del Conquero sobre las marismas del Odiel) / Los cabezos (parque Moret, túmulos de la Edad del Bronce).
+- **Paradas:** plaza de la Merced → instituto La Rábida (monumento a Díaz Hierro) → Conquero o parque Moret → mirador de la Cinta → santuario de la Cinta.
+- **Tono:** respeto a la devoción. Se cuenta como historia y tradición. Del santuario solo se dibuja la fachada, con paños de azulejo sin figuras. Del monumento de Whitney solo se ve una silueta lejana, sin la cruz.
+
+**Datos a verificar**
+- El texto exacto del diario del 3 de marzo de 1493 (copia de Las Casas).
+- Qué muestran los azulejos de Zuloaga (1920).
+- Si Whitney estuvo en Huelva en la inauguración de 1929.
+- Qué hay en el parque Moret: túmulos y restos del acueducto.
+- La coordenada de la Merced: la del pack de historia (37.2638, −6.9478) no coincide con la de Nominatim (37.2624, −6.9524).
+
+**Fuentes:** [Santuario de la Cinta](https://es.wikipedia.org/wiki/Santuario_de_Nuestra_Se%C3%B1ora_de_la_Cinta), [Parque Moret](https://es.wikipedia.org/wiki/Parque_Moret), [Monumento a Colón (Huelva)](https://es.wikipedia.org/wiki/Monumento_a_Col%C3%B3n_(Huelva)), [Primer viaje de Colón](https://es.wikipedia.org/wiki/Primer_viaje_de_Col%C3%B3n), [Diego Díaz Hierro](https://es.wikipedia.org/wiki/Diego_D%C3%ADaz_Hierro).
