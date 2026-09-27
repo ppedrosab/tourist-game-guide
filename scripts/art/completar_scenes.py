@@ -2,13 +2,14 @@
 """
 Fondos de las rutas que completan las ciudades (ver docs/CIUDADES_QUE_FALTAN.md).
 Málaga: iglesia de Santiago, plaza de toros de La Malagueta, Palacio de Buenavista (Museo Picasso).
+Cádiz: arco del Pópulo, teatro romano, Casa del Almirante, Casa de las Cuatro Torres, castillo de Santa Catalina.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, STONE, OUT,
-                          f, sky, window, house, palm, lamp, person, floor, bench, tree, far_city, fx, doc)
+from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, MINT, STONE, OUT, W,
+                          f, sky, window, house, mirador, palm, lamp, person, floor, bench, tree, far_city, fx, doc)
 from sevilla_scenes import ALMAGRA, BRICK
 from cordoba_scenes import ground
 
@@ -96,7 +97,96 @@ def malaga_buenavista():
     return doc(p, "Museo Picasso Málaga", [sky(p, sun, [(90, 70, .8)], [(200, 50), (218, 44, .8)]), far, mid, near, fx(p, sun, 420)])
 
 
-SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista}
+
+def cadiz_populo():
+    p = "cpo"; sun = (300, 110)
+    far = f'<g id="far">{far_city(250, 71, towers=3)}</g>'
+    c, dk, lt = STONE
+    wall = (f'<path d="M-10 390V200H400V390Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
+            + "".join(f'<path d="M{x} 200V186H{x + 16}V200" fill="{lt}" stroke="{INK}" stroke-width="1.4"/>' for x in range(-6, 400, 30))
+            + f'<path d="M140 390V280Q195 220 250 280V390Z" fill="#6E5A48" stroke="{INK}" stroke-width="1.8"/>'
+            f'<path d="M150 390V284Q195 234 240 284V390Z" fill="#3A2E28"/>'
+            f'<path d="M128 280Q195 206 262 280" fill="none" stroke="{dk}" stroke-width="8"/>'
+            # capillita sobre el arco
+            f'<path d="M176 236H214V210H176Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.4"/><path d="M172 210L195 196L218 210Z" fill="{CLAY}" stroke="{INK}" stroke-width="1.4"/>'
+            + house(-20, 120, 120, 80, YELLOW, floors=1, cols=2, door=False) + house(300, 110, 110, 90, PINK, floors=1, cols=2, door=False))
+    mid = f'<g id="mid">{wall}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + lamp(60, 480) + lamp(330, 480)
+            + person(195, 440, .9, SEA) + person(120, 456, 1, CLAY, dress=True) + "</g>")
+    return doc(p, "Arco del Pópulo", [sky(p, sun, [(80, 70, .8)], [(220, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
+def cadiz_teatro():
+    p = "cte"; sun = (90, 120)
+    far = f'<g id="far">{far_city(240, 131, towers=4)}</g>'
+    c, dk, lt = STONE
+    # gradas del teatro en semicírculo, con las casas del Pópulo detrás
+    back = house(-20, 170, 130, 150, WHITE, floors=2, cols=2) + house(110, 160, 150, 160, YELLOW, floors=2, cols=3) + house(260, 175, 150, 145, PINK, floors=2, cols=2)
+    cavea = ""
+    for k in range(6):
+        y = 300 + k * 16
+        cavea += f'<path d="M{-10 + k * 18} {y}Q195 {y + 60 - k * 6} {400 - k * 18} {y}" fill="none" stroke="{INK}" stroke-width="{f(9 - k * .6)}"/>'
+        cavea += f'<path d="M{-10 + k * 18} {y}Q195 {y + 60 - k * 6} {400 - k * 18} {y}" fill="none" stroke="{lt if k % 2 else c}" stroke-width="{f(6 - k * .5)}"/>'
+    orchestra = f'<path d="M100 400Q195 360 290 400Z" fill="{dk}" stroke="{INK}" stroke-width="1.6"/>'
+    mid = f'<g id="mid">{back}<path d="M-10 290H400V410H-10Z" fill="{c}" stroke="{INK}" stroke-width="1.4"/>{cavea}{orchestra}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}'
+            + "".join(f'<path d="M{x} 460V420H{x + 16}V460Z" fill="{lt}" stroke="{INK}" stroke-width="1.4"/><path d="M{x - 4} 420H{x + 20}V412H{x - 4}Z" fill="{dk}" stroke="{INK}" stroke-width="1.2"/>' for x in (40, 334))
+            + person(170, 450, 1, SEA) + person(230, 454, .95, CLAY, dress=True) + "</g>")
+    return doc(p, "Teatro romano de Cádiz", [sky(p, sun, [(260, 70, .8)], [(150, 70)]), far, mid, near, fx(p, sun, 420)])
+
+
+def cadiz_almirante():
+    p = "cal"; sun = (310, 100)
+    far = f'<g id="far">{far_city(250, 43, towers=2)}</g>'
+    front = (f'<path d="M40 390V170H350V390Z" fill="#F4EFE6" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M34 170H356V156H34Z" fill="#E3D5BE" stroke="{INK}" stroke-width="1.6"/>'
+             # portada de mármol rojo y blanco en dos cuerpos
+             f'<path d="M140 390V200H250V390Z" fill="#C0584A" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M156 390V310Q195 280 234 310V390Z" fill="#4A2E24" stroke="{INK}" stroke-width="1.6"/>'
+             + "".join(f'<path d="M{x} 390V226" stroke="#F4EFE6" stroke-width="7"/><path d="M{x} 390V226" stroke="{INK}" stroke-width=".8" opacity=".5"/>' for x in (148, 242))
+             + f'<path d="M136 270H254V260H136Z" fill="#F4EFE6" stroke="{INK}" stroke-width="1.2"/>'
+             f'<path d="M170 250V214H220V250Z" fill="#F4EFE6" stroke="{INK}" stroke-width="1.2"/><circle cx="195" cy="232" r="10" fill="{GOLD}" stroke="{INK}" stroke-width="1.2"/>'
+             + "".join(window(x, 210, 20, 36, shutters=False, balcony=True, sw=1.1) for x in (60, 100, 280, 320))
+             + mirador(290, 110, 40, 60, WHITE))
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + tree(20, 500, 34) + tree(370, 500, 34)
+            + person(110, 454, 1, "#34495E") + person(290, 458, .95, SEA, dress=True) + "</g>")
+    return doc(p, "Casa del Almirante", [sky(p, sun, [(90, 80, .8)], [(200, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
+def cadiz_cuatrotorres():
+    p = "c4t"; sun = (80, 110)
+    far = f'<g id="far">{far_city(250, 211, towers=3)}</g>'
+    front = house(30, 190, 330, 200, WHITE, floors=3, cols=5)
+    towers = "".join(mirador(x, 130, 34, 60, WHITE) for x in (40, 130, 226, 316))
+    mid = f'<g id="mid">{towers}{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + palm(30, 520, 160, -6) + bench(250, 470)
+            + person(140, 452, 1, CLAY) + person(200, 456, .9, SEA, dress=True) + "</g>")
+    return doc(p, "Casa de las Cuatro Torres", [sky(p, sun, [(280, 70, .8)], [(160, 60), (178, 52, .8)]), far, mid, near, fx(p, sun, 420)])
+
+
+def cadiz_santacatalina():
+    p = "csc"; sun = (220, 150)
+    far = f'<g id="far"><rect x="-10" y="290" width="{W + 20}" height="20" fill="#E1B28C"/></g>'
+    sea = (f'<g id="sea"><rect x="-10" y="300" width="{W + 20}" height="120" fill="url(#{p}sea)"/>'
+           + "".join(f'<path d="M{x} {y}L{x + ln} {y}" stroke="#E6F2EF" stroke-width="1.6" opacity=".7"/>' for x, y, ln in [(40, 330, 30), (220, 318, 24), (300, 350, 34), (120, 372, 22)])
+           + "</g>")
+    c, dk, lt = STONE
+    # baluarte en punta de estrella con garita
+    castle = (f'<path d="M-10 420V300L120 262L200 300L200 420Z" fill="{c}" stroke="{INK}" stroke-width="1.8"/>'
+              f'<path d="M120 262L200 300L200 420L120 420Z" fill="{dk}" opacity=".4"/>'
+              f'<path d="M-10 300L120 262L200 300" fill="none" stroke="{lt}" stroke-width="5"/>'
+              f'<path d="M108 262V232Q120 220 132 232V262Z" fill="{lt}" stroke="{INK}" stroke-width="1.6"/><path d="M104 232L120 218L136 232Z" fill="{dk}" stroke="{INK}" stroke-width="1.4"/>'
+              f'<path d="M40 420V360Q60 340 80 360V420Z" fill="#4A3A30" stroke="{INK}" stroke-width="1.6"/>')
+    mid = f'<g id="mid">{castle}</g>'
+    near = (f'<g id="near"><rect x="-10" y="412" width="{W + 20}" height="150" fill="#EBD3AC"/>'
+            + person(260, 446, 1, CLAY, dress=True) + person(300, 452, .9, SEA) + palm(370, 460, 200, -8) + "</g>")
+    return doc(p, "Castillo de Santa Catalina", [sky(p, sun, [(80, 90, .9)], [(160, 90), (300, 110, .8)]), far, sea, mid, near, fx(p, sun, 412, .25)])
+
+
+SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
+          "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
+          "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

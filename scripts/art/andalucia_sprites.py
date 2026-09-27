@@ -200,6 +200,13 @@ CHARACTERS = {
                        accent="#2B2A33", second="#3A3A48", left="palette"),
     "mariapicasso": dict(skin="media", hair=("bun", "#1E1A1A"), outfit="dress", main="#4A2E45", accent=GOLD, second="#2B2A33", neck=PAPER,
                          left="fan"),
+    # Cádiz · el teatro de Gades: Balbo con toga y laurel, Telethusa con crótalos, Columela con su libro y olivo
+    "balbo": dict(skin="media", hair=("short", "#3A2A1E"), hat_=("laurel", "#4F8B5A"), outfit="toga", main=PAPER, accent="#7A2E3A",
+                  second="#7A2E3A", left="scroll", raise_right=True),
+    "telethusa": dict(skin="morena", hair=("long", "#1E1A1A"), hat_=("flower", "#D8412F", GOLD), outfit="dress", main="#D8412F", accent=GOLD,
+                      second="#9C2A22", left="castanets", right="castanets", raise_right=True),
+    "columela": dict(skin="morena", hair=("short", GREY), beard_=("short", GREY), outfit="tunic", main="#C9A05E", accent="#6B4A2E",
+                     second="#6B4A2E", left="book", right="olive"),
 }
 
 if __name__ == "__main__":

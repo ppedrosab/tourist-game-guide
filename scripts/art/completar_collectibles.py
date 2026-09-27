@@ -45,9 +45,42 @@ mal = {
     "insignia": SKY + pigeon(60, 70, 1.1, PAPER) + f'<path d="M34 94Q60 104 86 94" fill="none" stroke="{GOLD}" stroke-width="4"/>' + sparkle(28, 30, 6, GOLD) + sparkle(94, 36, 4, GOLD),
 }
 
+def mask(x, y, s=1.0, c=PAPER):
+    return (f'<path d="M{x - 24 * s} {y - 22 * s}Q{x} {y - 34 * s} {x + 24 * s} {y - 22 * s}Q{x + 26 * s} {y + 10 * s} {x} {y + 30 * s}Q{x - 26 * s} {y + 10 * s} {x - 24 * s} {y - 22 * s}Z" fill="{c}" stroke="{INK}" stroke-width="2.2"/>'
+            f'<ellipse cx="{x - 10 * s}" cy="{y - 6 * s}" rx="{6 * s}" ry="{4 * s}" fill="{INK}"/><ellipse cx="{x + 10 * s}" cy="{y - 6 * s}" rx="{6 * s}" ry="{4 * s}" fill="{INK}"/>'
+            f'<path d="M{x - 12 * s} {y + 10 * s}Q{x} {y + 22 * s} {x + 12 * s} {y + 10 * s}Q{x} {y + 16 * s} {x - 12 * s} {y + 10 * s}Z" fill="{INK}"/>')
+
+
+def castanet(x, y, r=16, c=WOOD):
+    return (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{c}" stroke="{INK}" stroke-width="2.2"/>'
+            f'<path d="M{x - r * 0.6} {y - r * 0.3}Q{x - r * 0.2} {y - r * 0.8} {x + r * 0.3} {y - r * 0.6}" fill="none" stroke="{WOODL}" stroke-width="2"/>'
+            f'<path d="M{x} {y - r}Q{x + 4} {y - r - 12} {x + 12} {y - r - 14}" fill="none" stroke="{RED}" stroke-width="2.4"/>')
+
+
+cad = {
+    "mascara": BG + mask(60, 64, 1.15) + sparkle(96, 30, 5, GOLD),
+    "crotalos": BG + castanet(44, 70) + castanet(76, 64, 16, WOODL) + sparkle(28, 32, 5, GOLD),
+    "anillo": BG + (f'<ellipse cx="60" cy="72" rx="28" ry="24" fill="none" stroke="{INK}" stroke-width="10"/>'
+                    f'<ellipse cx="60" cy="72" rx="28" ry="24" fill="none" stroke="{GOLD}" stroke-width="6"/>'
+                    f'<ellipse cx="60" cy="44" rx="14" ry="10" fill="{RED}" stroke="{INK}" stroke-width="2.2"/>'
+                    f'<path d="M54 42Q60 36 66 42" fill="none" stroke="{WHITE}" stroke-width="1.6"/>'),
+    "versos": BG + (f'<path d="M36 32H84Q90 32 90 38V90Q90 96 84 96H36Q30 96 30 90V38Q30 32 36 32Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.2"/>'
+                    + "".join(f'<text x="60" y="{47 + k * 10}" font-family="Georgia, serif" font-style="italic" font-size="7.5" text-anchor="middle" fill="{INK}">{w}</text>'
+                              for k, w in enumerate(["Nec de Gadibus", "improbis puellae", "vibrabunt", "sine fine…"]))
+                    + f'<text x="60" y="88" font-family="Georgia, serif" font-weight="700" font-size="8.5" text-anchor="middle" fill="{CLAY}">MARTIALIS</text>'),
+    "atun": SKY + (f'<path d="M18 68Q40 42 76 56L98 42L94 68L98 94L76 80Q40 94 18 68Z" fill="{SILVER}" stroke="{INK}" stroke-width="2.4"/>'
+                   f'<path d="M30 68Q52 58 76 66" fill="none" stroke="{NAVY}" stroke-width="3"/>'
+                   f'<circle cx="32" cy="64" r="3" fill="{INK}"/><path d="M52 50L60 40L64 52Z" fill="{NAVY}" stroke="{INK}" stroke-width="1.6"/>'),
+    "insignia": BG + (f'<path d="M20 92Q60 30 100 92" fill="none" stroke="{INK}" stroke-width="3"/>'
+                      + "".join(f'<path d="M{20 + k * 7} 92Q60 {40 + k * 8} {100 - k * 7} 92" fill="none" stroke="{INK}" stroke-width="1.6"/>' for k in range(1, 5))
+                      + f'<path d="M44 96H76" stroke="{INK}" stroke-width="3"/>' + mask(60, 58, 0.55, GOLD) + sparkle(96, 30, 5, GOLD)),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
+    "cadiz_teatro": (cad, [("mascara", "La máscara del teatro"), ("crotalos", "Los crótalos de Telethusa"), ("anillo", "El anillo de caballero"),
+                           ("versos", "Los versos de Marcial"), ("atun", "El atún de Gades"), ("insignia", "¿Quién pagó el teatro romano de Gades?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

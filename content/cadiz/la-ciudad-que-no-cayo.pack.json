@@ -1,6 +1,6 @@
 {
   "id": "cadiz",
-  "version": 5,
+  "version": 6,
   "name": {
     "es": "Cádiz",
     "en": "Cádiz"
@@ -494,6 +494,90 @@
         {
           "title": "Wikipedia: Drago",
           "url": "https://es.wikipedia.org/wiki/Drago"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "balbo",
+      "name": {
+        "es": "Balbo el Menor",
+        "en": "Balbus the Younger"
+      },
+      "description": {
+        "es": "Lucio Cornelio Balbo, gaditano que triunfó en Roma y mandó construir el teatro de su ciudad. Generoso, orgulloso y un poco presumido.",
+        "en": "Lucius Cornelius Balbus, a man of Gades who triumphed in Rome and had his city's theatre built. Generous, proud and a little vain."
+      },
+      "avatar": "sprites/balbo/balbo_neutral.svg",
+      "era": "s. I a. C.",
+      "kind": "real",
+      "lived": "s. I a. C.",
+      "bio": {
+        "es": "Lucio Cornelio Balbo el Menor, sobrino de Balbo el Mayor (el primer cónsul de Roma nacido fuera de Italia), fue procónsul de África y en el año 19 a. C. celebró un triunfo en Roma, el último concedido a alguien que no era de la familia imperial. Engrandeció Gades con un barrio nuevo, un puerto y el teatro, uno de los más antiguos de Hispania.",
+        "en": "Lucius Cornelius Balbus the Younger, nephew of Balbus the Elder (Rome's first consul born outside Italy), was proconsul of Africa and in 19 BC celebrated a triumph in Rome, the last granted to someone outside the imperial family. He enlarged Gades with a new district, a harbour and the theatre, one of the oldest in Hispania."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Teatro romano de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Teatro_romano_de_C%C3%A1diz"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "telethusa",
+      "name": {
+        "es": "Telethusa",
+        "en": "Telethusa"
+      },
+      "description": {
+        "es": "Bailarina de Gades famosa en Roma, a la que dedicó versos el poeta Marcial. Alegre, orgullosa de su arte y con unos crótalos siempre a mano.",
+        "en": "A dancer from Gades famous in Rome, to whom the poet Martial dedicated verses. Cheerful, proud of her art and always with her castanets."
+      },
+      "avatar": "sprites/telethusa/telethusa_neutral.svg",
+      "era": "s. I",
+      "kind": "real",
+      "lived": "s. I",
+      "bio": {
+        "es": "Las «puellae gaditanae» eran bailarinas de la Bética famosas en la Roma imperial. Bailaban con crótalos (castañuelas) y las citan Marcial, Juvenal y otros autores. Marcial nombra a Telethusa, experta en danzar a los ritmos de Gades. Se ha visto en ellas un precedente lejano del baile andaluz.",
+        "en": "The “puellae gaditanae” were dancers from Baetica famous in imperial Rome. They danced with crotala (castanets) and are mentioned by Martial, Juvenal and other writers. Martial names Telethusa, skilled at dancing to the rhythms of Gades. They have been seen as a distant forerunner of Andalusian dance."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia (en): Puellae gaditanae",
+          "url": "https://en.wikipedia.org/wiki/Puellae_gaditanae"
+        }
+      ],
+      "voice": {
+        "gender": "f"
+      }
+    },
+    {
+      "id": "columela",
+      "name": {
+        "es": "Columela",
+        "en": "Columella"
+      },
+      "description": {
+        "es": "Lucio Junio Moderato Columela, gaditano, el gran escritor romano del campo. Paciente, práctico y con tierra en las sandalias.",
+        "en": "Lucius Junius Moderatus Columella, from Gades, Rome's great writer on farming. Patient, practical and with soil on his sandals."
+      },
+      "avatar": "sprites/columela/columela_neutral.svg",
+      "era": "4-c. 70",
+      "kind": "real",
+      "lived": "4-c. 70",
+      "bio": {
+        "es": "Columela nació en Gades hacia el año 4 y murió en Tarento hacia el 70. Escribió «De re rustica», doce libros sobre agricultura, ganadería y apicultura, uno de ellos en verso. Cuenta lo que aprendió de su tío Marco, que tenía tierras en la Bética.",
+        "en": "Columella was born in Gades around AD 4 and died in Tarentum around 70. He wrote “De re rustica”, twelve books on farming, livestock and beekeeping, one of them in verse. He tells what he learned from his uncle Marcus, who owned land in Baetica."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Columela",
+          "url": "https://es.wikipedia.org/wiki/Columela"
         }
       ],
       "voice": {
@@ -6432,6 +6516,946 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "teatro-gades",
+      "title": {
+        "es": "¿Quién pagó el teatro romano de Gades?",
+        "en": "Who Paid for the Roman Theatre of Gades?"
+      },
+      "summary": {
+        "es": "Bajo el barrio del Pópulo apareció en 1980 un teatro romano para diez mil personas. ¿Lo pagó el mar, la fama de sus bailarinas o el orgullo de Roma? Con Balbo el Menor, la bailarina Telethusa y el agrónomo Columela.",
+        "en": "In 1980 a Roman theatre for ten thousand people turned up beneath El Pópulo. Was it paid for by the sea, the fame of its dancers or the pride of Rome? With Balbus the Younger, the dancer Telethusa and the agronomist Columella."
+      },
+      "era": "s. I a. C. - 1598",
+      "guideCharacterId": "balbo",
+      "durationMin": 65,
+      "distanceKm": 2.4,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "El dinero",
+            "en": "The money"
+          },
+          "trail": {
+            "es": "camino del dinero",
+            "en": "money trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "La fiesta",
+            "en": "The show"
+          },
+          "trail": {
+            "es": "camino de la fiesta",
+            "en": "show trail"
+          }
+        }
+      },
+      "startNodeId": "t1_populo",
+      "nodes": [
+        {
+          "id": "t1_populo",
+          "title": {
+            "es": "Arco del Pópulo",
+            "en": "Arco del Pópulo"
+          },
+          "location": {
+            "lat": 36.52956,
+            "lng": -6.29362
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_populo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_populo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "balbo",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "proud",
+              "text": {
+                "es": "Salve. Lucio Cornelio Balbo, gaditano. Mi tío fue el primer cónsul de Roma nacido fuera de Italia, y yo el último particular al que Roma concedió un triunfo. Casi nada.",
+                "en": "Salve. Lucius Cornelius Balbus, from Gades. My uncle was Rome's first consul born outside Italy, and I was the last private citizen Rome granted a triumph. No small thing."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "thinking",
+              "text": {
+                "es": "Ahí abajo hay un teatro para diez mil personas. Una ciudad de comerciantes con un teatro así… ¿quién lo pagó? ¿El dinero del mar, la fama de sus fiestas o el orgullo de Roma?",
+                "en": "Down there is a theatre for ten thousand people. A merchants' town with a theatre like that… who paid for it? The money of the sea, the fame of its shows or the pride of Rome?"
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Pópulo es el barrio más antiguo de Cádiz. El arco del Pópulo era una de las puertas de la muralla medieval.",
+                "en": "El Pópulo is the oldest neighbourhood in Cádiz. The Arco del Pópulo was one of the gates of the medieval wall."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué es el Pópulo?",
+              "en": "What is El Pópulo?"
+            },
+            "options": [
+              {
+                "es": "Una playa",
+                "en": "A beach"
+              },
+              {
+                "es": "El barrio más antiguo de Cádiz",
+                "en": "The oldest neighbourhood in Cádiz"
+              },
+              {
+                "es": "Un castillo",
+                "en": "A castle"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El barrio más antiguo de la ciudad; el arco era una puerta de la muralla.",
+              "en": "The city's oldest neighbourhood; the arch was a gate in the wall."
+            }
+          },
+          "clue": {
+            "id": "tea_pista_balbo",
+            "text": {
+              "es": "Roma · Los Balbo, gaditanos, llegaron a lo más alto de Roma: un cónsul y un triunfo.",
+              "en": "Rome · The Balbi, from Gades, reached the top in Rome: a consul and a triumph."
+            }
+          },
+          "nextNodeId": "t2_teatro",
+          "nextHint": {
+            "es": "Baja al teatro romano, a dos calles. Un minuto.",
+            "en": "Go down to the Roman theatre, two streets away. One minute."
+          }
+        },
+        {
+          "id": "t2_teatro",
+          "title": {
+            "es": "Teatro romano",
+            "en": "Roman theatre"
+          },
+          "location": {
+            "lat": 36.52826,
+            "lng": -6.29367
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_teatro.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_teatro.svg"
+              ],
+              "characters": [
+                {
+                  "id": "balbo",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "telethusa",
+                  "expression": "proud",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El teatro romano de Cádiz lo mandó construir Balbo el Menor en el siglo I a. C. Mide casi 120 metros de diámetro: es de los más antiguos de Hispania y el segundo más grande, tras el de Córdoba.",
+                "en": "Cádiz's Roman theatre was built by Balbus the Younger in the 1st century BC. It is almost 120 metres across: one of the oldest in Hispania and the second largest, after Córdoba's."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Estuvo escondido bajo las casas del Pópulo hasta que lo encontraron en 1980, cuando buscaban el castillo medieval.",
+                "en": "It lay hidden under the houses of El Pópulo until it was found in 1980, while archaeologists were looking for the medieval castle."
+              },
+              "year": 1980
+            },
+            {
+              "type": "dialogue",
+              "characterId": "telethusa",
+              "expression": "proud",
+              "text": {
+                "es": "Telethusa, bailarina de Gades. En Roma nos llamaban «puellae gaditanae». El poeta Marcial me dedicó versos: bailaba con crótalos, al ritmo de mi tierra.",
+                "en": "Telethusa, a dancer from Gades. In Rome they called us “puellae gaditanae”, the girls of Gades. The poet Martial wrote verses about me: I danced with castanets, to the rhythm of my land."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuándo se descubrió el teatro romano de Cádiz?",
+              "en": "When was the Roman theatre of Cádiz discovered?"
+            },
+            "options": [
+              {
+                "es": "En 1980",
+                "en": "In 1980"
+              },
+              {
+                "es": "En 1812",
+                "en": "In 1812"
+              },
+              {
+                "es": "En 1596",
+                "en": "In 1596"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "En 1980, bajo las casas del Pópulo.",
+              "en": "In 1980, under the houses of El Pópulo."
+            }
+          },
+          "clue": {
+            "id": "tea_pista_marcial",
+            "text": {
+              "es": "La fiesta · Las bailarinas de Gades eran famosas en Roma: Marcial escribió sobre Telethusa.",
+              "en": "The show · The dancers of Gades were famous in Rome: Martial wrote about Telethusa."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "balbo",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Seguimos el rastro del dinero o el de la fiesta?",
+              "en": "Shall we follow the money or the show?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "El dinero",
+                "en": "The money"
+              },
+              "hint": {
+                "es": "La Casa del Almirante",
+                "en": "The Admiral's House"
+              },
+              "targetNodeId": "ta_almirante",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            },
+            {
+              "label": {
+                "es": "La fiesta",
+                "en": "The show"
+              },
+              "hint": {
+                "es": "La iglesia de Santa Cruz",
+                "en": "The church of Santa Cruz"
+              },
+              "targetNodeId": "tb_santacruz",
+              "setFlags": [
+                "camino_fiesta"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            }
+          ]
+        },
+        {
+          "id": "ta_almirante",
+          "title": {
+            "es": "Casa del Almirante",
+            "en": "Admiral's House"
+          },
+          "location": {
+            "lat": 36.5293,
+            "lng": -6.29386
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_cadiz_almirante.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_almirante.svg"
+              ],
+              "characters": [
+                {
+                  "id": "balbo",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El geógrafo Estrabón escribió que Gades tenía quinientos ciudadanos del orden ecuestre, los ricos de Roma: tantos como las mayores ciudades de Italia.",
+                "en": "The geographer Strabo wrote that Gades had five hundred citizens of equestrian rank, Rome's wealthy class: as many as the largest cities in Italy."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "proud",
+              "text": {
+                "es": "Salazones de atún, garum, barcos a todo el Mediterráneo… Gades era rica. Mi familia la agrandó: le construimos un barrio nuevo y un puerto.",
+                "en": "Salted tuna, garum, ships all over the Mediterranean… Gades was rich. My family enlarged it: we built it a new district and a harbour."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Esta casa es de finales del siglo XVII: la levantó un almirante de la flota de Indias. En Cádiz, el dinero del mar siempre ha construido palacios.",
+                "en": "This house dates from the late 17th century: it was built by an admiral of the Indies fleet. In Cádiz, the sea's money has always built palaces."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "Según Estrabón, ¿cuántos ciudadanos ricos (del orden ecuestre) tenía Gades?",
+              "en": "According to Strabo, how many wealthy (equestrian) citizens did Gades have?"
+            },
+            "options": [
+              {
+                "es": "Cinco",
+                "en": "Five"
+              },
+              {
+                "es": "Cincuenta mil",
+                "en": "Fifty thousand"
+              },
+              {
+                "es": "Quinientos",
+                "en": "Five hundred"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Quinientos, tantos como las mayores ciudades de Italia.",
+              "en": "Five hundred, as many as the largest cities in Italy."
+            }
+          },
+          "clue": {
+            "id": "tea_pista_quinientos",
+            "text": {
+              "es": "El dinero · Gades tenía quinientos ricos del orden ecuestre, según Estrabón: dinero no faltaba.",
+              "en": "The money · Gades had five hundred wealthy knights, according to Strabo: money was not lacking."
+            }
+          },
+          "nextNodeId": "t4_cuatrotorres",
+          "nextHint": {
+            "es": "Cruza la ciudad hasta la Casa de las Cuatro Torres. Unos 12 minutos.",
+            "en": "Cross the city to the House of the Four Towers. About 12 minutes."
+          }
+        },
+        {
+          "id": "tb_santacruz",
+          "title": {
+            "es": "Iglesia de Santa Cruz",
+            "en": "Church of Santa Cruz"
+          },
+          "location": {
+            "lat": 36.52842,
+            "lng": -6.29442
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_cadiz_catedral.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_catedral.svg"
+              ],
+              "characters": [
+                {
+                  "id": "telethusa",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "balbo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Santa Cruz fue la catedral de Cádiz hasta el siglo XIX; por eso la llaman la Catedral Vieja. Se reconstruyó tras el saqueo de 1596.",
+                "en": "Santa Cruz was Cádiz cathedral until the 19th century; that's why it's called the Old Cathedral. It was rebuilt after the sack of 1596."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "telethusa",
+              "expression": "happy",
+              "text": {
+                "es": "Las gaditanas bailábamos en los banquetes de los ricos de Roma. Juvenal decía que nuestros bailes eran demasiado atrevidos. ¡Lo decía porque no sabía bailar!",
+                "en": "We girls of Gades danced at the banquets of Rome's rich. Juvenal said our dances were too daring. He said so because he couldn't dance!"
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "telethusa",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero las bailarinas no pagábamos teatros. Llenábamos los asientos, eso sí.",
+                "en": "But we dancers didn't pay for theatres. We filled the seats, though."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Por qué a Santa Cruz la llaman la Catedral Vieja?",
+              "en": "Why is Santa Cruz called the Old Cathedral?"
+            },
+            "options": [
+              {
+                "es": "Porque está en ruinas",
+                "en": "Because it is in ruins"
+              },
+              {
+                "es": "Porque fue la catedral hasta el siglo XIX",
+                "en": "Because it was the cathedral until the 19th century"
+              },
+              {
+                "es": "Porque es romana",
+                "en": "Because it is Roman"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Porque fue la catedral hasta que se terminó la nueva, en el siglo XIX.",
+              "en": "Because it was the cathedral until the new one was finished, in the 19th century."
+            }
+          },
+          "clue": {
+            "id": "tea_pista_llenar",
+            "text": {
+              "es": "La fiesta · Las bailarinas llenaban los asientos, pero no pagaban los teatros.",
+              "en": "The show · The dancers filled the seats, but didn't pay for the theatres."
+            }
+          },
+          "nextNodeId": "t4_cuatrotorres",
+          "nextHint": {
+            "es": "Cruza la ciudad hasta la Casa de las Cuatro Torres. Unos 12 minutos.",
+            "en": "Cross the city to the House of the Four Towers. About 12 minutes."
+          }
+        },
+        {
+          "id": "t4_cuatrotorres",
+          "title": {
+            "es": "Casa de las Cuatro Torres",
+            "en": "House of the Four Towers"
+          },
+          "location": {
+            "lat": 36.53601,
+            "lng": -6.29398
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_cuatrotorres.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_cuatrotorres.svg"
+              ],
+              "characters": [
+                {
+                  "id": "columela",
+                  "expression": "happy",
+                  "position": "left"
+                },
+                {
+                  "id": "balbo",
+                  "expression": "neutral",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Casa de las Cuatro Torres, del siglo XVIII, tiene una torre mirador en cada esquina: los comerciantes vigilaban desde ellas la llegada de sus barcos.",
+                "en": "The 18th-century House of the Four Towers has a lookout tower at each corner: merchants watched from them for their ships to come in."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "columela",
+              "expression": "happy",
+              "text": {
+                "es": "Lucio Junio Moderato Columela, también de Gades. Escribí doce libros sobre el campo: vides, olivos, abejas… Mi tío tenía tierras cerca de aquí.",
+                "en": "Lucius Junius Moderatus Columella, also from Gades. I wrote twelve books about farming: vines, olives, bees… My uncle had land near here."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes del dinero: quinientos ricos. ¿Seguimos la pista del mar o la de Roma?",
+                    "en": "You've come from the money: five hundred rich men. Shall we follow the sea lead or the Rome lead?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fiesta"
+                  ],
+                  "text": {
+                    "es": "Vienes de la fiesta: bailarinas que llenaban asientos. ¿Seguimos la pista del mar o la de Roma?",
+                    "en": "You've come from the show: dancers who filled seats. Shall we follow the sea lead or the Rome lead?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué servían las torres mirador de Cádiz?",
+              "en": "What were Cádiz's lookout towers for?"
+            },
+            "options": [
+              {
+                "es": "Para ver llegar los barcos",
+                "en": "To watch the ships come in"
+              },
+              {
+                "es": "Para tocar campanas",
+                "en": "To ring bells"
+              },
+              {
+                "es": "Para guardar grano",
+                "en": "To store grain"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Para ver llegar los barcos: Cádiz llegó a tener más de cien.",
+              "en": "To watch the ships come in: Cádiz came to have over a hundred."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "balbo",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El mar o Roma?",
+              "en": "The sea or Rome?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del mar",
+                "en": "The sea lead"
+              },
+              "hint": {
+                "es": "Con Columela",
+                "en": "With Columella"
+              },
+              "targetNodeId": "t4a_mar",
+              "setFlags": [
+                "version_mar"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de Roma",
+                "en": "The Rome lead"
+              },
+              "hint": {
+                "es": "Con Balbo",
+                "en": "With Balbus"
+              },
+              "targetNodeId": "t4b_roma",
+              "setFlags": [
+                "version_roma"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t4a_mar",
+          "title": {
+            "es": "El mar",
+            "en": "The sea"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "columela",
+              "expression": "thinking",
+              "text": {
+                "es": "El campo daba vino y aceite, pero la riqueza de Gades venía del mar: el atún, las salazones y los barcos que las llevaban a Roma.",
+                "en": "The land gave wine and oil, but Gades' wealth came from the sea: tuna, salted fish and the ships that carried them to Rome."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "columela",
+              "expression": "proud",
+              "text": {
+                "es": "Con ese dinero se pagaban templos, murallas… y teatros.",
+                "en": "That money paid for temples, walls… and theatres."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tea_pista_atun",
+            "text": {
+              "es": "El dinero · La riqueza de Gades venía del mar: atún, salazones y comercio.",
+              "en": "The money · Gades' wealth came from the sea: tuna, salted fish and trade."
+            }
+          },
+          "nextNodeId": "t5_santacatalina",
+          "nextHint": {
+            "es": "Al castillo de Santa Catalina, junto a La Caleta. Unos 20 minutos.",
+            "en": "To Santa Catalina castle, by La Caleta. About 20 minutes."
+          }
+        },
+        {
+          "id": "t4b_roma",
+          "title": {
+            "es": "Roma",
+            "en": "Rome"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "proud",
+              "text": {
+                "es": "Yo quería que Gades brillara ante Roma. Mi fortuna la hice con el comercio y con las campañas; y la gasté en mi ciudad: un barrio nuevo, el puerto… y el teatro.",
+                "en": "I wanted Gades to shine before Rome. I made my fortune in trade and in the campaigns; and I spent it on my city: a new district, the harbour… and the theatre."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "thinking",
+              "text": {
+                "es": "Hasta monté allí una obra sobre mí mismo. Un poco presumido, lo reconozco.",
+                "en": "I even staged a play about myself there. A little vain, I admit."
+              }
+            }
+          ],
+          "clue": {
+            "id": "tea_pista_orgullo",
+            "text": {
+              "es": "Roma · Balbo gastó su fortuna en la ciudad para que brillara ante Roma.",
+              "en": "Rome · Balbus spent his fortune on the city so it would shine before Rome."
+            }
+          },
+          "nextNodeId": "t5_santacatalina",
+          "nextHint": {
+            "es": "Al castillo de Santa Catalina, junto a La Caleta. Unos 20 minutos.",
+            "en": "To Santa Catalina castle, by La Caleta. About 20 minutes."
+          }
+        },
+        {
+          "id": "t5_santacatalina",
+          "title": {
+            "es": "Castillo de Santa Catalina",
+            "en": "Santa Catalina castle"
+          },
+          "location": {
+            "lat": 36.53277,
+            "lng": -6.30807
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_cadiz_santacatalina.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_cadiz_santacatalina.svg"
+              ],
+              "characters": [
+                {
+                  "id": "balbo",
+                  "expression": "thinking",
+                  "position": "left"
+                },
+                {
+                  "id": "telethusa",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El castillo de Santa Catalina se empezó en 1598, después del saqueo anglo-holandés de 1596, para defender la ciudad. Es la fortaleza más antigua de Cádiz que sigue en pie.",
+                "en": "Santa Catalina castle was begun in 1598, after the Anglo-Dutch sack of 1596, to defend the city. It is the oldest fortress in Cádiz still standing."
+              },
+              "year": 1598
+            },
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "thinking",
+              "text": {
+                "es": "Hora del veredicto. El dinero del mar, la fama de sus fiestas o el orgullo de Roma: ¿quién pagó el teatro de Gades?",
+                "en": "Verdict time. The sea's money, the fame of its shows or the pride of Rome: who paid for the theatre of Gades?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Quién pagó el teatro romano de Gades?",
+              "en": "Who paid for the Roman theatre of Gades?"
+            },
+            "options": [
+              {
+                "es": "Nadie: nunca se terminó",
+                "en": "Nobody: it was never finished"
+              },
+              {
+                "es": "Las bailarinas",
+                "en": "The dancers"
+              },
+              {
+                "es": "Balbo, con la fortuna de una ciudad rica por el mar y el comercio",
+                "en": "Balbus, with the fortune of a city made rich by the sea and trade"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Lo mandó construir Balbo el Menor, que quiso engrandecer su ciudad ante Roma. Gades podía permitírselo: el mar, las salazones y el comercio la habían hecho de las más ricas del Imperio. Las bailarinas le dieron fama; el dinero lo puso el mar.",
+              "en": "Balbus the Younger had it built, wanting to make his city great before Rome. Gades could afford it: the sea, salted fish and trade had made it one of the richest in the Empire. The dancers gave it fame; the sea paid the bill."
+            }
+          },
+          "nextNodeId": "t6_final"
+        },
+        {
+          "id": "t6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "balbo",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_mar"
+                  ],
+                  "text": {
+                    "es": "El dinero y el mar: atún y salazones. Eres mercader de Gades.",
+                    "en": "Money and sea: tuna and salted fish. You're a Gades merchant."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_roma"
+                  ],
+                  "text": {
+                    "es": "El dinero y Roma: una fortuna al servicio de la ciudad. Eres caballero de Gades.",
+                    "en": "Money and Rome: a fortune serving the city. You're a knight of Gades."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fiesta",
+                    "version_mar"
+                  ],
+                  "text": {
+                    "es": "La fiesta y el mar: crótalos y barcos. Eres puella gaditana de honor.",
+                    "en": "Show and sea: castanets and ships. You're an honorary girl of Gades."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_fiesta",
+                    "version_roma"
+                  ],
+                  "text": {
+                    "es": "La fiesta y Roma: el teatro lleno. Eres actor del teatro de Balbo.",
+                    "en": "Show and Rome: a full house. You're an actor in Balbus's theatre."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "telethusa",
+              "expression": "happy",
+              "text": {
+                "es": "Y cuando vuelvas al Pópulo, pisa despacio: debajo sigue el teatro, esperando la próxima función.",
+                "en": "And when you go back to El Pópulo, tread softly: the theatre is still underneath, waiting for the next show."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "mercader_gades",
+          "requires": [
+            "camino_dinero",
+            "version_mar"
+          ],
+          "title": {
+            "es": "Mercader de Gades",
+            "en": "Gades merchant"
+          }
+        },
+        {
+          "id": "caballero_gades",
+          "requires": [
+            "camino_dinero",
+            "version_roma"
+          ],
+          "title": {
+            "es": "Caballero de Gades",
+            "en": "Knight of Gades"
+          }
+        },
+        {
+          "id": "puella_honor",
+          "requires": [
+            "camino_fiesta",
+            "version_mar"
+          ],
+          "title": {
+            "es": "Puella gaditana de honor",
+            "en": "Honorary girl of Gades"
+          }
+        },
+        {
+          "id": "actor_balbo",
+          "requires": [
+            "camino_fiesta",
+            "version_roma"
+          ],
+          "title": {
+            "es": "Actor del teatro de Balbo",
+            "en": "Actor in Balbus's theatre"
+          }
+        }
+      ],
+      "paths": {
+        "t1_populo->t2_teatro": [[-6.29361,36.52956],[-6.29365,36.52943],[-6.29395,36.52945],[-6.29408,36.52915],[-6.29412,36.52917],[-6.29422,36.5288],[-6.29451,36.52875],[-6.29483,36.52827],[-6.29373,36.52804]],
+        "t2_teatro->ta_almirante": [[-6.29373,36.52804],[-6.29483,36.52827],[-6.29451,36.52875],[-6.29422,36.5288],[-6.29412,36.52917],[-6.29408,36.52915],[-6.294,36.52934]],
+        "t2_teatro->tb_santacruz": [[-6.29373,36.52804],[-6.29483,36.52827],[-6.29455,36.52871],[-6.29429,36.52856],[-6.29432,36.52853]],
+        "ta_almirante->t4_cuatrotorres": [[-6.294,36.52934],[-6.29395,36.52945],[-6.29365,36.52943],[-6.29356,36.52969],[-6.29362,36.52969],[-6.29372,36.53067],[-6.29325,36.53086],[-6.29293,36.53107],[-6.29335,36.53155],[-6.29303,36.53172],[-6.29354,36.53303],[-6.29367,36.53365],[-6.29382,36.53475],[-6.29372,36.53561],[-6.29379,36.53564],[-6.29383,36.53602]],
+        "tb_santacruz->t4_cuatrotorres": [[-6.29432,36.52853],[-6.29412,36.52917],[-6.29408,36.52915],[-6.29395,36.52945],[-6.29365,36.52943],[-6.29356,36.52969],[-6.29362,36.52969],[-6.29372,36.53067],[-6.29325,36.53086],[-6.29293,36.53107],[-6.29335,36.53155],[-6.29303,36.53172],[-6.29354,36.53303],[-6.29367,36.53365],[-6.29382,36.53475],[-6.29372,36.53561],[-6.29379,36.53564],[-6.29383,36.53602]],
+        "t4_cuatrotorres->t5_santacatalina": [[-6.29383,36.53602],[-6.29388,36.5362],[-6.29417,36.53644],[-6.2945,36.53654],[-6.29491,36.53655],[-6.29493,36.53669],[-6.29525,36.53663],[-6.29535,36.53673],[-6.29593,36.53657],[-6.298,36.53693],[-6.29883,36.53752],[-6.29898,36.53739],[-6.2992,36.53754],[-6.29926,36.53749],[-6.29959,36.53769],[-6.29992,36.53775],[-6.30024,36.53794],[-6.30056,36.53795],[-6.30255,36.53704],[-6.30493,36.53667],[-6.30588,36.53518],[-6.30668,36.53457],[-6.30663,36.53443],[-6.30731,36.53339],[-6.30732,36.53325],[-6.3072,36.53317],[-6.30724,36.5331],[-6.30806,36.53276]]
+      },
+      "rewards": [
+        {
+          "id": "mascara_teatro",
+          "name": {
+            "es": "La máscara del teatro",
+            "en": "The theatre mask"
+          },
+          "icon": "collectibles/cadiz_teatro_mascara.svg",
+          "awardedAtNodeId": "t1_populo"
+        },
+        {
+          "id": "crotalos_gades",
+          "name": {
+            "es": "Los crótalos de Telethusa",
+            "en": "Telethusa's castanets"
+          },
+          "icon": "collectibles/cadiz_teatro_crotalos.svg",
+          "awardedAtNodeId": "t2_teatro"
+        },
+        {
+          "id": "anillo_ecuestre",
+          "name": {
+            "es": "El anillo de caballero",
+            "en": "The knight's ring"
+          },
+          "icon": "collectibles/cadiz_teatro_anillo.svg",
+          "awardedAtNodeId": "ta_almirante"
+        },
+        {
+          "id": "versos_marcial",
+          "name": {
+            "es": "Los versos de Marcial",
+            "en": "Martial's verses"
+          },
+          "icon": "collectibles/cadiz_teatro_versos.svg",
+          "awardedAtNodeId": "tb_santacruz"
+        },
+        {
+          "id": "atun_gades",
+          "name": {
+            "es": "El atún de Gades",
+            "en": "The tuna of Gades"
+          },
+          "icon": "collectibles/cadiz_teatro_atun.svg",
+          "awardedAtNodeId": "t5_santacatalina"
+        },
+        {
+          "id": "insignia_teatro_gades",
+          "name": {
+            "es": "¿Quién pagó el teatro romano de Gades?",
+            "en": "Who Paid for the Roman Theatre of Gades?"
+          },
+          "icon": "collectibles/cadiz_teatro_insignia.svg",
+          "awardedAtNodeId": "t6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Teatro romano de Cádiz",
+          "url": "https://es.wikipedia.org/wiki/Teatro_romano_de_C%C3%A1diz"
+        },
+        {
+          "title": "Turismo de Cádiz, «Teatro Romano y Centro de Interpretación»",
+          "url": "https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/teatro-romano"
+        },
+        {
+          "title": "Wikipedia (en): Puellae gaditanae",
+          "url": "https://en.wikipedia.org/wiki/Puellae_gaditanae"
+        },
+        {
+          "title": "Turismo de Cádiz, «Castillo de Santa Catalina»",
+          "url": "https://turismo.cadiz.es/es/rutas-y-visitas-en-cadiz/castillo-de-santa-catalina"
+        }
+      ]
     }
   ]
 }

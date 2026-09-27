@@ -5,7 +5,7 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 140. Con aviso: 95.
+Paradas revisadas: 152. Con aviso: 96.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
@@ -92,6 +92,7 @@ Paradas revisadas: 140. Con aviso: 95.
 | Málaga | La estatua del Cenachero | `misterio-manquita` | 36.71880, -4.41960 | — | — | OSM no lo encuentra con ese nombre |
 | Málaga | La Manquita | `misterio-manquita` | 36.72010, -4.41920 | — | — | OSM no lo encuentra con ese nombre |
 | Málaga | Alcazaba | `feria-agosto` | 36.72100, -4.41550 | — | — | OSM no lo encuentra con ese nombre |
+| Málaga | El banco de Picasso | `picasso` | 36.72361, -4.41764 | — | — | OSM no lo encuentra con ese nombre |
 | Sevilla | Fábrica de Tabacos | `feria-abril` | 37.38080, -5.99180 | 37.37680, -5.99510 | 532 m | Fábrica de Tabacos |
 | Sevilla | Portada de la Feria | `feria-abril` | 37.37450, -6.00050 | 37.37095, -5.99734 | 484 m | Portada de la Feria de Abril |
 | Sevilla | Monumento a Colón | `donde-esta-colon` | 37.38220, -5.98730 | 37.38544, -5.98687 | 362 m | Cementerio de la Judería |

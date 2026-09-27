@@ -117,6 +117,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Adolfo de Castro | persona real | 1823-1898 | [Wikipedia: Adolfo de Castro](https://es.wikipedia.org/wiki/Adolfo_de_Castro) |
 | Hércules | figura de leyenda | mito | [Wikipedia: Hércules](https://es.wikipedia.org/wiki/H%C3%A9rcules) · [Wikipedia: Gerión](https://es.wikipedia.org/wiki/Geri%C3%B3n) |
 | Gerión | figura de leyenda | mito | [Wikipedia: Gerión](https://es.wikipedia.org/wiki/Geri%C3%B3n) · [Wikipedia: Drago](https://es.wikipedia.org/wiki/Drago) |
+| Balbo el Menor | persona real | s. I a. C. | [Wikipedia: Teatro romano de Cádiz](https://es.wikipedia.org/wiki/Teatro_romano_de_C%C3%A1diz) |
+| Telethusa | persona real | s. I | [Wikipedia (en): Puellae gaditanae](https://en.wikipedia.org/wiki/Puellae_gaditanae) |
+| Columela | persona real | 4-c. 70 | [Wikipedia: Columela](https://es.wikipedia.org/wiki/Columela) |
 
 ### «La ciudad que no cayó»: lo que afirma la ruta
 
@@ -182,6 +185,17 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Yacimiento Gadir**: Bajo el teatro de la Tía Norica se conservan casas y calles de la Gadir fenicia, de hace más de 2.800 años.
 - [ ] **Plaza de Mina**: En el Museo de Cádiz, en esta plaza, se exponen dos sarcófagos fenicios de mármol con forma humana: uno de hombre, hallado en 1887, y otro de mujer, hallado en 1980.
 - [ ] **Parque Genovés**: En el Parque Genovés crece un drago de más de un siglo, de tronco grueso y copa en forma de paraguas. Su savia roja se llama «sangre de drago».
+
+### «¿Quién pagó el teatro romano de Gades?»: lo que afirma la ruta
+
+- [ ] **Arco del Pópulo**: El Pópulo es el barrio más antiguo de Cádiz. El arco del Pópulo era una de las puertas de la muralla medieval.
+- [ ] **Teatro romano**: El teatro romano de Cádiz lo mandó construir Balbo el Menor en el siglo I a. C. Mide casi 120 metros de diámetro: es de los más antiguos de Hispania y el segundo más grande, tras el de Córdoba.
+- [ ] **Teatro romano** (1980): Estuvo escondido bajo las casas del Pópulo hasta que lo encontraron en 1980, cuando buscaban el castillo medieval.
+- [ ] **Casa del Almirante**: El geógrafo Estrabón escribió que Gades tenía quinientos ciudadanos del orden ecuestre, los ricos de Roma: tantos como las mayores ciudades de Italia.
+- [ ] **Casa del Almirante**: Esta casa es de finales del siglo XVII: la levantó un almirante de la flota de Indias. En Cádiz, el dinero del mar siempre ha construido palacios.
+- [ ] **Iglesia de Santa Cruz**: Santa Cruz fue la catedral de Cádiz hasta el siglo XIX; por eso la llaman la Catedral Vieja. Se reconstruyó tras el saqueo de 1596.
+- [ ] **Casa de las Cuatro Torres**: La Casa de las Cuatro Torres, del siglo XVIII, tiene una torre mirador en cada esquina: los comerciantes vigilaban desde ellas la llegada de sus barcos.
+- [ ] **Castillo de Santa Catalina** (1598): El castillo de Santa Catalina se empezó en 1598, después del saqueo anglo-holandés de 1596, para defender la ciudad. Es la fortaleza más antigua de Cádiz que sigue en pie.
 
 ## Córdoba
 
@@ -473,6 +487,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | Narciso Díaz de Escovar | persona real | 1860-1935 | [Wikipedia: Narciso Díaz de Escovar](https://es.wikipedia.org/wiki/Narciso_D%C3%ADaz_de_Escovar) · [Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)](https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/) |
 | Doña Sancha de Lara | figura de leyenda | 1639 (tradición) | [Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)](https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/) · [MálagaTurismo, «La casa de las Siete Cabezas»](https://www.malagaturismo.es/post/la-casa-de-las-siete-cabezas-leyendas-de-malaga) |
 | El corregidor Olavarría | figura de leyenda | 1639 (tradición) | [Díaz de Escovar, «La casa de las siete cabezas» (Biblioteca Virtual Miguel de Cervantes)](https://www.cervantesvirtual.com/obra/la-casa-de-las-siete-cabezas-tradicion-malaguena-934070/) |
+| Pablo Picasso | persona real | 1881-1973 | [Wikipedia: Pablo Picasso](https://es.wikipedia.org/wiki/Pablo_Picasso) · [Wikipedia: Relación entre Picasso y Málaga](https://es.wikipedia.org/wiki/Relaci%C3%B3n_entre_Picasso_y_M%C3%A1laga) |
+| José Ruiz Blasco | persona real | 1838-1913 | [Wikipedia (en): José Ruiz y Blasco](https://en.wikipedia.org/wiki/Jos%C3%A9_Ruiz_y_Blasco) · [Museo Casa Natal Picasso, «La familia de Picasso»](https://museocasanatalpicasso.malaga.eu/museo-casa-natal/la-familia-de-picasso/) |
+| María Picasso López | persona real | 1855-1939 | [Museo Casa Natal Picasso, «La familia de Picasso»](https://museocasanatalpicasso.malaga.eu/museo-casa-natal/la-familia-de-picasso/) |
 
 ### «El misterio de la Manquita»: lo que afirma la ruta
 
@@ -517,6 +534,16 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Teatro Romano** (1951): Este teatro romano, del siglo I, estuvo enterrado durante siglos. Se descubrió en 1951, al hacer unas obras.
 - [ ] **Plaza de la Merced**: La plaza toma su nombre del convento de la Merced, que estuvo aquí durante siglos. En el siglo XVII era uno de los lugares más concurridos de la ciudad.
 - [ ] **Plaza del Obispo**: La casa de doña Sancha estaba en esta plaza, frente a la catedral, que en 1639 aún estaba en obras. Hoy la plaza la preside el Palacio Episcopal, del siglo XVIII.
+
+### «¿Por qué Picasso no volvió a Málaga?»: lo que afirma la ruta
+
+- [ ] **Casa natal de Picasso**: La casa donde nació Picasso es hoy el Museo Casa Natal, con recuerdos de la familia y obra del pintor.
+- [ ] **Iglesia de Santiago** (1881): En esta iglesia bautizaron a Picasso el 10 de noviembre de 1881. Su torre mudéjar es de las más antiguas de Málaga.
+- [ ] **Ateneo de Málaga**: La Escuela de Bellas Artes de San Telmo estaba en este edificio, junto a la plaza de la Constitución, donde hoy está el Ateneo.
+- [ ] **Ateneo de Málaga** (se cuenta): Se cuenta que un día el padre dejó al niño terminar las patas de sus palomas y, al ver el resultado, le regaló sus pinceles. Pasó ya en La Coruña, hacia 1894.
+- [ ] **Plaza de toros de La Malagueta** (1876): La plaza de toros de La Malagueta se inauguró en 1876. Picasso venía de niño con su padre.
+- [ ] **Museo Picasso Málaga** (2003): El Museo Picasso Málaga ocupa el Palacio de Buenavista, del siglo XVI. Abrió en 2003 con obras donadas por la familia del pintor.
+- [ ] **El banco de Picasso**: En la plaza de la Merced hay una escultura de bronce de Picasso sentado en un banco, obra de Francisco López Hernández (2008).
 
 ## Sevilla
 
