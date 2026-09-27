@@ -100,6 +100,37 @@ export interface Route {
   bestTime?: "noche";
   /** Fuentes de la ruta: de dónde salen la historia y los datos. */
   sources?: Source[];
+  /** Datos prácticos de paradas y tramos (agua, horarios, cuestas…). Lo genera `npm run gen:practical`. */
+  practical?: RoutePractical;
+}
+
+/** Lo práctico de una parada física, sacado de OpenStreetMap. Las distancias van en metros. */
+export interface StopPractical {
+  /** Fuente de agua potable más cercana (si hay alguna a ≤ 200 m). */
+  water?: number;
+  /** Aseos públicos más cercanos (≤ 250 m). */
+  toilets?: number;
+  /** Hay árboles alrededor: suele haber sombra. */
+  shade?: boolean;
+  /** Horario del sitio de la parada, en sintaxis `opening_hours` de OSM (ver engine/hours.ts). */
+  hours?: string;
+  /** Nombre del sitio al que pertenece el horario. */
+  hoursOf?: string;
+}
+
+/** Un tramo a pie entre dos paradas: metros de subida y bajada, pendiente máxima (%) y escaleras. */
+export interface LegPractical {
+  up: number;
+  down: number;
+  grade: number;
+  steps?: number;
+}
+
+export interface RoutePractical {
+  /** Por id de parada física. */
+  stops: Record<string, StopPractical>;
+  /** Por tramo, con las claves de `Route.paths` ("desde->hasta"). */
+  legs: Record<string, LegPractical>;
 }
 
 export interface StoryNode {

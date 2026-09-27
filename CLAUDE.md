@@ -234,6 +234,15 @@ comunes a todos los caminos, y cada paso de rama lleva una línea del tiempo o u
 propia ruta (lo exige `allPacks.test.ts`). Pendiente: retos de observación (placas, fechas en fachadas) al
 hacer la prueba en la calle.
 
+**Datos prácticos** (`route.practical`, lo genera `npm run gen:practical` tras `gen:paths`; el test exige
+datos en cada parada y tramo): por parada, fuente de agua (≤ 200 m), aseos públicos (≤ 250 m), sombra (≥ 5
+árboles a 30 m) y horario OSM del monumento o museo de la parada (`src/engine/hours.ts`: «abierto hasta…»,
+«abre a las…», con la hora de `pack.timeZone`); por tramo, subida, bajada y pendiente máxima (EU-DEM 25 m vía
+OpenTopoData) y escaleras que recorre el trazado. El detalle de ruta enseña «Antes de salir» (`PracticalCard`:
+cuestas, escaleras, si vale para silla de ruedas, agua y aviso de calor con la máxima de hoy de Open-Meteo, solo
+con el centro de la ciudad) y la espera de llegada, chips por parada (`StopInfo`). Son estimaciones: revisar en
+la prueba de calle. En Overpass se usa primero el espejo de mail.ru (overpass-api.de falla desde el proxy).
+
 ## Arquitectura
 
 ```

@@ -1605,6 +1605,28 @@
         "b2_alcazar->n4_camposanto": [[-4.78333,37.87662],[-4.78221,37.87706],[-4.78246,37.87748],[-4.78235,37.87761],[-4.7823,37.87759]],
         "n4_camposanto->n5_calahorra": [[-4.7823,37.87759],[-4.78233,37.87764],[-4.78128,37.87724],[-4.77982,37.87783],[-4.77975,37.878],[-4.77947,37.87812],[-4.77869,37.87727],[-4.77719,37.87606]]
       },
+      "practical": {
+        "stops": {
+          "n1_puente": {"water": 40, "toilets": 50},
+          "n2_mezquita": {"water": 90, "toilets": 70, "shade": true},
+          "a1_sinagoga": {"water": 130, "toilets": 60, "hours": "Tu-Su 09:00-15:30", "hoursOf": "La Sinagoga"},
+          "a2_almodovar": {"water": 90, "toilets": 130},
+          "b1_albolafia": {"water": 60, "toilets": 150},
+          "b2_alcazar": {"water": 30, "toilets": 120},
+          "n4_camposanto": {"water": 50, "toilets": 40},
+          "n5_calahorra": {"water": 100}
+        },
+        "legs": {
+          "n1_puente->n2_mezquita": {"up": 15, "down": 0, "grade": 13},
+          "n2_mezquita->a1_sinagoga": {"up": 0, "down": 0, "grade": 2},
+          "n2_mezquita->b1_albolafia": {"up": 5, "down": 20, "grade": 15},
+          "a1_sinagoga->a2_almodovar": {"up": 3, "down": 0, "grade": 3},
+          "a2_almodovar->n4_camposanto": {"up": 0, "down": 5, "grade": 3},
+          "b1_albolafia->b2_alcazar": {"up": 9, "down": 0, "grade": 7},
+          "b2_alcazar->n4_camposanto": {"up": 3, "down": 0, "grade": 2, "steps": 1},
+          "n4_camposanto->n5_calahorra": {"up": 2, "down": 26, "grade": 20}
+        }
+      },
       "rewards": [
         {
           "id": "calamo_lubna",
@@ -2857,6 +2879,28 @@
         "gb2_almodovar->g4_tendillas": [[-4.7834,37.8811],[-4.78288,37.88135],[-4.78227,37.88148],[-4.78236,37.88224],[-4.7821,37.88219],[-4.78194,37.88227],[-4.7817,37.88266],[-4.78139,37.8828],[-4.7812,37.88353],[-4.78076,37.88404],[-4.77996,37.88427],[-4.77912,37.88426],[-4.77912,37.8846]],
         "g4_tendillas->g5_potro": [[-4.77912,37.8846],[-4.77909,37.88411],[-4.77867,37.88388],[-4.77808,37.88375],[-4.77784,37.88355],[-4.77715,37.8834],[-4.77722,37.88309],[-4.7772,37.88265],[-4.77683,37.88173],[-4.77647,37.88177],[-4.77628,37.88188],[-4.77602,37.88121],[-4.77498,37.88142],[-4.77478,37.88105]]
       },
+      "practical": {
+        "stops": {
+          "g1_corredera": {"water": 70},
+          "g2_templo": {"water": 90},
+          "ga1_viana": {"water": 130, "toilets": 170},
+          "ga2_marina": {"water": 100, "toilets": 170},
+          "gb1_flores": {"water": 130, "toilets": 40},
+          "gb2_almodovar": {"water": 90, "toilets": 130},
+          "g4_tendillas": {"water": 30, "shade": true},
+          "g5_potro": {"water": 110}
+        },
+        "legs": {
+          "g1_corredera->g2_templo": {"up": 9, "down": 0, "grade": 7},
+          "g2_templo->ga1_viana": {"up": 0, "down": 6, "grade": 6},
+          "g2_templo->gb1_flores": {"up": 12, "down": 15, "grade": 8},
+          "ga1_viana->ga2_marina": {"up": 16, "down": 0, "grade": 8},
+          "ga2_marina->g4_tendillas": {"up": 3, "down": 0, "grade": 3},
+          "gb1_flores->gb2_almodovar": {"up": 7, "down": 3, "grade": 7},
+          "gb2_almodovar->g4_tendillas": {"up": 14, "down": 0, "grade": 7},
+          "g4_tendillas->g5_potro": {"up": 0, "down": 23, "grade": 8, "steps": 2}
+        }
+      },
       "rewards": [
         {
           "id": "dornillo",
@@ -4100,6 +4144,28 @@
         "fb2_alcazar->f4_puente": [[-4.78333,37.87662],[-4.7817,37.87723],[-4.78158,37.87734],[-4.78128,37.87724],[-4.77982,37.87783],[-4.77975,37.878],[-4.77947,37.87812],[-4.77907,37.87767]],
         "f4_puente->f5_arenal": [[-4.77907,37.87767],[-4.77846,37.87707],[-4.77684,37.8758],[-4.77644,37.87583],[-4.77564,37.87546],[-4.77551,37.8755],[-4.77495,37.87511],[-4.77373,37.8749],[-4.77375,37.87477],[-4.77354,37.87474],[-4.76869,37.87435],[-4.7688,37.873],[-4.76778,37.87304],[-4.76753,37.87193],[-4.7671,37.87112]]
       },
+      "practical": {
+        "stops": {
+          "f1_corredera": {"water": 70},
+          "f2_tendillas": {"water": 30, "shade": true},
+          "fa1_viana": {"water": 130, "toilets": 170},
+          "fa2_cruz": {"water": 40},
+          "fb1_puertasevilla": {"water": 60},
+          "fb2_alcazar": {"water": 30, "toilets": 120},
+          "f4_puente": {"water": 40, "toilets": 50},
+          "f5_arenal": {}
+        },
+        "legs": {
+          "f1_corredera->f2_tendillas": {"up": 23, "down": 0, "grade": 11},
+          "f2_tendillas->fa1_viana": {"up": 2, "down": 22, "grade": 9, "steps": 2},
+          "f2_tendillas->fb1_puertasevilla": {"up": 5, "down": 29, "grade": 7, "steps": 2},
+          "fa1_viana->fa2_cruz": {"up": 0, "down": 2, "grade": 2},
+          "fa2_cruz->f4_puente": {"up": 16, "down": 27, "grade": 14},
+          "fb1_puertasevilla->fb2_alcazar": {"up": 3, "down": 2, "grade": 2},
+          "fb2_alcazar->f4_puente": {"up": 3, "down": 13, "grade": 10},
+          "f4_puente->f5_arenal": {"up": 22, "down": 24, "grade": 10}
+        }
+      },
       "rewards": [
         {
           "id": "clavel",
@@ -5156,6 +5222,24 @@
         "lb_sanandres->l4_colon": [[-4.77322,37.88577],[-4.7732,37.88573],[-4.77399,37.88582],[-4.77415,37.88603],[-4.77489,37.88591],[-4.77503,37.88633],[-4.77547,37.88631],[-4.77551,37.88635],[-4.77537,37.88699],[-4.77548,37.88748],[-4.77624,37.88743],[-4.77628,37.88878],[-4.77668,37.88877],[-4.77736,37.88893],[-4.77724,37.88892]],
         "l4_colon->l5_malmuerta": [[-4.77724,37.88892],[-4.77735,37.88895],[-4.77721,37.88915],[-4.77737,37.88944],[-4.77761,37.89025],[-4.77728,37.89032],[-4.77768,37.8914],[-4.7776,37.89148],[-4.77772,37.89162],[-4.77764,37.89167],[-4.7777,37.89167]]
       },
+      "practical": {
+        "stops": {
+          "l1_tendillas": {"water": 30, "shade": true},
+          "l2_marina": {"water": 100, "toilets": 170},
+          "la_viana": {"water": 130, "toilets": 170},
+          "lb_sanandres": {"water": 40},
+          "l4_colon": {"water": 90, "toilets": 170},
+          "l5_malmuerta": {"water": 50}
+        },
+        "legs": {
+          "l1_tendillas->l2_marina": {"up": 0, "down": 3, "grade": 3},
+          "l2_marina->la_viana": {"up": 0, "down": 16, "grade": 8},
+          "l2_marina->lb_sanandres": {"up": 0, "down": 19, "grade": 7},
+          "la_viana->l4_colon": {"up": 16, "down": 0, "grade": 8},
+          "lb_sanandres->l4_colon": {"up": 20, "down": 0, "grade": 7},
+          "l4_colon->l5_malmuerta": {"up": 0, "down": 6, "grade": 4, "steps": 1}
+        }
+      },
       "rewards": [
         {
           "id": "reloj_tendillas",
@@ -6198,6 +6282,24 @@
         "sa_averroes->s4_mezquita": [[-4.78312,37.87862],[-4.78302,37.87841],[-4.7828,37.87848],[-4.78285,37.87869],[-4.78266,37.87877],[-4.78269,37.87882],[-4.78236,37.87894],[-4.78269,37.8794],[-4.78214,37.8797],[-4.78176,37.88],[-4.78115,37.87972],[-4.78111,37.88009],[-4.78071,37.88008],[-4.78072,37.88021],[-4.78023,37.88041],[-4.77989,37.87982],[-4.7803,37.87965],[-4.78022,37.87953],[-4.77965,37.87976]],
         "sb_arqueologico->s4_mezquita": [[-4.77811,37.88194],[-4.77837,37.88171],[-4.77798,37.88146],[-4.778,37.88141],[-4.77848,37.8809],[-4.77874,37.88106],[-4.77937,37.88005],[-4.77907,37.87963],[-4.77925,37.87955],[-4.77946,37.87985],[-4.77965,37.87976]],
         "s4_mezquita->s5_calahorra": [[-4.77965,37.87976],[-4.78048,37.87939],[-4.78026,37.87909],[-4.78041,37.87902],[-4.77975,37.878],[-4.77947,37.87812],[-4.77869,37.87727],[-4.77719,37.87606]]
+      },
+      "practical": {
+        "stops": {
+          "s1_seneca": {"water": 10, "toilets": 90},
+          "s2_maimonides": {"water": 140, "toilets": 30},
+          "sa_averroes": {"water": 170, "toilets": 100},
+          "sb_arqueologico": {"water": 130},
+          "s4_mezquita": {"water": 90, "toilets": 70, "shade": true},
+          "s5_calahorra": {"water": 100}
+        },
+        "legs": {
+          "s1_seneca->s2_maimonides": {"up": 0, "down": 2, "grade": 3},
+          "s2_maimonides->sa_averroes": {"up": 2, "down": 2, "grade": 2},
+          "s2_maimonides->sb_arqueologico": {"up": 11, "down": 2, "grade": 6, "steps": 1},
+          "sa_averroes->s4_mezquita": {"up": 2, "down": 2, "grade": 2},
+          "sb_arqueologico->s4_mezquita": {"up": 0, "down": 7, "grade": 5},
+          "s4_mezquita->s5_calahorra": {"up": 0, "down": 27, "grade": 20}
+        }
       },
       "rewards": [
         {

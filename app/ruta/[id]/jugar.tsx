@@ -191,6 +191,9 @@ function NodePlayer({
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
         {!arrived ? (
           <ArrivalPanel
+            pack={pack}
+            route={route}
+            run={run}
             node={node}
             demoMode={demoMode}
             watch={watch}

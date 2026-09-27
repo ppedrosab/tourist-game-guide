@@ -1702,6 +1702,30 @@
         "n4_triunfo->n5_agua": [[-5.99167,37.38496],[-5.99125,37.3845],[-5.99088,37.38466],[-5.99054,37.38422],[-5.99039,37.3843],[-5.99028,37.3842],[-5.9902,37.38425],[-5.99015,37.38418],[-5.98949,37.38449]],
         "n5_agua->n6_monumento": [[-5.98949,37.38449],[-5.98879,37.38482],[-5.98866,37.38476],[-5.98808,37.38495],[-5.98767,37.3845],[-5.98738,37.38441],[-5.98785,37.38359],[-5.98775,37.3835],[-5.98777,37.3834]]
       },
+      "practical": {
+        "stops": {
+          "n1_giralda": {"water": 130, "toilets": 220, "shade": true},
+          "n2_catedral": {"water": 60, "toilets": 70, "shade": true},
+          "a1_torre_oro": {"hours": "Mo-Fr 09:30-18:45; Sa-Su 10:30-18:45", "hoursOf": "Torre del Oro"},
+          "a2_triana": {"toilets": 80},
+          "b1_archivo": {"water": 30, "toilets": 20, "shade": true},
+          "b2_alcazar": {"water": 150, "toilets": 180},
+          "n4_triunfo": {"water": 90, "toilets": 150, "shade": true},
+          "n5_agua": {},
+          "n6_monumento": {"water": 110}
+        },
+        "legs": {
+          "n1_giralda->n2_catedral": {"up": 2, "down": 4, "grade": 3},
+          "n2_catedral->a1_torre_oro": {"up": 0, "down": 12, "grade": 6, "steps": 2},
+          "n2_catedral->b1_archivo": {"up": 0, "down": 2, "grade": 2},
+          "a1_torre_oro->a2_triana": {"up": 15, "down": 13, "grade": 9, "steps": 2},
+          "a2_triana->n4_triunfo": {"up": 20, "down": 9, "grade": 7},
+          "b1_archivo->b2_alcazar": {"up": 0, "down": 0, "grade": 2},
+          "b2_alcazar->n4_triunfo": {"up": 3, "down": 0, "grade": 3},
+          "n4_triunfo->n5_agua": {"up": 0, "down": 2, "grade": 2},
+          "n5_agua->n6_monumento": {"up": 0, "down": 3, "grade": 3, "steps": 1}
+        }
+      },
       "rewards": [
         {
           "id": "bucaro_aguador",
@@ -2949,6 +2973,28 @@
         "gb1_salvador->gb2_giralda": [[-5.99313,37.39],[-5.99309,37.38969],[-5.99322,37.38966],[-5.99256,37.38941],[-5.9926,37.38891],[-5.99276,37.38853],[-5.99278,37.38809],[-5.99274,37.38789],[-5.99246,37.38745],[-5.9925,37.38639],[-5.99245,37.38632],[-5.99221,37.38629]],
         "gb2_giralda->g4_triunfo": [[-5.99221,37.38629],[-5.99236,37.3863],[-5.99216,37.38528],[-5.99203,37.38532],[-5.99195,37.38527],[-5.99167,37.38496]],
         "g4_triunfo->g5_agua": [[-5.99167,37.38496],[-5.99125,37.3845],[-5.99088,37.38466],[-5.99054,37.38422],[-5.99039,37.3843],[-5.99028,37.3842],[-5.9902,37.38425],[-5.99015,37.38418],[-5.98949,37.38449]]
+      },
+      "practical": {
+        "stops": {
+          "g1_mercado": {"toilets": 20},
+          "g2_triana": {"toilets": 80},
+          "ga1_torreoro": {"hours": "Mo-Fr 09:30-18:45; Sa-Su 10:30-18:45", "hoursOf": "Torre del Oro"},
+          "ga2_alcazar": {"water": 150, "toilets": 180},
+          "gb1_salvador": {"water": 80, "shade": true, "hours": "Mo-Su 10:30-19:30", "hoursOf": "Palacio de Lebrija"},
+          "gb2_giralda": {"water": 130, "toilets": 220, "shade": true},
+          "g4_triunfo": {"water": 90, "toilets": 150, "shade": true},
+          "g5_agua": {}
+        },
+        "legs": {
+          "g1_mercado->g2_triana": {"up": 2, "down": 5, "grade": 4},
+          "g2_triana->ga1_torreoro": {"up": 11, "down": 12, "grade": 9, "steps": 2},
+          "g2_triana->gb1_salvador": {"up": 20, "down": 10, "grade": 8},
+          "ga1_torreoro->ga2_alcazar": {"up": 12, "down": 2, "grade": 6, "steps": 2},
+          "ga2_alcazar->g4_triunfo": {"up": 3, "down": 0, "grade": 3},
+          "gb1_salvador->gb2_giralda": {"up": 3, "down": 0, "grade": 3},
+          "gb2_giralda->g4_triunfo": {"up": 2, "down": 5, "grade": 5},
+          "g4_triunfo->g5_agua": {"up": 0, "down": 2, "grade": 2}
+        }
       },
       "rewards": [
         {
@@ -4204,6 +4250,28 @@
         "fb2_tabacos->f4_torreoro": [[-5.99582,37.37675],[-5.99582,37.3768],[-5.99759,37.37677],[-5.99774,37.37957],[-5.99745,37.37964],[-5.99722,37.37985],[-5.99719,37.38017],[-5.99731,37.38035],[-5.99546,37.3813],[-5.99544,37.38137],[-5.99571,37.38181],[-5.9958,37.3818],[-5.99642,37.38229]],
         "f4_torreoro->f5_portada": [[-5.99642,37.38229],[-5.9958,37.3818],[-5.99571,37.38181],[-5.99543,37.38143],[-5.99546,37.3813],[-5.99731,37.38035],[-5.99719,37.38017],[-5.99722,37.37985],[-5.99745,37.37964],[-5.99774,37.37957],[-5.99739,37.37174],[-5.99743,37.37155],[-5.99731,37.37144],[-5.9973,37.37095]]
       },
+      "practical": {
+        "stops": {
+          "f1_triunfo": {"water": 90, "toilets": 150, "shade": true},
+          "f2_colon": {"water": 110},
+          "fa1_prado": {"water": 110, "toilets": 80},
+          "fa2_espana": {"water": 120, "toilets": 120},
+          "fb1_alcazar": {"water": 150, "toilets": 180},
+          "fb2_tabacos": {},
+          "f4_torreoro": {"hours": "Mo-Fr 09:30-18:45; Sa-Su 10:30-18:45", "hoursOf": "Torre del Oro"},
+          "f5_portada": {}
+        },
+        "legs": {
+          "f1_triunfo->f2_colon": {"up": 0, "down": 5, "grade": 3, "steps": 1},
+          "f2_colon->fa1_prado": {"up": 0, "down": 5, "grade": 3},
+          "f2_colon->fb1_alcazar": {"up": 3, "down": 0, "grade": 3, "steps": 1},
+          "fa1_prado->fa2_espana": {"up": 7, "down": 3, "grade": 4, "steps": 2},
+          "fa2_espana->f4_torreoro": {"up": 8, "down": 14, "grade": 4, "steps": 2},
+          "fb1_alcazar->fb2_tabacos": {"up": 21, "down": 19, "grade": 13},
+          "fb2_tabacos->f4_torreoro": {"up": 11, "down": 22, "grade": 13, "steps": 2},
+          "f4_torreoro->f5_portada": {"up": 22, "down": 19, "grade": 13, "steps": 2}
+        }
+      },
       "rewards": [
         {
           "id": "traje_flamenca",
@@ -5256,6 +5324,24 @@
         "lb_pilatos->l4_giralda": [[-5.98744,37.39003],[-5.98723,37.38984],[-5.98827,37.38992],[-5.98899,37.38985],[-5.98928,37.38952],[-5.99007,37.38942],[-5.99038,37.38908],[-5.99057,37.38872],[-5.99084,37.38861],[-5.99091,37.38828],[-5.99089,37.38785],[-5.99109,37.38749],[-5.99134,37.3875],[-5.99146,37.38721],[-5.99147,37.38694],[-5.99175,37.38629],[-5.99189,37.38623],[-5.99221,37.38629]],
         "l4_giralda->l5_cabezarey": [[-5.99221,37.38629],[-5.99189,37.38623],[-5.99175,37.38629],[-5.99147,37.38694],[-5.99146,37.38721],[-5.99134,37.3875],[-5.99109,37.38749],[-5.99089,37.38785],[-5.99091,37.38828],[-5.99084,37.38861],[-5.99057,37.38872],[-5.99038,37.38908],[-5.98981,37.3898]]
       },
+      "practical": {
+        "stops": {
+          "l1_salvador": {"water": 80, "shade": true, "hours": "Mo-Su 10:30-19:30", "hoursOf": "Palacio de Lebrija"},
+          "l2_alfalfa": {"water": 20, "shade": true},
+          "la_candilejo": {"water": 60},
+          "lb_pilatos": {"water": 150},
+          "l4_giralda": {"water": 130, "toilets": 220, "shade": true},
+          "l5_cabezarey": {"water": 90}
+        },
+        "legs": {
+          "l1_salvador->l2_alfalfa": {"up": 2, "down": 0, "grade": 2},
+          "l2_alfalfa->la_candilejo": {"up": 0, "down": 0, "grade": 1},
+          "l2_alfalfa->lb_pilatos": {"up": 0, "down": 2, "grade": 2},
+          "la_candilejo->l4_giralda": {"up": 3, "down": 0, "grade": 2},
+          "lb_pilatos->l4_giralda": {"up": 5, "down": 0, "grade": 2},
+          "l4_giralda->l5_cabezarey": {"up": 0, "down": 0, "grade": 3}
+        }
+      },
       "rewards": [
         {
           "id": "pluma_becquer",
@@ -6288,6 +6374,24 @@
         "da_refinadores->d4_maestranza": [[-5.98766,37.38555],[-5.98779,37.38546],[-5.98789,37.38552],[-5.9883,37.38525],[-5.98848,37.3852],[-5.9886,37.38524],[-5.98892,37.38574],[-5.98901,37.38571],[-5.98934,37.38606],[-5.98951,37.38602],[-5.99019,37.38625],[-5.99091,37.38609],[-5.99174,37.38609],[-5.99198,37.38627],[-5.99245,37.38632],[-5.99252,37.38671],[-5.99266,37.38678],[-5.99401,37.38669],[-5.99622,37.38618],[-5.99658,37.38628],[-5.9973,37.38576],[-5.99852,37.38512],[-5.999,37.38556],[-5.99894,37.38562]],
         "db_archivo->d4_maestranza": [[-5.99287,37.38445],[-5.99249,37.38457],[-5.99355,37.38415],[-5.99385,37.38394],[-5.99403,37.38372],[-5.99622,37.38306],[-5.99877,37.38534],[-5.999,37.38556],[-5.99894,37.38562]],
         "d4_maestranza->d5_caridad": [[-5.99894,37.38562],[-5.999,37.38556],[-5.99686,37.38362],[-5.99646,37.38389],[-5.99591,37.38408],[-5.99578,37.38391]]
+      },
+      "practical": {
+        "stops": {
+          "d1_manara": {},
+          "d2_murillo": {"water": 190},
+          "da_refinadores": {"water": 70, "shade": true},
+          "db_archivo": {"water": 30, "toilets": 20, "shade": true},
+          "d4_maestranza": {"water": 80, "toilets": 250},
+          "d5_caridad": {"water": 140, "toilets": 190}
+        },
+        "legs": {
+          "d1_manara->d2_murillo": {"up": 2, "down": 0, "grade": 3},
+          "d2_murillo->da_refinadores": {"up": 0, "down": 2, "grade": 3, "steps": 1},
+          "d2_murillo->db_archivo": {"up": 0, "down": 2, "grade": 2},
+          "da_refinadores->d4_maestranza": {"up": 5, "down": 10, "grade": 4, "steps": 1},
+          "db_archivo->d4_maestranza": {"up": 0, "down": 7, "grade": 3},
+          "d4_maestranza->d5_caridad": {"up": 5, "down": 0, "grade": 3, "steps": 1}
+        }
       },
       "rewards": [
         {

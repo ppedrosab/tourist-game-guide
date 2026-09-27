@@ -1593,6 +1593,28 @@
         "b2_sanjuan->n4_magdalena": [[-3.794,37.76991],[-3.79467,37.77028],[-3.79465,37.77034],[-3.79499,37.77085],[-3.79537,37.77096],[-3.79596,37.77126],[-3.79583,37.77144],[-3.79631,37.77159],[-3.79671,37.77183]],
         "n4_magdalena->n5_raudal": [[-3.79671,37.77183],[-3.79653,37.77172],[-3.79629,37.77202],[-3.79599,37.77194]]
       },
+      "practical": {
+        "stops": {
+          "n1_catedral": {"water": 140},
+          "n2_sanlorenzo": {"water": 110},
+          "a1_sanildefonso": {"water": 130},
+          "a2_constitucion": {"water": 30},
+          "b1_banos": {"water": 120},
+          "b2_sanjuan": {"water": 40},
+          "n4_magdalena": {},
+          "n5_raudal": {}
+        },
+        "legs": {
+          "n1_catedral->n2_sanlorenzo": {"up": 11, "down": 0, "grade": 4},
+          "n2_sanlorenzo->a1_sanildefonso": {"up": 0, "down": 44, "grade": 10, "steps": 1},
+          "n2_sanlorenzo->b1_banos": {"up": 7, "down": 16, "grade": 11},
+          "a1_sanildefonso->a2_constitucion": {"up": 25, "down": 14, "grade": 19},
+          "a2_constitucion->n4_magdalena": {"up": 38, "down": 2, "grade": 10},
+          "b1_banos->b2_sanjuan": {"up": 10, "down": 0, "grade": 7},
+          "b2_sanjuan->n4_magdalena": {"up": 5, "down": 2, "grade": 3},
+          "n4_magdalena->n5_raudal": {"up": 0, "down": 7, "grade": 7}
+        }
+      },
       "rewards": [
         {
           "id": "farol_sereno",
@@ -2840,6 +2862,28 @@
         "gb2_sanjuan->g4_magdalena": [[-3.794,37.76991],[-3.79467,37.77028],[-3.79465,37.77034],[-3.79499,37.77085],[-3.79537,37.77096],[-3.79596,37.77126],[-3.79583,37.77144],[-3.79631,37.77159],[-3.79671,37.77183]],
         "g4_magdalena->g5_raudal": [[-3.79671,37.77183],[-3.79653,37.77172],[-3.79629,37.77202],[-3.79599,37.77194]]
       },
+      "practical": {
+        "stops": {
+          "g1_mercado": {"water": 110},
+          "g2_catedral": {"water": 140},
+          "ga1_constitucion": {"water": 30},
+          "ga2_sanildefonso": {"water": 130},
+          "gb1_banos": {"water": 120},
+          "gb2_sanjuan": {"water": 40},
+          "g4_magdalena": {},
+          "g5_raudal": {}
+        },
+        "legs": {
+          "g1_mercado->g2_catedral": {"up": 11, "down": 0, "grade": 6},
+          "g2_catedral->ga1_constitucion": {"up": 0, "down": 21, "grade": 7, "steps": 2},
+          "g2_catedral->gb1_banos": {"up": 12, "down": 10, "grade": 7},
+          "ga1_constitucion->ga2_sanildefonso": {"up": 14, "down": 25, "grade": 19},
+          "ga2_sanildefonso->g4_magdalena": {"up": 63, "down": 16, "grade": 19},
+          "gb1_banos->gb2_sanjuan": {"up": 10, "down": 0, "grade": 7},
+          "gb2_sanjuan->g4_magdalena": {"up": 5, "down": 2, "grade": 3},
+          "g4_magdalena->g5_raudal": {"up": 0, "down": 7, "grade": 7}
+        }
+      },
       "rewards": [
         {
           "id": "aceituna",
@@ -4084,6 +4128,28 @@
         "gb2_banos->g4_magdalena": [[-3.79417,37.77123],[-3.79432,37.77127],[-3.7945,37.77106],[-3.79513,37.77119],[-3.79631,37.77159],[-3.79671,37.77183]],
         "g4_magdalena->g5_lumbre": [[-3.79671,37.77183],[-3.79631,37.77159],[-3.79583,37.77144],[-3.79596,37.77126],[-3.79537,37.77096],[-3.79499,37.77085],[-3.79465,37.77034],[-3.79467,37.77028],[-3.794,37.76991]]
       },
+      "practical": {
+        "stops": {
+          "g1_sanildefonso": {"water": 130},
+          "g2_catedral": {"water": 140},
+          "ga1_mercado": {"water": 110},
+          "ga2_constitucion": {"water": 30},
+          "gb1_sanlorenzo": {"water": 110},
+          "gb2_banos": {"water": 120},
+          "g4_magdalena": {},
+          "g5_lumbre": {"water": 40}
+        },
+        "legs": {
+          "g1_sanildefonso->g2_catedral": {"up": 33, "down": 0, "grade": 10, "steps": 1},
+          "g2_catedral->ga1_mercado": {"up": 0, "down": 10, "grade": 6},
+          "g2_catedral->gb1_sanlorenzo": {"up": 11, "down": 0, "grade": 4},
+          "ga1_mercado->ga2_constitucion": {"up": 0, "down": 12, "grade": 8},
+          "ga2_constitucion->g4_magdalena": {"up": 38, "down": 2, "grade": 10},
+          "gb1_sanlorenzo->gb2_banos": {"up": 7, "down": 16, "grade": 11},
+          "gb2_banos->g4_magdalena": {"up": 13, "down": 0, "grade": 6},
+          "g4_magdalena->g5_lumbre": {"up": 4, "down": 5, "grade": 3}
+        }
+      },
       "rewards": [
         {
           "id": "candela",
@@ -5133,6 +5199,24 @@
         "lb_banos->l4_sanlorenzo": [[-3.79417,37.77123],[-3.79432,37.77127],[-3.7945,37.77106],[-3.79422,37.77092],[-3.79352,37.77026],[-3.7934,37.77007],[-3.79313,37.76932],[-3.79334,37.76924],[-3.7934,37.76905],[-3.79261,37.76758],[-3.79237,37.76656]],
         "l4_sanlorenzo->l5_sanbartolome": [[-3.79237,37.76656],[-3.79207,37.76651],[-3.79199,37.76672],[-3.79192,37.76673],[-3.79175,37.76698],[-3.79175,37.76723],[-3.79156,37.76794],[-3.79134,37.76791],[-3.79141,37.7681]]
       },
+      "practical": {
+        "stops": {
+          "l1_catedral": {"water": 140},
+          "l2_velez": {"water": 110},
+          "la_sanildefonso": {"water": 130},
+          "lb_banos": {"water": 120},
+          "l4_sanlorenzo": {"water": 110},
+          "l5_sanbartolome": {"water": 80}
+        },
+        "legs": {
+          "l1_catedral->l2_velez": {"up": 0, "down": 5, "grade": 4},
+          "l2_velez->la_sanildefonso": {"up": 0, "down": 27, "grade": 9, "steps": 1},
+          "l2_velez->lb_banos": {"up": 20, "down": 13, "grade": 9, "steps": 1},
+          "la_sanildefonso->l4_sanlorenzo": {"up": 44, "down": 0, "grade": 10, "steps": 1},
+          "lb_banos->l4_sanlorenzo": {"up": 18, "down": 7, "grade": 10},
+          "l4_sanlorenzo->l5_sanbartolome": {"up": 0, "down": 14, "grade": 8}
+        }
+      },
       "rewards": [
         {
           "id": "mona",
@@ -6160,6 +6244,24 @@
         "ka_sanandres->k4_sanlorenzo": [[-3.79298,37.77126],[-3.79337,37.77096],[-3.79373,37.77045],[-3.7934,37.77007],[-3.79313,37.76932],[-3.79334,37.76924],[-3.7934,37.76905],[-3.79261,37.76758],[-3.79238,37.76655]],
         "kb_catedral->k4_sanlorenzo": [[-3.79076,37.76481],[-3.79091,37.76513],[-3.79082,37.76523],[-3.7914,37.76585],[-3.7917,37.76632],[-3.79177,37.7663],[-3.79207,37.76651],[-3.79238,37.76659],[-3.79238,37.76655]],
         "k4_sanlorenzo->k5_castillo": [[-3.79238,37.76655],[-3.79242,37.76676],[-3.79287,37.76678],[-3.79328,37.7671],[-3.79471,37.7685],[-3.79496,37.76841],[-3.79501,37.76847],[-3.79508,37.76845],[-3.79535,37.76882],[-3.79653,37.76882],[-3.79692,37.76911],[-3.79733,37.76925],[-3.7978,37.76957],[-3.79812,37.77],[-3.79841,37.77015],[-3.79889,37.77054],[-3.79922,37.77073],[-3.79986,37.77084],[-3.80021,37.77096],[-3.79963,37.77022],[-3.79965,37.77015],[-3.79978,37.7699],[-3.80069,37.76898],[-3.80078,37.76872],[-3.80068,37.76861],[-3.80125,37.76864],[-3.80133,37.76858],[-3.8009,37.76835],[-3.80017,37.76822],[-3.79984,37.76822],[-3.79977,37.76817],[-3.7998,37.76811],[-3.80109,37.76814],[-3.80226,37.7683],[-3.80243,37.76824],[-3.80226,37.76814],[-3.80059,37.76773],[-3.79996,37.7677],[-3.79983,37.76785],[-3.79972,37.76782],[-3.79975,37.76774],[-3.79964,37.76767],[-3.79927,37.7675]]
+      },
+      "practical": {
+        "stops": {
+          "k1_museo": {"water": 180},
+          "k2_santaclara": {"water": 90},
+          "ka_sanandres": {"water": 110},
+          "kb_catedral": {"water": 140},
+          "k4_sanlorenzo": {"water": 110},
+          "k5_castillo": {}
+        },
+        "legs": {
+          "k1_museo->k2_santaclara": {"up": 32, "down": 3, "grade": 12, "steps": 1},
+          "k2_santaclara->ka_sanandres": {"up": 13, "down": 4, "grade": 10},
+          "k2_santaclara->kb_catedral": {"up": 24, "down": 2, "grade": 10},
+          "ka_sanandres->k4_sanlorenzo": {"up": 26, "down": 2, "grade": 12},
+          "kb_catedral->k4_sanlorenzo": {"up": 11, "down": 0, "grade": 4},
+          "k4_sanlorenzo->k5_castillo": {"up": 222, "down": 15, "grade": 51}
+        }
       },
       "rewards": [
         {

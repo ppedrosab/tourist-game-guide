@@ -128,6 +128,24 @@ const route = z.object({
   paths: z.record(z.string(), z.array(z.tuple([z.number(), z.number()]))).optional(),
   bestTime: z.literal("noche").optional(),
   sources: z.array(source).optional(),
+  practical: z
+    .object({
+      stops: z.record(
+        z.string(),
+        z.object({
+          water: z.number().optional(),
+          toilets: z.number().optional(),
+          shade: z.boolean().optional(),
+          hours: z.string().optional(),
+          hoursOf: z.string().optional(),
+        }),
+      ),
+      legs: z.record(
+        z.string(),
+        z.object({ up: z.number(), down: z.number(), grade: z.number(), steps: z.number().optional() }),
+      ),
+    })
+    .optional(),
 });
 
 export const cityPackSchema = z.object({

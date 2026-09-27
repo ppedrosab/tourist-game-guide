@@ -8,6 +8,7 @@ import { advance, availableChoices, getNode, isFinished, startRoute } from "../r
 import { missingTranslations } from "../translations";
 import { routeMapData } from "@/map/geometry";
 import { distanceM } from "../geo";
+import { parseHours } from "../hours";
 
 /**
  * Comprobaciones que debe cumplir cualquier ciudad incluida en la app: añadir un
@@ -194,6 +195,19 @@ describe("retos", () => {
     for (const n of route.nodes.filter((x) => targets.has(x.id) && !x.location)) {
       expect([n.id, n.challenge?.type]).toEqual([n.id, expect.stringMatching(/^(order|riddle)$/)]);
       if (n.challenge?.type === "riddle") expect((n.challenge as { hints?: unknown[] }).hints?.length ?? 0).toBeGreaterThanOrEqual(2);
+    }
+  });
+});
+
+describe("datos prácticos", () => {
+  it.each(routes)("%s: cada parada y cada tramo tiene sus datos (npm run gen:practical)", (_, __, route) => {
+    const p = route.practical;
+    expect(p).toBeDefined();
+    const stops = route.nodes.filter((n) => n.location).map((n) => n.id);
+    expect(Object.keys(p!.stops).sort()).toEqual([...stops].sort());
+    expect(Object.keys(p!.legs).sort()).toEqual(Object.keys(route.paths ?? {}).sort());
+    for (const [id, s] of Object.entries(p!.stops)) {
+      if (s.hours) expect([id, s.hours, parseHours(s.hours) !== null, !!s.hoursOf]).toEqual([id, s.hours, true, true]);
     }
   });
 });

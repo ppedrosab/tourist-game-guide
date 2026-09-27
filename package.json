@@ -13,6 +13,7 @@
     "test": "jest",
     "gen:assets": "node scripts/gen-scene-assets.mjs",
     "gen:paths": "python3 scripts/gen_paths.py",
+    "gen:practical": "python3 scripts/gen_practical.py",
     "check:stops": "python3 scripts/check_stops.py",
     "gen:dossier": "python3 scripts/revision_dossier.py"
   },

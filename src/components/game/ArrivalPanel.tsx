@@ -1,13 +1,17 @@
 import { Text } from "react-native";
-import type { StoryNode } from "@/content/types";
+import type { CityPack, PlayerProgress, Route, StoryNode } from "@/content/types";
 import { radiusOf } from "@/engine/geo";
 import { useI18n } from "@/i18n";
 import type { ArrivalWatch } from "@/hooks/useArrivalWatcher";
 import { colors, type } from "@/theme";
 import { Button3D } from "../ui/Button3D";
 import { Panel } from "../ui/Panel";
+import { StopInfo } from "./StopInfo";
 
 type Props = {
+  pack: CityPack;
+  route: Route;
+  run: PlayerProgress;
   node: StoryNode;
   demoMode: boolean;
   watch: ArrivalWatch;
@@ -34,13 +38,14 @@ function gpsText({ status, distance }: ArrivalWatch, { t, distance: fmt }: Retur
  * geofences en segundo plano) marcan la llegada solos; "Ya estoy aquí"
  * aparece si el GPS falla 60 s, y "Simular llegada" en modo demo.
  */
-export function ArrivalPanel({ node, demoMode, watch, onArrive, fieldTest }: Props) {
+export function ArrivalPanel({ pack, route, run, node, demoMode, watch, onArrive, fieldTest }: Props) {
   const i18n = useI18n();
   const { t, L } = i18n;
   return (
     <Panel nameplate={t("jugar.proximaParada")} nameplateColor={colors.sea}>
       <Text style={type.title}>{L(node.title)}</Text>
       <Text style={type.body}>{t("jugar.caminaHasta")}</Text>
+      <StopInfo pack={pack} route={route} run={run} node={node} />
       <Text style={type.secondary} accessibilityLiveRegion="polite">
         {gpsText(watch, i18n)}
       </Text>

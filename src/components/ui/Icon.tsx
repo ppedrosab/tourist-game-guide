@@ -39,6 +39,20 @@ const PATHS = {
   /** Luna creciente: rutas de leyendas. */
   moon: "M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z",
   exit: "M14 4h5v16h-5M10 16l-4-4 4-4M6 12h10",
+  /** Gota: fuente de agua potable. */
+  water: "M12 3c-3 4.5-6 7.6-6 11a6 6 0 0 0 12 0c0-3.4-3-6.5-6-11z",
+  /** Aseos. */
+  toilet: "M7 4a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3zM17 4a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3zM5 20v-6H4l1-5h4l1 5H9v6M15 20v-5M19 20v-5M15 9h4v6h-4zM12 3v18",
+  /** Árbol: sombra. */
+  tree: "M12 21v-6M12 3a5 5 0 0 0-4.6 7A4 4 0 0 0 8 17h8a4 4 0 0 0 .6-7A5 5 0 0 0 12 3z",
+  /** Escalones. */
+  stairs: "M3 20h5v-4h4v-4h4V8h5",
+  /** Cuesta. */
+  slope: "M3 19h18L21 7zM14 15l3-3",
+  /** Termómetro: calor. */
+  heat: "M10 14.5V5a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0zM12 11v6",
+  /** Silla de ruedas: accesibilidad. */
+  wheelchair: "M11 4a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3zM11 9v5h5l2 5M11 12h4M8.5 11.5A5 5 0 1 0 15 18",
   subtitles:
     "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10 10a2 2 0 1 0 0 4M16 10a2 2 0 1 0 0 4",
 } as const;
