@@ -1,6 +1,6 @@
 {
   "id": "sevilla",
-  "version": 4,
+  "version": 5,
   "name": {
     "es": "Sevilla",
     "en": "Seville"
@@ -358,6 +358,94 @@
       ],
       "voice": {
         "gender": "f"
+      }
+    },
+    {
+      "id": "manara",
+      "name": {
+        "es": "Miguel Mañara",
+        "en": "Miguel Mañara"
+      },
+      "description": {
+        "es": "Noble sevillano, hijo de un comerciante de Indias, que acabó dedicando su fortuna a los pobres. Elegante, sincero y un poco teatral.",
+        "en": "Sevillian nobleman, son of an Indies merchant, who ended up giving his fortune to the poor. Elegant, candid and a little theatrical."
+      },
+      "avatar": "sprites/manara/manara_neutral.svg",
+      "era": "s. XVII",
+      "kind": "real",
+      "lived": "1627-1679",
+      "bio": {
+        "es": "Miguel Mañara Vicentelo de Leca nació en Sevilla el 3 de marzo de 1627, en la casa palacio de la calle Levíes, hijo de un rico comerciante corso. Él mismo contó que de joven llevó una vida licenciosa. Tras morir su esposa, Jerónima Carrillo de Mendoza, en 1661, ingresó en la Hermandad de la Santa Caridad, que enterraba a los muertos abandonados; fue su hermano mayor y levantó la iglesia y el hospital. Murió en 1679. Desde el siglo XIX algunos escritores lo confundieron con Don Juan.",
+        "en": "Miguel Mañara Vicentelo de Leca was born in Seville on 3 March 1627, in the palace on calle Levíes, son of a wealthy Corsican merchant. He himself said he led a dissolute life as a young man. After his wife, Jerónima Carrillo de Mendoza, died in 1661, he joined the Brotherhood of the Holy Charity, which buried the abandoned dead; he became its head and built its church and hospital. He died in 1679. From the 19th century some writers confused him with Don Juan."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Miguel Mañara",
+          "url": "https://es.wikipedia.org/wiki/Miguel_Ma%C3%B1ara"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "murillo",
+      "name": {
+        "es": "Murillo",
+        "en": "Murillo"
+      },
+      "description": {
+        "es": "Bartolomé Esteban Murillo, el gran pintor de Sevilla, amigo de Mañara. Cariñoso, paciente y siempre con el pincel en la mano.",
+        "en": "Bartolomé Esteban Murillo, Seville's great painter, a friend of Mañara. Warm, patient and always holding a brush."
+      },
+      "avatar": "sprites/murillo/murillo_neutral.svg",
+      "era": "s. XVII",
+      "kind": "real",
+      "lived": "1617-1682",
+      "bio": {
+        "es": "Bartolomé Esteban Murillo nació en Sevilla a finales de 1617 y fue el pintor más famoso de la ciudad en su tiempo, conocido por sus escenas de niños de la calle. En 1665 entró en la Hermandad de la Caridad y pintó grandes lienzos para su iglesia. Murió en 1682 en la casa de la calle Santa Teresa, hoy casa-museo. Fue enterrado en la iglesia de Santa Cruz, derribada por los franceses en 1810, y sus restos se perdieron.",
+        "en": "Bartolomé Esteban Murillo was born in Seville at the end of 1617 and was the city's most famous painter in his day, known for his scenes of street children. In 1665 he joined the Brotherhood of the Caridad and painted large canvases for its church. He died in 1682 in the house on calle Santa Teresa, now a museum. He was buried in the church of Santa Cruz, demolished by the French in 1810, and his remains were lost."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Casa de Murillo",
+          "url": "https://es.wikipedia.org/wiki/Casa_de_Murillo"
+        },
+        {
+          "title": "Wikipedia: Bartolomé Esteban Murillo",
+          "url": "https://es.wikipedia.org/wiki/Bartolom%C3%A9_Esteban_Murillo"
+        }
+      ],
+      "voice": {
+        "gender": "m"
+      }
+    },
+    {
+      "id": "valdesleal",
+      "name": {
+        "es": "Valdés Leal",
+        "en": "Valdés Leal"
+      },
+      "description": {
+        "es": "Juan de Valdés Leal, pintor sevillano de genio vivo, hermano de la Caridad. Directo, apasionado y con un farol para ver en la oscuridad.",
+        "en": "Juan de Valdés Leal, a quick-tempered Sevillian painter and brother of the Caridad. Blunt, passionate and with a lantern to see in the dark."
+      },
+      "avatar": "sprites/valdesleal/valdesleal_neutral.svg",
+      "era": "s. XVII",
+      "kind": "real",
+      "lived": "1622-1690",
+      "bio": {
+        "es": "Juan de Valdés Leal nació en Sevilla en 1622 y trabajó en Córdoba antes de volver a su ciudad, donde presidió la academia de pintura. Hacia 1672 pintó para la iglesia de la Caridad los dos «jeroglíficos de las postrimerías», sobre lo breve de la vida, siguiendo las ideas de su amigo Mañara. Murió en Sevilla en 1690.",
+        "en": "Juan de Valdés Leal was born in Seville in 1622 and worked in Córdoba before returning to his city, where he presided over the painting academy. Around 1672 he painted for the Caridad church the two “hieroglyphs of the last things”, on the brevity of life, following the ideas of his friend Mañara. He died in Seville in 1690."
+      },
+      "sources": [
+        {
+          "title": "Wikipedia: Juan de Valdés Leal",
+          "url": "https://es.wikipedia.org/wiki/Juan_de_Vald%C3%A9s_Leal"
+        }
+      ],
+      "voice": {
+        "gender": "m"
       }
     }
   ],
@@ -4894,6 +4982,961 @@
         }
       ],
       "bestTime": "noche"
+    },
+    {
+      "id": "don-juan",
+      "title": {
+        "es": "¿Existió Don Juan?",
+        "en": "Did Don Juan Exist?"
+      },
+      "summary": {
+        "es": "Hay quien dice que Don Juan Tenorio fue Miguel Mañara, el noble que fundó el Hospital de la Caridad. Con él, con Murillo y con Valdés Leal, de la calle Levíes al Arenal.",
+        "en": "Some say Don Juan Tenorio was Miguel Mañara, the nobleman who founded the Hospital de la Caridad. With him, Murillo and Valdés Leal, from calle Levíes to the Arenal."
+      },
+      "era": "1627-1844",
+      "guideCharacterId": "manara",
+      "durationMin": 60,
+      "distanceKm": 2.1,
+      "difficulty": "easy",
+      "isFree": true,
+      "structure": "branch-and-bottleneck",
+      "branches": {
+        "dinero": {
+          "name": {
+            "es": "La leyenda",
+            "en": "The legend"
+          },
+          "trail": {
+            "es": "camino de la leyenda",
+            "en": "legend trail"
+          }
+        },
+        "poder": {
+          "name": {
+            "es": "Las Indias",
+            "en": "The Indies"
+          },
+          "trail": {
+            "es": "camino de las Indias",
+            "en": "Indies trail"
+          }
+        }
+      },
+      "startNodeId": "d1_manara",
+      "nodes": [
+        {
+          "id": "d1_manara",
+          "title": {
+            "es": "Palacio de Mañara",
+            "en": "Mañara Palace"
+          },
+          "location": {
+            "lat": 37.38804,
+            "lng": -5.98659
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_manara.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_manara.svg"
+              ],
+              "characters": [
+                {
+                  "id": "manara",
+                  "expression": "proud",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "proud",
+              "text": {
+                "es": "Buenos días. Miguel Mañara Vicentelo de Leca. En esta casa de la calle Levíes nací el 3 de marzo de 1627.",
+                "en": "Good morning. Miguel Mañara Vicentelo de Leca. I was born in this house on calle Levíes on 3 March 1627."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "text": {
+                "es": "Me han dicho que en Sevilla hay quien cree que yo fui Don Juan Tenorio, el seductor que se burlaba de todos. ¿Existió Don Juan? ¿Fui yo? Averígüelo.",
+                "en": "I'm told some people in Seville believe I was Don Juan Tenorio, the seducer who made fools of everyone. Did Don Juan exist? Was it me? Find out."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Mañara era hijo de un rico comerciante corso que hizo fortuna con el comercio de Indias. El palacio, del siglo XVI, es hoy una sede de la Junta de Andalucía.",
+                "en": "Mañara was the son of a wealthy Corsican merchant who made his fortune in the Indies trade. The 16th-century palace is now an office of the Andalusian regional government."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿En qué año nació Miguel Mañara?",
+              "en": "In what year was Miguel Mañara born?"
+            },
+            "options": [
+              {
+                "es": "En 1844",
+                "en": "In 1844"
+              },
+              {
+                "es": "En 1627",
+                "en": "In 1627"
+              },
+              {
+                "es": "En 1492",
+                "en": "In 1492"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "El 3 de marzo de 1627, en esta casa.",
+              "en": "On 3 March 1627, in this house."
+            }
+          },
+          "clue": {
+            "id": "dj_pista_1627",
+            "text": {
+              "es": "Documentos · Mañara nació en 1627, en la calle Levíes.",
+              "en": "Records · Mañara was born in 1627, on calle Levíes."
+            }
+          },
+          "nextNodeId": "d2_murillo",
+          "nextHint": {
+            "es": "Entra en el barrio de Santa Cruz hasta la calle Santa Teresa. Unos 5 minutos.",
+            "en": "Walk into the Santa Cruz quarter to calle Santa Teresa. About 5 minutes."
+          }
+        },
+        {
+          "id": "d2_murillo",
+          "title": {
+            "es": "Casa de Murillo",
+            "en": "Murillo's house"
+          },
+          "location": {
+            "lat": 37.38572,
+            "lng": -5.98908
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_santacruz.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_santacruz.svg"
+              ],
+              "characters": [
+                {
+                  "id": "manara",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "murillo",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "murillo",
+              "expression": "happy",
+              "text": {
+                "es": "Bartolomé Esteban Murillo, pintor, para servirle. En esta casa de la calle Santa Teresa pasé mis últimos años; aquí morí en 1682.",
+                "en": "Bartolomé Esteban Murillo, painter, at your service. I spent my last years in this house on calle Santa Teresa; I died here in 1682."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "murillo",
+              "expression": "thinking",
+              "text": {
+                "es": "Miguel y yo éramos hermanos de la Caridad y amigos. Le pinté cuadros para su hospital. ¿Don Juan, él? Ya le digo yo que de joven no era un santo… pero Don Juan es otra cosa.",
+                "en": "Miguel and I were brothers of the Caridad and friends. I painted pictures for his hospital. Don Juan, him? I'll grant you he was no saint as a young man… but Don Juan is something else."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "Murillo fue enterrado en la iglesia de Santa Cruz, que los franceses derribaron en 1810. Sus restos se perdieron; en la plaza de Santa Cruz lo recuerda una lápida.",
+                "en": "Murillo was buried in the church of Santa Cruz, which the French demolished in 1810. His remains were lost; in the plaza de Santa Cruz a plaque remembers him."
+              },
+              "year": 1810
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Qué pasó con los restos de Murillo?",
+              "en": "What happened to Murillo's remains?"
+            },
+            "options": [
+              {
+                "es": "Se perdieron al derribar los franceses la iglesia de Santa Cruz",
+                "en": "They were lost when the French demolished the church of Santa Cruz"
+              },
+              {
+                "es": "Están en Roma",
+                "en": "They're in Rome"
+              },
+              {
+                "es": "Están en la Giralda",
+                "en": "They're in the Giralda"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Se perdieron en 1810, al derribar los franceses la iglesia de Santa Cruz.",
+              "en": "They were lost in 1810, when the French demolished the church of Santa Cruz."
+            }
+          },
+          "clue": {
+            "id": "dj_pista_amigo",
+            "text": {
+              "es": "Documentos · Murillo, su amigo: Mañara de joven no era un santo, pero Don Juan es otra cosa.",
+              "en": "Records · Murillo, his friend: young Mañara was no saint, but Don Juan is something else."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "manara",
+            "expression": "thinking",
+            "text": {
+              "es": "¿Buscamos a Don Juan en la leyenda o en el dinero de mi familia?",
+              "en": "Shall we look for Don Juan in the legend, or in my family's money?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La leyenda",
+                "en": "The legend"
+              },
+              "hint": {
+                "es": "La estatua de Don Juan",
+                "en": "The statue of Don Juan"
+              },
+              "targetNodeId": "da_refinadores",
+              "setFlags": [
+                "camino_dinero"
+              ],
+              "distanceM": 150,
+              "walkMin": 2
+            },
+            {
+              "label": {
+                "es": "Las Indias",
+                "en": "The Indies"
+              },
+              "hint": {
+                "es": "El Archivo de Indias",
+                "en": "The Archive of the Indies"
+              },
+              "targetNodeId": "db_archivo",
+              "setFlags": [
+                "camino_poder"
+              ],
+              "distanceM": 450,
+              "walkMin": 6
+            }
+          ]
+        },
+        {
+          "id": "da_refinadores",
+          "title": {
+            "es": "Plaza de los Refinadores",
+            "en": "Plaza de los Refinadores"
+          },
+          "location": {
+            "lat": 37.3855,
+            "lng": -5.98761
+          },
+          "triggerRadiusM": 40,
+          "branch": "dinero",
+          "background": "fondos/fondo_sevilla_refinadores.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_refinadores.svg"
+              ],
+              "characters": [
+                {
+                  "id": "murillo",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "manara",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "En la plaza de los Refinadores hay una estatua de Don Juan Tenorio, con capa y espada. Es un personaje de teatro: la primera obra, «El burlador de Sevilla», se publicó en 1630 atribuida a Tirso de Molina.",
+                "en": "In the plaza de los Refinadores stands a statue of Don Juan Tenorio, with cape and sword. He is a stage character: the first play, “The Trickster of Seville”, was published in 1630, attributed to Tirso de Molina."
+              },
+              "year": 1630
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "surprised",
+              "text": {
+                "es": "¡En 1630 yo tenía tres años! Difícilmente pude inspirar a nadie más que a mi niñera.",
+                "en": "In 1630 I was three years old! I could hardly have inspired anyone but my nanny."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "murillo",
+              "expression": "happy",
+              "text": {
+                "es": "Y aún hay otra más vieja, «Tan largo me lo fiáis», de antes de que nacieras.",
+                "en": "And there's an even older one, “Tan largo me lo fiáis”, from before you were born."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Cuándo se publicó «El burlador de Sevilla»?",
+              "en": "When was “The Trickster of Seville” published?"
+            },
+            "options": [
+              {
+                "es": "En 1844",
+                "en": "In 1844"
+              },
+              {
+                "es": "En 1700",
+                "en": "In 1700"
+              },
+              {
+                "es": "En 1630",
+                "en": "In 1630"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "En 1630, cuando Mañara tenía tres años.",
+              "en": "In 1630, when Mañara was three."
+            }
+          },
+          "clue": {
+            "id": "dj_pista_burlador",
+            "text": {
+              "es": "La leyenda · «El burlador de Sevilla» es de 1630: Mañara tenía tres años.",
+              "en": "The legend · “The Trickster of Seville” dates from 1630: Mañara was three."
+            }
+          },
+          "nextNodeId": "d4_maestranza",
+          "nextHint": {
+            "es": "Cruza el centro hasta la plaza de toros de la Maestranza. Unos 14 minutos.",
+            "en": "Cross the centre to the Maestranza bullring. About 14 minutes."
+          }
+        },
+        {
+          "id": "db_archivo",
+          "title": {
+            "es": "Archivo de Indias",
+            "en": "Archive of the Indies"
+          },
+          "location": {
+            "lat": 37.3845,
+            "lng": -5.9929
+          },
+          "triggerRadiusM": 40,
+          "branch": "poder",
+          "background": "fondos/fondo_sevilla_archivo.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_archivo.svg"
+              ],
+              "characters": [
+                {
+                  "id": "manara",
+                  "expression": "neutral",
+                  "position": "left"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "El Archivo de Indias ocupa la antigua Casa Lonja, levantada a finales del siglo XVI para que los comerciantes de Indias no hicieran sus tratos en las gradas de la catedral.",
+                "en": "The Archive of the Indies occupies the old Casa Lonja, built in the late 16th century so that the Indies merchants would stop doing business on the cathedral steps."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "proud",
+              "text": {
+                "es": "Yo mismo fui a las juntas de los cargadores a Indias. Con ese dinero vivía como un señor: caballos, fiestas, trajes… Lo reconozco.",
+                "en": "I went to the meetings of the Indies merchants myself. With that money I lived like a lord: horses, parties, fine clothes… I admit it."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "text": {
+                "es": "Pero una cosa es vivir alegre y otra ser un burlador de mujeres. Los papeles no dicen eso.",
+                "en": "But living merrily is one thing and being a seducer who deceives women is another. The records don't say that."
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué se construyó la Casa Lonja?",
+              "en": "What was the Casa Lonja built for?"
+            },
+            "options": [
+              {
+                "es": "Para vivir el rey",
+                "en": "As a royal residence"
+              },
+              {
+                "es": "Para los tratos de los comerciantes de Indias",
+                "en": "For the Indies merchants' business"
+              },
+              {
+                "es": "Para guardar grano",
+                "en": "To store grain"
+              }
+            ],
+            "correctIndex": 1,
+            "explanation": {
+              "es": "Para que los comerciantes dejaran de hacer tratos en las gradas de la catedral.",
+              "en": "So that merchants would stop doing business on the cathedral steps."
+            }
+          },
+          "clue": {
+            "id": "dj_pista_indias",
+            "text": {
+              "es": "Las Indias · Mañara vivió como un señor con el dinero de Indias, pero los papeles no lo pintan como un burlador.",
+              "en": "The Indies · Mañara lived like a lord on Indies money, but the records don't paint him as a seducer."
+            }
+          },
+          "nextNodeId": "d4_maestranza",
+          "nextHint": {
+            "es": "Baja por la avenida hasta la Maestranza. Unos 7 minutos.",
+            "en": "Walk down the avenue to the Maestranza. About 7 minutes."
+          }
+        },
+        {
+          "id": "d4_maestranza",
+          "title": {
+            "es": "Real Maestranza",
+            "en": "Real Maestranza"
+          },
+          "location": {
+            "lat": 37.38596,
+            "lng": -5.99842
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_maestranza.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_maestranza.svg"
+              ],
+              "characters": [
+                {
+                  "id": "valdesleal",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "manara",
+                  "expression": "thinking",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "valdesleal",
+              "expression": "neutral",
+              "text": {
+                "es": "Juan de Valdés Leal, pintor, también sevillano y también hermano de la Caridad. Aquí, en el Arenal, se divertían los nobles a caballo.",
+                "en": "Juan de Valdés Leal, painter, also from Seville and also a brother of the Caridad. Here, in the Arenal, the nobles had their fun on horseback."
+              }
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La Real Maestranza de Caballería de Sevilla se fundó en 1670 para que los nobles se entrenaran a caballo. La plaza de toros se empezó en 1749 y tardó más de un siglo en terminarse.",
+                "en": "Seville's Real Maestranza de Caballería was founded in 1670 so the nobility could train on horseback. The bullring was begun in 1749 and took over a century to finish."
+              },
+              "year": 1749
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero"
+                  ],
+                  "text": {
+                    "es": "Vienes de la leyenda: Don Juan nació en el teatro antes que yo. ¿Seguimos la pista del teatro o la de la Caridad?",
+                    "en": "You've come from the legend: Don Juan was born on stage before me. Shall we follow the theatre or the Caridad?"
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder"
+                  ],
+                  "text": {
+                    "es": "Vienes de las Indias: rico y alegre, pero no un burlador. ¿Seguimos la pista del teatro o la de la Caridad?",
+                    "en": "You've come from the Indies: rich and merry, but no seducer. Shall we follow the theatre or the Caridad?"
+                  }
+                }
+              ]
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Para qué se fundó la Real Maestranza en 1670?",
+              "en": "Why was the Real Maestranza founded in 1670?"
+            },
+            "options": [
+              {
+                "es": "Para que los nobles se entrenaran a caballo",
+                "en": "So the nobility could train on horseback"
+              },
+              {
+                "es": "Para hacer teatro",
+                "en": "To put on plays"
+              },
+              {
+                "es": "Para cuidar enfermos",
+                "en": "To care for the sick"
+              }
+            ],
+            "correctIndex": 0,
+            "explanation": {
+              "es": "Para el ejercicio de los nobles a caballo; los toros vinieron después.",
+              "en": "For the nobles to practise on horseback; the bullfights came later."
+            }
+          },
+          "decisionIntro": {
+            "characterId": "manara",
+            "expression": "thinking",
+            "text": {
+              "es": "¿El teatro o la Caridad?",
+              "en": "The theatre or the Caridad?"
+            }
+          },
+          "choices": [
+            {
+              "label": {
+                "es": "La pista del teatro",
+                "en": "The theatre lead"
+              },
+              "hint": {
+                "es": "Con Valdés Leal",
+                "en": "With Valdés Leal"
+              },
+              "targetNodeId": "d4a_teatro",
+              "setFlags": [
+                "version_teatro"
+              ]
+            },
+            {
+              "label": {
+                "es": "La pista de la Caridad",
+                "en": "The Caridad lead"
+              },
+              "hint": {
+                "es": "Con Mañara",
+                "en": "With Mañara"
+              },
+              "targetNodeId": "d4b_caridad",
+              "setFlags": [
+                "version_caridad"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "d4a_teatro",
+          "title": {
+            "es": "El teatro",
+            "en": "The theatre"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "valdesleal",
+              "expression": "thinking",
+              "text": {
+                "es": "En 1834 un francés, Mérimée, escribió un cuento sobre un tal don Juan de Maraña, y en 1836 Dumas lo llevó al teatro: un libertino que se arrepiente y funda un hospital. Ahí se mezcló todo.",
+                "en": "In 1834 a Frenchman, Mérimée, wrote a story about one Don Juan de Maraña, and in 1836 Dumas put him on stage: a libertine who repents and founds a hospital. That's where it all got mixed up."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "valdesleal",
+              "expression": "happy",
+              "text": {
+                "es": "Y en 1844 Zorrilla escribió su «Don Juan Tenorio», que todavía se representa por Todos los Santos.",
+                "en": "And in 1844 Zorrilla wrote his “Don Juan Tenorio”, which is still staged around All Saints' Day."
+              }
+            }
+          ],
+          "clue": {
+            "id": "dj_pista_merimee",
+            "text": {
+              "es": "La leyenda · Los románticos franceses (Mérimée, 1834; Dumas, 1836) mezclaron a Mañara con Don Juan.",
+              "en": "The legend · The French Romantics (Mérimée, 1834; Dumas, 1836) mixed Mañara up with Don Juan."
+            }
+          },
+          "nextNodeId": "d5_caridad",
+          "nextHint": {
+            "es": "Al Hospital de la Caridad, a la vuelta de la esquina. Tres minutos.",
+            "en": "To the Hospital de la Caridad, just around the corner. Three minutes."
+          }
+        },
+        {
+          "id": "d4b_caridad",
+          "title": {
+            "es": "La Caridad",
+            "en": "The Caridad"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "dramatic",
+              "text": {
+                "es": "Mi mujer, Jerónima, murió en 1661. Aquello me cambió. Entré en la Hermandad de la Caridad, que enterraba a los muertos que nadie reclamaba.",
+                "en": "My wife, Jerónima, died in 1661. It changed me. I joined the Brotherhood of the Caridad, which buried the dead nobody claimed."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "text": {
+                "es": "Luego fui su hermano mayor y levanté un hospital para los pobres. Ahí gasté el dinero de Indias.",
+                "en": "Later I became its head and built a hospital for the poor. That's where I spent the Indies money."
+              }
+            }
+          ],
+          "clue": {
+            "id": "dj_pista_hospital",
+            "text": {
+              "es": "Las Indias · Tras morir su mujer en 1661, Mañara gastó su fortuna en el hospital de la Caridad.",
+              "en": "The Indies · After his wife died in 1661, Mañara spent his fortune on the Hospital de la Caridad."
+            }
+          },
+          "nextNodeId": "d5_caridad",
+          "nextHint": {
+            "es": "Al Hospital de la Caridad, a la vuelta de la esquina. Tres minutos.",
+            "en": "To the Hospital de la Caridad, just around the corner. Three minutes."
+          }
+        },
+        {
+          "id": "d5_caridad",
+          "title": {
+            "es": "Hospital de la Caridad",
+            "en": "Hospital de la Caridad"
+          },
+          "location": {
+            "lat": 37.38408,
+            "lng": -5.99523
+          },
+          "triggerRadiusM": 40,
+          "background": "fondos/fondo_sevilla_caridad.svg",
+          "content": [
+            {
+              "type": "scene",
+              "layers": [
+                "fondos/fondo_sevilla_caridad.svg"
+              ],
+              "characters": [
+                {
+                  "id": "manara",
+                  "expression": "neutral",
+                  "position": "left"
+                },
+                {
+                  "id": "murillo",
+                  "expression": "happy",
+                  "position": "right"
+                }
+              ]
+            },
+            {
+              "type": "historical_fact",
+              "text": {
+                "es": "La iglesia de la Caridad se inauguró en 1674, en unas naves de las atarazanas de Alfonso X. Murillo y Valdés Leal pintaron para ella; los azulejos de la fachada se atribuyen a dibujos de Murillo.",
+                "en": "The Caridad church opened in 1674, in part of Alfonso X's old shipyards. Murillo and Valdés Leal painted for it; the tiles on the façade are attributed to Murillo's designs."
+              },
+              "year": 1674
+            },
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "thinking",
+              "text": {
+                "es": "En mi tumba mandé escribir: «Aquí yacen los huesos y cenizas del peor hombre que ha habido en el mundo». Exageraba un poco, lo admito.",
+                "en": "On my tomb I had them write: “Here lie the bones and ashes of the worst man there ever was in the world”. I was exaggerating a little, I admit."
+              }
+            },
+            {
+              "type": "dialogue",
+              "characterId": "murillo",
+              "expression": "happy",
+              "text": {
+                "es": "Hora del veredicto. ¿Existió Don Juan?",
+                "en": "Verdict time. Did Don Juan exist?"
+              }
+            }
+          ],
+          "challenge": {
+            "type": "quiz",
+            "question": {
+              "es": "¿Existió Don Juan?",
+              "en": "Did Don Juan exist?"
+            },
+            "options": [
+              {
+                "es": "Sí: era Miguel Mañara",
+                "en": "Yes: he was Miguel Mañara"
+              },
+              {
+                "es": "Sí: era un Tenorio del siglo XIV",
+                "en": "Yes: he was a 14th-century Tenorio"
+              },
+              {
+                "es": "No: es un personaje de teatro; a Mañara le colgaron la leyenda después",
+                "en": "No: he's a stage character; the legend was pinned on Mañara later"
+              }
+            ],
+            "correctIndex": 2,
+            "explanation": {
+              "es": "Don Juan nació en el teatro («El burlador de Sevilla», 1630), cuando Mañara tenía tres años. Dos siglos después, los románticos lo mezclaron con la vida de Mañara, que de joven vivió alegre y luego dedicó su fortuna a los pobres.",
+              "en": "Don Juan was born on stage (“The Trickster of Seville”, 1630), when Mañara was three. Two centuries later the Romantics mixed him up with the life of Mañara, who lived merrily as a young man and then gave his fortune to the poor."
+            }
+          },
+          "nextNodeId": "d6_final"
+        },
+        {
+          "id": "d6_final",
+          "title": {
+            "es": "Caso cerrado",
+            "en": "Case closed"
+          },
+          "content": [
+            {
+              "type": "dialogue",
+              "characterId": "manara",
+              "expression": "proud",
+              "variants": [
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_teatro"
+                  ],
+                  "text": {
+                    "es": "La leyenda y el teatro: sabes qué es invento y qué no. Eres autor de comedias.",
+                    "en": "Legend and theatre: you know what's made up and what isn't. You're a playwright."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_dinero",
+                    "version_caridad"
+                  ],
+                  "text": {
+                    "es": "La leyenda y la Caridad: miras más allá del cuento. Eres hermano de la Caridad.",
+                    "en": "Legend and Caridad: you look beyond the story. You're a brother of the Caridad."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_teatro"
+                  ],
+                  "text": {
+                    "es": "Las Indias y el teatro: dinero, caballos y comedias. Eres caballero de la Maestranza.",
+                    "en": "The Indies and theatre: money, horses and plays. You're a knight of the Maestranza."
+                  }
+                },
+                {
+                  "requires": [
+                    "camino_poder",
+                    "version_caridad"
+                  ],
+                  "text": {
+                    "es": "Las Indias y la Caridad: una fortuna bien gastada. Eres cargador a Indias.",
+                    "en": "The Indies and the Caridad: a fortune well spent. You're an Indies merchant."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "dialogue",
+              "characterId": "murillo",
+              "expression": "happy",
+              "text": {
+                "es": "Y cuando vea a Don Juan por Todos los Santos, acuérdese: Sevilla le prestó el nombre, pero Mañara no le prestó la vida.",
+                "en": "And when you see Don Juan around All Saints' Day, remember: Seville lent him its name, but Mañara didn't lend him his life."
+              }
+            }
+          ],
+          "isEnding": true
+        }
+      ],
+      "endings": [
+        {
+          "id": "autor_comedias",
+          "requires": [
+            "camino_dinero",
+            "version_teatro"
+          ],
+          "title": {
+            "es": "Autor de comedias",
+            "en": "Playwright"
+          }
+        },
+        {
+          "id": "hermano_caridad",
+          "requires": [
+            "camino_dinero",
+            "version_caridad"
+          ],
+          "title": {
+            "es": "Hermano de la Caridad",
+            "en": "Brother of the Caridad"
+          }
+        },
+        {
+          "id": "caballero_maestranza",
+          "requires": [
+            "camino_poder",
+            "version_teatro"
+          ],
+          "title": {
+            "es": "Caballero de la Maestranza",
+            "en": "Knight of the Maestranza"
+          }
+        },
+        {
+          "id": "cargador_indias",
+          "requires": [
+            "camino_poder",
+            "version_caridad"
+          ],
+          "title": {
+            "es": "Cargador a Indias",
+            "en": "Indies merchant"
+          }
+        }
+      ],
+      "paths": {
+        "d1_manara->d2_murillo": [[-5.98644,37.38815],[-5.98617,37.38795],[-5.98585,37.38781],[-5.98593,37.38755],[-5.98638,37.38694],[-5.98656,37.38702],[-5.9869,37.38662],[-5.9873,37.38632],[-5.98718,37.38622],[-5.98754,37.38613],[-5.98784,37.38598],[-5.98814,37.38611],[-5.98846,37.38643],[-5.98934,37.38606],[-5.98903,37.38574]],
+        "d2_murillo->da_refinadores": [[-5.98903,37.38574],[-5.98892,37.38574],[-5.9886,37.38524],[-5.98848,37.3852],[-5.9883,37.38525],[-5.98789,37.38552],[-5.98779,37.38546],[-5.98766,37.38555]],
+        "d2_murillo->db_archivo": [[-5.98903,37.38574],[-5.98934,37.38606],[-5.98979,37.38583],[-5.9901,37.38578],[-5.99008,37.38574],[-5.9906,37.38563],[-5.99069,37.38568],[-5.99093,37.3854],[-5.99099,37.38538],[-5.99108,37.38548],[-5.99123,37.38544],[-5.99244,37.38477],[-5.99241,37.38458],[-5.99356,37.38411],[-5.99249,37.38457],[-5.99287,37.38445]],
+        "da_refinadores->d4_maestranza": [[-5.98766,37.38555],[-5.98779,37.38546],[-5.98789,37.38552],[-5.9883,37.38525],[-5.98848,37.3852],[-5.9886,37.38524],[-5.98892,37.38574],[-5.98901,37.38571],[-5.98934,37.38606],[-5.98951,37.38602],[-5.99019,37.38625],[-5.99091,37.38609],[-5.99174,37.38609],[-5.99198,37.38627],[-5.99245,37.38632],[-5.99252,37.38671],[-5.99266,37.38678],[-5.99401,37.38669],[-5.99622,37.38618],[-5.99658,37.38628],[-5.9973,37.38576],[-5.99852,37.38512],[-5.999,37.38556],[-5.99894,37.38562]],
+        "db_archivo->d4_maestranza": [[-5.99287,37.38445],[-5.99249,37.38457],[-5.99355,37.38415],[-5.99385,37.38394],[-5.99403,37.38372],[-5.99622,37.38306],[-5.99877,37.38534],[-5.999,37.38556],[-5.99894,37.38562]],
+        "d4_maestranza->d5_caridad": [[-5.99894,37.38562],[-5.999,37.38556],[-5.99686,37.38362],[-5.99646,37.38389],[-5.99591,37.38408],[-5.99578,37.38391]]
+      },
+      "rewards": [
+        {
+          "id": "donjuan_escudo",
+          "name": {
+            "es": "El escudo de los Mañara",
+            "en": "The Mañara coat of arms"
+          },
+          "icon": "collectibles/sevilla_donjuan_escudo.svg",
+          "awardedAtNodeId": "d1_manara"
+        },
+        {
+          "id": "donjuan_pincel",
+          "name": {
+            "es": "El pincel de Murillo",
+            "en": "Murillo's brush"
+          },
+          "icon": "collectibles/sevilla_donjuan_pincel.svg",
+          "awardedAtNodeId": "d2_murillo"
+        },
+        {
+          "id": "donjuan_capa",
+          "name": {
+            "es": "La capa de Don Juan",
+            "en": "Don Juan's cape"
+          },
+          "icon": "collectibles/sevilla_donjuan_capa.svg",
+          "awardedAtNodeId": "da_refinadores"
+        },
+        {
+          "id": "donjuan_galeon",
+          "name": {
+            "es": "El galeón de Indias",
+            "en": "The Indies galleon"
+          },
+          "icon": "collectibles/sevilla_donjuan_galeon.svg",
+          "awardedAtNodeId": "db_archivo"
+        },
+        {
+          "id": "donjuan_azulejo",
+          "name": {
+            "es": "El azulejo de la Caridad",
+            "en": "The Caridad tile"
+          },
+          "icon": "collectibles/sevilla_donjuan_azulejo.svg",
+          "awardedAtNodeId": "d5_caridad"
+        },
+        {
+          "id": "insignia_donjuan",
+          "name": {
+            "es": "¿Existió Don Juan?",
+            "en": "Did Don Juan Exist?"
+          },
+          "icon": "collectibles/sevilla_donjuan_insignia.svg",
+          "awardedAtNodeId": "d6_final"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: Miguel Mañara",
+          "url": "https://es.wikipedia.org/wiki/Miguel_Ma%C3%B1ara"
+        },
+        {
+          "title": "Wikipedia: Iglesia y Hospital de la Caridad (Sevilla)",
+          "url": "https://es.wikipedia.org/wiki/Iglesia_y_Hospital_de_la_Caridad_(Sevilla)"
+        },
+        {
+          "title": "Wikipedia: Don Juan Tenorio",
+          "url": "https://es.wikipedia.org/wiki/Don_Juan_Tenorio"
+        },
+        {
+          "title": "Wikipedia: Casa de Murillo",
+          "url": "https://es.wikipedia.org/wiki/Casa_de_Murillo"
+        }
+      ]
     }
   ]
 }

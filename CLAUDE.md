@@ -215,7 +215,8 @@ Málaga tiene formato compacto hecho a mano: al añadirle rutas, insertar sin re
 `docs/GDD_COMPLETAR.md`): lo imprescindible que aún no era parada. Hecha: Málaga «¿Por qué Picasso no
 volvió a Málaga?» (Picasso, su padre José Ruiz Blasco y su madre María Picasso) y Cádiz «¿Quién pagó el
 teatro romano de Gades?» (Balbo el Menor, la bailarina Telethusa y Columela) y Córdoba «¿Por qué se fueron
-los sabios de Córdoba?» (Séneca, Averroes y Maimónides). Arte en
+los sabios de Córdoba?» (Séneca, Averroes y Maimónides) y Sevilla «¿Existió Don Juan?» (Miguel Mañara,
+Murillo y Valdés Leal). Arte en
 `scripts/art/completar_scenes.py` y `completar_collectibles.py`.
 
 ## Arquitectura

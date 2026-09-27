@@ -54,3 +54,21 @@ personajes en `andalucia_sprites.py`.
 - Que el museo de la Calahorra siga abierto con ese tema.
 
 **Fuentes:** [Séneca](https://es.wikipedia.org/wiki/S%C3%A9neca), [Averroes](https://es.wikipedia.org/wiki/Averroes), [Maimónides](https://es.wikipedia.org/wiki/Maim%C3%B3nides), [Museo Arqueológico y Etnológico de Córdoba](https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_y_Etnol%C3%B3gico_de_C%C3%B3rdoba).
+
+## Sevilla · «¿Existió Don Juan?» (`don-juan`)
+
+- **Personajes:** `manara` (guía, Miguel Mañara, 1627-1679), `murillo` (1617-1682) y `valdesleal` (Juan de Valdés Leal, 1622-1690).
+- **Sospechosos:** Miguel Mañara, un Tenorio medieval o nadie (un personaje de teatro).
+- **Veredicto:** Don Juan es un personaje de teatro. «El burlador de Sevilla», atribuido a Tirso, es de 1630, cuando Mañara tenía tres años. En el siglo XIX, Mérimée (1834) y Dumas (1836) mezclaron su vida con la de Mañara. El Mañara real, tras enviudar en 1661, dedicó su fortuna a la Hermandad de la Caridad.
+- **Caminos:** La leyenda (plaza de los Refinadores, estatua de Don Juan) / Las Indias (Archivo de Indias, la Casa Lonja).
+- **Paradas:** palacio de Mañara (calle Levíes) → casa de Murillo (calle Santa Teresa) → Refinadores o Archivo de Indias → Real Maestranza → Hospital de la Caridad.
+- **Tono:** no se dibujan los azulejos de santos de la fachada ni los cuadros de Valdés Leal (paños de azulejo sin figuras).
+
+**Datos a verificar**
+- Que haya una lápida a Murillo en la plaza de Santa Cruz.
+- Que los azulejos de la fachada de la Caridad sigan dibujos de Murillo.
+- La fecha de la estatua de Don Juan en los Refinadores.
+- Que el palacio de Mañara sea sede de la Junta y se pueda ver la portada.
+- Las fechas de la Maestranza: fundación en 1670 y obras de la plaza de 1749 a 1881.
+
+**Fuentes:** [Miguel Mañara](https://es.wikipedia.org/wiki/Miguel_Ma%C3%B1ara), [Iglesia y Hospital de la Caridad](https://es.wikipedia.org/wiki/Iglesia_y_Hospital_de_la_Caridad_(Sevilla)), [Don Juan Tenorio](https://es.wikipedia.org/wiki/Don_Juan_Tenorio), [Casa de Murillo](https://es.wikipedia.org/wiki/Casa_de_Murillo), [Juan de Valdés Leal](https://es.wikipedia.org/wiki/Juan_de_Vald%C3%A9s_Leal).

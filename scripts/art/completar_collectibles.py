@@ -102,6 +102,32 @@ cor = {
     "insignia": BG + quill(32, 94, .9) + quill(48, 96, 1.1) + quill(64, 94, .9) + sparkle(96, 34, 6, GOLD) + sparkle(98, 80, 4, GOLD),
 }
 
+sev = {
+    "escudo": BG + (f'<path d="M34 30H86V66Q86 92 60 102Q34 92 34 66Z" fill="{GOLD}" stroke="{INK}" stroke-width="2.4"/>'
+                    + "".join(f'<path d="M38 {44 + k * 14}H82" stroke="{CLAY}" stroke-width="6"/>' for k in range(3))
+                    + f'<path d="M34 30H86" stroke="{INK}" stroke-width="2.4"/>' + sparkle(96, 30, 5, GOLD)),
+    "pincel": BG + palette(52, 70) + (f'<path d="M70 96L100 30" stroke="{INK}" stroke-width="6"/><path d="M70 96L100 30" stroke="{WOOD}" stroke-width="3.4"/>'
+                                      f'<path d="M96 38L104 20L106 36Z" fill="{CLAY}" stroke="{INK}" stroke-width="1.4"/>'),
+    "capa": SKY + (f'<path d="M30 40Q60 30 90 40L100 100Q60 92 20 100Z" fill="{INK}" stroke="{INK}" stroke-width="2"/>'
+                   f'<path d="M36 44Q60 36 84 44L92 96Q60 90 28 96Z" fill="#7A2E3A"/>'
+                   f'<path d="M40 30Q60 14 80 30Q60 26 40 30Z" fill="{INK}"/><path d="M78 24Q96 8 100 26" fill="none" stroke="{WHITE}" stroke-width="4"/>'
+                   f'<path d="M60 60L96 108" stroke="{SILVER}" stroke-width="3"/><path d="M58 64H70" stroke="{GOLD}" stroke-width="3"/>'),
+    "galeon": SKY + (f'<path d="M22 78H98L88 96H32Z" fill="{WOOD}" stroke="{INK}" stroke-width="2.2"/><path d="M84 78V64H98Z" fill="{WOODL}" stroke="{INK}" stroke-width="1.6"/>'
+                     f'<path d="M50 78V26M74 78V36" stroke="{INK}" stroke-width="2.4"/>'
+                     f'<path d="M36 34Q50 40 64 34V60Q50 66 36 60Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
+                     f'<path d="M64 42Q74 46 84 42V64Q74 68 64 64Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
+                     f'<path d="M50 26L60 22L50 18Z" fill="{RED}" stroke="{INK}" stroke-width="1.2"/>'
+                     f'<path d="M14 100Q30 94 46 100T78 100T110 100" fill="none" stroke="{SEA}" stroke-width="3"/>'),
+    "azulejo": BG + (f'<path d="M28 34H92V98H28Z" fill="#F4F1E8" stroke="{INK}" stroke-width="2.4"/>'
+                     f'<path d="M34 40H86V92H34Z" fill="none" stroke="#2F5F9E" stroke-width="2.4"/>'
+                     f'<path d="M60 44L70 66L60 88L50 66Z" fill="#8FB1D9" stroke="#2F5F9E" stroke-width="1.8"/>'
+                     + "".join(f'<circle cx="{x}" cy="{y}" r="4" fill="#2F5F9E"/>' for x, y in [(40, 46), (80, 46), (40, 86), (80, 86)])),
+    "insignia": BG + (f'<path d="M24 58Q60 40 96 58Q60 64 24 58Z" fill="{INK}"/><path d="M40 58Q44 30 60 30Q76 30 80 58Z" fill="{INK}"/>'
+                      f'<path d="M76 40Q96 20 102 44" fill="none" stroke="{CLAY}" stroke-width="5"/>'
+                      f'<text x="60" y="98" font-family="Georgia, serif" font-weight="700" font-size="30" text-anchor="middle" fill="{CLAY}">?</text>'
+                      + sparkle(28, 32, 5, GOLD)),
+}
+
 ORDER = {
     "malaga_picasso": (mal, [("lapiz", "El lápiz del «piz, piz»"), ("nombre", "El nombre larguísimo"), ("paloma", "La paloma de papá"),
                              ("picador", "El pequeño picador amarillo"), ("paleta", "La paleta de Picasso"), ("insignia", "¿Por qué Picasso no volvió a Málaga?")]),
@@ -109,6 +135,8 @@ ORDER = {
                            ("versos", "Los versos de Marcial"), ("atun", "El atún de Gades"), ("insignia", "¿Quién pagó el teatro romano de Gades?")]),
     "cordoba_sabios": (cor, [("tablilla", "La tablilla de Séneca"), ("guia", "La «Guía de perplejos»"), ("comentario", "El comentario de Averroes"),
                              ("lucerna", "La lucerna romana"), ("astrolabio", "El astrolabio andalusí"), ("insignia", "¿Por qué se fueron los sabios de Córdoba?")]),
+    "sevilla_donjuan": (sev, [("escudo", "El escudo de los Mañara"), ("pincel", "El pincel de Murillo"), ("capa", "La capa de Don Juan"),
+                              ("galeon", "El galeón de Indias"), ("azulejo", "El azulejo de la Caridad"), ("insignia", "¿Existió Don Juan?")]),
 }
 ART = {}
 for prefix, (arts, items) in ORDER.items():

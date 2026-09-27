@@ -213,6 +213,12 @@ CHARACTERS = {
                      outfit="tunic", main=SEA, accent=GOLD, second="#1F4F52", left="book", right="quill"),
     "maimonides": dict(skin="media", hair=("short", GREY), beard_=("full", GREY), hat_=("turban", "#3A4A7A", GOLD),
                        outfit="tunic", main="#5A3E6E", accent=PAPER, second="#3A2A4E", left="bag", right="book"),
+    "manara": dict(skin="clara", hair=("long", "#1E1A1A"), beard_=("short", "#1E1A1A"), outfit="jacket", main="#22222A", accent=GOLD,
+                   second="#2B2A33", neck=PAPER, left="book"),
+    "murillo": dict(skin="media", hair=("long", "#5A3A22"), beard_=("moustache", "#5A3A22"), outfit="jacket", main="#6E4A2E", accent=PAPER,
+                    second="#3A2A1E", neck=PAPER, left="palette", right="brush", raise_right=True),
+    "valdesleal": dict(skin="media", hair=("short", "#1E1A1A"), beard_=("full", "#1E1A1A"), outfit="jacket", main="#7A2E3A", accent=GOLD,
+                       second="#2B2A33", neck=PAPER, left="lantern", right="brush"),
 }
 
 if __name__ == "__main__":

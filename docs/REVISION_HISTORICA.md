@@ -585,6 +585,9 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 | La vieja del candil | figura de leyenda | s. XIV (leyenda) | [Sevilla Actualidad, «La curiosa leyenda que da nombre a la calle Cabeza del Rey Don Pedro»](https://www.sevillaactualidad.com/sevilla/567607-la-curiosa-leyenda-que-da-nombre-a-la-calle-cabeza-del-rey-don-pedro-de-sevilla/) |
 | El rey don Pedro | persona real | 1334-1369 | [Wikipedia: Pedro I de Castilla](https://es.wikipedia.org/wiki/Pedro_I_de_Castilla) |
 | Janet Keiller | persona real | 1737-1813 | [Wikipedia (en): Keiller's marmalade](https://en.wikipedia.org/wiki/Keiller%27s_marmalade) |
+| Miguel Mañara | persona real | 1627-1679 | [Wikipedia: Miguel Mañara](https://es.wikipedia.org/wiki/Miguel_Ma%C3%B1ara) |
+| Murillo | persona real | 1617-1682 | [Wikipedia: Casa de Murillo](https://es.wikipedia.org/wiki/Casa_de_Murillo) · [Wikipedia: Bartolomé Esteban Murillo](https://es.wikipedia.org/wiki/Bartolom%C3%A9_Esteban_Murillo) |
+| Valdés Leal | persona real | 1622-1690 | [Wikipedia: Juan de Valdés Leal](https://es.wikipedia.org/wiki/Juan_de_Vald%C3%A9s_Leal) |
 
 ### «¿Dónde está Colón?»: lo que afirma la ruta
 
@@ -634,6 +637,15 @@ Abderramán III; la plaza de Mina de Cádiz estaba mal situada en el mapa.
 - [ ] **Casa de Pilatos**: La Casa de Pilatos es un palacio de los siglos XV y XVI que mezcla mudéjar, gótico y renacimiento. Durante un tiempo guardó un busto muy relacionado con esta historia.
 - [ ] **La Giralda**: A mediados del siglo XIV, el rey Pedro I vivió en el Real Alcázar, junto a la catedral, y mandó levantar allí su palacio mudéjar.
 - [ ] **Calle Cabeza del Rey Don Pedro**: En una hornacina de esta calle hay un busto del rey Pedro I. El que se ve hoy es de hacia 1600-1630; el antiguo pasó a la Casa de Pilatos.
+
+### «¿Existió Don Juan?»: lo que afirma la ruta
+
+- [ ] **Palacio de Mañara**: Mañara era hijo de un rico comerciante corso que hizo fortuna con el comercio de Indias. El palacio, del siglo XVI, es hoy una sede de la Junta de Andalucía.
+- [ ] **Casa de Murillo** (1810): Murillo fue enterrado en la iglesia de Santa Cruz, que los franceses derribaron en 1810. Sus restos se perdieron; en la plaza de Santa Cruz lo recuerda una lápida.
+- [ ] **Plaza de los Refinadores** (1630): En la plaza de los Refinadores hay una estatua de Don Juan Tenorio, con capa y espada. Es un personaje de teatro: la primera obra, «El burlador de Sevilla», se publicó en 1630 atribuida a Tirso de Molina.
+- [ ] **Archivo de Indias**: El Archivo de Indias ocupa la antigua Casa Lonja, levantada a finales del siglo XVI para que los comerciantes de Indias no hicieran sus tratos en las gradas de la catedral.
+- [ ] **Real Maestranza** (1749): La Real Maestranza de Caballería de Sevilla se fundó en 1670 para que los nobles se entrenaran a caballo. La plaza de toros se empezó en 1749 y tardó más de un siglo en terminarse.
+- [ ] **Hospital de la Caridad** (1674): La iglesia de la Caridad se inauguró en 1674, en unas naves de las atarazanas de Alfonso X. Murillo y Valdés Leal pintaron para ella; los azulejos de la fachada se atribuyen a dibujos de Murillo.
 
 ## Rutas temáticas de varias ciudades
 

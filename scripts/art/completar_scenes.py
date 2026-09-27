@@ -4,6 +4,7 @@ Fondos de las rutas que completan las ciudades (ver docs/CIUDADES_QUE_FALTAN.md)
 Málaga: iglesia de Santiago, plaza de toros de La Malagueta, Palacio de Buenavista (Museo Picasso).
 Cádiz: arco del Pópulo, teatro romano, Casa del Almirante, Casa de las Cuatro Torres, castillo de Santa Catalina.
 Córdoba: plaza de Tiberíades (Maimónides), muralla de la calle Cairuán (Averroes), Museo Arqueológico.
+Sevilla: palacio de Mañara, plaza de los Refinadores (Don Juan), la Maestranza, Hospital de la Caridad.
 
 Uso: python3 scripts/art/completar_scenes.py [escena ...] && python3 scripts/art/render_layers.py <prefijo> && npm run gen:assets
 """
@@ -11,7 +12,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from cadiz_scenes import (INK, CLAY, SEA, GOLD, PAPER, WHITE, YELLOW, PINK, MINT, STONE, OUT, W,
                           f, sky, window, house, mirador, palm, lamp, person, floor, bench, tree, far_city, fx, doc)
-from sevilla_scenes import ALMAGRA, BRICK
+from sevilla_scenes import ALMAGRA, BRICK, ALBERO, giralda
 from cordoba_scenes import ground, lime_wall, flowerpots, statue, battlements, LIME, OCHRE, POTBLUE
 from granada_scenes import horseshoe, cypress
 from sevilla_scenes import orange_tree
@@ -244,10 +245,96 @@ def cordoba_arqueologico():
     return doc(p, "Museo Arqueológico de Córdoba", [sky(p, sun, [(90, 80, .8)], [(180, 60)]), far, mid, near, fx(p, sun, 420)])
 
 
+def azulejo_panel(x, y, w, h):
+    """Paño de azulejo azul y blanco, sin figuras."""
+    s = f'<path d="M{x} {y}H{x + w}V{y + h}H{x}Z" fill="#F4F1E8" stroke="{INK}" stroke-width="1.4"/>'
+    s += f'<path d="M{x + 4} {y + 4}H{x + w - 4}V{y + h - 4}H{x + 4}Z" fill="none" stroke="#2F5F9E" stroke-width="2"/>'
+    s += f'<ellipse cx="{x + w / 2}" cy="{y + h / 2}" rx="{w / 4}" ry="{h / 3.4}" fill="#8FB1D9" stroke="#2F5F9E" stroke-width="1.4"/>'
+    return s
+
+
+def sevilla_manara():
+    p = "smn"; sun = (90, 110)
+    far = f'<g id="far">{far_city(250, 91, towers=3)}</g>'
+    c, dk, lt = ALMAGRA
+    front = (f'<path d="M10 390V170H380V390Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<path d="M4 170H386V156H4Z" fill="{lt}" stroke="{INK}" stroke-width="1.6"/>'
+             + "".join(f'<path d="M{x} 390V170" stroke="{c}" stroke-width="10"/><path d="M{x - 5} 390V170M{x + 5} 390V170" stroke="{INK}" stroke-width=".8"/>' for x in (14, 376))
+             # portada de mármol con columnas pareadas y escudo
+             + f'<path d="M140 390V206H250V390Z" fill="#EDE6DA" stroke="{INK}" stroke-width="1.8"/>'
+             + "".join(f'<path d="M{x} 390V222" stroke="#D8CFC0" stroke-width="8"/><path d="M{x - 4} 390V222M{x + 4} 390V222" stroke="{INK}" stroke-width=".9"/>' for x in (152, 166, 224, 238))
+             + f'<path d="M176 390V298Q195 276 214 298V390Z" fill="#4A2E24" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M136 222H254V210H136Z" fill="#D8CFC0" stroke="{INK}" stroke-width="1.2"/>'
+             f'<path d="M180 262Q195 238 210 262V282H180Z" fill="{GOLD}" stroke="{INK}" stroke-width="1.4"/><path d="M184 258H206M183 266H207M184 274H206" stroke="{c}" stroke-width="3"/>'
+             + "".join(window(x, 210, 22, 40, shutters=False, balcony=True, sw=1.1) for x in (40, 90, 280, 330))
+             + "".join(window(x, 300, 22, 40, shutters=True, sw=1.1) for x in (40, 90, 280, 330)))
+    mid = f'<g id="mid">{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + lamp(60, 480) + lamp(330, 480)
+            + person(120, 452, 1, "#22222A") + person(260, 456, .95, CLAY, dress=True) + "</g>")
+    return doc(p, "Palacio de Mañara", [sky(p, sun, [(290, 70, .8)], [(200, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
+def sevilla_refinadores():
+    p = "srf"; sun = (300, 100)
+    far = f'<g id="far">{far_city(250, 97, towers=2)}{giralda(60, 250, 40, 20, 1.4, soft=True)}</g>'
+    back = (house(-20, 200, 140, 190, WHITE, floors=2, cols=2) + house(120, 220, 130, 170, YELLOW, floors=2, cols=2)
+            + house(250, 190, 160, 200, PINK, floors=2, cols=3))
+    mid = f'<g id="mid">{back}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}'
+            + orange_tree(40, 486, 30) + orange_tree(350, 490, 30) + palm(300, 470, 150, 4)
+            + statue(195, 480, 1.2) + person(110, 452, .95, SEA) + person(260, 456, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Plaza de los Refinadores", [sky(p, sun, [(90, 70, .8)], [(180, 56), (198, 48, .8)]), far, mid, near, fx(p, sun, 420, .25)])
+
+
+def sevilla_maestranza():
+    p = "smz"; sun = (300, 110)
+    far = f'<g id="far">{far_city(250, 211, towers=2)}{giralda(340, 250, 40, 20, 1.4, soft=True)}</g>'
+    c, dk, lt = ALBERO
+    ring = (f'<path d="M-10 390V220Q195 196 400 220V390Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/>'
+            f'<path d="M-10 220Q195 196 400 220V210Q195 186 -10 210Z" fill="{c}" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<path d="M{x} 300V262Q{x + 11} 250 {x + 22} 262V300Z" fill="{c}" stroke="{INK}" stroke-width="1.2"/>' for x in range(-4, 400, 34))
+            + f'<path d="M-10 316Q195 300 400 316" fill="none" stroke="{c}" stroke-width="10"/>'
+            # Puerta del Príncipe
+            + f'<path d="M140 390V230H250V390Z" fill="{lt}" stroke="{INK}" stroke-width="1.8"/>'
+            f'<path d="M166 390V310Q195 282 224 310V390Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.6"/>'
+            + "".join(f'<path d="M{x} 390V246" stroke="{c}" stroke-width="8"/><path d="M{x - 4} 390V246M{x + 4} 390V246" stroke="{INK}" stroke-width=".8"/>' for x in (152, 238))
+            + f'<path d="M136 246H254V234H136Z" fill="{c}" stroke="{INK}" stroke-width="1.2"/><path d="M170 234Q195 206 220 234Z" fill="{c}" stroke="{INK}" stroke-width="1.4"/>')
+    mid = f'<g id="mid">{ring}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}' + tree(30, 500, 34) + tree(360, 500, 32)
+            + person(110, 452, 1, "#22222A") + person(280, 456, .95, CLAY, dress=True) + "</g>")
+    return doc(p, "Real Maestranza", [sky(p, sun, [(90, 70, .8)], [(200, 60)]), far, mid, near, fx(p, sun, 420)])
+
+
+def sevilla_caridad():
+    p = "scd"; sun = (80, 110)
+    far = f'<g id="far">{far_city(250, 53, towers=3)}</g>'
+    c, dk, lt = ALMAGRA
+    front = (f'<path d="M100 390V170H290V390Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/>'
+             + "".join(f'<path d="M{x} 390V170" stroke="{c}" stroke-width="10"/><path d="M{x - 5} 390V170M{x + 5} 390V170" stroke="{INK}" stroke-width=".8"/>' for x in (104, 286))
+             # espadaña
+             + f'<path d="M150 170V110H240V170Z" fill="{WHITE[0]}" stroke="{INK}" stroke-width="1.8"/><path d="M146 110Q195 80 244 110Z" fill="{c}" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M184 150V124Q195 112 206 124V150Z" fill="#3A2E28" stroke="{INK}" stroke-width="1.4"/><circle cx="195" cy="136" r="5" fill="{GOLD}" stroke="{INK}" stroke-width="1"/>'
+             + azulejo_panel(170, 176, 50, 60) + azulejo_panel(118, 196, 36, 46) + azulejo_panel(236, 196, 36, 46)
+             + azulejo_panel(118, 260, 36, 46) + azulejo_panel(236, 260, 36, 46)
+             + f'<path d="M172 390V300Q195 278 218 300V390Z" fill="#4A2E24" stroke="{INK}" stroke-width="1.6"/>'
+             f'<path d="M160 256H230V246H160Z" fill="{c}" stroke="{INK}" stroke-width="1.2"/>')
+    # naves de las atarazanas a los lados, de ladrillo
+    b, bd, bl = BRICK
+    sides = "".join(f'<path d="M{x} 390V250H{x + 100}V390Z" fill="{b}" stroke="{INK}" stroke-width="1.6"/>'
+                    + "".join(f'<path d="M{x + 10 + k * 30} 390V320Q{x + 22 + k * 30} 300 {x + 34 + k * 30} 320V390Z" fill="{bd}" stroke="{INK}" stroke-width="1.2"/>' for k in range(3))
+                    for x in (-10, 300))
+    mid = f'<g id="mid">{sides}{front}{ground(386, "#E3CFAA")}</g>'
+    near = (f'<g id="near">{floor(p, 420, color="#E3CFAA", line="#CFB78E")}'
+            + statue(60, 480, 1.1) + person(250, 452, 1, SEA) + person(300, 456, .9, CLAY, dress=True) + "</g>")
+    return doc(p, "Hospital de la Caridad", [sky(p, sun, [(300, 70, .8)], [(230, 56)]), far, mid, near, fx(p, sun, 420)])
+
+
 SCENES = {"malaga_santiago": malaga_santiago, "malaga_toros": malaga_toros, "malaga_buenavista": malaga_buenavista,
           "cadiz_populo": cadiz_populo, "cadiz_teatro": cadiz_teatro, "cadiz_almirante": cadiz_almirante,
           "cadiz_cuatrotorres": cadiz_cuatrotorres, "cadiz_santacatalina": cadiz_santacatalina,
-          "cordoba_tiberiades": cordoba_tiberiades, "cordoba_averroes": cordoba_averroes, "cordoba_arqueologico": cordoba_arqueologico}
+          "cordoba_tiberiades": cordoba_tiberiades, "cordoba_averroes": cordoba_averroes, "cordoba_arqueologico": cordoba_arqueologico,
+          "sevilla_manara": sevilla_manara, "sevilla_refinadores": sevilla_refinadores, "sevilla_maestranza": sevilla_maestranza,
+          "sevilla_caridad": sevilla_caridad}
 
 if __name__ == "__main__":
     for key in sys.argv[1:] or SCENES:

@@ -256,6 +256,9 @@ def prop(kind, x, y, side):
         return (f'<path d="M{x - 26} {y - 30}Q{x} {y - 40} {x + 26} {y - 30}L{x + 16} {y + 20}H{x - 16}Z" fill="#C9B48A" fill-opacity=".35" stroke="{INK}" stroke-width="1.8"/>'
                 + "".join(f'<path d="M{x - 22 + k * 9} {y - 32}L{x - 14 + k * 6} {y + 20}" stroke="#8A7A62" stroke-width="1"/>' for k in range(6))
                 + "".join(f'<path d="M{x - 24} {y - 22 + k * 10}H{x + 24}" stroke="#8A7A62" stroke-width="1"/>' for k in range(4)))
+    if kind == "brush":     # pincel de pintor
+        return (f'<path d="M{x} {y + 10}L{x + s * 18} {y - 40}" stroke="{INK}" stroke-width="5"/><path d="M{x} {y + 10}L{x + s * 18} {y - 40}" stroke="#8A6243" stroke-width="3"/>'
+                f'<path d="M{x + s * 16} {y - 34}L{x + s * 22} {y - 50}L{x + s * 24} {y - 38}Z" fill="{CLAY}" stroke="{INK}" stroke-width="1.4"/>')
     if kind == "quill":
         return f'<path d="M{x} {y}L{x + s * 16} {y - 36}Q{x + s * 22} {y - 42} {x + s * 20} {y - 30}Q{x + s * 12} {y - 10} {x + s * 2} {y - 2}Z" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
     if kind == "bread":

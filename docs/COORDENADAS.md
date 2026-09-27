@@ -5,7 +5,7 @@ más de 80 m de lo que OSM encuentra con «título, ciudad». No todo aviso es u
 puede devolver otro sitio con el mismo nombre, o la parada estar a propósito en un punto de la
 plaza. Revisar cada una y, al moverla, regenerar los trazados (`npm run gen:paths`).
 
-Paradas revisadas: 157. Con aviso: 96.
+Paradas revisadas: 162. Con aviso: 96.
 
 | Ciudad | Parada | Ruta | Pack (lat, lng) | OSM (lat, lng) | Distancia | Qué encontró OSM |
 |---|---|---|---|---|---|---|
