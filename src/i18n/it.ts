@@ -79,6 +79,9 @@ export const it: Strings = {
     modoDemoTexto: "Pulsante «Simula arrivo» per giocare l'itinerario da casa.",
     estadisticas: "Aiuta a migliorare l'app",
     estadisticasTexto: "Statistiche d'uso anonime: quali percorsi si scelgono, quali sfide costano di più. Mai la tua posizione.",
+    devModo: "Modalità sviluppatore",
+    devSinAnuncios: "Senza pubblicità",
+    devSinAnunciosTexto: "I suggerimenti chiedono una pubblicità, ma non te ne mostra mai nessuna: arrivano gratis. Visibile solo in sviluppo.",
     verBienvenida: "Vedi il benvenuto",
   },
   ciudad: {

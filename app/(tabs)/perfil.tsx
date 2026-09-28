@@ -28,6 +28,8 @@ export default function Perfil() {
   const setLanguage = useProgress((s) => s.setLanguage);
   const handsFree = useProgress((s) => s.handsFree);
   const setHandsFree = useProgress((s) => s.setHandsFree);
+  const devSkipAds = useProgress((s) => s.devSkipAds);
+  const setDevSkipAds = useProgress((s) => s.setDevSkipAds);
   const options: { value: LangSetting; label: string }[] = [{ value: "auto", label: t("perfil.idiomaAuto") }, ...LANGS];
 
   return (
@@ -105,6 +107,22 @@ export default function Perfil() {
           <Button3D label={t("campo.verInforme")} variant="secondary" small onPress={() => router.push("/campo")} />
         ) : null}
       </Panel>
+      {__DEV__ ? (
+        <Panel nameplate={t("perfil.devModo")} nameplateColor={colors.clay}>
+          <View style={styles.row}>
+            <View style={{ flex: 1 }}>
+              <Text style={type.label}>{t("perfil.devSinAnuncios")}</Text>
+              <Text style={type.caption}>{t("perfil.devSinAnunciosTexto")}</Text>
+            </View>
+            <Switch
+              value={devSkipAds}
+              onValueChange={setDevSkipAds}
+              trackColor={{ true: colors.sea }}
+              accessibilityLabel={t("perfil.devSinAnuncios")}
+            />
+          </View>
+        </Panel>
+      ) : null}
       <Button3D label={t("perfil.verBienvenida")} variant="secondary" onPress={() => router.push("/bienvenida")} />
     </Screen>
   );

@@ -39,6 +39,13 @@ type ProgressStore = {
    */
   demoMode: boolean;
   setDemoMode: (on: boolean) => void;
+  /**
+   * Flag de desarrollador: no montar los anuncios con recompensa (la pista siempre sale gratis).
+   * Activo por defecto solo en desarrollo; el interruptor de Perfil solo se ve con `__DEV__`, así que
+   * nunca llega a una build de tienda.
+   */
+  devSkipAds: boolean;
+  setDevSkipAds: (on: boolean) => void;
   /** Reproducir las voces grabadas. */
   voices: boolean;
   /** Mostrar el texto de los diálogos (siempre visible si no hay voz que escuchar). */
@@ -129,6 +136,8 @@ export const useProgress = create<ProgressStore>()(
         hydrated: false,
         demoMode: __DEV__,
         setDemoMode: (demoMode) => set({ demoMode }),
+        devSkipAds: __DEV__,
+        setDevSkipAds: (devSkipAds) => set({ devSkipAds }),
         voices: true,
         subtitles: true,
         setVoices: (voices) => set({ voices }),
@@ -233,6 +242,7 @@ export const useProgress = create<ProgressStore>()(
         collection,
         lastRouteId,
         demoMode,
+        devSkipAds,
         voices,
         subtitles,
         handsFree,
@@ -246,6 +256,7 @@ export const useProgress = create<ProgressStore>()(
         collection,
         lastRouteId,
         demoMode,
+        devSkipAds,
         voices,
         subtitles,
       }),

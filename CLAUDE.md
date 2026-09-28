@@ -235,7 +235,10 @@ quita una opción, y en ordenar coloca el siguiente. Una pista no quita la estre
 pistas se piden a `src/ads/hints.ts` (gratis por defecto). En builds nativas, `src/ads/rewarded.native.ts`
 (AdMob, `react-native-google-mobile-ads` 17.0 —la 17.1 pide RN 0.86—) pide el consentimiento (UMP y, en iOS,
 el aviso de seguimiento) y cambia la puerta a «anuncio con recompensa»; si el anuncio no carga (sin conexión),
-la pista llega igual tras 20 s. Ahora usa los identificadores de prueba de Google. Todas las rutas terminan con «El expediente»: un candado cuya clave se cuenta en paradas
+la pista llega igual tras 20 s. Ahora usa los identificadores de prueba de Google. Flag de desarrollador
+(`devSkipAds` en el store, interruptor «Sin anuncios» en Perfil, **solo visible con `__DEV__`**): con él
+activo no se monta AdMob y la puerta se queda en «gratis», para no ver anuncios probando la app; activo por
+defecto en desarrollo. Todas las rutas terminan con «El expediente»: un candado cuya clave se cuenta en paradas
 comunes a todos los caminos, y cada paso de rama lleva una línea del tiempo o un acertijo con hechos de la
 propia ruta (lo exige `allPacks.test.ts`). Pendiente: retos de observación (placas, fechas en fachadas) al
 hacer la prueba en la calle.

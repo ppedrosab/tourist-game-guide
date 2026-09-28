@@ -81,6 +81,9 @@ export const es = {
     modoDemoTexto: "Botón «Simular llegada» para jugar la ruta desde casa.",
     estadisticas: "Ayudar a mejorar la app",
     estadisticasTexto: "Estadísticas anónimas de uso: qué caminos se eligen, qué retos cuestan más. Nunca tu ubicación.",
+    devModo: "Modo desarrollador",
+    devSinAnuncios: "Sin anuncios",
+    devSinAnunciosTexto: "Las pistas piden anuncio, pero nunca se te muestra: llegan gratis. Solo visible en desarrollo.",
     verBienvenida: "Ver bienvenida",
   },
   ciudad: {

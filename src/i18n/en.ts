@@ -79,6 +79,9 @@ export const en: Strings = {
     modoDemoTexto: "“Simulate arrival” button to play the route from home.",
     estadisticas: "Help improve the app",
     estadisticasTexto: "Anonymous usage stats: which paths people choose, which challenges are hardest. Never your location.",
+    devModo: "Developer mode",
+    devSinAnuncios: "Skip ads",
+    devSinAnunciosTexto: "Hints ask for an ad, but none is ever shown to you: they arrive free. Only visible in development.",
     verBienvenida: "See welcome",
   },
   ciudad: {

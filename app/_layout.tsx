@@ -8,7 +8,9 @@ import { useEffect } from "react";
 // Define la tarea de geofences al arrancar (obligatorio para TaskManager).
 import { GeofenceSync } from "@/geo/GeofenceSync";
 import { setupRewardedHints } from "@/ads/rewarded";
+import { setHintGate } from "@/ads/hints";
 import { useHandsFreeAudio } from "@/hooks/useHandsFreeAudio";
+import { useProgress } from "@/store/progress";
 import { colors } from "@/theme";
 
 SplashScreen.preventAutoHideAsync();
@@ -20,15 +22,21 @@ SplashScreen.preventAutoHideAsync();
  */
 export default function RootLayout() {
   const [loaded] = useFonts({ Fraunces_700Bold, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold });
+  const devSkipAds = useProgress((s) => s.devSkipAds);
 
   useEffect(() => {
     if (loaded) SplashScreen.hideAsync();
   }, [loaded]);
 
   // Pistas con anuncio con recompensa (solo en builds con AdMob; en Expo Go y web, gratis).
+  // Con el flag de desarrollador activo, la puerta se queda en "gratis" y no se monta AdMob.
   useEffect(() => {
+    if (devSkipAds) {
+      setHintGate(null);
+      return;
+    }
     setupRewardedHints();
-  }, []);
+  }, [devSkipAds]);
   useHandsFreeAudio();
 
   if (!loaded) return null;

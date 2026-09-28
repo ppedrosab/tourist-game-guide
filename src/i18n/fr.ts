@@ -79,6 +79,9 @@ export const fr: Strings = {
     modoDemoTexto: "Bouton « Simuler l'arrivée » pour jouer le parcours depuis chez vous.",
     estadisticas: "Aider à améliorer l'app",
     estadisticasTexto: "Statistiques d'usage anonymes : quels chemins sont choisis, quels défis coûtent le plus. Jamais votre position.",
+    devModo: "Mode développeur",
+    devSinAnuncios: "Sans publicités",
+    devSinAnunciosTexto: "Les indices demandent une pub, mais aucune ne vous est jamais montrée : elles arrivent gratuitement. Visible seulement en développement.",
     verBienvenida: "Voir l'accueil",
   },
   ciudad: {

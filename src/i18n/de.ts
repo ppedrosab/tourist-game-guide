@@ -79,6 +79,9 @@ export const de: Strings = {
     modoDemoTexto: "Schaltfläche „Ankunft simulieren“, um die Tour von zu Hause aus zu spielen.",
     estadisticas: "Hilf, die App zu verbessern",
     estadisticasTexto: "Anonyme Nutzungsstatistik: welche Wege gewählt werden, welche Rätsel am schwersten sind. Nie dein Standort.",
+    devModo: "Entwicklermodus",
+    devSinAnuncios: "Ohne Werbung",
+    devSinAnunciosTexto: "Tipps verlangen eine Anzeige, aber dir wird nie eine gezeigt: Sie kommen kostenlos. Nur in der Entwicklung sichtbar.",
     verBienvenida: "Willkommen ansehen",
   },
   ciudad: {
