@@ -66,6 +66,7 @@ export function resolveText(
     case "narration":
     case "historical_fact":
     case "anecdote":
+    case "know_more":
       return block.text;
     case "then_now":
     case "image":

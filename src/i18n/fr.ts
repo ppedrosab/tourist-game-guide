@@ -157,6 +157,9 @@ export const fr: Strings = {
     pausa: "Pause",
     cuaderno: "Carnet du détective",
     repetirAudio: "Réécouter",
+    saberMas: "En savoir plus",
+    saberMasAbrir: "Lire la suite",
+    seguirCaminando: "Continuer à marcher",
   },
   antesAhora: {
     antes: "Avant",
@@ -201,6 +204,7 @@ export const fr: Strings = {
     misterioso: "Fin mystérieuse",
     descubiertos: "{n} fins découvertes sur {total}",
     coleccionables: "Objets de collection",
+    recomendaciones: "Puisque vous êtes dans le coin…",
     otrasCalles: "Il y a des rues que vous n'avez pas parcourues aujourd'hui. Essayez l'autre chemin ?",
     otroCamino: "Essayer un autre chemin",
     volverExplorar: "Retour à Explorer",

@@ -259,6 +259,16 @@ avanzan solas al terminar la voz (`useVoice().finished`), la espera de llegada d
 audio en segundo plano (iOS: `UIBackgroundModes: audio` en app.json, junto a `location`). Pendiente de
 dispositivo: comprobar que la voz sintética sigue con la pantalla bloqueada.
 
+**Capa «free tour»** (piloto en una sola ruta: `content/malaga/misterio-manquita.pack.json`; falta decidir si se
+extiende a las 40 rutas restantes): «Saber más» es un bloque de contenido opcional (`{ type: "know_more" }`)
+plegado por defecto (`KnowMorePanel`), con un botón «Leer más» y otro para seguir sin leerlo; en manos libres se
+salta solo, sin leerse en voz alta. Un nodo puede llevar `passingBy`: puntos cercanos al camino hacia esa parada
+(no son parada, no dan pista ni cuentan para el progreso) que `useArrivalWatcher` detecta por GPS mientras se
+espera la llegada y `jugar.tsx` muestra como un aviso corto del guía (con voz, también en manos libres). Una
+ruta puede llevar `recommendations`: qué más ver por la zona, en un panel al final del caso (`CaseClosed`). Los
+tres se probaron en las ocho paradas físicas, con cuatro puntos «de paso» y dos recomendaciones finales de esta
+ruta; el contenido de las otras 40 rutas queda pendiente si se decide generalizar la capa.
+
 ## Arquitectura
 
 ```

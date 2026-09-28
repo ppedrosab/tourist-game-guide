@@ -159,6 +159,9 @@ export const es = {
     pausa: "Pausa",
     cuaderno: "Cuaderno del detective",
     repetirAudio: "Repetir audio",
+    saberMas: "Saber más",
+    saberMasAbrir: "Leer más",
+    seguirCaminando: "Seguir caminando",
   },
   antesAhora: {
     antes: "Antes",
@@ -203,6 +206,7 @@ export const es = {
     misterioso: "Final misterioso",
     descubiertos: "{n} de {total} finales descubiertos",
     coleccionables: "Coleccionables",
+    recomendaciones: "Ya que estás por aquí…",
     otrasCalles: "Hay calles que hoy no has pisado. ¿Pruebas el otro camino?",
     otroCamino: "Probar otro camino",
     volverExplorar: "Volver a Explorar",

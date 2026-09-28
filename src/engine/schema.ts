@@ -41,6 +41,7 @@ const contentBlock = z.discriminatedUnion("type", [
   z.object({ type: z.literal("historical_fact"), text: i18nText, year: z.number().int().optional() }),
   z.object({ type: z.literal("anecdote"), text: i18nText, legend: z.boolean().optional(), source: z.string().optional() }),
   z.object({ type: z.literal("image"), src: assetRef, caption: i18nText.optional() }),
+  z.object({ type: z.literal("know_more"), text: i18nText, audio: audio.optional() }),
 ]);
 
 const challenge = z.discriminatedUnion("type", [
@@ -102,6 +103,9 @@ const storyNode = z.object({
   nextNodeId: z.string().optional(),
   nextHint: i18nText.optional(),
   isEnding: z.boolean().optional(),
+  passingBy: z
+    .array(z.object({ id: z.string().min(1), location: latLng, triggerRadiusM: z.number().positive().optional(), title: i18nText, text: i18nText }))
+    .optional(),
 });
 
 const source = z.object({ title: z.string().min(1), url: z.string().url().optional() });
@@ -146,6 +150,7 @@ const route = z.object({
       ),
     })
     .optional(),
+  recommendations: z.array(z.object({ title: i18nText, text: i18nText })).optional(),
 });
 
 export const cityPackSchema = z.object({

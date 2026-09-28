@@ -102,6 +102,14 @@ export interface Route {
   sources?: Source[];
   /** Datos prácticos de paradas y tramos (agua, horarios, cuestas…). Lo genera `npm run gen:practical`. */
   practical?: RoutePractical;
+  /** Capa "free tour": qué más ver por la zona, para cuando termina el caso. */
+  recommendations?: Recommendation[];
+}
+
+/** Una recomendación final: algo cercano que merece la pena ver, sin ser parada de la ruta. */
+export interface Recommendation {
+  title: I18nText;
+  text: I18nText;
 }
 
 /** Lo práctico de una parada física, sacado de OpenStreetMap. Las distancias van en metros. */
@@ -150,6 +158,20 @@ export interface StoryNode {
   nextNodeId?: string;
   nextHint?: I18nText;
   isEnding?: boolean;
+  /**
+   * Puntos "de paso" según se camina hacia esta parada: un aviso corto si el GPS detecta que el
+   * jugador pasa cerca, sin ser parada de la ruta (no cuenta para el progreso ni tiene reto).
+   */
+  passingBy?: PassingBy[];
+}
+
+/** Un punto "de paso": un aviso corto si el jugador pasa cerca, entre dos paradas. */
+export interface PassingBy {
+  id: string;
+  location: LatLng;
+  triggerRadiusM?: number;
+  title: I18nText;
+  text: I18nText;
 }
 
 /** Texto alternativo que se usa si el jugador tiene todos los flags de `requires`. */
@@ -166,7 +188,9 @@ export type ContentBlock =
   | { type: "then_now"; then: AssetRef; now: AssetRef; caption?: I18nText }
   | { type: "historical_fact"; text: I18nText; year?: number }
   | { type: "anecdote"; text: I18nText; legend?: boolean; source?: string }
-  | { type: "image"; src: AssetRef; caption?: I18nText };
+  | { type: "image"; src: AssetRef; caption?: I18nText }
+  /** "Saber más": texto opcional y más largo, plegado por defecto (capa "free tour"). */
+  | { type: "know_more"; text: I18nText; audio?: Partial<Record<LangCode, AssetRef>> };
 
 /**
  * Retos de una parada. `hints`: pistas escalonadas (de suave a clara) que el jugador pide una a una;

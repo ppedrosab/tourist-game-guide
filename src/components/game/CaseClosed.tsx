@@ -71,6 +71,19 @@ export function CaseClosed({ route, run, city, onReplay, onExit }: Props) {
           </View>
         </Panel>
       ) : null}
+      {route.recommendations && route.recommendations.length > 0 ? (
+        <Panel nameplate={t("final.recomendaciones")} nameplateColor={colors.sea}>
+          {route.recommendations.map((r, i) => (
+            <View key={i} style={styles.recommendation}>
+              <Icon name="pin" size={18} color={colors.sea} />
+              <View style={{ flex: 1 }}>
+                <Text style={type.label}>{L(r.title)}</Text>
+                <Text style={type.body}>{L(r.text)}</Text>
+              </View>
+            </View>
+          ))}
+        </Panel>
+      ) : null}
       <Button3D label={t("final.compartir")} icon="share" variant="sea" disabled={sharing} onPress={share} />
       {shareFailed ? <Text style={type.caption}>{t("final.compartirError")}</Text> : null}
       {found < total ? <Text style={type.body}>{t("final.otrasCalles")}</Text> : null}
@@ -104,6 +117,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 10, justifyContent: "center" },
+  recommendation: { flexDirection: "row", gap: 10, alignItems: "flex-start" },
   reward: { width: 92, alignItems: "center", gap: 4 },
   offscreen: { position: "absolute", left: -10000, top: 0 },
 });

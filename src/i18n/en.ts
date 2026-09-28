@@ -157,6 +157,9 @@ export const en: Strings = {
     pausa: "Pause",
     cuaderno: "Detective's notebook",
     repetirAudio: "Replay audio",
+    saberMas: "Learn more",
+    saberMasAbrir: "Read more",
+    seguirCaminando: "Keep walking",
   },
   antesAhora: {
     antes: "Then",
@@ -201,6 +204,7 @@ export const en: Strings = {
     misterioso: "Mysterious ending",
     descubiertos: "{n} of {total} endings found",
     coleccionables: "Collectibles",
+    recomendaciones: "While you're around here…",
     otrasCalles: "There are streets you haven't walked today. Try the other path?",
     otroCamino: "Try another path",
     volverExplorar: "Back to Explore",

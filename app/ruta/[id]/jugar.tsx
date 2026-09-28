@@ -6,12 +6,14 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArrivalPanel } from "@/components/game/ArrivalPanel";
 import { CaseClosed } from "@/components/game/CaseClosed";
 import { ChallengePanel } from "@/components/game/ChallengePanel";
+import { KnowMorePanel } from "@/components/game/KnowMorePanel";
 import { ThenNowPanel } from "@/components/game/ThenNowPanel";
 import { Screen, TopBar } from "@/components/layout/Screen";
 import { AzulejoBackground, ChoiceCard, DialogBox, Hud } from "@/components/ui";
 import type {
   CityPack,
   I18nText,
+  PassingBy,
   PlayerProgress,
   Route,
 } from "@/content/types";
@@ -119,11 +121,14 @@ function NodePlayer({
     });
     markArrived(route, method);
   };
+  // Aviso "de paso" (capa "free tour"): un punto cercano en el camino, sin ser parada.
+  const [passing, setPassing] = useState<PassingBy>();
   const watch = useArrivalWatcher(
     node,
     !arrived,
     (fix) => arrive("gps", fix),
     (fix) => field.addFix({ routeId: route.id, nodeId: node.id, ...fix }),
+    (poi) => setPassing(poi),
   );
   const watchRef = useRef(watch);
   watchRef.current = watch;
@@ -150,9 +155,16 @@ function NodePlayer({
   const handsFree = useProgress((s) => s.handsFree);
   const line = arrived
     ? spokenLine(step, `${node.id}:${index}`, L, pack, handsFree ? t : undefined)
-    : handsFree && node.location
-      ? { key: `${node.id}:camino`, text: t("jugar.manosLibresCamina", { title: L(node.title) }) }
-      : undefined;
+    : passing
+      ? {
+          key: `${node.id}:paso:${passing.id}`,
+          text: L(passing.text),
+          speaker: route.guideCharacterId,
+          voice: pack.characters.find((c) => c.id === route.guideCharacterId)?.voice,
+        }
+      : handsFree && node.location
+        ? { key: `${node.id}:camino`, text: t("jugar.manosLibresCamina", { title: L(node.title) }) }
+        : undefined;
   const voice = useVoice(line, { enabled: voicesOn, active: focused, lang });
   // Manos libres: al llegar vibra (la escena empieza a hablar sola) y las líneas avanzan al acabar la voz.
   const wasArrived = useRef(arrived);
@@ -164,6 +176,10 @@ function NodePlayer({
   }, [arrived, handsFree]);
   useEffect(() => {
     if (!handsFree || !arrived || !focused || !voice.finished) return;
+    if (step.kind === "know_more") {
+      next();
+      return;
+    }
     if (step.kind !== "text" && step.kind !== "clue" && step.kind !== "continue") return;
     const timer = setTimeout(
       () => (step.kind === "continue" ? advance(route) : next()),
@@ -171,6 +187,12 @@ function NodePlayer({
     );
     return () => clearTimeout(timer);
   }, [handsFree, arrived, focused, voice.finished, index]);
+  // Manos libres: el aviso "de paso" se lee y se cierra solo (no hay pantalla que tocar mientras se anda).
+  useEffect(() => {
+    if (!handsFree || !passing || !focused || !voice.finished) return;
+    const timer = setTimeout(() => setPassing(undefined), HANDS_FREE_PAUSE_MS);
+    return () => clearTimeout(timer);
+  }, [handsFree, passing, focused, voice.finished]);
   // Mientras se espera la llegada, en escena solo está el guía.
   const cast = useMemo(
     () => stageCast(pack, route, node, arrived ? step : undefined),
@@ -210,7 +232,16 @@ function NodePlayer({
       </View>
 
       <View style={[styles.dialog, { bottom: insets.bottom + 12 }]}>
-        {!arrived ? (
+        {!arrived && passing ? (
+          <DialogBox
+            speaker={characterName()}
+            text={L(passing.text)}
+            nextLabel={t("jugar.seguirCaminando")}
+            onNext={() => setPassing(undefined)}
+            audioProgress={voice.progress}
+            onReplay={voice.replay}
+          />
+        ) : !arrived ? (
           <ArrivalPanel
             pack={pack}
             route={route}
@@ -363,6 +394,8 @@ function StepView({
         />
       );
     }
+    case "know_more":
+      return <KnowMorePanel text={L(step.text)} onNext={onNext} />;
     case "then_now":
       return (
         <ThenNowPanel

@@ -157,6 +157,9 @@ export const de: Strings = {
     pausa: "Pause",
     cuaderno: "Notizbuch des Detektivs",
     repetirAudio: "Audio wiederholen",
+    saberMas: "Mehr erfahren",
+    saberMasAbrir: "Mehr lesen",
+    seguirCaminando: "Weitergehen",
   },
   antesAhora: {
     antes: "Damals",
@@ -201,6 +204,7 @@ export const de: Strings = {
     misterioso: "Geheimnisvolles Ende",
     descubiertos: "{n} von {total} Enden entdeckt",
     coleccionables: "Sammelstücke",
+    recomendaciones: "Wo du gerade hier bist…",
     otrasCalles: "Es gibt Straßen, die du heute nicht gegangen bist. Probierst du den anderen Weg?",
     otroCamino: "Anderen Weg probieren",
     volverExplorar: "Zurück zu Entdecken",

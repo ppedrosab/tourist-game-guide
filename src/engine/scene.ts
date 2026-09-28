@@ -9,7 +9,7 @@ import { availableChoices, getNode, resolveText } from "./runner";
 export type SceneStep =
   | {
       kind: "text";
-      source: Exclude<ContentBlock["type"], "scene" | "then_now">;
+      source: Exclude<ContentBlock["type"], "scene" | "then_now" | "know_more">;
       text: I18nText;
       characterId?: string;
       expression?: Expression;
@@ -20,6 +20,8 @@ export type SceneStep =
     }
   /** Comparador "antes y ahora": ilustración de época frente a la cámara (o una imagen). */
   | { kind: "then_now"; then: AssetRef; now: AssetRef; caption?: I18nText }
+  /** "Saber más": texto opcional y más largo, plegado por defecto (capa "free tour"). */
+  | { kind: "know_more"; text: I18nText; audio?: Partial<Record<LangCode, AssetRef>> }
   | { kind: "challenge"; challenge: Challenge }
   | { kind: "clue"; text: I18nText }
   | { kind: "decision"; intro?: { characterId: string; expression?: Expression; text: I18nText }; choices: Choice[] }
@@ -33,6 +35,10 @@ export function buildSteps(route: Route, node: StoryNode, flags: readonly string
     if (block.type === "scene") continue;
     if (block.type === "then_now") {
       steps.push({ kind: "then_now", then: block.then, now: block.now, caption: block.caption });
+      continue;
+    }
+    if (block.type === "know_more") {
+      steps.push({ kind: "know_more", text: block.text, audio: block.audio });
       continue;
     }
     const text = resolveText(block, flags);

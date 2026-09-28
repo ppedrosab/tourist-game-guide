@@ -1,7 +1,7 @@
 import * as Location from "expo-location";
-import { useEffect, useState } from "react";
-import type { StoryNode } from "@/content/types";
-import { distanceM, GpsStatus, isInside, offerManualArrival } from "@/engine/geo";
+import { useEffect, useRef, useState } from "react";
+import type { PassingBy, StoryNode } from "@/content/types";
+import { distanceM, DEFAULT_RADIUS_M, GpsStatus, isInside, offerManualArrival } from "@/engine/geo";
 import { Fix, Watch, watchPosition } from "@/geo/watchPosition";
 
 export type ArrivalWatch = {
@@ -25,6 +25,8 @@ export function useArrivalWatcher(
   /** Recibe la posición que ha provocado la llegada. */
   onArrive: (fix: Fix) => void,
   onFix?: (fix: Fix) => void,
+  /** Se pasa cerca de un punto "de paso" del nodo (capa "free tour"), antes de llegar. */
+  onPassingBy?: (poi: PassingBy) => void,
 ): ArrivalWatch {
   const [lastFix, setLastFix] = useState<Fix>();
   const [status, setStatus] = useState<GpsStatus>("asking");
@@ -32,6 +34,12 @@ export function useArrivalWatcher(
   const [watchStartedAt, setWatchStartedAt] = useState<number>();
   const [lastFixAt, setLastFixAt] = useState<number>();
   const [now, setNow] = useState(Date.now());
+  // Puntos de paso ya avisados de este nodo, para no repetirlos (se reinicia al cambiar de nodo).
+  const seenPassingBy = useRef(new Set<string>());
+
+  useEffect(() => {
+    seenPassingBy.current = new Set();
+  }, [node]);
 
   useEffect(() => {
     if (!enabled || !node.location) return;
@@ -52,6 +60,14 @@ export function useArrivalWatcher(
           onFix?.(fix);
           setDistance(distanceM(fix, node.location!));
           if (isInside(fix, node)) onArrive(fix);
+          for (const poi of node.passingBy ?? []) {
+            if (seenPassingBy.current.has(poi.id)) continue;
+            const bonus = Math.min(Math.max(fix.accuracy ?? 0, 0), 20);
+            if (distanceM(fix, poi.location) <= (poi.triggerRadiusM ?? DEFAULT_RADIUS_M) + bonus) {
+              seenPassingBy.current.add(poi.id);
+              onPassingBy?.(poi);
+            }
+          }
         });
         if (cancelled) sub.remove();
       } catch {
@@ -62,7 +78,7 @@ export function useArrivalWatcher(
       cancelled = true;
       sub?.remove();
     };
-    // onArrive cambia en cada render; el nodo y `enabled` son los que importan.
+    // onArrive/onPassingBy cambian en cada render; el nodo y `enabled` son los que importan.
   }, [node, enabled]);
 
   // Reloj para el temporizador del fallback.

@@ -11,21 +11,21 @@ const kinds = (nodeId: string, flags: string[] = []) => buildSteps(route, getNod
 
 describe("buildSteps", () => {
   it("omite los bloques scene y termina en seguir", () => {
-    expect(kinds("n1_cenachero")).toEqual(["text", "text", "text", "continue"]);
+    expect(kinds("n1_cenachero")).toEqual(["text", "text", "text", "know_more", "continue"]);
   });
 
   it("pone reto antes de la decisión", () => {
-    expect(kinds("n2_larios")).toEqual(["then_now", "text", "text", "challenge", "decision"]);
+    expect(kinds("n2_larios")).toEqual(["then_now", "text", "text", "know_more", "challenge", "decision"]);
   });
 
   it("añade la pista tras el reto", () => {
-    expect(kinds("a1_atarazanas")).toEqual(["text", "text", "text", "text", "challenge", "clue", "continue"]);
+    expect(kinds("a1_atarazanas")).toEqual(["text", "text", "text", "text", "know_more", "challenge", "clue", "continue"]);
   });
 
   it("resuelve variantes con los flags y salta las que no encajan", () => {
     const withFlag = buildSteps(route, getNode(route, "n4_manquita"), ["camino_poder"]);
     expect(withFlag.filter((s) => s.kind === "text")).toHaveLength(3);
-    expect(kinds("n4_manquita")).toEqual(["text", "text", "challenge", "decision"]);
+    expect(kinds("n4_manquita")).toEqual(["text", "text", "know_more", "challenge", "decision"]);
   });
 
   it("sin decisionIntro, la decisión la plantea el último diálogo", () => {
@@ -36,7 +36,7 @@ describe("buildSteps", () => {
   });
 
   it("encadena los nodos narrativos sin paso de seguir", () => {
-    expect(kinds("n6_merced")).toEqual(["text", "text", "text", "challenge"]);
+    expect(kinds("n6_merced")).toEqual(["text", "text", "text", "know_more", "challenge"]);
     expect(kinds("n6b_resolver")).toEqual(["text", "challenge"]);
   });
 
