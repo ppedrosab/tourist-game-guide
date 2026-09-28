@@ -1,0 +1,290 @@
+{
+ "almeria": {
+  "[\"agosto\", \"august\"]": [
+   "aout",
+   "en aout",
+   "im august",
+   "agosto"
+  ],
+  "[\"seda\", \"silk\"]": [
+   "soie",
+   "la soie",
+   "seide",
+   "die seide",
+   "la seta",
+   "seta"
+  ],
+  "[\"mar\", \"del mar\", \"virgen del mar\"]": [
+   "mer",
+   "meer",
+   "mare"
+  ]
+ },
+ "cadiz": {
+  "[\"atun\", \"tuna\", \"atun rojo\"]": [
+   "thon",
+   "thon rouge",
+   "le thon",
+   "thunfisch",
+   "roter thun",
+   "tonno",
+   "tonno rosso",
+   "il tonno"
+  ],
+  "[\"cargador\", \"cargadores\"]": [
+   "porteur",
+   "porteurs",
+   "trager",
+   "portatore",
+   "portatori",
+   "costalero",
+   "costaleros"
+  ],
+  "[\"hercules\"]": [
+   "hercule",
+   "herakles",
+   "herkules",
+   "ercole"
+  ]
+ },
+ "cordoba": {
+  "[\"piedra\", \"de piedra\", \"stone\", \"sillares\"]": [
+   "pierre",
+   "en pierre",
+   "de pierre",
+   "stein",
+   "aus stein",
+   "pietra",
+   "di pietra"
+  ],
+  "[\"mezquita\", \"la mezquita\", \"torre de la mezquita\", \"catedral\", \"mosque\", \"the mosque\", \"cathedral\"]": [
+   "mosquee",
+   "la mosquee",
+   "cathedrale",
+   "la cathedrale",
+   "moschee",
+   "die moschee",
+   "kathedrale",
+   "moschea",
+   "la moschea",
+   "cattedrale",
+   "la cattedrale"
+  ],
+  "[\"guitarra\"]": [
+   "guitare",
+   "la guitare",
+   "gitarre",
+   "die gitarre",
+   "chitarra",
+   "la chitarra"
+  ],
+  "[\"mayo\", \"may\"]": [
+   "mai",
+   "en mai",
+   "im mai",
+   "maggio"
+  ],
+  "[\"neron\", \"nero\"]": [
+   "nerone"
+  ]
+ },
+ "granada": {
+  "[\"pesas\", \"unas pesas\", \"las pesas\", \"weights\", \"pesos\"]": [
+   "poids",
+   "des poids",
+   "les poids",
+   "gewichte",
+   "die gewichte",
+   "pesi",
+   "i pesi",
+   "dei pesi"
+  ],
+  "[\"salomonicas\", \"salomonica\", \"solomonic\"]": [
+   "salomoniques",
+   "salomonique",
+   "torsadees",
+   "salomonisch",
+   "salomonische",
+   "gedrehte",
+   "salomoniche",
+   "salomonica",
+   "tortili"
+  ]
+ },
+ "huelva": {
+  "[\"jardin\", \"jardín\", \"un jardín\", \"jardines\", \"garden\", \"gardens\", \"a garden\"]": [
+   "un jardin",
+   "jardins",
+   "garten",
+   "ein garten",
+   "gaerten",
+   "giardino",
+   "un giardino",
+   "giardini"
+  ],
+  "[\"choco\", \"sepia\", \"cuttlefish\"]": [
+   "seiche",
+   "la seiche",
+   "tintenfisch",
+   "der tintenfisch",
+   "seppia",
+   "la seppia"
+  ],
+  "[\"sepia\", \"cuttlefish\"]": [
+   "seiche",
+   "la seiche",
+   "tintenfisch",
+   "seppia",
+   "la seppia"
+  ],
+  "[\"tartessos\", \"tarteso\", \"tartesos\"]": [
+   "tartesso",
+   "tartessus"
+  ]
+ },
+ "jaen": {
+  "[\"1\", \"una\", \"uno\", \"one\", \"2\", \"dos\", \"two\"]": [
+   "un",
+   "une",
+   "deux",
+   "eins",
+   "eine",
+   "einer",
+   "zwei",
+   "uno",
+   "una",
+   "due"
+  ],
+  "[\"lagarto\", \"el lagarto\", \"lizard\"]": [
+   "lezard",
+   "le lezard",
+   "eidechse",
+   "die eidechse",
+   "lucertola",
+   "la lucertola",
+   "lucertolone",
+   "echse",
+   "die echse"
+  ],
+  "[\"aceituna\", \"oliva\", \"olive\"]": [
+   "l olive",
+   "une olive",
+   "die olive",
+   "olive",
+   "l oliva"
+  ],
+  "[\"mil\", \"1000\", \"1 000\", \"thousand\"]": [
+   "mille",
+   "tausend",
+   "eintausend"
+  ],
+  "[\"lumbre\", \"lumbres\", \"hoguera\", \"bonfire\"]": [
+   "feu",
+   "feu de joie",
+   "feux",
+   "brasier",
+   "feuer",
+   "lagerfeuer",
+   "freudenfeuer",
+   "falo",
+   "fuoco",
+   "fuochi"
+  ],
+  "[\"16\", \"dieciseis\", \"sixteen\"]": [
+   "seize",
+   "sechzehn",
+   "sedici"
+  ],
+  "[\"fantasma\", \"el fantasma\", \"ghost\"]": [
+   "fantome",
+   "le fantome",
+   "gespenst",
+   "das gespenst",
+   "geist",
+   "il fantasma"
+  ]
+ },
+ "malaga": {
+  "[\"tiza\", \"con tiza\", \"chalk\"]": [
+   "craie",
+   "a la craie",
+   "avec de la craie",
+   "kreide",
+   "mit kreide",
+   "gesso",
+   "col gesso",
+   "con il gesso"
+  ],
+  "[\"derecha\", \"la derecha\", \"la de la derecha\", \"right\"]": [
+   "droite",
+   "a droite",
+   "celle de droite",
+   "rechts",
+   "der rechte",
+   "destra",
+   "a destra",
+   "quella di destra"
+  ],
+  "[\"curvas\", \"curva\", \"curved\", \"round\"]": [
+   "arrondis",
+   "arrondies",
+   "courbes",
+   "rondes",
+   "abgerundet",
+   "rund",
+   "gebogen",
+   "curvi",
+   "curve",
+   "arrotondati",
+   "tondi"
+  ],
+  "[\"19\", \"diecinueve\", \"nineteen\"]": [
+   "dix neuf",
+   "dixneuf",
+   "neunzehn",
+   "diciannove"
+  ]
+ },
+ "sevilla": {
+  "[\"leon\", \"un leon\", \"el leon\", \"lion\", \"a lion\"]": [
+   "un lion",
+   "le lion",
+   "lowe",
+   "loewe",
+   "ein lowe",
+   "der lowe",
+   "leone",
+   "un leone",
+   "il leone"
+  ],
+  "[\"naranja\", \"naranja amarga\", \"orange\", \"bitter orange\"]": [
+   "orange amere",
+   "bigarade",
+   "bitterorange",
+   "pomeranze",
+   "arancia",
+   "arancia amara",
+   "melangolo"
+  ],
+  "[\"farolillo\", \"farolillos\", \"lantern\", \"paper lantern\"]": [
+   "lampion",
+   "lampions",
+   "lanterne",
+   "lampion aus papier",
+   "laterne",
+   "lampioncino",
+   "lampioncini",
+   "lanterna"
+  ],
+  "[\"candil\", \"el candil\", \"oil lamp\", \"lamp\"]": [
+   "lampe",
+   "lampe a huile",
+   "la lampe",
+   "ollampe",
+   "ol lampe",
+   "lampada",
+   "lucerna",
+   "lampada a olio"
+  ]
+ }
+}

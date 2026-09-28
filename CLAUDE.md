@@ -94,9 +94,15 @@ Commits pequeños por tarea, mensajes en español con prefijo convencional (`fea
   propias (solo cambia `MAP_STYLE_URL`).
 
 **Fase 6 hecha** (pulido):
-- i18n: `src/i18n` (es/en tipados; `useI18n()` → `t` interfaz, `L` contenido del pack, formatos).
-  Idioma "auto" (el del móvil) o elegido en Perfil. **Ningún texto de interfaz fijo en el código.**
-  El pack de Málaga está en inglés; `missingTranslations` + test exigen packs completos.
+- i18n: `src/i18n` (es, en, fr, de, it tipados; `locales.ts` con `UI_LANGS`; `useI18n()` → `t` interfaz,
+  `L` contenido del pack, formatos). Idioma "auto" (el del móvil si la app lo tiene; si no, inglés) o
+  elegido en Perfil; el contenido cae a inglés antes que a español. **Ningún texto de interfaz fijo en el código.**
+  Los 8 packs están en los cinco idiomas; `missingTranslations` + test exigen packs completos.
+  Traducir contenido nuevo: `python3 scripts/i18n/extract.py` saca a `scripts/.cache/i18n/src` los textos
+  sin fr/de/it; se escribe `out/{pack}_NN.json` (`{id: [fr, de, it]}`), `check.py` lo valida y
+  `apply.py {pack}` lo inserta sin reformatear el archivo. Las respuestas de acertijos y candados en otros
+  idiomas van en `scripts/i18n/answers.json` (sin ß: `normalizeAnswer` la quita). Guías de «usted» →
+  vous/Sie/Lei; comillas « » en fr/it y „ “ en de; las pistas de letras se adaptan a cada idioma.
 - Estrellas: `runner.recordChallenge/starsFor` (quiz y observación, primer intento); final con
   estrellas y colección con la mejor puntuación por ruta.
 - Analítica: `src/analytics` (eventos tipados, sin datos personales ni coordenadas, solo con
@@ -393,7 +399,7 @@ como hecho. Las anécdotas "se cuenta" van con `legend: true`.
 - Personaje o ruta nuevos sin ficha ni fuentes: escribir su historia y citar de dónde sale (y comprobar
   fechas y nombres; p. ej. el cronista de Córdoba es Teodomiro, no Teodoro, Ramírez de Arellano).
 - No meter contenido de ciudad en el código: todo sale del pack.
-- No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts` y `en.ts`.
+- No escribir textos de interfaz sueltos: añadirlos a `src/i18n/es.ts`, `en.ts`, `fr.ts`, `de.ts` e `it.ts`.
 - No usar colores o tamaños sueltos: usar `src/theme`.
 - No usar `localStorage`/web-only APIs; es React Native.
 - No añadir dependencias pesadas sin justificarlo en el commit.
